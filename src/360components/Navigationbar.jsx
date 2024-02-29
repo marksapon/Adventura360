@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Helpmodal from "./helpmodal";
 import Sharelink from "./Sharelink";
+import Bugmodal from "./Bugmodal";
 
 const Navigationbar = ({ toggleAutoplay, location }) => {
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -15,6 +16,8 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
   const handleclose = () => setShowmodal(false);
   const [Sharemodal, setShowSharemodal] = useState(false);
   const handlecloseShare = () => setShowSharemodal(false);
+  const [Bugmdl, setShowBugmodal] = useState(false);
+  const handlecloseBug = () => setShowBugmodal(false);
 
   useEffect(() => {
     const handleFullscreenChange = () => {
@@ -116,7 +119,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <div className="hidden md:flex">
               <button
                 type="button"
-                onClick={null}
+                onClick={() => setShowBugmodal(true)}
                 className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Toggle Autoplay</span>
@@ -196,6 +199,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
         </div>
         <Helpmodal onClose={handleclose} visible={Showmodal} />
         <Sharelink  onClose={handlecloseShare} visible={Sharemodal}/>
+        <Bugmodal onClose={handlecloseBug} visible={Bugmdl}/>
       </div>
       
       {/*FOOTER*/}
@@ -204,7 +208,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
           <div className="flex md:hidden">
             <button
               type="button"
-              onClick={null}
+              onClick={() => setShowSharemodal(true)}
               className="p-2 w-14 h-14 text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
             >
               <span className="sr-only">Toggle Autoplay</span>
@@ -227,7 +231,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
           <div className="flex md:hidden">
             <button
               type="button"
-              onClick={null}
+              onClick={() => setShowBugmodal(true)}
               className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
             >
               <span className="sr-only">Toggle Autoplay</span>
