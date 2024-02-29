@@ -1,0 +1,23 @@
+{
+  "buildings": [
+    {
+      "scene": "dit",
+      "location": "Department of Information Technology",
+      "image": "/assets/nodes/8.webp",
+      "backDefault": "node7",
+      "coords": {
+        "x": 0.232,
+        "y": 0.747
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "info",
+          "target": "dit_info",
+          "yaw": 1.06,
+          "pitch": 20.44
+        }
+      ]
+    }
+  ]
+}

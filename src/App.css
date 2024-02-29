@@ -1,0 +1,58 @@
+body {
+    font-family: "Inter", sans-serif;
+}
+
+header {
+    z-index: 10001 !important;
+}
+
+.view360-controls-pie {
+    width: 56px;
+    height: 56px;
+    margin: 6px;
+    padding: 16px;
+    border-radius: 18px;
+    opacity: 0.8;
+    pointer-events: all;
+    cursor: pointer;
+    color: #000;
+    position: relative;
+    top: 80px;
+    right: 8px;
+    transition: opacity 250ms;
+}
+
+.move {
+    opacity: 0.8;
+    pointer-events: all;
+    cursor: pointer;
+    transition: opacity 250ms;
+    /* Add background image */
+    background-image: url("/public/assets/360_hotspots/arrow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; /* or any other position */
+}
+.bldg {
+    opacity: 0.8;
+    pointer-events: all;
+    cursor: pointer;
+    transition: opacity 250ms;
+    /* Add background image */
+    background-image: url("/public/assets/360_buttons/building_button.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; /* or any other position */
+}
+
+.info {
+    opacity: 0.8;
+    pointer-events: all;
+    cursor: pointer;
+    transition: opacity 250ms;
+    /* Add background image */
+    background-image: url("/public/assets/360_buttons/info_button.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; /* or any other position */
+}
