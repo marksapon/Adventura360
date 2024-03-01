@@ -91,8 +91,10 @@ function Module360() {
 
   // Function to get URL parameters and set it as initial yaw and pitch
   function getParams(type) {
-    const yaw = url.get("yaw") === true ? url.get("yaw") : 0; // check if yaw is Undefined || null || NaN
-    const pitch = url.get("pitch") === true ? url.get("pitch") : 0; // check if pitch is Undefined || null || NaN
+    const yawValue = Number(url.get("yaw"));
+    const yaw = isNaN(yawValue) ? 0 : yawValue; // check if yaw is Undefined || null || NaN
+    const pitchValue = Number(url.get("pitch"));
+    const pitch = isNaN(pitchValue) ? 0 : pitchValue; // check if pitch is Undefined || null || NaN
     if (isNode || isBuilding(target)) {
       if (type === "yaw") {
         return yaw;
