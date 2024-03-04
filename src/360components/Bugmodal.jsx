@@ -19,17 +19,26 @@ const Bugmodal = ({ visible, onClose }) => {
 
   const handleClose = () => {
     onClose();
+    resetState(); // Reset the state when closing
   };
 
   const handleSubmit = () => {
-    handleClose(); // Close the modal
+    handleClose(); // Close the modal and reset the state
     setShowThankYouModal(true); // Show the "Thank You" modal
+  };
+
+  const resetState = () => {
+    setSelectedItem(null);
+    setEmail('');
+    setMessage('');
+    setIsOpen(false);
+    setShowThankYouModal(false);
   };
 
   return (
     <>
       <div className={`fixed inset-0 flex items-center justify-center bg-black bg-opacity-25 z-50 ${visible ? '' : 'hidden'}`}>
-        <div className="flex flex-col w-[260px] h-[360px]  md:h-[460px] md:w-[360px] lg:h-[560px] lg:w-[460px] bg-white rounded-lg shadow-lg border-brandPrimary border">
+        <div className="flex flex-col w-[260px] h-[360px] sm:w-[360px] sm:h-[400px] md:h-[460px] md:w-[360px] lg:h-[560px] lg:w-[460px] bg-white rounded-lg shadow-lg border-brandPrimary border">
           <button className="flex justify-end items-end p-2 text-xl text-gray-600 hover:text-gray-800" onClick={handleClose}>
             <IoIosClose className="h-10 w-10" />
           </button>

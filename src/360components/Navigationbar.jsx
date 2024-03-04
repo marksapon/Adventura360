@@ -79,18 +79,15 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <div>
               <button
                 type="button"
-                onClick={toggleFullscreen}
+                onClick={null}
                 className="flex w-12 h-12 items-center justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
-                <span className="sr-only">Toggle Fullscreen</span>
-                <img
-                  src={
-                    isFullscreen
-                      ? "/assets/Module360/Icons/fullscreen_exit_button.png"
-                      : "/assets/Module360/Icons/fullscreen_button.png"
-                  }
-                  alt=" "
-                />
+                <span className="sr-only">Toggle Autoplay</span>
+                  <img
+                    src="/assets/Module360/Icons/AdvenLogo.png"
+                    alt="share button"
+                   className="w-auto h-11"/>
+                
               </button>
             </div>
             <div className="hidden md:flex">
@@ -181,18 +178,14 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <div>
               <button
                 type="button"
-                onClick={toggleFullscreen}
+                onClick={null}
                 className="flex items-center w-12 h-12  justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Toggle Fullscreen</span>
                 <img
-                  src={
-                    isFullscreen
-                      ? "/assets/Module360/Icons/fullscreen_exit_button.png"
-                      : "/assets/Module360/Icons/fullscreen_button.png"
-                  }
+                  src="/assets/Module360/Icons/CvSULogo2.png"
                   alt=" "
-                />
+                /> 
               </button>
             </div>
           </div>

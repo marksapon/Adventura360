@@ -11,9 +11,12 @@ import buildingsData from "./database/Buildings.json";
 import Navigationbar from "./360components/Navigationbar";
 import MapButton from "./360components/MapButton";
 import clsx from "clsx";
+import { MdMyLocation } from "react-icons/md";
+import { MdLocationSearching } from "react-icons/md";
 
 function Module360() {
   const navigate = useNavigate();
+  const [mapButtonVisible, setMapButtonVisible] = useState(true);
 
   /* Dynamic URL Parameters */
   const url = new URLSearchParams(window.location.search); // Get URL
@@ -223,6 +226,11 @@ function Module360() {
     setAutoplay(!autoplay);
   }
 
+  // Function for toggling the visibility of the map button
+  function toggleMapButtonVisibility() {
+    setMapButtonVisible(!mapButtonVisible);
+  }
+
   /* Component Return */
   return (
     <div className="min-h-screen flex items-center justify-center relative w-full">
@@ -264,32 +272,49 @@ function Module360() {
               style={{ width: "10%", paddingBottom: "10%" }}
               onClick={() => action(hotspot.type, hotspot.target)}
             >
-              {/* className={clsx("view360-hotspot",{'move': hotspot.type === 'move', 'bldg': hotspot.type === "bldg"})} */}
             </div>
           ))}
         </div>
-        <div className="flex w-full h-full ">
+        <div className="flex w-full h-full">
           <Navigationbar
             toggleAutoplay={toggleAutoplay}
             location={select_Scene.location}
           />
         </div>
 
-        <div className="absolute top-0 left-0 p-1 text-white">
-          <div className="relative">
-            <div className="py-20 pl-2 ">
-              <MapButton
-                x={select_Scene.coords.x}
-                y={select_Scene.coords.y}
-                onClick={() => changetoMap()}
-                previous_Scene={previous_Scene}
-              />
+        <div className="absolute top-0 left-0 p-1 text-white ">
+          <div className="relative flex flex-row justify-between">
+            <div className="pt-20 pb-2 pl-2">
+              {mapButtonVisible && (
+                <MapButton
+                  x={select_Scene.coords.x} 
+                  y={select_Scene.coords.y}
+                  onClick={() => changetoMap()}
+                  previous_Scene={previous_Scene}
+                />
+              )}
             </div>
+
+           
+          </div>
             <div>Location: {select_Scene.scene}</div>
             <div>Source: {select_Scene.image}</div>
-          </div>
         </div>
+          <div className="absolute flex bottom-0 right-0 pr-2 pb-20 sm:pr-2 sm:pb-20 md:pr-2 md:pb-2 lg:pr-2 lg:pb-2">
+                <button
+                  className="text-white"
+                  onClick={toggleMapButtonVisibility}
+                >
+                  {mapButtonVisible ? (
+                    <MdMyLocation size={24} className="text-brandPrimary"/> // Icon for hiding the map button
+                  ) : (
+                    <MdLocationSearching size={24} className="text-brandPrimary"/> // Icon for showing the map button
+                  )}
+                </button>
+            </div>
       </View360>
+      {/* Button to toggle map button visibility */}
+     
       <div className="absolute items-center justify-center flex text-white text-xl">
         +
       </div>
@@ -298,6 +323,3 @@ function Module360() {
 }
 
 export default Module360;
-/*
-
-*/

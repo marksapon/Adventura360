@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./MapButton.css";
 import OpenSeadragon from "openseadragon";
 
+
 const MapButton = ({ x, y, onClick, previous_Scene }) => {
   // Map Button mount
   useEffect(() => {
@@ -65,14 +66,14 @@ const MapButton = ({ x, y, onClick, previous_Scene }) => {
   }, [x, y, previous_Scene.coords.x, previous_Scene.coords.y]);
 
   return (
-    <div className="overflow-clip rounded-xl flex border border-black opacity-[0.90]">
-      <button className="w-[336px] h-[172px] " id="viewer" onClick={onClick} />
+    <div className="overflow-hidden rounded-xl flex border border-black w-fit opacity-[0.90]">
+      <button className="w-[172px] h-[90px] sm:w-[264px] sm:h-[152px] md:w-[336px] md:h-[172px] lg:w-[336px] lg:h-[172px]" id="viewer" onClick={onClick} />
     </div>
   );
 };
 export default MapButton;
 
-/*
+/*A   
 const overlay = viewer.paperjsOverlay();
 
     // Create a new Paper.js path
