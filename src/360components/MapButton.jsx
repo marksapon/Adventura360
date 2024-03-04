@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import "./MapButton.css";
 import OpenSeadragon from "openseadragon";
 
-
 const MapButton = ({ x, y, onClick, previous_Scene }) => {
   // Map Button mount
   useEffect(() => {
@@ -25,15 +24,15 @@ const MapButton = ({ x, y, onClick, previous_Scene }) => {
       showNavigator: false, // Show Navigator
       showZoomControl: false, // Whether to show the zoom control
       showHomeControl: false, // Whether to show the home control
-      showFullPageControl: true, // Whether to show the full-page control
+      showFullPageControl: false, // Whether to show the full-page control
       showRotationControl: false, // Whether to show the rotation control
       showFlipControl: false, // Whether to show the flip control
       defaultZoomLevel: 10, // The default zoom level
-      //minZoomLevel: 10, // The minimum zoom level
-      //maxZoomLevel: 10, // Max zoom level
+      minZoomLevel: 10, // The minimum zoom level
+      maxZoomLevel: 10, // Max zoom level
       animationTime: 2.0, // Animation time when Panning
       mouseNavEnabled: true, // Enable mouse navigation
-      gestureNavEnabled: false, // Enable gesture navigation
+      gestureNavEnabled: true, // Enable gesture navigation
     });
 
     // OSD event that triggers component mount
@@ -67,7 +66,11 @@ const MapButton = ({ x, y, onClick, previous_Scene }) => {
 
   return (
     <div className="overflow-hidden rounded-xl flex border border-black w-fit opacity-[0.90]">
-      <button className="w-[172px] h-[90px] sm:w-[264px] sm:h-[152px] md:w-[336px] md:h-[172px] lg:w-[336px] lg:h-[172px]" id="viewer" onClick={onClick} />
+      <button
+        className="w-[172px] h-[90px] sm:w-[264px] sm:h-[152px] md:w-[336px] md:h-[172px] lg:w-[336px] lg:h-[172px]"
+        id="viewer"
+        onClick={onClick}
+      />
     </div>
   );
 };

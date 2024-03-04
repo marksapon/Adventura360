@@ -187,10 +187,12 @@ function Module360() {
   const plugins = useMemo(
     () => [
       new ControlBar({
+        className: "custom-controlbar",
         pieView: {
           resetCamera: { zoom: zoomSettings.min },
         },
         fullscreenButton: false,
+        gyroButton: { position: ControlBar.POSITION.TOP_LEFT, order: 1 },
       }),
       new LoadingSpinner(),
     ],
@@ -271,8 +273,7 @@ function Module360() {
               data-pitch={hotspot.pitch}
               style={{ width: "10%", paddingBottom: "10%" }}
               onClick={() => action(hotspot.type, hotspot.target)}
-            >
-            </div>
+            ></div>
           ))}
         </div>
         <div className="flex w-full h-full">
@@ -287,34 +288,30 @@ function Module360() {
             <div className="pt-20 pb-2 pl-2">
               {mapButtonVisible && (
                 <MapButton
-                  x={select_Scene.coords.x} 
+                  x={select_Scene.coords.x}
                   y={select_Scene.coords.y}
                   onClick={() => changetoMap()}
                   previous_Scene={previous_Scene}
                 />
               )}
             </div>
-
-           
           </div>
-            <div>Location: {select_Scene.scene}</div>
-            <div>Source: {select_Scene.image}</div>
         </div>
-          <div className="absolute flex bottom-0 right-0 pr-2 pb-20 sm:pr-2 sm:pb-20 md:pr-2 md:pb-2 lg:pr-2 lg:pb-2">
-                <button
-                  className="text-white"
-                  onClick={toggleMapButtonVisibility}
-                >
-                  {mapButtonVisible ? (
-                    <MdMyLocation size={24} className="text-brandPrimary"/> // Icon for hiding the map button
-                  ) : (
-                    <MdLocationSearching size={24} className="text-brandPrimary"/> // Icon for showing the map button
-                  )}
-                </button>
-            </div>
+        <div className="absolute flex items-center w-25 h-25  justify-center bottom-0 right-0 pr-2 pb-20 sm:pr-2 sm:pb-20 md:pr-2 md:pb-2 lg:pr-2 lg:pb-2">
+          <button
+            className="text-white bg-gray-100 rounded-full p-2 shadow-2xl-inner"
+            onClick={toggleMapButtonVisibility}
+          >
+            {mapButtonVisible ? (
+              <MdMyLocation size={25} className="text-gray-500" /> // Icon for hiding the map button
+            ) : (
+              <MdLocationSearching size={25} className="text-gray-500" /> // Icon for showing the map button
+            )}
+          </button>
+        </div>
       </View360>
       {/* Button to toggle map button visibility */}
-     
+
       <div className="absolute items-center justify-center flex text-white text-xl">
         +
       </div>
@@ -323,3 +320,8 @@ function Module360() {
 }
 
 export default Module360;
+/* DEBUG PURPOSE
+<div>Location: {select_Scene.scene}</div>
+<div>Source: {select_Scene.image}</div>
+
+*/
