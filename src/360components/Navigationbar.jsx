@@ -78,7 +78,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
 
   return (
     <div className="flex flex-col justify-between h-screen w-full pr-4 ">
-      <div className="bg-white h-max dark:bg-gray-900 sticky w-full z-20 top-4 start-0 border-b border-gray-200 dark:border-gray-600 mx-2 rounded-xl">
+      <div className="bg-white h-max sticky w-full z-20 top-4 start-0 border-b border-gray-200 dark:border-gray-600 mx-2 rounded-xl">
         <div className="flex justify-between items-center text-base h-full">
           <div className="flex px-1 lg:px-4 w-auto md:w-full h-full items-center justify-between">
             <div>
@@ -100,7 +100,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
               <button
                 type="button"
                 onClick={null}
-                className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+                className="inline-flex items-center w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Map</span>
                 <GrMap size={35} className="text-green-600" />
@@ -111,7 +111,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
               <button
                 type="button"
                 onClick={null}
-                className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+                className="inline-flex items-center w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Search</span>
                 <IoMdSearch size={35} className="text-green-600" />
@@ -122,7 +122,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
               <button
                 type="button"
                 onClick={() => setShowmodal(true)}
-                className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+                className="inline-flex items-center w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Help</span>
                 <img
@@ -145,7 +145,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
               <button
                 type="button"
                 onClick={() => setShowBugmodal(true)}
-                className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+                className="inline-flex items-center w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Feedback</span>
                 <VscFeedback size={35} className="text-green-600" />
@@ -156,7 +156,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
               <button
                 type="button"
                 onClick={toggleAutoplay}
-                className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+                className="inline-flex items-center w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Autoplay</span>
                 <PiPlayCircleLight size={40} className="text-green-600" />
@@ -167,7 +167,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
               <button
                 type="button"
                 onClick={() => setShowSharemodal(true)}
-                className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+                className="inline-flex items-center w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Share</span>
                 <FiLink size={30} className="text-green-600" />
@@ -178,7 +178,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
               <button
                 type="button"
                 onClick={toggleFullscreen}
-                className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+                className="inline-flex items-center w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Fullscreen</span>
                 {isFullscreen ? (
@@ -213,7 +213,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <button
               type="button"
               onClick={null}
-              className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+              className="inline-flex items-center w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
             >
               <span className="sr-only">Map</span>
               <GrMap size={35} className="text-green-600" />
@@ -224,7 +224,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <button
               type="button"
               onClick={null}
-              className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+              className="inline-flex items-center w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
             >
               <span className="sr-only">Search</span>
               <IoMdSearch size={35} className="text-green-600" />
@@ -235,7 +235,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <button
               type="button"
               onClick={() => setShowmodal(true)}
-              className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+              className="inline-flex items-center w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
             >
               <span className="sr-only">Help</span>
               <img
@@ -250,7 +250,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <button
               type="button"
               onClick={() => setShowBugmodal(true)}
-              className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+              className="inline-flex items-center w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
             >
               <span className="sr-only">Feedback</span>
               <VscFeedback size={35} className="text-green-600" />
@@ -261,7 +261,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <button
               type="button"
               onClick={() => setShowSharemodal(true)}
-              className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+              className="inline-flex items-center w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
             >
               <span className="sr-only">Share</span>
               <FiLink size={30} className="text-green-600" />
@@ -272,7 +272,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <button
               type="button"
               onClick={toggleFullscreen}
-              className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+              className="inline-flex items-center w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
             >
               <span className="sr-only">Fullscreen</span>
               {isFullscreen ? (
