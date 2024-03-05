@@ -5,7 +5,9 @@ const Page3Content = () => (
     <div className="bg-white rounded-2xl w-full max-w-[800px] flex flex-col justify-between h-full max-h-[600px] border-black">
       <div className="flex flex-col w-full h-full items-center relative">
         <div className="flex w-full h-auto mt-12 md:mt-14 lg:mt-16 absolute z-10">
-          <h1 className="text-4xl md:text-6xl lg:text-6xl xl:text-7xl text-brandPrimary font-black">Controls</h1>
+          <h1 className="text-4xl md:text-6xl lg:text-6xl xl:text-7xl text-green-600 font-black">
+            Controls
+          </h1>
         </div>
         <div className="flex flex-col w-full h-full justify-center items-center mt-16 text-2xl gap-6 px-5">
           <div className="w-full flex flex-row gap-5">

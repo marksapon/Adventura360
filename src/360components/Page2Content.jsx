@@ -5,13 +5,15 @@ const Page2Content = () => (
     <div className="bg-white rounded-2xl w-full max-w-[800px] flex flex-col justify-between h-full max-h-[600px] border-black">
       <div className="flex flex-col w-full h-full items-center relative">
         <div className="flex w-full h-auto mt-12 md:mt-14 lg:mt-16 absolute z-10">
-          <h1 className="text-4xl md:text-6xl lg:text-6xl xl:text-7xl text-brandPrimary font-black">Controls</h1>
+          <h1 className="text-4xl md:text-6xl lg:text-6xl xl:text-7xl text-green-600 font-black">
+            Controls
+          </h1>
         </div>
         <div className="flex flex-col w-full h-full gap-6 md:gap-12 lg:gap-16 items-left justify-center z-20">
           <div className="flex flex-col h-auto w-full mt-24 md:mt-14 lg:mt-16 items-center justify-items-center">
             <p className="justify-center text-left text-wrap text-base md:text-2xl lg:text-2xl font-light">
               To control the view, you can use your{" "}
-              <span className="text-brandPrimary font-bold">
+              <span className="text-green-600 font-bold">
                 mouse, keyboard, and touchscreen gestures{" "}
               </span>{" "}
               for mobile.

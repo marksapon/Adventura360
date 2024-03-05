@@ -74,7 +74,7 @@ const NavBar = () => {
                 smooth={true}
                 offset={-100}
                 key={id} // Add unique key prop
-                className="block text-base text-gray900 hover:text-brandPrimary first:font-medium"
+                className="block text-base text-gray-900 hover:text-green-600 first:font-medium"
               >
                 {link}
               </ScrollLink>
@@ -82,29 +82,29 @@ const NavBar = () => {
           </ul>
           <div className="flex flex-center flex-justify-between gap-8">
             <RouterLink to="/app">
-              <button className="bg-brandPrimary text-white px-4 py-2 transition-all duration-300 rounded-full h-12 hover:bg-lime-700 items-center justify-between flex gap-2">
+              <button className="bg-green-600 text-white px-4 py-2 transition-all duration-300 rounded-full h-12 hover:bg-lime-700 items-center justify-between flex gap-2">
                 Go to App
               </button>
             </RouterLink>
 
             <RouterLink to="/map">
-              <button className="bg-brandPrimary text-white px-4 py-2 transition-all duration-300 rounded-full h-12 hover:bg-lime-700 items-center justify-between flex gap-2">
+              <button className="bg-green-600 text-white px-4 py-2 transition-all duration-300 rounded-full h-12 hover:bg-lime-700 items-center justify-between flex gap-2">
                 Go to Map
               </button>
             </RouterLink>
           </div>
           {/* btn for large devices */}
           <div className="space-x-12  hidden lg:flex items-center ">
-            {/* <a href='/' className='hidden lg:flex items-center text-brandPrimary hover:text-gray900'>Adventura</a> */}
-            {/* <button className='bg-black text-white py-2 px-4 transition-all duration-300 rounded hover:bg-brandPrimary '><MdDarkMode /></button> */}
-            {/* <button className='bg-brandPrimary text-white py-2 px-6 transition-all duration-300 rounded hover:bg-lime-700 '>Log In</button> */}
+            {/* <a href='/' className='hidden lg:flex items-center text-green-600 hover:text-gray-900'>Adventura</a> */}
+            {/* <button className='bg-black text-white py-2 px-4 transition-all duration-300 rounded hover:bg-green-600 '><MdDarkMode /></button> */}
+            {/* <button className='bg-green-600 text-white py-2 px-6 transition-all duration-300 rounded hover:bg-lime-700 '>Log In</button> */}
           </div>
 
           {/* Menu button for cp */}
           <div className="md:hidden ">
             <button
               onClick={toggleMenu}
-              className="text-neutralDGrey focus:outline-none focus:text-gray-500"
+              className="text-gray-700 focus:outline-none focus:text-gray-500"
             >
               {isMenuOpen ? (
                 <FaXmark className="h-6 w-6 " />
@@ -128,7 +128,7 @@ const NavBar = () => {
               smooth={true}
               offset={-100}
               key={id} // Add unique key prop
-              className="block text-base text-neutralDGrey hover:text-brandPrimary first:font-medium"
+              className="block text-base text-gray-700 hover:text-green-600 first:font-medium"
             >
               {link}
             </ScrollLink>

@@ -132,8 +132,6 @@ const HelpModal = ({ visible, onClose }) => {
           </div>
         </div>
       </div>
-      
-
 
       {/* For large Devices */}
       <div className="hidden sm:flex w-full h-full items-center justify-center">
@@ -218,7 +216,6 @@ const HelpModal = ({ visible, onClose }) => {
           </div>
         </div>
       </div>
-
     </div>
   );
 };

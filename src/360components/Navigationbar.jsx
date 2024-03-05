@@ -103,7 +103,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
                 className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Map</span>
-                <GrMap size={35} className="text-brandPrimary" />
+                <GrMap size={35} className="text-green-600" />
               </button>
             </div>
 
@@ -114,7 +114,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
                 className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Search</span>
-                <IoMdSearch size={35} className="text-brandPrimary" />
+                <IoMdSearch size={35} className="text-green-600" />
               </button>
             </div>
 
@@ -148,7 +148,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
                 className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Feedback</span>
-                <VscFeedback size={35} className="text-brandPrimary" />
+                <VscFeedback size={35} className="text-green-600" />
               </button>
             </div>
 
@@ -159,7 +159,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
                 className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Autoplay</span>
-                <PiPlayCircleLight size={40} className="text-brandPrimary" />
+                <PiPlayCircleLight size={40} className="text-green-600" />
               </button>
             </div>
 
@@ -170,7 +170,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
                 className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Share</span>
-                <FiLink size={30} className="text-brandPrimary" />
+                <FiLink size={30} className="text-green-600" />
               </button>
             </div>
 
@@ -182,9 +182,9 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
               >
                 <span className="sr-only">Fullscreen</span>
                 {isFullscreen ? (
-                  <TbMaximizeOff size={35} className="text-brandPrimary" />
+                  <TbMaximizeOff size={35} className="text-green-600" />
                 ) : (
-                  <TbMaximize size={35} className="text-brandPrimary" />
+                  <TbMaximize size={35} className="text-green-600" />
                 )}
               </button>
             </div>
@@ -216,7 +216,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
               className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
             >
               <span className="sr-only">Map</span>
-              <GrMap size={35} className="text-brandPrimary" />
+              <GrMap size={35} className="text-green-600" />
             </button>
           </div>
 
@@ -227,7 +227,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
               className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
             >
               <span className="sr-only">Search</span>
-              <IoMdSearch size={35} className="text-brandPrimary" />
+              <IoMdSearch size={35} className="text-green-600" />
             </button>
           </div>
 
@@ -253,7 +253,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
               className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
             >
               <span className="sr-only">Feedback</span>
-              <VscFeedback size={35} className="text-brandPrimary" />
+              <VscFeedback size={35} className="text-green-600" />
             </button>
           </div>
 
@@ -264,7 +264,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
               className="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
             >
               <span className="sr-only">Share</span>
-              <FiLink size={30} className="text-brandPrimary" />
+              <FiLink size={30} className="text-green-600" />
             </button>
           </div>
 
@@ -276,9 +276,9 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             >
               <span className="sr-only">Fullscreen</span>
               {isFullscreen ? (
-                <TbMaximizeOff size={35} className="text-brandPrimary" />
+                <TbMaximizeOff size={35} className="text-green-600" />
               ) : (
-                <TbMaximize size={35} className="text-brandPrimary" />
+                <TbMaximize size={35} className="text-green-600" />
               )}
             </button>
           </div>

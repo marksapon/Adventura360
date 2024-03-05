@@ -15,11 +15,11 @@ const Blog = () => {
   return (
     <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-12 " id="blog">
       <div className="text-center md:1/2 mx-auto">
-        <h2 className="text-4xl text-neutralDGrey font-semibold mb-4">
+        <h2 className="text-4xl text-gray-700 font-semibold mb-4">
           Place holder lng to guys pati mga pic kayo na bahala kung ano gusto
           nyo ilagay
         </h2>
-        <p className="text-sm text-neutralDGrey mb-8 md:w-3/4 mx-auto">
+        <p className="text-sm text-gray-700 mb-8 md:w-3/4 mx-auto">
           Virtual campus tours have become increasingly popular in recent years,
           providing prospective students with a glimpse into the academic and
           social life of universities. In this thesis, ADVENTURA, a 360-degree

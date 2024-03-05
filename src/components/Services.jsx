@@ -50,10 +50,10 @@ const Services = () => {
 
       {/* sevices card */}
       <div className="mt-20 md:w-1/2 mx-auto text-center">
-        <h2 className="text-4xl text-neutralDGrey font-semibold mb-3 ">
+        <h2 className="text-4xl text-gray-700 font-semibold mb-3 ">
           Adventura 360{" "}
         </h2>
-        <p className="text-neutralGrey">
+        <p className="text-neutral-600">
           To be able to Navigate though the University
         </p>
       </div>
@@ -63,16 +63,16 @@ const Services = () => {
         {services.map((service) => (
           <div
             key={service.id}
-            className="px-4 py-8 text-center md:w-[300px] mx-auto md:h-80 rounded-md shadow cursor-pointer hover:-translate-y-5 hover:border-b-4 hover:border-brandPrimary transition-all duration-300 flex items-center justify-center h-full"
+            className="px-4 py-8 text-center md:w-[300px] mx-auto md:h-80 rounded-md shadow cursor-pointer hover:-translate-y-5 hover:border-b-4 hover:border-green-600 transition-all duration-300 flex items-center justify-center h-full"
           >
             <div>
               <div className="bg-[#E8F5E9] mb-4 h-14 w-14 mx-auto rounded-tl-3xl rounded-br-3xl">
                 <img src={service.image} alt="" className="-ml-5" />
               </div>
-              <h4 className="text-2xl font-bold text-neutralDGrey mb-2 px-2">
+              <h4 className="text-2xl font-bold text-gray-700 mb-2 px-2">
                 {service.title}
               </h4>
-              <p className="text-sm text-neutralGrey">{service.description}</p>
+              <p className="text-sm text-neutral-600">{service.description}</p>
             </div>
           </div>
         ))}
