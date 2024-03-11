@@ -207,7 +207,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
       </div>
 
       {/*FOOTER*/}
-      <div className="md:hidden bg-white dark:bg-gray-900 sticky bottom-0 mb-4 w-full h-14 z-20 top-4 start-0 border-b border-gray-200 dark:border-gray-600 mx-2 rounded-xl">
+      <div className="md:hidden bg-white  sticky bottom-0 mb-4 w-full h-14 z-20 top-4 start-0 border-b border-gray-200 dark:border-gray-600 mx-2 rounded-xl">
         <div className="flex justify-between items-center text-base h-full px-2">
           <div className="flex md:hidden">
             <button
@@ -284,6 +284,9 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
           </div>
         </div>
       </div>
+      <Helpmodal onClose={handleclose} visible={Showmodal} />
+      <Sharelink onClose={handlecloseShare} visible={Sharemodal} />
+      <Bugmodal onClose={handlecloseBug} visible={Bugmdl} />
     </div>
   );
 };
