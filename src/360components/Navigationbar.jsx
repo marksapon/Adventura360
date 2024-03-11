@@ -135,7 +135,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
           </div>
 
           {/* LOCATION */}
-          <div className="flex w-full h-full border-r-2 border-l-2 text-sm md:text-1xl px-1 items-center justify-center text-center md:min-w-[290px]">
+          <div className="flex w-full h-full border-r-2 border-l-2 text-sm md:text-1xl px-1 items-center justify-center text-center md:min-w-[290px] font-roboto">
             {location !== undefined ? location : "Location"}
           </div>
           {/* LOCATION */}

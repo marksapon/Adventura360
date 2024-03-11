@@ -21,18 +21,15 @@ const MapButton = ({ x, y, onClick, previous_Scene }) => {
       id: "viewer",
       prefixUrl: "/assets/images/",
       tileSources: { type: "image", url: "/assets/Map/with nodes.svg" },
-      showNavigator: false, // Show Navigator
-      showZoomControl: false, // Whether to show the zoom control
-      showHomeControl: false, // Whether to show the home control
-      showFullPageControl: false, // Whether to show the full-page control
-      showRotationControl: false, // Whether to show the rotation control
-      showFlipControl: false, // Whether to show the flip control
+      showNavigationControl: false, // Hides the navigation control
       defaultZoomLevel: 10, // The default zoom level
       minZoomLevel: 10, // The minimum zoom level
       maxZoomLevel: 10, // Max zoom level
       animationTime: 2.0, // Animation time when Panning
       mouseNavEnabled: true, // Enable mouse navigation
       gestureNavEnabled: true, // Enable gesture navigation
+      visibilityRatio: 1.0, // The visibility ratio
+      constrainDuringPan: true, // Whether to constrain during pan
     });
 
     // OSD event that triggers component mount
@@ -76,7 +73,15 @@ const MapButton = ({ x, y, onClick, previous_Scene }) => {
 };
 export default MapButton;
 
-/*A   
+/*A  
+
+<button
+        className="w-[172px] h-[90px] sm:w-[264px] sm:h-[152px] md:w-[336px] md:h-[172px] lg:w-[336px] lg:h-[172px]"
+        id="viewer"
+        onClick={onClick}
+      />
+
+
 const overlay = viewer.paperjsOverlay();
 
     // Create a new Paper.js path
