@@ -6,34 +6,6 @@ header {
   z-index: 10001 !important;
 }
 
-.view360-controls-pie {
-  margin: 6px;
-  padding: 16px;
-  border-radius: 18px;
-  opacity: 0.8;
-  pointer-events: all;
-  cursor: pointer;
-  color: #4caf4f;
-  position: relative;
-  top: 80px;
-  right: 8px;
-  transition: opacity 250ms;
-}
-
-.view360-controls-gyro {
-  margin: 6px;
-  padding: 16px;
-  border-radius: 18px;
-  opacity: 0.8;
-  pointer-events: all;
-  cursor: pointer;
-  color: #4caf4f;
-  position: relative;
-  top: 80px;
-  right: 8px;
-  transition: opacity 250ms;
-}
-
 .move {
   opacity: 0.8;
   pointer-events: all;

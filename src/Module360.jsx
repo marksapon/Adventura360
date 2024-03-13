@@ -1,4 +1,4 @@
-import "./components/view360.css";
+import "./view360.css";
 import View360, {
   EquirectProjection,
   ControlBar,
@@ -208,14 +208,11 @@ function Module360() {
         className: "custom-controlbar",
         pieView: {
           resetCamera: { zoom: zoomSettings.min },
-          position: ControlBar.POSITION.MAIN_RIGHT,
-          order: 0,
+          position: ControlBar.POSITION.TOP_RIGHT,
         },
         fullscreenButton: false,
         gyroButton: {
-          className: "custom-gyro",
-          order: 1,
-          position: ControlBar.POSITION.MAIN_RIGHT,
+          position: ControlBar.POSITION.TOP_RIGHT,
         },
       }),
       new LoadingSpinner(),
@@ -347,5 +344,7 @@ export default Module360;
 /* DEBUG PURPOSE
 <div>Location: {select_Scene.scene}</div>
 <div>Source: {select_Scene.image}</div>
+
+key={zoomSettings.min + autoplay}
 
 */
