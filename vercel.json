@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/app/(.*)",
+      "destination": "/src/App.jsx"
+    }
+  ]
+}
