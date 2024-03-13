@@ -341,7 +341,7 @@
   opacity: 0.8;
   pointer-events: all;
   cursor: pointer;
-  color: #4caf44;
+  color: #fff;
   position: relative;
   transition: opacity 250ms;
 }
