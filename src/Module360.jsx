@@ -213,7 +213,12 @@ function Module360() {
         },
         fullscreenButton: false,
         gyroButton: {
+          order: 1,
           position: ControlBar.POSITION.TOP_RIGHT,
+        },
+        vrButton: {
+          order: 2,
+          Position: ControlBar.POSITION.TOP_RIGHT,
         },
       }),
       new LoadingSpinner(),
