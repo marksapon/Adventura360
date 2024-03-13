@@ -208,6 +208,7 @@ function Module360() {
         className: "custom-controlbar",
         pieView: {
           resetCamera: { zoom: zoomSettings.min },
+          order: 0,
           position: ControlBar.POSITION.TOP_RIGHT,
         },
         fullscreenButton: false,
