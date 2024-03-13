@@ -3,6 +3,7 @@ import View360, {
   EquirectProjection,
   ControlBar,
   LoadingSpinner,
+  GyroControl,
 } from "@egjs/react-view360";
 import React, { useMemo, useState, useEffect, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
@@ -15,6 +16,21 @@ import { MdMyLocation } from "react-icons/md";
 import { MdLocationSearching } from "react-icons/md";
 
 function Module360() {
+  GyroControl.isAvailable()
+    .then((gyroAvailable) => {
+      if (gyroAvailable) {
+        console.log("Gyroscope is available");
+      } else {
+        console.log("Gyroscope is not available");
+      }
+    })
+    .catch((error) => {
+      console.error(
+        "An error occurred while checking gyroscope availability:",
+        error
+      );
+    });
+
   const navigate = useNavigate();
   const [mapButtonVisible, setMapButtonVisible] = useState(true);
 
@@ -192,9 +208,15 @@ function Module360() {
         className: "custom-controlbar",
         pieView: {
           resetCamera: { zoom: zoomSettings.min },
+          position: ControlBar.POSITION.MAIN_RIGHT,
+          order: 0,
         },
         fullscreenButton: false,
-        gyroButton: { position: ControlBar.POSITION.TOP_LEFT, order: 1 },
+        gyroButton: {
+          className: "custom-gyro",
+          order: 1,
+          position: ControlBar.POSITION.MAIN_RIGHT,
+        },
       }),
       new LoadingSpinner(),
     ],
