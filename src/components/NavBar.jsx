@@ -43,30 +43,30 @@ const NavBar = () => {
   ];
 
   return (
-    <header className="w-full bg-white md-transparent fixed top-0 left-0 right-0 border-b">
+    <header className="md-transparent fixed left-0 right-0 top-0 w-full border-b bg-white">
       <nav
-        className={`py-4 lg:px-14 px-4 ${
+        className={`px-4 py-4 lg:px-14 ${
           isSticky
-            ? "sticky top-0 left-0 right-0 border-b bg-white duration-300"
+            ? "sticky left-0 right-0 top-0 border-b bg-white duration-300"
             : ""
         }`}
       >
-        <div className="flex justify-between items-center text-base gap-8">
+        <div className="flex items-center justify-between gap-8 text-base">
           <a
             href="/"
-            className="text-2xl font-semibold flex items-center space-x-3"
+            className="flex items-center space-x-3 text-2xl font-semibold"
           >
             <img
               src={loogoo}
               alt=""
-              className="w-10 inline-block items-center"
+              className="inline-block w-10 items-center"
             />
             <span className="text-[#263238]">Adventura 360</span>
           </a>
 
           {/* Nav Items for large devices */}
 
-          <ul className="md:flex space-x-12 hidden cursor-pointer">
+          <ul className="hidden cursor-pointer space-x-12 md:flex">
             {navitems.map(({ link, id }) => (
               <ScrollLink
                 to={id}
@@ -74,27 +74,27 @@ const NavBar = () => {
                 smooth={true}
                 offset={-100}
                 key={id} // Add unique key prop
-                className="block text-base text-gray-900 hover:text-green-600 first:font-medium"
+                className="block text-base text-gray-900 first:font-medium hover:text-green-600"
               >
                 {link}
               </ScrollLink>
             ))}
           </ul>
-          <div className="flex flex-center flex-justify-between gap-8">
+          <div className="flex-center flex-justify-between flex gap-8">
             <RouterLink to="/app">
-              <button className="bg-green-600 text-white px-4 py-2 transition-all duration-300 rounded-full h-12 hover:bg-lime-700 items-center justify-between flex gap-2">
+              <button className="flex h-12 items-center justify-between gap-2 rounded-full bg-green-600 px-4 py-2 text-white transition-all duration-300 hover:bg-lime-700">
                 Go to App
               </button>
             </RouterLink>
 
             <RouterLink to="/map">
-              <button className="bg-green-600 text-white px-4 py-2 transition-all duration-300 rounded-full h-12 hover:bg-lime-700 items-center justify-between flex gap-2">
+              <button className="flex h-12 items-center justify-between gap-2 rounded-full bg-green-600 px-4 py-2 text-white transition-all duration-300 hover:bg-lime-700">
                 Go to Map
               </button>
             </RouterLink>
           </div>
           {/* btn for large devices */}
-          <div className="space-x-12  hidden lg:flex items-center ">
+          <div className="hidden  items-center space-x-12 lg:flex ">
             {/* <a href='/' className='hidden lg:flex items-center text-green-600 hover:text-gray-900'>Adventura</a> */}
             {/* <button className='bg-black text-white py-2 px-4 transition-all duration-300 rounded hover:bg-green-600 '><MdDarkMode /></button> */}
             {/* <button className='bg-green-600 text-white py-2 px-6 transition-all duration-300 rounded hover:bg-lime-700 '>Log In</button> */}
@@ -104,7 +104,7 @@ const NavBar = () => {
           <div className="md:hidden ">
             <button
               onClick={toggleMenu}
-              className="text-gray-700 focus:outline-none focus:text-gray-500"
+              className="text-gray-700 focus:text-gray-500 focus:outline-none"
             >
               {isMenuOpen ? (
                 <FaXmark className="h-6 w-6 " />
@@ -117,8 +117,8 @@ const NavBar = () => {
 
         {/* Nav items for mobile devives */}
         <div
-          className={`space-y-4 px-4 mt-16 py-7 md:hidden bg-white border-b border-x border-lime-600 border-t cursor-pointer ${
-            isMenuOpen ? "block fixed top-0  right-0 left-0" : "hidden"
+          className={`mt-16 cursor-pointer space-y-4 border-x border-b border-t border-lime-600 bg-white px-4 py-7 md:hidden ${
+            isMenuOpen ? "fixed left-0 right-0  top-0 block" : "hidden"
           }`}
         >
           {navitems.map(({ link, id }) => (
@@ -128,7 +128,7 @@ const NavBar = () => {
               smooth={true}
               offset={-100}
               key={id} // Add unique key prop
-              className="block text-base text-gray-700 hover:text-green-600 first:font-medium"
+              className="block text-base text-gray-700 first:font-medium hover:text-green-600"
             >
               {link}
             </ScrollLink>

@@ -24,9 +24,9 @@ const Services = () => {
     },
   ];
   return (
-    <div className="md:px-14 px-4 py-16 max-w-screen-2xl mx-auto" id="service">
-      <div className="text-center my-8">
-        <h2 className="text-4xl text-neutralDGrey font-semibold mb-2">
+    <div className="mx-auto max-w-screen-2xl px-4 py-16 md:px-14" id="service">
+      <div className="my-8 text-center">
+        <h2 className="text-neutralDGrey mb-2 text-4xl font-semibold">
           Our Client
         </h2>
         <p className="text-neutralDGrey">
@@ -35,7 +35,7 @@ const Services = () => {
 
         {/* Logoos */}
 
-        <div className="my-12 flex flex-wrap justify-between items-center gap-4">
+        <div className="my-12 flex flex-wrap items-center justify-between gap-4">
           <img src="/assets/logo/comp1.png" alt="" />
           <img src="/assets/logo/comp2.png" alt="" />
           <img src="/assets/logo/comp3.png" alt="" />
@@ -49,8 +49,8 @@ const Services = () => {
       </div>
 
       {/* sevices card */}
-      <div className="mt-20 md:w-1/2 mx-auto text-center">
-        <h2 className="text-4xl text-gray-700 font-semibold mb-3 ">
+      <div className="mx-auto mt-20 text-center md:w-1/2">
+        <h2 className="mb-3 text-4xl font-semibold text-gray-700 ">
           Adventura 360{" "}
         </h2>
         <p className="text-neutral-600">
@@ -59,17 +59,17 @@ const Services = () => {
       </div>
 
       {/* cards */}
-      <div className="mt-14 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:w-11/12 mx-auto gap-12">
+      <div className="mx-auto mt-14 grid grid-cols-1 gap-12 md:w-11/12 md:grid-cols-2 lg:grid-cols-3">
         {services.map((service) => (
           <div
             key={service.id}
-            className="px-4 py-8 text-center md:w-[300px] mx-auto md:h-80 rounded-md shadow cursor-pointer hover:-translate-y-5 hover:border-b-4 hover:border-green-600 transition-all duration-300 flex items-center justify-center h-full"
+            className="mx-auto flex h-full cursor-pointer items-center justify-center rounded-md px-4 py-8 text-center shadow transition-all duration-300 hover:-translate-y-5 hover:border-b-4 hover:border-green-600 md:h-80 md:w-[300px]"
           >
             <div>
-              <div className="bg-[#E8F5E9] mb-4 h-14 w-14 mx-auto rounded-tl-3xl rounded-br-3xl">
+              <div className="mx-auto mb-4 h-14 w-14 rounded-br-3xl rounded-tl-3xl bg-[#E8F5E9]">
                 <img src={service.image} alt="" className="-ml-5" />
               </div>
-              <h4 className="text-2xl font-bold text-gray-700 mb-2 px-2">
+              <h4 className="mb-2 px-2 text-2xl font-bold text-gray-700">
                 {service.title}
               </h4>
               <p className="text-sm text-neutral-600">{service.description}</p>

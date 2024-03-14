@@ -47,15 +47,15 @@ const HelpModal = ({ visible, onClose }) => {
     <div
       id="container"
       onClick={handleOnClose}
-      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-25"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-25"
     >
       {/* For small Devices */}
-      <div className="sm:hidden flex items-center justify-center w-full h-full">
-        <div className="bg-white rounded-2xl w-full max-w-[356px] flex flex-col justify-between h-full max-h-[374px] border border-black sm:hidden">
-          <div className="flex flex-row h-full justify-between">
-            <div className="flex justify-center h-full items-center">
+      <div className="flex h-full w-full items-center justify-center sm:hidden">
+        <div className="flex h-full max-h-[374px] w-full max-w-[356px] flex-col justify-between rounded-2xl border border-black bg-white sm:hidden">
+          <div className="flex h-full flex-row justify-between">
+            <div className="flex h-full items-center justify-center">
               <button
-                className="flex justify-center items-center"
+                className="flex items-center justify-center"
                 onClick={handleBack}
               >
                 <IoIosArrowBack className="h-8 w-8" />
@@ -67,19 +67,19 @@ const HelpModal = ({ visible, onClose }) => {
             {page === 3 && <Page3Content />}
             {page === 4 && <Page4Content />}
 
-            <div className="flex flex-col h-full w-auto items-center">
-              <div className="flex flex-col relative h-full">
-                <div className="flex w-full items-center justify-center mt-4 absolute">
+            <div className="flex h-full w-auto flex-col items-center">
+              <div className="relative flex h-full flex-col">
+                <div className="absolute mt-4 flex w-full items-center justify-center">
                   <button
-                    className="z-1 flex justify-center items-center mt-auto mb-auto"
+                    className="z-1 mb-auto mt-auto flex items-center justify-center"
                     onClick={handleCloseAndReset}
                   >
                     <IoIosClose className="h-6 w-6" />
                   </button>
                 </div>
-                <div className="flex w-full h-full justify-center items-center top-0 left-0">
+                <div className="left-0 top-0 flex h-full w-full items-center justify-center">
                   <button
-                    className="flex justify-center items-center mt-auto mb-auto"
+                    className="mb-auto mt-auto flex items-center justify-center"
                     onClick={handleNext}
                   >
                     <IoIosArrowForward className="h-8 w-8" />
@@ -88,9 +88,9 @@ const HelpModal = ({ visible, onClose }) => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center items-center gap-4 py-2">
+          <div className="flex items-center justify-center gap-4 py-2">
             <button
-              className="flex justify-center items-center"
+              className="flex items-center justify-center"
               onClick={() => setPage(1)}
             >
               {page === 1 ? (
@@ -100,7 +100,7 @@ const HelpModal = ({ visible, onClose }) => {
               )}
             </button>
             <button
-              className="flex justify-center items-center"
+              className="flex items-center justify-center"
               onClick={() => setPage(2)}
             >
               {page === 2 ? (
@@ -110,7 +110,7 @@ const HelpModal = ({ visible, onClose }) => {
               )}
             </button>
             <button
-              className="flex justify-center items-center"
+              className="flex items-center justify-center"
               onClick={() => setPage(3)}
             >
               {page === 3 ? (
@@ -120,7 +120,7 @@ const HelpModal = ({ visible, onClose }) => {
               )}
             </button>
             <button
-              className="flex justify-center items-center"
+              className="flex items-center justify-center"
               onClick={() => setPage(4)}
             >
               {page === 4 ? (
@@ -134,12 +134,12 @@ const HelpModal = ({ visible, onClose }) => {
       </div>
 
       {/* For large Devices */}
-      <div className="hidden sm:flex w-full h-full items-center justify-center">
-        <div className="bg-white rounded-2xl w-full max-w-[800px] flex flex-col justify-between h-full max-h-[600px] border border-black">
-          <div className="flex flex-row h-full justify-between">
-            <div className="flex justify-center h-full items-center">
+      <div className="hidden h-full w-full items-center justify-center sm:flex">
+        <div className="flex h-full max-h-[600px] w-full max-w-[800px] flex-col justify-between rounded-2xl border border-black bg-white">
+          <div className="flex h-full flex-row justify-between">
+            <div className="flex h-full items-center justify-center">
               <button
-                className="flex justify-center items-center"
+                className="flex items-center justify-center"
                 onClick={handleBack}
               >
                 <IoIosArrowBack className="h-20 w-20" />
@@ -151,19 +151,19 @@ const HelpModal = ({ visible, onClose }) => {
             {page === 3 && <Page3Content />}
             {page === 4 && <Page4Content />}
 
-            <div className="flex flex-col h-full w-auto items-center">
-              <div className="flex flex-col relative h-full">
-                <div className="flex w-full items-center justify-center mt-4 absolute">
+            <div className="flex h-full w-auto flex-col items-center">
+              <div className="relative flex h-full flex-col">
+                <div className="absolute mt-4 flex w-full items-center justify-center">
                   <button
-                    className="z-1 flex justify-center items-center mt-auto mb-auto"
+                    className="z-1 mb-auto mt-auto flex items-center justify-center"
                     onClick={handleCloseAndReset}
                   >
                     <IoIosClose className="h-10 w-10" />
                   </button>
                 </div>
-                <div className="flex w-full h-full justify-center items-center top-0 left-0">
+                <div className="left-0 top-0 flex h-full w-full items-center justify-center">
                   <button
-                    className="flex justify-center items-center mt-auto mb-auto"
+                    className="mb-auto mt-auto flex items-center justify-center"
                     onClick={handleNext}
                   >
                     <IoIosArrowForward className="h-20 w-20" />
@@ -172,9 +172,9 @@ const HelpModal = ({ visible, onClose }) => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center items-center gap-4 py-2">
+          <div className="flex items-center justify-center gap-4 py-2">
             <button
-              className="flex justify-center items-center"
+              className="flex items-center justify-center"
               onClick={() => setPage(1)}
             >
               {page === 1 ? (
@@ -184,7 +184,7 @@ const HelpModal = ({ visible, onClose }) => {
               )}
             </button>
             <button
-              className="flex justify-center items-center"
+              className="flex items-center justify-center"
               onClick={() => setPage(2)}
             >
               {page === 2 ? (
@@ -194,7 +194,7 @@ const HelpModal = ({ visible, onClose }) => {
               )}
             </button>
             <button
-              className="flex justify-center items-center"
+              className="flex items-center justify-center"
               onClick={() => setPage(3)}
             >
               {page === 3 ? (
@@ -204,7 +204,7 @@ const HelpModal = ({ visible, onClose }) => {
               )}
             </button>
             <button
-              className="flex justify-center items-center"
+              className="flex items-center justify-center"
               onClick={() => setPage(4)}
             >
               {page === 4 ? (

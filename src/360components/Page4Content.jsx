@@ -1,32 +1,32 @@
 import React from "react";
 
 const Page4Content = () => (
-  <div className="flex justify-center items-center w-full h-full">
-    <div className="bg-white rounded-2xl w-full max-w-[800px] flex flex-col justify-between h-full max-h-[600px] border-black">
-      <div className="flex flex-col w-full h-full items-center relative">
-        <div className="flex w-full h-auto mt-16 absolute z-10">
-          <h1 className="text-4xl md:text-6xl lg:text-6xl xl:text-7xl text-green-600 font-black">
+  <div className="flex h-full w-full items-center justify-center">
+    <div className="flex h-full max-h-[600px] w-full max-w-[800px] flex-col justify-between rounded-2xl border-black bg-white">
+      <div className="relative flex h-full w-full flex-col items-center">
+        <div className="absolute z-10 mt-16 flex h-auto w-full">
+          <h1 className="text-4xl font-black text-green-600 md:text-6xl lg:text-6xl xl:text-7xl">
             Controls
           </h1>
         </div>
-        <div className="flex flex-col w-full h-full justify-center items-center text-2xl mt-16 gap-10 px-5">
-          <div className="w-full flex flex-row gap-5">
+        <div className="mt-16 flex h-full w-full flex-col items-center justify-center gap-10 px-5 text-2xl">
+          <div className="flex w-full flex-row gap-5">
             <img
               src={"/assets/helpModal/autoplay.png"}
               alt="mouse"
-              className="w-10 h-10 md:w-16 md:h-16 lg:w-20 lg:h-20"
+              className="h-10 w-10 md:h-16 md:w-16 lg:h-20 lg:w-20"
             />
-            <p className="flex w-full h-full items-center justify-start text-xs md:text-xl lg:text-2xl">
+            <p className="flex h-full w-full items-center justify-start text-xs md:text-xl lg:text-2xl">
               Share the location and view to other people through a link.
             </p>
           </div>
-          <div className="w-full flex flex-row gap-5">
+          <div className="flex w-full flex-row gap-5">
             <img
               src={"/assets/helpModal/fullscreen.png"}
               alt="mouse"
-              className="w-10 h-10 md:w-16 md:h-16 lg:w-20 lg:h-20"
+              className="h-10 w-10 md:h-16 md:w-16 lg:h-20 lg:w-20"
             />
-            <p className="flex w-full h-full items-center justify-start text-xs md:text-xl lg:text-2xl">
+            <p className="flex h-full w-full items-center justify-start text-xs md:text-xl lg:text-2xl">
               This is the help button. Click this when you need a refresher for
               Adventure 360°.
             </p>
