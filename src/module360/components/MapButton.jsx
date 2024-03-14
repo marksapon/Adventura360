@@ -10,7 +10,7 @@ const MapButton = ({ x, y, onClick, previous_Scene }) => {
 
     const prevLoc = new OpenSeadragon.Point(
       previous_Scene.coords.x,
-      previous_Scene.coords.y
+      previous_Scene.coords.y,
     ); // Previous Point Location
 
     const overlayElement = document.createElement("div"); // Adding element for the overlay
@@ -43,8 +43,8 @@ const MapButton = ({ x, y, onClick, previous_Scene }) => {
       const viewportPoint = viewer.viewport.pointFromPixel(event.position); // The position of the click in viewport coordinates
       console.log(
         `Clicked at viewport coordinates: ${viewportPoint.x.toFixed(
-          3
-        )}, ${viewportPoint.y.toFixed(3)}`
+          3,
+        )}, ${viewportPoint.y.toFixed(3)}`,
       );
     });
 
@@ -62,9 +62,9 @@ const MapButton = ({ x, y, onClick, previous_Scene }) => {
   }, [x, y, previous_Scene.coords.x, previous_Scene.coords.y]);
 
   return (
-    <div className="overflow-hidden rounded-xl flex border border-black w-fit opacity-[0.90]">
+    <div className="flex w-fit overflow-hidden rounded-xl border border-black opacity-[0.90]">
       <button
-        className="w-[172px] h-[90px] sm:w-[264px] sm:h-[152px] md:w-[336px] md:h-[172px] lg:w-[336px] lg:h-[172px]"
+        className="h-[90px] w-[172px] sm:h-[152px] sm:w-[264px] md:h-[172px] md:w-[336px] lg:h-[172px] lg:w-[336px]"
         id="viewer"
         onClick={onClick}
       />

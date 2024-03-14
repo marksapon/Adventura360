@@ -8,8 +8,9 @@ const Bugmodal = ({ visible, onClose }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [showThankYouModal, setShowThankYouModal] = useState(false);
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+  const handleCloseAndReset = () => {
+    onClose();
+    resetState();
   };
 
   const selectItem = (item) => {
@@ -17,9 +18,8 @@ const Bugmodal = ({ visible, onClose }) => {
     setIsOpen(false);
   };
 
-  const handleClose = () => {
-    onClose();
-    resetState(); // Reset the state when closing
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
   };
 
   const handleSubmit = () => {
@@ -35,100 +35,100 @@ const Bugmodal = ({ visible, onClose }) => {
     setShowThankYouModal(false);
   };
 
+  if (!visible) return null;
+
   return (
-    <>
-      <div
-        className={`fixed inset-0 flex items-center justify-center bg-black bg-opacity-25 z-50 ${
-          visible ? "" : "hidden"
-        }`}
-      >
-        <div className="flex flex-col w-[260px] h-[360px] sm:w-[360px] sm:h-[400px] md:h-[460px] md:w-[360px] lg:h-[560px] lg:w-[460px] bg-white rounded-lg shadow-lg border-green-600 border">
-          <button
-            className="flex justify-end items-end p-2 text-xl text-gray-600 hover:text-gray-800"
-            onClick={handleClose}
-          >
-            <IoIosClose className="h-10 w-10" />
-          </button>
-          <div className="relative">
-            <h1 className="flex text-4xl text-green-600 text font-bold ml-12">
-              Feedback
-            </h1>
-            <p className="flex text-balance text-lg font-sans ml-12 mt-3">
-              Your feedback is crucial to us. Please share any thoughts or
-              concerns to help us improve. Thank you for being part of our
-              journey!
-            </p>
+    <div
+      onClick={null}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-25 px-2"
+    >
+      <div className="flex h-auto w-full items-center justify-center">
+        <div className="flex h-full max-h-[600px] w-auto min-w-[300px] max-w-[560px] flex-col justify-center rounded-2xl border border-black bg-white px-2 px-4">
+          <div className="flex h-full flex-col items-end py-4">
+            <button
+              className="flex items-center justify-center"
+              onClick={handleCloseAndReset}
+            >
+              <IoIosClose className="h-12 w-12" />
+            </button>
+            <div className="gap-6">
+              <h1 className="flex text-4xl font-bold text-green-600">
+                Feedback
+              </h1>
+              <p className="text-full mt-3 flex font-sans text-lg">
+                Your feedback is crucial to us. Please share any thoughts or
+                concerns to help us improve. Thank you for being part of our
+                journey!
+              </p>
+            </div>
           </div>
-          <div className="relative">
-            <div className="relative flex items-center justify-center ">
+          <div className="flex h-full w-full flex-col justify-between gap-4">
+            <div className="h-full w-full">
               <div
-                className="dropdown-header cursor-pointer p-2 border border-green-600 w-[380px] h-12 mt-4 rounded-lg items-center justify-center"
+                className="dropdown-header h-12 w-full cursor-pointer items-center justify-center rounded-lg border border-green-600 p-2"
                 onClick={toggleDropdown}
               >
                 {selectedItem ? selectedItem : "Category"}
+                {isOpen && (
+                  <ul className="relative z-auto mt-6 w-full max-w-[508px] flex-row rounded-lg border border-green-600 bg-white shadow-lg">
+                    <li
+                      className="cursor-pointer border-b p-2 text-center hover:bg-gray-100"
+                      onClick={() => selectItem("Bug")}
+                    >
+                      Bug
+                    </li>
+                    <li
+                      className="cursor-pointer border-b p-2 text-center hover:bg-gray-100"
+                      onClick={() => selectItem("Suggestions")}
+                    >
+                      Suggestions
+                    </li>
+                    <li
+                      className="cursor-pointer border-b p-2 text-center hover:bg-gray-100"
+                      onClick={() => selectItem("Content Request")}
+                    >
+                      Content Request
+                    </li>
+                    <li
+                      className="cursor-pointer border-b p-2 text-center hover:bg-gray-100"
+                      onClick={() => selectItem("Feature Request")}
+                    >
+                      Feature Request
+                    </li>
+                    <li
+                      className="cursor-pointer border-b p-2 text-center hover:bg-gray-100"
+                      onClick={() => selectItem("Others")}
+                    >
+                      Others
+                    </li>
+                  </ul>
+                )}
               </div>
-              {isOpen && (
-                <ul className="absolute w-[380px] bg-white border border-green-600 rounded-lg shadow-lg flex-row justify-center items-center mt-[280px] z-50">
-                  <li
-                    className="p-2 cursor-pointer hover:bg-gray-100 text-center border-b"
-                    onClick={() => selectItem("Bug")}
-                  >
-                    Bug
-                  </li>
-                  <li
-                    className="p-2 cursor-pointer hover:bg-gray-100 text-center border-b"
-                    onClick={() => selectItem("Suggestions")}
-                  >
-                    Suggestions
-                  </li>
-                  <li
-                    className="p-2 cursor-pointer hover:bg-gray-100 text-center border-b"
-                    onClick={() => selectItem("Content Request")}
-                  >
-                    Content Request
-                  </li>
-                  <li
-                    className="p-2 cursor-pointer hover:bg-gray-100 text-center border-b"
-                    onClick={() => selectItem("Feature Request")}
-                  >
-                    Feature Request
-                  </li>
-                  <li
-                    className="p-2 cursor-pointer hover:bg-gray-100 text-center border-b"
-                    onClick={() => selectItem("Others")}
-                  >
-                    Others
-                  </li>
-                </ul>
-              )}
+
+              <div className="flex w-full">
+                <input
+                  type="email"
+                  className="mt-2 h-12 w-full rounded-lg border border-green-600 p-2"
+                  placeholder="Enter your email here..."
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+
+              <div className="flex w-full">
+                <textarea
+                  id="message"
+                  className="mt-2 h-36 w-full resize-none rounded-lg border border-green-600 bg-white p-2 text-sm text-gray-900"
+                  placeholder="Write your message here..."
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                />
+              </div>
             </div>
-          </div>
-          <div className="relative">
-            <div className="relative flex items-center justify-center">
-              <input
-                type="email"
-                className="p-2 border border-green-600 w-[380px] h-12 mt-2 rounded-lg"
-                placeholder="Enter your email here..."
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-          </div>
-          <div className="relative">
-            <div className="flex items-start justify-center">
-              <textarea
-                id="message"
-                className="p-2 w-[380px] h-36  mt-2 text-sm text-gray-900 bg-white rounded-lg border border-green-600"
-                placeholder="Write your message here..."
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-              />
-            </div>
-          </div>
-          <div className="relative flex flex-col justify-center mt-auto">
+
             <div className="flex w-auto items-center justify-center">
               <button
-                className=" h-auto w-auto rounded-full mb-4 px-4 bg-white text-green-600 border border-gray-400 text-3xl"
+                className=" mb-4 h-auto w-auto rounded-full border border-gray-400 bg-white px-4 text-3xl text-green-600"
                 onClick={handleSubmit}
               >
                 Submit
@@ -138,18 +138,18 @@ const Bugmodal = ({ visible, onClose }) => {
         </div>
       </div>
       {showThankYouModal && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-25 z-50">
-          <div className="flex flex-col h-[320px] w-[360px] bg-white rounded-lg shadow-lg border-green-600 border">
-            <button className="flex justify-end items-end p-2">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-25">
+          <div className="flex h-[320px] w-[360px] flex-col rounded-lg border border-green-600 bg-white shadow-lg">
+            <button className="flex items-end justify-end p-2">
               <IoIosClose
-                className="h-8 w-8"
+                className="h-12 w-12"
                 onClick={() => setShowThankYouModal(false)}
               />
             </button>
             <div className="flex items-center justify-center">
-              <h1 className="text-4xl text-green-600 font-bold">Thank You!</h1>
+              <h1 className="text-4xl font-bold text-green-600">Thank You!</h1>
             </div>
-            <div className="flex items-center justify-center mt-4">
+            <div className="mt-4 flex items-center justify-center">
               <p className="text-lg text-gray-700">
                 Your feedback has been submitted successfully.
               </p>
@@ -157,7 +157,7 @@ const Bugmodal = ({ visible, onClose }) => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

@@ -14,7 +14,7 @@ const Sharelink = ({ visible, onClose }) => {
         alert("URL copied to clipboard: " + currentUrl);
       })
       .catch((error) =>
-        console.error("Error copying URL to clipboard: ", error)
+        console.error("Error copying URL to clipboard: ", error),
       );
   };
 
@@ -22,34 +22,34 @@ const Sharelink = ({ visible, onClose }) => {
     <div
       id="container"
       onClick={null}
-      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-25"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-25 px-4"
     >
-      <div className="flex bg-white h-24 w-80 md:h-32 md:w-[464px] lg:h-36 lg:w-[664px] relative rounded-lg flex-col">
-        <div className="flex flex-row w-full h-auto items-center">
-          <div className="flex relative w-full flex-row-reverse items-center justify-items-end">
-            <div className="flex items-end justify-items-end relative">
+      <div className="relative flex  flex-col rounded-lg bg-white p-2">
+        <div className="flex h-auto w-full flex-row items-center">
+          <div className="relative flex w-full flex-row-reverse items-center justify-items-end">
+            <div className="relative flex items-end justify-items-end">
               <button
-                className="flex justify-center items-end mt-auto mb-auto"
+                className="mb-auto mt-auto flex items-end justify-center"
                 onClick={onClose}
               >
                 <IoIosClose className="h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10" />
               </button>
             </div>
-            <div className="flex w-full h-full items-center justify-center mt-4">
-              <p className="text-green-600 text-xl sm:text-xl md:text-3xl lg:text-4xl">
+            <div className="mt-4 flex h-full w-full items-center justify-center">
+              <p className="text-xl text-green-600 sm:text-xl md:text-3xl lg:text-4xl">
                 Share what you see!
               </p>
             </div>
           </div>
         </div>
-        <div className="flex px-6  my-3 sm:my-2 md:my-4 lg:my-4 justify-between items-center h-full w-full gap-4">
-          <div className="flex bg-gray-200 w-[12%] h-full rounded-lg items-center justify-center text-green-600 ">
+        <div className="my-3 flex  h-full w-full items-center justify-between gap-4 px-6 sm:my-2 md:my-4 lg:my-4">
+          <div className="flex h-full w-[12%] items-center justify-center rounded-lg bg-gray-200 p-4 text-green-600 ">
             <button onClick={copyToClipboard} className="">
               <MdContentCopy className="h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10" />
             </button>
           </div>
-          <div className="bg-gray-200 h-full w-full rounded-lg flex items-center">
-            <p className="text-gray-700 pl-4 text-xs sm:2xl md:2xl lg:3xl">
+          <div className="flex h-full w-full items-center rounded-lg bg-gray-200 p-4">
+            <p className="sm:2xl md:2xl lg:3xl text-xs text-gray-700">
               {currentUrl}
             </p>
           </div>

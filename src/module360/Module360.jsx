@@ -198,7 +198,7 @@ function Module360() {
       new EquirectProjection({
         src: select_Scene.image,
       }),
-    [select_Scene.image]
+    [select_Scene.image],
   );
 
   // Create plugins for the viewer
@@ -223,7 +223,7 @@ function Module360() {
       }),
       new LoadingSpinner(),
     ],
-    [zoomSettings.min]
+    [zoomSettings.min],
   );
 
   // Function that changes scene based on the hotspot target
@@ -262,7 +262,7 @@ function Module360() {
 
   /* Component Return */
   return (
-    <div className="min-h-screen flex items-center justify-center relative w-full">
+    <div className="relative flex min-h-screen w-full items-center justify-center">
       <View360
         autoplay={autoplay ? { delay: 1000, speed: 0.5 } : false}
         onViewChange={handleViewChange}
@@ -303,16 +303,16 @@ function Module360() {
             ></div>
           ))}
         </div>
-        <div className="flex w-full h-full">
+        <div className="flex h-full w-full">
           <Navigationbar
             toggleAutoplay={toggleAutoplay}
             location={select_Scene.location}
           />
         </div>
 
-        <div className="absolute top-0 left-0 p-1 text-white ">
+        <div className="absolute left-0 top-0 p-1 text-white ">
           <div className="relative flex flex-row justify-between">
-            <div className="pt-20 pb-2 pl-2">
+            <div className="pb-2 pl-2 pt-20">
               {mapButtonVisible && (
                 <MapButton
                   x={select_Scene.coords.x}
@@ -324,9 +324,9 @@ function Module360() {
             </div>
           </div>
         </div>
-        <div className="absolute flex items-center w-25 h-25  justify-center bottom-0 right-0 pr-2 pb-20 sm:pr-2 sm:pb-20 md:pr-2 md:pb-2 lg:pr-2 lg:pb-2">
+        <div className="w-25 h-25 absolute bottom-0 right-0  flex items-center justify-center pb-20 pr-2 sm:pb-20 sm:pr-2 md:pb-2 md:pr-2 lg:pb-2 lg:pr-2">
           <button
-            className="text-white bg-gray-100 rounded-full p-2 shadow-2xl-inner"
+            className="shadow-2xl-inner rounded-full bg-gray-100 p-2 text-white"
             onClick={toggleMapButtonVisibility}
           >
             {mapButtonVisible ? (
@@ -339,7 +339,7 @@ function Module360() {
       </View360>
       {/* Button to toggle map button visibility */}
 
-      <div className="absolute items-center justify-center flex text-white text-xl">
+      <div className="absolute flex items-center justify-center text-xl text-white">
         +
       </div>
     </div>
