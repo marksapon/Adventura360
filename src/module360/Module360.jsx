@@ -7,10 +7,10 @@ import View360, {
 } from "@egjs/react-view360";
 import React, { useMemo, useState, useEffect, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import nodesData from "./database/Nodes.json";
-import buildingsData from "./database/Buildings.json";
-import Navigationbar from "./360components/Navigationbar";
-import MapButton from "./360components/MapButton";
+import nodesData from "../database/Nodes.json";
+import buildingsData from "../database/Buildings.json";
+import Navigationbar from "./components/Navigationbar";
+import MapButton from "./components/MapButton";
 import clsx from "clsx";
 import { MdMyLocation } from "react-icons/md";
 import { MdLocationSearching } from "react-icons/md";

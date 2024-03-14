@@ -513,3 +513,39 @@
   visibility: visible;
   pointer-events: all;
 }
+
+/* Hotspot Types */
+.move {
+  opacity: 0.8;
+  pointer-events: all;
+  cursor: pointer;
+  transition: opacity 250ms;
+  /* Add background image */
+  background-image: url("/assets/360_hotspots/arrow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; /* or any other position */
+}
+.bldg {
+  opacity: 0.8;
+  pointer-events: all;
+  cursor: pointer;
+  transition: opacity 250ms;
+  /* Add background image */
+  background-image: url("/assets/360_buttons/building_button.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; /* or any other position */
+}
+
+.info {
+  opacity: 0.8;
+  pointer-events: all;
+  cursor: pointer;
+  transition: opacity 250ms;
+  /* Add background image */
+  background-image: url("/assets/360_buttons/info_button.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; /* or any other position */
+}

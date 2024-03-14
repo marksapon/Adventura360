@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import LandingPage from "./LandingPage";
-import Module360 from "./Module360";
-// import Map from "./Map";
+import LandingPage from "./landingPage/LandingPage";
+import Module360 from "./module360/Module360";
 
 const AppRouter = () => {
   return (
