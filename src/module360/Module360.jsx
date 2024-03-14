@@ -63,7 +63,10 @@ function Module360() {
 
   const [previous_Scene, setPrevious_Scene] = useState(nodesData.nodes[0]);
 
-  console.log(previous_Scene.coords.x, previous_Scene.coords.y);
+  console.log(
+    "Previous Scene Coord: " + previous_Scene.coords.x,
+    previous_Scene.coords.y
+  );
 
   // Setting scene based on URL parameters
   const [select_Scene, setSelect_Scene] = useState(() => {
@@ -306,7 +309,7 @@ function Module360() {
         <div className="flex h-full w-full">
           <Navigationbar
             toggleAutoplay={toggleAutoplay}
-            location={select_Scene.location}
+            location={select_Scene}
           />
         </div>
 

@@ -9,16 +9,20 @@ import { GrMap } from "react-icons/gr"; // Map Button
 import { IoMdSearch } from "react-icons/io"; // Search Button
 import { PiPlayCircleLight } from "react-icons/pi"; // Autoplay Button
 import { TbMaximize, TbMaximizeOff } from "react-icons/tb"; // Fullscreen On/Off
+import Map from "../../mapmodule/Map";
 
 const Navigationbar = ({ toggleAutoplay, location }) => {
+
+  /* Custom button to control OSD */
+  // const handleButtonClick = (viewer) => {
+  //   // Pan to a specific location
+  //   viewer.viewport.panTo(new OpenSeadragon.Point(1, 1));
+  // };
+
+  const [showMap, setShowMap] = useState(false);
+
   const [isFullscreen, setIsFullscreen] = useState(false);
 
-  /* Shareable Link Function */
-
-  // function getURL() {
-  //   const url = window.location.href;
-  //   return url;
-  // }
   const [Showmodal, setShowmodal] = useState(false);
   const handleclose = () => setShowmodal(false);
   const [Sharemodal, setShowSharemodal] = useState(false);
@@ -101,8 +105,8 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <div className="hidden md:flex">
               <button
                 type="button"
-                onClick={null}
-                className="inline-flex h-14 w-14 items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+                onClick={() => setShowMap(!showMap)}
+                className="inline-flex items-center w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Map</span>
                 <GrMap size={35} className="text-green-600" />
@@ -137,8 +141,8 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
           </div>
 
           {/* LOCATION */}
-          <div className="md:text-1xl flex h-full w-full items-center justify-center border-l-2 border-r-2 px-1 text-center font-roboto text-sm md:min-w-[290px]">
-            {location !== undefined ? location : "Location"}
+          <div className="flex w-full h-full border-r-2 border-l-2 text-sm md:text-1xl px-1 items-center justify-center text-center md:min-w-[290px] font-roboto">
+            {location.location !== undefined ? location.location : "Location"}
           </div>
           {/* LOCATION */}
 
@@ -208,14 +212,17 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
         <Bugmodal onClose={handlecloseBug} visible={Bugmdl} />
       </div>
 
+      {/*MAP MODULE*/}
+      {showMap && <Map handleButtonClick={handleButtonClick} />}
+
       {/*FOOTER*/}
       <div className="sticky bottom-0  start-0 top-4 z-20 mx-2 mb-4 h-14 w-full rounded-xl border-b border-gray-200 bg-white md:hidden dark:border-gray-600">
         <div className="flex h-full items-center justify-between px-2 text-base">
           <div className="flex md:hidden">
             <button
               type="button"
-              onClick={null}
-              className="inline-flex h-14 w-14 items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+              onClick={() => setShowMap(!showMap)}
+              className="inline-flex items-center w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
             >
               <span className="sr-only">Map</span>
               <GrMap size={35} className="text-green-600" />
