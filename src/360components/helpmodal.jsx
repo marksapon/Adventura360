@@ -47,10 +47,10 @@ const HelpModal = ({ visible, onClose }) => {
     <div
       id="container"
       onClick={handleOnClose}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-25"
+      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-25"
     >
       {/* For small Devices */}
-      <div className="flex h-full w-full items-center justify-center sm:hidden">
+      <div className="flex h-full w-full items-center justify-center p-2 sm:hidden">
         <div className="flex h-full max-h-[374px] w-full max-w-[356px] flex-col justify-between rounded-2xl border border-black bg-white sm:hidden">
           <div className="flex h-full flex-row justify-between">
             <div className="flex h-full items-center justify-center">
@@ -134,7 +134,7 @@ const HelpModal = ({ visible, onClose }) => {
       </div>
 
       {/* For large Devices */}
-      <div className="hidden h-full w-full items-center justify-center sm:flex">
+      <div className="hidden h-full w-full items-center justify-center p-2 sm:flex">
         <div className="flex h-full max-h-[600px] w-full max-w-[800px] flex-col justify-between rounded-2xl border border-black bg-white">
           <div className="flex h-full flex-row justify-between">
             <div className="flex h-full items-center justify-center">

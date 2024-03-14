@@ -10,6 +10,7 @@ const Bugmodal = ({ visible, onClose }) => {
 
   const handleCloseAndReset = () => {
     onClose();
+    resetState();
   };
 
   const selectItem = (item) => {
@@ -38,13 +39,11 @@ const Bugmodal = ({ visible, onClose }) => {
 
   return (
     <div
-      id="container"
       onClick={null}
       className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-25 px-2"
     >
-      {/* For large Devices */}
       <div className="flex h-auto w-full items-center justify-center">
-        <div className="flex h-full max-h-[600px] w-auto min-w-[320px] max-w-[560px] flex-col justify-center rounded-2xl border border-black bg-white px-4">
+        <div className="flex h-full max-h-[600px] w-auto min-w-[300px] max-w-[560px] flex-col justify-center rounded-2xl border border-black bg-white px-2 px-4">
           <div className="flex h-full flex-col items-end py-4">
             <button
               className="flex items-center justify-center"
@@ -66,12 +65,12 @@ const Bugmodal = ({ visible, onClose }) => {
           <div className="flex h-full w-full flex-col justify-between gap-4">
             <div className="h-full w-full">
               <div
-                className="dropdown-header mt-4 h-12 w-full cursor-pointer items-center justify-center rounded-lg border border-green-600 p-2"
+                className="dropdown-header h-12 w-full cursor-pointer items-center justify-center rounded-lg border border-green-600 p-2"
                 onClick={toggleDropdown}
               >
                 {selectedItem ? selectedItem : "Category"}
                 {isOpen && (
-                  <ul className="relative z-auto w-full max-w-[508px] flex-row rounded-lg border border-green-600 bg-white shadow-lg">
+                  <ul className="relative z-auto mt-6 w-full max-w-[508px] flex-row rounded-lg border border-green-600 bg-white shadow-lg">
                     <li
                       className="cursor-pointer border-b p-2 text-center hover:bg-gray-100"
                       onClick={() => selectItem("Bug")}
@@ -119,7 +118,7 @@ const Bugmodal = ({ visible, onClose }) => {
               <div className="flex w-full">
                 <textarea
                   id="message"
-                  className="mt-2 h-36 w-full rounded-lg border border-green-600 bg-white p-2 text-sm text-gray-900"
+                  className="mt-2 h-36 w-full resize-none rounded-lg border border-green-600 bg-white p-2 text-sm text-gray-900"
                   placeholder="Write your message here..."
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}

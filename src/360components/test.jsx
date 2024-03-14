@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IoIosClose } from "react-icons/io";
 
-const bug_modal = ({ visible, onClose }) => {
+const Bugmodal = ({ visible, onClose }) => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -161,4 +161,4 @@ const bug_modal = ({ visible, onClose }) => {
   );
 };
 
-export default bug_modal;
+export default Bugmodal;
