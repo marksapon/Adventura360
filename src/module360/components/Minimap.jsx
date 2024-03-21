@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import "./MapButton.css";
+import "./Minimap.css";
 import OpenSeadragon from "openseadragon";
 
-const MapButton = ({ x, y, onClick, previous_Scene }) => {
+const Minimap = ({ x, y, onClick, previous_Scene }) => {
   // Map Button mount
   useEffect(() => {
     /* Coordinates */
@@ -10,7 +10,7 @@ const MapButton = ({ x, y, onClick, previous_Scene }) => {
 
     const prevLoc = new OpenSeadragon.Point(
       previous_Scene.coords.x,
-      previous_Scene.coords.y,
+      previous_Scene.coords.y
     ); // Previous Point Location
 
     const overlayElement = document.createElement("div"); // Adding element for the overlay
@@ -43,8 +43,8 @@ const MapButton = ({ x, y, onClick, previous_Scene }) => {
       const viewportPoint = viewer.viewport.pointFromPixel(event.position); // The position of the click in viewport coordinates
       console.log(
         `Clicked at viewport coordinates: ${viewportPoint.x.toFixed(
-          3,
-        )}, ${viewportPoint.y.toFixed(3)}`,
+          3
+        )}, ${viewportPoint.y.toFixed(3)}`
       );
     });
 
@@ -62,16 +62,16 @@ const MapButton = ({ x, y, onClick, previous_Scene }) => {
   }, [x, y, previous_Scene.coords.x, previous_Scene.coords.y]);
 
   return (
-    <div className="flex w-fit overflow-hidden rounded-xl border border-black opacity-[0.90]">
+    <div className="flex w-auto h-auto overflow-hidden rounded-2xl border-black">
       <button
-        className="h-[90px] w-[172px] sm:h-[152px] sm:w-[264px] md:h-[172px] md:w-[336px] lg:h-[172px] lg:w-[336px]"
+        className="h-20 w-36 md:h-20 md:w-40 lg:h-40 lg:w-80"
         id="viewer"
         onClick={onClick}
       />
     </div>
   );
 };
-export default MapButton;
+export default Minimap;
 
 /*A  
 

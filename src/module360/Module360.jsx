@@ -10,10 +10,10 @@ import { useParams, useNavigate } from "react-router-dom";
 import nodesData from "../database/Nodes.json";
 import buildingsData from "../database/Buildings.json";
 import Navigationbar from "./components/Navigationbar";
-import MapButton from "./components/MapButton";
+import Minimap from "./components/Minimap";
 import clsx from "clsx";
-import { MdMyLocation } from "react-icons/md";
-import { MdLocationSearching } from "react-icons/md";
+import { TbMap } from "react-icons/tb";
+import { TbMapOff } from "react-icons/tb";
 
 function Module360() {
   GyroControl.isAvailable()
@@ -201,7 +201,7 @@ function Module360() {
       new EquirectProjection({
         src: select_Scene.image,
       }),
-    [select_Scene.image],
+    [select_Scene.image]
   );
 
   // Create plugins for the viewer
@@ -226,7 +226,7 @@ function Module360() {
       }),
       new LoadingSpinner(),
     ],
-    [zoomSettings.min],
+    [zoomSettings.min]
   );
 
   // Function that changes scene based on the hotspot target
@@ -265,7 +265,7 @@ function Module360() {
 
   /* Component Return */
   return (
-    <div className="relative flex min-h-screen w-full items-center justify-center">
+    <div className="relative flex h-svh w-full items-center justify-center">
       <View360
         autoplay={autoplay ? { delay: 1000, speed: 0.5 } : false}
         onViewChange={handleViewChange}
@@ -274,7 +274,7 @@ function Module360() {
         key={zoomSettings.min + autoplay}
         ref={viewerRef}
         projection={projection}
-        style={{ width: "100%", height: "100vh", overflow: "hidden" }}
+        style={{ width: "100%", height: "100svh", overflow: "hidden" }}
         plugins={plugins}
         pitchRange={{ min: -40, max: 40 }}
         initialZoom={zoomSettings.min}
@@ -306,6 +306,7 @@ function Module360() {
             ></div>
           ))}
         </div>
+
         <div className="flex h-full w-full">
           <Navigationbar
             toggleAutoplay={toggleAutoplay}
@@ -315,9 +316,9 @@ function Module360() {
 
         <div className="absolute left-0 top-0 p-1 text-white ">
           <div className="relative flex flex-row justify-between">
-            <div className="pb-2 pl-2 pt-20">
+            <div className="pb-2 pl-2 pt-16 md:pt-20">
               {mapButtonVisible && (
-                <MapButton
+                <Minimap
                   x={select_Scene.coords.x}
                   y={select_Scene.coords.y}
                   onClick={() => changetoMap()}
@@ -327,15 +328,18 @@ function Module360() {
             </div>
           </div>
         </div>
-        <div className="w-25 h-25 absolute bottom-0 right-0  flex items-center justify-center pb-20 pr-2 sm:pb-20 sm:pr-2 md:pb-2 md:pr-2 lg:pb-2 lg:pr-2">
+        <div className="absolute bottom-0 right-0  flex items-center justify-center pb-20 pr-2 sm:pb-20 sm:pr-2 md:pb-2 md:pr-2 lg:pb-2 lg:pr-2">
           <button
-            className="shadow-2xl-inner rounded-full bg-gray-100 p-2 text-white"
+            className="shadow-2xl-inner rounded-full bg-gray-100 p-2 text-white drop-shadow-md"
             onClick={toggleMapButtonVisibility}
           >
             {mapButtonVisible ? (
-              <MdMyLocation size={25} className="text-gray-500" /> // Icon for hiding the map button
+              <TbMap className="text-gray-500 h-6 w-6 md:h-9/12 md:w-full lg:h-10 lg:w-10" /> // Icon for hiding the map button  h-6 w-6 md:h-10 md:w-10
             ) : (
-              <MdLocationSearching size={25} className="text-gray-500" /> // Icon for showing the map button
+              <TbMapOff
+                size={25}
+                className="text-gray-500 h-6 w-6 md:h-9/12 md:w-full lg:h-10 lg:w-10"
+              /> // Icon for showing the map button
             )}
           </button>
         </div>
@@ -353,7 +357,4 @@ export default Module360;
 /* DEBUG PURPOSE
 <div>Location: {select_Scene.scene}</div>
 <div>Source: {select_Scene.image}</div>
-
-key={zoomSettings.min + autoplay}
-
 */

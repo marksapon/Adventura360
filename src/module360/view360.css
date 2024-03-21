@@ -295,7 +295,9 @@
   display: inline-flex;
   flex-direction: row;
   align-items: center;
-  transition: width 250ms, background-color 250ms;
+  transition:
+    width 250ms,
+    background-color 250ms;
   overflow: hidden;
 }
 
@@ -333,12 +335,11 @@
 }
 
 .view360-controls-pie {
-  width: 36px;
-  height: 36px;
-  margin: 6px;
-  padding: 0;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
   border-radius: 18px;
-  opacity: 0.8;
+  opacity: 1;
   pointer-events: all;
   cursor: pointer;
   color: #fff;
@@ -419,28 +420,12 @@
   display: none !important;
 }
 
-@media screen and (max-width: 768px) {
-  .view360-controls-button {
-    background-size: 18px 18px;
-    width: 30px;
-    height: 30px;
-    margin: 4.5px;
-    padding: 6px;
-    border-radius: 15px;
-  }
-  .view360-controls-volume .view360-controls-button {
-    width: 18px;
-    height: 18px;
-  }
-  .view360-controls-volume:not(:disabled):hover,
-  .view360-controls-volume:not(:disabled).view360-controls-fixed {
-    width: 84px;
-  }
+@media screen and (min-width: 768px) {
   .view360-controls-pie {
-    width: 27px;
-    height: 27px;
-    margin: 4.5px;
-    padding: 0;
+    width: 45px;
+    height: 45px;
+    margin-top: 0%;
+    margin-right: 10px;
     border-radius: 13.5px;
   }
 }
@@ -469,7 +454,7 @@
   border-style: solid;
   border-radius: 50%;
   border-width: 10px;
-  border-color: #fff;
+  border-color: #323232;
   border-bottom-color: transparent;
   animation: view360-spin-animation 1.2s linear infinite;
 }

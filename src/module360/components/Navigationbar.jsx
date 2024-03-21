@@ -9,10 +9,10 @@ import { GrMap } from "react-icons/gr"; // Map Button
 import { IoMdSearch } from "react-icons/io"; // Search Button
 import { PiPlayCircleLight } from "react-icons/pi"; // Autoplay Button
 import { TbMaximize, TbMaximizeOff } from "react-icons/tb"; // Fullscreen On/Off
-import Map from "../../mapmodule/Map";
+import MapModule from "../../mapmodule/Map.jsx";
+import { IoIosHelpCircleOutline } from "react-icons/io";
 
 const Navigationbar = ({ toggleAutoplay, location }) => {
-
   /* Custom button to control OSD */
   // const handleButtonClick = (viewer) => {
   //   // Pan to a specific location
@@ -45,15 +45,15 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
       document.removeEventListener("fullscreenchange", handleFullscreenChange);
       document.removeEventListener(
         "webkitfullscreenchange",
-        handleFullscreenChange,
+        handleFullscreenChange
       );
       document.removeEventListener(
         "mozfullscreenchange",
-        handleFullscreenChange,
+        handleFullscreenChange
       );
       document.removeEventListener(
         "MSFullscreenChange",
-        handleFullscreenChange,
+        handleFullscreenChange
       );
     };
   }, []);
@@ -131,18 +131,16 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
                 className="inline-flex h-14 w-14 items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Help</span>
-                <img
-                  className="h-8 w-8 object-scale-down"
-                  src="/assets/Module360/Icons/help_button.png"
-                  alt=" "
-                />
+                <IoIosHelpCircleOutline size={37} className="text-green-600" />
               </button>
             </div>
           </div>
 
           {/* LOCATION */}
-          <div className="flex w-full h-full border-r-2 border-l-2 text-sm md:text-1xl px-1 items-center justify-center text-center md:min-w-[290px] font-roboto">
-            {location.location !== undefined ? location.location : "Location"}
+          <div className="flex w-full h-full border-r-2 border-l-2 text-sm md:text-1xl px-1 items-center justify-center text-center md:min-w-[260px] font-roboto">
+            {location.location !== undefined
+              ? location.location
+              : "Cavite State University Main Campus"}
           </div>
           {/* LOCATION */}
 
@@ -198,10 +196,10 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <div>
               <button
                 type="button"
-                onClick={null}
+                onClick={() => window.open("https://www.cvsu.edu.ph/")} // Redirect to CVSU website
                 className="flex h-12 w-12 items-center  justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
-                <span className="sr-only">Toggle Fullscreen</span>
+                <span className="sr-only">CVSU</span>
                 <img src="/assets/Module360/Icons/CvSULogo2.png" alt=" " />
               </button>
             </div>
@@ -213,7 +211,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
       </div>
 
       {/*MAP MODULE*/}
-      {showMap && <Map handleButtonClick={handleButtonClick} />}
+      {showMap && <MapModule currLoc={location.coords} />}
 
       {/*FOOTER*/}
       <div className="sticky bottom-0  start-0 top-4 z-20 mx-2 mb-4 h-14 w-full rounded-xl border-b border-gray-200 bg-white md:hidden dark:border-gray-600">
@@ -222,7 +220,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <button
               type="button"
               onClick={() => setShowMap(!showMap)}
-              className="inline-flex items-center w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+              className="items-center w-14 h-14 inline-flex justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
             >
               <span className="sr-only">Map</span>
               <GrMap size={35} className="text-green-600" />
@@ -233,7 +231,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <button
               type="button"
               onClick={null}
-              className="inline-flex h-14 w-14 items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+              className=" h-14 w-14 items-center inline-flex justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
             >
               <span className="sr-only">Search</span>
               <IoMdSearch size={35} className="text-green-600" />
@@ -247,11 +245,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
               className="inline-flex h-14 w-14 items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
             >
               <span className="sr-only">Help</span>
-              <img
-                className="h-8 w-8 object-scale-down"
-                src="/assets/Module360/Icons/help_button.png"
-                alt=" "
-              />
+              <IoIosHelpCircleOutline size={37} className="text-green-600" />
             </button>
           </div>
 
