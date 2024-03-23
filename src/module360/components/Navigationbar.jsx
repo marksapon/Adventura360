@@ -11,6 +11,7 @@ import { PiPlayCircleLight } from "react-icons/pi"; // Autoplay Button
 import { TbMaximize, TbMaximizeOff } from "react-icons/tb"; // Fullscreen On/Off
 import MapModule from "../../mapmodule/Map.jsx";
 import { IoIosHelpCircleOutline } from "react-icons/io";
+import { Tb360View } from "react-icons/tb"; // 360 Icon
 
 const Navigationbar = ({ toggleAutoplay, location }) => {
   /* Custom button to control OSD */
@@ -19,7 +20,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
   //   viewer.viewport.panTo(new OpenSeadragon.Point(1, 1));
   // };
 
-  const [showMap, setShowMap] = useState(false);
+  const [mapState, setMapState] = useState(false);
 
   const [isFullscreen, setIsFullscreen] = useState(false);
 
@@ -105,7 +106,18 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <div className="hidden md:flex">
               <button
                 type="button"
-                onClick={() => setShowMap(!showMap)}
+                onClick={() => setMapState(false)}
+                className="inline-flex items-center w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+              >
+                <span className="sr-only">360</span>
+                <Tb360View size={35} className="text-green-600" />
+              </button>
+            </div>
+
+            <div className="hidden md:flex">
+              <button
+                type="button"
+                onClick={() => setMapState(true)}
                 className="inline-flex items-center w-14 h-14 justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Map</span>
@@ -211,7 +223,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
       </div>
 
       {/*MAP MODULE*/}
-      {showMap && <MapModule currLoc={location.coords} />}
+      {mapState && <MapModule currLoc={location.coords} />}
 
       {/*FOOTER*/}
       <div className="sticky bottom-0  start-0 top-4 z-20 mx-2 mb-4 h-14 w-full rounded-xl border-b border-gray-200 bg-white md:hidden dark:border-gray-600">
@@ -219,7 +231,18 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
           <div className="flex md:hidden">
             <button
               type="button"
-              onClick={() => setShowMap(!showMap)}
+              onClick={() => setMapState(false)}
+              className="items-center w-14 h-14 inline-flex justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+            >
+              <span className="sr-only">360</span>
+              <Tb360View size={35} className="text-green-600" />
+            </button>
+          </div>
+
+          <div className="flex md:hidden">
+            <button
+              type="button"
+              onClick={() => setMapState(true)}
               className="items-center w-14 h-14 inline-flex justify-center text-sm text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
             >
               <span className="sr-only">Map</span>

@@ -90,12 +90,12 @@
 
 .view360-controls {
   position: absolute;
-  top: 10%;
+  justify-items: center;
+  top: 0;
   left: 0;
-  width: 100%;
+  width: 98%;
   height: 100%;
-  padding: 0;
-  margin: 0;
+  margin: 1%;
   border: 0;
   pointer-events: none;
   -ms-user-select: none;
@@ -335,9 +335,11 @@
 }
 
 .view360-controls-pie {
+  position: absolute;
+  top: 70px;
+  right: 0;
   width: 50px;
   height: 50px;
-  margin-right: 10px;
   border-radius: 18px;
   opacity: 1;
   pointer-events: all;
@@ -418,16 +420,6 @@
 
 .view360-controls-unavailable {
   display: none !important;
-}
-
-@media screen and (min-width: 768px) {
-  .view360-controls-pie {
-    width: 45px;
-    height: 45px;
-    margin-top: 0%;
-    margin-right: 10px;
-    border-radius: 13.5px;
-  }
 }
 
 .view360-spinner {

@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import OpenSeadragon from "openseadragon";
-import { MdFilterList } from "react-icons/md"; // Filter Icon Off
-import { MdFilterListOff } from "react-icons/md"; // Filter Icon On
+import { BsFilterRight } from "react-icons/bs";
 import { RiAccountPinCircleLine } from "react-icons/ri";
 import FilterList from "./components/FilterList"; // FilterList Component
 import { GiPathDistance } from "react-icons/gi"; // Path finding
 import { ImLocation } from "react-icons/im"; // Current Location Off
 import { ImLocation2 } from "react-icons/im"; // Current Location On
+import { FaRestroom } from "react-icons/fa"; // Restroom Icon
 
 const MapModule = ({ currLoc }) => {
   /* OpenSeadragon Viewer */
@@ -37,7 +37,8 @@ const MapModule = ({ currLoc }) => {
       minZoomLevel: 1.5,
       animationTime: 2.0, // Animation time when Panning
       visibilityRatio: 1.0, // The visibility ratio
-      constrainDuringPan: true, // Whether to constrain during pa
+      constrainDuringPan: true, // Whether to constrain during pan
+      scrollToZoom: false, // scroll to zoom
       showNavigationControl: false, // Hides the navigation control
       overlays: [
         {
@@ -104,26 +105,20 @@ const MapModule = ({ currLoc }) => {
           {/* Header Space */}
           <div className="py-10" />
           {/* Content Space */}
-          <div className="bg-green-500 relative">
+          <div className=" relative">
             {/* Filter Button */}
             <div className="group">
-              <div className="absolute top-0 right-0 pt-2 pr-2 flex flex-col space-y-2 justify-center">
+              <div className="absolute top-0 right-0 flex flex-col sm:flex-row-reverse lg:flex-col items-center m-2">
                 <button
-                  className="rounded-full p-2 drop-shadow-xl hover: bg-white pointer-events-auto" // hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300
+                  className={`${filterClicked ? "bg-green-500" : "bg-white"} flex justify-center items-center rounded-full p-2 drop-shadow-xl pointer-events-auto mb-1 ml-1`}
                   onClick={() => {
                     console.log("Filter Button clicked");
                     setFilterClicked(!filterClicked);
                   }}
                 >
-                  {filterClicked ? (
-                    <MdFilterListOff
-                      className={`${filterClicked ? "text-green-600" : "text-gray-500"} h-6 w-6 md:h-9/12 md:w-full lg:h-10 lg:w-10 group-hover:text-green-600`}
-                    />
-                  ) : (
-                    <MdFilterList
-                      className={`text-gray-500 h-6 w-6 md:h-9/12 md:w-full lg:h-10 lg:w-10 group-hover:text-green-600`}
-                    />
-                  )}
+                  <BsFilterRight
+                    className={`${filterClicked ? "text-white" : "text-gray-500 group-hover:text-green-600"} h-6 w-6 md:h-9/12 md:w-full lg:h-10 lg:w-10  `}
+                  />
                 </button>
                 {filterClicked ? <FilterList /> : null}
               </div>
@@ -162,7 +157,7 @@ const MapModule = ({ currLoc }) => {
                     }}
                   >
                     <GiPathDistance
-                      className={`${pathFindingClicked ? "text-green-600" : "text-gray-500"} h-6 w-6 md:h-9/12 md:w-full lg:h-10 lg:w-10 group-hover:text-green-600`}
+                      className={`text-gray-500 h-6 w-6 md:h-9/12 md:w-full lg:h-10 lg:w-10 group-hover:text-green-600`} // ${pathFindingClicked ? "text-green-600" : "text-gray-500"}
                     />
                   </button>
                 </div>
