@@ -10,7 +10,7 @@ const Minimap = ({ x, y, onClick, previous_Scene }) => {
 
     const prevLoc = new OpenSeadragon.Point(
       previous_Scene.coords.x,
-      previous_Scene.coords.y
+      previous_Scene.coords.y,
     ); // Previous Point Location
 
     const overlayElement = document.createElement("div"); // Adding element for the overlay
@@ -43,8 +43,8 @@ const Minimap = ({ x, y, onClick, previous_Scene }) => {
       const viewportPoint = viewer.viewport.pointFromPixel(event.position); // The position of the click in viewport coordinates
       console.log(
         `Clicked at viewport coordinates: ${viewportPoint.x.toFixed(
-          3
-        )}, ${viewportPoint.y.toFixed(3)}`
+          3,
+        )}, ${viewportPoint.y.toFixed(3)}`,
       );
     });
 
@@ -62,7 +62,7 @@ const Minimap = ({ x, y, onClick, previous_Scene }) => {
   }, [x, y, previous_Scene.coords.x, previous_Scene.coords.y]);
 
   return (
-    <div className="flex w-auto h-auto overflow-hidden rounded-2xl border-black">
+    <div className="flex h-auto w-auto overflow-hidden rounded-2xl border-black">
       <button
         className="h-20 w-36 md:h-20 md:w-40 lg:h-40 lg:w-80"
         id="viewer"
