@@ -21,7 +21,6 @@ const Sharelink = ({ visible, onClose }) => {
   return (
     <div
       id="container"
-      onClick={null}
       className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-25 px-4"
     >
       <div className="relative flex  flex-col rounded-lg bg-white p-2">

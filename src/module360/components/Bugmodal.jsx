@@ -38,10 +38,7 @@ const Bugmodal = ({ visible, onClose }) => {
   if (!visible) return null;
 
   return (
-    <div
-      onClick={null}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-25 px-2"
-    >
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-25 px-2">
       <div className="flex h-auto w-full items-center justify-center">
         <div className="flex h-full max-h-[600px] w-auto min-w-[300px] max-w-[560px] flex-col justify-center rounded-2xl border border-black bg-white px-4">
           <div className="flex h-full flex-col items-end py-4">
