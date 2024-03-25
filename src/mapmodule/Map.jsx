@@ -6,7 +6,6 @@ import FilterList from "./components/FilterList"; // FilterList Component
 import { GiPathDistance } from "react-icons/gi"; // Path finding
 import { ImLocation } from "react-icons/im"; // Current Location Off
 import { ImLocation2 } from "react-icons/im"; // Current Location On
-import { FaRestroom } from "react-icons/fa"; // Restroom Icon
 
 const MapModule = ({ currLoc }) => {
   /* OpenSeadragon Viewer */
@@ -31,13 +30,23 @@ const MapModule = ({ currLoc }) => {
     const viewerInstance = new OpenSeadragon({
       element: osdRef.current,
       prefixUrl: "/assets/images/",
-      tileSources: { type: "image", url: "/assets/Map/with nodes.svg" },
+      tileSources: [
+        {
+          type: "zoomifytileservice",
+          width: 2660,
+          height: 3954,
+          tilesUrl: "/assets/Map/adventura map (low res)/",
+          //optional
+          tileSize: 256,
+          fileFormat: "webp",
+        },
+      ],
       defaultZoomLevel: 5,
       maxZoomLevel: 15, // Modify this to limit the zoom level to the level which pixels are not blurred
       minZoomLevel: 1.5,
       animationTime: 2.0, // Animation time when Panning
       visibilityRatio: 1.0, // The visibility ratio
-      constrainDuringPan: true, // Whether to constrain during pan
+      constrainDuringPan: false, // Whether to constrain during pan
       scrollToZoom: false, // scroll to zoom
       showNavigationControl: false, // Hides the navigation control
       overlays: [
@@ -86,7 +95,7 @@ const MapModule = ({ currLoc }) => {
       style={{
         position: "absolute",
         zIndex: 2,
-        backgroundColor: "#f2f0ee",
+        backgroundColor: "#fff",
         width: "100vw",
         height: "100vh",
       }}
@@ -101,23 +110,23 @@ const MapModule = ({ currLoc }) => {
 
       {/* Layers on top of OSD */}
       {osdLoaded && (
-        <div className="absolute top-0 left-0 z-10 w-screen grid h-screen grid-rows-[auto,1fr,auto] pointer-events-none">
+        <div className="pointer-events-none absolute left-0 top-0 z-10 grid h-screen w-screen grid-rows-[auto,1fr,auto]">
           {/* Header Space */}
           <div className="py-10" />
           {/* Content Space */}
           <div className=" relative">
             {/* Filter Button */}
             <div className="group">
-              <div className="absolute top-0 right-0 flex flex-col sm:flex-row-reverse lg:flex-col items-center m-2">
+              <div className="absolute right-0 top-0 m-2 flex flex-col items-center sm:flex-row-reverse lg:flex-col">
                 <button
-                  className={`${filterClicked ? "bg-green-500" : "bg-white"} flex justify-center items-center rounded-full p-2 drop-shadow-xl pointer-events-auto mb-1 ml-1`}
+                  className={`${filterClicked ? "bg-green-500" : "bg-white"} pointer-events-auto mb-1 ml-1 flex items-center justify-center rounded-full p-2 drop-shadow-xl`}
                   onClick={() => {
                     console.log("Filter Button clicked");
                     setFilterClicked(!filterClicked);
                   }}
                 >
                   <BsFilterRight
-                    className={`${filterClicked ? "text-white" : "text-gray-500 group-hover:text-green-600"} h-6 w-6 md:h-9/12 md:w-full lg:h-10 lg:w-10  `}
+                    className={`${filterClicked ? "text-white" : "text-gray-500 group-hover:text-green-600"} md:h-9/12 h-6 w-6 md:w-full lg:h-10 lg:w-10  `}
                   />
                 </button>
                 {filterClicked ? <FilterList /> : null}
@@ -130,7 +139,7 @@ const MapModule = ({ currLoc }) => {
                 {/* Current Location Button */}
                 <div className="group">
                   <button
-                    className="rounded-full bg-white p-2 text-white drop-shadow-xl pointer-events-auto"
+                    className="pointer-events-auto rounded-full bg-white p-2 text-white drop-shadow-xl"
                     onClick={() => {
                       console.log("Current Location Button clicked");
                       viewer.viewport.panTo(location);
@@ -139,9 +148,9 @@ const MapModule = ({ currLoc }) => {
                     }}
                   >
                     {checkCenter ? (
-                      <ImLocation2 className="text-green-600 h-6 w-6 md:h-9/12 md:w-full lg:h-10 lg:w-10 group-hover:text-green-600" />
+                      <ImLocation2 className="md:h-9/12 h-6 w-6 text-green-600 group-hover:text-green-600 md:w-full lg:h-10 lg:w-10" />
                     ) : (
-                      <ImLocation className="text-gray-500 h-6 w-6 md:h-9/12 md:w-full lg:h-10 lg:w-10 group-hover:text-green-600" />
+                      <ImLocation className="md:h-9/12 h-6 w-6 text-gray-500 group-hover:text-green-600 md:w-full lg:h-10 lg:w-10" />
                     )}
                   </button>{" "}
                 </div>
@@ -150,14 +159,14 @@ const MapModule = ({ currLoc }) => {
                 {/* Pathfinding Button */}
                 <div className="group">
                   <button
-                    className="rounded-full bg-white p-2 text-white drop-shadow-xl pointer-events-auto"
+                    className="pointer-events-auto rounded-full bg-white p-2 text-white drop-shadow-xl"
                     onClick={() => {
                       console.log("Pathfinding Button clicked");
                       setPathFindingClicked(!pathFindingClicked);
                     }}
                   >
                     <GiPathDistance
-                      className={`text-gray-500 h-6 w-6 md:h-9/12 md:w-full lg:h-10 lg:w-10 group-hover:text-green-600`} // ${pathFindingClicked ? "text-green-600" : "text-gray-500"}
+                      className={`md:h-9/12 h-6 w-6 text-gray-500 group-hover:text-green-600 md:w-full lg:h-10 lg:w-10`} // ${pathFindingClicked ? "text-green-600" : "text-gray-500"}
                     />
                   </button>
                 </div>
