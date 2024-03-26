@@ -82,6 +82,16 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
       }
     }
   };
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleButtonClick = () => {
+    setMapState(false);
+    setIsClicked(true);
+  };
+
+  const resetClickState = () => {
+    setIsClicked(false);
+  };
 
   return (
     <div className="flex h-screen w-full flex-col justify-between pr-4">
@@ -92,13 +102,13 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
               <button
                 type="button"
                 onClick={() => navigate("/")}
-                className="flex h-12 w-12 items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+                className="justify-cente flex h-12 w-12 items-center"
               >
                 <span className="sr-only">Adventura Logo</span>
                 <img
                   src="/assets/Module360/Icons/AdvenLogo.png"
                   alt="share button"
-                  className="h-11 w-auto"
+                  className="h-11 w-auto transition-all duration-200 hover:scale-110"
                 />
               </button>
             </div>
@@ -106,11 +116,13 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <div className="hidden md:flex">
               <button
                 type="button"
-                onClick={() => setMapState(false)}
-                className="inline-flex h-14 w-14 items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+                onClick={handleButtonClick}
+                className="inline-flex h-14 w-14 items-center justify-center"
               >
                 <span className="sr-only">360</span>
-                <Tb360View size={35} className="text-green-600" />
+                <Tb360View
+                  className={`size-12 text-green-600 transition-all duration-200 hover:size-14 ${isClicked ? "size-14 rounded-lg ring-2 ring-gray-600" : ""}`}
+                />
               </button>
             </div>
 
@@ -121,18 +133,24 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
                 className="inline-flex h-14 w-14 items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Map</span>
-                <GrMap size={35} className="text-green-600" />
+                <GrMap
+                  size={35}
+                  className="text-green-600 transition-all duration-200 hover:size-11"
+                />
               </button>
             </div>
 
             <div className="hidden md:flex">
               <button
                 type="button"
-                onClick={null}
+                onClick={resetClickState}
                 className="inline-flex h-14 w-14 items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Search</span>
-                <IoMdSearch size={35} className="text-green-600" />
+                <IoMdSearch
+                  size={35}
+                  className="text-green-600 transition-all duration-200 hover:size-11"
+                />
               </button>
             </div>
 
@@ -143,7 +161,10 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
                 className="inline-flex h-14 w-14 items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Help</span>
-                <IoIosHelpCircleOutline size={37} className="text-green-600" />
+                <IoIosHelpCircleOutline
+                  size={37}
+                  className="text-green-600 transition-all duration-200 hover:size-11"
+                />
               </button>
             </div>
           </div>
@@ -164,7 +185,10 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
                 className="inline-flex h-14 w-14 items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Feedback</span>
-                <VscFeedback size={35} className="text-green-600" />
+                <VscFeedback
+                  size={35}
+                  className="text-green-600 transition-all duration-200 hover:size-10"
+                />
               </button>
             </div>
 
@@ -175,7 +199,10 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
                 className="inline-flex h-14 w-14 items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Autoplay</span>
-                <PiPlayCircleLight size={40} className="text-green-600" />
+                <PiPlayCircleLight
+                  size={40}
+                  className="text-green-600 transition-all duration-200 hover:size-11"
+                />
               </button>
             </div>
 
@@ -186,7 +213,10 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
                 className="inline-flex h-14 w-14 items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Share</span>
-                <FiLink size={30} className="text-green-600" />
+                <FiLink
+                  size={30}
+                  className="text-green-600 transition-all duration-200 hover:size-9"
+                />
               </button>
             </div>
 
@@ -198,9 +228,15 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
               >
                 <span className="sr-only">Fullscreen</span>
                 {isFullscreen ? (
-                  <TbMaximizeOff size={35} className="text-green-600" />
+                  <TbMaximizeOff
+                    size={35}
+                    className="text-green-600 transition-all duration-200 hover:size-11"
+                  />
                 ) : (
-                  <TbMaximize size={35} className="text-green-600" />
+                  <TbMaximize
+                    size={35}
+                    className="text-green-600 transition-all duration-200 hover:size-11"
+                  />
                 )}
               </button>
             </div>
@@ -213,6 +249,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
               >
                 <span className="sr-only">CVSU</span>
                 <img
+                  className="transition-all duration-200 hover:scale-110"
                   src="/assets/Module360/Icons/CvSULogo2.png"
                   alt="cvsu logo"
                 />
@@ -229,13 +266,13 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
       {mapState && <MapModule currLoc={location.coords} />}
 
       {/*FOOTER*/}
-      <div className="sticky bottom-0  start-0 top-4 z-20 mx-2 mb-4 h-14 w-full rounded-xl border-b border-gray-200 bg-white md:hidden dark:border-gray-600">
+      <div className="sticky bottom-0  start-0 top-4 z-20 mx-2 mb-4 h-14 w-full rounded-xl border-b md:hidden">
         <div className="flex h-full items-center justify-between px-2 text-base">
           <div className="flex md:hidden">
             <button
               type="button"
               onClick={() => setMapState(false)}
-              className="inline-flex h-14 w-auto items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+              className="inline-flex h-14 w-auto items-center justify-center"
             >
               <span className="sr-only">360</span>
               <Tb360View size={35} className="text-green-600" />
