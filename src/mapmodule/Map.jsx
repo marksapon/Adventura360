@@ -33,17 +33,17 @@ const MapModule = ({ currLoc }) => {
       tileSources: [
         {
           type: "zoomifytileservice",
-          width: 2660,
-          height: 3954,
-          tilesUrl: "/assets/Map/adventura map (low res)/",
+          width: 21280,
+          height: 31628,
+          tilesUrl: "/assets/MapModule/Adventura_Map/",
           //optional
           tileSize: 256,
           fileFormat: "webp",
         },
       ],
       defaultZoomLevel: 5,
-      maxZoomLevel: 15, // Modify this to limit the zoom level to the level which pixels are not blurred
-      minZoomLevel: 1.5,
+      maxZoomLevel: 7, // Modify this to limit the zoom level to the level which pixels are not blurred
+      minZoomLevel: 1, //
       animationTime: 2.0, // Animation time when Panning
       visibilityRatio: 1.0, // The visibility ratio
       constrainDuringPan: false, // Whether to constrain during pan
@@ -81,6 +81,18 @@ const MapModule = ({ currLoc }) => {
       }
     });
 
+    // OSD event that triggers when the canva was clicked
+    viewerInstance.addHandler("canvas-click", function (event) {
+      const viewportPoint = viewerInstance.viewport.pointFromPixel(
+        event.position,
+      ); // The position of the click in viewport coordinates
+      console.log(
+        `Clicked at viewport coordinates: ${viewportPoint.x.toFixed(
+          3,
+        )}, ${viewportPoint.y.toFixed(3)}`,
+      );
+    });
+
     /* OSD Touch Controls */
     viewerInstance.gestureSettingsByDeviceType("touch").pinchRotate = true;
 
@@ -110,7 +122,9 @@ const MapModule = ({ currLoc }) => {
 
       {/* Layers on top of OSD */}
       {osdLoaded && (
-        <div className="pointer-events-none absolute left-0 top-0 z-10 grid h-screen w-screen grid-rows-[auto,1fr,auto]">
+        <div
+          className={`pointer-events-none absolute left-0 top-0 z-10 grid h-dvh w-screen grid-rows-[auto,1fr,auto]`}
+        >
           {/* Header Space */}
           <div className="py-10" />
           {/* Content Space */}

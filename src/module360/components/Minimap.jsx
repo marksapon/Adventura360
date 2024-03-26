@@ -20,11 +20,21 @@ const Minimap = ({ x, y, onClick, previous_Scene }) => {
     const viewer = new OpenSeadragon({
       id: "viewer",
       prefixUrl: "/assets/images/",
-      tileSources: { type: "image", url: "/assets/Map/with nodes.svg" },
+      tileSources: [
+        {
+          type: "zoomifytileservice",
+          width: 21280,
+          height: 31628,
+          tilesUrl: "/assets/MapModule/Adventura_Map/",
+          //optional
+          tileSize: 256,
+          fileFormat: "webp",
+        },
+      ],
       showNavigationControl: false, // Hides the navigation control
       defaultZoomLevel: 10, // The default zoom level
-      minZoomLevel: 10, // The minimum zoom level
-      maxZoomLevel: 10, // Max zoom level
+      minZoomLevel: 7, // The minimum zoom level
+      maxZoomLevel: 7, // Max zoom level
       animationTime: 2.0, // Animation time when Panning
       mouseNavEnabled: true, // Enable mouse navigation
       gestureNavEnabled: true, // Enable gesture navigation
@@ -36,16 +46,6 @@ const Minimap = ({ x, y, onClick, previous_Scene }) => {
     viewer.addHandler("open", function () {
       viewer.viewport.panTo(prevLoc, true); // Starts from previous location
       viewer.viewport.panTo(currentLoc); // Pans to current location
-    });
-
-    // OSD event that triggers when the canva was clicked
-    viewer.addHandler("canvas-click", function (event) {
-      const viewportPoint = viewer.viewport.pointFromPixel(event.position); // The position of the click in viewport coordinates
-      console.log(
-        `Clicked at viewport coordinates: ${viewportPoint.x.toFixed(
-          3,
-        )}, ${viewportPoint.y.toFixed(3)}`,
-      );
     });
 
     // Adds the overlay in the current location of the user
@@ -62,7 +62,7 @@ const Minimap = ({ x, y, onClick, previous_Scene }) => {
   }, [x, y, previous_Scene.coords.x, previous_Scene.coords.y]);
 
   return (
-    <div className="flex h-auto w-auto overflow-hidden rounded-2xl border-black">
+    <div className="opacity-0.5 opacity-0.9 flex h-auto w-auto overflow-hidden rounded-2xl border-black">
       <button
         className="h-20 w-36 md:h-20 md:w-40 lg:h-40 lg:w-80"
         id="viewer"
