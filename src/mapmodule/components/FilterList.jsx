@@ -1,109 +1,173 @@
 import React, { useState } from "react";
-import { FaRestroom } from "react-icons/fa"; // Restroom Icon
-import { FaHandsWash } from "react-icons/fa"; // Hand Wash Icon
-import { LuSchool } from "react-icons/lu"; // School Facilities Icon
-import { TbSchool } from "react-icons/tb"; // College Buildings Icon
-import { GrCafeteria } from "react-icons/gr"; // Cafeteria Icon
-import { FaPeopleRoof } from "react-icons/fa6"; // Batibot Icon
-import { PiBinocularsDuotone } from "react-icons/pi"; // School Attraction Icon
-import { GiAbstract068 } from "react-icons/gi"; // Court Icon
-import { FaSquareParking } from "react-icons/fa6"; // Parking Lot Icon
 
-const FilterList = () => {
-  /* Restroom */
+const FilterList = ({ icons, overlays, OSDinstance, OSD }) => {
+  /* Filter Buttons States */
   const [restroomState, setRestroomState] = useState(false); // Restroom State
-
-  /* Hand Wash */
-  const [handWashState, setHandWashState] = useState(false); // Hand Wash State
-
-  /* School Facilities */
+  const [washareaState, setwashareaState] = useState(false); // Hand Wash State
   const [schoolFacilitiesState, setSchoolFacilitiesState] = useState(false); // School Facilities State
-
-  /* College Buildings */
   const [collegeBuildingsState, setCollegeBuildingsState] = useState(false); // College Buildings State
-
-  /* Cafeteria */
   const [cafeteriaState, setCafeteriaState] = useState(false); // Cafeteria State
-
-  /* School Attraction */
-  const [schoolAttractionState, setSchoolAttractionState] = useState(false); // School Attraction State
-
-  /* Court */
+  const [attractionState, setAttractionState] = useState(false); // School Attraction State
   const [courtState, setCourtState] = useState(false); // Court State
-
-  /* Parking Lot */
-  const [parkingLotState, setParkingLotState] = useState(false); // Parking Lot State
-
-  /* Batibot */
+  const [parkingState, setParkingState] = useState(false); // Parking Lot State
   const [batibotState, setBatibotState] = useState(false); // Batibot State
+  const [venueState, setVenueState] = useState(false); // Venue State
+
+  /* Filter Current Overlays */
+  const [filterOverlay, setFilterOverlay] = useState([]); // Filter List of Overlay that would be displayed in OSD
+
+  // Function for removing all overlays
+  function removeOverlays() {
+    Object.keys(overlays).map((type) => {
+      overlays[type].map((overlay) => {
+        OSDinstance.removeOverlay(overlay.id);
+      });
+    });
+  }
+
+  // Function for adding overlays
+  function addOverlays(filterList) {
+    if (filterList) {
+      // If there is an element in the filterList add them to the OSD
+      filterList.map((type) => {
+        overlays[type].map((overlay) => {
+          const div = document.getElementById(overlay.id);
+          OSDinstance.addOverlay({
+            element: div,
+            location: new OSD.Point(overlay.x, overlay.y),
+            placement: OSD.Placement.BOTTOM,
+          });
+        });
+      });
+    } else {
+      // Else add all the overlays to the OSD
+      Object.keys(overlays).forEach((key) => {
+        overlays[key].map((overlay) => {
+          const div = document.getElementById(overlay.id);
+          OSDinstance.addOverlay({
+            element: div,
+            location: new OSD.Point(overlay.x, overlay.y),
+            placement: OSD.Placement.BOTTOM,
+          });
+        });
+      });
+    }
+  }
+
+  // Function for controlling the behavior of the overlay filter
+  function refresh(filterList) {
+    if (filterList.length === 0) {
+      // If Filterlist is empty add all overlays
+      removeOverlays();
+      addOverlays();
+    } else {
+      // Else add all the overlays that are in the filterList
+      removeOverlays();
+      addOverlays(filterList);
+    }
+  }
+
+  // Function that controls the filter list
+  function filter(type, state) {
+    if (state) {
+      // If the state is true add the type to the filter list
+      setFilterOverlay((prevState) => {
+        const newFilterList = [...prevState, type];
+        refresh(newFilterList);
+        return newFilterList;
+      });
+    } else {
+      // Else remove the type from the filter list
+      setFilterOverlay((prevState) => {
+        const newFilterList = prevState.filter((item) => item !== type);
+        refresh(newFilterList);
+        return newFilterList;
+      });
+    }
+  }
 
   return (
     <div
-      className={`bg-gray-100 h-52 w-10 sm:h-10 lg:h-52 sm:w-52 lg:w-12 flex flex-col sm:flex-row-reverse lg:flex-col rounded-2xl pointer-events-auto overflow-scroll no-scrollbar items-center snap-mandatory snap-y sm:snap-x lg:snap-y  drop-shadow-xl pl-0 pr-0 sm:pl-1 sm:pr-1 lg:pl-0 lg:pr-0 pt-1 pb-1 sm:pt-0 sm:pb-0 lg:pt-1 lg:pb-1 `}
+      className={`no-scrollbar pointer-events-auto flex h-52 w-10 snap-y snap-mandatory flex-col items-center overflow-scroll rounded-2xl bg-gray-100 pb-1 pl-0 pr-0 pt-1 drop-shadow-xl sm:h-10 sm:w-52 sm:snap-x  sm:flex-row-reverse sm:pb-0 sm:pl-1 sm:pr-1 sm:pt-0 lg:h-52 lg:w-12 lg:snap-y lg:flex-col lg:pb-1 lg:pl-0 lg:pr-0 lg:pt-1 `}
     >
       {/* Div 1 */}
-      <div className="flex flex-col sm:flex-row-reverse lg:flex-col justify-between items-center snap-center">
+      <div className="flex snap-center flex-col items-center justify-between sm:flex-row-reverse lg:flex-col">
         {/* Restroom */}
         <button
-          className={`h-10 w-10 rounded-full flex justify-center items-center`}
+          className={`flex h-10 w-10 items-center justify-center rounded-full`}
           onClick={() => {
-            setRestroomState(!restroomState);
-            console.log("Restroom Button: ", restroomState);
+            setRestroomState((prevState) => {
+              const newState = !prevState;
+              filter("restroom", newState);
+              return newState;
+            });
           }}
         >
-          <FaRestroom
+          <icons.restroom.icon
             className={`${restroomState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
           />
         </button>
         {/* Restroom */}
-        {/* Hand Wash */}
+        {/* Washroom */}
         <button
-          className={`h-10 w-10 rounded-full flex justify-center items-center flex-none`}
+          className={`flex h-10 w-10 flex-none items-center justify-center rounded-full`}
           onClick={() => {
-            setHandWashState(!handWashState);
-            console.log("HandWash Button: ", handWashState);
+            setwashareaState((prevState) => {
+              const newState = !prevState;
+              filter("washarea", newState);
+              return newState;
+            });
           }}
         >
-          <FaHandsWash
-            className={`${handWashState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
+          <icons.washarea.icon
+            className={`${washareaState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
           />
         </button>
         {/* Hand Wash */}
         {/* School Facilities */}
         <button
-          className={`h-10 w-10 rounded-full flex justify-center items-center flex-none`}
+          className={`flex h-10 w-10 flex-none items-center justify-center rounded-full`}
           onClick={() => {
-            setSchoolFacilitiesState(!schoolFacilitiesState);
-            console.log("School Facilities Button: ", schoolFacilitiesState);
+            setSchoolFacilitiesState((prevState) => {
+              const newState = !prevState;
+              filter("school_facilities", newState);
+              return newState;
+            });
           }}
         >
-          <LuSchool
+          <icons.school_facilities.icon
             className={`${schoolFacilitiesState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
           />
         </button>
         {/* School Facilities */}
         {/* College Buildings */}
         <button
-          className={`h-10 w-10 rounded-full flex justify-center items-center flex-none`}
+          className={`flex h-10 w-10 flex-none items-center justify-center rounded-full`}
           onClick={() => {
-            setCollegeBuildingsState(!collegeBuildingsState);
-            console.log("School Facilities Button: ", collegeBuildingsState);
+            setCollegeBuildingsState((prevState) => {
+              const newState = !prevState;
+              filter("college_buildings", newState);
+              return newState;
+            });
           }}
         >
-          <TbSchool
+          <icons.college_buildings.icon
             className={`${collegeBuildingsState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
           />
         </button>
         {/* College Buildings */}
         {/* Cafeteria */}
         <button
-          className={`h-10 w-10 rounded-full flex justify-center items-center flex-none`}
+          className={`flex h-10 w-10 flex-none items-center justify-center rounded-full`}
           onClick={() => {
-            setCafeteriaState(!cafeteriaState);
-            console.log("School Facilities Button: ", cafeteriaState);
+            setCafeteriaState((prevState) => {
+              const newState = !prevState;
+              filter("cafeteria", newState);
+              return newState;
+            });
           }}
         >
-          <GrCafeteria
+          <icons.cafeteria.icon
             className={`${cafeteriaState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
           />
         </button>
@@ -112,59 +176,87 @@ const FilterList = () => {
       {/* Div 1 */}
 
       {/* Div 2 */}
-      <div className="flex flex-col sm:flex-row-reverse lg:flex-col justify-between items-center snap-center ">
+      <div className="flex snap-center flex-col items-center justify-between sm:flex-row-reverse lg:flex-col ">
         {/* Batibot */}
         <button
-          className={`h-10 w-10 rounded-full flex justify-center items-center`}
+          className={`flex h-10 w-10 items-center justify-center rounded-full`}
           onClick={() => {
-            setBatibotState(!batibotState);
-            console.log("Restroom Button: ", batibotState);
+            setBatibotState((prevState) => {
+              const newState = !prevState;
+              filter("batibot", newState);
+              return newState;
+            });
           }}
         >
-          <FaPeopleRoof
+          <icons.batibot.icon
             className={`${batibotState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
           />
         </button>
         {/* Batibot */}
         {/* School Attraction */}
         <button
-          className={`h-10 w-10 rounded-full flex justify-center items-center flex-none`}
+          className={`flex h-10 w-10 flex-none items-center justify-center rounded-full`}
           onClick={() => {
-            setSchoolAttractionState(!schoolAttractionState);
-            console.log("HandWash Button: ", schoolAttractionState);
+            setAttractionState((prevState) => {
+              const newState = !prevState;
+              filter("attractions", newState);
+              return newState;
+            });
           }}
         >
-          <PiBinocularsDuotone
-            className={`${schoolAttractionState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
+          <icons.attractions.icon
+            className={`${attractionState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
           />
         </button>
         {/* School Attraction */}
         {/* Court */}
         <button
-          className={`h-10 w-10 rounded-full flex justify-center items-center flex-none`}
+          className={`flex h-10 w-10 flex-none items-center justify-center rounded-full`}
           onClick={() => {
-            setCourtState(!courtState);
-            console.log("School Facilities Button: ", courtState);
+            setCourtState((prevState) => {
+              const newState = !prevState;
+              filter("court", newState);
+              return newState;
+            });
           }}
         >
-          <GiAbstract068
+          <icons.court.icon
             className={`${courtState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
           />
         </button>
         {/* Court */}
         {/* Parking Lot */}
         <button
-          className={`h-10 w-10 rounded-full flex justify-center items-center flex-none`}
+          className={`flex h-10 w-10 flex-none items-center justify-center rounded-full`}
           onClick={() => {
-            setParkingLotState(!parkingLotState);
-            console.log("School Facilities Button: ", parkingLotState);
+            setParkingState((prevState) => {
+              const newState = !prevState;
+              filter("court", newState);
+              return newState;
+            });
           }}
         >
-          <FaSquareParking
-            className={`${parkingLotState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
+          <icons.parking.icon
+            className={`${parkingState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
           />
         </button>
         {/* Parking Lot */}
+        {/* Venues */}
+        <button
+          className={`flex h-10 w-10 flex-none items-center justify-center rounded-full`}
+          onClick={() => {
+            setVenueState((prevState) => {
+              const newState = !prevState;
+              filter("court", newState);
+              return newState;
+            });
+          }}
+        >
+          <icons.venue.icon
+            className={`${venueState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
+          />
+        </button>
+        {/* Venues */}
       </div>
       {/* Div 2 */}
     </div>
