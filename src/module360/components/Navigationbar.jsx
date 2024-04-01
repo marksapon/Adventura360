@@ -1,38 +1,39 @@
+/* React */
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import Helpmodal from "./helpmodal";
-import Sharelink from "./Sharelink";
-import Bugmodal from "./Bugmodal";
+import { useNavigate } from "react-router-dom"; // Navigation Function
+
+/* Components */
+import Helpmodal from "./helpmodal"; // Help Modal
+import Sharelink from "./Sharelink"; // Share Modal
+import Bugmodal from "./Bugmodal"; // Bug Modal
+import MapModule from "../../mapmodule/Map.jsx"; // Map Module
+
+/* Icons */
 import { VscFeedback } from "react-icons/vsc"; // Feedback Button
 import { FiLink } from "react-icons/fi"; // Share Button
 import { GrMap } from "react-icons/gr"; // Map Button
 import { IoMdSearch } from "react-icons/io"; // Search Button
 import { PiPlayCircleLight } from "react-icons/pi"; // Autoplay Button
 import { TbMaximize, TbMaximizeOff } from "react-icons/tb"; // Fullscreen On/Off
-import MapModule from "../../mapmodule/Map.jsx";
-import { IoIosHelpCircleOutline } from "react-icons/io";
+import { IoIosHelpCircleOutline } from "react-icons/io"; // Help Button
 import { Tb360View } from "react-icons/tb"; // 360 Icon
 
 const Navigationbar = ({ toggleAutoplay, location }) => {
-  /* Custom button to control OSD */
-  // const handleButtonClick = (viewer) => {
-  //   // Pan to a specific location
-  //   viewer.viewport.panTo(new OpenSeadragon.Point(1, 1));
-  // };
+  /* States */
+  const [mapState, setMapState] = useState(false); // Map State
+  const [isFullscreen, setIsFullscreen] = useState(false); // Fullscreen State
+  const [Showmodal, setShowmodal] = useState(false); // Help Modal State
+  const handleclose = () => setShowmodal(false); // Function to change Help Modal
+  const [Sharemodal, setShowSharemodal] = useState(false); // Share Modal State
+  const handlecloseShare = () => setShowSharemodal(false); // Function to change Share Modal
+  const [Bugmdl, setShowBugmodal] = useState(false); // Bug Modal State
+  const handlecloseBug = () => setShowBugmodal(false); // Function to change Bug Modal
 
-  const [mapState, setMapState] = useState(false);
+  const navigate = useNavigate(); // Navigation Function for Logo
 
-  const [isFullscreen, setIsFullscreen] = useState(false);
-
-  const [Showmodal, setShowmodal] = useState(false);
-  const handleclose = () => setShowmodal(false);
-  const [Sharemodal, setShowSharemodal] = useState(false);
-  const handlecloseShare = () => setShowSharemodal(false);
-  const [Bugmdl, setShowBugmodal] = useState(false);
-  const handlecloseBug = () => setShowBugmodal(false);
-  const navigate = useNavigate();
-
+  /* Fullscreen Function */
   useEffect(() => {
+    // Fullscreen Change Event
     const handleFullscreenChange = () => {
       setIsFullscreen(!!document.fullscreenElement);
     };
@@ -60,6 +61,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
   }, []);
 
   const toggleFullscreen = () => {
+    // Toggle Fullscreen
     if (!isFullscreen) {
       if (document.documentElement.requestFullscreen) {
         document.documentElement.requestFullscreen();
@@ -81,16 +83,6 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
         document.msExitFullscreen();
       }
     }
-  };
-  const [isClicked, setIsClicked] = useState(false);
-
-  const handleButtonClick = () => {
-    setMapState(false);
-    setIsClicked(true);
-  };
-
-  const resetClickState = () => {
-    setIsClicked(false);
   };
 
   return (
@@ -116,12 +108,12 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <div className="hidden md:flex">
               <button
                 type="button"
-                onClick={handleButtonClick}
+                onClick={() => setMapState(false)}
                 className="inline-flex h-14 w-14 items-center justify-center"
               >
                 <span className="sr-only">360</span>
                 <Tb360View
-                  className={`size-12 text-green-600 transition-all duration-200 hover:size-14 ${isClicked ? "size-14 rounded-lg ring-2 ring-gray-600" : ""}`}
+                  className={`size-12 text-green-600 transition-all duration-200 hover:size-14 ${!mapState ? "size-14 rounded-lg ring-2 ring-gray-600" : ""}`}
                 />
               </button>
             </div>
@@ -143,7 +135,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <div className="hidden md:flex">
               <button
                 type="button"
-                onClick={resetClickState}
+                onClick={null}
                 className="inline-flex h-14 w-14 items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Search</span>
@@ -350,9 +342,24 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
           </div>
         </div>
       </div>
-      <Helpmodal onClose={handleclose} visible={Showmodal} />
-      <Sharelink onClose={handlecloseShare} visible={Sharemodal} />
-      <Bugmodal onClose={handlecloseBug} visible={Bugmdl} />
+      <Helpmodal
+        onClose={() => {
+          setShowmodal(false);
+        }}
+        visible={Showmodal}
+      />
+      <Sharelink
+        onClose={() => {
+          setShowSharemodal(false);
+        }}
+        visible={Sharemodal}
+      />
+      <Bugmodal
+        onClose={() => {
+          setShowBugmodal(false);
+        }}
+        visible={Bugmdl}
+      />
     </div>
   );
 };

@@ -218,11 +218,6 @@ const MapModule = ({ currLoc }) => {
     };
   }, []);
 
-  function changeCurr_Overlay() {
-    const temp_overlay = [];
-    setCurrentOverlays(temp_overlay);
-  }
-
   /* Dynamic Overlay Loader */
   useEffect(() => {
     // Add overlays to the OSD

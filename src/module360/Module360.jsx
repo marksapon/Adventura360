@@ -3,7 +3,6 @@ import View360, {
   EquirectProjection,
   ControlBar,
   LoadingSpinner,
-  GyroControl,
 } from "@egjs/react-view360";
 import React, { useMemo, useState, useEffect, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
@@ -16,23 +15,7 @@ import { TbMap } from "react-icons/tb";
 import { TbMapOff } from "react-icons/tb";
 
 function Module360() {
-  GyroControl.isAvailable()
-    .then((gyroAvailable) => {
-      if (gyroAvailable) {
-        console.log("Gyroscope is available");
-      } else {
-        console.log("Gyroscope is not available");
-      }
-    })
-    .catch((error) => {
-      console.error(
-        "An error occurred while checking gyroscope availability:",
-        error
-      );
-    });
-
   const navigate = useNavigate();
-  const [mapButtonVisible, setMapButtonVisible] = useState(true);
 
   /* Dynamic URL Parameters */
   const url = new URLSearchParams(window.location.search); // Get URL
@@ -46,7 +29,6 @@ function Module360() {
   const isNode = node.test(target); // Check if the string passes the regex
 
   /* Building Data */
-
   function isBuilding(target) {
     for (const data of buildingsData.buildings) {
       if (data.scene === target) {
@@ -65,7 +47,7 @@ function Module360() {
 
   console.log(
     "Previous Scene Coord: " + previous_Scene.coords.x,
-    previous_Scene.coords.y
+    previous_Scene.coords.y,
   );
 
   // Setting scene based on URL parameters
@@ -104,7 +86,7 @@ function Module360() {
       console.log(">Moving to building");
       changeScene(buildingsData.buildings, target);
     } else {
-      console.log(">Displaying information");
+      console.log(">Displaying information"); // Display Information Building Module goes Here
     }
   }
 
@@ -191,7 +173,6 @@ function Module360() {
   }, []);
 
   /* View360 component */
-
   // Ref for the viewer
   const viewerRef = useRef(null);
 
@@ -201,7 +182,7 @@ function Module360() {
       new EquirectProjection({
         src: select_Scene.image,
       }),
-    [select_Scene.image]
+    [select_Scene.image],
   );
 
   // Create plugins for the viewer
@@ -226,7 +207,7 @@ function Module360() {
       }),
       new LoadingSpinner(),
     ],
-    [zoomSettings.min]
+    [zoomSettings.min],
   );
 
   // Function that changes scene based on the hotspot target
@@ -246,22 +227,16 @@ function Module360() {
     }
   }, [select_Scene]);
 
-  /* Map Button */
-
-  // Function for navigating to the map
-  function changetoMap() {
-    //navigate("/map");
-  }
-
   /* Autoplay Toggle */
   function toggleAutoplay() {
     setAutoplay(!autoplay);
   }
 
-  // Function for toggling the visibility of the map button
-  function toggleMapButtonVisibility() {
-    setMapButtonVisible(!mapButtonVisible);
-  }
+  /* Module 360 State */
+  const [module360State, setModule360State] = useState(true); // Set the module360 state to be true by default
+
+  /* Minimap Button Visibility */
+  const [mapButtonVisible, setMapButtonVisibility] = useState(true); // Set the map button visibility to be true by default
 
   /* Component Return */
   return (
@@ -311,6 +286,8 @@ function Module360() {
           <Navigationbar
             toggleAutoplay={toggleAutoplay}
             location={select_Scene}
+            module360State={module360State}
+            set360State={setModule360State}
           />
         </div>
 
@@ -321,7 +298,6 @@ function Module360() {
                 <Minimap
                   x={select_Scene.coords.x}
                   y={select_Scene.coords.y}
-                  onClick={() => changetoMap()}
                   previous_Scene={previous_Scene}
                 />
               )}
@@ -331,14 +307,16 @@ function Module360() {
         <div className="absolute bottom-0 right-0  flex items-center justify-center pb-20 pr-2 sm:pb-20 sm:pr-2 md:pb-2 md:pr-2 lg:pb-2 lg:pr-2">
           <button
             className="shadow-2xl-inner rounded-full bg-gray-100 p-2 text-white drop-shadow-md"
-            onClick={toggleMapButtonVisibility}
+            onClick={() => {
+              setMapButtonVisibility(!mapButtonVisible);
+            }}
           >
             {mapButtonVisible ? (
-              <TbMap className="text-gray-500 h-6 w-6 md:h-9/12 md:w-full lg:h-10 lg:w-10" /> // Icon for hiding the map button  h-6 w-6 md:h-10 md:w-10
+              <TbMap className="md:h-9/12 h-6 w-6 text-gray-500 md:w-full lg:h-10 lg:w-10" /> // Icon for hiding the map button  h-6 w-6 md:h-10 md:w-10
             ) : (
               <TbMapOff
                 size={25}
-                className="text-gray-500 h-6 w-6 md:h-9/12 md:w-full lg:h-10 lg:w-10"
+                className="md:h-9/12 h-6 w-6 text-gray-500 md:w-full lg:h-10 lg:w-10"
               /> // Icon for showing the map button
             )}
           </button>

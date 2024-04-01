@@ -44,7 +44,9 @@ const Bugmodal = ({ visible, onClose }) => {
           <div className="flex h-full flex-col items-end py-4">
             <button
               className="flex items-center justify-center"
-              onClick={handleCloseAndReset}
+              onClick={() => {
+                handleCloseAndReset;
+              }}
             >
               <IoIosClose className="h-12 w-12" />
             </button>

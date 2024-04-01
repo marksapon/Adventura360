@@ -55,7 +55,9 @@ const HelpModal = ({ visible, onClose }) => {
             <div className="flex h-full items-center justify-center">
               <button
                 className="flex items-center justify-center"
-                onClick={handleBack}
+                onClick={() => {
+                  handleBack;
+                }}
               >
                 <IoIosArrowBack className="h-8 w-8" />
               </button>
@@ -71,7 +73,9 @@ const HelpModal = ({ visible, onClose }) => {
                 <div className="absolute mt-4 flex w-full items-center justify-center">
                   <button
                     className="z-1 mb-auto mt-auto flex items-center justify-center"
-                    onClick={handleCloseAndReset}
+                    onClick={() => {
+                      handleCloseAndReset;
+                    }}
                   >
                     <IoIosClose className="h-6 w-6" />
                   </button>
@@ -79,7 +83,9 @@ const HelpModal = ({ visible, onClose }) => {
                 <div className="left-0 top-0 flex h-full w-full items-center justify-center">
                   <button
                     className="mb-auto mt-auto flex items-center justify-center"
-                    onClick={handleNext}
+                    onClick={() => {
+                      handleNext;
+                    }}
                   >
                     <IoIosArrowForward className="h-8 w-8" />
                   </button>
@@ -139,7 +145,9 @@ const HelpModal = ({ visible, onClose }) => {
             <div className="flex h-full items-center justify-center">
               <button
                 className="flex items-center justify-center"
-                onClick={handleBack}
+                onClick={() => {
+                  handleBack;
+                }}
               >
                 <IoIosArrowBack className="h-20 w-20" />
               </button>
@@ -155,7 +163,9 @@ const HelpModal = ({ visible, onClose }) => {
                 <div className="absolute mt-4 flex w-full items-center justify-center">
                   <button
                     className="z-1 mb-auto mt-auto flex items-center justify-center"
-                    onClick={handleCloseAndReset}
+                    onClick={() => {
+                      handleCloseAndReset;
+                    }}
                   >
                     <IoIosClose className="h-10 w-10" />
                   </button>
@@ -163,7 +173,9 @@ const HelpModal = ({ visible, onClose }) => {
                 <div className="left-0 top-0 flex h-full w-full items-center justify-center">
                   <button
                     className="mb-auto mt-auto flex items-center justify-center"
-                    onClick={handleNext}
+                    onClick={() => {
+                      handleNext;
+                    }}
                   >
                     <IoIosArrowForward className="h-20 w-20" />
                   </button>
