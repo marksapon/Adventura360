@@ -2,6 +2,8 @@
 import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
 /* Map Module Components */
 import FilterList from "./components/FilterList"; // Overlay Filter Component
+import Pathfinding from "./components/Pathfinding"; // Pathfinding Component
+import PathfindingModal from "./components/PathfindingModal"; // Pathfinding Modal Component
 /* OSD Component */
 import OpenSeadragon from "openseadragon";
 /* OSD CSS */
@@ -139,6 +141,7 @@ const MapModule = ({ currLoc }) => {
 
   /* PathFinding */
   const [pathFindingClicked, setPathFindingClicked] = useState(false); // State to track if pathfinding icon is clicked
+  const pathfindingRef = useRef(); // Reference to the Pathfinding element
 
   /* Map Button Mount */
   useLayoutEffect(() => {
@@ -266,15 +269,7 @@ const MapModule = ({ currLoc }) => {
             ? icons[overlay.type].color
             : "gray";
           divs.push(
-            <div
-              key={overlay.id}
-              id={overlay.id}
-              onClick={() => {
-                setCurrentOverlays((prev) => {
-                  return prev.filter((item) => item !== overlayType);
-                });
-              }}
-            >
+            <div key={overlay.id} id={overlay.id}>
               <div
                 style={{
                   position: "relative",
@@ -320,6 +315,8 @@ const MapModule = ({ currLoc }) => {
         }
         return divs;
       })}
+
+      <Pathfinding ref={pathfindingRef} viewer={viewer} />
       {/* Overlays */}
 
       {/* OSD CSS */}
@@ -331,7 +328,12 @@ const MapModule = ({ currLoc }) => {
           <div className="py-10" />
           {/* Header Space */}
           {/* Content Space */}
-          <div className=" relative">
+          <div className=" relative w-full">
+            {/* Pathfinding Modal */}
+            {pathFindingClicked ? (
+              <PathfindingModal setPathModalState={setPathFindingClicked} />
+            ) : null}
+
             {/* Filter Button */}
             <div className="group">
               <div className="absolute right-0 top-0 m-2 flex flex-col items-center sm:flex-row-reverse lg:flex-col">
@@ -348,7 +350,7 @@ const MapModule = ({ currLoc }) => {
                   }}
                 >
                   <BsFilterRight
-                    className={`${filterClicked ? "text-white" : "text-gray-500 group-hover:text-green-600"} md:h-9/12 h-6 w-6 md:w-full lg:h-10 lg:w-10  `}
+                    className={`${filterClicked ? "text-white" : "text-gray-500 group-hover:text-green-600"} md:h-9/12 h-6 w-6 md:w-full lg:h-10 lg:w-10 `}
                   />
                 </button>
                 {filterClicked ? (
@@ -393,7 +395,7 @@ const MapModule = ({ currLoc }) => {
                     }}
                   >
                     <GiPathDistance
-                      className={`md:h-9/12 h-6 w-6 text-gray-500 group-hover:text-green-600 md:w-full lg:h-10 lg:w-10`}
+                      className={`md:h-9/12 h-6 w-6 ${pathFindingClicked ? "text-green-600" : "text-gray-500"} group-hover:text-green-600 md:w-full lg:h-10 lg:w-10`}
                     />
                   </button>
                 </div>

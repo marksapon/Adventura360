@@ -88,7 +88,7 @@ const FilterList = ({ icons, overlays, OSDinstance, OSD }) => {
 
   return (
     <div
-      className={`no-scrollbar pointer-events-auto flex h-52 w-10 snap-y snap-mandatory flex-col items-center overflow-scroll rounded-2xl bg-gray-100 pb-1 pl-0 pr-0 pt-1 drop-shadow-xl sm:h-10 sm:w-52 sm:snap-x  sm:flex-row-reverse sm:pb-0 sm:pl-1 sm:pr-1 sm:pt-0 lg:h-52 lg:w-12 lg:snap-y lg:flex-col lg:pb-1 lg:pl-0 lg:pr-0 lg:pt-1 `}
+      className={`no-scrollbar pointer-events-auto flex h-52 w-10 snap-y snap-mandatory flex-col items-center overflow-scroll rounded-2xl bg-gray-100 pb-1 pl-0 pr-0 pt-1 drop-shadow-xl sm:h-10 sm:w-56 sm:snap-x  sm:flex-row-reverse sm:pb-0 sm:pl-1 sm:pr-1 sm:pt-0 lg:h-56 lg:w-12 lg:snap-y lg:flex-col lg:pb-1 lg:pl-0 lg:pr-0 lg:pt-1 `}
     >
       {/* Div 1 */}
       <div className="flex snap-center flex-col items-center justify-between sm:flex-row-reverse lg:flex-col">
