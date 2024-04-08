@@ -7,6 +7,7 @@ import Helpmodal from "./helpmodal"; // Help Modal
 import Sharelink from "./Sharelink"; // Share Modal
 import Bugmodal from "./Bugmodal"; // Bug Modal
 import MapModule from "../../mapmodule/Map.jsx"; // Map Module
+import BuildingModal from "./BuildingModal.jsx"; // Building Modal
 
 /* Icons */
 import { VscFeedback } from "react-icons/vsc"; // Feedback Button
@@ -23,11 +24,13 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
   const [mapState, setMapState] = useState(false); // Map State
   const [isFullscreen, setIsFullscreen] = useState(false); // Fullscreen State
   const [Showmodal, setShowmodal] = useState(false); // Help Modal State
-  const handleclose = () => setShowmodal(false); // Function to change Help Modal
   const [Sharemodal, setShowSharemodal] = useState(false); // Share Modal State
-  const handlecloseShare = () => setShowSharemodal(false); // Function to change Share Modal
   const [Bugmdl, setShowBugmodal] = useState(false); // Bug Modal State
-  const handlecloseBug = () => setShowBugmodal(false); // Function to change Bug Modal
+  const [bldgModal, setBldgModal] = useState(false); // Building Modal State
+
+  const handlecloseShare = () => setShowSharemodal(true); // Function to change Share Modal
+  const handleclose = () => setShowmodal(true); // Function to change Help Modal
+  const handlecloseBug = () => setShowBugmodal(true); // Function to change Bug Modal
 
   const navigate = useNavigate(); // Navigation Function for Logo
 
@@ -94,13 +97,13 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
               <button
                 type="button"
                 onClick={() => navigate("/")}
-                className="justify-cente flex h-12 w-12 items-center"
+                className="flex h-14 w-14 items-center justify-center"
               >
                 <span className="sr-only">Adventura Logo</span>
                 <img
                   src="/assets/Module360/Icons/AdvenLogo.png"
                   alt="share button"
-                  className="h-11 w-auto transition-all duration-200 hover:scale-110"
+                  className="h-12 w-auto transition-all duration-200 hover:scale-110"
                 />
               </button>
             </div>
@@ -113,7 +116,11 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
               >
                 <span className="sr-only">360</span>
                 <Tb360View
-                  className={`size-12 text-green-600 transition-all duration-200 hover:size-14 ${!mapState ? "size-14 rounded-lg ring-2 ring-gray-600" : ""}`}
+                  className={`h-12 w-12 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${
+                    !mapState && !Showmodal && !Bugmdl && !Sharemodal
+                      ? "h-14 w-14 rounded-lg ring-2 ring-gray-600"
+                      : ""
+                  }`}
                 />
               </button>
             </div>
@@ -122,12 +129,12 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
               <button
                 type="button"
                 onClick={() => setMapState(true)}
-                className="inline-flex h-14 w-14 items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+                className="inline-flex h-14 w-14 items-center justify-center"
               >
                 <span className="sr-only">Map</span>
                 <GrMap
                   size={35}
-                  className="text-green-600 transition-all duration-200 hover:size-11"
+                  className={`h-12 w-12 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${mapState ? "h-14 w-14 rounded-lg ring-2 ring-gray-600" : ""}`}
                 />
               </button>
             </div>
@@ -135,13 +142,15 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <div className="hidden md:flex">
               <button
                 type="button"
-                onClick={null}
-                className="inline-flex h-14 w-14 items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+                onClick={() => {
+                  setBldgModal(true);
+                }}
+                className="inline-flex h-14 w-14 items-center justify-center"
               >
                 <span className="sr-only">Search</span>
                 <IoMdSearch
-                  size={35}
-                  className="text-green-600 transition-all duration-200 hover:size-11"
+                  size={50}
+                  className="h-12 w-12 text-green-600 transition-all duration-200 hover:h-14 hover:w-14"
                 />
               </button>
             </div>
@@ -149,13 +158,16 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <div className="hidden md:flex">
               <button
                 type="button"
-                onClick={() => setShowmodal(true)}
-                className="inline-flex h-14 w-14 items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+                onClick={() => {
+                  setShowmodal(true);
+                  setMapState(false);
+                }}
+                className="inline-flex h-14 w-14 items-center justify-center"
               >
                 <span className="sr-only">Help</span>
                 <IoIosHelpCircleOutline
                   size={37}
-                  className="text-green-600 transition-all duration-200 hover:size-11"
+                  className={`h-12 w-12 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Showmodal ? "h-14 w-14 rounded-lg ring-2 ring-gray-600" : ""}`}
                 />
               </button>
             </div>
@@ -173,13 +185,15 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <div className="hidden md:flex">
               <button
                 type="button"
-                onClick={() => setShowBugmodal(true)}
-                className="inline-flex h-14 w-14 items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+                onClick={() => {
+                  setShowBugmodal(true);
+                  setMapState(false);
+                }}
+                className="inline-flex h-14 w-14 items-center justify-center"
               >
                 <span className="sr-only">Feedback</span>
                 <VscFeedback
-                  size={35}
-                  className="text-green-600 transition-all duration-200 hover:size-10"
+                  className={`h-11 w-11 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Bugmdl ? "h-14 w-14 rounded-lg ring-2 ring-gray-600" : ""}`}
                 />
               </button>
             </div>
@@ -188,26 +202,25 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
               <button
                 type="button"
                 onClick={toggleAutoplay}
-                className="inline-flex h-14 w-14 items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+                className="inline-flex h-14 w-14 items-center justify-center"
               >
                 <span className="sr-only">Autoplay</span>
-                <PiPlayCircleLight
-                  size={40}
-                  className="text-green-600 transition-all duration-200 hover:size-11"
-                />
+                <PiPlayCircleLight className="h-12 w-12 text-green-600 transition-all duration-200 hover:h-14 hover:w-14" />
               </button>
             </div>
 
             <div className="hidden md:flex">
               <button
                 type="button"
-                onClick={() => setShowSharemodal(true)}
-                className="inline-flex h-14 w-14 items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+                onClick={() => {
+                  setShowSharemodal(true);
+                  setMapState(false);
+                }}
+                className="inline-flex h-14 w-14 items-center justify-center"
               >
                 <span className="sr-only">Share</span>
                 <FiLink
-                  size={30}
-                  className="text-green-600 transition-all duration-200 hover:size-9"
+                  className={`h-10 w-10 text-green-600 transition-all duration-200 hover:h-12 hover:w-12 ${Sharemodal ? "h-12 w-12 rounded-lg ring-2 ring-gray-600" : ""}`}
                 />
               </button>
             </div>
@@ -216,19 +229,13 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
               <button
                 type="button"
                 onClick={toggleFullscreen}
-                className="inline-flex h-14 w-14 items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+                className="inline-flex h-14 w-14 items-center justify-center"
               >
                 <span className="sr-only">Fullscreen</span>
                 {isFullscreen ? (
-                  <TbMaximizeOff
-                    size={35}
-                    className="text-green-600 transition-all duration-200 hover:size-11"
-                  />
+                  <TbMaximizeOff className="h-10 w-10 text-green-600 transition-all duration-200 hover:size-12" />
                 ) : (
-                  <TbMaximize
-                    size={35}
-                    className="text-green-600 transition-all duration-200 hover:size-11"
-                  />
+                  <TbMaximize className="h-10 w-10 text-green-600 transition-all duration-200 hover:size-12" />
                 )}
               </button>
             </div>
@@ -237,7 +244,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
               <button
                 type="button"
                 onClick={() => window.open("https://www.cvsu.edu.ph/")} // Redirect to CVSU website
-                className="flex h-12 w-12 items-center  justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+                className="flex h-12 w-12 items-center justify-center"
               >
                 <span className="sr-only">CVSU</span>
                 <img
@@ -249,6 +256,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             </div>
           </div>
         </div>
+        <BuildingModal onClose={handleclose} visible={bldgModal} />
         <Helpmodal onClose={handleclose} visible={Showmodal} />
         <Sharelink onClose={handlecloseShare} visible={Sharemodal} />
         <Bugmodal onClose={handlecloseBug} visible={Bugmdl} />
@@ -258,7 +266,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
       {mapState && <MapModule currLoc={location.coords} />}
 
       {/*FOOTER*/}
-      <div className="sticky bottom-0  start-0 top-4 z-20 mx-2 mb-4 h-14 w-full rounded-xl border-b md:hidden">
+      <div className="sticky bottom-0  start-0 top-4 z-20 mx-2 mb-4 h-14 w-full rounded-xl border-b bg-white md:hidden">
         <div className="flex h-full items-center justify-between px-2 text-base">
           <div className="flex md:hidden">
             <button
@@ -275,7 +283,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <button
               type="button"
               onClick={() => setMapState(true)}
-              className="inline-flex h-14 w-auto items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+              className="inline-flex h-14 w-auto items-center justify-center"
             >
               <span className="sr-only">Map</span>
               <GrMap size={35} className="text-green-600" />
@@ -286,7 +294,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <button
               type="button"
               onClick={null}
-              className=" inline-flex h-14 w-auto items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+              className="inline-flex h-14 w-auto items-center justify-center"
             >
               <span className="sr-only">Search</span>
               <IoMdSearch size={35} className="text-green-600" />
@@ -297,7 +305,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <button
               type="button"
               onClick={() => setShowmodal(true)}
-              className="inline-flex h-14 w-auto items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+              className="inline-flex h-14 w-auto items-center justify-center"
             >
               <span className="sr-only">Help</span>
               <IoIosHelpCircleOutline size={37} className="text-green-600" />
@@ -308,7 +316,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <button
               type="button"
               onClick={() => setShowBugmodal(true)}
-              className="inline-flex h-14 w-auto items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+              className="inline-flex h-14 w-auto items-center justify-center"
             >
               <span className="sr-only">Feedback</span>
               <VscFeedback size={35} className="text-green-600" />
@@ -319,7 +327,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <button
               type="button"
               onClick={() => setShowSharemodal(true)}
-              className="inline-flex h-14 w-auto items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+              className="inline-flex h-14 w-auto items-center justify-center"
             >
               <span className="sr-only">Share</span>
               <FiLink size={30} className="text-green-600" />
@@ -330,7 +338,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <button
               type="button"
               onClick={toggleFullscreen}
-              className="inline-flex h-14 w-auto items-center justify-center rounded-lg text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+              className="inline-flex h-14 w-auto items-center justify-center"
             >
               <span className="sr-only">Fullscreen</span>
               {isFullscreen ? (

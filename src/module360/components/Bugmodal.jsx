@@ -40,29 +40,29 @@ const Bugmodal = ({ visible, onClose }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-25 px-2">
       <div className="flex h-auto w-full items-center justify-center">
-        <div className="flex h-full max-h-[600px] w-auto min-w-[300px] max-w-[560px] flex-col justify-center rounded-2xl border border-black bg-white px-4">
-          <div className="flex h-full flex-col items-end py-4">
+        <div className="flex h-[520px] w-[300px] flex-col justify-center rounded-2xl border border-black bg-white px-4">
+          <div className="flex h-full flex-col items-end py-2">
             <button
               className="flex items-center justify-center"
               onClick={() => {
-                handleCloseAndReset;
+                handleCloseAndReset();
               }}
             >
-              <IoIosClose className="h-12 w-12" />
+              <IoIosClose className="h-10 w-10" />
             </button>
-            <div className="gap-6">
-              <h1 className="flex text-4xl font-bold text-green-600">
+            <div className="gap-2">
+              <h1 className="flex text-3xl font-bold text-green-600">
                 Feedback
               </h1>
-              <p className="text-full mt-3 flex font-sans text-lg">
+              <p className="text-full text-1xl mt-3 flex font-sans">
                 Your feedback is crucial to us. Please share any thoughts or
                 concerns to help us improve. Thank you for being part of our
                 journey!
               </p>
             </div>
           </div>
-          <div className="flex h-full w-full flex-col justify-between gap-4">
-            <div className="h-full w-full">
+          <div className="flex h-full w-full flex-col justify-between">
+            <div className="mb-2 h-full w-full">
               <div
                 className="dropdown-header h-12 w-full cursor-pointer items-center justify-center rounded-lg border border-green-600 p-2"
                 onClick={toggleDropdown}

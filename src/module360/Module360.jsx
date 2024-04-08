@@ -13,9 +13,11 @@ import Minimap from "./components/Minimap";
 import clsx from "clsx";
 import { TbMap } from "react-icons/tb";
 import { TbMapOff } from "react-icons/tb";
+import BuildingModal from "./components/BuildingModal";
 
 function Module360() {
   const navigate = useNavigate();
+  const [bldgState, setBldgState] = useState(false); // Map State
 
   /* Dynamic URL Parameters */
   const url = new URLSearchParams(window.location.search); // Get URL
@@ -86,6 +88,7 @@ function Module360() {
       console.log(">Moving to building");
       changeScene(buildingsData.buildings, target);
     } else {
+      setBldgState(!bldgState); // Set Building State to True
       console.log(">Displaying information"); // Display Information Building Module goes Here
     }
   }
@@ -281,7 +284,6 @@ function Module360() {
             ></div>
           ))}
         </div>
-
         <div className="flex h-full w-full">
           <Navigationbar
             toggleAutoplay={toggleAutoplay}
@@ -290,7 +292,8 @@ function Module360() {
             set360State={setModule360State}
           />
         </div>
-
+        [bldgState &&
+        <BuildingModal visible={bldgState} onClose={setBldgState} />]
         <div className="absolute left-0 top-0 p-1 text-white ">
           <div className="relative flex flex-row justify-between">
             <div className="pb-2 pl-2 pt-16 md:pt-20">
