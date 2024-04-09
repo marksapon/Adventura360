@@ -31,6 +31,8 @@ const MapModule = ({ currLoc }) => {
   const [osdLoaded, setOsdLoaded] = useState(false); // If OSD is loaded
   const [viewer, setViewer] = useState(null); // OSD Viewer
 
+  
+
   /* Current Location */
   const location = new OpenSeadragon.Point(currLoc.x, currLoc.y); // Current Point Location
   const [checkCenter, setCheckCenter] = useState(true); // Check if user view is in the current location
@@ -62,7 +64,7 @@ const MapModule = ({ currLoc }) => {
 
   const [overlays, setOverlays] = useState(() => {
     // Adding data to the overlays
-    // console.log("Loading overlay");
+    console.log("Loading overlay");
 
     const temp_overlays = {
       // Overlay Types
@@ -93,7 +95,7 @@ const MapModule = ({ currLoc }) => {
         temp_overlays.undefined.push(overlay);
       }
     });
-    // console.log("Overlay Loaded");
+    console.log("Overlay Loaded");
     return temp_overlays;
   });
 
@@ -141,6 +143,9 @@ const MapModule = ({ currLoc }) => {
 
   /* PathFinding */
   const [pathFindingClicked, setPathFindingClicked] = useState(false); // State to track if pathfinding icon is clicked
+  const [canvasSize, setCanvasSize] = useState(null); // Canvas Size
+  const [pathfindingRef, setPathfindingRef] = useState(null); // Reference to the Pathfinding element
+  const [paths, setPaths] = useState([]); // Paths
 
   /* Map Button Mount */
   useLayoutEffect(() => {
@@ -186,6 +191,7 @@ const MapModule = ({ currLoc }) => {
     viewerInstance.addHandler("open", () => {
       setOsdLoaded(true); // Set state when OSD is loaded
       viewerInstance.viewport.panTo(location, true); // Starts from current location
+      setCanvasSize(viewerInstance.world.getItemAt(0).getContentSize()); // Image Pixel Metric
     });
 
     // When OSD is panned
@@ -205,14 +211,9 @@ const MapModule = ({ currLoc }) => {
         event.position,
       );
       console.log(
-        `Clicked at Viewport coordinates: ${viewportPoint.x.toFixed(
+        `Clicked at viewport coordinates: ${viewportPoint.x.toFixed(
           3,
         )}, ${viewportPoint.y.toFixed(3)}`,
-      );
-      // Image Coordinates
-      console.log(
-        "Current Location in Image Coordinates: ",
-        viewerInstance.viewport.viewportToImageCoordinates(viewportPoint),
       );
     });
 
@@ -240,15 +241,20 @@ const MapModule = ({ currLoc }) => {
           });
         });
       });
+      // Pathfinding Overlay Loader
+      viewer.addOverlay({
+        element: pathfindingRef,
+        location: viewer.world.getItemAt(0).getBounds(),
+      });
     }
-  }, [current_overlays, osdLoaded]);
+  }, [current_overlays, osdLoaded, pathfindingRef]);
 
   return (
     <div
       style={{
         position: "absolute",
         zIndex: 2,
-        backgroundColor: "#f5f5f5",
+        backgroundColor: "#fff",
         width: "100vw",
         height: "100vh",
       }}
@@ -320,7 +326,15 @@ const MapModule = ({ currLoc }) => {
         }
         return divs;
       })}
-
+      {osdLoaded && (
+        <Pathfinding
+          setPathfindingRef={setPathfindingRef}
+          viewer={viewer}
+          canvasSize={canvasSize}
+          currloc={canvasSize}
+          targetLoc={{ x: 0.5, y: 0.5 }}
+        />
+      )}
       {/* Overlays */}
 
       {/* OSD CSS */}
@@ -335,11 +349,7 @@ const MapModule = ({ currLoc }) => {
           <div className=" relative w-full">
             {/* Pathfinding Modal */}
             {pathFindingClicked ? (
-              <PathfindingModal
-                setPathModalState={setPathFindingClicked}
-                currLoc={currLoc}
-                viewer={viewer}
-              />
+              <PathfindingModal setPathModalState={setPathFindingClicked} />
             ) : null}
 
             {/* Filter Button */}

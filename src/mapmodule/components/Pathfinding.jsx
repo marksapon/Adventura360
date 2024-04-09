@@ -1,53 +1,43 @@
-import React, { useEffect, useRef } from "react";
-import OpenSeadragon from "openseadragon";
-/* eslint-disable */
-import paper, { Point } from "paper";
-/* eslint-enable */
+import React, { useEffect, useRef, forwardRef } from "react";
+import { initOSDFabricJS } from "openseadragon-fabric";
+import { fabric } from "fabric";
 
-const Pathfinding = ({ viewer, ref }) => {
-  const canvasRef = useRef();
+const Pathfinding = ({ viewer, currloc, targetLoc, pathFabric }) => {
+  /* FabricJS Path Generation */
+  useEffect(() => {
+    console.log("useEffect Pathfinding");
+    const edge = viewer.world.getItemAt(0).getBounds(); // Get the edge of the image (To be removed in final)
 
-  // const size = viewer.world.getItemAt(0).getContentSize(); // Image Pixel Metric
-  // console.log("Image Bounds: ", viewer.world.getItemAt(0).getBounds()); // Viewport Metric
-  // console.log("Image Size:", size.x, size.y);
-  // const canvas = canvasRef.current;
+    // Points Data
+    const points = [
+      { x: 0, y: 0 },
+      { x: edge.width, y: edge.height },
+    ];
 
-  // projectRef.current = new paper.Project(canvas); // Create a new paper project
-  // projectRef.current.view.viewSize = new paper.Size(size.x, size.y); // Set the canvas dimensions to match the image size dimensions
+    // Convert points to Image Coordinates
+    const pointsToImage = points.map((point) => {
+      let value = viewer.viewport.viewportToImageCoordinates(point.x, point.y);
+      console.log("Value:", value);
+      return (value = { x: value.x.toFixed(3), y: value.y.toFixed(3) });
+    });
 
-  // // Define a set of points
-  // const points = [
-  //   new paper.Point(832.4519483368409, 2753.1338717669646),
-  //   new paper.Point(884.9346235521599, 2738.8144472981171),
-  //   new paper.Point(988.0039205462929, 2711.2296279081056),
-  //   new paper.Point(1037.0642155577823, 2695.5967377278116),
-  //   new paper.Point(1085.0933278575899, 2682.6743707887326),
-  // ];
+    // Generate the path string
+    const pathData = pointsToImage
+      .map((point, index) => {
+        const command = index === 0 ? "M" : "L"; // 'M' for Move To, 'L' for Line To
+        return `${command} ${point.x} ${point.y}`;
+      })
+      .join(" ");
 
-  // // PaperJS Path Settings
-  // /* eslint-disable */
-  // const path = new paper.Path({
-  //   segments: points,
-  //   strokeColor: "green",
-  //   strokeWidth: 13,
-  // });
-  // /* eslint-enable */
+    // Create a new path with the path string
+    const path = new fabric.Path(pathData, {
+      fill: "none",
+      stroke: "#000000",
+      strokeWidth: 100,
+    });
 
-  // // OpenSeadragon Add Overlay
-  // viewer.addOverlay({
-  //   // Adding PaperJS canvas to OpenSeadragon
-  //   element: canvas,
-  //   location: viewer.world.getItemAt(0).getBounds(),
-  // });
-
-  // // Add a 'canvas-click' event handler to the viewer
-  // viewer.addHandler("canvas-click", function (event) {
-  //   var viewportPoint = viewer.viewport.pointFromPixel(event.position);
-  //   var webPoint = viewer.viewport.viewportToImageCoordinates(viewportPoint);
-  //   console.log(`Clicked at pixel: ${webPoint.x}, ${webPoint.y}`);
-  // });
-
-  return <canvas ref={canvasRef} className="absolute left-0 top-0" />;
+    pathFabric(path); // Pass the Fabric Path to parent component
+  }, []);
 };
 
 export default Pathfinding;
