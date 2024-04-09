@@ -142,9 +142,7 @@ const Navigationbar = ({ toggleAutoplay, location }) => {
             <div className="hidden md:flex">
               <button
                 type="button"
-                onClick={() => {
-                  setBldgModal(true);
-                }}
+                onClick={null}
                 className="inline-flex h-14 w-14 items-center justify-center"
               >
                 <span className="sr-only">Search</span>

@@ -18,7 +18,7 @@
         {
           "id": 2,
           "type": "move",
-          "target": "",
+          "target": "node87",
           "yaw": 10.17,
           "pitch": -20
         }
@@ -28,7 +28,7 @@
       "scene": "node2",
       "image": "/assets/nodes/2.webp",
       "coords": {
-        "x": 0.335,  
+        "x": 0.335,
         "y": 1.093
       },
       "hotspot": [
@@ -52,9 +52,8 @@
       "scene": "node3",
       "image": "/assets/nodes/3.webp",
       "coords": {
-        "x": 0.345, 
-        "y": 1.090
-         
+        "x": 0.345,
+        "y": 1.09
       },
       "hotspot": [
         {
@@ -74,7 +73,7 @@
         {
           "id": 3,
           "type": "move",
-          "target": " ",
+          "target": "",
           "yaw": 187.53,
           "pitch": -20
         }
@@ -84,7 +83,7 @@
       "scene": "node4",
       "image": "/assets/nodes/4.webp",
       "coords": {
-        "x": 0.359,  
+        "x": 0.359,
         "y": 1.087
       },
       "hotspot": [
@@ -108,7 +107,7 @@
       "scene": "node5",
       "image": "/assets/nodes/5.webp",
       "coords": {
-        "x": 0.376,  
+        "x": 0.376,
         "y": 1.082
       },
       "hotspot": [
@@ -132,7 +131,7 @@
       "scene": "node6",
       "image": "/assets/nodes/6.webp",
       "coords": {
-        "x": 0.392, 
+        "x": 0.392,
         "y": 1.078
       },
       "hotspot": [
@@ -156,7 +155,7 @@
       "scene": "node7",
       "image": "/assets/nodes/7.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -187,7 +186,7 @@
       "scene": "node8",
       "image": "/assets/nodes/8.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -211,7 +210,7 @@
       "scene": "node9",
       "image": "/assets/nodes/9.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -235,7 +234,7 @@
       "scene": "node10",
       "image": "/assets/nodes/10.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -243,7 +242,7 @@
           "id": 1,
           "type": "move",
           "target": "node16",
-          "yaw": 270.90,
+          "yaw": 270.9,
           "pitch": -20
         },
         {
@@ -264,7 +263,7 @@
           "id": 4,
           "type": "move",
           "target": "",
-          "yaw": 144.00,
+          "yaw": 144.0,
           "pitch": -20
         }
       ]
@@ -273,7 +272,7 @@
       "scene": "node11",
       "image": "/assets/nodes/11.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -297,7 +296,7 @@
       "scene": "node12",
       "image": "/assets/nodes/12.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -321,7 +320,7 @@
       "scene": "node13",
       "image": "/assets/nodes/13.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -345,7 +344,7 @@
       "scene": "node14",
       "image": "/assets/nodes/14.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -369,7 +368,7 @@
       "scene": "node15",
       "image": "/assets/nodes/15.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -400,7 +399,7 @@
       "scene": "node16",
       "image": "/assets/nodes/16.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -424,7 +423,7 @@
       "scene": "node17",
       "image": "/assets/nodes/17.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -439,7 +438,7 @@
           "id": 2,
           "type": "move",
           "target": "node16",
-          "yaw": 97.00,
+          "yaw": 97.0,
           "pitch": -20
         }
       ]
@@ -448,7 +447,7 @@
       "scene": "node18",
       "image": "/assets/nodes/18.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -472,7 +471,7 @@
       "scene": "node19",
       "image": "/assets/nodes/19.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -503,7 +502,7 @@
       "scene": "node20",
       "image": "/assets/nodes/20.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -518,7 +517,7 @@
           "id": 2,
           "type": "move",
           "target": "node19",
-          "yaw": 97.00,
+          "yaw": 97.0,
           "pitch": -20
         }
       ]
@@ -527,7 +526,7 @@
       "scene": "node21",
       "image": "/assets/nodes/21.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -551,7 +550,7 @@
       "scene": "node22",
       "image": "/assets/nodes/22.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -575,7 +574,7 @@
       "scene": "node23",
       "image": "/assets/nodes/23.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -599,7 +598,7 @@
       "scene": "node24",
       "image": "/assets/nodes/24.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -607,7 +606,7 @@
           "id": 1,
           "type": "move",
           "target": "node25",
-          "yaw": 6.10,
+          "yaw": 6.1,
           "pitch": -20
         },
         {
@@ -630,7 +629,7 @@
       "scene": "node25",
       "image": "/assets/nodes/25.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -661,7 +660,7 @@
       "scene": "node26",
       "image": "/assets/nodes/26.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -676,7 +675,7 @@
           "id": 2,
           "type": "move",
           "target": "node25",
-          "yaw": 180.00,
+          "yaw": 180.0,
           "pitch": -20
         }
       ]
@@ -685,7 +684,7 @@
       "scene": "node27",
       "image": "/assets/nodes/27.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -700,7 +699,7 @@
           "id": 2,
           "type": "move",
           "target": "node26",
-          "yaw": 180.60,
+          "yaw": 180.6,
           "pitch": -20
         },
         {
@@ -716,7 +715,7 @@
       "scene": "node28",
       "image": "/assets/nodes/28.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -740,7 +739,7 @@
       "scene": "node29",
       "image": "/assets/nodes/29.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -764,7 +763,7 @@
       "scene": "node30",
       "image": "/assets/nodes/30.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -788,7 +787,7 @@
       "scene": "node31",
       "image": "/assets/nodes/31.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -819,7 +818,7 @@
       "scene": "node32",
       "image": "/assets/nodes/32.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -843,7 +842,7 @@
       "scene": "node33",
       "image": "/assets/nodes/33.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -867,7 +866,7 @@
       "scene": "node34",
       "image": "/assets/nodes/34.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -891,7 +890,7 @@
       "scene": "node35",
       "image": "/assets/nodes/35.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -929,7 +928,7 @@
       "scene": "node36",
       "image": "/assets/nodes/36.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -953,7 +952,7 @@
       "scene": "node37",
       "image": "/assets/nodes/37.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -984,7 +983,7 @@
       "scene": "node38",
       "image": "/assets/nodes/38.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -992,7 +991,7 @@
           "id": 1,
           "type": "move",
           "target": "node39",
-          "yaw": 91.50,
+          "yaw": 91.5,
           "pitch": -20
         },
         {
@@ -1008,7 +1007,7 @@
       "scene": "node39",
       "image": "/assets/nodes/39.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1030,7 +1029,7 @@
           "id": 3,
           "type": "move",
           "target": "node38",
-          "yaw": 179.40,
+          "yaw": 179.4,
           "pitch": -15.22
         }
       ]
@@ -1039,7 +1038,7 @@
       "scene": "node40",
       "image": "/assets/nodes/40.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1070,7 +1069,7 @@
       "scene": "node41",
       "image": "/assets/nodes/41.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1094,7 +1093,7 @@
       "scene": "node42",
       "image": "/assets/nodes/42.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1118,7 +1117,7 @@
       "scene": "node43",
       "image": "/assets/nodes/43.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1142,7 +1141,7 @@
       "scene": "node44",
       "image": "/assets/nodes/44.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1173,7 +1172,7 @@
       "scene": "node45",
       "image": "/assets/nodes/45.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1197,7 +1196,7 @@
       "scene": "node46",
       "image": "/assets/nodes/46.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1220,7 +1219,7 @@
           "type": "move",
           "target": "",
           "yaw": 338.69,
-          "pitch": -13.70
+          "pitch": -13.7
         }
       ]
     },
@@ -1228,7 +1227,7 @@
       "scene": "node47",
       "image": "/assets/nodes/47.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1252,7 +1251,7 @@
       "scene": "node48",
       "image": "/assets/nodes/48.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1283,7 +1282,7 @@
       "scene": "node49",
       "image": "/assets/nodes/49.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1307,7 +1306,7 @@
       "scene": "node50",
       "image": "/assets/nodes/50.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1331,7 +1330,7 @@
       "scene": "node51",
       "image": "/assets/nodes/51.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1369,7 +1368,7 @@
       "scene": "node52",
       "image": "/assets/nodes/52.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1393,7 +1392,7 @@
       "scene": "node53",
       "image": "/assets/nodes/53.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1417,7 +1416,7 @@
       "scene": "node54",
       "image": "/assets/nodes/54.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1441,7 +1440,7 @@
       "scene": "node55",
       "image": "/assets/nodes/55.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1472,7 +1471,7 @@
       "scene": "node56",
       "image": "/assets/nodes/56.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1496,14 +1495,14 @@
       "scene": "node57",
       "image": "/assets/nodes/57.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
         {
           "id": 1,
           "type": "move",
-          "target": "",
+          "target": "node88",
           "yaw": 104.75,
           "pitch": -20
         },
@@ -1518,7 +1517,7 @@
           "id": 3,
           "type": "move",
           "target": "node58",
-          "yaw": 184.70,
+          "yaw": 184.7,
           "pitch": -20
         }
       ]
@@ -1527,7 +1526,7 @@
       "scene": "node58",
       "image": "/assets/nodes/58.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1535,7 +1534,7 @@
           "id": 1,
           "type": "move",
           "target": "node59",
-          "yaw": 181.20,
+          "yaw": 181.2,
           "pitch": -20
         },
         {
@@ -1551,7 +1550,7 @@
       "scene": "node59",
       "image": "/assets/nodes/59.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1566,7 +1565,7 @@
           "id": 2,
           "type": "move",
           "target": "node58",
-          "yaw": 7.10,
+          "yaw": 7.1,
           "pitch": -20
         }
       ]
@@ -1575,7 +1574,7 @@
       "scene": "node60",
       "image": "/assets/nodes/60.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1606,7 +1605,7 @@
       "scene": "node61",
       "image": "/assets/nodes/61.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1644,7 +1643,7 @@
       "scene": "node62",
       "image": "/assets/nodes/62.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1668,7 +1667,7 @@
       "scene": "node63",
       "image": "/assets/nodes/63.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1692,7 +1691,7 @@
       "scene": "node64",
       "image": "/assets/nodes/64.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1716,7 +1715,7 @@
       "scene": "node65",
       "image": "/assets/nodes/65.webp",
       "coords": {
-        "x": 0.409, 
+        "x": 0.409,
         "y": 1.073
       },
       "hotspot": [
@@ -1744,15 +1743,1022 @@
         {
           "id": 4,
           "type": "move",
-          "target": "",
+          "target": "node68",
           "yaw": 102.94,
           "pitch": -20
         },
         {
           "id": 5,
           "type": "move",
-          "target": "",
+          "target": "node66",
           "yaw": 283.67,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node66",
+      "image": "/assets/nodes/66.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node65",
+          "yaw": 113.4,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node67",
+          "yaw": 293.91,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node67",
+      "image": "/assets/nodes/67.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node66",
+          "yaw": 111.49,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "",
+          "yaw": 290.61,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node68",
+      "image": "/assets/nodes/68.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node69",
+          "yaw": 106.49,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node65",
+          "yaw": 287.07,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node69",
+      "image": "/assets/nodes/69.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node70",
+          "yaw": 117.8,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node68",
+          "yaw": 299.19,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node70",
+      "image": "/assets/nodes/70.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node71",
+          "yaw": 102.29,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node69",
+          "yaw": 281.77,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 164.41,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node71",
+      "image": "/assets/nodes/71.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node72",
+          "yaw": 102.67,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node70",
+          "yaw": 282.82,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node72",
+      "image": "/assets/nodes/72.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node73",
+          "yaw": 105.77,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node71",
+          "yaw": 286.29,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node73",
+      "image": "/assets/nodes/73.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node100",
+          "yaw": 105.12,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node72",
+          "yaw": 286.16,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "node74",
+          "yaw": 195.25,
+          "pitch": -20
+        },
+        {
+          "id": 4,
+          "type": "move",
+          "target": "node99",
+          "yaw": 14.86,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node74",
+      "image": "/assets/nodes/74.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node75",
+          "yaw": 187.1,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node73",
+          "yaw": 7.1,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node75",
+      "image": "/assets/nodes/75.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node76",
+          "yaw": 193.7,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node74",
+          "yaw": 13.83,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node76",
+      "image": "/assets/nodes/76.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node77",
+          "yaw": 191.76,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node75",
+          "yaw": 11.12,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "n",
+          "yaw": 271.54,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node77",
+      "image": "/assets/nodes/77.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node78",
+          "yaw": 193.05,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node76",
+          "yaw": 13.7,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 102.92,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node78",
+      "image": "/assets/nodes/78.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node79",
+          "yaw": 193.44,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node77",
+          "yaw": 13.44,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node79",
+      "image": "/assets/nodes/79.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node80",
+          "yaw": 188.64,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node78",
+          "yaw": 9.29,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node80",
+      "image": "/assets/nodes/80.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node81",
+          "yaw": 200.93,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node79",
+          "yaw": 20.8,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 113.13,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node81",
+      "image": "/assets/nodes/81.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node82",
+          "yaw": 197.44,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node80",
+          "yaw": 17.96,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node82",
+      "image": "/assets/nodes/82.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node83",
+          "yaw": 196.93,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node81",
+          "yaw": 18.22,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "node81",
+          "yaw": 107.45,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node83",
+      "image": "/assets/nodes/83.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node84",
+          "yaw": 194.35,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node82",
+          "yaw": 14.35,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 283.18,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node84",
+      "image": "/assets/nodes/84.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node85",
+          "yaw": 198.22,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node83",
+          "yaw": 19.78,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node85",
+      "image": "/assets/nodes/85.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node86",
+          "yaw": 195.0,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node84",
+          "yaw": 15.38,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node86",
+      "image": "/assets/nodes/86.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node87",
+          "yaw": 198.23,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node85",
+          "yaw": 19.26,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node87",
+      "image": "/assets/nodes/87.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node1",
+          "yaw": 200.04,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node86",
+          "yaw": 20.69,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node88",
+      "image": "/assets/nodes/88.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node89",
+          "yaw": 91.3,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node57",
+          "yaw": 276.34,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node89",
+      "image": "/assets/nodes/89.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node90",
+          "yaw": 97.38,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node88",
+          "yaw": 277.89,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node90",
+      "image": "/assets/nodes/90.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node91",
+          "yaw": 99.09,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node89",
+          "yaw": 281.42,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node91",
+      "image": "/assets/nodes/91.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node92",
+          "yaw": 99.09,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node90",
+          "yaw": 279.35,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node92",
+      "image": "/assets/nodes/92.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node93",
+          "yaw": 106.98,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node91",
+          "yaw": 287.5,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 193.75,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node93",
+      "image": "/assets/nodes/93.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node94",
+          "yaw": 195.69,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node92",
+          "yaw": 284.14,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 17.24,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node94",
+      "image": "/assets/nodes/94.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node95",
+          "yaw": 191.84,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node93",
+          "yaw": 12.33,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 279.87,
+          "pitch": -20
+        },
+        {
+          "id": 4,
+          "type": "move",
+          "target": "",
+          "yaw": 101.94,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node95",
+      "image": "/assets/nodes/95.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node96",
+          "yaw": 189.61,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node94",
+          "yaw": 10.52,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node96",
+      "image": "/assets/nodes/96.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node97",
+          "yaw": 200.22,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node95",
+          "yaw": 20.22,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 273.93,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node97",
+      "image": "/assets/nodes/97.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node98",
+          "yaw": 202.94,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node96",
+          "yaw": 23.2,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 246.73,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node98",
+      "image": "/assets/nodes/98.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node99",
+          "yaw": 201.13,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node97",
+          "yaw": 22.16,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 322.93,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node99",
+      "image": "/assets/nodes/99.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node73",
+          "yaw": 196.32,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node98",
+          "yaw": 17.35,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node100",
+      "image": "/assets/nodes/100.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node101",
+          "yaw": 110.08,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node73",
+          "yaw": 289.69,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node101",
+      "image": "/assets/nodes/101.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node102",
+          "yaw": 101.42,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node100",
+          "yaw": 281.52,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 204.38,
+          "pitch": -20
+        },
+        {
+          "id": 4,
+          "type": "move",
+          "target": "",
+          "yaw": 64.21,
+          "pitch": -20
+        }
+      ]
+    },
+    {
+      "scene": "node102",
+      "image": "/assets/nodes/102.webp",
+      "coords": {
+        "x": 0.409,
+        "y": 1.073
+      },
+      "hotspot": [
+        {
+          "id": 1,
+          "type": "move",
+          "target": "node103",
+          "yaw": 104.94,
+          "pitch": -20
+        },
+        {
+          "id": 2,
+          "type": "move",
+          "target": "node101",
+          "yaw": 287.27,
           "pitch": -20
         }
       ]
