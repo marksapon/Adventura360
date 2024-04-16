@@ -290,6 +290,8 @@ function Module360() {
             location={select_Scene}
             module360State={module360State}
             set360State={setModule360State}
+            buildings={buildingsData}
+            nodes={nodesData}
           />
         </div>
         [bldgState &&

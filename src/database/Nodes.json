@@ -21,8 +21,16 @@
           "target": "node87",
           "yaw": 10.17,
           "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "quad",
+          "yaw": 10.17,
+          "pitch": -20
         }
-      ]
+      ],
+      "travelType": "walk"
     },
     {
       "scene": "node2",
@@ -123,6 +131,13 @@
           "type": "move",
           "target": "node4",
           "yaw": 98.31,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "bldg",
+          "target": "dit",
+          "yaw": 217,
           "pitch": -20
         }
       ]
