@@ -1060,7 +1060,7 @@
         {
           "id": 1,
           "type": "move",
-          "target": "",
+          "target": "node67",
           "yaw": 114.94,
           "pitch": -20
         },
@@ -1813,7 +1813,7 @@
         {
           "id": 2,
           "type": "move",
-          "target": "",
+          "target": "node40",
           "yaw": 290.61,
           "pitch": -20
         }
