@@ -11,8 +11,8 @@ function LandingPage() {
     <>
       <NavBar />
       <Home />
-      <Services />
       <About />
+      <Services />
       <Products />
       <Blog />
     </>

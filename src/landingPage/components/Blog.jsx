@@ -13,7 +13,7 @@ const Blog = () => {
     { id: 4, title: "Alex Buenviaje", image: "/assets/lex.jpg" },
   ];
   return (
-    <div className="mx-auto my-12 max-w-screen-2xl px-4 lg:px-14 " id="blog">
+    <div className="mx-auto my-12 max-w-screen-2xl px-4 lg:px-14" id="blog">
       <div className="md:1/2 mx-auto text-center">
         <h2 className="mb-4 text-4xl font-semibold text-gray-700">
           Place holder lng to guys pati mga pic kayo na bahala kung ano gusto
