@@ -129,9 +129,7 @@ const Navigationbar = ({ toggleAutoplay, location, buildings, nodes }) => {
             <div className="hidden md:flex">
               <button
                 type="button"
-                onClick={() => {
-                  setMapState(true);
-                }}
+                onClick={() => setMapState(true)}
                 className="inline-flex h-14 w-14 items-center justify-center"
               >
                 <span className="sr-only">Map</span>
@@ -248,6 +246,7 @@ const Navigationbar = ({ toggleAutoplay, location, buildings, nodes }) => {
                   alt="cvsu logo"
                 />
               </button>
+            </div>
           </div>
         </div>
         <BuildingModal onClose={handleclose} visible={bldgModal} />
@@ -262,6 +261,7 @@ const Navigationbar = ({ toggleAutoplay, location, buildings, nodes }) => {
       )}
 
       {/*FOOTER*/}
+      <div className="sticky bottom-0  start-0 top-4 z-20 mx-2 mb-4 h-14 w-full rounded-xl border-b bg-white md:hidden">
         <div className="flex h-full items-center justify-between px-1 text-base">
           <div className="flex md:hidden">
             <button
@@ -283,9 +283,7 @@ const Navigationbar = ({ toggleAutoplay, location, buildings, nodes }) => {
           <div className="flex md:hidden">
             <button
               type="button"
-              onClick={() => {
-                setMapState(true);
-              }}
+              onClick={() => setMapState(true)}
               className="inline-flex h-12 w-12 items-center justify-center"
             >
               <span className="sr-only">Map</span>
