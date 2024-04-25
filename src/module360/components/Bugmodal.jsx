@@ -6,7 +6,7 @@ const Bugmodal = ({ visible, onClose }) => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [isOpen, setIsOpen] = useState(false);
-  const [showThankYouModal, setShowThankYouModal] = useState(false);
+  const [showThankYouModal, setShowThankYouModal] = React.useState(false);
 
   const handleCloseAndReset = () => {
     onClose();
@@ -23,8 +23,78 @@ const Bugmodal = ({ visible, onClose }) => {
   };
 
   const handleSubmit = () => {
-    handleClose(); // Close the modal and reset the state
-    setShowThankYouModal(true); // Show the "Thank You" modal
+    // Validate the form
+    if (!selectedItem || !email || !message) {
+      alert("All fields are required");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email");
+      return;
+    }
+
+    // Prepare the data
+    const data = {
+      embeds: [
+        {
+          title: "New Feedback Received",
+          color: 3447003,
+          fields: [
+            {
+              name: "Email",
+              value: email,
+              inline: false,
+            },
+            {
+              name: "Category",
+              value: selectedItem,
+              inline: false,
+            },
+            {
+              name: "Message",
+              value: message,
+              inline: false,
+            },
+          ],
+          footer: {
+            text: "Adventura Feedback",
+          },
+          thumbnail: {
+            url: "https://scontent.fmnl17-4.fna.fbcdn.net/v/t1.15752-9/439255024_961391562298668_1004643935197430412_n.png?stp=dst-png_p1080x2048&_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=McAOgH_N4N0Ab4ms1xl&_nc_oc=AdgmbmPjlzKXsjKzq2RO4oKCQQASs4K88eHwYa_D1ImzQfuanpoAGZRonDGCMTK_bFs&_nc_ht=scontent.fmnl17-4.fna&oh=03_Q7cD1QHCOj9Uu5bD9iFigL9fAgkud1vYbp-a8EBcWWFHlIY9zw&oe=664DD562", // Replace with your bot's avatar URL
+          },
+        },
+      ],
+      username: "Adventura Feedback",
+      avatar_url:
+        "https://scontent.fmnl17-4.fna.fbcdn.net/v/t1.15752-9/439255024_961391562298668_1004643935197430412_n.png?stp=dst-png_p1080x2048&_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=McAOgH_N4N0Ab4ms1xl&_nc_oc=AdgmbmPjlzKXsjKzq2RO4oKCQQASs4K88eHwYa_D1ImzQfuanpoAGZRonDGCMTK_bFs&_nc_ht=scontent.fmnl17-4.fna&oh=03_Q7cD1QHCOj9Uu5bD9iFigL9fAgkud1vYbp-a8EBcWWFHlIY9zw&oe=664DD562", // Replace with your bot's avatar URL
+    };
+
+    console.log("Sending request", data); // Checker
+
+    // Send the data to the server
+    fetch(
+      "https://discord.com/api/webhooks/1231840482485866559/oiG4krs25gabtTUWd33p5PLZlN0yRbdzqekHzBq5-2ukxyMAF5oV7LlNmne16C9b3nMl",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      },
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        } else {
+          handleCloseAndReset(); // Close the modal and reset the state
+          setShowThankYouModal(true); // Show the "Thank You" modal
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   };
 
   const resetState = () => {
