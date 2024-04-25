@@ -15,9 +15,11 @@ import { TbMap } from "react-icons/tb";
 import { TbMapOff } from "react-icons/tb";
 import BuildingModal from "./components/BuildingModal";
 
-function Module360() {
+function Module360({ loginType }) {
   const navigate = useNavigate();
   const [bldgState, setBldgState] = useState(false); // Map State
+
+  console.log(loginType);
 
   /* Dynamic URL Parameters */
   const url = new URLSearchParams(window.location.search); // Get URL
@@ -295,7 +297,12 @@ function Module360() {
           />
         </div>
         [bldgState &&
-        <BuildingModal visible={bldgState} onClose={setBldgState} />]
+        <BuildingModal
+          visible={bldgState}
+          onClose={setBldgState}
+          loginType={loginType}
+        />
+        ]
         <div className="absolute left-0 top-0 p-1 text-white ">
           <div className="relative flex flex-row justify-between">
             <div className="pb-2 pl-2 pt-16 md:pt-20">

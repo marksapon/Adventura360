@@ -13,6 +13,7 @@
     "@egjs/react-view360": "4.0.0-beta.7",
     "clsx": "^2.1.0",
     "flowbite-react": "^0.7.2",
+    "js-cookie": "^3.0.5",
     "openseadragon": "^4.1.0",
     "paper": "^0.12.17",
     "pure-react-carousel": "^1.30.1",

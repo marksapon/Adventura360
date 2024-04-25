@@ -28,6 +28,13 @@
           "target": "quad",
           "yaw": 10.17,
           "pitch": -20
+        },
+        {
+          "id": 4,
+          "type": "bldg",
+          "target": "dit",
+          "yaw": 0,
+          "pitch": 0
         }
       ],
       "travelType": "walk"

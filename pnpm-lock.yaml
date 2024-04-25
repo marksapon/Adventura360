@@ -14,6 +14,9 @@ dependencies:
   flowbite-react:
     specifier: ^0.7.2
     version: 0.7.2(@types/react@18.2.60)(esbuild@0.19.12)(next@13.5.6)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
+  js-cookie:
+    specifier: ^3.0.5
+    version: 3.0.5
   openseadragon:
     specifier: ^4.1.0
     version: 4.1.0
@@ -3445,6 +3448,11 @@ packages:
 
   /jkroso-type@1.1.1:
     resolution: {integrity: sha512-zZgay+fPG6PgMUrpyFADmQmvLo39+AZa7Gc5pZhev2RhDxwANEq2etwD8d0e6rTg5NkwOIlQmaEmns3draC6Ng==}
+    dev: false
+
+  /js-cookie@3.0.5:
+    resolution: {integrity: sha512-cEiJEAEoIbWfCZYKWhVwFuvPX1gETRYPw6LlaTKoxD3s2AkXzkCjnp6h0V77ozyqj0jakteJ4YqDJT830+lVGw==}
+    engines: {node: '>=14'}
     dev: false
 
   /js-tokens@4.0.0:

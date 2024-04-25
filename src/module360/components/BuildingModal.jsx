@@ -10,7 +10,7 @@ import { GiBlackBook } from "react-icons/gi";
 import { MdDirections } from "react-icons/md";
 import { FiLink } from "react-icons/fi"; //
 
-const BuildingModal = ({ visible, onClose }) => {
+const BuildingModal = ({ visible, onClose, loginType }) => {
   const handleCloseAndReset = () => {
     onClose();
   };
@@ -76,9 +76,11 @@ const BuildingModal = ({ visible, onClose }) => {
                     <p className="flex w-fit items-center justify-center rounded-full bg-orange-500 px-2 text-xs font-bold md:text-sm">
                       CEIT
                     </p>
-                    <button className="flex w-fit items-center justify-center rounded-full bg-green-600 px-4 py-1 text-xs font-bold text-white md:text-base">
-                      Go inside <RiPhoneFindLine className="h-6 w-6 pl-1" />
-                    </button>
+                    {loginType === "account" && (
+                      <button className="flex w-fit items-center justify-center rounded-full bg-green-600 px-4 py-1 text-xs font-bold text-white md:text-base">
+                        Go inside <RiPhoneFindLine className="h-6 w-6 pl-1" />
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>

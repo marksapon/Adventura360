@@ -1,35 +1,52 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import accounts from "../database/accounts.json";
 import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 
-function Login() {
+function Login({ setLoginType }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loginMessage, setLoginMessage] = useState("");
   const [isLoginSuccessful, setIsLoginSuccessful] = useState(false);
   const navigate = useNavigate();
 
+  useEffect(() => {
+    if (isLoginSuccessful) {
+      navigate("/app");
+    }
+  }, [isLoginSuccessful]);
+
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log("Submitted username:", username);
-    console.log("Submitted password:", password);
 
     const account = accounts.find(
       (account) =>
         account.username === username && account.password === password,
     );
 
-    console.log("Matching account:", account);
     if (account) {
       // login successful
-      console.log("Login successful");
       setLoginMessage("Successfully logged in");
       setIsLoginSuccessful(true);
+      setLoginType("account");
+
+      // Set a cookie
+      Cookies.set("loginType", "account");
     } else {
       // login failed
       setLoginMessage("Invalid username or password");
       setIsLoginSuccessful(false);
     }
+  };
+
+  const handleGuestLogin = () => {
+    setIsLoginSuccessful(true);
+    setLoginType("guest");
+
+    // Set a cookie
+    Cookies.set("loginType", "guest");
+
+    navigate("/app");
   };
 
   return (
@@ -73,7 +90,7 @@ function Login() {
           </form>
           <button
             className="my-4 w-full bg-green-700 py-2 text-white hover:bg-green-600"
-            onClick={() => navigate("/app")}
+            onClick={handleGuestLogin} // Modify this line
           >
             Continue as Guest
           </button>
