@@ -1,20 +1,20 @@
 import "./App.css";
 import NavBar from "./components/NavBar";
-import Home from "./components/Home";
-import Services from "./components/Services";
-import Products from "./components/products";
-import About from "./components/About";
-import Blog from "./components/Blog";
+import OurTech from "./components/OurTech";
+import TechStack from "./components/TechStack";
+import Showcase from "./components/Showcase";
+import Introduction from "./components/Introduction";
+import Developers from "./components/Developers";
 
 function LandingPage() {
   return (
     <>
       <NavBar />
-      <Home />
-      <About />
-      <Services />
-      <Products />
-      <Blog />
+      <OurTech />
+      <Introduction />
+      <TechStack />
+      <Showcase />
+      <Developers />
     </>
   );
 }

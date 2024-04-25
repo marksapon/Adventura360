@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import BuildingGallery from "./BuildingGallery";
+import Sharelink from "./Sharelink";
 
 import { IoIosClose } from "react-icons/io";
 import { LuGraduationCap } from "react-icons/lu";
@@ -13,7 +14,23 @@ const BuildingModal = ({ visible, onClose }) => {
   const handleCloseAndReset = () => {
     onClose();
   };
+  const [FacilitiesisClicked, setFacilitiesIsClicked] = useState(false);
+  const [CoursesisClicked, setCoursesIsClicked] = useState(false);
+  const [shareLinkisCLicked, setShareLinkIsClicked] = useState(false);
+  const [showFacilities, setShowFacilities] = useState(false);
+  const [showCourses, setShowCourses] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const facilities = [
+    { id: 1, name: "facilities 1", description: "This is facilities 1" },
+    { id: 2, name: "facilities 2", description: "This is facilities 2" },
+    { id: 3, name: "facilities 3", description: "This is facilities 3" },
+  ];
+  const courses = [
+    { id: 1, name: "courses 1", description: "This is courses 1" },
+    { id: 2, name: "courses 2", description: "This is courses 2" },
+    { id: 3, name: "courses 3", description: "This is courses 3" },
+  ];
   if (!visible) return null;
 
   return (
@@ -94,31 +111,54 @@ const BuildingModal = ({ visible, onClose }) => {
             <div className="flex flex-wrap items-center justify-between border-b px-16 py-4 text-white sm:px-24">
               <div className="flex h-20 w-auto flex-col items-center justify-center">
                 <button
-                  className="flex items-center justify-center rounded-full border border-green-600 p-2"
-                  onClick={null}
+                  className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${FacilitiesisClicked ? "bg-green-600" : "bg-white"}`}
+                  onClick={() => {
+                    setShowFacilities(!showFacilities);
+                    setFacilitiesIsClicked(!FacilitiesisClicked);
+                  }}
                 >
-                  <BiBuildings className="size-4 text-green-600 sm:size-6" />
+                  <BiBuildings
+                    className={`size-4 text-green-600 sm:size-6 ${FacilitiesisClicked ? "text-white" : "text-green-600"}`}
+                  />
                 </button>
                 <p className="pt-1 text-xs text-green-600">Facilities</p>
               </div>
               <div className="flex h-auto w-auto flex-col items-center justify-center">
                 <button
-                  className="flex items-center justify-center rounded-full border border-green-500 p-2"
-                  onClick={null}
+                  className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${CoursesisClicked ? "bg-green-600" : "bg-white"}`}
+                  onClick={() => {
+                    setShowCourses(!showCourses);
+                    setCoursesIsClicked(!CoursesisClicked);
+                  }}
                 >
-                  <GiBlackBook className="size-4 text-green-600 sm:size-6" />
+                  <GiBlackBook
+                    className={`size-4 text-green-600 sm:size-6 ${CoursesisClicked ? "text-white" : "text-green-600"}`}
+                  />
                 </button>
                 <p className="pt-1 text-xs text-green-600">Courses</p>
               </div>
 
               <div className="flex h-auto w-auto flex-col items-center justify-center">
                 <button
-                  className="flex items-center justify-center rounded-full border border-green-500 p-2"
-                  onClick={null}
+                  className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${shareLinkisCLicked ? "bg-green-600" : "bg-white"}`}
+                  onClick={() => {
+                    setIsModalOpen(true);
+                    setShareLinkIsClicked(!shareLinkisCLicked);
+                  }}
                 >
-                  <FiLink className="size-4 text-green-600 sm:size-6" />
+                  <FiLink
+                    className={`size-4 text-green-600 sm:size-6 ${shareLinkisCLicked ? "text-white" : "text-green-600"}`}
+                  />
                 </button>
                 <p className="pt-1 text-xs text-green-600">Share</p>
+
+                <Sharelink
+                  visible={isModalOpen}
+                  onClose={() => {
+                    setIsModalOpen(false);
+                    setShareLinkIsClicked(!shareLinkisCLicked);
+                  }}
+                />
               </div>
 
               <div className="flex h-auto w-auto flex-col items-center justify-center">
@@ -134,6 +174,38 @@ const BuildingModal = ({ visible, onClose }) => {
             <div className="h-auto w-full sm:h-auto">
               <BuildingGallery />
             </div>
+            {showFacilities && (
+              <div className="w-full rounded-b-xl border-b-2 px-6 py-2">
+                <ul className="justify-start text-balance">
+                  <h1 className="pb-5 text-2xl">Facilities</h1>
+                  {facilities.map((facilities) => (
+                    <li className="flex items-center" key={facilities.id}>
+                      <h2 className="text-base font-semibold md:text-xl">
+                        •&nbsp;{facilities.name}&nbsp;
+                      </h2>
+                      <span className="text-base">
+                        -&nbsp;{facilities.description}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {showCourses && (
+              <div className="w-full rounded-b-xl border-b-2 px-6 py-2">
+                <ul className="justify-start text-balance">
+                  <h1 className="pb-5 text-2xl">Courses</h1>
+                  {courses.map((Courses) => (
+                    <li className="flex items-center" key={Courses.id}>
+                      <h2 className="text-base font-semibold md:text-lg">
+                        •&nbsp;{Courses.name} -&nbsp;
+                      </h2>
+                      <span className="text-base">{Courses.description}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
       </div>

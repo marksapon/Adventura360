@@ -35,18 +35,17 @@ const NavBar = () => {
   //navitems array
 
   const navitems = [
-    { link: "Our tech", id: "home" },
-    { link: "Introduction", id: "about" },
-    { link: "Client", id: "service" },
-    { link: "Showcase", id: "product" },
-    // { link: "Testimonial", id: "testimonial" },
-    { link: "Creators", id: "blog" },
+    { link: "Our tech", id: "OurTech" },
+    { link: "Introduction", id: "Introduction" },
+    { link: "Tech Stack", id: "TechStack" },
+    { link: "Showcase", id: "Showcase" },
+    { link: "Developers", id: "Developers" },
   ];
 
   return (
     <nav className="gap md-transparent fixed z-50 flex h-[65px] w-full border-b bg-white">
       <div className="flex h-full w-full min-w-[40px] items-center justify-between px-4 py-2">
-        <div className="flex h-full items-center justify-center">
+        <div className="flex h-full w-full items-center justify-between md:w-auto">
           <a
             className="flex items-center justify-center gap-3 pr-4 text-2xl font-semibold"
             href="/"
@@ -74,7 +73,7 @@ const NavBar = () => {
         </div>
 
         {/* Nav Items for large devices */}
-        <ul className="hidden w-fit justify-between gap-6 md:flex">
+        <ul className="hidden justify-between gap-5 md:flex">
           {navitems.map(({ link, id }) => (
             <button key={id}>
               <ScrollLink
@@ -91,7 +90,7 @@ const NavBar = () => {
           ))}
         </ul>
         <div className="flex h-full w-auto justify-end gap-4 lg:min-w-[205.41px]">
-          <button onClick={() => navigate("/login")}>App</button>
+          {/* <button onClick={() => navigate("/login")}>App</button> */}
           {/* <button onClick={() => navigate("/map")}>Map</button> */}
         </div>
         {/* btn for large devices */}

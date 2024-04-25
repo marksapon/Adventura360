@@ -33,7 +33,7 @@ const Sharelink = ({ visible, onClose }) => {
                   onClose();
                 }}
               >
-                <IoIosClose className="h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10" />
+                <IoIosClose className="h-6 w-6 text-black md:h-8 md:w-8 lg:h-10 lg:w-10" />
               </button>
             </div>
             <div className="mt-4 flex h-full w-full items-center justify-center">
@@ -47,7 +47,7 @@ const Sharelink = ({ visible, onClose }) => {
           <div className="flex h-full items-center justify-center rounded-lg bg-gray-200 p-3 text-green-600 ">
             <button
               onClick={() => {
-                copyToClipboard;
+                copyToClipboard();
               }}
             >
               <MdContentCopy className="h-6 w-6" />
