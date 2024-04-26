@@ -12,7 +12,8 @@ function Login({ setLoginType }) {
 
   useEffect(() => {
     if (isLoginSuccessful) {
-      navigate("/app");
+      const redirectPath = sessionStorage.getItem("redirectPath");
+      navigate(redirectPath || "/app");
     }
   }, [isLoginSuccessful]);
 
@@ -32,6 +33,9 @@ function Login({ setLoginType }) {
 
       // Set a cookie
       Cookies.set("loginType", "account");
+
+      const redirectPath = sessionStorage.getItem("redirectPath");
+      navigate(redirectPath || "/app");
     } else {
       // login failed
       setLoginMessage("Invalid username or password");
@@ -39,14 +43,17 @@ function Login({ setLoginType }) {
     }
   };
 
-  const handleGuestLogin = () => {
+  const handleGuestLogin = (e) => {
+    e.preventDefault();
+
     setIsLoginSuccessful(true);
     setLoginType("guest");
 
     // Set a cookie
     Cookies.set("loginType", "guest");
 
-    navigate("/app");
+    const redirectPath = sessionStorage.getItem("redirectPath");
+    navigate(redirectPath || "/app");
   };
 
   return (
