@@ -1,16 +1,38 @@
-import React, { useState, useEffect } from "react";
-import accounts from "../database/accounts.json";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { decrypt } from "./aes.mjs";
 import Cookies from "js-cookie";
+import axios from "axios";
 
 function Login({ setLoginType }) {
+  const [users, setUsers] = useState([]); // Registered Users
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loginMessage, setLoginMessage] = useState("");
+  3;
   const [isLoginSuccessful, setIsLoginSuccessful] = useState(false);
   const navigate = useNavigate();
 
+  /* AES-256 Decryption */
+  // DO NOT LOSE THE KEY OR YOU WILL GENERATE A NEW ONE AND RE ENCRYPT THE USERS DATABASE
+
+  const key =
+    "08f810783d07d71f570b34ef3bbbdb98715799ae41a0d9a2f538ba216673ed55";
+
+  /* Fetch Users from the Database */
   useEffect(() => {
+    axios
+      .get("http://172.24.137.195:5000/getUsers")
+      .then((users) => {
+        setUsers(users.data);
+      })
+      .catch((err) => {
+        console.log("Login Error:", err.message);
+      });
+
+    // console.log("Key:", generateKey()); // Generate a new key
+    // encrypt(key); // Encrypt the users database
+
     if (isLoginSuccessful) {
       const redirectPath = sessionStorage.getItem("redirectPath");
       navigate(redirectPath || "/app");
@@ -20,9 +42,10 @@ function Login({ setLoginType }) {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    const account = accounts.find(
+    const account = users.find(
       (account) =>
-        account.username === username && account.password === password,
+        decrypt(account.username, key) === username &&
+        decrypt(account.password, key) === password,
     );
 
     if (account) {
