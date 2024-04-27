@@ -86,7 +86,7 @@ const BuildingModal = ({ visible, onClose, loginType }) => {
               </div>
             </div>
           </div>
-          <div className="h-full overflow-auto">
+          <div className="no-scrollbar h-full overflow-auto">
             <div className="border-b pt-2">
               <p className="mb-2 max-h-[150px] overflow-auto px-6 py-2 text-justify text-xs md:text-base">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
