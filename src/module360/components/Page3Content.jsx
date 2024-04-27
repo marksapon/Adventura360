@@ -10,7 +10,7 @@ const Page3Content = () => (
         <div className="mt-16 flex h-full w-full flex-col items-center justify-center gap-6 px-5 text-2xl">
           <div className="flex w-full flex-row gap-5">
             <img
-              src={"/assets/helpModal/share.png"}
+              src={"/assets/Modals/help modal/share.png"}
               alt="mouse"
               className="h-10 w-10"
             />
@@ -20,7 +20,7 @@ const Page3Content = () => (
           </div>
           <div className="flex w-full flex-row gap-5">
             <img
-              src={"/assets/helpModal/help.png"}
+              src={"/assets/Modals/help modal/help.png"}
               alt="mouse"
               className="h-10 w-10"
             />
@@ -31,7 +31,7 @@ const Page3Content = () => (
           </div>
           <div className="flex w-full flex-row gap-5">
             <img
-              src={"/assets/helpModal/bug.png"}
+              src={"/assets/Modals/help modal/bug.png"}
               alt="mouse"
               className="h-10 w-10"
             />

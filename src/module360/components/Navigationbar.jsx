@@ -102,7 +102,7 @@ const Navigationbar = ({ toggleAutoplay, location, buildings, nodes }) => {
               >
                 <span className="sr-only">Adventura Logo</span>
                 <img
-                  src="/assets/Module360/Icons/AdvenLogo.png"
+                  src="/assets/Navigation Bar/adventura 360 logo.png"
                   alt="share button"
                   className="h-12 w-auto transition-all duration-200 hover:scale-110"
                 />
@@ -242,7 +242,7 @@ const Navigationbar = ({ toggleAutoplay, location, buildings, nodes }) => {
                 <span className="sr-only">CVSU</span>
                 <img
                   className="transition-all duration-200 hover:scale-110"
-                  src="/assets/Module360/Icons/CvSULogo2.png"
+                  src="/assets/Navigation Bar/CvSU logo.png"
                   alt="cvsu logo"
                 />
               </button>

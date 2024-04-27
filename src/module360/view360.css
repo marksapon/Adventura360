@@ -498,7 +498,7 @@
   cursor: pointer;
   transition: opacity 250ms;
   /* Add background image */
-  background-image: url("/assets/360_hotspots/arrow.png");
+  background-image: url("/assets/360 Module/buttons/move.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center; /* or any other position */
@@ -509,7 +509,7 @@
   cursor: pointer;
   transition: opacity 250ms;
   /* Add background image */
-  background-image: url("/assets/360_buttons/building_button.png");
+  background-image: url("/assets/360 Module/hotspots/building.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center; /* or any other position */
@@ -521,7 +521,7 @@
   cursor: pointer;
   transition: opacity 250ms;
   /* Add background image */
-  background-image: url("/assets/360_buttons/info_button.png");
+  background-image: url("/assets/360 Module/hotspots/info.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center; /* or any other position */

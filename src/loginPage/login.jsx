@@ -60,7 +60,11 @@ function Login({ setLoginType }) {
     <div className="flex h-screen w-full">
       <div className="m-auto grid h-[550px] grid-cols-1 shadow-lg shadow-gray-600 sm:max-w-[900px] md:grid-cols-2">
         <div className="hidden h-[550px] w-full md:block">
-          <img className="h-full w-full" src="/assets/trees.jpg" alt="Trees" />
+          <img
+            className="h-full w-full"
+            src="/assets/Login Module/trees.jpg"
+            alt="Trees"
+          />
         </div>
 
         <div className="flex flex-col justify-around p-4">

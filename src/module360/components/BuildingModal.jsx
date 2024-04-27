@@ -45,7 +45,7 @@ const BuildingModal = ({ visible, onClose, loginType }) => {
               className="h-[150px] w-full rounded-tr-2xl bg-cover bg-center bg-no-repeat transition-all md:h-[200px]"
               style={{
                 opacity: 1,
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/Other/placeholder.png)`,
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/Modals/building modal/placeholder.png')`,
               }}
             >
               <div className="relative z-50 flex w-full text-white">

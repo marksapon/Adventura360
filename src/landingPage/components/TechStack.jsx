@@ -7,42 +7,42 @@ const TechStack = () => {
       title: "Interactive Map",
       description:
         "A dynamic map interface that allows users to explore the campus layout, navigate between buildings, and access additional information about specific locations.",
-      image: "/assets/cards/map.svg",
+      image: "/assets/Landing Page/tech stack/cards/map.svg",
     },
     {
       id: 2,
       title: "360° Images",
       description:
         "Seamless panoramic images that provide users with a detailed view of campus buildings, facilities, and landmarks from every angle.",
-      image: "/assets/cards/360.svg",
+      image: "/assets/Landing Page/tech stack/cards/360.svg",
     },
     {
       id: 3,
       title: "Filtered Access",
       description:
         "A feature that restricts access to certain areas or information based on user roles or permissions, ensuring security and privacy.",
-      image: "/assets/cards/shield.svg",
+      image: "/assets/Landing Page/tech stack/cards/shield.svg",
     },
     {
       id: 4,
       title: "Feedback System",
       description:
         "An interface for users to provide feedback, suggestions, or report issues about the virtual tour experience, helping to improve the system over time.",
-      image: "/assets/cards/feedback.svg",
+      image: "/assets/Landing Page/tech stack/cards/feedback.svg",
     },
     {
       id: 5,
       title: "Building Overview",
       description:
         "A summary or overview of each building on the campus, including its courses offered, facilities, and relevant information for users to understand its role within the university.",
-      image: "/assets/cards/building.svg",
+      image: "/assets/Landing Page/tech stack/cards/building.svg",
     },
     {
       id: 6,
       title: "Pathfinding System",
       description:
         "A navigation tool that assists users in finding the shortest or most efficient route between different points of interest on the campus.",
-      image: "/assets/cards/pathfinding.svg",
+      image: "/assets/Landing Page/tech stack/cards/pathfinding.svg",
     },
   ];
   return (
@@ -67,7 +67,7 @@ const TechStack = () => {
           >
             <img
               className="flex size-12 items-center justify-center"
-              src="/assets/logo/react.png"
+              src="/assets/Landing Page/tech stack/logo/react.png"
               alt=""
             />
             <p className="font-semibold">React</p>
@@ -78,7 +78,11 @@ const TechStack = () => {
             rel="noopener noreferrer"
             className="flex w-auto flex-col items-center justify-center"
           >
-            <img className="size-12" src="/assets/logo/tailwind.png" alt="" />
+            <img
+              className="size-12"
+              src="/assets/Landing Page/tech stack/logo/tailwind.png"
+              alt=""
+            />
             Tailwind CSS
           </a>
           <a
@@ -87,7 +91,11 @@ const TechStack = () => {
             rel="noopener noreferrer"
             className="flex w-auto flex-col items-center justify-center"
           >
-            <img className="size-12" src="/assets/logo/mongoDB.png" alt="" />
+            <img
+              className="size-12"
+              src="/assets/Landing Page/tech stack/logo/mongoDB.png"
+              alt=""
+            />
             MongoDB
           </a>
           <a
@@ -96,7 +104,11 @@ const TechStack = () => {
             rel="noopener noreferrer"
             className="flex w-auto flex-col items-center justify-center"
           >
-            <img className="size-12" src="/assets/logo/vercel.png" alt="" />
+            <img
+              className="size-12"
+              src="/assets/Landing Page/tech stack/logo/vercel.png"
+              alt=""
+            />
             Vercel
           </a>
           <a
@@ -105,7 +117,11 @@ const TechStack = () => {
             rel="noopener noreferrer"
             className="flex w-auto flex-col items-center justify-center"
           >
-            <img className="size-12" src="/assets/logo/osd.png" alt="" />
+            <img
+              className="size-12"
+              src="/assets/Landing Page/tech stack/logo/osd.png"
+              alt=""
+            />
             OpenSeaDragon
           </a>
           <a
@@ -114,7 +130,11 @@ const TechStack = () => {
             rel="noopener noreferrer"
             className="flex w-auto flex-col items-center justify-center"
           >
-            <img className="size-12" src="/assets/logo/egjs.svg" alt="" />
+            <img
+              className="size-12"
+              src="/assets/Landing Page/tech stack/logo/egjs.svg"
+              alt=""
+            />
             View360
           </a>
           <a
@@ -123,7 +143,11 @@ const TechStack = () => {
             rel="noopener noreferrer"
             className="flex w-auto flex-col items-center justify-center"
           >
-            <img className="size-12" src="/assets/logo/upscayl.png" alt="" />
+            <img
+              className="size-12"
+              src="/assets/Landing Page/tech stack/logo/upscayl.png"
+              alt=""
+            />
             Upscayl
           </a>
           <a
@@ -132,7 +156,11 @@ const TechStack = () => {
             rel="noopener noreferrer"
             className="flex w-auto flex-col items-center justify-center"
           >
-            <img className="w-18 h-12" src="/assets/logo/zoomify.png" alt="" />
+            <img
+              className="w-18 h-12"
+              src="/assets/Landing Page/tech stack/logo/zoomify.png"
+              alt=""
+            />
             Zoomify
           </a>
           {/* sevices card */}

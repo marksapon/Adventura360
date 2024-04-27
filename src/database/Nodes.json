@@ -2,7 +2,7 @@
   "nodes": [
     {
       "scene": "node1",
-      "image": "/assets/nodes/1.webp",
+      "image": "/assets/Database Images/unrestricted nodes/1.webp",
       "coords": {
         "x": 0.324,
         "y": 1.093
@@ -23,13 +23,6 @@
           "pitch": -20
         },
         {
-          "id": 3,
-          "type": "move",
-          "target": "quad",
-          "yaw": 10.17,
-          "pitch": -20
-        },
-        {
           "id": 4,
           "type": "bldg",
           "target": "dit",
@@ -41,7 +34,7 @@
     },
     {
       "scene": "node2",
-      "image": "/assets/nodes/2.webp",
+      "image": "/assets/Database Images/unrestricted nodes/2.webp",
       "coords": {
         "x": 0.335,
         "y": 1.093
@@ -65,7 +58,7 @@
     },
     {
       "scene": "node3",
-      "image": "/assets/nodes/3.webp",
+      "image": "/assets/Database Images/unrestricted nodes/3.webp",
       "coords": {
         "x": 0.345,
         "y": 1.09
@@ -96,7 +89,7 @@
     },
     {
       "scene": "node4",
-      "image": "/assets/nodes/4.webp",
+      "image": "/assets/Database Images/unrestricted nodes/4.webp",
       "coords": {
         "x": 0.359,
         "y": 1.087
@@ -120,7 +113,7 @@
     },
     {
       "scene": "node5",
-      "image": "/assets/nodes/5.webp",
+      "image": "/assets/Database Images/unrestricted nodes/5.webp",
       "coords": {
         "x": 0.376,
         "y": 1.082
@@ -151,7 +144,7 @@
     },
     {
       "scene": "node6",
-      "image": "/assets/nodes/6.webp",
+      "image": "/assets/Database Images/unrestricted nodes/6.webp",
       "coords": {
         "x": 0.392,
         "y": 1.078
@@ -175,7 +168,7 @@
     },
     {
       "scene": "node7",
-      "image": "/assets/nodes/7.webp",
+      "image": "/assets/Database Images/unrestricted nodes/7.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -206,7 +199,7 @@
     },
     {
       "scene": "node8",
-      "image": "/assets/nodes/8.webp",
+      "image": "/assets/Database Images/unrestricted nodes/8.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -230,7 +223,7 @@
     },
     {
       "scene": "node9",
-      "image": "/assets/nodes/9.webp",
+      "image": "/assets/Database Images/unrestricted nodes/9.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -254,7 +247,7 @@
     },
     {
       "scene": "node10",
-      "image": "/assets/nodes/10.webp",
+      "image": "/assets/Database Images/unrestricted nodes/10.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -292,7 +285,7 @@
     },
     {
       "scene": "node11",
-      "image": "/assets/nodes/11.webp",
+      "image": "/assets/Database Images/unrestricted nodes/11.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -316,7 +309,7 @@
     },
     {
       "scene": "node12",
-      "image": "/assets/nodes/12.webp",
+      "image": "/assets/Database Images/unrestricted nodes/12.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -340,7 +333,7 @@
     },
     {
       "scene": "node13",
-      "image": "/assets/nodes/13.webp",
+      "image": "/assets/Database Images/unrestricted nodes/13.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -364,7 +357,7 @@
     },
     {
       "scene": "node14",
-      "image": "/assets/nodes/14.webp",
+      "image": "/assets/Database Images/unrestricted nodes/14.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -388,7 +381,7 @@
     },
     {
       "scene": "node15",
-      "image": "/assets/nodes/15.webp",
+      "image": "/assets/Database Images/unrestricted nodes/15.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -419,7 +412,7 @@
     },
     {
       "scene": "node16",
-      "image": "/assets/nodes/16.webp",
+      "image": "/assets/Database Images/unrestricted nodes/16.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -443,7 +436,7 @@
     },
     {
       "scene": "node17",
-      "image": "/assets/nodes/17.webp",
+      "image": "/assets/Database Images/unrestricted nodes/17.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -467,7 +460,7 @@
     },
     {
       "scene": "node18",
-      "image": "/assets/nodes/18.webp",
+      "image": "/assets/Database Images/unrestricted nodes/18.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -491,7 +484,7 @@
     },
     {
       "scene": "node19",
-      "image": "/assets/nodes/19.webp",
+      "image": "/assets/Database Images/unrestricted nodes/19.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -522,7 +515,7 @@
     },
     {
       "scene": "node20",
-      "image": "/assets/nodes/20.webp",
+      "image": "/assets/Database Images/unrestricted nodes/20.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -546,7 +539,7 @@
     },
     {
       "scene": "node21",
-      "image": "/assets/nodes/21.webp",
+      "image": "/assets/Database Images/unrestricted nodes/21.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -570,7 +563,7 @@
     },
     {
       "scene": "node22",
-      "image": "/assets/nodes/22.webp",
+      "image": "/assets/Database Images/unrestricted nodes/22.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -594,7 +587,7 @@
     },
     {
       "scene": "node23",
-      "image": "/assets/nodes/23.webp",
+      "image": "/assets/Database Images/unrestricted nodes/23.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -618,7 +611,7 @@
     },
     {
       "scene": "node24",
-      "image": "/assets/nodes/24.webp",
+      "image": "/assets/Database Images/unrestricted nodes/24.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -649,7 +642,7 @@
     },
     {
       "scene": "node25",
-      "image": "/assets/nodes/25.webp",
+      "image": "/assets/Database Images/unrestricted nodes/25.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -680,7 +673,7 @@
     },
     {
       "scene": "node26",
-      "image": "/assets/nodes/26.webp",
+      "image": "/assets/Database Images/unrestricted nodes/26.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -704,7 +697,7 @@
     },
     {
       "scene": "node27",
-      "image": "/assets/nodes/27.webp",
+      "image": "/assets/Database Images/unrestricted nodes/27.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -735,7 +728,7 @@
     },
     {
       "scene": "node28",
-      "image": "/assets/nodes/28.webp",
+      "image": "/assets/Database Images/unrestricted nodes/28.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -759,7 +752,7 @@
     },
     {
       "scene": "node29",
-      "image": "/assets/nodes/29.webp",
+      "image": "/assets/Database Images/unrestricted nodes/29.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -783,7 +776,7 @@
     },
     {
       "scene": "node30",
-      "image": "/assets/nodes/30.webp",
+      "image": "/assets/Database Images/unrestricted nodes/30.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -807,7 +800,7 @@
     },
     {
       "scene": "node31",
-      "image": "/assets/nodes/31.webp",
+      "image": "/assets/Database Images/unrestricted nodes/31.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -838,7 +831,7 @@
     },
     {
       "scene": "node32",
-      "image": "/assets/nodes/32.webp",
+      "image": "/assets/Database Images/unrestricted nodes/32.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -862,7 +855,7 @@
     },
     {
       "scene": "node33",
-      "image": "/assets/nodes/33.webp",
+      "image": "/assets/Database Images/unrestricted nodes/33.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -886,7 +879,7 @@
     },
     {
       "scene": "node34",
-      "image": "/assets/nodes/34.webp",
+      "image": "/assets/Database Images/unrestricted nodes/34.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -910,7 +903,7 @@
     },
     {
       "scene": "node35",
-      "image": "/assets/nodes/35.webp",
+      "image": "/assets/Database Images/unrestricted nodes/35.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -948,7 +941,7 @@
     },
     {
       "scene": "node36",
-      "image": "/assets/nodes/36.webp",
+      "image": "/assets/Database Images/unrestricted nodes/36.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -972,7 +965,7 @@
     },
     {
       "scene": "node37",
-      "image": "/assets/nodes/37.webp",
+      "image": "/assets/Database Images/unrestricted nodes/37.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1003,7 +996,7 @@
     },
     {
       "scene": "node38",
-      "image": "/assets/nodes/38.webp",
+      "image": "/assets/Database Images/unrestricted nodes/38.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1027,7 +1020,7 @@
     },
     {
       "scene": "node39",
-      "image": "/assets/nodes/39.webp",
+      "image": "/assets/Database Images/unrestricted nodes/39.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1058,7 +1051,7 @@
     },
     {
       "scene": "node40",
-      "image": "/assets/nodes/40.webp",
+      "image": "/assets/Database Images/unrestricted nodes/40.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1089,7 +1082,7 @@
     },
     {
       "scene": "node41",
-      "image": "/assets/nodes/41.webp",
+      "image": "/assets/Database Images/unrestricted nodes/41.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1113,7 +1106,7 @@
     },
     {
       "scene": "node42",
-      "image": "/assets/nodes/42.webp",
+      "image": "/assets/Database Images/unrestricted nodes/42.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1137,7 +1130,7 @@
     },
     {
       "scene": "node43",
-      "image": "/assets/nodes/43.webp",
+      "image": "/assets/Database Images/unrestricted nodes/43.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1161,7 +1154,7 @@
     },
     {
       "scene": "node44",
-      "image": "/assets/nodes/44.webp",
+      "image": "/assets/Database Images/unrestricted nodes/44.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1192,7 +1185,7 @@
     },
     {
       "scene": "node45",
-      "image": "/assets/nodes/45.webp",
+      "image": "/assets/Database Images/unrestricted nodes/45.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1216,7 +1209,7 @@
     },
     {
       "scene": "node46",
-      "image": "/assets/nodes/46.webp",
+      "image": "/assets/Database Images/unrestricted nodes/46.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1247,7 +1240,7 @@
     },
     {
       "scene": "node47",
-      "image": "/assets/nodes/47.webp",
+      "image": "/assets/Database Images/unrestricted nodes/47.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1271,7 +1264,7 @@
     },
     {
       "scene": "node48",
-      "image": "/assets/nodes/48.webp",
+      "image": "/assets/Database Images/unrestricted nodes/48.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1302,7 +1295,7 @@
     },
     {
       "scene": "node49",
-      "image": "/assets/nodes/49.webp",
+      "image": "/assets/Database Images/unrestricted nodes/49.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1326,7 +1319,7 @@
     },
     {
       "scene": "node50",
-      "image": "/assets/nodes/50.webp",
+      "image": "/assets/Database Images/unrestricted nodes/50.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1350,7 +1343,7 @@
     },
     {
       "scene": "node51",
-      "image": "/assets/nodes/51.webp",
+      "image": "/assets/Database Images/unrestricted nodes/51.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1388,7 +1381,7 @@
     },
     {
       "scene": "node52",
-      "image": "/assets/nodes/52.webp",
+      "image": "/assets/Database Images/unrestricted nodes/52.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1412,7 +1405,7 @@
     },
     {
       "scene": "node53",
-      "image": "/assets/nodes/53.webp",
+      "image": "/assets/Database Images/unrestricted nodes/53.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1436,7 +1429,7 @@
     },
     {
       "scene": "node54",
-      "image": "/assets/nodes/54.webp",
+      "image": "/assets/Database Images/unrestricted nodes/54.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1460,7 +1453,7 @@
     },
     {
       "scene": "node55",
-      "image": "/assets/nodes/55.webp",
+      "image": "/assets/Database Images/unrestricted nodes/55.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1491,7 +1484,7 @@
     },
     {
       "scene": "node56",
-      "image": "/assets/nodes/56.webp",
+      "image": "/assets/Database Images/unrestricted nodes/56.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1515,7 +1508,7 @@
     },
     {
       "scene": "node57",
-      "image": "/assets/nodes/57.webp",
+      "image": "/assets/Database Images/unrestricted nodes/57.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1546,7 +1539,7 @@
     },
     {
       "scene": "node58",
-      "image": "/assets/nodes/58.webp",
+      "image": "/assets/Database Images/unrestricted nodes/58.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1570,7 +1563,7 @@
     },
     {
       "scene": "node59",
-      "image": "/assets/nodes/59.webp",
+      "image": "/assets/Database Images/unrestricted nodes/59.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1594,7 +1587,7 @@
     },
     {
       "scene": "node60",
-      "image": "/assets/nodes/60.webp",
+      "image": "/assets/Database Images/unrestricted nodes/60.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1625,7 +1618,7 @@
     },
     {
       "scene": "node61",
-      "image": "/assets/nodes/61.webp",
+      "image": "/assets/Database Images/unrestricted nodes/61.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1663,7 +1656,7 @@
     },
     {
       "scene": "node62",
-      "image": "/assets/nodes/62.webp",
+      "image": "/assets/Database Images/unrestricted nodes/62.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1687,7 +1680,7 @@
     },
     {
       "scene": "node63",
-      "image": "/assets/nodes/63.webp",
+      "image": "/assets/Database Images/unrestricted nodes/63.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1711,7 +1704,7 @@
     },
     {
       "scene": "node64",
-      "image": "/assets/nodes/64.webp",
+      "image": "/assets/Database Images/unrestricted nodes/64.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1735,7 +1728,7 @@
     },
     {
       "scene": "node65",
-      "image": "/assets/nodes/65.webp",
+      "image": "/assets/Database Images/unrestricted nodes/65.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1780,7 +1773,7 @@
     },
     {
       "scene": "node66",
-      "image": "/assets/nodes/66.webp",
+      "image": "/assets/Database Images/unrestricted nodes/66.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1804,7 +1797,7 @@
     },
     {
       "scene": "node67",
-      "image": "/assets/nodes/67.webp",
+      "image": "/assets/Database Images/unrestricted nodes/67.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1828,7 +1821,7 @@
     },
     {
       "scene": "node68",
-      "image": "/assets/nodes/68.webp",
+      "image": "/assets/Database Images/unrestricted nodes/68.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1852,7 +1845,7 @@
     },
     {
       "scene": "node69",
-      "image": "/assets/nodes/69.webp",
+      "image": "/assets/Database Images/unrestricted nodes/69.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1876,7 +1869,7 @@
     },
     {
       "scene": "node70",
-      "image": "/assets/nodes/70.webp",
+      "image": "/assets/Database Images/unrestricted nodes/70.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1907,7 +1900,7 @@
     },
     {
       "scene": "node71",
-      "image": "/assets/nodes/71.webp",
+      "image": "/assets/Database Images/unrestricted nodes/71.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1931,7 +1924,7 @@
     },
     {
       "scene": "node72",
-      "image": "/assets/nodes/72.webp",
+      "image": "/assets/Database Images/unrestricted nodes/72.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1955,7 +1948,7 @@
     },
     {
       "scene": "node73",
-      "image": "/assets/nodes/73.webp",
+      "image": "/assets/Database Images/unrestricted nodes/73.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -1993,7 +1986,7 @@
     },
     {
       "scene": "node74",
-      "image": "/assets/nodes/74.webp",
+      "image": "/assets/Database Images/unrestricted nodes/74.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2017,7 +2010,7 @@
     },
     {
       "scene": "node75",
-      "image": "/assets/nodes/75.webp",
+      "image": "/assets/Database Images/unrestricted nodes/75.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2041,7 +2034,7 @@
     },
     {
       "scene": "node76",
-      "image": "/assets/nodes/76.webp",
+      "image": "/assets/Database Images/unrestricted nodes/76.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2072,7 +2065,7 @@
     },
     {
       "scene": "node77",
-      "image": "/assets/nodes/77.webp",
+      "image": "/assets/Database Images/unrestricted nodes/77.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2103,7 +2096,7 @@
     },
     {
       "scene": "node78",
-      "image": "/assets/nodes/78.webp",
+      "image": "/assets/Database Images/unrestricted nodes/78.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2127,7 +2120,7 @@
     },
     {
       "scene": "node79",
-      "image": "/assets/nodes/79.webp",
+      "image": "/assets/Database Images/unrestricted nodes/79.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2151,7 +2144,7 @@
     },
     {
       "scene": "node80",
-      "image": "/assets/nodes/80.webp",
+      "image": "/assets/Database Images/unrestricted nodes/80.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2182,7 +2175,7 @@
     },
     {
       "scene": "node81",
-      "image": "/assets/nodes/81.webp",
+      "image": "/assets/Database Images/unrestricted nodes/81.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2206,7 +2199,7 @@
     },
     {
       "scene": "node82",
-      "image": "/assets/nodes/82.webp",
+      "image": "/assets/Database Images/unrestricted nodes/82.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2237,7 +2230,7 @@
     },
     {
       "scene": "node83",
-      "image": "/assets/nodes/83.webp",
+      "image": "/assets/Database Images/unrestricted nodes/83.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2268,7 +2261,7 @@
     },
     {
       "scene": "node84",
-      "image": "/assets/nodes/84.webp",
+      "image": "/assets/Database Images/unrestricted nodes/84.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2292,7 +2285,7 @@
     },
     {
       "scene": "node85",
-      "image": "/assets/nodes/85.webp",
+      "image": "/assets/Database Images/unrestricted nodes/85.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2316,7 +2309,7 @@
     },
     {
       "scene": "node86",
-      "image": "/assets/nodes/86.webp",
+      "image": "/assets/Database Images/unrestricted nodes/86.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2340,7 +2333,7 @@
     },
     {
       "scene": "node87",
-      "image": "/assets/nodes/87.webp",
+      "image": "/assets/Database Images/unrestricted nodes/87.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2364,7 +2357,7 @@
     },
     {
       "scene": "node88",
-      "image": "/assets/nodes/88.webp",
+      "image": "/assets/Database Images/unrestricted nodes/88.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2388,7 +2381,7 @@
     },
     {
       "scene": "node89",
-      "image": "/assets/nodes/89.webp",
+      "image": "/assets/Database Images/unrestricted nodes/89.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2412,7 +2405,7 @@
     },
     {
       "scene": "node90",
-      "image": "/assets/nodes/90.webp",
+      "image": "/assets/Database Images/unrestricted nodes/90.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2436,7 +2429,7 @@
     },
     {
       "scene": "node91",
-      "image": "/assets/nodes/91.webp",
+      "image": "/assets/Database Images/unrestricted nodes/91.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2460,7 +2453,7 @@
     },
     {
       "scene": "node92",
-      "image": "/assets/nodes/92.webp",
+      "image": "/assets/Database Images/unrestricted nodes/92.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2491,7 +2484,7 @@
     },
     {
       "scene": "node93",
-      "image": "/assets/nodes/93.webp",
+      "image": "/assets/Database Images/unrestricted nodes/93.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2522,7 +2515,7 @@
     },
     {
       "scene": "node94",
-      "image": "/assets/nodes/94.webp",
+      "image": "/assets/Database Images/unrestricted nodes/94.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2560,7 +2553,7 @@
     },
     {
       "scene": "node95",
-      "image": "/assets/nodes/95.webp",
+      "image": "/assets/Database Images/unrestricted nodes/95.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2584,7 +2577,7 @@
     },
     {
       "scene": "node96",
-      "image": "/assets/nodes/96.webp",
+      "image": "/assets/Database Images/unrestricted nodes/96.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2615,7 +2608,7 @@
     },
     {
       "scene": "node97",
-      "image": "/assets/nodes/97.webp",
+      "image": "/assets/Database Images/unrestricted nodes/97.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2646,7 +2639,7 @@
     },
     {
       "scene": "node98",
-      "image": "/assets/nodes/98.webp",
+      "image": "/assets/Database Images/unrestricted nodes/98.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2677,7 +2670,7 @@
     },
     {
       "scene": "node99",
-      "image": "/assets/nodes/99.webp",
+      "image": "/assets/Database Images/unrestricted nodes/99.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2701,7 +2694,7 @@
     },
     {
       "scene": "node100",
-      "image": "/assets/nodes/100.webp",
+      "image": "/assets/Database Images/unrestricted nodes/100.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2725,7 +2718,7 @@
     },
     {
       "scene": "node101",
-      "image": "/assets/nodes/101.webp",
+      "image": "/assets/Database Images/unrestricted nodes/101.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2763,7 +2756,7 @@
     },
     {
       "scene": "node102",
-      "image": "/assets/nodes/102.webp",
+      "image": "/assets/Database Images/unrestricted nodes/102.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2787,7 +2780,7 @@
     },
     {
       "scene": "node103",
-      "image": "/assets/nodes/103.webp",
+      "image": "/assets/Database Images/unrestricted nodes/103.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2811,7 +2804,7 @@
     },
     {
       "scene": "node104",
-      "image": "/assets/nodes/104.webp",
+      "image": "/assets/Database Images/unrestricted nodes/104.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2849,7 +2842,7 @@
     },
     {
       "scene": "node105",
-      "image": "/assets/nodes/105.webp",
+      "image": "/assets/Database Images/unrestricted nodes/105.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2880,7 +2873,7 @@
     },
     {
       "scene": "node106",
-      "image": "/assets/nodes/106.webp",
+      "image": "/assets/Database Images/unrestricted nodes/106.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2904,7 +2897,7 @@
     },
     {
       "scene": "node107",
-      "image": "/assets/nodes/107.webp",
+      "image": "/assets/Database Images/unrestricted nodes/107.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2928,7 +2921,7 @@
     },
     {
       "scene": "node108",
-      "image": "/assets/nodes/108.webp",
+      "image": "/assets/Database Images/unrestricted nodes/108.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2952,7 +2945,7 @@
     },
     {
       "scene": "node109",
-      "image": "/assets/nodes/109.webp",
+      "image": "/assets/Database Images/unrestricted nodes/109.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -2983,7 +2976,7 @@
     },
     {
       "scene": "node110",
-      "image": "/assets/nodes/110.webp",
+      "image": "/assets/Database Images/unrestricted nodes/110.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -3014,7 +3007,7 @@
     },
     {
       "scene": "node111",
-      "image": "/assets/nodes/111.webp",
+      "image": "/assets/Database Images/unrestricted nodes/111.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -3045,7 +3038,7 @@
     },
     {
       "scene": "node112",
-      "image": "/assets/nodes/112.webp",
+      "image": "/assets/Database Images/unrestricted nodes/112.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -3076,7 +3069,7 @@
     },
     {
       "scene": "node113",
-      "image": "/assets/nodes/113.webp",
+      "image": "/assets/Database Images/unrestricted nodes/113.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -3107,7 +3100,7 @@
     },
     {
       "scene": "node114",
-      "image": "/assets/nodes/114.webp",
+      "image": "/assets/Database Images/unrestricted nodes/114.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -3131,7 +3124,7 @@
     },
     {
       "scene": "node115",
-      "image": "/assets/nodes/115.webp",
+      "image": "/assets/Database Images/unrestricted nodes/115.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -3176,7 +3169,7 @@
     },
     {
       "scene": "node116",
-      "image": "/assets/nodes/116.webp",
+      "image": "/assets/Database Images/unrestricted nodes/116.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -3207,7 +3200,7 @@
     },
     {
       "scene": "node117",
-      "image": "/assets/nodes/117.webp",
+      "image": "/assets/Database Images/unrestricted nodes/117.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -3238,7 +3231,7 @@
     },
     {
       "scene": "node118",
-      "image": "/assets/nodes/118.webp",
+      "image": "/assets/Database Images/unrestricted nodes/118.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -3269,7 +3262,7 @@
     },
     {
       "scene": "node119",
-      "image": "/assets/nodes/119.webp",
+      "image": "/assets/Database Images/unrestricted nodes/119.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -3293,7 +3286,7 @@
     },
     {
       "scene": "node120",
-      "image": "/assets/nodes/120.webp",
+      "image": "/assets/Database Images/unrestricted nodes/120.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -3324,7 +3317,7 @@
     },
     {
       "scene": "node121",
-      "image": "/assets/nodes/121.webp",
+      "image": "/assets/Database Images/unrestricted nodes/121.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -3348,7 +3341,7 @@
     },
     {
       "scene": "node122",
-      "image": "/assets/nodes/122.webp",
+      "image": "/assets/Database Images/unrestricted nodes/122.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -3379,7 +3372,7 @@
     },
     {
       "scene": "node123",
-      "image": "/assets/nodes/123.webp",
+      "image": "/assets/Database Images/unrestricted nodes/123.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -3417,7 +3410,7 @@
     },
     {
       "scene": "node124",
-      "image": "/assets/nodes/124.webp",
+      "image": "/assets/Database Images/unrestricted nodes/124.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -3441,7 +3434,7 @@
     },
     {
       "scene": "node125",
-      "image": "/assets/nodes/125.webp",
+      "image": "/assets/Database Images/unrestricted nodes/125.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073
@@ -3472,7 +3465,7 @@
     },
     {
       "scene": "node126",
-      "image": "/assets/nodes/126.webp",
+      "image": "/assets/Database Images/unrestricted nodes/126.webp",
       "coords": {
         "x": 0.409,
         "y": 1.073

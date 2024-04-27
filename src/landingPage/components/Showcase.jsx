@@ -1,5 +1,4 @@
 import React from "react";
-import { GrNext } from "react-icons/gr";
 import {
   CarouselProvider,
   Slider,
@@ -172,7 +171,7 @@ const Showcase = () => {
           <img
             sizes="10"
             loading="lazy"
-            src="../assets/adventuraVN/adventuraVN.png"
+            src="../assets/Landing Page/showcase/adventuraVN/adventuraVN.png"
             alt="Adventura VN"
           />
         </div>

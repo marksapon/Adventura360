@@ -7,7 +7,6 @@ import { FaXmark, FaBars } from "react-icons/fa6";
 // import { MdDarkMode } from "react-icons/md";
 
 const NavBar = () => {
-  const loogoo = "/assets/Other/Loogoo.png";
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
@@ -51,7 +50,7 @@ const NavBar = () => {
             href="/"
           >
             <img
-              src={"/assets/Module360/Icons/AdvenLogo.png"}
+              src={"/assets/Navigation Bar/adventura 360 logo.png"}
               alt="logo"
               className="w-8"
             />

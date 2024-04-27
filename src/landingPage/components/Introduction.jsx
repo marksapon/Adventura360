@@ -1,13 +1,15 @@
 import React from "react";
-// import members from '../assets/Icon/members.png'
 
 const Introduction = () => {
-  const AboutImg = "/assets/Icon/pana.png";
+  const AboutImg = "/assets/Landing Page/introduction/intro-img.png";
 
   return (
     <div className="h-full w-full">
       {/* About Text */}
-      <div className="mx-auto my-8 max-w-screen-2xl px-4 lg:px-14" id="Introduction">
+      <div
+        className="mx-auto my-8 max-w-screen-2xl px-4 lg:px-14"
+        id="Introduction"
+      >
         <div className="mx-auto flex flex-col items-center justify-between gap-12 md:w-11/12 md:flex-row">
           <div>
             <img src={AboutImg} alt="something went wrong" />
@@ -52,7 +54,10 @@ const Introduction = () => {
           <div className="sm:item-center mx-auto flex flex-col justify-around gap-12 sm:flex-row">
             <div className="space-y-8">
               <div className="item-center flex gap-2">
-                <img src="/assets/Icon/mems.png" alt="" />
+                <img
+                  src="/assets/Landing Page/introduction/members.png"
+                  alt=""
+                />
                 <div>
                   <h4 className="text-xl font-semibold text-gray-700 sm:text-2xl">
                     4 handsome Boys
@@ -61,7 +66,10 @@ const Introduction = () => {
                 </div>
               </div>
               <div className="item-center flex gap-4">
-                <img src="/assets/Icon/project.png" alt="" />
+                <img
+                  src="/assets/Landing Page/introduction/project.png"
+                  alt=""
+                />
                 <div>
                   <h4 className="text-xl font-semibold text-gray-700 sm:text-2xl">
                     2
@@ -72,7 +80,10 @@ const Introduction = () => {
             </div>
             <div className="space-y-8">
               <div className="item-center flex gap-4">
-                <img src="/assets/Icon/partner1.png" alt="" />
+                <img
+                  src="/assets/Landing Page/introduction/partners.png"
+                  alt=""
+                />
                 <div>
                   <h4 className="text-xl font-semibold text-gray-700 sm:text-2xl">
                     2
@@ -81,7 +92,7 @@ const Introduction = () => {
                 </div>
               </div>
               <div className="item-center flex gap-4">
-                <img src="assets/Icon/school1.png" alt="" />
+                <img src="assets/Landing Page/introduction/school.png" alt="" />
                 <div>
                   <h4 className="text-xl font-semibold text-gray-700 sm:text-2xl">
                     CvSU

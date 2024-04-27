@@ -25,7 +25,7 @@ const Minimap = ({ x, y, onClick, previous_Scene }) => {
           type: "zoomifytileservice",
           width: 21280,
           height: 31628,
-          tilesUrl: "/assets/MapModule/Adventura_Map/",
+          tilesUrl: "/assets/Map Module/adventura tiled map/",
           //optional
           tileSize: 256,
           fileFormat: "webp",
