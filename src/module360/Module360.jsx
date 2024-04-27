@@ -9,11 +9,6 @@ import View360, {
   LoadingSpinner,
 } from "@egjs/react-view360"; //View360 Library
 
-/* Local DB */
-import nodesDB from "../database/Nodes.json";
-import buildingsDB from "../database/Buildings.json";
-import extrasDB from "../database/Extras.json";
-
 /* Components */
 import Navigationbar from "./components/Navigationbar";
 import Minimap from "./components/Minimap";
@@ -24,7 +19,8 @@ import { TbMap } from "react-icons/tb";
 import { TbMapOff } from "react-icons/tb";
 
 // nodesDB, buildingsDB, extrasDB
-function Module360({ loginType }) {
+function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
+
   const navigate = useNavigate();
   const [bldgState, setBldgState] = useState(false); // Map State
 

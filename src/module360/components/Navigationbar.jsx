@@ -27,7 +27,6 @@ const Navigationbar = ({
   nodesDB,
   extrasDB,
 }) => {
-
   /* States */
   const [mapState, setMapState] = useState(false); // Map State
   const [isFullscreen, setIsFullscreen] = useState(false); // Fullscreen State
@@ -265,7 +264,6 @@ const Navigationbar = ({
       </div>
 
       {/*MAP MODULE*/}
-      {console.log(buildingsDB)}
       {mapState && (
         <MapModule
           currLoc={location}

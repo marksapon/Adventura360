@@ -2,6 +2,11 @@ import React, { useEffect, useState } from "react"; // React Hooks
 import axios from "axios"; // Axios for API requests
 import Module360 from "./Module360";
 
+/* Local DB */
+import nodesLDB from "../database/Nodes.json";
+import buildingsLDB from "../database/Buildings.json";
+import extrasLDB from "../database/Extras.json";
+
 function View360({ BACKEND_URL, loginType }) {
   /* Fetch DB */
 
@@ -24,6 +29,10 @@ function View360({ BACKEND_URL, loginType }) {
       })
       .catch((err) => {
         console.log("Login Error:", err.message);
+        setNodesDB(nodesLDB);
+        setBuildingsDB(buildingsLDB);
+        setExtrasDB(extrasLDB);
+        setIsLoaded(true);
       });
   }, []);
 

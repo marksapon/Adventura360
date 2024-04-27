@@ -8,8 +8,6 @@ import {
 import { useState, useEffect } from "react";
 import Cookies from "js-cookie";
 import LandingPage from "./landingPage/LandingPage";
-import Module360 from "./module360/Module360";
-import OSD from "./paperjs";
 import Login from "./loginPage/login";
 import View360 from "./module360/View360";
 
@@ -51,7 +49,6 @@ const AppRouter = () => {
             </PrivateRoute>
           }
         />
-        <Route path="/map/" element={<OSD />} />
         <Route
           path="/login/"
           element={
