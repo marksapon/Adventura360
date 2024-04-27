@@ -25,7 +25,7 @@ import { FaSquareParking } from "react-icons/fa6"; // Parking Lot Icon
 import { FaHotel } from "react-icons/fa"; // Venue Icon
 import { FaCircle } from "react-icons/fa6"; // Undefined Icon
 
-const MapModule = ({ currLoc, nodes, buildings }) => {
+const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB }) => {
   /* OpenSeadragon Viewer */
   const osdRef = useRef(); // Reference to the OSD element
   const [osdLoaded, setOsdLoaded] = useState(false); // If OSD is loaded
@@ -41,7 +41,7 @@ const MapModule = ({ currLoc, nodes, buildings }) => {
     const temp = []; // Temporary Array where modified parts of database will be stored
 
     // Generate a proper layout for the POI in Buildings
-    buildings.buildings.map((building) => {
+    buildingsDB.map((building) => {
       temp.push({
         id: building.scene,
         name: building.location,
@@ -52,7 +52,7 @@ const MapModule = ({ currLoc, nodes, buildings }) => {
     });
 
     // Generate a proper layout for the POI in Buildings Extras
-    buildings.extras.map((building) => {
+    extrasDB.map((building) => {
       temp.push({
         id: building.scene,
         name: building.location,
@@ -259,8 +259,6 @@ const MapModule = ({ currLoc, nodes, buildings }) => {
 
   /* PathFinding */
 
-  const [path, setPath] = useState([]); // Path State
-
   // Node Class
   class Node {
     constructor(id, x, y, neighborsID = [], travelType = "both") {
@@ -282,7 +280,7 @@ const MapModule = ({ currLoc, nodes, buildings }) => {
   function generateNodes() {
     const temp = [];
     // buildings.buildings.map((building) => {
-    nodes.nodes.map((nodes) => {
+    nodesDB.map((nodes) => {
       const neighbors = [];
       nodes.hotspot.map((hotspot) => {
         if (hotspot.type === "move" || hotspot.type === "bldg") {
@@ -299,7 +297,7 @@ const MapModule = ({ currLoc, nodes, buildings }) => {
         ),
       );
     });
-    buildings.buildings.map((building) => {
+    buildingsDB.map((building) => {
       const neighbors = [];
       building.back.map((nodes) => {
         neighbors.push(nodes);
@@ -314,7 +312,7 @@ const MapModule = ({ currLoc, nodes, buildings }) => {
         ),
       );
     });
-    buildings.extras.map((building) => {
+    extrasDB.map((building) => {
       const neighbors = [];
       building.back.map((nodes) => {
         neighbors.push(nodes);

@@ -4,7 +4,7 @@ import { decrypt } from "./aes.mjs";
 import Cookies from "js-cookie";
 import axios from "axios";
 
-function Login({ setLoginType }) {
+function Login({ BACKEND_URL, setLoginType }) {
   const [users, setUsers] = useState([]); // Registered Users
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -22,7 +22,7 @@ function Login({ setLoginType }) {
   /* Fetch Users from the Database */
   useEffect(() => {
     axios
-      .get("http://172.24.137.195:5000/getUsers")
+      .get(`${BACKEND_URL}/getUsers`)
       .then((users) => {
         setUsers(users.data);
       })

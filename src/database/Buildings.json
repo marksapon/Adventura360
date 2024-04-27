@@ -1,86 +1,48 @@
-{
-  "buildings": [
-    {
-      "scene": "dit",
-      "location": "Department of Information Technology",
-      "image": "/assets/Database Images/unrestricted nodes/8.webp",
-      "back": [
-        "node5",
-        "node10",
-        "node21",
-        "List ng Database Images/unrestricted nodes na may access sa DIT building gamit ang Database Images/unrestricted nodes.scene value"
-      ],
-      "coords": {
-        "x": 0.232,
-        "y": 0.747,
-        "type": "college_buildings"
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "info",
-          "target": "dit_info",
-          "yaw": 1.06,
-          "pitch": 20.44
-        }
-      ]
+[
+  {
+    "scene": "dit",
+    "location": "Department of Information Technology",
+    "image": "/assets/Database Images/unrestricted nodes/8.webp",
+    "back": [
+      "node5",
+      "node10",
+      "node21",
+      "List ng Database Images/unrestricted nodes na may access sa DIT building gamit ang Database Images/unrestricted nodes.scene value"
+    ],
+    "coords": {
+      "x": 0.232,
+      "y": 0.747,
+      "type": "college_buildings"
     },
-    {
-      "scene": "quad",
-      "location": "Quadrangle",
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "target": "dit_info",
+        "yaw": 1.06,
+        "pitch": 20.44
+      }
+    ]
+  },
+  {
+    "scene": "quad",
+    "location": "Quadrangle",
 
-      "image": "/assets/buildings/quad.webp",
-      "back": ["node1"],
-      "coords": {
-        "x": 0.5,
-        "y": 0.5,
-        "type": "court"
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "info",
-          "target": "quad_info",
-          "yaw": 1.06,
-          "pitch": 20.44
-        }
-      ]
-    }
-  ],
-
-  "extras": [
-    {
-      "scene": "restroomOval",
-      "back": ["node2", "node3", "node2"],
-      "location": "Restroom near Oval",
-      "coords": {
-        "x": 0.5,
-        "y": 0.5,
-        "type": "restroom"
-      },
-      "image": "/assets/extras/washroomOval.webp"
+    "image": "/assets/buildings/quad.webp",
+    "back": ["node1"],
+    "coords": {
+      "x": 0.5,
+      "y": 0.5,
+      "type": "court"
     },
-    {
-      "scene": "washareaOval",
-      "back": ["node2", "node3", "node2"],
-      "location": "Washarea near Oval",
-      "coords": {
-        "x": 0.3,
-        "y": 0.3,
-        "type": "washarea"
-      },
-      "image": "/assets/extras/washareaOval.webp"
-    },
-    {
-      "scene": "batibotDit",
-      "back": ["node2", "node3", "node2"],
-      "location": "Batibot near DIT",
-      "coords": {
-        "x": 0.2,
-        "y": 0.2,
-        "type": "batibot"
-      },
-      "image": "/assets/extras/batibotDit.webp"
-    }
-  ]
-}
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "target": "quad_info",
+        "yaw": 1.06,
+        "pitch": 20.44
+      }
+    ]
+  }
+]

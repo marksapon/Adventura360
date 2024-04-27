@@ -1,25 +1,32 @@
-import "./view360.css";
+/* Library */
+import React, { useMemo, useState, useEffect, useRef } from "react"; // React Hooks
+import { useParams, useNavigate } from "react-router-dom"; // React Dom Hooks
+import clsx from "clsx"; // Classnames Library
+import "./view360.css"; // View360 Default CSS
 import View360, {
   EquirectProjection,
   ControlBar,
   LoadingSpinner,
-} from "@egjs/react-view360";
-import React, { useMemo, useState, useEffect, useRef } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import nodesData from "../database/Nodes.json";
-import buildingsData from "../database/Buildings.json";
+} from "@egjs/react-view360"; //View360 Library
+
+/* Local DB */
+import nodesDB from "../database/Nodes.json";
+import buildingsDB from "../database/Buildings.json";
+import extrasDB from "../database/Extras.json";
+
+/* Components */
 import Navigationbar from "./components/Navigationbar";
 import Minimap from "./components/Minimap";
-import clsx from "clsx";
-import { TbMap } from "react-icons/tb";
-import { TbMapOff } from "react-icons/tb";
 import BuildingModal from "./components/BuildingModal";
 
+/* Icons */
+import { TbMap } from "react-icons/tb";
+import { TbMapOff } from "react-icons/tb";
+
+// nodesDB, buildingsDB, extrasDB
 function Module360({ loginType }) {
   const navigate = useNavigate();
   const [bldgState, setBldgState] = useState(false); // Map State
-
-  console.log(loginType);
 
   /* Dynamic URL Parameters */
   const url = new URLSearchParams(window.location.search); // Get URL
@@ -34,7 +41,7 @@ function Module360({ loginType }) {
 
   /* Building Data */
   function isBuilding(target) {
-    for (const data of buildingsData.buildings) {
+    for (const data of buildingsDB) {
       if (data.scene === target) {
         return true;
       }
@@ -47,28 +54,23 @@ function Module360({ loginType }) {
 
   const [initialPitch, setPitch] = useState(getParams("pitch"));
 
-  const [previous_Scene, setPrevious_Scene] = useState(nodesData.nodes[0]);
-
-  console.log(
-    "Previous Scene Coord: " + previous_Scene.coords.x,
-    previous_Scene.coords.y,
-  );
+  const [previous_Scene, setPrevious_Scene] = useState(nodesDB[0]);
 
   // Setting scene based on URL parameters
   const [select_Scene, setSelect_Scene] = useState(() => {
     let curScene = {};
     // If the URL parameters are a node, set the scene to the target
     if (isNode) {
-      for (const scene of nodesData.nodes) {
+      for (const scene of nodesDB) {
         if (scene.scene === target) {
           curScene = scene;
           return curScene;
         }
       }
-      console.log("No Scene Found");
+
       return nodesData.nodes[0];
     } else if (isBuilding(target)) {
-      for (const scene of buildingsData.buildings) {
+      for (const scene of buildingsDB) {
         if (scene.scene === target) {
           setYaw(scene.hotspot[0].yaw);
           setPitch(scene.hotspot[0].pitch);
@@ -76,22 +78,22 @@ function Module360({ loginType }) {
           return curScene;
         }
       }
-      console.log("No Scene Found");
-      return nodesData.nodes[0];
+      return nodesDB[0];
     }
-    return nodesData.nodes[0];
+    return nodesDB[0];
   });
 
   function action(type, target) {
+    console.log("Action");
     if (type === "move") {
       console.log(">Moving to another node");
-      changeScene(nodesData.nodes, target);
+      changeScene(nodesDB, target);
     } else if (type === "bldg") {
       console.log(">Moving to building");
-      changeScene(buildingsData.buildings, target);
+      changeScene(buildingsDB, target);
     } else {
       setBldgState(!bldgState); // Set Building State to True
-      console.log(">Displaying information"); // Display Information Building Module goes Here
+      // console.log(">Displaying information"); // Display Information Building Module goes Here
     }
   }
 
@@ -161,9 +163,9 @@ function Module360({ loginType }) {
   // Event listener for detecting device orientation
   useEffect(() => {
     if (window.innerHeight > window.innerWidth) {
-      console.log("Portrait mode");
+      // console.log("Portrait mode");
     } else if (window.innerHeight < window.innerWidth) {
-      console.log("Landscape mode");
+      // console.log("Landscape mode");
     }
 
     function handleOrientationChange() {
@@ -217,9 +219,10 @@ function Module360({ loginType }) {
 
   // Function that changes scene based on the hotspot target
   function changeScene(type, target) {
-    setPrevious_Scene(select_Scene);
+    // setPrevious_Scene(select_Scene);
     for (const data of type) {
       if (data.scene === target) {
+        console.log("Scene Match");
         setSelect_Scene(data);
       }
     }
@@ -290,10 +293,9 @@ function Module360({ loginType }) {
           <Navigationbar
             toggleAutoplay={toggleAutoplay}
             location={select_Scene}
-            module360State={module360State}
-            set360State={setModule360State}
-            buildings={buildingsData}
-            nodes={nodesData}
+            buildingsDB={buildingsDB}
+            nodesDB={nodesDB}
+            extrasDB={extrasDB}
           />
         </div>
         [bldgState &&

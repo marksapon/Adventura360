@@ -20,7 +20,14 @@ import { TbMaximize, TbMaximizeOff } from "react-icons/tb"; // Fullscreen On/Off
 import { IoIosHelpCircleOutline } from "react-icons/io"; // Help Button
 import { Tb360View } from "react-icons/tb"; // 360 Icon
 
-const Navigationbar = ({ toggleAutoplay, location, buildings, nodes }) => {
+const Navigationbar = ({
+  toggleAutoplay,
+  location,
+  buildingsDB,
+  nodesDB,
+  extrasDB,
+}) => {
+
   /* States */
   const [mapState, setMapState] = useState(false); // Map State
   const [isFullscreen, setIsFullscreen] = useState(false); // Fullscreen State
@@ -258,8 +265,14 @@ const Navigationbar = ({ toggleAutoplay, location, buildings, nodes }) => {
       </div>
 
       {/*MAP MODULE*/}
+      {console.log(buildingsDB)}
       {mapState && (
-        <MapModule currLoc={location} nodes={nodes} buildings={buildings} />
+        <MapModule
+          currLoc={location}
+          nodesDB={nodesDB}
+          buildingsDB={buildingsDB}
+          extrasDB={extrasDB}
+        />
       )}
 
       {/*FOOTER*/}

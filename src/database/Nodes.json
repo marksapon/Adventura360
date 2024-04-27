@@ -1,3645 +1,3643 @@
-{
-  "nodes": [
-    {
-      "scene": "node1",
-      "image": "/assets/Database Images/unrestricted nodes/1.webp",
-      "coords": {
-        "x": 0.324,
-        "y": 1.093
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node2",
-          "yaw": 280.46,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node78",
-          "yaw": 10.17,
-          "pitch": -20
-        },
-        {
-          "id": 4,
-          "type": "bldg",
-          "target": "dit",
-          "yaw": 0,
-          "pitch": 0
-        },
-        {
-          "id": 5,
-          "type": "move",
-          "target": "node103",
-          "yaw": 324.59,
-          "pitch": -20
-        },
-        {
-          "id": 6,
-          "type": "bldg",
-          "target": "dit",
-          "yaw": 0,
-          "pitch": 0
-        }
-      ],
-      "travelType": "walk"
-    },
-    {
-      "scene": "node2",
-      "image": "/assets/Database Images/unrestricted nodes/2.webp",
-      "coords": {
-        "x": 0.335,
-        "y": 1.093
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node3",
-          "yaw": 268.98,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node1",
-          "yaw": 88.51,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node3",
-      "image": "/assets/Database Images/unrestricted nodes/3.webp",
-      "coords": {
-        "x": 0.345,
-        "y": 1.09
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node4",
-          "yaw": 268.03,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node2",
-          "yaw": 87.79,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 187.53,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node4",
-      "image": "/assets/Database Images/unrestricted nodes/4.webp",
-      "coords": {
-        "x": 0.359,
-        "y": 1.087
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node5",
-          "yaw": 267.55,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node3",
-          "yaw": 87.91,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node5",
-      "image": "/assets/Database Images/unrestricted nodes/5.webp",
-      "coords": {
-        "x": 0.376,
-        "y": 1.082
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node6",
-          "yaw": 278.79,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node4",
-          "yaw": 98.31,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "bldg",
-          "target": "dit",
-          "yaw": 217,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node6",
-      "image": "/assets/Database Images/unrestricted nodes/6.webp",
-      "coords": {
-        "x": 0.392,
-        "y": 1.078
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node7",
-          "yaw": 283.69,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node5",
-          "yaw": 103.93,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node7",
-      "image": "/assets/Database Images/unrestricted nodes/7.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node8",
-          "yaw": 276.52,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node6",
-          "yaw": 99.99,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 188.25,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node8",
-      "image": "/assets/Database Images/unrestricted nodes/8.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node9",
-          "yaw": 281.42,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node7",
-          "yaw": 100.92,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node9",
-      "image": "/assets/Database Images/unrestricted nodes/9.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node10",
-          "yaw": 276.52,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node8",
-          "yaw": 98.19,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node10",
-      "image": "/assets/Database Images/unrestricted nodes/10.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node16",
-          "yaw": 270.9,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node9",
-          "yaw": 93.29,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node11",
-          "yaw": 359.52,
-          "pitch": -20
-        },
-        {
-          "id": 4,
-          "type": "move",
-          "target": "",
-          "yaw": 144.0,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node11",
-      "image": "/assets/Database Images/unrestricted nodes/11.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node12",
-          "yaw": 5.14,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node10",
-          "yaw": 183.35,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node12",
-      "image": "/assets/Database Images/unrestricted nodes/12.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node13",
-          "yaw": 7.18,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node11",
-          "yaw": 186.22,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node13",
-      "image": "/assets/Database Images/unrestricted nodes/13.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node14",
-          "yaw": 0.84,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node12",
-          "yaw": 183.47,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node14",
-      "image": "/assets/Database Images/unrestricted nodes/14.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node15",
-          "yaw": 1.44,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node13",
-          "yaw": 182.51,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node15",
-      "image": "/assets/Database Images/unrestricted nodes/15.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node14",
-          "yaw": 191.84,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "cr",
-          "target": "",
-          "yaw": 319.93,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "washarea",
-          "target": "",
-          "yaw": 246.86,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node16",
-      "image": "/assets/Database Images/unrestricted nodes/16.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node17",
-          "yaw": 277.71,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node10",
-          "yaw": 97.71,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node17",
-      "image": "/assets/Database Images/unrestricted nodes/17.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node18",
-          "yaw": 276.64,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node16",
-          "yaw": 97.0,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node18",
-      "image": "/assets/Database Images/unrestricted nodes/18.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node19",
-          "yaw": 279.63,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node17",
-          "yaw": 99.75,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node19",
-      "image": "/assets/Database Images/unrestricted nodes/19.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node20",
-          "yaw": 274.25,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node18",
-          "yaw": 93.89,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node18",
-          "yaw": 195.43,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node20",
-      "image": "/assets/Database Images/unrestricted nodes/20.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node21",
-          "yaw": 279.39,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node19",
-          "yaw": 97.0,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node21",
-      "image": "/assets/Database Images/unrestricted nodes/21.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node22",
-          "yaw": 312.04,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node20",
-          "yaw": 129.05,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node22",
-      "image": "/assets/Database Images/unrestricted nodes/22.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node23",
-          "yaw": 322.33,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node21",
-          "yaw": 139.69,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node23",
-      "image": "/assets/Database Images/unrestricted nodes/23.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node24",
-          "yaw": 317.18,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node22",
-          "yaw": 135.39,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node24",
-      "image": "/assets/Database Images/unrestricted nodes/24.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node25",
-          "yaw": 6.1,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node23",
-          "yaw": 169.36,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": " ",
-          "yaw": 236.57,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node25",
-      "image": "/assets/Database Images/unrestricted nodes/25.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node26",
-          "yaw": 19.38,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node24",
-          "yaw": 201.05,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 289.91,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node26",
-      "image": "/assets/Database Images/unrestricted nodes/26.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node27",
-          "yaw": 0.24,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node25",
-          "yaw": 180.0,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node27",
-      "image": "/assets/Database Images/unrestricted nodes/27.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node28",
-          "yaw": 2.75,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node26",
-          "yaw": 180.6,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 270.78,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node28",
-      "image": "/assets/Database Images/unrestricted nodes/28.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node29",
-          "yaw": 2.63,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node27",
-          "yaw": 180.84,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node29",
-      "image": "/assets/Database Images/unrestricted nodes/29.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node30",
-          "yaw": 15.19,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node28",
-          "yaw": 193.99,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node30",
-      "image": "/assets/Database Images/unrestricted nodes/30.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node31",
-          "yaw": 26.19,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node29",
-          "yaw": 204.52,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node31",
-      "image": "/assets/Database Images/unrestricted nodes/31.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node32",
-          "yaw": 13.99,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node30",
-          "yaw": 194.59,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node30",
-          "yaw": 45.33,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node32",
-      "image": "/assets/Database Images/unrestricted nodes/32.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node33",
-          "yaw": 38.15,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node31",
-          "yaw": 218.27,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node33",
-      "image": "/assets/Database Images/unrestricted nodes/33.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node34",
-          "yaw": 25.83,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node32",
-          "yaw": 207.15,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node34",
-      "image": "/assets/Database Images/unrestricted nodes/34.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node35",
-          "yaw": 23.92,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node33",
-          "yaw": 205.24,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node35",
-      "image": "/assets/Database Images/unrestricted nodes/35.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node36",
-          "yaw": 21.29,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node34",
-          "yaw": 203.08,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 95.92,
-          "pitch": -20
-        },
-        {
-          "id": 4,
-          "type": "move",
-          "target": "",
-          "yaw": 288.75,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node36",
-      "image": "/assets/Database Images/unrestricted nodes/36.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node37",
-          "yaw": 21.29,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node35",
-          "yaw": 201.65,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node79",
-          "yaw": 72.81,
-          "pitch": -20
-        },
-        {
-          "id": 4,
-          "type": "move",
-          "target": "",
-          "yaw": 273.89,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node37",
-      "image": "/assets/Database Images/unrestricted nodes/37.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node38",
-          "yaw": 13.87,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node36",
-          "yaw": 195.55,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node38",
-          "yaw": 94.13,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node38",
-      "image": "/assets/Database Images/unrestricted nodes/38.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node39",
-          "yaw": 18.63,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node37",
-          "yaw": 196.95,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node39",
-      "image": "/assets/Database Images/unrestricted nodes/39.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node40",
-          "yaw": 353.03,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node38",
-          "yaw": 177.17,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node38",
-          "yaw": 179.4,
-          "pitch": -15.22
-        }
-      ]
-    },
-    {
-      "scene": "node40",
-      "image": "/assets/Database Images/unrestricted nodes/40.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node42",
-          "yaw": 13.46,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node39",
-          "yaw": 192.43,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node80",
-          "yaw": 117.43,
-          "pitch": -20
-        },
-        {
-          "id": 4,
-          "type": "move",
-          "target": "",
-          "yaw": 255.71,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node41",
-      "image": "/assets/Database Images/unrestricted nodes/41.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node42",
-          "yaw": 312.28,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node40",
-          "yaw": 132.88,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node42",
-      "image": "/assets/Database Images/unrestricted nodes/42.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node43",
-          "yaw": 7.91,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node40",
-          "yaw": 189.2,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node43",
-      "image": "/assets/Database Images/unrestricted nodes/43.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node44",
-          "yaw": 6.23,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node42",
-          "yaw": 184.81,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 112.65,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node44",
-      "image": "/assets/Database Images/unrestricted nodes/44.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node45",
-          "yaw": 357.57,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node43",
-          "yaw": 178.21,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 251.27,
-          "pitch": -20
-        },
-        {
-          "id": 4,
-          "type": "move",
-          "target": "",
-          "yaw": 82.26,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node45",
-      "image": "/assets/Database Images/unrestricted nodes/45.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "",
-          "yaw": 5.71,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node44",
-          "yaw": 185.06,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node46",
-          "yaw": 94.16,
-          "pitch": -20
-        },
-        {
-          "id": 4,
-          "type": "move",
-          "target": "",
-          "yaw": 274.8,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node46",
-      "image": "/assets/Database Images/unrestricted nodes/46.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node47",
-          "yaw": 100.62,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node45",
-          "yaw": 281.39,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node47",
-      "image": "/assets/Database Images/unrestricted nodes/47.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node48",
-          "yaw": 101.91,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node46",
-          "yaw": 282.42,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node48",
-      "image": "/assets/Database Images/unrestricted nodes/48.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node49",
-          "yaw": 108.11,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node47",
-          "yaw": 288.5,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 257.21,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node49",
-      "image": "/assets/Database Images/unrestricted nodes/49.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node50",
-          "yaw": 102.94,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node48",
-          "yaw": 284.49,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 57.55,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node50",
-      "image": "/assets/Database Images/unrestricted nodes/50.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node51",
-          "yaw": 103.12,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node49",
-          "yaw": 283.12,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node51",
-      "image": "/assets/Database Images/unrestricted nodes/51.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node52",
-          "yaw": 104.53,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node50",
-          "yaw": 285.7,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node99",
-          "yaw": 192.21,
-          "pitch": -20
-        },
-        {
-          "id": 4,
-          "type": "move",
-          "target": "",
-          "yaw": 52.81,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node52",
-      "image": "/assets/Database Images/unrestricted nodes/52.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node53",
-          "yaw": 90.95,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node51",
-          "yaw": 277.03,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node53",
-      "image": "/assets/Database Images/unrestricted nodes/53.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node54",
-          "yaw": 96.9,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node52",
-          "yaw": 278.06,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node54",
-      "image": "/assets/Database Images/unrestricted nodes/54.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node55",
-          "yaw": 98.57,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node53",
-          "yaw": 281.29,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node55",
-      "image": "/assets/Database Images/unrestricted nodes/55.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node56",
-          "yaw": 98.7,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node54",
-          "yaw": 279.0,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node56",
-      "image": "/assets/Database Images/unrestricted nodes/56.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node57",
-          "yaw": 107.29,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node55",
-          "yaw": 287.34,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 193.98,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node57",
-      "image": "/assets/Database Images/unrestricted nodes/57.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node58",
-          "yaw": 195.79,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node56",
-          "yaw": 283.72,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 17.47,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node58",
-      "image": "/assets/Database Images/unrestricted nodes/58.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node59",
-          "yaw": 192.04,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node57",
-          "yaw": 12.56,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 102.81,
-          "pitch": -20
-        },
-        {
-          "id": 4,
-          "type": "move",
-          "target": "",
-          "yaw": 279.45,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node59",
-      "image": "/assets/Database Images/unrestricted nodes/59.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node60",
-          "yaw": 189.71,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node58",
-          "yaw": 10.35,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node60",
-      "image": "/assets/Database Images/unrestricted nodes/60.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node61",
-          "yaw": 199.92,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node59",
-          "yaw": 20.7,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 276.86,
-          "pitch": -19.74
-        }
-      ]
-    },
-    {
-      "scene": "node61",
-      "image": "/assets/Database Images/unrestricted nodes/61.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node62",
-          "yaw": 202.77,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node60",
-          "yaw": 23.29,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 259.92,
-          "pitch": -17.11
-        }
-      ]
-    },
-    {
-      "scene": "node62",
-      "image": "/assets/Database Images/unrestricted nodes/62.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node63",
-          "yaw": 200.95,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node61",
-          "yaw": 21.86,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 322.63,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node63",
-      "image": "/assets/Database Images/unrestricted nodes/63.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node64",
-          "yaw": 196.29,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node62",
-          "yaw": 17.2,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node64",
-      "image": "/assets/Database Images/unrestricted nodes/64.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node65",
-          "yaw": 195.13,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node63",
-          "yaw": 14.87,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node92",
-          "yaw": 286.04,
-          "pitch": -20
-        },
-        {
-          "id": 4,
-          "type": "move",
-          "target": "node100",
-          "yaw": 105.13,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node65",
-      "image": "/assets/Database Images/unrestricted nodes/65.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node66",
-          "yaw": 186.98,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node64",
-          "yaw": 7.24,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 305.43,
-          "pitch": -12.67
-        }
-      ]
-    },
-    {
-      "scene": "node66",
-      "image": "/assets/Database Images/unrestricted nodes/66.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node67",
-          "yaw": 193.71,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node65",
-          "yaw": 13.96,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 143.8,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node67",
-      "image": "/assets/Database Images/unrestricted nodes/67.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node68",
-          "yaw": 191.93,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node66",
-          "yaw": 11.0,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 265.01,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node68",
-      "image": "/assets/Database Images/unrestricted nodes/68.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node69",
-          "yaw": 193.12,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node67",
-          "yaw": 13.89,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 103.12,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node69",
-      "image": "/assets/Database Images/unrestricted nodes/69.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node70",
-          "yaw": 193.51,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node68",
-          "yaw": 13.38,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node70",
-      "image": "/assets/Database Images/unrestricted nodes/70.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node71",
-          "yaw": 188.6,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node69",
-          "yaw": 9.5,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 279.63,
-          "pitch": -20
-        },
-        {
-          "id": 4,
-          "type": "move",
-          "target": "",
-          "yaw": 151.49,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node71",
-      "image": "/assets/Database Images/unrestricted nodes/71.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node72",
-          "yaw": 201.15,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node70",
-          "yaw": 20.76,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 112.7,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node72",
-      "image": "/assets/Database Images/unrestricted nodes/72.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node73",
-          "yaw": 197.92,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node71",
-          "yaw": 18.05,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node73",
-      "image": "/assets/Database Images/unrestricted nodes/73.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node74",
-          "yaw": 196.76,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node72",
-          "yaw": 17.92,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 107.4,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node74",
-      "image": "/assets/Database Images/unrestricted nodes/74.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node75",
-          "yaw": 193.91,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node73",
-          "yaw": 14.18,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 286.38,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node75",
-      "image": "/assets/Database Images/unrestricted nodes/75.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node76",
-          "yaw": 198.29,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node74",
-          "yaw": 19.45,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node76",
-      "image": "/assets/Database Images/unrestricted nodes/76.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node77",
-          "yaw": 195.01,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node75",
-          "yaw": 15.66,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node77",
-      "image": "/assets/Database Images/unrestricted nodes/77.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node78",
-          "yaw": 198.24,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node76",
-          "yaw": 19.02,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node78",
-      "image": "/assets/Database Images/unrestricted nodes/78.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node1",
-          "yaw": 200.1,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node77",
-          "yaw": 20.7,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node79",
-      "image": "/assets/Database Images/unrestricted nodes/79.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node81",
-          "yaw": 93.11,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node36",
-          "yaw": 266.13,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node80",
-      "image": "/assets/Database Images/unrestricted nodes/80.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node82",
-          "yaw": 145.61,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node40",
-          "yaw": 316.43,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node81",
-      "image": "/assets/Database Images/unrestricted nodes/81.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node84",
-          "yaw": 87.04,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node79",
-          "yaw": 270.53,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 173.83,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node82",
-      "image": "/assets/Database Images/unrestricted nodes/82.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node83",
-          "yaw": 131.77,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node81",
-          "yaw": 314.75,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node83",
-      "image": "/assets/Database Images/unrestricted nodes/83.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node84",
-          "yaw": 143.15,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node82",
-          "yaw": 312.42,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 278.15,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node84",
-      "image": "/assets/Database Images/unrestricted nodes/84.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node85",
-          "yaw": 113.03,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node81",
-          "yaw": 277.51,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node83",
-          "yaw": 324.84,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node85",
-      "image": "/assets/Database Images/unrestricted nodes/85.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node86",
-          "yaw": 111.22,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node84",
-          "yaw": 291.61,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 266.39,
-          "pitch": -20
-        },
-        {
-          "id": 4,
-          "type": "move",
-          "target": "",
-          "yaw": 7.9,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node86",
-      "image": "/assets/Database Images/unrestricted nodes/86.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node87",
-          "yaw": 113.42,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node85",
-          "yaw": 293.68,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node87",
-      "image": "/assets/Database Images/unrestricted nodes/87.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node88",
-          "yaw": 103.33,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node86",
-          "yaw": 284.11,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 192.3,
-          "pitch": -20
-        },
-        {
-          "id": 4,
-          "type": "move",
-          "target": "node93",
-          "yaw": 11.91,
-          "pitch": -20
-        },
-        {
-          "id": 5,
-          "type": "move",
-          "target": "",
-          "yaw": 31.16,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node88",
-      "image": "/assets/Database Images/unrestricted nodes/88.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node89",
-          "yaw": 107.59,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node87",
-          "yaw": 287.21,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node89",
-      "image": "/assets/Database Images/unrestricted nodes/89.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node90",
-          "yaw": 118.06,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node88",
-          "yaw": 298.71,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node90",
-      "image": "/assets/Database Images/unrestricted nodes/90.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node91",
-          "yaw": 101.64,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node89",
-          "yaw": 282.03,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 160.47,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node91",
-      "image": "/assets/Database Images/unrestricted nodes/91.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node92",
-          "yaw": 102.8,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node90",
-          "yaw": 282.67,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 340.99,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node92",
-      "image": "/assets/Database Images/unrestricted nodes/92.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node64",
-          "yaw": 105.77,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node91",
-          "yaw": 286.16,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node93",
-      "image": "/assets/Database Images/unrestricted nodes/93.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node94",
-          "yaw": 1.67,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node87",
-          "yaw": 180.38,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 98.27,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node94",
-      "image": "/assets/Database Images/unrestricted nodes/94.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node95",
-          "yaw": 3.1,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node93",
-          "yaw": 182.06,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 280.99,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node95",
-      "image": "/assets/Database Images/unrestricted nodes/95.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node96",
-          "yaw": 3.88,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node94",
-          "yaw": 182.2,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node96",
-      "image": "/assets/Database Images/unrestricted nodes/96.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node97",
-          "yaw": 7.37,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node95",
-          "yaw": 186.08,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 249.31,
-          "pitch": -20
-        },
-        {
-          "id": 4,
-          "type": "move",
-          "target": "",
-          "yaw": 88.58,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node97",
-      "image": "/assets/Database Images/unrestricted nodes/97.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node98",
-          "yaw": 11.38,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node96",
-          "yaw": 190.61,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 273.11,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node98",
-      "image": "/assets/Database Images/unrestricted nodes/98.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node99",
-          "yaw": 6.86,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node97",
-          "yaw": 186.86,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 310.74,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node99",
-      "image": "/assets/Database Images/unrestricted nodes/99.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node51",
-          "yaw": 6.09,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node98",
-          "yaw": 181.56,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node100",
-      "image": "/assets/Database Images/unrestricted nodes/100.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node101",
-          "yaw": 110.08,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node73",
-          "yaw": 289.69,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node101",
-      "image": "/assets/Database Images/unrestricted nodes/101.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node102",
-          "yaw": 101.42,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node100",
-          "yaw": 281.52,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 204.38,
-          "pitch": -20
-        },
-        {
-          "id": 4,
-          "type": "move",
-          "target": "",
-          "yaw": 64.21,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node102",
-      "image": "/assets/Database Images/unrestricted nodes/102.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "",
-          "yaw": 104.94,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node101",
-          "yaw": 287.27,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node103",
-      "image": "/assets/Database Images/unrestricted nodes/103.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node1",
-          "yaw": 151.81,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node104",
-          "yaw": 334.67,
-          "pitch": -17
-        }
-      ]
-    },
-    {
-      "scene": "node104",
-      "image": "/assets/Database Images/unrestricted nodes/104.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node103",
-          "yaw": 148.05,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node105",
-          "yaw": 15.69,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node109",
-          "yaw": 284.57,
-          "pitch": -20
-        },
-        {
-          "id": 4,
-          "type": "move",
-          "target": "node115",
-          "yaw": 332.88,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node105",
-      "image": "/assets/Database Images/unrestricted nodes/105.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node104",
-          "yaw": 196.07,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node106",
-          "yaw": 25.22,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node115",
-          "yaw": 311.43,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node106",
-      "image": "/assets/Database Images/unrestricted nodes/106.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node105",
-          "yaw": 199.2,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node107",
-          "yaw": 21.96,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node107",
-      "image": "/assets/Database Images/unrestricted nodes/107.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node106",
-          "yaw": 203.09,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node108",
-          "yaw": 25.72,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node108",
-      "image": "/assets/Database Images/unrestricted nodes/108.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node107",
-          "yaw": 191.12,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node109",
-          "yaw": 14.13,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node109",
-      "image": "/assets/Database Images/unrestricted nodes/109.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node104",
-          "yaw": 111.47,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node110",
-          "yaw": 285.83,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node115",
-          "yaw": 354.96,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node110",
-      "image": "/assets/Database Images/unrestricted nodes/110.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node109",
-          "yaw": 100.6,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node111",
-          "yaw": 280.1,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node115",
-          "yaw": 20.05,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node111",
-      "image": "/assets/Database Images/unrestricted nodes/111.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node110",
-          "yaw": 100.6,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node112",
-          "yaw": 280.1,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node115",
-          "yaw": 53.17,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node112",
-      "image": "/assets/Database Images/unrestricted nodes/112.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node111",
-          "yaw": 108.76,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node113",
-          "yaw": 18.63,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node115",
-          "yaw": 66.84,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node113",
-      "image": "/assets/Database Images/unrestricted nodes/113.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node112",
-          "yaw": 196.74,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node114",
-          "yaw": 17.12,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node115",
-          "yaw": 80.39,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node114",
-      "image": "/assets/Database Images/unrestricted nodes/114.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node113",
-          "yaw": 193.61,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node115",
-          "yaw": 103.43,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node115",
-      "image": "/assets/Database Images/unrestricted nodes/115.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node114",
-          "yaw": 280.0,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node116",
-          "yaw": 24.48,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node105",
-          "yaw": 122.52,
-          "pitch": -20
-        },
-        {
-          "id": 4,
-          "type": "move",
-          "target": "node104",
-          "yaw": 149.25,
-          "pitch": -20
-        },
-        {
-          "id": 5,
-          "type": "move",
-          "target": "node112",
-          "yaw": 238.94,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node116",
-      "image": "/assets/Database Images/unrestricted nodes/116.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node115",
-          "yaw": 221.63,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node117",
-          "yaw": 12.06,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node126",
-          "yaw": 255.37,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node117",
-      "image": "/assets/Database Images/unrestricted nodes/117.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node116",
-          "yaw": 192.81,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node118",
-          "yaw": 17.12,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node123",
-          "yaw": 283.47,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node118",
-      "image": "/assets/Database Images/unrestricted nodes/118.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node117",
-          "yaw": 192.81,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node119",
-          "yaw": 39.78,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node120",
-          "yaw": 339.81,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node119",
-      "image": "/assets/Database Images/unrestricted nodes/119.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node118",
-          "yaw": 210.12,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node120",
-          "yaw": 102.62,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node120",
-      "image": "/assets/Database Images/unrestricted nodes/120.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node118",
-          "yaw": 131.21,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node121",
-          "yaw": 268.78,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node123",
-          "yaw": 199.81,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node121",
-      "image": "/assets/Database Images/unrestricted nodes/121.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node120",
-          "yaw": 48.05,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node122",
-          "yaw": 192.55,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node122",
-      "image": "/assets/Database Images/unrestricted nodes/122.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node121",
-          "yaw": 13.68,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node123",
-          "yaw": 104.74,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node124",
-          "yaw": 192.55,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node123",
-      "image": "/assets/Database Images/unrestricted nodes/123.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node122",
-          "yaw": 285.62,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node117",
-          "yaw": 107.74,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node126",
-          "yaw": 199.56,
-          "pitch": -20
-        },
-        {
-          "id": 4,
-          "type": "move",
-          "target": "node120",
-          "yaw": 13.29,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node124",
-      "image": "/assets/Database Images/unrestricted nodes/124.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node122",
-          "yaw": 13.68,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node125",
-          "yaw": 192.55,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node125",
-      "image": "/assets/Database Images/unrestricted nodes/125.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node124",
-          "yaw": 6.5,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node126",
-          "yaw": 115.13,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node13",
-          "yaw": 288.61,
-          "pitch": -20
-        }
-      ]
-    },
-    {
-      "scene": "node126",
-      "image": "/assets/Database Images/unrestricted nodes/126.webp",
-      "coords": {
-        "x": 0.409,
-        "y": 1.073
-      },
-      "hotspot": [
-        {
-          "id": 1,
-          "type": "move",
-          "target": "node125",
-          "yaw": 297.02,
-          "pitch": -20
-        },
-        {
-          "id": 2,
-          "type": "move",
-          "target": "node116",
-          "yaw": 91.42,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node115",
-          "yaw": 137.83,
-          "pitch": -20
-        },
-        {
-          "id": 4,
-          "type": "move",
-          "target": "node123",
-          "yaw": 20.31,
-          "pitch": -20
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "scene": "node1",
+    "image": "/assets/Database Images/unrestricted nodes/1.webp",
+    "coords": {
+      "x": 0.324,
+      "y": 1.093
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node2",
+        "yaw": 280.46,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node78",
+        "yaw": 10.17,
+        "pitch": -20
+      },
+      {
+        "id": 4,
+        "type": "bldg",
+        "target": "dit",
+        "yaw": 0,
+        "pitch": 0
+      },
+      {
+        "id": 5,
+        "type": "move",
+        "target": "node103",
+        "yaw": 324.59,
+        "pitch": -20
+      },
+      {
+        "id": 6,
+        "type": "bldg",
+        "target": "dit",
+        "yaw": 0,
+        "pitch": 0
+      }
+    ],
+    "travelType": "walk"
+  },
+  {
+    "scene": "node2",
+    "image": "/assets/Database Images/unrestricted nodes/2.webp",
+    "coords": {
+      "x": 0.335,
+      "y": 1.093
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node3",
+        "yaw": 268.98,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node1",
+        "yaw": 88.51,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node3",
+    "image": "/assets/Database Images/unrestricted nodes/3.webp",
+    "coords": {
+      "x": 0.345,
+      "y": 1.09
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node4",
+        "yaw": 268.03,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node2",
+        "yaw": 87.79,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 187.53,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node4",
+    "image": "/assets/Database Images/unrestricted nodes/4.webp",
+    "coords": {
+      "x": 0.359,
+      "y": 1.087
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node5",
+        "yaw": 267.55,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node3",
+        "yaw": 87.91,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node5",
+    "image": "/assets/Database Images/unrestricted nodes/5.webp",
+    "coords": {
+      "x": 0.376,
+      "y": 1.082
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node6",
+        "yaw": 278.79,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node4",
+        "yaw": 98.31,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "bldg",
+        "target": "dit",
+        "yaw": 217,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node6",
+    "image": "/assets/Database Images/unrestricted nodes/6.webp",
+    "coords": {
+      "x": 0.392,
+      "y": 1.078
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node7",
+        "yaw": 283.69,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node5",
+        "yaw": 103.93,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node7",
+    "image": "/assets/Database Images/unrestricted nodes/7.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node8",
+        "yaw": 276.52,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node6",
+        "yaw": 99.99,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 188.25,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node8",
+    "image": "/assets/Database Images/unrestricted nodes/8.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node9",
+        "yaw": 281.42,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node7",
+        "yaw": 100.92,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node9",
+    "image": "/assets/Database Images/unrestricted nodes/9.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node10",
+        "yaw": 276.52,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node8",
+        "yaw": 98.19,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node10",
+    "image": "/assets/Database Images/unrestricted nodes/10.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node16",
+        "yaw": 270.9,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node9",
+        "yaw": 93.29,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node11",
+        "yaw": 359.52,
+        "pitch": -20
+      },
+      {
+        "id": 4,
+        "type": "move",
+        "target": "",
+        "yaw": 144.0,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node11",
+    "image": "/assets/Database Images/unrestricted nodes/11.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node12",
+        "yaw": 5.14,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node10",
+        "yaw": 183.35,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node12",
+    "image": "/assets/Database Images/unrestricted nodes/12.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node13",
+        "yaw": 7.18,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node11",
+        "yaw": 186.22,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node13",
+    "image": "/assets/Database Images/unrestricted nodes/13.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node14",
+        "yaw": 0.84,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node12",
+        "yaw": 183.47,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node14",
+    "image": "/assets/Database Images/unrestricted nodes/14.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node15",
+        "yaw": 1.44,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node13",
+        "yaw": 182.51,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node15",
+    "image": "/assets/Database Images/unrestricted nodes/15.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node14",
+        "yaw": 191.84,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "cr",
+        "target": "",
+        "yaw": 319.93,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "washarea",
+        "target": "",
+        "yaw": 246.86,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node16",
+    "image": "/assets/Database Images/unrestricted nodes/16.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node17",
+        "yaw": 277.71,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node10",
+        "yaw": 97.71,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node17",
+    "image": "/assets/Database Images/unrestricted nodes/17.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node18",
+        "yaw": 276.64,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node16",
+        "yaw": 97.0,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node18",
+    "image": "/assets/Database Images/unrestricted nodes/18.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node19",
+        "yaw": 279.63,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node17",
+        "yaw": 99.75,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node19",
+    "image": "/assets/Database Images/unrestricted nodes/19.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node20",
+        "yaw": 274.25,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node18",
+        "yaw": 93.89,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node18",
+        "yaw": 195.43,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node20",
+    "image": "/assets/Database Images/unrestricted nodes/20.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node21",
+        "yaw": 279.39,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node19",
+        "yaw": 97.0,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node21",
+    "image": "/assets/Database Images/unrestricted nodes/21.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node22",
+        "yaw": 312.04,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node20",
+        "yaw": 129.05,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node22",
+    "image": "/assets/Database Images/unrestricted nodes/22.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node23",
+        "yaw": 322.33,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node21",
+        "yaw": 139.69,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node23",
+    "image": "/assets/Database Images/unrestricted nodes/23.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node24",
+        "yaw": 317.18,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node22",
+        "yaw": 135.39,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node24",
+    "image": "/assets/Database Images/unrestricted nodes/24.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node25",
+        "yaw": 6.1,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node23",
+        "yaw": 169.36,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": " ",
+        "yaw": 236.57,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node25",
+    "image": "/assets/Database Images/unrestricted nodes/25.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node26",
+        "yaw": 19.38,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node24",
+        "yaw": 201.05,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 289.91,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node26",
+    "image": "/assets/Database Images/unrestricted nodes/26.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node27",
+        "yaw": 0.24,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node25",
+        "yaw": 180.0,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node27",
+    "image": "/assets/Database Images/unrestricted nodes/27.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node28",
+        "yaw": 2.75,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node26",
+        "yaw": 180.6,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 270.78,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node28",
+    "image": "/assets/Database Images/unrestricted nodes/28.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node29",
+        "yaw": 2.63,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node27",
+        "yaw": 180.84,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node29",
+    "image": "/assets/Database Images/unrestricted nodes/29.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node30",
+        "yaw": 15.19,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node28",
+        "yaw": 193.99,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node30",
+    "image": "/assets/Database Images/unrestricted nodes/30.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node31",
+        "yaw": 26.19,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node29",
+        "yaw": 204.52,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node31",
+    "image": "/assets/Database Images/unrestricted nodes/31.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node32",
+        "yaw": 13.99,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node30",
+        "yaw": 194.59,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node30",
+        "yaw": 45.33,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node32",
+    "image": "/assets/Database Images/unrestricted nodes/32.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node33",
+        "yaw": 38.15,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node31",
+        "yaw": 218.27,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node33",
+    "image": "/assets/Database Images/unrestricted nodes/33.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node34",
+        "yaw": 25.83,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node32",
+        "yaw": 207.15,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node34",
+    "image": "/assets/Database Images/unrestricted nodes/34.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node35",
+        "yaw": 23.92,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node33",
+        "yaw": 205.24,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node35",
+    "image": "/assets/Database Images/unrestricted nodes/35.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node36",
+        "yaw": 21.29,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node34",
+        "yaw": 203.08,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 95.92,
+        "pitch": -20
+      },
+      {
+        "id": 4,
+        "type": "move",
+        "target": "",
+        "yaw": 288.75,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node36",
+    "image": "/assets/Database Images/unrestricted nodes/36.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node37",
+        "yaw": 21.29,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node35",
+        "yaw": 201.65,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node79",
+        "yaw": 72.81,
+        "pitch": -20
+      },
+      {
+        "id": 4,
+        "type": "move",
+        "target": "",
+        "yaw": 273.89,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node37",
+    "image": "/assets/Database Images/unrestricted nodes/37.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node38",
+        "yaw": 13.87,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node36",
+        "yaw": 195.55,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node38",
+        "yaw": 94.13,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node38",
+    "image": "/assets/Database Images/unrestricted nodes/38.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node39",
+        "yaw": 18.63,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node37",
+        "yaw": 196.95,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node39",
+    "image": "/assets/Database Images/unrestricted nodes/39.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node40",
+        "yaw": 353.03,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node38",
+        "yaw": 177.17,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node38",
+        "yaw": 179.4,
+        "pitch": -15.22
+      }
+    ]
+  },
+  {
+    "scene": "node40",
+    "image": "/assets/Database Images/unrestricted nodes/40.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node42",
+        "yaw": 13.46,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node39",
+        "yaw": 192.43,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node80",
+        "yaw": 117.43,
+        "pitch": -20
+      },
+      {
+        "id": 4,
+        "type": "move",
+        "target": "",
+        "yaw": 255.71,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node41",
+    "image": "/assets/Database Images/unrestricted nodes/41.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node42",
+        "yaw": 312.28,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node40",
+        "yaw": 132.88,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node42",
+    "image": "/assets/Database Images/unrestricted nodes/42.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node43",
+        "yaw": 7.91,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node40",
+        "yaw": 189.2,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node43",
+    "image": "/assets/Database Images/unrestricted nodes/43.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node44",
+        "yaw": 6.23,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node42",
+        "yaw": 184.81,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 112.65,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node44",
+    "image": "/assets/Database Images/unrestricted nodes/44.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node45",
+        "yaw": 357.57,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node43",
+        "yaw": 178.21,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 251.27,
+        "pitch": -20
+      },
+      {
+        "id": 4,
+        "type": "move",
+        "target": "",
+        "yaw": 82.26,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node45",
+    "image": "/assets/Database Images/unrestricted nodes/45.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "",
+        "yaw": 5.71,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node44",
+        "yaw": 185.06,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node46",
+        "yaw": 94.16,
+        "pitch": -20
+      },
+      {
+        "id": 4,
+        "type": "move",
+        "target": "",
+        "yaw": 274.8,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node46",
+    "image": "/assets/Database Images/unrestricted nodes/46.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node47",
+        "yaw": 100.62,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node45",
+        "yaw": 281.39,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node47",
+    "image": "/assets/Database Images/unrestricted nodes/47.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node48",
+        "yaw": 101.91,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node46",
+        "yaw": 282.42,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node48",
+    "image": "/assets/Database Images/unrestricted nodes/48.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node49",
+        "yaw": 108.11,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node47",
+        "yaw": 288.5,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 257.21,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node49",
+    "image": "/assets/Database Images/unrestricted nodes/49.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node50",
+        "yaw": 102.94,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node48",
+        "yaw": 284.49,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 57.55,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node50",
+    "image": "/assets/Database Images/unrestricted nodes/50.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node51",
+        "yaw": 103.12,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node49",
+        "yaw": 283.12,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node51",
+    "image": "/assets/Database Images/unrestricted nodes/51.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node52",
+        "yaw": 104.53,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node50",
+        "yaw": 285.7,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node99",
+        "yaw": 192.21,
+        "pitch": -20
+      },
+      {
+        "id": 4,
+        "type": "move",
+        "target": "",
+        "yaw": 52.81,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node52",
+    "image": "/assets/Database Images/unrestricted nodes/52.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node53",
+        "yaw": 90.95,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node51",
+        "yaw": 277.03,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node53",
+    "image": "/assets/Database Images/unrestricted nodes/53.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node54",
+        "yaw": 96.9,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node52",
+        "yaw": 278.06,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node54",
+    "image": "/assets/Database Images/unrestricted nodes/54.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node55",
+        "yaw": 98.57,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node53",
+        "yaw": 281.29,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node55",
+    "image": "/assets/Database Images/unrestricted nodes/55.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node56",
+        "yaw": 98.7,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node54",
+        "yaw": 279.0,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node56",
+    "image": "/assets/Database Images/unrestricted nodes/56.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node57",
+        "yaw": 107.29,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node55",
+        "yaw": 287.34,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 193.98,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node57",
+    "image": "/assets/Database Images/unrestricted nodes/57.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node58",
+        "yaw": 195.79,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node56",
+        "yaw": 283.72,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 17.47,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node58",
+    "image": "/assets/Database Images/unrestricted nodes/58.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node59",
+        "yaw": 192.04,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node57",
+        "yaw": 12.56,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 102.81,
+        "pitch": -20
+      },
+      {
+        "id": 4,
+        "type": "move",
+        "target": "",
+        "yaw": 279.45,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node59",
+    "image": "/assets/Database Images/unrestricted nodes/59.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node60",
+        "yaw": 189.71,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node58",
+        "yaw": 10.35,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node60",
+    "image": "/assets/Database Images/unrestricted nodes/60.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node61",
+        "yaw": 199.92,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node59",
+        "yaw": 20.7,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 276.86,
+        "pitch": -19.74
+      }
+    ]
+  },
+  {
+    "scene": "node61",
+    "image": "/assets/Database Images/unrestricted nodes/61.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node62",
+        "yaw": 202.77,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node60",
+        "yaw": 23.29,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 259.92,
+        "pitch": -17.11
+      }
+    ]
+  },
+  {
+    "scene": "node62",
+    "image": "/assets/Database Images/unrestricted nodes/62.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node63",
+        "yaw": 200.95,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node61",
+        "yaw": 21.86,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 322.63,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node63",
+    "image": "/assets/Database Images/unrestricted nodes/63.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node64",
+        "yaw": 196.29,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node62",
+        "yaw": 17.2,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node64",
+    "image": "/assets/Database Images/unrestricted nodes/64.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node65",
+        "yaw": 195.13,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node63",
+        "yaw": 14.87,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node92",
+        "yaw": 286.04,
+        "pitch": -20
+      },
+      {
+        "id": 4,
+        "type": "move",
+        "target": "node100",
+        "yaw": 105.13,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node65",
+    "image": "/assets/Database Images/unrestricted nodes/65.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node66",
+        "yaw": 186.98,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node64",
+        "yaw": 7.24,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 305.43,
+        "pitch": -12.67
+      }
+    ]
+  },
+  {
+    "scene": "node66",
+    "image": "/assets/Database Images/unrestricted nodes/66.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node67",
+        "yaw": 193.71,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node65",
+        "yaw": 13.96,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 143.8,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node67",
+    "image": "/assets/Database Images/unrestricted nodes/67.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node68",
+        "yaw": 191.93,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node66",
+        "yaw": 11.0,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 265.01,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node68",
+    "image": "/assets/Database Images/unrestricted nodes/68.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node69",
+        "yaw": 193.12,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node67",
+        "yaw": 13.89,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 103.12,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node69",
+    "image": "/assets/Database Images/unrestricted nodes/69.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node70",
+        "yaw": 193.51,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node68",
+        "yaw": 13.38,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node70",
+    "image": "/assets/Database Images/unrestricted nodes/70.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node71",
+        "yaw": 188.6,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node69",
+        "yaw": 9.5,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 279.63,
+        "pitch": -20
+      },
+      {
+        "id": 4,
+        "type": "move",
+        "target": "",
+        "yaw": 151.49,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node71",
+    "image": "/assets/Database Images/unrestricted nodes/71.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node72",
+        "yaw": 201.15,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node70",
+        "yaw": 20.76,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 112.7,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node72",
+    "image": "/assets/Database Images/unrestricted nodes/72.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node73",
+        "yaw": 197.92,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node71",
+        "yaw": 18.05,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node73",
+    "image": "/assets/Database Images/unrestricted nodes/73.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node74",
+        "yaw": 196.76,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node72",
+        "yaw": 17.92,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 107.4,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node74",
+    "image": "/assets/Database Images/unrestricted nodes/74.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node75",
+        "yaw": 193.91,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node73",
+        "yaw": 14.18,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 286.38,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node75",
+    "image": "/assets/Database Images/unrestricted nodes/75.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node76",
+        "yaw": 198.29,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node74",
+        "yaw": 19.45,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node76",
+    "image": "/assets/Database Images/unrestricted nodes/76.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node77",
+        "yaw": 195.01,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node75",
+        "yaw": 15.66,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node77",
+    "image": "/assets/Database Images/unrestricted nodes/77.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node78",
+        "yaw": 198.24,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node76",
+        "yaw": 19.02,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node78",
+    "image": "/assets/Database Images/unrestricted nodes/78.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node1",
+        "yaw": 200.1,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node77",
+        "yaw": 20.7,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node79",
+    "image": "/assets/Database Images/unrestricted nodes/79.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node81",
+        "yaw": 93.11,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node36",
+        "yaw": 266.13,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node80",
+    "image": "/assets/Database Images/unrestricted nodes/80.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node82",
+        "yaw": 145.61,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node40",
+        "yaw": 316.43,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node81",
+    "image": "/assets/Database Images/unrestricted nodes/81.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node84",
+        "yaw": 87.04,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node79",
+        "yaw": 270.53,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 173.83,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node82",
+    "image": "/assets/Database Images/unrestricted nodes/82.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node83",
+        "yaw": 131.77,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node81",
+        "yaw": 314.75,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node83",
+    "image": "/assets/Database Images/unrestricted nodes/83.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node84",
+        "yaw": 143.15,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node82",
+        "yaw": 312.42,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 278.15,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node84",
+    "image": "/assets/Database Images/unrestricted nodes/84.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node85",
+        "yaw": 113.03,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node81",
+        "yaw": 277.51,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node83",
+        "yaw": 324.84,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node85",
+    "image": "/assets/Database Images/unrestricted nodes/85.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node86",
+        "yaw": 111.22,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node84",
+        "yaw": 291.61,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 266.39,
+        "pitch": -20
+      },
+      {
+        "id": 4,
+        "type": "move",
+        "target": "",
+        "yaw": 7.9,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node86",
+    "image": "/assets/Database Images/unrestricted nodes/86.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node87",
+        "yaw": 113.42,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node85",
+        "yaw": 293.68,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node87",
+    "image": "/assets/Database Images/unrestricted nodes/87.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node88",
+        "yaw": 103.33,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node86",
+        "yaw": 284.11,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 192.3,
+        "pitch": -20
+      },
+      {
+        "id": 4,
+        "type": "move",
+        "target": "node93",
+        "yaw": 11.91,
+        "pitch": -20
+      },
+      {
+        "id": 5,
+        "type": "move",
+        "target": "",
+        "yaw": 31.16,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node88",
+    "image": "/assets/Database Images/unrestricted nodes/88.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node89",
+        "yaw": 107.59,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node87",
+        "yaw": 287.21,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node89",
+    "image": "/assets/Database Images/unrestricted nodes/89.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node90",
+        "yaw": 118.06,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node88",
+        "yaw": 298.71,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node90",
+    "image": "/assets/Database Images/unrestricted nodes/90.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node91",
+        "yaw": 101.64,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node89",
+        "yaw": 282.03,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 160.47,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node91",
+    "image": "/assets/Database Images/unrestricted nodes/91.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node92",
+        "yaw": 102.8,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node90",
+        "yaw": 282.67,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 340.99,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node92",
+    "image": "/assets/Database Images/unrestricted nodes/92.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node64",
+        "yaw": 105.77,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node91",
+        "yaw": 286.16,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node93",
+    "image": "/assets/Database Images/unrestricted nodes/93.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node94",
+        "yaw": 1.67,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node87",
+        "yaw": 180.38,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 98.27,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node94",
+    "image": "/assets/Database Images/unrestricted nodes/94.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node95",
+        "yaw": 3.1,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node93",
+        "yaw": 182.06,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 280.99,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node95",
+    "image": "/assets/Database Images/unrestricted nodes/95.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node96",
+        "yaw": 3.88,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node94",
+        "yaw": 182.2,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node96",
+    "image": "/assets/Database Images/unrestricted nodes/96.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node97",
+        "yaw": 7.37,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node95",
+        "yaw": 186.08,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 249.31,
+        "pitch": -20
+      },
+      {
+        "id": 4,
+        "type": "move",
+        "target": "",
+        "yaw": 88.58,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node97",
+    "image": "/assets/Database Images/unrestricted nodes/97.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node98",
+        "yaw": 11.38,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node96",
+        "yaw": 190.61,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 273.11,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node98",
+    "image": "/assets/Database Images/unrestricted nodes/98.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node99",
+        "yaw": 6.86,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node97",
+        "yaw": 186.86,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 310.74,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node99",
+    "image": "/assets/Database Images/unrestricted nodes/99.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node51",
+        "yaw": 6.09,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node98",
+        "yaw": 181.56,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node100",
+    "image": "/assets/Database Images/unrestricted nodes/100.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node101",
+        "yaw": 110.08,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node73",
+        "yaw": 289.69,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node101",
+    "image": "/assets/Database Images/unrestricted nodes/101.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node102",
+        "yaw": 101.42,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node100",
+        "yaw": 281.52,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "",
+        "yaw": 204.38,
+        "pitch": -20
+      },
+      {
+        "id": 4,
+        "type": "move",
+        "target": "",
+        "yaw": 64.21,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node102",
+    "image": "/assets/Database Images/unrestricted nodes/102.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "",
+        "yaw": 104.94,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node101",
+        "yaw": 287.27,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node103",
+    "image": "/assets/Database Images/unrestricted nodes/103.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node1",
+        "yaw": 151.81,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node104",
+        "yaw": 334.67,
+        "pitch": -17
+      }
+    ]
+  },
+  {
+    "scene": "node104",
+    "image": "/assets/Database Images/unrestricted nodes/104.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node103",
+        "yaw": 148.05,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node105",
+        "yaw": 15.69,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node109",
+        "yaw": 284.57,
+        "pitch": -20
+      },
+      {
+        "id": 4,
+        "type": "move",
+        "target": "node115",
+        "yaw": 332.88,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node105",
+    "image": "/assets/Database Images/unrestricted nodes/105.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node104",
+        "yaw": 196.07,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node106",
+        "yaw": 25.22,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node115",
+        "yaw": 311.43,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node106",
+    "image": "/assets/Database Images/unrestricted nodes/106.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node105",
+        "yaw": 199.2,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node107",
+        "yaw": 21.96,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node107",
+    "image": "/assets/Database Images/unrestricted nodes/107.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node106",
+        "yaw": 203.09,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node108",
+        "yaw": 25.72,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node108",
+    "image": "/assets/Database Images/unrestricted nodes/108.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node107",
+        "yaw": 191.12,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node109",
+        "yaw": 14.13,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node109",
+    "image": "/assets/Database Images/unrestricted nodes/109.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node104",
+        "yaw": 111.47,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node110",
+        "yaw": 285.83,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node115",
+        "yaw": 354.96,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node110",
+    "image": "/assets/Database Images/unrestricted nodes/110.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node109",
+        "yaw": 100.6,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node111",
+        "yaw": 280.1,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node115",
+        "yaw": 20.05,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node111",
+    "image": "/assets/Database Images/unrestricted nodes/111.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node110",
+        "yaw": 100.6,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node112",
+        "yaw": 280.1,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node115",
+        "yaw": 53.17,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node112",
+    "image": "/assets/Database Images/unrestricted nodes/112.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node111",
+        "yaw": 108.76,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node113",
+        "yaw": 18.63,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node115",
+        "yaw": 66.84,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node113",
+    "image": "/assets/Database Images/unrestricted nodes/113.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node112",
+        "yaw": 196.74,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node114",
+        "yaw": 17.12,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node115",
+        "yaw": 80.39,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node114",
+    "image": "/assets/Database Images/unrestricted nodes/114.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node113",
+        "yaw": 193.61,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node115",
+        "yaw": 103.43,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node115",
+    "image": "/assets/Database Images/unrestricted nodes/115.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node114",
+        "yaw": 280.0,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node116",
+        "yaw": 24.48,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node105",
+        "yaw": 122.52,
+        "pitch": -20
+      },
+      {
+        "id": 4,
+        "type": "move",
+        "target": "node104",
+        "yaw": 149.25,
+        "pitch": -20
+      },
+      {
+        "id": 5,
+        "type": "move",
+        "target": "node112",
+        "yaw": 238.94,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node116",
+    "image": "/assets/Database Images/unrestricted nodes/116.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node115",
+        "yaw": 221.63,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node117",
+        "yaw": 12.06,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node126",
+        "yaw": 255.37,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node117",
+    "image": "/assets/Database Images/unrestricted nodes/117.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node116",
+        "yaw": 192.81,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node118",
+        "yaw": 17.12,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node123",
+        "yaw": 283.47,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node118",
+    "image": "/assets/Database Images/unrestricted nodes/118.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node117",
+        "yaw": 192.81,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node119",
+        "yaw": 39.78,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node120",
+        "yaw": 339.81,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node119",
+    "image": "/assets/Database Images/unrestricted nodes/119.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node118",
+        "yaw": 210.12,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node120",
+        "yaw": 102.62,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node120",
+    "image": "/assets/Database Images/unrestricted nodes/120.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node118",
+        "yaw": 131.21,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node121",
+        "yaw": 268.78,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node123",
+        "yaw": 199.81,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node121",
+    "image": "/assets/Database Images/unrestricted nodes/121.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node120",
+        "yaw": 48.05,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node122",
+        "yaw": 192.55,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node122",
+    "image": "/assets/Database Images/unrestricted nodes/122.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node121",
+        "yaw": 13.68,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node123",
+        "yaw": 104.74,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node124",
+        "yaw": 192.55,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node123",
+    "image": "/assets/Database Images/unrestricted nodes/123.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node122",
+        "yaw": 285.62,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node117",
+        "yaw": 107.74,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node126",
+        "yaw": 199.56,
+        "pitch": -20
+      },
+      {
+        "id": 4,
+        "type": "move",
+        "target": "node120",
+        "yaw": 13.29,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node124",
+    "image": "/assets/Database Images/unrestricted nodes/124.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node122",
+        "yaw": 13.68,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node125",
+        "yaw": 192.55,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node125",
+    "image": "/assets/Database Images/unrestricted nodes/125.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node124",
+        "yaw": 6.5,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node126",
+        "yaw": 115.13,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node13",
+        "yaw": 288.61,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node126",
+    "image": "/assets/Database Images/unrestricted nodes/126.webp",
+    "coords": {
+      "x": 0.409,
+      "y": 1.073
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node125",
+        "yaw": 297.02,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node116",
+        "yaw": 91.42,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node115",
+        "yaw": 137.83,
+        "pitch": -20
+      },
+      {
+        "id": 4,
+        "type": "move",
+        "target": "node123",
+        "yaw": 20.31,
+        "pitch": -20
+      }
+    ]
+  }
+]

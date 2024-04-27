@@ -11,6 +11,7 @@ import LandingPage from "./landingPage/LandingPage";
 import Module360 from "./module360/Module360";
 import OSD from "./paperjs";
 import Login from "./loginPage/login";
+import View360 from "./module360/View360";
 
 const PrivateRoute = ({ children }) => {
   const navigate = useNavigate();
@@ -29,6 +30,7 @@ const PrivateRoute = ({ children }) => {
 
 const AppRouter = () => {
   const [loginType, setLoginType] = useState();
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
   useEffect(() => {
     const cookieLoginType = Cookies.get("loginType");
@@ -45,12 +47,17 @@ const AppRouter = () => {
           path="/app/*"
           element={
             <PrivateRoute>
-              <Module360 loginType={loginType} />
+              <View360 loginType={loginType} BACKEND_URL={BACKEND_URL} />
             </PrivateRoute>
           }
         />
         <Route path="/map/" element={<OSD />} />
-        <Route path="/login/" element={<Login setLoginType={setLoginType} />} />
+        <Route
+          path="/login/"
+          element={
+            <Login setLoginType={setLoginType} BACKEND_URL={BACKEND_URL} />
+          }
+        />
       </Routes>
     </Router>
   );
