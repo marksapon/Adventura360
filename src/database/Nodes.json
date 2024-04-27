@@ -18,12 +18,26 @@
         {
           "id": 2,
           "type": "move",
-          "target": "node87",
+          "target": "node78",
           "yaw": 10.17,
           "pitch": -20
         },
         {
           "id": 4,
+          "type": "bldg",
+          "target": "dit",
+          "yaw": 0,
+          "pitch": 0
+        },
+        {
+          "id": 5,
+          "type": "move",
+          "target": "node103",
+          "yaw": 324.59,
+          "pitch": -20
+        },
+        {
+          "id": 6,
           "type": "bldg",
           "target": "dit",
           "yaw": 0,
@@ -934,7 +948,7 @@
           "id": 4,
           "type": "move",
           "target": "",
-          "yaw": 273.89,
+          "yaw": 288.75,
           "pitch": -20
         }
       ]
@@ -960,6 +974,20 @@
           "target": "node35",
           "yaw": 201.65,
           "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "node79",
+          "yaw": 72.81,
+          "pitch": -20
+        },
+        {
+          "id": 4,
+          "type": "move",
+          "target": "",
+          "yaw": 273.89,
+          "pitch": -20
         }
       ]
     },
@@ -974,7 +1002,7 @@
         {
           "id": 1,
           "type": "move",
-          "target": "node46",
+          "target": "node38",
           "yaw": 13.87,
           "pitch": -20
         },
@@ -1006,14 +1034,14 @@
           "id": 1,
           "type": "move",
           "target": "node39",
-          "yaw": 91.5,
+          "yaw": 18.63,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node37",
-          "yaw": 266.35,
+          "yaw": 196.95,
           "pitch": -20
         }
       ]
@@ -1030,14 +1058,14 @@
           "id": 1,
           "type": "move",
           "target": "node40",
-          "yaw": 95.68,
+          "yaw": 353.03,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node38",
-          "yaw": 271.73,
+          "yaw": 177.17,
           "pitch": -20
         },
         {
@@ -1060,22 +1088,29 @@
         {
           "id": 1,
           "type": "move",
-          "target": "node67",
-          "yaw": 114.94,
+          "target": "node42",
+          "yaw": 13.46,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node39",
-          "yaw": 275.44,
+          "yaw": 192.43,
           "pitch": -20
         },
         {
           "id": 3,
           "type": "move",
-          "target": "node41",
-          "yaw": 324.12,
+          "target": "node80",
+          "yaw": 117.43,
+          "pitch": -20
+        },
+        {
+          "id": 4,
+          "type": "move",
+          "target": "",
+          "yaw": 255.71,
           "pitch": -20
         }
       ]
@@ -1116,14 +1151,14 @@
           "id": 1,
           "type": "move",
           "target": "node43",
-          "yaw": 314.31,
+          "yaw": 7.91,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
-          "target": "node41",
-          "yaw": 131.92,
+          "target": "node40",
+          "yaw": 189.2,
           "pitch": -20
         }
       ]
@@ -1140,14 +1175,21 @@
           "id": 1,
           "type": "move",
           "target": "node44",
-          "yaw": 312.28,
+          "yaw": 6.23,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node42",
-          "yaw": 147.35,
+          "yaw": 184.81,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 112.65,
           "pitch": -20
         }
       ]
@@ -1164,21 +1206,28 @@
           "id": 1,
           "type": "move",
           "target": "node45",
-          "yaw": 345.29,
+          "yaw": 357.57,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node43",
-          "yaw": 166.01,
+          "yaw": 178.21,
           "pitch": -20
         },
         {
           "id": 3,
           "type": "move",
-          "target": "node48",
-          "yaw": 232.62,
+          "target": "",
+          "yaw": 251.27,
+          "pitch": -20
+        },
+        {
+          "id": 4,
+          "type": "move",
+          "target": "",
+          "yaw": 82.26,
           "pitch": -20
         }
       ]
@@ -1194,15 +1243,29 @@
         {
           "id": 1,
           "type": "move",
-          "target": "node49",
-          "yaw": 8.49,
+          "target": "",
+          "yaw": 5.71,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node44",
-          "yaw": 189.45,
+          "yaw": 185.06,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "node46",
+          "yaw": 94.16,
+          "pitch": -20
+        },
+        {
+          "id": 4,
+          "type": "move",
+          "target": "",
+          "yaw": 274.8,
           "pitch": -20
         }
       ]
@@ -1219,22 +1282,15 @@
           "id": 1,
           "type": "move",
           "target": "node47",
-          "yaw": 19.49,
+          "yaw": 100.62,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
-          "target": "node37",
-          "yaw": 195.55,
+          "target": "node45",
+          "yaw": 281.39,
           "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 338.69,
-          "pitch": -13.7
         }
       ]
     },
@@ -1250,14 +1306,14 @@
           "id": 1,
           "type": "move",
           "target": "node48",
-          "yaw": 352.41,
+          "yaw": 101.91,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node46",
-          "yaw": 177.83,
+          "yaw": 282.42,
           "pitch": -20
         }
       ]
@@ -1273,22 +1329,22 @@
         {
           "id": 1,
           "type": "move",
-          "target": "node44",
-          "yaw": 13.34,
+          "target": "node49",
+          "yaw": 108.11,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node47",
-          "yaw": 192.59,
+          "yaw": 288.5,
           "pitch": -20
         },
         {
           "id": 3,
           "type": "move",
           "target": "",
-          "yaw": 252.48,
+          "yaw": 257.21,
           "pitch": -20
         }
       ]
@@ -1305,14 +1361,21 @@
           "id": 1,
           "type": "move",
           "target": "node50",
-          "yaw": 6.36,
+          "yaw": 102.94,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
-          "target": "node45",
-          "yaw": 184.43,
+          "target": "node48",
+          "yaw": 284.49,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 57.55,
           "pitch": -20
         }
       ]
@@ -1329,14 +1392,14 @@
           "id": 1,
           "type": "move",
           "target": "node51",
-          "yaw": 357.59,
+          "yaw": 103.12,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node49",
-          "yaw": 178.31,
+          "yaw": 283.12,
           "pitch": -20
         }
       ]
@@ -1352,29 +1415,29 @@
         {
           "id": 1,
           "type": "move",
-          "target": "",
-          "yaw": 6.36,
+          "target": "node52",
+          "yaw": 104.53,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node50",
-          "yaw": 184.43,
+          "yaw": 285.7,
           "pitch": -20
         },
         {
           "id": 3,
           "type": "move",
-          "target": "node52",
-          "yaw": 93.91,
+          "target": "node99",
+          "yaw": 192.21,
           "pitch": -20
         },
         {
           "id": 4,
           "type": "move",
           "target": "",
-          "yaw": 274.27,
+          "yaw": 52.81,
           "pitch": -20
         }
       ]
@@ -1391,14 +1454,14 @@
           "id": 1,
           "type": "move",
           "target": "node53",
-          "yaw": 100.29,
+          "yaw": 90.95,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node51",
-          "yaw": 281.74,
+          "yaw": 277.03,
           "pitch": -20
         }
       ]
@@ -1415,14 +1478,14 @@
           "id": 1,
           "type": "move",
           "target": "node54",
-          "yaw": 101.74,
+          "yaw": 96.9,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node52",
-          "yaw": 282.58,
+          "yaw": 278.06,
           "pitch": -20
         }
       ]
@@ -1439,14 +1502,14 @@
           "id": 1,
           "type": "move",
           "target": "node55",
-          "yaw": 107.88,
+          "yaw": 98.57,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node53",
-          "yaw": 289.32,
+          "yaw": 281.29,
           "pitch": -20
         }
       ]
@@ -1463,22 +1526,15 @@
           "id": 1,
           "type": "move",
           "target": "node56",
-          "yaw": 102.94,
+          "yaw": 98.7,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node54",
-          "yaw": 284.15,
+          "yaw": 279.0,
           "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 49.48,
-          "pitch": -12.35
         }
       ]
     },
@@ -1494,14 +1550,21 @@
           "id": 1,
           "type": "move",
           "target": "node57",
-          "yaw": 103.18,
+          "yaw": 107.29,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node55",
-          "yaw": 283.06,
+          "yaw": 287.34,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 193.98,
           "pitch": -20
         }
       ]
@@ -1517,22 +1580,22 @@
         {
           "id": 1,
           "type": "move",
-          "target": "node88",
-          "yaw": 104.75,
+          "target": "node58",
+          "yaw": 195.79,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node56",
-          "yaw": 285.83,
+          "yaw": 283.72,
           "pitch": -20
         },
         {
           "id": 3,
           "type": "move",
-          "target": "node58",
-          "yaw": 184.7,
+          "target": "",
+          "yaw": 17.47,
           "pitch": -20
         }
       ]
@@ -1549,14 +1612,28 @@
           "id": 1,
           "type": "move",
           "target": "node59",
-          "yaw": 181.2,
+          "yaw": 192.04,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node57",
-          "yaw": 6.26,
+          "yaw": 12.56,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 102.81,
+          "pitch": -20
+        },
+        {
+          "id": 4,
+          "type": "move",
+          "target": "",
+          "yaw": 279.45,
           "pitch": -20
         }
       ]
@@ -1573,14 +1650,14 @@
           "id": 1,
           "type": "move",
           "target": "node60",
-          "yaw": 186.86,
+          "yaw": 189.71,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node58",
-          "yaw": 7.1,
+          "yaw": 10.35,
           "pitch": -20
         }
       ]
@@ -1597,21 +1674,21 @@
           "id": 1,
           "type": "move",
           "target": "node61",
-          "yaw": 190.23,
+          "yaw": 199.92,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node59",
-          "yaw": 11.68,
+          "yaw": 20.7,
           "pitch": -20
         },
         {
           "id": 3,
           "type": "move",
-          "target": "node59",
-          "yaw": 272.71,
+          "target": "",
+          "yaw": 276.86,
           "pitch": -19.74
         }
       ]
@@ -1628,29 +1705,22 @@
           "id": 1,
           "type": "move",
           "target": "node62",
-          "yaw": 186.14,
+          "yaw": 202.77,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node60",
-          "yaw": 7.22,
+          "yaw": 23.29,
           "pitch": -20
         },
         {
           "id": 3,
           "type": "move",
-          "target": "node60",
-          "yaw": 87.17,
+          "target": "",
+          "yaw": 259.92,
           "pitch": -17.11
-        },
-        {
-          "id": 4,
-          "type": "move",
-          "target": "node60",
-          "yaw": 254.65,
-          "pitch": -15.76
         }
       ]
     },
@@ -1666,14 +1736,21 @@
           "id": 1,
           "type": "move",
           "target": "node63",
-          "yaw": 182.41,
+          "yaw": 200.95,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node61",
-          "yaw": 4.09,
+          "yaw": 21.86,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 322.63,
           "pitch": -20
         }
       ]
@@ -1690,14 +1767,14 @@
           "id": 1,
           "type": "move",
           "target": "node64",
-          "yaw": 182.05,
+          "yaw": 196.29,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node62",
-          "yaw": 3.25,
+          "yaw": 17.2,
           "pitch": -20
         }
       ]
@@ -1714,14 +1791,28 @@
           "id": 1,
           "type": "move",
           "target": "node65",
-          "yaw": 180.48,
+          "yaw": 195.13,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node63",
-          "yaw": 1.69,
+          "yaw": 14.87,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "node92",
+          "yaw": 286.04,
+          "pitch": -20
+        },
+        {
+          "id": 4,
+          "type": "move",
+          "target": "node100",
+          "yaw": 105.13,
           "pitch": -20
         }
       ]
@@ -1737,37 +1828,23 @@
         {
           "id": 1,
           "type": "move",
-          "target": "",
-          "yaw": 192.28,
+          "target": "node66",
+          "yaw": 186.98,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node64",
-          "yaw": 10.48,
+          "yaw": 7.24,
           "pitch": -20
         },
         {
           "id": 3,
           "type": "move",
           "target": "",
-          "yaw": 26.13,
+          "yaw": 305.43,
           "pitch": -12.67
-        },
-        {
-          "id": 4,
-          "type": "move",
-          "target": "node68",
-          "yaw": 102.94,
-          "pitch": -20
-        },
-        {
-          "id": 5,
-          "type": "move",
-          "target": "node66",
-          "yaw": 283.67,
-          "pitch": -20
         }
       ]
     },
@@ -1782,15 +1859,22 @@
         {
           "id": 1,
           "type": "move",
-          "target": "node65",
-          "yaw": 113.4,
+          "target": "node67",
+          "yaw": 193.71,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
-          "target": "node67",
-          "yaw": 293.91,
+          "target": "node65",
+          "yaw": 13.96,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 143.8,
           "pitch": -20
         }
       ]
@@ -1806,15 +1890,22 @@
         {
           "id": 1,
           "type": "move",
-          "target": "node66",
-          "yaw": 111.49,
+          "target": "node68",
+          "yaw": 191.93,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
-          "target": "node40",
-          "yaw": 290.61,
+          "target": "node66",
+          "yaw": 11.0,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 265.01,
           "pitch": -20
         }
       ]
@@ -1831,14 +1922,21 @@
           "id": 1,
           "type": "move",
           "target": "node69",
-          "yaw": 106.49,
+          "yaw": 193.12,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
-          "target": "node65",
-          "yaw": 287.07,
+          "target": "node67",
+          "yaw": 13.89,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 103.12,
           "pitch": -20
         }
       ]
@@ -1855,14 +1953,14 @@
           "id": 1,
           "type": "move",
           "target": "node70",
-          "yaw": 117.8,
+          "yaw": 193.51,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node68",
-          "yaw": 299.19,
+          "yaw": 13.38,
           "pitch": -20
         }
       ]
@@ -1879,21 +1977,28 @@
           "id": 1,
           "type": "move",
           "target": "node71",
-          "yaw": 102.29,
+          "yaw": 188.6,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node69",
-          "yaw": 281.77,
+          "yaw": 9.5,
           "pitch": -20
         },
         {
           "id": 3,
           "type": "move",
           "target": "",
-          "yaw": 164.41,
+          "yaw": 279.63,
+          "pitch": -20
+        },
+        {
+          "id": 4,
+          "type": "move",
+          "target": "",
+          "yaw": 151.49,
           "pitch": -20
         }
       ]
@@ -1910,14 +2015,21 @@
           "id": 1,
           "type": "move",
           "target": "node72",
-          "yaw": 102.67,
+          "yaw": 201.15,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node70",
-          "yaw": 282.82,
+          "yaw": 20.76,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 112.7,
           "pitch": -20
         }
       ]
@@ -1934,14 +2046,14 @@
           "id": 1,
           "type": "move",
           "target": "node73",
-          "yaw": 105.77,
+          "yaw": 197.92,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node71",
-          "yaw": 286.29,
+          "yaw": 18.05,
           "pitch": -20
         }
       ]
@@ -1957,29 +2069,22 @@
         {
           "id": 1,
           "type": "move",
-          "target": "node100",
-          "yaw": 105.12,
+          "target": "node74",
+          "yaw": 196.76,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node72",
-          "yaw": 286.16,
+          "yaw": 17.92,
           "pitch": -20
         },
         {
           "id": 3,
           "type": "move",
-          "target": "node74",
-          "yaw": 195.25,
-          "pitch": -20
-        },
-        {
-          "id": 4,
-          "type": "move",
-          "target": "node99",
-          "yaw": 14.86,
+          "target": "",
+          "yaw": 107.4,
           "pitch": -20
         }
       ]
@@ -1996,14 +2101,21 @@
           "id": 1,
           "type": "move",
           "target": "node75",
-          "yaw": 187.1,
+          "yaw": 193.91,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node73",
-          "yaw": 7.1,
+          "yaw": 14.18,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 286.38,
           "pitch": -20
         }
       ]
@@ -2020,14 +2132,14 @@
           "id": 1,
           "type": "move",
           "target": "node76",
-          "yaw": 193.7,
+          "yaw": 198.29,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node74",
-          "yaw": 13.83,
+          "yaw": 19.45,
           "pitch": -20
         }
       ]
@@ -2044,21 +2156,14 @@
           "id": 1,
           "type": "move",
           "target": "node77",
-          "yaw": 191.76,
+          "yaw": 195.01,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node75",
-          "yaw": 11.12,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "n",
-          "yaw": 271.54,
+          "yaw": 15.66,
           "pitch": -20
         }
       ]
@@ -2075,21 +2180,14 @@
           "id": 1,
           "type": "move",
           "target": "node78",
-          "yaw": 193.05,
+          "yaw": 198.24,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node76",
-          "yaw": 13.7,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 102.92,
+          "yaw": 19.02,
           "pitch": -20
         }
       ]
@@ -2105,15 +2203,15 @@
         {
           "id": 1,
           "type": "move",
-          "target": "node79",
-          "yaw": 193.44,
+          "target": "node1",
+          "yaw": 200.1,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node77",
-          "yaw": 13.44,
+          "yaw": 20.7,
           "pitch": -20
         }
       ]
@@ -2129,15 +2227,15 @@
         {
           "id": 1,
           "type": "move",
-          "target": "node80",
-          "yaw": 188.64,
+          "target": "node81",
+          "yaw": 93.11,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
-          "target": "node78",
-          "yaw": 9.29,
+          "target": "node36",
+          "yaw": 266.13,
           "pitch": -20
         }
       ]
@@ -2153,22 +2251,15 @@
         {
           "id": 1,
           "type": "move",
-          "target": "node81",
-          "yaw": 200.93,
+          "target": "node82",
+          "yaw": 145.61,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
-          "target": "node79",
-          "yaw": 20.8,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 113.13,
+          "target": "node40",
+          "yaw": 316.43,
           "pitch": -20
         }
       ]
@@ -2184,15 +2275,22 @@
         {
           "id": 1,
           "type": "move",
-          "target": "node82",
-          "yaw": 197.44,
+          "target": "node84",
+          "yaw": 87.04,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
-          "target": "node80",
-          "yaw": 17.96,
+          "target": "node79",
+          "yaw": 270.53,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 173.83,
           "pitch": -20
         }
       ]
@@ -2209,21 +2307,14 @@
           "id": 1,
           "type": "move",
           "target": "node83",
-          "yaw": 196.93,
+          "yaw": 131.77,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node81",
-          "yaw": 18.22,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "node81",
-          "yaw": 107.45,
+          "yaw": 314.75,
           "pitch": -20
         }
       ]
@@ -2240,21 +2331,21 @@
           "id": 1,
           "type": "move",
           "target": "node84",
-          "yaw": 194.35,
+          "yaw": 143.15,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node82",
-          "yaw": 14.35,
+          "yaw": 312.42,
           "pitch": -20
         },
         {
           "id": 3,
           "type": "move",
           "target": "",
-          "yaw": 283.18,
+          "yaw": 278.15,
           "pitch": -20
         }
       ]
@@ -2271,14 +2362,21 @@
           "id": 1,
           "type": "move",
           "target": "node85",
-          "yaw": 198.22,
+          "yaw": 113.03,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
+          "target": "node81",
+          "yaw": 277.51,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
           "target": "node83",
-          "yaw": 19.78,
+          "yaw": 324.84,
           "pitch": -20
         }
       ]
@@ -2295,14 +2393,28 @@
           "id": 1,
           "type": "move",
           "target": "node86",
-          "yaw": 195.0,
+          "yaw": 111.22,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node84",
-          "yaw": 15.38,
+          "yaw": 291.61,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 266.39,
+          "pitch": -20
+        },
+        {
+          "id": 4,
+          "type": "move",
+          "target": "",
+          "yaw": 7.9,
           "pitch": -20
         }
       ]
@@ -2319,14 +2431,14 @@
           "id": 1,
           "type": "move",
           "target": "node87",
-          "yaw": 198.23,
+          "yaw": 113.42,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node85",
-          "yaw": 19.26,
+          "yaw": 293.68,
           "pitch": -20
         }
       ]
@@ -2342,15 +2454,36 @@
         {
           "id": 1,
           "type": "move",
-          "target": "node1",
-          "yaw": 200.04,
+          "target": "node88",
+          "yaw": 103.33,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node86",
-          "yaw": 20.69,
+          "yaw": 284.11,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 192.3,
+          "pitch": -20
+        },
+        {
+          "id": 4,
+          "type": "move",
+          "target": "node93",
+          "yaw": 11.91,
+          "pitch": -20
+        },
+        {
+          "id": 5,
+          "type": "move",
+          "target": "",
+          "yaw": 31.16,
           "pitch": -20
         }
       ]
@@ -2367,14 +2500,14 @@
           "id": 1,
           "type": "move",
           "target": "node89",
-          "yaw": 91.3,
+          "yaw": 107.59,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
-          "target": "node57",
-          "yaw": 276.34,
+          "target": "node87",
+          "yaw": 287.21,
           "pitch": -20
         }
       ]
@@ -2391,14 +2524,14 @@
           "id": 1,
           "type": "move",
           "target": "node90",
-          "yaw": 97.38,
+          "yaw": 118.06,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node88",
-          "yaw": 277.89,
+          "yaw": 298.71,
           "pitch": -20
         }
       ]
@@ -2415,14 +2548,21 @@
           "id": 1,
           "type": "move",
           "target": "node91",
-          "yaw": 99.09,
+          "yaw": 101.64,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node89",
-          "yaw": 281.42,
+          "yaw": 282.03,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 160.47,
           "pitch": -20
         }
       ]
@@ -2439,14 +2579,21 @@
           "id": 1,
           "type": "move",
           "target": "node92",
-          "yaw": 99.09,
+          "yaw": 102.8,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node90",
-          "yaw": 279.35,
+          "yaw": 282.67,
+          "pitch": -20
+        },
+        {
+          "id": 3,
+          "type": "move",
+          "target": "",
+          "yaw": 340.99,
           "pitch": -20
         }
       ]
@@ -2462,22 +2609,15 @@
         {
           "id": 1,
           "type": "move",
-          "target": "node93",
-          "yaw": 106.98,
+          "target": "node64",
+          "yaw": 105.77,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node91",
-          "yaw": 287.5,
-          "pitch": -20
-        },
-        {
-          "id": 3,
-          "type": "move",
-          "target": "",
-          "yaw": 193.75,
+          "yaw": 286.16,
           "pitch": -20
         }
       ]
@@ -2494,21 +2634,21 @@
           "id": 1,
           "type": "move",
           "target": "node94",
-          "yaw": 195.69,
+          "yaw": 1.67,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
-          "target": "node92",
-          "yaw": 284.14,
+          "target": "node87",
+          "yaw": 180.38,
           "pitch": -20
         },
         {
           "id": 3,
           "type": "move",
           "target": "",
-          "yaw": 17.24,
+          "yaw": 98.27,
           "pitch": -20
         }
       ]
@@ -2525,28 +2665,21 @@
           "id": 1,
           "type": "move",
           "target": "node95",
-          "yaw": 191.84,
+          "yaw": 3.1,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node93",
-          "yaw": 12.33,
+          "yaw": 182.06,
           "pitch": -20
         },
         {
           "id": 3,
           "type": "move",
           "target": "",
-          "yaw": 279.87,
-          "pitch": -20
-        },
-        {
-          "id": 4,
-          "type": "move",
-          "target": "",
-          "yaw": 101.94,
+          "yaw": 280.99,
           "pitch": -20
         }
       ]
@@ -2563,14 +2696,14 @@
           "id": 1,
           "type": "move",
           "target": "node96",
-          "yaw": 189.61,
+          "yaw": 3.88,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node94",
-          "yaw": 10.52,
+          "yaw": 182.2,
           "pitch": -20
         }
       ]
@@ -2587,21 +2720,28 @@
           "id": 1,
           "type": "move",
           "target": "node97",
-          "yaw": 200.22,
+          "yaw": 7.37,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node95",
-          "yaw": 20.22,
+          "yaw": 186.08,
           "pitch": -20
         },
         {
           "id": 3,
           "type": "move",
           "target": "",
-          "yaw": 273.93,
+          "yaw": 249.31,
+          "pitch": -20
+        },
+        {
+          "id": 4,
+          "type": "move",
+          "target": "",
+          "yaw": 88.58,
           "pitch": -20
         }
       ]
@@ -2618,21 +2758,21 @@
           "id": 1,
           "type": "move",
           "target": "node98",
-          "yaw": 202.94,
+          "yaw": 11.38,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node96",
-          "yaw": 23.2,
+          "yaw": 190.61,
           "pitch": -20
         },
         {
           "id": 3,
           "type": "move",
           "target": "",
-          "yaw": 246.73,
+          "yaw": 273.11,
           "pitch": -20
         }
       ]
@@ -2649,21 +2789,21 @@
           "id": 1,
           "type": "move",
           "target": "node99",
-          "yaw": 201.13,
+          "yaw": 6.86,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node97",
-          "yaw": 22.16,
+          "yaw": 186.86,
           "pitch": -20
         },
         {
           "id": 3,
           "type": "move",
           "target": "",
-          "yaw": 322.93,
+          "yaw": 310.74,
           "pitch": -20
         }
       ]
@@ -2679,15 +2819,15 @@
         {
           "id": 1,
           "type": "move",
-          "target": "node73",
-          "yaw": 196.32,
+          "target": "node51",
+          "yaw": 6.09,
           "pitch": -20
         },
         {
           "id": 2,
           "type": "move",
           "target": "node98",
-          "yaw": 17.35,
+          "yaw": 181.56,
           "pitch": -20
         }
       ]
@@ -2765,7 +2905,7 @@
         {
           "id": 1,
           "type": "move",
-          "target": "node103",
+          "target": "",
           "yaw": 104.94,
           "pitch": -20
         },
