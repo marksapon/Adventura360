@@ -3,12 +3,12 @@
     {
       "scene": "dit",
       "location": "Department of Information Technology",
-      "image": "/assets/nodes/8.webp",
+      "image": "/assets/Database Images/unrestricted nodes/8.webp",
       "back": [
         "node5",
         "node10",
         "node21",
-        "List ng nodes na may access sa DIT building gamit ang nodes.scene value"
+        "List ng Database Images/unrestricted nodes na may access sa DIT building gamit ang Database Images/unrestricted nodes.scene value"
       ],
       "coords": {
         "x": 0.232,
