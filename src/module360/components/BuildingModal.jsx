@@ -170,7 +170,7 @@ const BuildingModal = ({ visible, onClose, loginType }) => {
                 >
                   <MdDirections className="size-4 sm:size-6" />
                 </button>
-                <p className="pt-1 text-xs text-green-600">Direction</p>
+                <p className="pt-1 text-xs text-green-600">Go to</p>
               </div>
             </div>
             <div className="h-auto w-full sm:h-auto">

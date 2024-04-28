@@ -1,0 +1,32 @@
+{
+  "college department": [
+    {
+      "text": "College of Department 1",
+      "acronym": "CON",
+      "image": "https://via.placeholder.com/150",
+      "tags": ["CEIT", "CON", "BLDG"]
+    },
+    {
+      "text": "College of Department 2",
+      "acronym": "CON",
+      "image": "https://via.placeholder.com/150",
+      "tags": ["BLDG", "CON"]
+    }
+  ],
+  "conference room": [
+    {
+      "text": "Department of Information Technology",
+      "acronym": "DIT",
+      "image": "https://via.placeholder.com/160",
+      "tags": ["bldg", "it"]
+    }
+  ],
+  "faculty room": [
+    {
+      "text": "College of Engineering",
+      "acronym": "COE",
+      "image": "https://via.placeholder.com/170",
+      "tags": ["nursing"]
+    }
+  ]
+}

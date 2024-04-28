@@ -7,7 +7,6 @@ import Helpmodal from "./helpmodal"; // Help Modal
 import Sharelink from "./Sharelink"; // Share Modal
 import Bugmodal from "./Bugmodal"; // Bug Modal
 import MapModule from "../../mapmodule/Map.jsx"; // Map Module
-import BuildingModal from "./BuildingModal.jsx"; // Building Modal
 import Search from "./Search.jsx";
 
 /* Icons */
@@ -33,7 +32,6 @@ const Navigationbar = ({
   const [Showmodal, setShowmodal] = useState(false); // Help Modal State
   const [Sharemodal, setShowSharemodal] = useState(false); // Share Modal State
   const [Bugmdl, setShowBugmodal] = useState(false); // Bug Modal State
-  const [bldgModal, setBldgModal] = useState(false); // Building Modal State
   const [searchModal, setSearchModal] = useState(false); // Search Modal State
 
   const handlecloseShare = () => setShowSharemodal(true); // Function to change Share Modal
@@ -256,7 +254,7 @@ const Navigationbar = ({
             </div>
           </div>
         </div>
-        <BuildingModal onClose={handleclose} visible={bldgModal} />
+
         <Search onClose={handleclose} visible={searchModal} />
         <Helpmodal onClose={handleclose} visible={Showmodal} />
         <Sharelink onClose={handlecloseShare} visible={Sharemodal} />

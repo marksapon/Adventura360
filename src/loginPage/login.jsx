@@ -106,6 +106,7 @@ function Login({ BACKEND_URL, setLoginType }) {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
+
             <input
               className="w-full border p-2"
               type="password"
