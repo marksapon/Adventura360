@@ -1,32 +1,73 @@
 {
-  "college department": [
+  "restroom": [
     {
-      "text": "College of Department 1",
+      "text": "restroom",
       "acronym": "CON",
       "image": "https://via.placeholder.com/150",
       "tags": ["CEIT", "CON", "BLDG"]
-    },
-    {
-      "text": "College of Department 2",
-      "acronym": "CON",
-      "image": "https://via.placeholder.com/150",
-      "tags": ["BLDG", "CON"]
     }
   ],
-  "conference room": [
+  "handwash": [
     {
-      "text": "Department of Information Technology",
+      "text": "handwash",
       "acronym": "DIT",
-      "image": "https://via.placeholder.com/160",
-      "tags": ["bldg", "it"]
+      "image": "https://via.placeholder.com/160"
     }
   ],
-  "faculty room": [
+  "school facilities": [
     {
-      "text": "College of Engineering",
+      "text": "school facilities",
       "acronym": "COE",
-      "image": "https://via.placeholder.com/170",
-      "tags": ["nursing"]
+      "image": "https://via.placeholder.com/170"
+    }
+  ],
+  "college buildings": [
+    {
+      "text": "college buildings",
+      "acronym": "COE",
+      "image": "https://via.placeholder.com/170"
+    }
+  ],
+  "cafeteria": [
+    {
+      "text": "cafeteria",
+      "acronym": "COE",
+      "image": "https://via.placeholder.com/170"
+    }
+  ],
+  "school attraction": [
+    {
+      "text": "school attraction",
+      "acronym": "COE",
+      "image": "https://via.placeholder.com/170"
+    }
+  ],
+  "court": [
+    {
+      "text": "court",
+      "acronym": "COE",
+      "image": "https://via.placeholder.com/170"
+    }
+  ],
+  "parking": [
+    {
+      "text": "parking",
+      "acronym": "COE",
+      "image": "https://via.placeholder.com/170"
+    }
+  ],
+  "kiosk": [
+    {
+      "text": "kiosk",
+      "acronym": "COE",
+      "image": "https://via.placeholder.com/170"
+    }
+  ],
+  "venue": [
+    {
+      "text": "venue",
+      "acronym": "COE",
+      "image": "https://via.placeholder.com/170"
     }
   ]
 }

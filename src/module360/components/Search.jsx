@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { IoIosClose } from "react-icons/io";
 import { PiCardsDuotone, PiGridNine, PiList } from "react-icons/pi";
+import { IoIosArrowUp } from "react-icons/io";
+import { FaTag } from "react-icons/fa"; // import more icons as needed
+import { FaHome, FaSchool, FaBuilding } from "react-icons/fa"; // import more icons as needed
+
 import contentMap from "../../database/contentMap.json";
 
 const Search = ({ visible, onClose }) => {
@@ -11,6 +15,8 @@ const Search = ({ visible, onClose }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedTag, setSelectedTag] = useState([]);
   const [suggestions, setSuggestions] = useState(contentMap);
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedKey, setSelectedKey] = useState("All");
 
   // Close search modal
   const handleCloseAndReset = () => {
@@ -18,8 +24,27 @@ const Search = ({ visible, onClose }) => {
   };
 
   // Handle sort change
-  const handleSortChange = (event) => {
-    setSort(event.target.value);
+  const handleSortChange = (key) => {
+    setSort(key);
+    setIsOpen(false);
+  };
+
+  // tag icons and colors
+  const tagStyles = {
+    CEIT: {
+      icon: <FaTag className="flex h-full justify-center text-center" />,
+      color: "red",
+    },
+    CON: { icon: <FaTag />, color: "blue" },
+    BLDG: { icon: <FaTag />, color: "green" },
+  };
+
+  // category icons and colors
+  const keyIcons = {
+    All: <FaHome className="flex justify-center text-center text-green-600" />,
+    restroom: <FaSchool />,
+    handwash: <FaBuilding />,
+    // add more keys as needed
   };
 
   // Handle tag click to filter suggestions
@@ -99,46 +124,77 @@ const Search = ({ visible, onClose }) => {
       {/* main container for the search component. */}
       <div className="flex h-full w-full items-start pr-2">
         {/* container for the search box. */}
-        <div className="flex h-full w-[732px] flex-col rounded-br-2xl rounded-tr-2xl bg-white transition-all duration-200 ease-in-out sm:max-w-[500px]">
+        <div className="md:w- flex h-screen w-[500px] flex-col rounded-br-2xl rounded-tr-2xl bg-white transition-all duration-200 ease-in-out">
           {/* container for the search box content. */}
-          <div className="h-full w-full">
+          <div className="h-full w-auto">
             {/* container for the search box header. */}
-            <div className="h-full w-full rounded-tr-2xl bg-cover bg-center bg-no-repeat transition-all md:h-[200px]">
-              {/* container for the search box header content. */}
-              <div className="relative z-50 flex h-full w-full">
-                {/* container for the search box header text and input fields. */}
-                <div className="h-full w-full">
-                  <h1 className="p-4 text-2xl font-bold">Search places</h1>
+
+            {/* container for the search box header content. */}
+            <div className="relative z-50 flex h-full w-full">
+              {/* container for the search box header text and input fields. */}
+              <div className="flex h-screen w-full flex-col">
+                <h1 className="p-4 text-2xl font-bold">Search places</h1>
+                {/* container for the search input and sort dropdown. */}
+                <div className="flex px-4 pb-4">
+                  {/* search input. */}
+                  <input
+                    type="text"
+                    placeholder="I'm looking for..."
+                    className="mt-1 block w-full rounded-md border bg-white px-2 py-4 shadow-md focus:border-green-600 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                  />
+                </div>
+
+                {/* NIGGA */}
+                <div className="no-scrollbar h-full overflow-auto">
                   <div className="flex flex-col border-b px-4">
-                    {/* container for the search input and sort dropdown. */}
-                    <div className="flex pb-2">
-                      {/* search input. */}
-                      <input
-                        type="text"
-                        placeholder="I'm looking for..."
-                        className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-1 py-2 shadow-sm focus:border-green-600 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                      />
-                      {/* sort dropdown. */}
-                      <div className="px-2">
-                        <select
-                          id="sort"
-                          name="sort"
-                          className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-1 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                          value={sort}
-                          onChange={handleSortChange}
-                        >
-                          <option>All</option>
-                          {Object.keys(contentMap).map((key, index) => (
-                            <option key={index}>{key}</option>
-                          ))}
-                        </select>
+                    {/* sort dropdown. */}
+                    <div className="h-fit pb-4">
+                      <button
+                        onClick={() => setIsOpen(!isOpen)}
+                        className="flex items-center text-xl font-bold text-gray-700"
+                      >
+                        Filter by &nbsp;
+                        <IoIosArrowUp
+                          className={`transform ${isOpen ? "rotate-180" : ""}`}
+                        />
+                      </button>
+                      <div
+                        className={`origin-top transform overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-0 scale-y-0 opacity-0" : "max-h-full scale-y-100 opacity-100"}`}
+                      >
+                        <div className="px-2 pb-4 pt-2">
+                          <div
+                            className={`mb-2 flex gap-2 rounded-lg border bg-slate-300 p-2 text-center shadow-lg ${selectedKey === "All" ? "bg-slate-400" : ""}`}
+                            onClick={() => {
+                              setSelectedKey("All");
+                              handleSortChange("All");
+                            }}
+                          >
+                            {keyIcons["All"]} All
+                          </div>
+                          <div className="grid grid-cols-2 grid-rows-5 gap-2">
+                            {Object.keys(contentMap).map((key, index) => (
+                              <div
+                                key={index}
+                                className={`flex gap-2 rounded-lg border bg-slate-300 p-2 text-center shadow-lg ${selectedKey === key ? "bg-slate-400" : ""}`}
+                                onClick={() => {
+                                  setSelectedKey(key);
+                                  handleSortChange(key);
+                                }}
+                              >
+                                {keyIcons[key]} {key}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <h1 className="pb-2 text-sm text-gray-500">tags</h1>
                     {/* tag buttons. */}
-                    <div className="flex gap-2 pb-2">
+                    <h1 className="pb-2 text-sm font-semibold text-gray-500">
+                      Select tags:
+                    </h1>
+                    <div className="flex w-full flex-wrap gap-2 pb-2">
                       {/* container for the tag buttons. */}
                       {Object.values(contentMap)
                         .flatMap((items) => items)
@@ -150,17 +206,19 @@ const Search = ({ visible, onClose }) => {
                           <button
                             key={index}
                             onClick={() => handleTagClick(tag)}
-                            className={`h-fit rounded-xl bg-green-600 px-2 py-1 text-sm text-black ${
-                              selectedTag.includes(tag) ? "bg-opacity-70" : ""
+                            className={`flex h-auto justify-center gap-1 rounded-xl px-2 py-1 text-center text-xs text-white ${
+                              selectedTag.includes(tag) ? "bg-green-500" : ""
                             }`}
+                            style={{ backgroundColor: tagStyles[tag]?.color }}
                           >
+                            {tagStyles[tag]?.icon}
                             {tag}
                           </button>
                         ))}
                       {/* reset button. */}
                       <button
                         onClick={handleReset}
-                        className="h-fit rounded-xl bg-gray-500 px-2 py-1 text-sm text-white"
+                        className="h-fit rounded-xl bg-gray-500 px-2 py-1 text-xs text-white"
                       >
                         Reset
                       </button>
@@ -215,13 +273,7 @@ const Search = ({ visible, onClose }) => {
                     </div>
                   </div>
                   {/* container for the suggestions. */}
-                  <div
-                    className="no-scrollbar h-max w-full overflow-auto px-4 py-2"
-                    style={{
-                      maxHeight: "calc(100vh - 190px)",
-                      overflowY: "auto",
-                    }}
-                  >
+                  <div className="h-auto px-4 py-2">
                     {sort === "All" && (
                       <div
                         className={`flex flex-col gap-2 ${
@@ -291,14 +343,14 @@ const Search = ({ visible, onClose }) => {
                     )}
                   </div>
                 </div>
-                {/* close button. */}
-                <button
-                  className="absolute right-0 items-center justify-center"
-                  onClick={() => handleCloseAndReset()}
-                >
-                  <IoIosClose className="h-12 w-12 text-black" />
-                </button>
               </div>
+              {/* close button. */}
+              <button
+                className="absolute right-0 items-center justify-center"
+                onClick={() => handleCloseAndReset()}
+              >
+                <IoIosClose className="h-12 w-12 text-black" />
+              </button>
             </div>
           </div>
         </div>
