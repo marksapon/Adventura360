@@ -3,7 +3,20 @@ import { IoIosClose } from "react-icons/io";
 import { PiCardsDuotone, PiGridNine, PiList } from "react-icons/pi";
 import { IoIosArrowUp } from "react-icons/io";
 import { FaTag } from "react-icons/fa"; // import more icons as needed
-import { FaHome, FaSchool, FaBuilding } from "react-icons/fa"; // import more icons as needed
+import { FaPeopleRoof } from "react-icons/fa6"; // Batibot Icon
+import { FaSquareParking } from "react-icons/fa6"; // Parking Lot Icon
+import { GrCafeteria } from "react-icons/gr"; // Cafeteria Icon
+import { LuSchool } from "react-icons/lu"; // School Facilities Icon
+import { PiBinocularsDuotone } from "react-icons/pi"; // School Attraction Icon
+import { TbSchool } from "react-icons/tb"; // College Buildings Icon\
+import { GiAbstract068 } from "react-icons/gi"; // Court Icon
+import {
+  FaHome,
+  FaSchool,
+  FaBuilding,
+  FaRestroom,
+  FaHotel,
+} from "react-icons/fa"; // import more icons as needed
 
 import contentMap from "../../database/contentMap.json";
 
@@ -33,17 +46,25 @@ const Search = ({ visible, onClose }) => {
   const tagStyles = {
     CEIT: {
       icon: <FaTag className="flex h-full justify-center text-center" />,
-      color: "red",
+      color: "orange",
     },
-    CON: { icon: <FaTag />, color: "blue" },
+    CON: { icon: <FaTag />, color: "	#20a7db " },
     BLDG: { icon: <FaTag />, color: "green" },
   };
 
   // category icons and colors
   const keyIcons = {
     All: <FaHome className="flex justify-center text-center text-green-600" />,
-    restroom: <FaSchool />,
-    handwash: <FaBuilding />,
+    restroom: <FaRestroom className="text-green-600" />,
+    handwash: <FaBuilding className="text-green-600" />,
+    "school facilities": <LuSchool className="text-green-600" />,
+    "college buildings": <TbSchool className="text-green-600" />,
+    cafeteria: <GrCafeteria className="text-green-600" />,
+    "school attraction": <PiBinocularsDuotone className="text-green-600" />,
+    court: <GiAbstract068 className="text-green-600" />,
+    parking: <FaSquareParking className="text-green-600" />,
+    kiosk: <FaPeopleRoof className="text-green-600" />,
+    venue: <FaHotel className="text-green-600" />,
     // add more keys as needed
   };
 
@@ -173,11 +194,11 @@ const Search = ({ visible, onClose }) => {
                           >
                             {keyIcons["All"]} All
                           </div>
-                          <div className="grid grid-cols-2 grid-rows-5 gap-2">
+                          <div className="grid grid-cols-2 grid-rows-5  gap-2">
                             {Object.keys(contentMap).map((key, index) => (
                               <div
                                 key={index}
-                                className={`flex gap-2 rounded-lg border bg-slate-300 p-2 text-center shadow-lg ${selectedKey === key ? "bg-slate-400" : ""}`}
+                                className={`flex items-center  gap-2 rounded-lg border bg-slate-300 p-2 text-center shadow-lg ${selectedKey === key ? "bg-slate-400" : ""}`}
                                 onClick={() => {
                                   setSelectedKey(key);
                                   handleSortChange(key);
@@ -207,7 +228,9 @@ const Search = ({ visible, onClose }) => {
                             key={index}
                             onClick={() => handleTagClick(tag)}
                             className={`flex h-auto justify-center gap-1 rounded-xl px-2 py-1 text-center text-xs text-white ${
-                              selectedTag.includes(tag) ? "bg-green-500" : ""
+                              selectedTag.includes(tag)
+                                ? "bg-green-500 opacity-50 ring-2 ring-green-500"
+                                : ""
                             }`}
                             style={{ backgroundColor: tagStyles[tag]?.color }}
                           >
