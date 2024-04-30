@@ -391,25 +391,42 @@ function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
                 // Add the key prop here
                 <div
                   key={index * 3}
-                  className={` view360-hotspot h-7 w-7 rounded-full md:h-14 md:w-14 ${colorMap[hotspot.type].color} pointer-events-auto flex cursor-pointer items-center justify-center `}
+                  className={` view360-hotspot h-7 w-7 rounded-full md:h-14 md:w-14 ${colorMap[hotspot.type].color} pointer-events-auto z-20 flex cursor-pointer items-center justify-center `}
                   data-yaw={hotspot.yaw}
                   data-pitch={hotspot.pitch}
                   onClick={() => {
                     action(hotspot.type, hotspot.target, index);
                   }}
                 >
+                  {/* Hotspot Icon */}
                   {getIcon(hotspot.type, hotspot.class)}
 
                   {hotspot.type === "popup" &&
                     curr_Extras.map((extras) => {
                       if (extras.state === true && extras.id === index) {
                         return (
-                          <div className="absolute bottom-16 flex h-36 w-52 flex-col items-center bg-black p-2">
+                          /* Pop Up info container */
+                          <div className="w-15 absolute -bottom-11 flex h-12 flex-col items-center gap-3 rounded-md bg-white p-2 shadow-2xl md:-bottom-11 md:h-48 md:w-60">
                             <img
                               src={extras.image}
-                              className="h-9/16 w-16/9 flex items-center justify-center bg-cover bg-center bg-no-repeat"
+                              className="h-9/16 w-16/9 flex items-center justify-center rounded-sm bg-cover bg-center bg-no-repeat"
                             />
+
+                            {/* Hotspot Icon: Keep bottom value the opposite of the container 
+                            IE: bottom-11 in Icon -bottom-11 for container */}
+                            <div
+                              className={` absolute bottom-11 h-7 w-7 rounded-full md:h-14 md:w-14 ${colorMap[hotspot.type].color} pointer-events-auto flex cursor-pointer items-center justify-center`}
+                            >
+                              {getIcon(hotspot.type, hotspot.class)}
+                            </div>
+                            {/* Hotspot Icon */}
+
+                            {/* Text */}
+                            <div className="text-baseline flex h-full w-full items-end justify-center p-3">
+                              {extras.text}
+                            </div>
                           </div>
+                          /* Pop Up info */
                         );
                       }
                       return null; // return null when extras.state is not true
