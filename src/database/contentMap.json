@@ -1,73 +1,88 @@
 {
   "restroom": [
     {
-      "text": "restroom",
+      "text": "Restroom",
       "acronym": "CON",
-      "image": "https://via.placeholder.com/150",
-      "tags": ["CEIT", "CON", "BLDG"]
+      "image": "/assets/Database Images/unrestricted nodes/1.webp",
+      "tags": [
+        "CEIT",
+        "CON",
+        "CAS",
+        "CAFENR",
+        "CCJ",
+        "CED",
+        "CEMDS",
+        "CSPEAR",
+        "CVMBS",
+        "COM",
+        "SCHOOL",
+        "HISTORICAL",
+        "LABORATORY",
+        "LEISURE"
+      ]
     }
   ],
   "handwash": [
     {
-      "text": "handwash",
+      "text": "Handwash",
       "acronym": "DIT",
-      "image": "https://via.placeholder.com/160"
+      "image": "/assets/Database Images/unrestricted nodes/2.webp"
     }
   ],
   "school facilities": [
     {
-      "text": "school facilities",
+      "text": "School facilities",
       "acronym": "COE",
-      "image": "https://via.placeholder.com/170"
+      "image": "/assets/Database Images/unrestricted nodes/3.webp"
     }
   ],
   "college buildings": [
     {
-      "text": "college buildings",
+      "text": "College buildings",
       "acronym": "COE",
-      "image": "https://via.placeholder.com/170"
+      "image": "/assets/Database Images/unrestricted nodes/4.webp"
     }
   ],
   "cafeteria": [
     {
-      "text": "cafeteria",
+      "text": "Cafeteria",
       "acronym": "COE",
-      "image": "https://via.placeholder.com/170"
+      "image": "/assets/Database Images/unrestricted nodes/5.webp"
     }
   ],
   "school attraction": [
     {
-      "text": "school attraction",
+      "text": "School attraction",
       "acronym": "COE",
-      "image": "https://via.placeholder.com/170"
+      "image": "/assets/Database Images/unrestricted nodes/6.webp"
     }
   ],
   "court": [
     {
-      "text": "court",
+      "text": "Court",
       "acronym": "COE",
-      "image": "https://via.placeholder.com/170"
+      "image": "/assets/Database Images/unrestricted nodes/7.webp"
     }
   ],
   "parking": [
     {
-      "text": "parking",
+      "text": "Parking",
       "acronym": "COE",
-      "image": "https://via.placeholder.com/170"
+      "image": "/assets/Database Images/unrestricted nodes/8.webp"
     }
   ],
   "kiosk": [
     {
-      "text": "kiosk",
+      "text": "Kiosk",
       "acronym": "COE",
-      "image": "https://via.placeholder.com/170"
+      "image": "/assets/Database Images/unrestricted nodes/9.webp"
     }
   ],
   "venue": [
     {
-      "text": "venue",
+      "text": "Venue",
       "acronym": "COE",
-      "image": "https://via.placeholder.com/170"
+      "image": "/assets/Database Images/unrestricted nodes/10.webp"
     }
   ]
 }

@@ -9,7 +9,6 @@ function Login({ BACKEND_URL, setLoginType }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loginMessage, setLoginMessage] = useState("");
-  3;
   const [isLoginSuccessful, setIsLoginSuccessful] = useState(false);
   const navigate = useNavigate();
 

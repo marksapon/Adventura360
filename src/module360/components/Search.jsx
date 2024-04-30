@@ -2,21 +2,14 @@ import React, { useState, useEffect } from "react";
 import { IoIosClose } from "react-icons/io";
 import { PiCardsDuotone, PiGridNine, PiList } from "react-icons/pi";
 import { IoIosArrowUp } from "react-icons/io";
-import { FaTag } from "react-icons/fa"; // import more icons as needed
-import { FaPeopleRoof } from "react-icons/fa6"; // Batibot Icon
-import { FaSquareParking } from "react-icons/fa6"; // Parking Lot Icon
-import { GrCafeteria } from "react-icons/gr"; // Cafeteria Icon
-import { LuSchool } from "react-icons/lu"; // School Facilities Icon
-import { PiBinocularsDuotone } from "react-icons/pi"; // School Attraction Icon
-import { TbSchool } from "react-icons/tb"; // College Buildings Icon\
-import { GiAbstract068 } from "react-icons/gi"; // Court Icon
-import {
-  FaHome,
-  FaSchool,
-  FaBuilding,
-  FaRestroom,
-  FaHotel,
-} from "react-icons/fa"; // import more icons as needed
+import { FaPeopleRoof } from "react-icons/fa6";
+import { FaSquareParking } from "react-icons/fa6";
+import { GrCafeteria } from "react-icons/gr";
+import { LuSchool } from "react-icons/lu";
+import { PiBinocularsDuotone } from "react-icons/pi";
+import { TbSchool } from "react-icons/tb";
+import { GiAbstract068 } from "react-icons/gi";
+import { FaHome, FaBuilding, FaRestroom, FaHotel } from "react-icons/fa";
 
 import contentMap from "../../database/contentMap.json";
 
@@ -24,12 +17,12 @@ const Search = ({ visible, onClose }) => {
   // State variables
   const [view, setView] = useState("list");
   const [sort, setSort] = useState("All");
-  const [dropdownOpen, setDropdownOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedTag, setSelectedTag] = useState([]);
   const [suggestions, setSuggestions] = useState(contentMap);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedKey, setSelectedKey] = useState("All");
+  const [clicked, setClicked] = useState(false);
 
   // Close search modal
   const handleCloseAndReset = () => {
@@ -44,27 +37,35 @@ const Search = ({ visible, onClose }) => {
 
   // tag icons and colors
   const tagStyles = {
-    CEIT: {
-      icon: <FaTag className="flex h-full justify-center text-center" />,
-      color: "orange",
-    },
-    CON: { icon: <FaTag />, color: "	#20a7db " },
-    BLDG: { icon: <FaTag />, color: "green" },
+    CEIT: { color: "orange" },
+    CON: { color: "#20a7db" },
+    CAS: { color: "#E9C229" },
+    CAFENR: { color: "#078423" },
+    CCJ: { color: "purple" },
+    CED: { color: "#4D547A" },
+    CEMDS: { color: "#C42329" },
+    CSPEAR: { color: "#EABDA8" },
+    CVMBS: { color: "#E9CA71" },
+    COM: { color: "red" },
+    SCHOOL: { color: "yellow" },
+    HISTORICAL: { color: "indigo" },
+    LABORATORY: { color: "pink" },
+    LEISURE: { color: "orange" },
   };
 
   // category icons and colors
   const keyIcons = {
-    All: <FaHome className="flex justify-center text-center text-green-600" />,
-    restroom: <FaRestroom className="text-green-600" />,
-    handwash: <FaBuilding className="text-green-600" />,
-    "school facilities": <LuSchool className="text-green-600" />,
-    "college buildings": <TbSchool className="text-green-600" />,
-    cafeteria: <GrCafeteria className="text-green-600" />,
-    "school attraction": <PiBinocularsDuotone className="text-green-600" />,
-    court: <GiAbstract068 className="text-green-600" />,
-    parking: <FaSquareParking className="text-green-600" />,
-    kiosk: <FaPeopleRoof className="text-green-600" />,
-    venue: <FaHotel className="text-green-600" />,
+    All: <FaHome />,
+    restroom: <FaRestroom />,
+    handwash: <FaBuilding />,
+    "school facilities": <LuSchool />,
+    "college buildings": <TbSchool />,
+    cafeteria: <GrCafeteria />,
+    "school attraction": <PiBinocularsDuotone />,
+    court: <GiAbstract068 />,
+    parking: <FaSquareParking />,
+    kiosk: <FaPeopleRoof />,
+    venue: <FaHotel />,
     // add more keys as needed
   };
 
@@ -156,22 +157,22 @@ const Search = ({ visible, onClose }) => {
               <div className="flex h-screen w-full flex-col">
                 <h1 className="p-4 text-2xl font-bold">Search places</h1>
                 {/* container for the search input and sort dropdown. */}
-                <div className="flex px-4 pb-4">
+                <div className="flex px-4 pb-2">
                   {/* search input. */}
                   <input
                     type="text"
                     placeholder="I'm looking for..."
-                    className="mt-1 block w-full rounded-md border bg-white px-2 py-4 shadow-md focus:border-green-600 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                    className="mt-1 block w-full rounded-md border bg-white px-2 py-4 text-base shadow-md focus:border-green-600 focus:outline-none"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                   />
                 </div>
 
-                {/* NIGGA */}
+                {/* Filter Section */}
                 <div className="no-scrollbar h-full overflow-auto">
                   <div className="flex flex-col border-b px-4">
                     {/* sort dropdown. */}
-                    <div className="h-fit pb-4">
+                    <div className="h-auto pb-2">
                       <button
                         onClick={() => setIsOpen(!isOpen)}
                         className="flex items-center text-xl font-bold text-gray-700"
@@ -181,189 +182,203 @@ const Search = ({ visible, onClose }) => {
                           className={`transform ${isOpen ? "rotate-180" : ""}`}
                         />
                       </button>
+
+                      {/*FILTER DROPDOWN */}
                       <div
-                        className={`origin-top transform overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-0 scale-y-0 opacity-0" : "max-h-full scale-y-100 opacity-100"}`}
+                        className={`origin-top transform overflow-hidden text-sm transition-all duration-300 ease-in-out sm:text-base ${isOpen ? "max-h-0 scale-y-0 opacity-0" : "max-h-full scale-y-100 opacity-100"}`}
                       >
-                        <div className="px-2 pb-4 pt-2">
+                        <div className="m-2">
                           <div
-                            className={`mb-2 flex gap-2 rounded-lg border bg-slate-300 p-2 text-center shadow-lg ${selectedKey === "All" ? "bg-slate-400" : ""}`}
+                            className={`flex items-center justify-center gap-2 rounded-lg p-1 text-center transition-all duration-300 ease-in-out sm:p-3 ${selectedKey === "All" ? "border border-gray-200 bg-slate-50 shadow-lg" : "border border-transparent hover:border"} hover:border-gray-200 hover:shadow-lg`}
                             onClick={() => {
                               setSelectedKey("All");
                               handleSortChange("All");
                             }}
                           >
-                            {keyIcons["All"]} All
+                            <span className="flex items-center rounded-2xl bg-green-600 p-2 text-center text-white">
+                              {keyIcons["All"]}
+                            </span>
+                            All
                           </div>
-                          <div className="grid grid-cols-2 grid-rows-5  gap-2">
+                          <div className="mt-4 grid grid-cols-2 grid-rows-5 gap-2 sm:gap-4">
+                            {/* Map over the keys of the contentMap object */}
                             {Object.keys(contentMap).map((key, index) => (
                               <div
                                 key={index}
-                                className={`flex items-center  gap-2 rounded-lg border bg-slate-300 p-2 text-center shadow-lg ${selectedKey === key ? "bg-slate-400" : ""}`}
+                                className={`
+        flex items-center gap-2 rounded-lg p-1 text-center transition-all duration-300 ease-in-out sm:p-3 
+        ${selectedKey === key ? "border border-gray-200 bg-slate-50 shadow-lg" : "border border-transparent hover:border"} 
+        hover:border-gray-200 hover:shadow-lg
+      `}
                                 onClick={() => {
+                                  // Set the selected key to the key of the clicked item
                                   setSelectedKey(key);
+                                  // Perform sorting operation based on the key of the clicked item
                                   handleSortChange(key);
                                 }}
                               >
-                                {keyIcons[key]} {key}
+                                {/* Display the icon associated with the key */}
+                                <span className="flex items-center rounded-2xl bg-green-600 p-2 text-center text-white">
+                                  {keyIcons[key]}
+                                </span>
+                                {/* Display the key with the first letter capitalized and the rest in lowercase */}
+                                {key.charAt(0).toUpperCase() +
+                                  key.slice(1).toLowerCase()}
                               </div>
                             ))}
                           </div>
                         </div>
+                        <h1 className="pb-2 text-sm font-semibold text-gray-500">
+                          Select tags:
+                        </h1>
+                        <div className="mb-2 flex w-full flex-wrap gap-1">
+                          {/* container for the tag buttons. */}
+                          {
+                            // all items and their tags into a single array
+                            Object.values(contentMap)
+                              .flatMap((items) => items)
+                              .flatMap((item) => item.tags || [])
+                              // Remove duplicate tags
+                              .filter(
+                                (tag, index, self) =>
+                                  self.indexOf(tag) === index,
+                              )
+                              // Map over each unique tag
+                              .map((tag, index) => (
+                                <button
+                                  key={index}
+                                  // Call handleTagClick with the tag when the button is clicked
+                                  onClick={() => handleTagClick(tag)}
+                                  className={`flex h-auto justify-center gap-1 rounded-xl px-2 py-1 text-center text-xs text-white hover:opacity-80 ${
+                                    // styles based on whether the tag is selected
+                                    selectedTag.includes(tag)
+                                      ? "bg-green-500 opacity-80 ring-2 ring-green-500"
+                                      : ""
+                                  }`}
+                                  style={{
+                                    backgroundColor: tagStyles[tag]?.color,
+                                  }}
+                                >
+                                  {/* Display the icon tag */}
+                                  {tagStyles[tag]?.icon}
+                                  {/* Display the tag */}
+                                  {tag}
+                                </button>
+                              ))
+                          }
+                          {/* reset button. */}
+                          <button
+                            onClick={handleReset}
+                            className="h-fit rounded-xl bg-gray-500 px-2 py-1 text-xs text-white"
+                          >
+                            RESET
+                          </button>
+                        </div>
                       </div>
                     </div>
-                    {/* tag buttons. */}
-                    <h1 className="pb-2 text-sm font-semibold text-gray-500">
-                      Select tags:
-                    </h1>
-                    <div className="flex w-full flex-wrap gap-2 pb-2">
-                      {/* container for the tag buttons. */}
-                      {Object.values(contentMap)
-                        .flatMap((items) => items)
-                        .flatMap((item) => item.tags || [])
-                        .filter(
-                          (tag, index, self) => self.indexOf(tag) === index,
-                        )
-                        .map((tag, index) => (
-                          <button
-                            key={index}
-                            onClick={() => handleTagClick(tag)}
-                            className={`flex h-auto justify-center gap-1 rounded-xl px-2 py-1 text-center text-xs text-white ${
-                              selectedTag.includes(tag)
-                                ? "bg-green-500 opacity-50 ring-2 ring-green-500"
-                                : ""
-                            }`}
-                            style={{ backgroundColor: tagStyles[tag]?.color }}
-                          >
-                            {tagStyles[tag]?.icon}
-                            {tag}
-                          </button>
-                        ))}
-                      {/* reset button. */}
-                      <button
-                        onClick={handleReset}
-                        className="h-fit rounded-xl bg-gray-500 px-2 py-1 text-xs text-white"
-                      >
-                        Reset
-                      </button>
-                    </div>
+
                     {/* container for the view button and dropdown. */}
-                    <div className="relative pb-2">
-                      {/* view button. */}
-                      <button
-                        onClick={() => setDropdownOpen(!dropdownOpen)}
-                        className="rounded bg-blue-500 px-4 py-2 text-white"
-                      >
-                        VIEW
-                      </button>
-                      {/* view dropdown. */}
-                      {dropdownOpen && (
-                        <div className="absolute left-0 z-50 mt-2 w-48 divide-y divide-gray-100 rounded-md bg-white shadow-lg focus:outline-none">
-                          <div className="py-1">
-                            {/* view options. */}
-                            <button
-                              onClick={() => {
-                                setView("list");
-                                setDropdownOpen(false);
-                              }}
-                              className="flex w-full items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                            >
-                              List
-                              <PiList className="size-8 pl-1" />
-                            </button>
-                            <button
-                              onClick={() => {
-                                setView("cards");
-                                setDropdownOpen(false);
-                              }}
-                              className="flex w-full items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                            >
-                              Cards
-                              <PiCardsDuotone className="size-8 pl-1" />
-                            </button>
-                            <button
-                              onClick={() => {
-                                setView("grid");
-                                setDropdownOpen(false);
-                              }}
-                              className="flex w-full items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                            >
-                              Grid
-                              <PiGridNine className="size-8 pl-1" />
-                            </button>
-                          </div>
-                        </div>
-                      )}
+                    <div className="flex w-full items-center justify-between py-2">
+                      <h1 className="text-sm font-semibold text-gray-500">
+                        Change view:
+                      </h1>
+                      {/* view options. */}
+                      <div className="flex gap-2 rounded-lg border p-1">
+                        <button
+                          onClick={() => {
+                            setView("list");
+                          }}
+                          className={`flex w-auto items-center rounded-md border px-1 text-sm hover:bg-slate-200 ${view === "list" ? "bg-slate-200 text-black" : ""}`}
+                        >
+                          List
+                          <PiList className="size-6 pl-1" />
+                        </button>
+                        <button
+                          onClick={() => {
+                            setView("cards");
+                          }}
+                          className={`flex w-auto items-center rounded-md border px-1 text-sm hover:bg-slate-200 ${view === "cards" ? "bg-slate-200 text-black" : ""}`}
+                        >
+                          Cards
+                          <PiCardsDuotone className="size-6 pl-1" />
+                        </button>
+                        <button
+                          onClick={() => {
+                            setView("grid");
+                          }}
+                          className={`flex w-auto items-center rounded-md border px-1 text-sm hover:bg-slate-200 ${view === "grid" ? "bg-slate-200 text-black" : ""}`}
+                        >
+                          Grid
+                          <PiGridNine className="size-6 pl-1" />
+                        </button>
+                      </div>
                     </div>
                   </div>
-                  {/* container for the suggestions. */}
+
+                  {/* container for the suggestion contents. */}
                   <div className="h-auto px-4 py-2">
-                    {sort === "All" && (
-                      <div
-                        className={`flex flex-col gap-2 ${
-                          view === "grid" ? "grid grid-cols-3" : ""
-                        }`}
-                      >
-                        {/* This is the container for the suggestions when "All" is selected in the sort dropdown. */}
-                        {Object.keys(suggestions).map((key, keyIndex) => (
-                          <React.Fragment key={keyIndex}>
-                            {suggestions[key].map((content, contentIndex) => (
+                    <div
+                      className={`flex flex-col gap-2 ${view === "grid" ? "grid grid-cols-2" : ""}`}
+                    >
+                      {/* Determine the data to be mapped over */}
+                      {(sort === "All"
+                        ? Object.keys(suggestions)
+                        : [sort.toLowerCase()]
+                      ).map((key, keyIndex) => (
+                        <React.Fragment key={keyIndex}>
+                          {/* Check if the suggestions for the key exist */}
+                          {suggestions[key] &&
+                            suggestions[key].map((content, contentIndex) => (
                               <div
                                 key={`${key}-${contentIndex}`}
-                                className={`overflow-auto rounded-lg border-2 px-1 py-2 ${
-                                  view === "list"
-                                    ? "card-class h-fit"
-                                    : "h-auto"
-                                }`}
+                                className={`flex flex-col overflow-hidden rounded-lg border-2 px-1 py-1 shadow-lg ${view === "list" ? "h-fit" : "h-auto"} relative border ${clicked ? "bg-slate-100" : "hover:bg-slate-50"}`}
+                                onClick={() => {
+                                  // Log the content when clicked
+                                  console.log(content);
+                                }}
                               >
-                                {/* displays the suggestion's image and text. */}
+                                {/* Conditionally render an img element if view is not "list" */}
                                 {view !== "list" && (
-                                  <img
-                                    src={
-                                      content.image ||
-                                      "https://via.placeholder.com/150"
-                                    }
-                                    alt={content.text}
-                                  />
+                                  <div className="h-1/2">
+                                    <img
+                                      src={
+                                        content.image ||
+                                        "https://via.placeholder.com/150"
+                                      }
+                                      alt={content.text}
+                                      className={
+                                        view === "cards"
+                                          ? "h-max w-full object-cover"
+                                          : "h-full w-full object-cover"
+                                      }
+                                    />
+                                  </div>
                                 )}
-                                {content.text}
+                                <div
+                                  className={`${view === "list" ? "flex w-auto items-center px-4" : "flex h-1/2 flex-col items-center justify-center font-semibold"} gap-2 ${view === "cards" ? "absolute bottom-0 left-0 right-0" : ""}`}
+                                >
+                                  <div
+                                    className={
+                                      view === "list"
+                                        ? "flex h-auto items-center justify-center gap-2 text-center text-base"
+                                        : "flex w-auto flex-col items-center justify-center gap-2 text-center text-sm"
+                                    }
+                                  >
+                                    <div className="rounded-full border-2 border-white bg-green-600 p-2 text-xl text-white">
+                                      {/* Display the icon associated with the key */}
+                                      {keyIcons[key]}
+                                    </div>
+                                    <div className="w-full overflow-auto rounded-full border-2 border-green-600 bg-white px-2 text-sm">
+                                      {/* Display the text of the content */}
+                                      {content.text}
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
                             ))}
-                          </React.Fragment>
-                        ))}
-                      </div>
-                    )}
-
-                    {sort !== "All" && suggestions[sort.toLowerCase()] && (
-                      <div
-                        className={`flex flex-col gap-2 ${
-                          view === "grid" ? "grid grid-cols-3" : ""
-                        }`}
-                      >
-                        {/* container for the suggestions when a specific option is selected in the sort dropdown. */}
-                        {suggestions[sort.toLowerCase()].map(
-                          (content, index) => (
-                            <div
-                              key={`${sort}-${index}`}
-                              className={`overflow-auto rounded-lg border-2 px-1 py-2 ${
-                                view === "list" ? "card-class h-fit" : "h-auto"
-                              }`}
-                            >
-                              {/* displays the suggestion's image and text. */}
-                              {view !== "list" && (
-                                <img
-                                  src={
-                                    content.image ||
-                                    "https://via.placeholder.com/150"
-                                  }
-                                  alt={content.text}
-                                />
-                              )}
-                              {content.text}
-                            </div>
-                          ),
-                        )}
-                      </div>
-                    )}
+                        </React.Fragment>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
