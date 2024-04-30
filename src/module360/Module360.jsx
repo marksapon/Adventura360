@@ -389,32 +389,31 @@ function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
             } else {
               return (
                 // Add the key prop here
-                <div key={index * 3}>
-                  <div
-                    className={` view360-hotspot h-7 w-7 rounded-full md:h-14 md:w-14 ${colorMap[hotspot.type].color} pointer-events-auto flex cursor-pointer items-center justify-center `}
-                    data-yaw={hotspot.yaw}
-                    data-pitch={hotspot.pitch}
-                    onClick={() => {
-                      action(hotspot.type, hotspot.target, index);
-                    }}
-                  >
-                    {getIcon(hotspot.type, hotspot.class)}
+                <div
+                  key={index * 3}
+                  className={` view360-hotspot h-7 w-7 rounded-full md:h-14 md:w-14 ${colorMap[hotspot.type].color} pointer-events-auto flex cursor-pointer items-center justify-center `}
+                  data-yaw={hotspot.yaw}
+                  data-pitch={hotspot.pitch}
+                  onClick={() => {
+                    action(hotspot.type, hotspot.target, index);
+                  }}
+                >
+                  {getIcon(hotspot.type, hotspot.class)}
 
-                    {hotspot.type === "popup" &&
-                      curr_Extras.map((extras) => {
-                        if (extras.state === true && extras.id === index) {
-                          return (
-                            <div className="absolute bottom-16 flex h-36 w-52 flex-col items-center bg-black p-2">
-                              <img
-                                src={extras.image}
-                                className="h-9/16 w-16/9 flex items-center justify-center bg-cover bg-center bg-no-repeat"
-                              />
-                            </div>
-                          );
-                        }
-                        return null; // return null when extras.state is not true
-                      })}
-                  </div>
+                  {hotspot.type === "popup" &&
+                    curr_Extras.map((extras) => {
+                      if (extras.state === true && extras.id === index) {
+                        return (
+                          <div className="absolute bottom-16 flex h-36 w-52 flex-col items-center bg-black p-2">
+                            <img
+                              src={extras.image}
+                              className="h-9/16 w-16/9 flex items-center justify-center bg-cover bg-center bg-no-repeat"
+                            />
+                          </div>
+                        );
+                      }
+                      return null; // return null when extras.state is not true
+                    })}
                 </div>
               );
             }
