@@ -503,16 +503,17 @@
   background-repeat: no-repeat;
   background-position: center; /* or any other position */
 }
+
 .bldg {
-  opacity: 0.8;
+  opacity: 1;
   pointer-events: all;
   cursor: pointer;
   transition: opacity 250ms;
   /* Add background image */
-  background-image: url("/assets/360 Module/hotspots/building.png");
+  /* background-image: url("/assets/360 Module/hotspots/building.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center; /* or any other position */
+  background-position: center; or any other position */
 }
 
 .info {
@@ -521,8 +522,8 @@
   cursor: pointer;
   transition: opacity 250ms;
   /* Add background image */
-  background-image: url("/assets/360 Module/hotspots/info.png");
+  /* background-image: url("/assets/360 Module/hotspots/info.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center; /* or any other position */
+  background-position: center; or any other position */
 }

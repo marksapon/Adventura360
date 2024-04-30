@@ -18,6 +18,7 @@
       {
         "id": 1,
         "type": "info",
+        "class": "info",
         "target": "dit_info",
         "yaw": 1.06,
         "pitch": 20.44
@@ -34,6 +35,27 @@
       "x": 0.5,
       "y": 0.5,
       "type": "court"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "target": "quad_info",
+        "yaw": 1.06,
+        "pitch": 20.44
+      }
+    ]
+  },
+  {
+    "scene": "quad",
+    "location": "Quadrangle",
+
+    "image": "/assets/buildings/quad.webp",
+    "back": ["node1"],
+    "coords": {
+      "x": 0.12,
+      "y": 0.23,
+      "type": "farm"
     },
     "hotspot": [
       {

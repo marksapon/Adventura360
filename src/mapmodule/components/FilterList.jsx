@@ -11,6 +11,8 @@ const FilterList = ({ icons, overlays, OSDinstance, OSD }) => {
   const [courtState, setCourtState] = useState(false); // Court State
   const [parkingState, setParkingState] = useState(false); // Parking Lot State
   const [batibotState, setBatibotState] = useState(false); // Batibot State
+  const [farmState, setFarmState] = useState(false); // Farm State
+  const [constructionState, setConstructionState] = useState(false); // Construction State
   const [venueState, setVenueState] = useState(false); // Venue State
 
   /* Filter Current Overlays */
@@ -259,6 +261,43 @@ const FilterList = ({ icons, overlays, OSDinstance, OSD }) => {
         {/* Venues */}
       </div>
       {/* Div 2 */}
+
+      {/* Div 3 */}
+      <div className="flex snap-center flex-col items-center justify-between sm:flex-row-reverse lg:flex-col ">
+        {/* Farm */}
+        <button
+          className={`flex h-10 w-10 items-center justify-center rounded-full`}
+          onClick={() => {
+            setFarmState((prevState) => {
+              const newState = !prevState;
+              filter("farm", newState);
+              return newState;
+            });
+          }}
+        >
+          <icons.farm.icon
+            className={`${farmState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
+          />
+        </button>
+        {/* Farm */}
+        {/* Construction */}
+        <button
+          className={`flex h-10 w-10 flex-none items-center justify-center rounded-full`}
+          onClick={() => {
+            setConstructionState((prevState) => {
+              const newState = !prevState;
+              filter("construction", newState);
+              return newState;
+            });
+          }}
+        >
+          <icons.construction.icon
+            className={`${constructionState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
+          />
+        </button>
+        {/* School Attraction */}
+      </div>
+      {/* Div 3 */}
     </div>
   );
 };

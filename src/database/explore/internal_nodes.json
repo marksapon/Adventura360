@@ -1,0 +1,57 @@
+[
+  {
+    "scene": "dit",
+    "nodes": [
+      {
+        "scene": "node1",
+        "image": "/assets/Database Images/unrestricted nodes/1.webp",
+        "coords": {
+          "x": 0.324,
+          "y": 1.093
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "node2",
+            "yaw": 280.46,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "node78",
+            "yaw": 10.17,
+            "pitch": -20
+          },
+          {
+            "id": 4,
+            "type": "bldg",
+            "target": "dit",
+            "yaw": 0,
+            "pitch": 0
+          },
+          {
+            "id": 5,
+            "type": "move",
+            "target": "node103",
+            "yaw": 324.59,
+            "pitch": -20
+          },
+          {
+            "id": 6,
+            "type": "bldg",
+            "target": "dit",
+            "yaw": 0,
+            "pitch": 0
+          }
+        ],
+        "travelType": "walk"
+      }
+    ]
+  },
+  {
+    "scene": "con",
+    "nodes": [{}]
+  }
+]

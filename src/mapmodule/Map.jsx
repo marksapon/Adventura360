@@ -1,28 +1,34 @@
 /* React Hooks */
 import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
+
 /* Map Module Libraries */
 import OpenSeadragon from "openseadragon";
 import Paper, { Point, Path, Size } from "paper";
+
 /* Map Module Components */
 import FilterList from "./components/FilterList"; // Overlay Filter Component
 import PathfindingModal from "./components/PathfindingModal"; // Pathfinding Modal Component
+
 /* OSD CSS */
 import { BsFilterRight } from "react-icons/bs"; // Filter Button
 import { RiAccountPinCircleLine } from "react-icons/ri"; // Current Location
 import { GiPathDistance } from "react-icons/gi"; // Path finding Button
 import { ImLocation } from "react-icons/im"; // Current Location Off Button
 import { ImLocation2 } from "react-icons/im"; // Current Location On Button
+
 /* Overlay Icons */
 import { FaRestroom } from "react-icons/fa"; // Restroom Icon
 import { FaHandsWash } from "react-icons/fa"; // Hand Wash Icon
 import { LuSchool } from "react-icons/lu"; // School Facilities Icon
 import { TbSchool } from "react-icons/tb"; // College Buildings Icon
-import { GrCafeteria } from "react-icons/gr"; // Cafeteria Icon
+import { FaCoffee } from "react-icons/fa"; // Cafeteria Icon
 import { FaPeopleRoof } from "react-icons/fa6"; // Batibot Icon
 import { PiBinocularsDuotone } from "react-icons/pi"; // School Attraction Icon
 import { GiAbstract068 } from "react-icons/gi"; // Court Icon
 import { FaSquareParking } from "react-icons/fa6"; // Parking Lot Icon
 import { FaHotel } from "react-icons/fa"; // Venue Icon
+import { GiWheat } from "react-icons/gi"; // Farm Icon
+import { MdEngineering } from "react-icons/md"; // Construction Icon
 import { FaCircle } from "react-icons/fa6"; // Undefined Icon
 
 const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB }) => {
@@ -84,6 +90,8 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB }) => {
       attractions: [],
       court: [],
       batibot: [],
+      farm: [],
+      construction: [],
     };
 
     // Mapping the data to the overlays
@@ -111,12 +119,14 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB }) => {
     restroom: { icon: FaRestroom, color: "orange" },
     school_facilities: { icon: LuSchool, color: "green" },
     college_buildings: { icon: TbSchool, color: "green" },
-    cafeteria: { icon: GrCafeteria, color: "green" },
+    cafeteria: { icon: FaCoffee, color: "green" },
     batibot: { icon: FaPeopleRoof, color: "green" },
     attractions: { icon: PiBinocularsDuotone, color: "green" },
     court: { icon: GiAbstract068, color: "green" },
     parking: { icon: FaSquareParking, color: "green" },
+    farm: { icon: GiWheat, color: "green" },
     venue: { icon: FaHotel, color: "green" },
+    construction: { icon: MdEngineering, color: "#fde047" },
   };
 
   const [current_overlays, setCurrentOverlays] = useState(

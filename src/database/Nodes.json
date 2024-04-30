@@ -8,39 +8,92 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node2",
         "yaw": 280.46,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node78",
         "yaw": 10.17,
         "pitch": -20
       },
       {
-        "id": 4,
-        "type": "bldg",
-        "target": "dit",
-        "yaw": 0,
-        "pitch": 0
-      },
-      {
-        "id": 5,
         "type": "move",
         "target": "node103",
         "yaw": 324.59,
         "pitch": -20
       },
       {
-        "id": 6,
         "type": "bldg",
+        "class": "bldg",
         "target": "dit",
-        "yaw": 0,
-        "pitch": 0
+        "yaw": 335.31,
+        "pitch": -2.62
+      },
+      {
+        "type": "info",
+        "class": "info",
+        "yaw": 326.77,
+        "pitch": 2.56
+      },
+      {
+        "type": "info",
+        "class": "attraction",
+        "yaw": 320.86,
+        "pitch": 2.78
+      },
+      {
+        "type": "info",
+        "class": "cafeteria",
+        "yaw": 314.84,
+        "pitch": 2.78
+      },
+      {
+        "type": "info",
+        "class": "batibot",
+        "yaw": 331.58,
+        "pitch": 2.78
+      },
+      {
+        "type": "info",
+        "class": "farm",
+        "yaw": 347.23,
+        "pitch": 2.78
+      },
+      {
+        "type": "info",
+        "class": "court",
+        "yaw": 336.88,
+        "pitch": 2.78
+      },
+      {
+        "type": "info",
+        "class": "venue",
+        "yaw": 341.33,
+        "pitch": 2.78
+      },
+      {
+        "type": "popup",
+        "class": "restroom",
+        "target": "restroomOval",
+        "yaw": 347.35,
+        "pitch": -2.62
+      },
+      {
+        "type": "popup",
+        "class": "handwash",
+        "target": "washareaOval",
+        "yaw": 142.08,
+        "pitch": 3.14
+      },
+      {
+        "type": "popup",
+        "class": "construction",
+        "target": "renovate",
+        "yaw": 155.01,
+        "pitch": 3.14
       }
     ],
     "travelType": "walk"
@@ -66,6 +119,13 @@
         "target": "node1",
         "yaw": 88.51,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "construction",
+        "target": "renovate",
+        "yaw": 155.01,
+        "pitch": 3.14
       }
     ]
   },
@@ -89,13 +149,6 @@
         "type": "move",
         "target": "node2",
         "yaw": 87.79,
-        "pitch": -20
-      },
-      {
-        "id": 3,
-        "type": "move",
-        "target": "",
-        "yaw": 187.53,
         "pitch": -20
       }
     ]

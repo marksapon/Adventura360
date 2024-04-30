@@ -1,13 +1,25 @@
 /* Library */
 import React, { useMemo, useState, useEffect, useRef } from "react"; // React Hooks
 import { useParams, useNavigate } from "react-router-dom"; // React Dom Hooks
-import clsx from "clsx"; // Classnames Library
 import "./view360.css"; // View360 Default CSS
 import View360, {
   EquirectProjection,
   ControlBar,
   LoadingSpinner,
 } from "@egjs/react-view360"; //View360 Library
+
+/* Icons */
+import { FaBuilding } from "react-icons/fa"; // Building Icon (building)
+import { FaInfo } from "react-icons/fa"; // Info Icon (info)
+import { FaRestroom } from "react-icons/fa"; // Restroom Icon (comfort)
+import { FaHandsWash } from "react-icons/fa"; // Hand Wash Icon (comfort)
+import { PiBinocularsDuotone } from "react-icons/pi"; // School Attraction Icon
+import { FaHotel } from "react-icons/fa"; // Venue Icon
+import { FaPeopleRoof } from "react-icons/fa6"; // Batibot Icon
+import { GiWheat } from "react-icons/gi"; // Farm Icon
+import { FaCoffee } from "react-icons/fa"; // Cafeteria
+import { TbSoccerField } from "react-icons/tb"; // Court Icon
+import { MdEngineering } from "react-icons/md"; // Construction Icon
 
 /* Components */
 import Navigationbar from "./components/Navigationbar";
@@ -18,83 +30,78 @@ import BuildingModal from "./components/BuildingModal";
 import { TbMap } from "react-icons/tb";
 import { TbMapOff } from "react-icons/tb";
 
-// nodesDB, buildingsDB, extrasDB
 function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
+  /* Getting URL Queries */
 
-  const navigate = useNavigate();
-  const [bldgState, setBldgState] = useState(false); // Map State
-
-  /* Dynamic URL Parameters */
   const url = new URLSearchParams(window.location.search); // Get URL
+  const target = useParams()["*"]; // Take the target query from URL
 
-  const node = /\bnode\d+\b/; // Regex for filtering node
+  // Function to identify if the target query is a node or building
+  const targetType = (target) => {
+    const node = /\bnode\d+\b/; // Regex for filtering node
 
-  const id = useParams(); // Get URL parameters
-
-  const target = id["*"]; // Take the string after /app/ as target
-
-  const isNode = node.test(target); // Check if the string passes the regex
-
-  /* Building Data */
-  function isBuilding(target) {
-    for (const data of buildingsDB) {
-      if (data.scene === target) {
-        return true;
-      }
-    }
-    return false;
-  }
-
-  // Setting initial yaw and pitch based on URL parameters
-  const [initialYaw, setYaw] = useState(getParams("yaw"));
-
-  const [initialPitch, setPitch] = useState(getParams("pitch"));
-
-  const [previous_Scene, setPrevious_Scene] = useState(nodesDB[0]);
-
-  // Setting scene based on URL parameters
-  const [select_Scene, setSelect_Scene] = useState(() => {
-    let curScene = {};
-    // If the URL parameters are a node, set the scene to the target
-    if (isNode) {
-      for (const scene of nodesDB) {
-        if (scene.scene === target) {
-          curScene = scene;
-          return curScene;
+    // Check if the target is a node or building
+    if (node.test(target)) {
+      return "node";
+    } else {
+      for (const data of buildingsDB) {
+        if (data.scene === target) {
+          return "building";
         }
       }
+      return null;
+    }
+  };
 
-      return nodesData.nodes[0];
-    } else if (isBuilding(target)) {
-      for (const scene of buildingsDB) {
+  /* States */
+
+  // Building Modal State
+  const [bldgState, setBldgState] = useState(false);
+
+  // Minimap State
+  const [mapButtonVisible, setMapButtonVisibility] = useState(true);
+
+  // Yaw and Pitch States
+  const [initialYaw, setYaw] = useState(getParams("yaw"));
+  const [initialPitch, setPitch] = useState(getParams("pitch"));
+
+  // Previous Scene State
+  const [previous_Scene, setPrevious_Scene] = useState(nodesDB[0]);
+
+  // Autoplay State
+  const [autoplay, setAutoplay] = useState(false);
+
+  // Select Curent Scene State
+  const [select_Scene, setSelect_Scene] = useState(() => getScene());
+
+  // Current Extras Popup State
+  const [curr_Extras, setCurr_Extras] = useState(generateExtras);
+
+  // Function to get the current scene based on the URL queries
+  function getScene() {
+    let curr_scene;
+    // If the URL parameters are a node, set the scene to the target
+    if (targetType(target) === "node") {
+      nodesDB.filter((scene) => {
+        if (scene.scene === target) {
+          curr_scene = scene;
+          return curr_scene;
+        }
+      });
+    } else if (targetType(target) === "building") {
+      buildingsDB.filter((scene) => {
         if (scene.scene === target) {
           setYaw(scene.hotspot[0].yaw);
           setPitch(scene.hotspot[0].pitch);
-          curScene = scene;
-          return curScene;
+          curr_scene = scene;
+          return scene;
         }
-      }
-      return nodesDB[0];
-    }
-    return nodesDB[0];
-  });
-
-  function action(type, target) {
-    console.log("Action");
-    if (type === "move") {
-      console.log(">Moving to another node");
-      changeScene(nodesDB, target);
-    } else if (type === "bldg") {
-      console.log(">Moving to building");
-      changeScene(buildingsDB, target);
+      });
     } else {
-      setBldgState(!bldgState); // Set Building State to True
-      // console.log(">Displaying information"); // Display Information Building Module goes Here
+      curr_scene = nodesDB[0];
     }
+    return curr_scene;
   }
-
-  // Setting autoplay state, false as a default state
-  const [autoplay, setAutoplay] = useState(false); // Define autoplay state
 
   // Function to get URL parameters and set it as initial yaw and pitch
   function getParams(type) {
@@ -102,7 +109,7 @@ function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
     const yaw = isNaN(yawValue) ? 0 : yawValue; // check if yaw is Undefined || null || NaN
     const pitchValue = Number(url.get("pitch"));
     const pitch = isNaN(pitchValue) ? 0 : pitchValue; // check if pitch is Undefined || null || NaN
-    if (isNode || isBuilding(target)) {
+    if (targetType(target)) {
       if (type === "yaw") {
         return yaw;
       } else if (type === "pitch") {
@@ -113,8 +120,11 @@ function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
     }
   }
 
+  /* Dynamic URL */
+
   // Timeout reference during update for yaw and pitch
-  const timeoutRef = useRef(null);
+  const navigate = useNavigate(); // Navigate Hook
+  const timeoutRef = useRef(null); // Timeout Ref
 
   // Function that triggers when the view changes and updates the yaw and pitch
   const handleViewChange = (e) => {
@@ -131,8 +141,6 @@ function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
       setPitch(pitch.toFixed(2));
     }, 200);
   };
-
-  /* Push State to URL */
 
   // Update the URL based on the initial yaw and pitch
   useEffect(() => {
@@ -158,12 +166,6 @@ function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
 
   // Event listener for detecting device orientation
   useEffect(() => {
-    if (window.innerHeight > window.innerWidth) {
-      // console.log("Portrait mode");
-    } else if (window.innerHeight < window.innerWidth) {
-      // console.log("Landscape mode");
-    }
-
     function handleOrientationChange() {
       setZoomSettings(detectDeviceOrientation());
     }
@@ -175,11 +177,11 @@ function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
     };
   }, []);
 
-  /* View360 component */
-  // Ref for the viewer
-  const viewerRef = useRef(null);
+  /* View360 Core Functionality */
 
-  // Create a new projection based on the selected scene
+  const viewerRef = useRef(null); // View360 Ref
+
+  // View360 Projection based on the selected scene
   const projection = useMemo(
     () =>
       new EquirectProjection({
@@ -188,7 +190,7 @@ function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
     [select_Scene.image],
   );
 
-  // Create plugins for the viewer
+  // View360 Plugins
   const plugins = useMemo(
     () => [
       new ControlBar({
@@ -213,13 +215,49 @@ function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
     [zoomSettings.min],
   );
 
-  // Function that changes scene based on the hotspot target
-  function changeScene(type, target) {
-    // setPrevious_Scene(select_Scene);
-    for (const data of type) {
-      if (data.scene === target) {
-        console.log("Scene Match");
-        setSelect_Scene(data);
+  /* Hotspot Settings */
+
+  const icons_display_settings = "text-white md:h-7 md:w-7"; // Icon size and color settings
+
+  const colorMap = {
+    bldg: {
+      color: "bg-green-500",
+      type: [{ bldg: <FaBuilding className={icons_display_settings} /> }],
+    },
+    info: {
+      color: "bg-orange-500",
+      type: [
+        { info: <FaInfo className={icons_display_settings} /> },
+        {
+          attraction: (
+            <PiBinocularsDuotone className={icons_display_settings} />
+          ),
+        },
+        { cafeteria: <FaCoffee className={icons_display_settings} /> },
+        { batibot: <FaPeopleRoof className={icons_display_settings} /> },
+        { farm: <GiWheat className={icons_display_settings} /> },
+        { court: <TbSoccerField className={icons_display_settings} /> },
+        { venue: <FaHotel className={icons_display_settings} /> },
+      ],
+    },
+    popup: {
+      color: "bg-blue-500",
+      type: [
+        { restroom: <FaRestroom className={icons_display_settings} /> },
+        { handwash: <FaHandsWash className={icons_display_settings} /> },
+        {
+          construction: <MdEngineering className={icons_display_settings} />,
+        },
+      ],
+    },
+  };
+
+  function getIcon(hotspotType, hotspotClass) {
+    if (colorMap.hasOwnProperty(hotspotType)) {
+      for (const data of colorMap[hotspotType].type) {
+        if (data.hasOwnProperty(hotspotClass)) {
+          return data[hotspotClass];
+        }
       }
     }
   }
@@ -228,23 +266,83 @@ function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
   useEffect(() => {
     if (viewerRef.current) {
       viewerRef.current.hotspot.refresh();
+      setCurr_Extras(generateExtras());
     }
   }, [select_Scene]);
 
-  /* Autoplay Toggle */
-  function toggleAutoplay() {
-    setAutoplay(!autoplay);
+  /* Hotspot Actions */
+
+  // Function that performs action based on type of Hotspot
+  function action(type, target, index) {
+    console.log("Action");
+    if (type === "move") {
+      console.log(">Moving to another node");
+      changeScene(nodesDB, target);
+    } else if (type === "bldg") {
+      console.log(">Moving to building");
+      changeScene(buildingsDB, target);
+    } else if (type === "info") {
+      setBldgState(!bldgState); // Triggers Building Modal
+    } else {
+      console.log("Display Extra's Image");
+      setExtrasState(index);
+    }
   }
 
-  /* Module 360 State */
-  const [module360State, setModule360State] = useState(true); // Set the module360 state to be true by default
+  // Function that changes scene based on the hotspot target
+  function changeScene(type, target) {
+    setPrevious_Scene(select_Scene);
+    for (const data of type) {
+      if (data.scene === target) {
+        console.log("Scene Match");
+        setSelect_Scene(data);
+      }
+    }
+  }
 
-  /* Minimap Button Visibility */
-  const [mapButtonVisible, setMapButtonVisibility] = useState(true); // Set the map button visibility to be true by default
+  /* Extras Hotspot */
 
-  /* Component Return */
+  // Function to generate Extras
+  function generateExtras() {
+    const temp_extras = [];
+    select_Scene.hotspot.map((hotspot, index) => {
+      if (hotspot.type === "popup") {
+        extrasDB.map((extras) => {
+          if (extras.scene === hotspot.target) {
+            const extrasFormat = {};
+            extrasFormat["id"] = index;
+            extrasFormat["scene"] = extras.scene;
+            extrasFormat["image"] = extras.image;
+            extrasFormat["text"] = extras.location;
+            extrasFormat["state"] = false;
+            temp_extras.push(extrasFormat);
+          }
+        });
+      }
+    });
+
+    return temp_extras;
+  }
+  console.log(curr_Extras);
+
+  function setExtrasState(index) {
+    const newExtras = curr_Extras.map((extras) => {
+      if (extras.id === index) {
+        return {
+          ...extras,
+          state: !extras.state,
+        };
+      }
+      return extras;
+    });
+
+    setCurr_Extras(newExtras);
+  }
+
+  /* Module360 Component */
   return (
     <div className="relative flex h-svh w-full items-center justify-center">
+      {/* View360 Component */}
       <View360
         autoplay={autoplay ? { delay: 1000, speed: 0.5 } : false}
         onViewChange={handleViewChange}
@@ -269,38 +367,81 @@ function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
           duration: 1000,
         }}
       >
+        {/* Hotspots */}
         <div className="view360-hotspots">
-          {select_Scene.hotspot.map((hotspot) => (
-            <div
-              key={hotspot.id * 100}
-              className={clsx("view360-hotspot", {
-                move: hotspot.type === "move",
-                bldg: hotspot.type === "bldg",
-                info: hotspot.type === "info",
-              })}
-              data-yaw={hotspot.yaw}
-              data-pitch={hotspot.pitch}
-              style={{ width: "10%", paddingBottom: "10%" }}
-              onClick={() => action(hotspot.type, hotspot.target)}
-            ></div>
-          ))}
+          {select_Scene.hotspot.map((hotspot, index) => {
+            if (hotspot.type === "move") {
+              return (
+                <div
+                  key={index * 2}
+                  className={`view360-hotspot pointer-events-auto cursor-pointer bg-contain bg-center bg-no-repeat opacity-80 transition-opacity duration-200`}
+                  data-yaw={hotspot.yaw}
+                  data-pitch={hotspot.pitch}
+                  style={{
+                    backgroundImage:
+                      'url("/assets/360 Module/buttons/move.png")',
+                    width: "10%",
+                    paddingBottom: "10%",
+                  }}
+                  onClick={() => action(hotspot.type, hotspot.target)}
+                />
+              );
+            } else {
+              return (
+                // Add the key prop here
+                <div key={index * 3}>
+                  <div
+                    className={` view360-hotspot h-7 w-7 rounded-full md:h-14 md:w-14 ${colorMap[hotspot.type].color} pointer-events-auto flex cursor-pointer items-center justify-center `}
+                    data-yaw={hotspot.yaw}
+                    data-pitch={hotspot.pitch}
+                    onClick={() => {
+                      action(hotspot.type, hotspot.target, index);
+                    }}
+                  >
+                    {getIcon(hotspot.type, hotspot.class)}
+
+                    {hotspot.type === "popup" &&
+                      curr_Extras.map((extras) => {
+                        if (extras.state === true && extras.id === index) {
+                          return (
+                            <div className="absolute bottom-16 flex h-36 w-52 flex-col items-center bg-black p-2">
+                              <img
+                                src={extras.image}
+                                className="h-9/16 w-16/9 flex items-center justify-center bg-cover bg-center bg-no-repeat"
+                              />
+                            </div>
+                          );
+                        }
+                        return null; // return null when extras.state is not true
+                      })}
+                  </div>
+                </div>
+              );
+            }
+          })}
         </div>
+        {/* Hotspots */}
+        {/* UI */}
+        {/* Navigation bar */}
         <div className="flex h-full w-full">
           <Navigationbar
-            toggleAutoplay={toggleAutoplay}
+            toggleAutoplay={() => setAutoplay(!autoplay)}
             location={select_Scene}
             buildingsDB={buildingsDB}
             nodesDB={nodesDB}
             extrasDB={extrasDB}
           />
         </div>
+        {/* Navigation bar */}
+        {/* Building Modal */}
         [bldgState &&
         <BuildingModal
           visible={bldgState}
           onClose={setBldgState}
           loginType={loginType}
         />
-        ]
+        ]{/* Building Modal */}
+        {/* Minimap */}
         <div className="absolute left-0 top-0 p-1 text-white ">
           <div className="relative flex flex-row justify-between">
             <div className="pb-2 pl-2 pt-16 md:pt-20">
@@ -314,6 +455,8 @@ function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
             </div>
           </div>
         </div>
+        {/* Minimap */}
+        {/* Toggle Minimap */}
         <div className="absolute bottom-0 right-0  flex items-center justify-center pb-20 pr-2 sm:pb-20 sm:pr-2 md:pb-2 md:pr-2 lg:pb-2 lg:pr-2">
           <button
             className="shadow-2xl-inner rounded-full bg-gray-100 p-2 text-white drop-shadow-md"
@@ -331,8 +474,10 @@ function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
             )}
           </button>
         </div>
+        {/* Toggle Minimap */}
+        {/* UI */}
       </View360>
-      {/* Button to toggle map button visibility */}
+      {/* View360 Component */}
 
       <div className="absolute flex items-center justify-center text-xl text-white">
         +
@@ -345,4 +490,7 @@ export default Module360;
 /* DEBUG PURPOSE
 <div>Location: {select_Scene.scene}</div>
 <div>Source: {select_Scene.image}</div>
+
+
+
 */

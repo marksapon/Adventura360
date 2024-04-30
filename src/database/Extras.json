@@ -1,29 +1,29 @@
 [
   {
     "scene": "restroomOval",
-    "back": ["node2", "node3", "node2"],
+    "back": ["node1", "node3", "node2"],
     "location": "Restroom near Oval",
     "coords": {
       "x": 0.5,
       "y": 0.5,
       "type": "restroom"
     },
-    "image": "/assets/extras/washroomOval.webp"
+    "image": "/assets/Database Images/unrestricted nodes/2.webp"
   },
   {
     "scene": "washareaOval",
-    "back": ["node2", "node3", "node2"],
+    "back": ["node1", "node3", "node2"],
     "location": "Washarea near Oval",
     "coords": {
       "x": 0.3,
       "y": 0.3,
       "type": "washarea"
     },
-    "image": "/assets/extras/washareaOval.webp"
+    "image": "/assets/Database Images/unrestricted nodes/20.webp"
   },
   {
     "scene": "batibotDit",
-    "back": ["node2", "node3", "node2"],
+    "back": ["node1", "node3", "node2"],
     "location": "Batibot near DIT",
     "coords": {
       "x": 0.2,
@@ -31,5 +31,16 @@
       "type": "batibot"
     },
     "image": "/assets/extras/batibotDit.webp"
+  },
+  {
+    "scene": "renovate",
+    "back": ["node1", "node3", "node2"],
+    "location": "Building new CON",
+    "coords": {
+      "x": 0.7,
+      "y": 0.7,
+      "type": "construction"
+    },
+    "image": "/assets/Database Images/unrestricted nodes/30.webp"
   }
 ]
