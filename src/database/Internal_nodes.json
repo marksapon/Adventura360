@@ -1,0 +1,22 @@
+[
+  {
+    "dit": [
+      {
+        "scene": "node1",
+        "image": "dit/dit1.webp",
+        "coords": {
+          "x": "coords should be the same as dit",
+          "y": "coords should be the same as dit"
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "node2",
+            "yaw": 280.46,
+            "pitch": -20
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -25,6 +25,7 @@ const Navigationbar = ({
   buildingsDB,
   nodesDB,
   extrasDB,
+  infosDB,
 }) => {
   /* States */
   const [mapState, setMapState] = useState(false); // Map State
@@ -254,11 +255,6 @@ const Navigationbar = ({
             </div>
           </div>
         </div>
-
-        <Search onClose={handleclose} visible={searchModal} />
-        <Helpmodal onClose={handleclose} visible={Showmodal} />
-        <Sharelink onClose={handlecloseShare} visible={Sharemodal} />
-        <Bugmodal onClose={handlecloseBug} visible={Bugmdl} />
       </div>
 
       {/*MAP MODULE*/}
@@ -412,6 +408,7 @@ const Navigationbar = ({
           setSearchModal(false);
         }}
         visible={searchModal}
+        infosDB={infosDB}
       />
     </div>
   );

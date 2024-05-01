@@ -30,7 +30,7 @@ import BuildingModal from "./components/BuildingModal";
 import { TbMap } from "react-icons/tb";
 import { TbMapOff } from "react-icons/tb";
 
-function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
+function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
   /* Getting URL Queries */
 
   const url = new URLSearchParams(window.location.search); // Get URL
@@ -304,7 +304,7 @@ function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
 
   // Function to generate Extras
   function generateExtras() {
-    console.log("Generating Extras");
+    // console.log("Generating Extras");
     const temp_extras = [];
     select_Scene.hotspot.map((hotspot, index) => {
       if (hotspot.type === "popup") {
@@ -324,10 +324,9 @@ function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
 
     return temp_extras;
   }
-  console.log(curr_Extras);
 
   function setExtrasState(index) {
-    console.log("Setting Extras State");
+    // console.log("Setting Extras State");
     const newExtras = curr_Extras.map((extras) => {
       if (extras.id === index) {
         return {
@@ -340,7 +339,7 @@ function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
 
     setCurr_Extras(newExtras);
   }
-  console.log(curr_Extras);
+
   /* Module360 Component */
   return (
     <div className="relative flex h-svh w-full items-center justify-center">
@@ -451,6 +450,7 @@ function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
             buildingsDB={buildingsDB}
             nodesDB={nodesDB}
             extrasDB={extrasDB}
+            infosDB={infosDB}
           />
         </div>
         {/* Navigation bar */}

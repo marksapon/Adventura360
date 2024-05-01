@@ -2,92 +2,149 @@ import React, { useState, useEffect } from "react";
 import { IoIosClose } from "react-icons/io";
 import { PiCardsDuotone, PiGridNine, PiList } from "react-icons/pi";
 import { IoIosArrowUp } from "react-icons/io";
-import { FaPeopleRoof } from "react-icons/fa6";
-import { FaSquareParking } from "react-icons/fa6";
 import { GrCafeteria } from "react-icons/gr";
 import { LuSchool } from "react-icons/lu";
 import { PiBinocularsDuotone } from "react-icons/pi";
 import { TbSchool } from "react-icons/tb";
-import { GiAbstract068 } from "react-icons/gi";
-import { FaHome, FaBuilding, FaRestroom, FaHotel } from "react-icons/fa";
+import { TbSoccerField } from "react-icons/tb"; // Court Icon
+import { FaHome, FaHotel } from "react-icons/fa";
 
-import contentMap from "../../database/contentMap.json";
+const Search = ({ visible, onClose, infosDB }) => {
+  /* Existing Buildings Item */
+  class Item {
+    constructor(id, name, acronym, tags, type) {
+      this.id = id;
+      this.name = name;
+      this.acronym = acronym;
+      this.tag = tags;
+      this.type = type;
+    }
+  }
 
-const Search = ({ visible, onClose }) => {
   // State variables
-  const [view, setView] = useState("list");
-  const [sort, setSort] = useState("All");
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedTag, setSelectedTag] = useState([]);
-  const [suggestions, setSuggestions] = useState(contentMap);
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedKey, setSelectedKey] = useState("All");
-  const [clicked, setClicked] = useState(false);
+  const [view, setView] = useState("grid"); // Type of display view List/Grid/Cards
 
-  // Close search modal
+  const [sort, setSort] = useState("All"); // Selected Category to display value
+
+  const [searchTerm, setSearchTerm] = useState(""); // Search Value
+
+  const [selectedTag, setSelectedTag] = useState([]); // State for what tag is selected
+
+  const [suggestions, setSuggestions] = useState(() => generateItinerary()); // DB of filtered suggestions
+
+  // Function to generate items and push it to category list
+  function generateItinerary() {
+    // console.log("Generating Itinerary");
+
+    const temp_categories = {
+      all: [],
+      school_building: [],
+      college_building: [],
+      cafeteria: [],
+      attraction: [],
+      court: [],
+      venue: [],
+    };
+
+    if (infosDB) {
+      for (const info in infosDB) {
+        const item = new Item(
+          infosDB[info].scene,
+          infosDB[info].name,
+          infosDB[info].acronym,
+          infosDB[info].tags,
+          infosDB[info].type,
+        );
+
+        Object.keys(temp_categories).map((category) => {
+          if (infosDB[info].type === category) {
+            temp_categories["all"].push(item);
+            temp_categories[category].push(item);
+          }
+        });
+      }
+    }
+    return temp_categories;
+  }
+
+  const categoriesDisplay = {
+    school_building: "School Building",
+    college_building: "College Building",
+    cafeteria: "Cafeteria",
+    attraction: "Attraction",
+    court: "Court",
+    venue: "Venue",
+  };
+
+  const [isOpen, setIsOpen] = useState(false); // Dropdown State: True = CLose / False = Open
+
+  const [listDisplay, setListDisplay] = useState(false); // List of items to display
+
+  const [selectedKey, setSelectedKey] = useState("All"); // State for what category is selected
+
+  const [clicked, setClicked] = useState(false); // State for when a suggestion is clicked??
+
+  /* Tags */
+  const tags = [
+    "ceit",
+    "con",
+    "cas",
+    "cafenr",
+    "ccj",
+    "ced",
+    "cemds",
+    "cspear",
+    "cvmbs",
+    "com",
+    "school",
+    "historical",
+    "laboratory",
+    "leisure",
+  ];
+
+  // Close Modal
   const handleCloseAndReset = () => {
     onClose();
   };
 
-  // Handle sort change
+  // Function to change Category Value and Change Dropdown State
   const handleSortChange = (key) => {
-    setSort(key);
-    setIsOpen(false);
-  };
-
-  // tag icons and colors
-  const tagStyles = {
-    CEIT: { color: "orange" },
-    CON: { color: "#20a7db" },
-    CAS: { color: "#E9C229" },
-    CAFENR: { color: "#078423" },
-    CCJ: { color: "purple" },
-    CED: { color: "#4D547A" },
-    CEMDS: { color: "#C42329" },
-    CSPEAR: { color: "#EABDA8" },
-    CVMBS: { color: "#E9CA71" },
-    COM: { color: "red" },
-    SCHOOL: { color: "yellow" },
-    HISTORICAL: { color: "indigo" },
-    LABORATORY: { color: "pink" },
-    LEISURE: { color: "orange" },
+    setSort(key); // Set Sort State
+    setIsOpen(true); // Set Dropdown State
   };
 
   // category icons and colors
   const keyIcons = {
-    All: <FaHome />,
-    restroom: <FaRestroom />,
-    handwash: <FaBuilding />,
-    "school facilities": <LuSchool />,
-    "college buildings": <TbSchool />,
+    school_building: <LuSchool />,
+    college_building: <TbSchool />,
     cafeteria: <GrCafeteria />,
-    "school attraction": <PiBinocularsDuotone />,
-    court: <GiAbstract068 />,
-    parking: <FaSquareParking />,
-    kiosk: <FaPeopleRoof />,
+    attraction: <PiBinocularsDuotone />,
+    court: <TbSoccerField />,
     venue: <FaHotel />,
     // add more keys as needed
   };
 
-  // Handle tag click to filter suggestions
+  // Tag Function
   const handleTagClick = (tag) => {
     setSelectedTag((prevTags) =>
+      // If the tag is already selected, remove it from the selected tags
       prevTags.includes(tag)
         ? prevTags.filter((t) => t !== tag)
-        : [...prevTags, tag],
+        : // If the tag is not selected, add it to the selected tags
+          [...prevTags, tag],
     );
   };
 
-  // Reset search term and selected tag
+  // Reset Function
   const handleReset = () => {
-    setSearchTerm("");
-    setSelectedTag([]);
+    setSearchTerm(""); // Resets the search value
+    setSelectedTag([]); // Resets the selected tags array
   };
 
   // Effect to filter suggestions based on search term, sort, and selected tag
   useEffect(() => {
-    // Get all keys from the contentMap object
-    let keys = Object.keys(contentMap);
+    // Get all keys from the suggestions object
+    let keys = Object.keys(suggestions);
 
     // If a sort option other than "All" is selected, filter the keys to only include the ones that match the sort option
     if (sort !== "All") {
@@ -97,11 +154,11 @@ const Search = ({ visible, onClose }) => {
     // Reduce the keys to a new object where each key's value is an array of content that matches the search term or selected tag
     const filteredSuggestions = keys.reduce((obj, key) => {
       // Filter the content of each key to only include the ones that match the search term or selected tag
-      const filteredContents = contentMap[key].filter(
+      const filteredContents = suggestions[key].filter(
         (content) => {
-          // Check if the content's text or acronym matches the search term
+          // Check if the content's name or acronym matches the search term
           const matchesSearchTerm =
-            content.text.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            content.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             (content.acronym &&
               content.acronym.toLowerCase().includes(searchTerm.toLowerCase()));
 
@@ -110,6 +167,7 @@ const Search = ({ visible, onClose }) => {
             selectedTag.length > 0 &&
             content.tags &&
             selectedTag.every((tag) => content.tags.includes(tag));
+
           // If a search term is entered, return true if the content matches the search term or selected tag
           // If no search term is entered but a tag is selected, return true if the content matches the selected tag
           // If no search term or tag is selected, return true for all content
@@ -155,7 +213,7 @@ const Search = ({ visible, onClose }) => {
             <div className="relative z-50 flex h-full w-full">
               {/* container for the search box header text and input fields. */}
               <div className="flex h-screen w-full flex-col">
-                <h1 className="p-4 text-2xl font-bold">Search places</h1>
+                <h1 className="p-4 text-2xl font-bold"></h1>
                 {/* container for the search input and sort dropdown. */}
                 <div className="flex px-4 pb-2">
                   {/* search input. */}
@@ -174,7 +232,10 @@ const Search = ({ visible, onClose }) => {
                     {/* sort dropdown. */}
                     <div className="h-auto pb-2">
                       <button
-                        onClick={() => setIsOpen(!isOpen)}
+                        onClick={() => {
+                          setIsOpen(!isOpen);
+                          setListDisplay(!listDisplay);
+                        }}
                         className="flex items-center text-xl font-bold text-gray-700"
                       >
                         Filter by &nbsp;
@@ -193,79 +254,64 @@ const Search = ({ visible, onClose }) => {
                             onClick={() => {
                               setSelectedKey("All");
                               handleSortChange("All");
+                              setListDisplay(true);
                             }}
                           >
                             <span className="flex items-center rounded-2xl bg-green-600 p-2 text-center text-white">
-                              {keyIcons["All"]}
+                              <FaHome />
                             </span>
                             All
                           </div>
                           <div className="mt-4 grid grid-cols-2 grid-rows-5 gap-2 sm:gap-4">
                             {/* Map over the keys of the contentMap object */}
-                            {Object.keys(contentMap).map((key, index) => (
-                              <div
-                                key={index}
-                                className={`
-        flex items-center gap-2 rounded-lg p-1 text-center transition-all duration-300 ease-in-out sm:p-3 
-        ${selectedKey === key ? "border border-gray-200 bg-slate-50 shadow-lg" : "border border-transparent hover:border"} 
-        hover:border-gray-200 hover:shadow-lg
-      `}
-                                onClick={() => {
-                                  // Set the selected key to the key of the clicked item
-                                  setSelectedKey(key);
-                                  // Perform sorting operation based on the key of the clicked item
-                                  handleSortChange(key);
-                                }}
-                              >
-                                {/* Display the icon associated with the key */}
-                                <span className="flex items-center rounded-2xl bg-green-600 p-2 text-center text-white">
-                                  {keyIcons[key]}
-                                </span>
-                                {/* Display the key with the first letter capitalized and the rest in lowercase */}
-                                {key.charAt(0).toUpperCase() +
-                                  key.slice(1).toLowerCase()}
-                              </div>
-                            ))}
+                            {Object.keys(categoriesDisplay).map(
+                              (key, index) => (
+                                <div
+                                  key={index}
+                                  className={`
+      flex items-center gap-2 rounded-lg p-1 text-center transition-all duration-300 ease-in-out sm:p-3 
+      ${selectedKey === key ? "border border-gray-200 bg-slate-50 shadow-lg" : "border border-transparent hover:border"} 
+      hover:border-gray-200 hover:shadow-lg
+    `}
+                                  onClick={() => {
+                                    setSelectedKey(key);
+                                    handleSortChange(key);
+                                    setListDisplay(true);
+                                  }}
+                                >
+                                  <span className="flex items-center rounded-2xl bg-green-600 p-2 text-center text-white">
+                                    {keyIcons[key]}
+                                  </span>
+                                  {categoriesDisplay[key]}
+                                </div>
+                              ),
+                            )}
                           </div>
                         </div>
+                        {/* Tags Selection */}
                         <h1 className="pb-2 text-sm font-semibold text-gray-500">
                           Select tags:
                         </h1>
-                        <div className="mb-2 flex w-full flex-wrap gap-1">
+                        <div className="mb-2 flex w-full flex-wrap gap-2 p-1">
                           {/* container for the tag buttons. */}
-                          {
-                            // all items and their tags into a single array
-                            Object.values(contentMap)
-                              .flatMap((items) => items)
-                              .flatMap((item) => item.tags || [])
-                              // Remove duplicate tags
-                              .filter(
-                                (tag, index, self) =>
-                                  self.indexOf(tag) === index,
-                              )
-                              // Map over each unique tag
-                              .map((tag, index) => (
-                                <button
-                                  key={index}
-                                  // Call handleTagClick with the tag when the button is clicked
-                                  onClick={() => handleTagClick(tag)}
-                                  className={`flex h-auto justify-center gap-1 rounded-xl px-2 py-1 text-center text-xs text-white hover:opacity-80 ${
-                                    // styles based on whether the tag is selected
-                                    selectedTag.includes(tag)
-                                      ? "bg-green-500 opacity-80 ring-2 ring-green-500"
-                                      : ""
-                                  }`}
-                                  style={{
-                                    backgroundColor: tagStyles[tag]?.color,
-                                  }}
-                                >
-                                  {/* Display the icon tag */}
-                                  {tagStyles[tag]?.icon}
-                                  {/* Display the tag */}
-                                  {tag}
-                                </button>
-                              ))
-                          }
+                          {tags.map((tag, index) => (
+                            <button
+                              key={index}
+                              // Call handleTagClick with the tag when the button is clicked
+                              onClick={() => handleTagClick(tag)}
+                              className={`text-grey-600 flex h-auto justify-center gap-1 rounded-xl px-2 py-1 text-center text-xs font-bold ring-2 ring-green-500 hover:opacity-80 `}
+                              style={{
+                                ...(selectedTag.includes(tag)
+                                  ? {
+                                      backgroundColor: "#22c55e",
+                                      opacity: 0.8,
+                                    }
+                                  : {}),
+                              }}
+                            >
+                              {tag.toUpperCase()}
+                            </button>
+                          ))}
                           {/* reset button. */}
                           <button
                             onClick={handleReset}
@@ -277,111 +323,109 @@ const Search = ({ visible, onClose }) => {
                       </div>
                     </div>
 
-                    {/* container for the view button and dropdown. */}
-                    <div className="flex w-full items-center justify-between py-2">
-                      <h1 className="text-sm font-semibold text-gray-500">
-                        Change view:
-                      </h1>
-                      {/* view options. */}
-                      <div className="flex gap-2 rounded-lg border p-1">
-                        <button
-                          onClick={() => {
-                            setView("list");
-                          }}
-                          className={`flex w-auto items-center rounded-md border px-1 text-sm hover:bg-slate-200 ${view === "list" ? "bg-slate-200 text-black" : ""}`}
-                        >
-                          List
-                          <PiList className="size-6 pl-1" />
-                        </button>
-                        <button
-                          onClick={() => {
-                            setView("cards");
-                          }}
-                          className={`flex w-auto items-center rounded-md border px-1 text-sm hover:bg-slate-200 ${view === "cards" ? "bg-slate-200 text-black" : ""}`}
-                        >
-                          Cards
-                          <PiCardsDuotone className="size-6 pl-1" />
-                        </button>
-                        <button
-                          onClick={() => {
-                            setView("grid");
-                          }}
-                          className={`flex w-auto items-center rounded-md border px-1 text-sm hover:bg-slate-200 ${view === "grid" ? "bg-slate-200 text-black" : ""}`}
-                        >
-                          Grid
-                          <PiGridNine className="size-6 pl-1" />
-                        </button>
+                    {/* Display Options Section */}
+                    {listDisplay && (
+                      <div className="flex w-full items-center justify-between py-2">
+                        <h1 className="text-sm font-semibold text-gray-500">
+                          Change view:
+                        </h1>
+                        {/* view options. */}
+                        <div className="flex gap-2 rounded-lg border p-1">
+                          <button
+                            onClick={() => {
+                              setView("list");
+                            }}
+                            className={`flex w-auto items-center rounded-md border px-1 text-sm hover:bg-slate-200 ${view === "list" ? "bg-slate-200 text-black" : ""}`}
+                          >
+                            List
+                            <PiList className="size-6 pl-1" />
+                          </button>
+                          <button
+                            onClick={() => {
+                              setView("cards");
+                            }}
+                            className={`flex w-auto items-center rounded-md border px-1 text-sm hover:bg-slate-200 ${view === "cards" ? "bg-slate-200 text-black" : ""}`}
+                          >
+                            Cards
+                            <PiCardsDuotone className="size-6 pl-1" />
+                          </button>
+                          <button
+                            onClick={() => {
+                              setView("grid");
+                            }}
+                            className={`flex w-auto items-center rounded-md border px-1 text-sm hover:bg-slate-200 ${view === "grid" ? "bg-slate-200 text-black" : ""}`}
+                          >
+                            Grid
+                            <PiGridNine className="size-6 pl-1" />
+                          </button>
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
 
-                  {/* container for the suggestion contents. */}
-                  <div className="h-auto px-4 py-2">
-                    <div
-                      className={`flex flex-col gap-2 ${view === "grid" ? "grid grid-cols-2" : ""}`}
-                    >
-                      {/* Determine the data to be mapped over */}
-                      {(sort === "All"
-                        ? Object.keys(suggestions)
-                        : [sort.toLowerCase()]
-                      ).map((key, keyIndex) => (
-                        <React.Fragment key={keyIndex}>
-                          {/* Check if the suggestions for the key exist */}
-                          {suggestions[key] &&
-                            suggestions[key].map((content, contentIndex) => (
+                  {/* Display Items Section */}
+                  {(sort === "All"
+                    ? Object.keys(suggestions).filter(
+                        (key) => suggestions[key].length > 0,
+                      )
+                    : [sort.toLowerCase()]
+                  ).map((key, keyIndex) => (
+                    <div key={keyIndex}>
+                      {/* Check if the suggestions for the key exist */}
+                      {suggestions[key] &&
+                        suggestions[key].map((content, contentIndex) => (
+                          <div
+                            key={`${key}-${contentIndex}`}
+                            className={`flex flex-col overflow-hidden rounded-lg border-2 px-1 py-1 shadow-lg ${view === "list" ? "h-fit" : "h-auto"} relative border ${clicked ? "bg-slate-100" : "hover:bg-slate-50"}`}
+                            onClick={() => {
+                              // Log the content when clicked
+                              console.log(content);
+                            }}
+                          >
+                            {/* Conditionally render an img element if view is not "list" */}
+                            {view !== "list" && (
+                              <div className="h-1/2">
+                                <img
+                                  src={
+                                    content.image ||
+                                    "https://via.placeholder.com/150"
+                                  }
+                                  alt={content.text}
+                                  className={
+                                    view === "cards"
+                                      ? "h-max w-full object-cover"
+                                      : "h-full w-full object-cover"
+                                  }
+                                />
+                              </div>
+                            )}
+                            <div
+                              className={`${view === "list" ? "flex w-auto items-center px-4" : "flex h-1/2 flex-col items-center justify-center font-semibold"} gap-2 ${view === "cards" ? "absolute bottom-0 left-0 right-0" : ""}`}
+                            >
                               <div
-                                key={`${key}-${contentIndex}`}
-                                className={`flex flex-col overflow-hidden rounded-lg border-2 px-1 py-1 shadow-lg ${view === "list" ? "h-fit" : "h-auto"} relative border ${clicked ? "bg-slate-100" : "hover:bg-slate-50"}`}
-                                onClick={() => {
-                                  // Log the content when clicked
-                                  console.log(content);
-                                }}
+                                className={
+                                  view === "list"
+                                    ? "flex h-auto items-center justify-center gap-2 text-center text-base"
+                                    : "flex w-auto flex-col items-center justify-center gap-2 text-center text-sm"
+                                }
                               >
-                                {/* Conditionally render an img element if view is not "list" */}
-                                {view !== "list" && (
-                                  <div className="h-1/2">
-                                    <img
-                                      src={
-                                        content.image ||
-                                        "https://via.placeholder.com/150"
-                                      }
-                                      alt={content.text}
-                                      className={
-                                        view === "cards"
-                                          ? "h-max w-full object-cover"
-                                          : "h-full w-full object-cover"
-                                      }
-                                    />
-                                  </div>
-                                )}
-                                <div
-                                  className={`${view === "list" ? "flex w-auto items-center px-4" : "flex h-1/2 flex-col items-center justify-center font-semibold"} gap-2 ${view === "cards" ? "absolute bottom-0 left-0 right-0" : ""}`}
-                                >
-                                  <div
-                                    className={
-                                      view === "list"
-                                        ? "flex h-auto items-center justify-center gap-2 text-center text-base"
-                                        : "flex w-auto flex-col items-center justify-center gap-2 text-center text-sm"
-                                    }
-                                  >
-                                    <div className="rounded-full border-2 border-white bg-green-600 p-2 text-xl text-white">
-                                      {/* Display the icon associated with the key */}
-                                      {keyIcons[key]}
-                                    </div>
-                                    <div className="w-full overflow-auto rounded-full border-2 border-green-600 bg-white px-2 text-sm">
-                                      {/* Display the text of the content */}
-                                      {content.text}
-                                    </div>
-                                  </div>
+                                <div className="rounded-full border-2 border-white bg-green-600 p-2 text-xl text-white">
+                                  {/* Display the icon associated with the key */}
+                                  {keyIcons[key]}
+                                </div>
+                                <div className="w-full overflow-auto rounded-full border-2 border-green-600 bg-white px-2 text-sm">
+                                  {/* Display the text of the content */}
+                                  {content.text}
                                 </div>
                               </div>
-                            ))}
-                        </React.Fragment>
-                      ))}
+                            </div>
+                          </div>
+                        ))}
                     </div>
-                  </div>
+                  ))}
                 </div>
               </div>
+
               {/* close button. */}
               <button
                 className="absolute right-0 items-center justify-center"

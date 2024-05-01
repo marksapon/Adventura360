@@ -6,13 +6,15 @@ import Module360 from "./Module360";
 import nodesLDB from "../database/Nodes.json";
 import buildingsLDB from "../database/Buildings.json";
 import extrasLDB from "../database/Extras.json";
+import infosLDB from "../database/Infos.json";
 
-function View360({ BACKEND_URL, loginType }) {
+function Adventura360({ BACKEND_URL, loginType }) {
   /* Fetch DB */
 
   const [nodesDB, setNodesDB] = useState([]); // Nodes Database
   const [buildingsDB, setBuildingsDB] = useState([]); // Buildings Database
   const [extrasDB, setExtrasDB] = useState([]); // Extras Database
+  const [infosDB, setInfosDB] = useState([]); // Infos Database
   const [isLoaded, setIsLoaded] = useState(false); // Data Loaded
 
   useEffect(() => {
@@ -20,18 +22,22 @@ function View360({ BACKEND_URL, loginType }) {
       axios.get(`${BACKEND_URL}/getNodes`),
       axios.get(`${BACKEND_URL}/getBuildings`),
       axios.get(`${BACKEND_URL}/getExtras`),
+      axios.get(`${BACKEND_URL}/getInfos`),
     ])
-      .then(([nodes, buildings, extras]) => {
+      .then(([nodes, buildings, extras, infos]) => {
         setNodesDB(nodes.data);
         setBuildingsDB(buildings.data);
         setExtrasDB(extras.data);
+        setInfosDB(infos.data);
         setIsLoaded(true);
       })
       .catch((err) => {
-        console.log("Login Error:", err.message);
+        console.log("ERROR OCCURED");
+        console.log("Error:", err.message);
         setNodesDB(nodesLDB);
         setBuildingsDB(buildingsLDB);
         setExtrasDB(extrasLDB);
+        setInfosDB(infosLDB);
         setIsLoaded(true);
       });
   }, []);
@@ -44,10 +50,12 @@ function View360({ BACKEND_URL, loginType }) {
           buildingsDB={buildingsDB}
           extrasDB={extrasDB}
           loginType={loginType}
+          infosDB={infosDB}
         />
       )}
+      {!isLoaded && <div>Loading...</div>}
     </>
   );
 }
 
-export default View360;
+export default Adventura360;

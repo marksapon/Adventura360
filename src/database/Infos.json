@@ -1,0 +1,73 @@
+[
+  {
+    "scene": "dit",
+    "name": "Department of Information Technology",
+    "acronym": "DIT",
+    "type": "college_building",
+    "tags": ["ceit"],
+    "image": "dit.jpg",
+    "desc": "",
+    "facilities": [],
+    "courses": [],
+    "gallery": []
+  },
+  {
+    "scene": "osa",
+    "name": "Office of Student Affairs",
+    "type": "school_building",
+    "acronym": "OSA",
+    "tags": ["school"],
+    "image": "dit.jpg",
+    "desc": "",
+    "facilities": [],
+    "courses": [],
+    "gallery": []
+  },
+  {
+    "scene": "saluysoy",
+    "name": "Saluysoy",
+    "acronym": "SALUYSOY",
+    "type": "cafeteria",
+    "tags": ["leisure"],
+    "image": "dit.jpg",
+    "desc": "",
+    "facilities": [],
+    "courses": [],
+    "gallery": []
+  },
+  {
+    "scene": "layatdiwa",
+    "name": "Laya at Diwa",
+    "acronym": "LAYA DIWA",
+    "type": "attraction",
+    "tags": ["historical"],
+    "image": "dit.jpg",
+    "desc": "",
+    "facilities": [],
+    "courses": [],
+    "gallery": []
+  },
+  {
+    "scene": "quad",
+    "name": "Quadrangle",
+    "type": "court",
+    "tags": ["school", "leisure"],
+    "image": "dit.jpg",
+    "desc": "",
+    "facilities": [],
+    "courses": [],
+    "gallery": []
+  },
+  {
+    "scene": "icon",
+    "name": "International Convention Center",
+    "acronym": "ICON",
+    "type": "venue",
+    "tags": [],
+    "image": "dit.jpg",
+    "desc": "",
+    "facilities": [],
+    "courses": [],
+    "gallery": []
+  }
+]

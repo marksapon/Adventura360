@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 import Cookies from "js-cookie";
 import LandingPage from "./landingPage/LandingPage";
 import Login from "./loginPage/login";
-import View360 from "./module360/View360";
+import Adventura360 from "./module360/Adventura360";
 
 const PrivateRoute = ({ children }) => {
   const navigate = useNavigate();
@@ -45,7 +45,7 @@ const AppRouter = () => {
           path="/app/*"
           element={
             <PrivateRoute>
-              <View360 loginType={loginType} BACKEND_URL={BACKEND_URL} />
+              <Adventura360 loginType={loginType} BACKEND_URL={BACKEND_URL} />
             </PrivateRoute>
           }
         />
