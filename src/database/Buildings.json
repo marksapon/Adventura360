@@ -35,9 +35,418 @@
         "id": 1,
         "type": "info",
         "class": "info",
-        "target": "dit_info",
+        "target": "osa_info",
         "yaw": 281.98,
         "pitch": 11.59
+      }
+    ]
+  },
+  {
+    "scene": "ih2",
+    "location": "International House 2",
+    "image": "/assets/Database Images/unrestricted nodes/5.webp",
+    "back": ["node3", "node4", "node5", "node6", "node7"],
+    "coords": {
+      "x": 0.472,
+      "y": 1.287,
+      "type": "school_facilities"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "ih2_info",
+        "yaw": 185.2,
+        "pitch": 18.34
+      }
+    ]
+  },
+  {
+    "scene": "cspear",
+    "location": "College of Sports, Physical Education and Recreation",
+    "image": "/assets/Database Images/unrestricted nodes/12.webp",
+    "back": ["node11", "node12", "node13"],
+    "coords": {
+      "x": 0.56,
+      "y": 1.195,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "cspear_info",
+        "yaw": 277.61,
+        "pitch": 13.64
+      }
+    ]
+  },
+  {
+    "scene": "bahayalumni",
+    "location": "Bahay ng Alumni",
+    "image": "/assets/Database Images/unrestricted nodes/19.webp",
+    "back": ["node19"],
+    "coords": {
+      "x": 0.594,
+      "y": 1.199,
+      "type": "school_facilities"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "bahayalumni_info",
+        "yaw": 4.92,
+        "pitch": 5.26
+      }
+    ]
+  },
+  {
+    "scene": "ncrdec",
+    "location": "National Coffee Research, Development and Extension Center",
+    "image": "/assets/Database Images/unrestricted nodes/24.webp",
+    "back": ["node24"],
+    "coords": {
+      "x": 0.68,
+      "y": 1.169,
+      "type": "school_facilities"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "ncrdec_info",
+        "yaw": 255.76,
+        "pitch": 9.72
+      }
+    ]
+  },
+  {
+    "scene": "ces",
+    "location": "Central Expert Station",
+    "image": "/assets/Database Images/unrestricted nodes/25.webp",
+    "back": ["node25", "node26"],
+    "coords": {
+      "x": 0.675,
+      "y": 1.116,
+      "type": "farm"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "ces_info",
+        "yaw": 0.4,
+        "pitch": 5.26
+      }
+    ]
+  },
+  {
+    "scene": "wtc",
+    "location": "Water Testing Center",
+    "image": "/assets/Database Images/unrestricted nodes/29.webp",
+    "back": ["node29", "node30"],
+    "coords": {
+      "x": 0.63,
+      "y": 1.038,
+      "type": "school_facilities"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "wtc_info",
+        "yaw": 275.2,
+        "pitch": 1.34
+      }
+    ]
+  },
+  {
+    "scene": "newcemds",
+    "location": "College of Economics, Management and Development Studies New Building",
+    "image": "/assets/Database Images/unrestricted nodes/33.webp",
+    "back": ["node31", "node32", "node33"],
+    "coords": {
+      "x": 0.605,
+      "y": 0.994,
+      "type": "school_facilities"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "newcemds_info",
+        "yaw": 301.62,
+        "pitch": 1.95
+      }
+    ]
+  },
+  {
+    "scene": "cafenr",
+    "location": "College of Agriculture, Forestry, Environment and Natural Resources",
+    "image": "/assets/Database Images/unrestricted nodes/33.webp",
+    "back": ["node33"],
+    "coords": {
+      "x": 0.558,
+      "y": 1.001,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "cafenr_info",
+        "yaw": 113.71,
+        "pitch": 14.32
+      }
+    ]
+  },
+  {
+    "scene": "rc",
+    "location": "Reasech Center",
+    "image": "/assets/Database Images/unrestricted nodes/35.webp",
+    "back": ["node34", "node35"],
+    "coords": {
+      "x": 0.581,
+      "y": 0.939,
+      "type": "school_facilities"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "rc_info",
+        "yaw": 113.71,
+        "pitch": 14.32
+      }
+    ]
+  },
+  {
+    "scene": "library",
+    "location": "Ladislao N. Diwa Memorial Library and Museum (LDMLM)",
+    "image": "/assets/Database Images/unrestricted nodes/35.webp",
+    "back": ["node34", "node35"],
+    "coords": {
+      "x": 0.526,
+      "y": 0.964,
+      "type": "school_facilities"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "library_info",
+        "yaw": 113.71,
+        "pitch": 14.32
+      }
+    ]
+  },
+  {
+    "scene": "irb",
+    "location": "Interdisciplinary Research Building",
+    "image": "/assets/Database Images/unrestricted nodes/37.webp",
+    "back": ["node37"],
+    "coords": {
+      "x": 0.603,
+      "y": 0.919,
+      "type": "school_facilities"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "irb_info",
+        "yaw": 113.71,
+        "pitch": 14.32
+      }
+    ]
+  },
+  {
+    "scene": "vase",
+    "location": "Banga ng Karunungan",
+    "image": "/assets/Database Images/unrestricted nodes/39.webp",
+    "back": [
+      "node37",
+      "node38",
+      "node39",
+      "node40",
+      "node79",
+      "node80",
+      "node81",
+      "node82",
+      "node83"
+    ],
+    "coords": {
+      "x": 0.545,
+      "y": 0.906,
+      "type": "attractions"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "attraction",
+        "target": "vase_info",
+        "yaw": 131.48,
+        "pitch": 10.04
+      }
+    ]
+  },
+  {
+    "scene": "ih1",
+    "location": "International House 1",
+    "image": "/assets/Database Images/unrestricted nodes/39.webp",
+    "back": ["node38", "node39", "node40"],
+    "coords": {
+      "x": 0.576,
+      "y": 0.878,
+      "type": "school_facilities"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "ih1_info",
+        "yaw": 268.73,
+        "pitch": 12.37
+      }
+    ]
+  },
+  {
+    "scene": "biosci",
+    "location": "Biological Sciences Building",
+    "image": "/assets/Database Images/unrestricted nodes/43.webp",
+    "back": ["node43"],
+    "coords": {
+      "x": 0.521,
+      "y": 0.86,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "biosci_info",
+        "yaw": 108.17,
+        "pitch": 8.04
+      }
+    ]
+  },
+  {
+    "scene": "con",
+    "location": "Biological Sciences Building",
+    "image": "/assets/Database Images/unrestricted nodes/48.webp",
+    "back": ["node44, node48"],
+    "coords": {
+      "x": 0.485,
+      "y": 0.841,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "con_info",
+        "yaw": 203.81,
+        "pitch": 12.77
+      }
+    ]
+  },
+  {
+    "scene": "cpc",
+    "location": "Coffee Processing Center",
+    "image": "/assets/Database Images/unrestricted nodes/50.webp",
+    "back": ["node50"],
+    "coords": {
+      "x": 0.408,
+      "y": 0.787,
+      "type": "school_facilities"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "cpc_info",
+        "yaw": 20.78,
+        "pitch": 7.59
+      }
+    ]
+  },
+  {
+    "scene": "ie",
+    "location": "Industial Engineering Building",
+    "image": "/assets/Database Images/unrestricted nodes/58.webp",
+    "back": ["node58"],
+    "coords": {
+      "x": 0.33,
+      "y": 0.871,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "ie_info",
+        "yaw": 279.24,
+        "pitch": 6.61
+      }
+    ]
+  },
+  {
+    "scene": "dcee",
+    "location": "Department of Computer and Electronics Engineering",
+    "image": "/assets/Database Images/unrestricted nodes/58.webp",
+    "back": ["node58"],
+    "coords": {
+      "x": 0.292,
+      "y": 0.876,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "dcee_info",
+        "yaw": 97.36,
+        "pitch": 18.83
+      }
+    ]
+  },
+  {
+    "scene": "dafe",
+    "location": "Department of Agricultural and Food Engineering",
+    "image": "/assets/Database Images/unrestricted nodes/92.webp",
+    "back": ["node64", "node92", "node91"],
+    "coords": {
+      "x": 0.361,
+      "y": 0.951,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "dafe_info",
+        "yaw": 14.68,
+        "pitch": 12.63
       }
     ]
   }

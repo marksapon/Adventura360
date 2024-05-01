@@ -136,6 +136,13 @@
         "target": "node2",
         "yaw": 87.79,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "ih2",
+        "yaw": 221.81,
+        "pitch": 11.94
       }
     ]
   },
@@ -160,6 +167,13 @@
         "target": "node3",
         "yaw": 87.91,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "ih2",
+        "yaw": 192.54,
+        "pitch": 15.92
       }
     ]
   },
@@ -184,6 +198,13 @@
         "target": "node4",
         "yaw": 98.31,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "ih2",
+        "yaw": 185.2,
+        "pitch": 18.34
       }
     ]
   },
@@ -208,6 +229,13 @@
         "target": "node5",
         "yaw": 103.93,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "ih2",
+        "yaw": 166.06,
+        "pitch": 15.8
       }
     ]
   },
@@ -239,6 +267,13 @@
         "target": "",
         "yaw": 188.25,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "ih2",
+        "yaw": 143.07,
+        "pitch": 12.43
       }
     ]
   },
@@ -325,6 +360,13 @@
         "target": "",
         "yaw": 144.0,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "construction",
+        "target": "bd",
+        "yaw": 231.56,
+        "pitch": 0.96
       }
     ]
   },
@@ -349,6 +391,13 @@
         "target": "node10",
         "yaw": 183.35,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "cspear",
+        "yaw": 330.1,
+        "pitch": 8.33
       }
     ]
   },
@@ -373,6 +422,13 @@
         "target": "node11",
         "yaw": 186.22,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "cspear",
+        "yaw": 277.61,
+        "pitch": 13.64
       }
     ]
   },
@@ -397,6 +453,13 @@
         "target": "node12",
         "yaw": 183.47,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "cspear",
+        "yaw": 211.65,
+        "pitch": 11.59
       }
     ]
   },
@@ -485,6 +548,14 @@
         "target": "node10",
         "yaw": 97.71,
         "pitch": -20
+      },
+
+      {
+        "type": "popup",
+        "class": "construction",
+        "target": "bd",
+        "yaw": 205.32,
+        "pitch": 0.24
       }
     ]
   },
@@ -509,6 +580,13 @@
         "target": "node16",
         "yaw": 97.0,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "construction",
+        "target": "bd",
+        "yaw": 177.91,
+        "pitch": -0.72
       }
     ]
   },
@@ -533,6 +611,13 @@
         "target": "node17",
         "yaw": 99.75,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "construction",
+        "target": "bd",
+        "yaw": 148.65,
+        "pitch": 0.0
       }
     ]
   },
@@ -564,6 +649,20 @@
         "target": "node18",
         "yaw": 195.43,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "bahayalumni",
+        "yaw": 4.92,
+        "pitch": 5.26
+      },
+      {
+        "type": "popup",
+        "class": "construction",
+        "target": "pd",
+        "yaw": 211.86,
+        "pitch": 12.74
       }
     ]
   },
@@ -691,6 +790,13 @@
         "target": " ",
         "yaw": 236.57,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "ncrdec",
+        "yaw": 255.76,
+        "pitch": 9.72
       }
     ]
   },
@@ -722,6 +828,13 @@
         "target": "",
         "yaw": 289.91,
         "pitch": -20
+      },
+      {
+        "type": "info",
+        "class": "farm",
+        "target": "ces",
+        "yaw": 317.22,
+        "pitch": 4.66
       }
     ]
   },
@@ -746,6 +859,13 @@
         "target": "node25",
         "yaw": 180.0,
         "pitch": -20
+      },
+      {
+        "type": "info",
+        "class": "farm",
+        "target": "ces",
+        "yaw": 247.33,
+        "pitch": -6.37
       }
     ]
   },
@@ -806,7 +926,7 @@
   },
   {
     "scene": "node29",
-    "image": "/assets/Database Images/unrestricted nodes/29.webp",
+    "image": "/assets/Database Images/unrestricted nodes/30.webp",
     "coords": {
       "x": 0.618,
       "y": 1.066
@@ -825,6 +945,13 @@
         "target": "node28",
         "yaw": 193.99,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "wtc",
+        "yaw": 324.9,
+        "pitch": 3.27
       }
     ]
   },
@@ -849,6 +976,13 @@
         "target": "node29",
         "yaw": 204.52,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "wtc",
+        "yaw": 275.2,
+        "pitch": 1.34
       }
     ]
   },
@@ -880,6 +1014,13 @@
         "target": "node30",
         "yaw": 45.33,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "newcemds",
+        "yaw": 344.82,
+        "pitch": 2.07
       }
     ]
   },
@@ -904,6 +1045,13 @@
         "target": "node31",
         "yaw": 218.27,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "newcemds",
+        "yaw": 311.38,
+        "pitch": 6.53
       }
     ]
   },
@@ -928,6 +1076,20 @@
         "target": "node32",
         "yaw": 207.15,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "newcemds",
+        "yaw": 301.62,
+        "pitch": 1.95
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "cafenr",
+        "yaw": 113.71,
+        "pitch": 14.32
       }
     ]
   },
@@ -952,6 +1114,20 @@
         "target": "node33",
         "yaw": 205.24,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "rc",
+        "yaw": 340.56,
+        "pitch": -0.16
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "library",
+        "yaw": 92.53,
+        "pitch": 14.01
       }
     ]
   },
@@ -966,7 +1142,7 @@
       {
         "id": 1,
         "type": "move",
-        "target": "node36",
+        "target": "node37",
         "yaw": 21.29,
         "pitch": -20
       },
@@ -990,44 +1166,13 @@
         "target": "",
         "yaw": 288.75,
         "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node36",
-    "image": "/assets/Database Images/unrestricted nodes/36.webp",
-    "coords": {
-      "x": 0.557,
-      "y": 0.917
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node37",
-        "yaw": 21.29,
-        "pitch": -20
       },
       {
-        "id": 2,
-        "type": "move",
-        "target": "node35",
-        "yaw": 201.65,
-        "pitch": -20
-      },
-      {
-        "id": 3,
-        "type": "move",
-        "target": "node79",
-        "yaw": 72.81,
-        "pitch": -20
-      },
-      {
-        "id": 4,
-        "type": "move",
-        "target": "",
-        "yaw": 273.89,
-        "pitch": -20
+        "type": "bldg",
+        "class": "bldg",
+        "target": "rc",
+        "yaw": 266.82,
+        "pitch": 0.4
       }
     ]
   },
@@ -1049,7 +1194,7 @@
       {
         "id": 2,
         "type": "move",
-        "target": "node36",
+        "target": "node35",
         "yaw": 195.55,
         "pitch": -20
       },
@@ -1059,6 +1204,20 @@
         "target": "node79",
         "yaw": 94.13,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "irb",
+        "yaw": 268.43,
+        "pitch": 5.21
+      },
+      {
+        "type": "info",
+        "class": "attraction",
+        "target": "Vase",
+        "yaw": 58.65,
+        "pitch": 16.48
       }
     ]
   },
@@ -1083,6 +1242,20 @@
         "target": "node37",
         "yaw": 196.95,
         "pitch": -20
+      },
+      {
+        "type": "info",
+        "class": "attraction",
+        "target": "Vase",
+        "yaw": 104.7,
+        "pitch": 0.41
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "ih1",
+        "yaw": 321.45,
+        "pitch": 7.19
       }
     ]
   },
@@ -1109,11 +1282,18 @@
         "pitch": -20
       },
       {
-        "id": 3,
-        "type": "move",
-        "target": "node38",
-        "yaw": 179.4,
-        "pitch": -15.22
+        "type": "info",
+        "class": "attraction",
+        "target": "Vase",
+        "yaw": 131.48,
+        "pitch": 10.04
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "ih1",
+        "yaw": 268.73,
+        "pitch": 12.37
       }
     ]
   },
@@ -1152,6 +1332,20 @@
         "target": "",
         "yaw": 255.71,
         "pitch": -20
+      },
+      {
+        "type": "info",
+        "class": "attraction",
+        "target": "Vase",
+        "yaw": 165.4,
+        "pitch": 1.09
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "ih1",
+        "yaw": 256.39,
+        "pitch": 5.16
       }
     ]
   },
@@ -1207,6 +1401,20 @@
         "target": "",
         "yaw": 112.65,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "restroom",
+        "target": "restroomIH1",
+        "yaw": 228.54,
+        "pitch": 4.69
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "biosci",
+        "yaw": 108.17,
+        "pitch": 8.04
       }
     ]
   },
@@ -1245,6 +1453,13 @@
         "target": "",
         "yaw": 82.26,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "con",
+        "yaw": 88.83,
+        "pitch": 10.16
       }
     ]
   },
@@ -1283,6 +1498,13 @@
         "target": "",
         "yaw": 274.8,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "construction",
+        "target": "hostel",
+        "yaw": 254.58,
+        "pitch": 0.48
       }
     ]
   },
@@ -1362,6 +1584,13 @@
         "target": "",
         "yaw": 257.21,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "con",
+        "yaw": 203.81,
+        "pitch": 12.77
       }
     ]
   },
@@ -1417,6 +1646,13 @@
         "target": "node49",
         "yaw": 283.12,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "cpc",
+        "yaw": 20.78,
+        "pitch": 7.59
       }
     ]
   },
@@ -1447,13 +1683,6 @@
         "type": "move",
         "target": "node99",
         "yaw": 192.21,
-        "pitch": -20
-      },
-      {
-        "id": 4,
-        "type": "move",
-        "target": "",
-        "yaw": 52.81,
         "pitch": -20
       }
     ]
@@ -1639,18 +1868,18 @@
         "pitch": -20
       },
       {
-        "id": 3,
-        "type": "move",
-        "target": "",
-        "yaw": 102.81,
-        "pitch": -20
+        "type": "bldg",
+        "class": "bldg",
+        "target": "dcee",
+        "yaw": 97.36,
+        "pitch": 18.83
       },
       {
-        "id": 4,
-        "type": "move",
-        "target": "",
-        "yaw": 279.45,
-        "pitch": -20
+        "type": "bldg",
+        "class": "bldg",
+        "target": "ie",
+        "yaw": 279.24,
+        "pitch": 6.61
       }
     ]
   },
@@ -1799,8 +2028,8 @@
     "scene": "node64",
     "image": "/assets/Database Images/unrestricted nodes/64.webp",
     "coords": {
-      "x": 0.334,
-      "y": 0.994
+      "x": 0.335,
+      "y": 0.993
     },
     "hotspot": [
       {
@@ -1830,6 +2059,13 @@
         "target": "node100",
         "yaw": 105.13,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "dafe",
+        "yaw": 322.51,
+        "pitch": 6.0
       }
     ]
   },
@@ -1838,7 +2074,7 @@
     "image": "/assets/Database Images/unrestricted nodes/65.webp",
     "coords": {
       "x": 0.336,
-      "y": 1.004
+      "y": 1.0
     },
     "hotspot": [
       {
@@ -2253,6 +2489,13 @@
         "target": "node37",
         "yaw": 266.13,
         "pitch": -20
+      },
+      {
+        "type": "info",
+        "class": "attraction",
+        "target": "vase",
+        "yaw": 359.46,
+        "pitch": 11.85
       }
     ]
   },
@@ -2277,6 +2520,20 @@
         "target": "node40",
         "yaw": 316.43,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "ih1",
+        "yaw": 263.02,
+        "pitch": 7.87
+      },
+      {
+        "type": "info",
+        "class": "attraction",
+        "target": "vase",
+        "yaw": 170.56,
+        "pitch": 8.54
       }
     ]
   },
@@ -2308,6 +2565,13 @@
         "target": "",
         "yaw": 173.83,
         "pitch": -20
+      },
+      {
+        "type": "info",
+        "class": "attraction",
+        "target": "vase",
+        "yaw": 309.45,
+        "pitch": 10.85
       }
     ]
   },
@@ -2332,6 +2596,13 @@
         "target": "node80",
         "yaw": 314.75,
         "pitch": -20
+      },
+      {
+        "type": "info",
+        "class": "attraction",
+        "target": "vase",
+        "yaw": 209.92,
+        "pitch": 20.14
       }
     ]
   },
@@ -2363,6 +2634,13 @@
         "target": "",
         "yaw": 278.15,
         "pitch": -20
+      },
+      {
+        "type": "info",
+        "class": "attraction",
+        "target": "vase",
+        "yaw": 282.63,
+        "pitch": 7.34
       }
     ]
   },
@@ -2371,7 +2649,7 @@
     "image": "/assets/Database Images/unrestricted nodes/84.webp",
     "coords": {
       "x": 0.527,
-      "y": 0.921
+      "y": 0.923
     },
     "hotspot": [
       {
@@ -2611,6 +2889,13 @@
         "target": "",
         "yaw": 340.99,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "dafe",
+        "yaw": 40.46,
+        "pitch": 14.69
       }
     ]
   },
@@ -2635,6 +2920,13 @@
         "target": "node91",
         "yaw": 286.16,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "dafe",
+        "yaw": 14.68,
+        "pitch": 12.63
       }
     ]
   },

@@ -42,5 +42,49 @@
       "type": "construction"
     },
     "image": "/assets/Database Images/unrestricted nodes/30.webp"
+  },
+  {
+    "scene": "bd",
+    "back": ["node10", "node16", "node17", "node18"],
+    "location": "This the blue dorm under construction",
+    "coords": {
+      "x": 0.581,
+      "y": 1.263,
+      "type": "construction"
+    },
+    "image": "/assets/Database Images/unrestricted nodes/17.webp"
+  },
+  {
+    "scene": "pd",
+    "back": ["node19"],
+    "location": "This the Pink dorm under construction",
+    "coords": {
+      "x": 0.623,
+      "y": 1.25,
+      "type": "construction"
+    },
+    "image": "/assets/Database Images/unrestricted nodes/19.webp"
+  },
+  {
+    "scene": "restroomIH1",
+    "back": ["node43"],
+    "location": "Restroom near IH1",
+    "coords": {
+      "x": 0.556,
+      "y": 0.85,
+      "type": "restroom"
+    },
+    "image": "/assets/Database Images/unrestricted nodes/2.webp"
+  },
+  {
+    "scene": "hostel",
+    "back": ["node45"],
+    "location": "Hostel is Under Construction",
+    "coords": {
+      "x": 0.568,
+      "y": 0.815,
+      "type": "construction"
+    },
+    "image": "/assets/Database Images/unrestricted nodes/2.webp"
   }
 ]
