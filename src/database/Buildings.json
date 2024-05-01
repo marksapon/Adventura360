@@ -2,16 +2,11 @@
   {
     "scene": "dit",
     "location": "Department of Information Technology",
-    "image": "/assets/Database Images/unrestricted nodes/8.webp",
-    "back": [
-      "node5",
-      "node10",
-      "node21",
-      "List ng Database Images/unrestricted nodes na may access sa DIT building gamit ang Database Images/unrestricted nodes.scene value"
-    ],
+    "image": "/assets/Database Images/unrestricted nodes/61.webp",
+    "back": ["node61", "node62"],
     "coords": {
-      "x": 0.232,
-      "y": 0.747,
+      "x": 0.359,
+      "y": 0.932,
       "type": "college_buildings"
     },
     "hotspot": [
@@ -20,50 +15,29 @@
         "type": "info",
         "class": "info",
         "target": "dit_info",
-        "yaw": 1.06,
-        "pitch": 20.44
+        "yaw": 267.12,
+        "pitch": 20.42
       }
     ]
   },
   {
-    "scene": "quad",
-    "location": "Quadrangle",
-
-    "image": "/assets/buildings/quad.webp",
-    "back": ["node1"],
+    "scene": "osa",
+    "location": "Office of Student Affairs",
+    "image": "/assets/Database Images/unrestricted nodes/14.webp",
+    "back": ["node14"],
     "coords": {
-      "x": 0.5,
-      "y": 0.5,
-      "type": "court"
+      "x": 0.531,
+      "y": 1.141,
+      "type": "school_facilities"
     },
     "hotspot": [
       {
         "id": 1,
         "type": "info",
-        "target": "quad_info",
-        "yaw": 1.06,
-        "pitch": 20.44
-      }
-    ]
-  },
-  {
-    "scene": "quad",
-    "location": "Quadrangle",
-
-    "image": "/assets/buildings/quad.webp",
-    "back": ["node1"],
-    "coords": {
-      "x": 0.12,
-      "y": 0.23,
-      "type": "farm"
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "info",
-        "target": "quad_info",
-        "yaw": 1.06,
-        "pitch": 20.44
+        "class": "info",
+        "target": "dit_info",
+        "yaw": 281.98,
+        "pitch": 11.59
       }
     ]
   }

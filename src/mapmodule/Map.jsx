@@ -526,11 +526,11 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB }) => {
       const path = new Path({
         segments: pathData,
         strokeColor: "#3b82f6",
-        strokeWidth: 30,
+        strokeWidth: 25,
         strokeCap: "round",
       });
 
-      path.smooth(1); // Remove the sharp edges of the path
+      // path.smooth(1); // Remove the sharp edges of the path
     } else {
       const paperJS = document.createElement("canvas"); // Create a canvas element for PaperJS
 
@@ -559,7 +559,7 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB }) => {
         strokeCap: "round",
       });
 
-      path.smooth(1); // Remove the sharp edges of the path
+      // path.smooth(0.1); // Remove the sharp edges of the path
 
       // Add the PaperJS canvas as an overlay
       viewer.addOverlay({

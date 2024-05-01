@@ -8,39 +8,85 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node2",
         "yaw": 280.46,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node78",
         "yaw": 10.17,
         "pitch": -20
       },
       {
-        "id": 4,
-        "type": "bldg",
-        "target": "dit",
-        "yaw": 0,
-        "pitch": 0
-      },
-      {
-        "id": 5,
         "type": "move",
         "target": "node103",
         "yaw": 324.59,
         "pitch": -20
       },
       {
-        "id": 6,
-        "type": "bldg",
-        "target": "dit",
-        "yaw": 0,
-        "pitch": 0
+        "type": "info",
+        "class": "info",
+        "yaw": 326.77,
+        "pitch": 2.56
+      },
+      {
+        "type": "info",
+        "class": "attraction",
+        "yaw": 320.86,
+        "pitch": 2.78
+      },
+      {
+        "type": "info",
+        "class": "cafeteria",
+        "yaw": 314.84,
+        "pitch": 2.78
+      },
+      {
+        "type": "info",
+        "class": "batibot",
+        "yaw": 331.58,
+        "pitch": 2.78
+      },
+      {
+        "type": "info",
+        "class": "farm",
+        "yaw": 347.23,
+        "pitch": 2.78
+      },
+      {
+        "type": "info",
+        "class": "court",
+        "yaw": 336.88,
+        "pitch": 2.78
+      },
+      {
+        "type": "info",
+        "class": "venue",
+        "yaw": 341.33,
+        "pitch": 2.78
+      },
+      {
+        "type": "popup",
+        "class": "restroom",
+        "target": "restroomOval",
+        "yaw": 347.35,
+        "pitch": -2.62
+      },
+      {
+        "type": "popup",
+        "class": "handwash",
+        "target": "washareaOval",
+        "yaw": 142.08,
+        "pitch": 3.14
+      },
+      {
+        "type": "popup",
+        "class": "construction",
+        "target": "renovate",
+        "yaw": 155.01,
+        "pitch": 3.14
       }
     ],
     "travelType": "walk"
@@ -90,13 +136,6 @@
         "target": "node2",
         "yaw": 87.79,
         "pitch": -20
-      },
-      {
-        "id": 3,
-        "type": "move",
-        "target": "",
-        "yaw": 187.53,
-        "pitch": -20
       }
     ]
   },
@@ -144,13 +183,6 @@
         "type": "move",
         "target": "node4",
         "yaw": 98.31,
-        "pitch": -20
-      },
-      {
-        "id": 3,
-        "type": "bldg",
-        "target": "dit",
-        "yaw": 217,
         "pitch": -20
       }
     ]
@@ -389,6 +421,13 @@
         "target": "node13",
         "yaw": 182.51,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "osa",
+        "yaw": 281.98,
+        "pitch": 11.59
       }
     ]
   },
@@ -409,17 +448,19 @@
       },
       {
         "id": 2,
-        "type": "cr",
-        "target": "",
+        "type": "popup",
+        "class": "restroom",
+        "target": "restroomOval",
         "yaw": 319.93,
-        "pitch": -20
+        "pitch": 0.96
       },
       {
         "id": 3,
-        "type": "washarea",
-        "target": "",
-        "yaw": 246.86,
-        "pitch": -20
+        "type": "popup",
+        "class": "handwash",
+        "target": "washareaOval",
+        "yaw": 244.56,
+        "pitch": 0.48
       }
     ]
   },
@@ -1066,6 +1107,13 @@
         "target": "node38",
         "yaw": 177.17,
         "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node38",
+        "yaw": 179.4,
+        "pitch": -15.22
       }
     ]
   },
@@ -1684,11 +1732,11 @@
         "pitch": -20
       },
       {
-        "id": 3,
-        "type": "move",
-        "target": "",
-        "yaw": 259.92,
-        "pitch": -17.11
+        "type": "bldg",
+        "class": "bldg",
+        "target": "dit",
+        "yaw": 267.12,
+        "pitch": 20.42
       }
     ]
   },
@@ -1715,11 +1763,11 @@
         "pitch": -20
       },
       {
-        "id": 3,
-        "type": "move",
-        "target": "",
-        "yaw": 322.63,
-        "pitch": -20
+        "type": "bldg",
+        "class": "bldg",
+        "target": "dit",
+        "yaw": 332.15,
+        "pitch": 21.02
       }
     ]
   },
@@ -2945,6 +2993,12 @@
         "target": "node115",
         "yaw": 332.88,
         "pitch": -20
+      },
+      {
+        "type": "info",
+        "class": "court",
+        "yaw": 329.61,
+        "pitch": 5.63
       }
     ]
   },

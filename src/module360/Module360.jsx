@@ -304,6 +304,7 @@ function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
 
   // Function to generate Extras
   function generateExtras() {
+    console.log("Generating Extras");
     const temp_extras = [];
     select_Scene.hotspot.map((hotspot, index) => {
       if (hotspot.type === "popup") {
@@ -326,6 +327,7 @@ function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
   console.log(curr_Extras);
 
   function setExtrasState(index) {
+    console.log("Setting Extras State");
     const newExtras = curr_Extras.map((extras) => {
       if (extras.id === index) {
         return {
@@ -338,7 +340,7 @@ function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
 
     setCurr_Extras(newExtras);
   }
-
+  console.log(curr_Extras);
   /* Module360 Component */
   return (
     <div className="relative flex h-svh w-full items-center justify-center">
@@ -373,7 +375,7 @@ function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
             if (hotspot.type === "move") {
               return (
                 <div
-                  key={index * 2}
+                  key={index}
                   className={`view360-hotspot pointer-events-auto cursor-pointer bg-contain bg-center bg-no-repeat opacity-80 transition-opacity duration-200`}
                   data-yaw={hotspot.yaw}
                   data-pitch={hotspot.pitch}
@@ -390,8 +392,8 @@ function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
               return (
                 // Add the key prop here
                 <div
-                  key={index * 3}
-                  className={` view360-hotspot h-7 w-7 rounded-full md:h-14 md:w-14 ${colorMap[hotspot.type].color} pointer-events-auto z-20 flex cursor-pointer items-center justify-center `}
+                  key={index}
+                  className={` view360-hotspot h-7 w-7 rounded-full md:h-14 md:w-14 ${colorMap[hotspot.type]?.color || "defaultcolor"} pointer-events-auto flex cursor-pointer items-center justify-center `}
                   data-yaw={hotspot.yaw}
                   data-pitch={hotspot.pitch}
                   onClick={() => {
@@ -402,11 +404,14 @@ function Module360({ nodesDB = nodesDB, buildingsDB, extrasDB, loginType }) {
                   {getIcon(hotspot.type, hotspot.class)}
 
                   {hotspot.type === "popup" &&
-                    curr_Extras.map((extras) => {
+                    curr_Extras.map((extras, index2) => {
                       if (extras.state === true && extras.id === index) {
                         return (
                           /* Pop Up info container */
-                          <div className="w-15 absolute -bottom-11 flex h-12 flex-col items-center gap-3 rounded-md bg-white p-2 shadow-2xl md:-bottom-11 md:h-48 md:w-60">
+                          <div
+                            className="w-15 absolute -bottom-11 flex h-12 flex-col items-center gap-3 rounded-md bg-white p-2 shadow-2xl md:-bottom-11 md:h-48 md:w-60"
+                            key={index}
+                          >
                             <img
                               src={extras.image}
                               className="h-9/16 w-16/9 flex items-center justify-center rounded-sm bg-cover bg-center bg-no-repeat"
