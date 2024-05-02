@@ -19,12 +19,12 @@ const Page2Content = () => (
           </div>
           <div className="flex items-center justify-center gap-4 ">
             <img
-              src={"/assets/Modals/help modal/mouse.png"}
+              src={"/assets/Modals/help modal/mouse.webp"}
               alt="mouse"
               className="h-20 w-40"
             />
             <img
-              src={"/assets/Modals/help modal/swipe.png"}
+              src={"/assets/Modals/help modal/swipe.webp"}
               alt="gesture"
               className="h-24 w-24"
             />

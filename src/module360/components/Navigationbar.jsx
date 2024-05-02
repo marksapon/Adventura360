@@ -35,10 +35,6 @@ const Navigationbar = ({
   const [Bugmdl, setShowBugmodal] = useState(false); // Bug Modal State
   const [searchModal, setSearchModal] = useState(false); // Search Modal State
 
-  const handlecloseShare = () => setShowSharemodal(true); // Function to change Share Modal
-  const handleclose = () => setShowmodal(true); // Function to change Help Modal
-  const handlecloseBug = () => setShowBugmodal(true); // Function to change Bug Modal
-
   const navigate = useNavigate(); // Navigation Function for Logo
 
   /* Fullscreen Function */
@@ -108,7 +104,7 @@ const Navigationbar = ({
               >
                 <span className="sr-only">Adventura Logo</span>
                 <img
-                  src="/assets/Navigation Bar/adventura 360 logo.png"
+                  src="/assets/Navigation Bar/adventura 360 logo.webp"
                   alt="share button"
                   className="h-12 w-auto transition-all duration-200 hover:scale-110"
                 />
@@ -248,7 +244,7 @@ const Navigationbar = ({
                 <span className="sr-only">CVSU</span>
                 <img
                   className="transition-all duration-200 hover:scale-110"
-                  src="/assets/Navigation Bar/CvSU logo.png"
+                  src="/assets/Navigation Bar/CvSU logo.webp"
                   alt="cvsu logo"
                 />
               </button>

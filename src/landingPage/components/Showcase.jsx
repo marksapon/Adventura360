@@ -171,7 +171,7 @@ const Showcase = () => {
           <img
             sizes="10"
             loading="lazy"
-            src="../assets/Landing Page/showcase/adventuraVN/adventuraVN.png"
+            src="../assets/Landing Page/showcase/adventuraVN/adventuraVN.webp"
             alt="Adventura VN"
           />
         </div>

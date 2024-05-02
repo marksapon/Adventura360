@@ -1,7 +1,7 @@
 import React from "react";
 
 const Introduction = () => {
-  const AboutImg = "/assets/Landing Page/introduction/intro-img.png";
+  const AboutImg = "/assets/Landing Page/introduction/phone girl.png";
 
   return (
     <div className="h-full w-full">
@@ -12,24 +12,28 @@ const Introduction = () => {
       >
         <div className="mx-auto flex flex-col items-center justify-between gap-12 md:w-11/12 md:flex-row">
           <div>
-            <img src={AboutImg} alt="something went wrong" />
+            <img className="h-1/6" src={AboutImg} alt="something went wrong" />
           </div>
           <div className="mx-auto w-full text-center md:text-left xl:w-4/5">
-            <h2 className="mb-4 text-2xl font-semibold lg:w-4/5 lg:text-3xl">
-              Welcome to{" "}
-              <span className="font-bold text-green-600">Adventura 360°</span>{" "}
-            </h2>
-            <p className="mb-8 text-justify text-base text-neutral-600 lg:w-3/4">
-              Discover{" "}
-              <span className="font-bold">
-                Cavite State University Don Severino Delas Alas Campus <s />
+            <h2 className="mb-4 text-base md:text-lg lg:w-4/5">
+              <span className="font-bold text-green-600">
+                Adventura 360°&nbsp;
               </span>
-              with our interactive virtual tour,{" "}
-              <span className="font-bold text-green-600">Adventura 360°</span>.
-              Our thesis, showcases a platform that integrates cutting-edge
-              360-degree imagery and user-friendly web technologies to deliver a
-              seamless virtual tour experience.
-            </p>
+              is an interactive campus map of{" "}
+              <span className="font-semibold text-orange-500">
+                Cavite State University Don Severino Delas Alas Campus&nbsp;
+              </span>
+              made by student researchers of{" "}
+              <span className="font-semibold">
+                Bacherlor of Science in Computer Science&nbsp;
+              </span>
+              under the{" "}
+              <span className="font-semibold">
+                College of Engineering and Information Technology.&nbsp;
+              </span>
+              Adventura 360° is designed to be a guide to visitors, students,
+              faculty, and accreditors in venturing the campus.
+            </h2>
           </div>
         </div>
       </div>
@@ -60,9 +64,9 @@ const Introduction = () => {
                 />
                 <div>
                   <h4 className="text-xl font-semibold text-gray-700 sm:text-2xl">
-                    4 handsome Boys
+                    4
                   </h4>
-                  <p className="">Members</p>
+                  <p className="">Creators</p>
                 </div>
               </div>
               <div className="item-center flex gap-4">
@@ -86,9 +90,9 @@ const Introduction = () => {
                 />
                 <div>
                   <h4 className="text-xl font-semibold text-gray-700 sm:text-2xl">
-                    2
+                    1
                   </h4>
-                  <p className="">Partnership</p>
+                  <p className="">Client</p>
                 </div>
               </div>
               <div className="item-center flex gap-4">
@@ -97,7 +101,7 @@ const Introduction = () => {
                   <h4 className="text-xl font-semibold text-gray-700 sm:text-2xl">
                     CvSU
                   </h4>
-                  <p className="">School</p>
+                  <p className="">University</p>
                 </div>
               </div>
             </div>

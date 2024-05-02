@@ -8,7 +8,7 @@ const OurTech = () => {
       className="h-full w-full"
       id="OurTech"
       style={{
-        backgroundImage: `linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 30%), url('/assets/Landing Page/our tech/ourtech-bg.png')`,
+        backgroundImage: `linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 30%), url('/assets/Landing Page/our tech/ourtech-bg.webp')`,
         backgroundSize: "580px",
         backgroundPosition: "right",
         backgroundRepeat: "no-repeat",

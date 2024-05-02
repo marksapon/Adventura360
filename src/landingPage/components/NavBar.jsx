@@ -50,7 +50,7 @@ const NavBar = () => {
             href="/"
           >
             <img
-              src={"/assets/Navigation Bar/adventura 360 logo.png"}
+              src={"/assets/Navigation Bar/adventura 360 logo.webp"}
               alt="logo"
               className="w-8"
             />

@@ -408,7 +408,8 @@ function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
                         return (
                           /* Pop Up info container */
                           <div
-                            className="w-15 absolute -bottom-11 flex h-12 flex-col items-center gap-3 rounded-md bg-white p-2 shadow-2xl md:-bottom-11 md:h-48 md:w-60"
+                            style={{ fontSize: "12px" }}
+                            className="absolute -bottom-11 flex h-28 w-28 flex-col items-center gap-3 rounded-md bg-white p-1 shadow-2xl md:-bottom-11 md:h-48 md:w-60 md:gap-7"
                             key={index}
                           >
                             <img
@@ -426,7 +427,14 @@ function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
                             {/* Hotspot Icon */}
 
                             {/* Text */}
-                            <div className="text-baseline flex h-full w-full items-end justify-center p-3">
+                            <div
+                              className="flex h-full w-full items-center justify-center text-center"
+                              // DI MALIITAN FUKKKKKKKKKKKKKKKKKKKKKK
+                              style={{
+                                fontSize:
+                                  window.innerWidth >= 768 ? "1rem" : "10px",
+                              }}
+                            >
                               {extras.text}
                             </div>
                           </div>

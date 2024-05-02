@@ -67,7 +67,7 @@ const TechStack = () => {
           >
             <img
               className="flex size-12 items-center justify-center"
-              src="/assets/Landing Page/tech stack/logo/react.png"
+              src="/assets/Landing Page/tech stack/logo/react.webp"
               alt=""
             />
             <p className="font-semibold">React</p>
@@ -80,7 +80,7 @@ const TechStack = () => {
           >
             <img
               className="size-12"
-              src="/assets/Landing Page/tech stack/logo/tailwind.png"
+              src="/assets/Landing Page/tech stack/logo/tailwind.webp"
               alt=""
             />
             Tailwind CSS
@@ -93,7 +93,7 @@ const TechStack = () => {
           >
             <img
               className="size-12"
-              src="/assets/Landing Page/tech stack/logo/mongoDB.png"
+              src="/assets/Landing Page/tech stack/logo/mongoDB.webp"
               alt=""
             />
             MongoDB
@@ -106,7 +106,7 @@ const TechStack = () => {
           >
             <img
               className="size-12"
-              src="/assets/Landing Page/tech stack/logo/vercel.png"
+              src="/assets/Landing Page/tech stack/logo/vercel.webp"
               alt=""
             />
             Vercel
@@ -119,7 +119,7 @@ const TechStack = () => {
           >
             <img
               className="size-12"
-              src="/assets/Landing Page/tech stack/logo/osd.png"
+              src="/assets/Landing Page/tech stack/logo/osd.webp"
               alt=""
             />
             OpenSeaDragon
@@ -145,7 +145,7 @@ const TechStack = () => {
           >
             <img
               className="size-12"
-              src="/assets/Landing Page/tech stack/logo/upscayl.png"
+              src="/assets/Landing Page/tech stack/logo/upscayl.webp"
               alt=""
             />
             Upscayl
@@ -158,7 +158,7 @@ const TechStack = () => {
           >
             <img
               className="w-18 h-12"
-              src="/assets/Landing Page/tech stack/logo/zoomify.png"
+              src="/assets/Landing Page/tech stack/logo/zoomify.webp"
               alt=""
             />
             Zoomify

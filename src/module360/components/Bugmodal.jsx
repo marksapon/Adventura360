@@ -115,7 +115,7 @@ const Bugmodal = ({ visible, onClose }) => {
             <button
               className="flex items-center justify-center"
               onClick={() => {
-                handleCloseAndReset();
+                onClose();
               }}
             >
               <IoIosClose className="h-10 w-10" />

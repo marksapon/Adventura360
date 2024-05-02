@@ -10,7 +10,7 @@ const Page4Content = () => (
         <div className="mt-16 flex h-full w-full flex-col items-center justify-center gap-10 px-5 text-2xl">
           <div className="flex w-full flex-row gap-5">
             <img
-              src={"/assets/Modals/help modal/autoplay.png"}
+              src={"/assets/Modals/help modal/autoplay.webp"}
               alt="mouse"
               className="h-10 w-10"
             />
@@ -20,7 +20,7 @@ const Page4Content = () => (
           </div>
           <div className="flex w-full flex-row gap-5">
             <img
-              src={"/assets/Modals/help modal/fullscreen.png"}
+              src={"/assets/Modals/help modal/fullscreen.webp"}
               alt="mouse"
               className="h-10 w-10"
             />
