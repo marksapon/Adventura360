@@ -501,6 +501,13 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB }) => {
   }
 
   function displayPath(points) {
+    // Remove the old canvas if it exists
+    const oldCanvas = document.getElementById("myCanvas");
+    if (oldCanvas) {
+      viewer.removeOverlay("myCanvas");
+      oldCanvas.remove();
+    }
+
     // Always create a new canvas and setup Paper.js on it
     const paperJS = document.createElement("canvas");
     paperJS.id = "myCanvas";
