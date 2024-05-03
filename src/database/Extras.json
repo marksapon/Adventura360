@@ -1,38 +1,5 @@
 [
   {
-    "scene": "restroomOval",
-    "back": ["node1", "node3", "node2"],
-    "location": "Restroom near Oval",
-    "coords": {
-      "x": 0.5,
-      "y": 0.5,
-      "type": "restroom"
-    },
-    "image": "/assets/Database Images/unrestricted nodes/2.webp"
-  },
-  {
-    "scene": "washareaOval",
-    "back": ["node1", "node3", "node2"],
-    "location": "Washarea near Oval",
-    "coords": {
-      "x": 0.3,
-      "y": 0.3,
-      "type": "washarea"
-    },
-    "image": "/assets/Database Images/unrestricted nodes/20.webp"
-  },
-  {
-    "scene": "batibotDit",
-    "back": ["node1", "node3", "node2"],
-    "location": "Batibot near DIT",
-    "coords": {
-      "x": 0.2,
-      "y": 0.2,
-      "type": "batibot"
-    },
-    "image": "/assets/extras/batibotDit.webp"
-  },
-  {
     "scene": "renovate",
     "back": ["node1", "node3", "node2"],
     "location": "Building new CON",
@@ -86,5 +53,158 @@
       "type": "construction"
     },
     "image": "/assets/Database Images/unrestricted nodes/2.webp"
+  },
+  {
+    "scene": "batibotcas",
+    "back": ["node86", "node87"],
+    "location": "Kiosk near CAS",
+    "coords": {
+      "x": 0.485,
+      "y": 0.969,
+      "type": "batibot"
+    },
+    "image": "/assets/extras/batibotDit.webp"
+  },
+  {
+    "scene": "kioskdit",
+    "back": ["node61"],
+    "location": "Batibot near DIT",
+    "coords": {
+      "x": 0.343,
+      "y": 0.921,
+      "type": "batibot"
+    },
+    "image": "/assets/extras/batibotDit.webp"
+  },
+  {
+    "scene": "Vase",
+    "back": [
+      "node37",
+      "node38",
+      "node39",
+      "node40",
+      "node79",
+      "node80",
+      "node81",
+      "node82",
+      "node83"
+    ],
+    "location": "Big Jar",
+    "coords": {
+      "x": 0.545,
+      "y": 0.906,
+      "type": "attractions"
+    },
+    "image": "/assets/extras/batibotDit.webp"
+  },
+  {
+    "scene": "quad",
+    "back": ["node68"],
+    "location": "Quadrangle",
+    "coords": {
+      "x": 0.328,
+      "y": 1.083,
+      "type": "court"
+    },
+    "image": "/assets/extras/batibotDit.webp"
+  },
+  {
+    "scene": "ces",
+    "back": ["node25", "node26"],
+    "location": "Central Expert Station",
+    "coords": {
+      "x": 0.675,
+      "y": 1.116,
+      "type": "farm"
+    },
+    "image": "/assets/extras/batibotDit.webp"
+  },
+  {
+    "scene": "kioskphysci",
+    "back": ["node96"],
+    "location": "Kiosk near Physical Science Building",
+    "coords": {
+      "x": 0.458,
+      "y": 0.904,
+      "type": "batibot"
+    },
+    "image": "/assets/extras/batibotDit.webp"
+  },
+  {
+    "scene": "courtsnearoval",
+    "back": ["node104"],
+    "location": "Court near Oval",
+    "coords": {
+      "x": 0.434,
+      "y": 1.227,
+      "type": "court"
+    },
+    "image": "/assets/extras/batibotDit.webp"
+  },
+  {
+    "scene": "washareaoval",
+    "back": ["node15"],
+    "location": "washarea near Oval",
+    "coords": {
+      "x": 0.506,
+      "y": 1.117,
+      "type": "washarea"
+    },
+    "image": "/assets/extras/batibotDit.webp"
+  },
+  {
+    "scene": "restroomoval",
+    "back": ["node15"],
+    "location": "restroom near Oval",
+    "coords": {
+      "x": 0.504,
+      "y": 1.105,
+      "type": "restroom"
+    },
+    "image": "/assets/extras/batibotDit.webp"
+  },
+  {
+    "scene": "brite",
+    "back": ["node15"],
+    "location": "CvSU Brite Center DEMONSTRATION AREA",
+    "coords": {
+      "x": 0.673,
+      "y": 0.813,
+      "type": "farm"
+    },
+    "image": "/assets/extras/batibotDit.webp"
+  },
+  {
+    "scene": "saluysoy",
+    "back": ["node222"],
+    "location": "Saluysoy",
+    "coords": {
+      "x": 0.673,
+      "y": 0.813,
+      "type": "cafeteria"
+    },
+    "image": "/assets/extras/batibotDit.webp"
+  },
+  {
+    "scene": "rollehall",
+    "back": ["node231", "node232", "node233"],
+    "location": "CvSU Rolle Hall",
+    "coords": {
+      "x": 0.673,
+      "y": 0.813,
+      "type": "venue"
+    },
+    "image": "/assets/extras/batibotDit.webp"
+  },
+  {
+    "scene": "icon",
+    "back": ["node236", "node238"],
+    "location": "Interntional Convention Center (ICON)",
+    "coords": {
+      "x": 0.673,
+      "y": 0.813,
+      "type": "venue"
+    },
+    "image": "/assets/extras/batibotDit.webp"
   }
 ]

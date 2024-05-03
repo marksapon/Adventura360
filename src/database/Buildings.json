@@ -126,27 +126,6 @@
     ]
   },
   {
-    "scene": "ces",
-    "location": "Central Expert Station",
-    "image": "/assets/Database Images/unrestricted nodes/25.webp",
-    "back": ["node25", "node26"],
-    "coords": {
-      "x": 0.675,
-      "y": 1.116,
-      "type": "farm"
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "info",
-        "class": "info",
-        "target": "ces_info",
-        "yaw": 0.4,
-        "pitch": 5.26
-      }
-    ]
-  },
-  {
     "scene": "wtc",
     "location": "Water Testing Center",
     "image": "/assets/Database Images/unrestricted nodes/29.webp",
@@ -273,37 +252,6 @@
     ]
   },
   {
-    "scene": "vase",
-    "location": "Banga ng Karunungan",
-    "image": "/assets/Database Images/unrestricted nodes/39.webp",
-    "back": [
-      "node37",
-      "node38",
-      "node39",
-      "node40",
-      "node79",
-      "node80",
-      "node81",
-      "node82",
-      "node83"
-    ],
-    "coords": {
-      "x": 0.545,
-      "y": 0.906,
-      "type": "attractions"
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "info",
-        "class": "attraction",
-        "target": "vase_info",
-        "yaw": 131.48,
-        "pitch": 10.04
-      }
-    ]
-  },
-  {
     "scene": "ih1",
     "location": "International House 1",
     "image": "/assets/Database Images/unrestricted nodes/39.webp",
@@ -349,7 +297,7 @@
     "scene": "con",
     "location": "Biological Sciences Building",
     "image": "/assets/Database Images/unrestricted nodes/48.webp",
-    "back": ["node44, node48"],
+    "back": ["node44", "node48", "node98"],
     "coords": {
       "x": 0.485,
       "y": 0.841,
@@ -447,6 +395,132 @@
         "target": "dafe_info",
         "yaw": 14.68,
         "pitch": 12.63
+      }
+    ]
+  },
+  {
+    "scene": "admin",
+    "location": "Administration Building",
+    "image": "/assets/Database Images/unrestricted nodes/65.webp",
+    "back": ["node65"],
+    "coords": {
+      "x": 0.4,
+      "y": 1.021,
+      "type": "school_facilities"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "admin_info",
+        "yaw": 258.49,
+        "pitch": 2.55
+      }
+    ]
+  },
+  {
+    "scene": "hs",
+    "location": "Cavite Science Highschool",
+    "image": "/assets/Database Images/unrestricted nodes/71.webp",
+    "back": ["node71"],
+    "coords": {
+      "x": 0.357,
+      "y": 1.124,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "hs_info",
+        "yaw": 112.8,
+        "pitch": 12.34
+      }
+    ]
+  },
+  {
+    "scene": "cdc",
+    "location": "Child development Center",
+    "image": "/assets/Database Images/unrestricted nodes/101.webp",
+    "back": ["node101"],
+    "coords": {
+      "x": 0.279,
+      "y": 0.983,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "cdc_info",
+        "yaw": 51.0,
+        "pitch": -0.93
+      }
+    ]
+  },
+  {
+    "scene": "cas",
+    "location": "College of Arts and Sciences",
+    "image": "/assets/Database Images/unrestricted nodes/85.webp",
+    "back": ["node85", "node94"],
+    "coords": {
+      "x": 0.499,
+      "y": 0.904,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "cas_info",
+        "yaw": 15.43,
+        "pitch": 12.52
+      }
+    ]
+  },
+  {
+    "scene": "physci",
+    "location": "Phyical Sciences Building",
+    "image": "/assets/Database Images/unrestricted nodes/96.webp",
+    "back": ["node96", "node97"],
+    "coords": {
+      "x": 0.466,
+      "y": 0.879,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "physci_info",
+        "yaw": 299.98,
+        "pitch": 8.17
+      }
+    ]
+  },
+  {
+    "scene": "oldcemds",
+    "location": "College of Economics, Management and Development Studies Old Building",
+    "image": "/assets/Database Images/unrestricted nodes/96.webp",
+    "back": ["node96", "node93"],
+    "coords": {
+      "x": 0.427,
+      "y": 0.902,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "physci_info",
+        "yaw": 93.09,
+        "pitch": 3.93
       }
     ]
   }
