@@ -61,7 +61,7 @@ function Adventura360({ BACKEND_URL, loginType }) {
         <div className="flex h-screen w-screen flex-col items-center justify-center">
           <div className="absolute bottom-96 z-50 flex h-auto w-full flex-col items-center justify-center md:bottom-72">
             <img
-              className="absolute bottom-0 mx-auto w-4/12 animate-bounce object-contain md:w-2/12"
+              className="absolute bottom-0 mx-auto w-3/12 animate-bounce object-contain md:w-2/12 lg:w-2/12"
               src="../public/assets/Login Module/adventura logo 2.webp"
               alt="Loading"
             />
