@@ -7,7 +7,7 @@ import Helpmodal from "./helpmodal"; // Help Modal
 import Sharelink from "./Sharelink"; // Share Modal
 import Bugmodal from "./Bugmodal"; // Bug Modal
 import MapModule from "../../mapmodule/Map.jsx"; // Map Module
-import Search from "./Search.jsx";
+import Search from "./Search.jsx"; // Search Modal
 
 /* Icons */
 import { VscFeedback } from "react-icons/vsc"; // Feedback Button
@@ -93,7 +93,7 @@ const Navigationbar = ({
 
   return (
     <div className="flex h-screen w-full flex-col justify-between pr-4">
-      <div className="sticky start-0 top-4 z-20 mx-2 h-max w-full rounded-xl border-b border-gray-200 bg-white dark:border-gray-600">
+      <div className="sticky start-0 top-4 z-10 mx-2 h-max w-full rounded-xl border-b border-gray-200 bg-white dark:border-gray-600">
         <div className="flex h-full items-center justify-between text-base">
           <div className="flex h-full w-auto items-center justify-between px-1 md:w-full lg:px-4">
             <div>
@@ -260,6 +260,7 @@ const Navigationbar = ({
           nodesDB={nodesDB}
           buildingsDB={buildingsDB}
           extrasDB={extrasDB}
+          infosDB={infosDB}
         />
       )}
 

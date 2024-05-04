@@ -8,6 +8,7 @@ import Paper, { Point, Path, Size } from "paper";
 /* Map Module Components */
 import FilterList from "./components/FilterList"; // Overlay Filter Component
 import PathfindingModal from "./components/PathfindingModal"; // Pathfinding Modal Component
+import BuildingModal from "../module360/components/BuildingModal"; // Building Modal Component
 
 /* OSD CSS */
 import { BsFilterRight } from "react-icons/bs"; // Filter Button
@@ -31,7 +32,7 @@ import { GiWheat } from "react-icons/gi"; // Farm Icon
 import { MdEngineering } from "react-icons/md"; // Construction Icon
 import { FaCircle } from "react-icons/fa6"; // Undefined Icon
 
-const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB }) => {
+const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB, infosDB }) => {
   /* OpenSeadragon Viewer */
   const osdRef = useRef(); // Reference to the OSD element
   const [osdLoaded, setOsdLoaded] = useState(false); // If OSD is loaded
@@ -41,6 +42,9 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB }) => {
   const location = new OpenSeadragon.Point(currLoc.coords.x, currLoc.coords.y); // Current Point Location
   const [checkCenter, setCheckCenter] = useState(true); // Check if user view is in the current location
 
+  /* Building Modal State */
+  const [bldgModalState, setBldgModalState] = useState(false); // Building Modal State
+
   /* Overlays */
   // function to generate Point of Interests
   function generatePOI() {
@@ -49,7 +53,7 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB }) => {
     // Generate a proper layout for the POI in Buildings
     buildingsDB.map((building) => {
       temp.push({
-        id: building.scene,
+        scene: building.scene,
         name: building.location,
         x: building.coords.x,
         y: building.coords.y,
@@ -71,7 +75,6 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB }) => {
   }
 
   const poi = generatePOI(); // Points of Interests
-  // console.log("POI:", poi);
 
   const [overlays, setOverlays] = useState(() => {
     // Adding data to the overlays
@@ -114,19 +117,19 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB }) => {
 
   const icons = {
     // Icons for each type of overlay
-    undefined: { icon: FaCircle, color: "gray" },
-    washarea: { icon: FaHandsWash, color: "blue" },
-    restroom: { icon: FaRestroom, color: "orange" },
-    school_facilities: { icon: LuSchool, color: "green" },
-    college_buildings: { icon: TbSchool, color: "green" },
-    cafeteria: { icon: FaCoffee, color: "green" },
-    batibot: { icon: FaPeopleRoof, color: "green" },
-    attractions: { icon: PiBinocularsDuotone, color: "green" },
-    court: { icon: GiAbstract068, color: "green" },
-    parking: { icon: FaSquareParking, color: "green" },
-    farm: { icon: GiWheat, color: "green" },
-    venue: { icon: FaHotel, color: "green" },
-    construction: { icon: MdEngineering, color: "#fde047" },
+    undefined: { icon: FaCircle, color: "gray" }, // ??
+    washarea: { icon: FaHandsWash, color: "#3b82f6" }, // Popup Info
+    restroom: { icon: FaRestroom, color: "#3b82f6" }, // Popup Info
+    school_facilities: { icon: LuSchool, color: "#65a30d" }, // Bldg
+    college_buildings: { icon: TbSchool, color: "#f97316" }, // Bldg
+    cafeteria: { icon: FaCoffee, color: "#fbbf24" }, // info
+    batibot: { icon: FaPeopleRoof, color: "#3b82f6" }, // popup info
+    attractions: { icon: PiBinocularsDuotone, color: "#a21caf" }, // info
+    court: { icon: GiAbstract068, color: "#0e7490" }, // info
+    parking: { icon: FaSquareParking, color: "#3b82f6" }, // popup
+    farm: { icon: GiWheat, color: "#ea580c" }, // info
+    venue: { icon: FaHotel, color: "#fb7185" }, // info
+    construction: { icon: MdEngineering, color: "#facc15" }, // popup
   };
 
   const [current_overlays, setCurrentOverlays] = useState(
@@ -221,17 +224,36 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB }) => {
       }
     });
 
-    // When OSD is clicked
+    // When OSD Canvas is clicked
     viewerInstance.addHandler("canvas-click", function (event) {
       // Gets the VIEWPORT coordinates of the click into the canvas
       const viewportPoint = viewerInstance.viewport.pointFromPixel(
         event.position,
       );
+
+      // Map through all overlays to get overlayid and bounds
+      current_overlays.map((overlayType) => {
+        overlays[overlayType].map((overlay) => {
+          const clickedOverlay = viewerInstance.getOverlayById(overlay.id); // Get the overlay by ID
+
+          // Get the bounds of the overlay
+          const overlayBounds = clickedOverlay.getBounds(
+            viewerInstance.viewport,
+          );
+
+          // Check if the clicked point is inside the overlay bounds
+          if (overlayBounds.containsPoint(viewportPoint)) {
+            openModal(overlay.id);
+          }
+        });
+      });
+
       console.log(
         `Clicked at Viewport coordinates: ${viewportPoint.x.toFixed(
           3,
         )}, ${viewportPoint.y.toFixed(3)}`,
       );
+
       // // Image Coordinates
       // console.log(
       //   "Current Location in Image Coordinates: ",
@@ -267,6 +289,15 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB }) => {
       });
     }
   }, [current_overlays, osdLoaded]);
+
+  /* Building Modal */
+
+  // Overlays Function
+  function openModal(scene) {
+    // console.log(scene);
+    // console.log("Modal Opened");
+    setBldgModalState(true);
+  }
 
   /* PathFinding */
 
@@ -524,7 +555,7 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB }) => {
 
     const path = new Path({
       segments: pathData,
-      strokeColor: "#3b82f6",
+      strokeColor: "#22d3ee",
       strokeWidth: 30,
       strokeCap: "round",
     });
@@ -570,11 +601,13 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB }) => {
       {/* OSD */}
       <div ref={osdRef} style={{ width: "100%", height: "100vh", zIndex: 3 }} />
       {/* OSD */}
+
       {/* Current Location CSS */}
       <div id="current location">
         <RiAccountPinCircleLine size={60} className="text-red-600" />
       </div>
       {/* Current Location CSS */}
+
       {/* Overlays */}
       {/* POI Overlays */}
       {current_overlays.map((overlayType) => {
@@ -587,7 +620,14 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB }) => {
             ? icons[overlay.type].color
             : "gray";
           divs.push(
-            <div key={overlay.id} id={overlay.id}>
+            <button
+              key={overlay.id}
+              id={overlay.id}
+              style={{
+                pointerEvents: "auto",
+                zIndex: 4,
+              }}
+            >
               <div
                 style={{
                   position: "relative",
@@ -622,19 +662,21 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB }) => {
                       alignItems: "center",
                       justifyContent: "center",
                       color: "white",
+                      pointerEvents: "auto",
                     }}
                   >
                     {icon()}
                   </div>
                 </div>
               </div>
-            </div>,
+            </button>,
           );
         }
         return divs;
       })}
       {/* POI Overlays */}
       {/* Overlays */}
+
       {/* OSD CSS */}
       {osdLoaded && (
         <div
@@ -726,6 +768,13 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB }) => {
             </div>
             {/* Bottom Right Buttons */}
           </div>
+          {bldgModalState ? (
+            <BuildingModal
+              visible={bldgModalState}
+              onClose={() => setBldgModalState(false)}
+              infosDB={infosDB}
+            />
+          ) : null}
           {/* Content Space */}
 
           {/* Footer Space */}

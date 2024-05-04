@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
-import Paper, { Point, Path, Size } from "paper";
+import React, { useState } from "react";
 
 /* React Icons */
 import { ImLocation2 } from "react-icons/im"; // Current Location On Button
@@ -8,8 +7,6 @@ import { FaCarAlt } from "react-icons/fa"; // Drive State
 import { MdOutlineGpsFixed } from "react-icons/md"; // Target Location Button
 import { IoIosClose } from "react-icons/io"; // Close Button
 import { MdDirections } from "react-icons/md"; // Directions Button
-import { view } from "paper/dist/paper-core";
-import { check } from "prettier";
 
 const PathfindingModal = ({
   setPathModalState,

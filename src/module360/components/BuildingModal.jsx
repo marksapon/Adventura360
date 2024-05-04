@@ -10,7 +10,9 @@ import { GiBlackBook } from "react-icons/gi";
 import { MdDirections } from "react-icons/md";
 import { FiLink } from "react-icons/fi"; //
 
-const BuildingModal = ({ visible, onClose, loginType }) => {
+const BuildingModal = ({ visible, onClose, loginType, infosDB }) => {
+  console.log("Building Modal");
+
   const handleCloseAndReset = () => {
     onClose();
   };
@@ -36,9 +38,9 @@ const BuildingModal = ({ visible, onClose, loginType }) => {
   return (
     <div
       id="container"
-      className="fixed inset-0 z-50 flex bg-black bg-opacity-25"
+      className="pointer-events-auto fixed inset-0 flex bg-black bg-opacity-25"
     >
-      <div className="flex h-full w-full items-start pr-2">
+      <div className="z-50 flex h-full w-full items-start pr-2">
         <div className="flex h-screen max-w-[350px] flex-col rounded-br-2xl rounded-tr-2xl bg-white transition-all duration-200 ease-in-out sm:max-w-[500px]">
           <div className="w-full">
             <div

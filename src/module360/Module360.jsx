@@ -462,14 +462,17 @@ function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
           />
         </div>
         {/* Navigation bar */}
+
         {/* Building Modal */}
-        [bldgState &&
-        <BuildingModal
-          visible={bldgState}
-          onClose={setBldgState}
-          loginType={loginType}
-        />
-        ]{/* Building Modal */}
+        {bldgState && (
+          <BuildingModal
+            visible={bldgState}
+            onClose={() => setBldgState(false)}
+            loginType={loginType}
+          />
+        )}
+        {/* Building Modal */}
+
         {/* Minimap */}
         <div className="absolute left-0 top-0 p-1 text-white ">
           <div className="relative flex flex-row justify-between">

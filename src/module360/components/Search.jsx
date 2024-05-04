@@ -115,12 +115,28 @@ const Search = ({ visible, onClose, infosDB }) => {
 
   // category icons and colors
   const keyIcons = {
-    school_building: <LuSchool />,
-    college_building: <TbSchool />,
-    cafeteria: <GrCafeteria />,
-    attraction: <PiBinocularsDuotone />,
-    court: <TbSoccerField />,
-    venue: <FaHotel />,
+    school_building: {
+      icon: <LuSchool />,
+      color: "bg-lime-600",
+      display: "School Building",
+    },
+    college_building: {
+      icon: <TbSchool />,
+      color: "bg-orange-500",
+      display: "College Building",
+    },
+    cafeteria: {
+      icon: <GrCafeteria />,
+      color: "bg-amber-400",
+      display: "Cafeteria",
+    },
+    attraction: {
+      icon: <PiBinocularsDuotone />,
+      color: "bg-fuchsia-500",
+      display: "Attraction",
+    },
+    court: { icon: <TbSoccerField />, color: "bg-cyan-700", display: "Court" },
+    venue: { icon: <FaHotel />, color: "bg-rose-400", display: "Venue" },
     // add more keys as needed
   };
 
@@ -257,35 +273,35 @@ const Search = ({ visible, onClose, infosDB }) => {
                               setListDisplay(true);
                             }}
                           >
-                            <span className="flex items-center rounded-2xl bg-green-600 p-2 text-center text-white">
+                            <span className="flex items-center rounded-2xl bg-cyan-500 p-2 text-center text-white">
                               <FaHome />
                             </span>
                             All
                           </div>
                           <div className="mt-4 grid grid-cols-2 grid-rows-5 gap-2 sm:gap-4">
                             {/* Map over the keys of the contentMap object */}
-                            {Object.keys(categoriesDisplay).map(
-                              (key, index) => (
-                                <div
-                                  key={index}
-                                  className={`
+                            {Object.keys(keyIcons).map((key, index) => (
+                              <div
+                                key={index}
+                                className={`
       flex items-center gap-2 rounded-lg p-1 text-center transition-all duration-300 ease-in-out sm:p-3 
       ${selectedKey === key ? "border border-gray-200 bg-slate-50 shadow-lg" : "border border-transparent hover:border"} 
       hover:border-gray-200 hover:shadow-lg
     `}
-                                  onClick={() => {
-                                    setSelectedKey(key);
-                                    handleSortChange(key);
-                                    setListDisplay(true);
-                                  }}
+                                onClick={() => {
+                                  setSelectedKey(key);
+                                  handleSortChange(key);
+                                  setListDisplay(true);
+                                }}
+                              >
+                                <span
+                                  className={`flex items-center rounded-2xl ${keyIcons[key].color} p-2 text-center text-white`}
                                 >
-                                  <span className="flex items-center rounded-2xl bg-green-600 p-2 text-center text-white">
-                                    {keyIcons[key]}
-                                  </span>
-                                  {categoriesDisplay[key]}
-                                </div>
-                              ),
-                            )}
+                                  {keyIcons[key].icon}
+                                </span>
+                                {keyIcons[key].display}
+                              </div>
+                            ))}
                           </div>
                         </div>
                         {/* Tags Selection */}
@@ -364,65 +380,66 @@ const Search = ({ visible, onClose, infosDB }) => {
                   </div>
 
                   {/* Display Items Section */}
-                  {(sort === "All"
-                    ? Object.keys(suggestions).filter(
-                        (key) => suggestions[key].length > 0,
-                      )
-                    : [sort.toLowerCase()]
-                  ).map((key, keyIndex) => (
-                    <div key={keyIndex}>
-                      {/* Check if the suggestions for the key exist */}
-                      {suggestions[key] &&
-                        suggestions[key].map((content, contentIndex) => (
-                          <div
-                            key={`${key}-${contentIndex}`}
-                            className={`flex flex-col overflow-hidden rounded-lg border-2 px-1 py-1 shadow-lg ${view === "list" ? "h-fit" : "h-auto"} relative border ${clicked ? "bg-slate-100" : "hover:bg-slate-50"}`}
-                            onClick={() => {
-                              // Log the content when clicked
-                              console.log(content);
-                            }}
-                          >
-                            {/* Conditionally render an img element if view is not "list" */}
-                            {view !== "list" && (
-                              <div className="h-1/2">
-                                <img
-                                  src={
-                                    content.image ||
-                                    "https://via.placeholder.com/150"
-                                  }
-                                  alt={content.text}
-                                  className={
-                                    view === "cards"
-                                      ? "h-max w-full object-cover"
-                                      : "h-full w-full object-cover"
-                                  }
-                                />
-                              </div>
-                            )}
+                  {listDisplay &&
+                    (sort === "All"
+                      ? Object.keys(suggestions).filter(
+                          (key) => suggestions[key].length > 0,
+                        )
+                      : [sort.toLowerCase()]
+                    ).map((key, keyIndex) => (
+                      <div key={keyIndex}>
+                        {/* Check if the suggestions for the key exist */}
+                        {suggestions[key] &&
+                          suggestions[key].map((content, contentIndex) => (
                             <div
-                              className={`${view === "list" ? "flex w-auto items-center px-4" : "flex h-1/2 flex-col items-center justify-center font-semibold"} gap-2 ${view === "cards" ? "absolute bottom-0 left-0 right-0" : ""}`}
+                              key={`${key}-${contentIndex}`}
+                              className={`flex flex-col overflow-hidden rounded-lg border-2 px-1 py-1 shadow-lg ${view === "list" ? "h-fit" : "h-auto"} relative border ${clicked ? "bg-slate-100" : "hover:bg-slate-50"}`}
+                              onClick={() => {
+                                // Log the content when clicked
+                                console.log(content);
+                              }}
                             >
-                              <div
-                                className={
-                                  view === "list"
-                                    ? "flex h-auto items-center justify-center gap-2 text-center text-base"
-                                    : "flex w-auto flex-col items-center justify-center gap-2 text-center text-sm"
-                                }
-                              >
-                                <div className="rounded-full border-2 border-white bg-green-600 p-2 text-xl text-white">
-                                  {/* Display the icon associated with the key */}
-                                  {keyIcons[key]}
+                              {/* Conditionally render an img element if view is not "list" */}
+                              {view !== "list" && (
+                                <div className="h-1/2">
+                                  <img
+                                    src={
+                                      content.image ||
+                                      "https://via.placeholder.com/150"
+                                    }
+                                    alt={content.text}
+                                    className={
+                                      view === "cards"
+                                        ? "h-max w-full object-cover"
+                                        : "h-full w-full object-cover"
+                                    }
+                                  />
                                 </div>
-                                <div className="w-full overflow-auto rounded-full border-2 border-green-600 bg-white px-2 text-sm">
-                                  {/* Display the text of the content */}
-                                  {content.text}
+                              )}
+                              <div
+                                className={`${view === "list" ? "flex w-auto items-center px-4" : "flex h-1/2 flex-col items-center justify-center font-semibold"} gap-2 ${view === "cards" ? "absolute bottom-0 left-0 right-0" : ""}`}
+                              >
+                                <div
+                                  className={
+                                    view === "list"
+                                      ? "flex h-auto items-center justify-center gap-2 text-center text-base"
+                                      : "flex w-auto flex-col items-center justify-center gap-2 text-center text-sm"
+                                  }
+                                >
+                                  <div className="rounded-full border-2 border-white bg-green-600 p-2 text-xl text-white">
+                                    {/* Display the icon associated with the key */}
+                                    {keyIcons[key]}
+                                  </div>
+                                  <div className="w-full overflow-auto rounded-full border-2 border-green-600 bg-white px-2 text-sm">
+                                    {/* Display the text of the content */}
+                                    {content.text}
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        ))}
-                    </div>
-                  ))}
+                          ))}
+                      </div>
+                    ))}
                 </div>
               </div>
 
