@@ -4,6 +4,7 @@ import { decrypt } from "./aes.mjs";
 import Cookies from "js-cookie";
 import axios from "axios";
 import { CiUser, CiLock } from "react-icons/ci";
+import usersldb from "../database/Adventura360.users.json";
 
 function Login({ BACKEND_URL, setLoginType }) {
   const [users, setUsers] = useState([]); // Registered Users
@@ -28,6 +29,7 @@ function Login({ BACKEND_URL, setLoginType }) {
       })
       .catch((err) => {
         console.log("Login Error:", err.message);
+        setUsers(usersldb);
       });
 
     // console.log("Key:", generateKey()); // Generate a new key

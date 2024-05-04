@@ -1,15 +1,10 @@
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  useNavigate,
-  useLocation,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Cookies from "js-cookie";
 import LandingPage from "./landingPage/LandingPage";
 import Login from "./loginPage/login";
 import Adventura360 from "./module360/Adventura360";
+import { useNavigate, useLocation } from "react-router-dom"; // Import useNavigate and useLocation
 
 const PrivateRoute = ({ children }) => {
   const navigate = useNavigate();
@@ -29,6 +24,14 @@ const PrivateRoute = ({ children }) => {
 const AppRouter = () => {
   const [loginType, setLoginType] = useState();
   const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
+  useEffect(() => {
+    const cookieLoginType = Cookies.get("loginType");
+    if (cookieLoginType) {
+      Cookies.remove("loginType"); // Remove the existing login cookie
+      // navigate("/login/"); // No need for this navigate call here
+    }
+  }, []); // No need to add navigate as a dependency
 
   useEffect(() => {
     const cookieLoginType = Cookies.get("loginType");
