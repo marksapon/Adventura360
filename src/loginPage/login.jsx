@@ -87,21 +87,21 @@ function Login({ BACKEND_URL, setLoginType }) {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url("/assets/Login%20Module/cvsu.webp")` }}
       >
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-black opacity-80"></div>
       </div>
 
-      <div className="z-50 m-auto grid h-[550px] w-[450px] grid-cols-1 shadow-lg shadow-gray-600 sm:max-w-[900px] md:w-full md:grid-cols-2">
+      <div className="z-50 m-auto grid h-[550px] w-[450px] grid-cols-1 shadow-lg shadow-gray-900 sm:max-w-[900px] md:w-full md:grid-cols-2">
         <div
           className="hidden w-full items-center justify-center md:block"
           style={{
-            backgroundImage: `url("/assets/Login Module/login logo img 2.jpg")`,
+            backgroundImage: `url("/assets/Login Module/login logo img2.webp")`,
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
           }}
         />
 
-        <div className="flex flex-col justify-between bg-white px-8 py-4">
+        <div className="flex flex-col justify-between bg-white px-8 py-4 shadow-lg shadow-gray-900">
           <div className="mt-4 flex w-full flex-col items-center justify-center text-center">
             <h1 className="text-2xl font-bold">Welcome back!</h1>
             <p className="text-sm text-gray-500">

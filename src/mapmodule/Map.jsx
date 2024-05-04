@@ -12,7 +12,7 @@ import BuildingModal from "../module360/components/BuildingModal"; // Building M
 
 /* OSD CSS */
 import { BsFilterRight } from "react-icons/bs"; // Filter Button
-import { RiAccountPinCircleLine } from "react-icons/ri"; // Current Location
+import { RiMapPinUserFill } from "react-icons/ri"; // Current Location Button
 import { GiPathDistance } from "react-icons/gi"; // Path finding Button
 import { ImLocation } from "react-icons/im"; // Current Location Off Button
 import { ImLocation2 } from "react-icons/im"; // Current Location On Button
@@ -152,12 +152,14 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB, infosDB }) => {
     Object.keys(overlays).forEach((key) => {
       overlays[key].map((overlay) => {
         const div = document.getElementById(overlay.id);
-        viewer.addOverlay({
-          element: div,
-          location: new OpenSeadragon.Point(overlay.x, overlay.y),
-          placement: OpenSeadragon.Placement.BOTTOM,
-          rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
-        });
+        if (currLoc.coords.x !== overlay.x && currLoc.coords.y !== overlay.y) {
+          viewer.addOverlay({
+            element: div,
+            location: new OpenSeadragon.Point(overlay.x, overlay.y),
+            placement: OpenSeadragon.Placement.BOTTOM,
+            rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
+          });
+        }
       });
     });
 
@@ -193,15 +195,6 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB, infosDB }) => {
       scrollToZoom: false, // scroll to zoom
       showNavigationControl: false, // Hides the navigation control
       zoomPerClick: 1, // Disables zoom per click
-      overlays: [
-        {
-          id: "current location",
-          x: currLoc.coords.x,
-          y: currLoc.coords.y,
-          placement: OpenSeadragon.Placement.BOTTOM,
-          rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
-        },
-      ],
     });
 
     setViewer(viewerInstance);
@@ -226,6 +219,7 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB, infosDB }) => {
 
     // When OSD Canvas is clicked
     viewerInstance.addHandler("canvas-click", function (event) {
+      console.log("Canvas Clicked");
       // Gets the VIEWPORT coordinates of the click into the canvas
       const viewportPoint = viewerInstance.viewport.pointFromPixel(
         event.position,
@@ -234,16 +228,22 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB, infosDB }) => {
       // Map through all overlays to get overlayid and bounds
       current_overlays.map((overlayType) => {
         overlays[overlayType].map((overlay) => {
-          const clickedOverlay = viewerInstance.getOverlayById(overlay.id); // Get the overlay by ID
+          if (
+            currLoc.coords.x !== overlay.x &&
+            currLoc.coords.y !== overlay.y
+          ) {
+            const clickedOverlay = viewerInstance.getOverlayById(overlay.id); // Get the overlay by ID
 
-          // Get the bounds of the overlay
-          const overlayBounds = clickedOverlay.getBounds(
-            viewerInstance.viewport,
-          );
+            // Get the bounds of the overlay
+            const overlayBounds = clickedOverlay.getBounds(
+              viewerInstance.viewport,
+            );
 
-          // Check if the clicked point is inside the overlay bounds
-          if (overlayBounds.containsPoint(viewportPoint)) {
-            openModal(overlay.id);
+            // Check if the clicked point is inside the overlay bounds
+
+            if (overlayBounds.containsPoint(viewportPoint)) {
+              openModal(overlay.id);
+            }
           }
         });
       });
@@ -276,15 +276,30 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB, infosDB }) => {
     // Add overlays to the OSD
     if (osdLoaded) {
       // Dynamic Overlay Loader
+
+      viewer.addOverlay({
+        id: "current location",
+        x: currLoc.coords.x,
+        y: currLoc.coords.y,
+        placement: OpenSeadragon.Placement.BOTTOM,
+        rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
+      });
+
       current_overlays.map((overlayType) => {
         overlays[overlayType].map((overlay) => {
-          const div = document.getElementById(overlay.id);
-          viewer.addOverlay({
-            element: div,
-            location: new OpenSeadragon.Point(overlay.x, overlay.y),
-            placement: OpenSeadragon.Placement.BOTTOM,
-            rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
-          });
+          if (
+            currLoc.coords.x !== overlay.x &&
+            currLoc.coords.y !== overlay.y
+          ) {
+            const div = document.getElementById(overlay.id);
+
+            viewer.addOverlay({
+              element: div,
+              location: new OpenSeadragon.Point(overlay.x, overlay.y),
+              placement: OpenSeadragon.Placement.BOTTOM,
+              rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
+            });
+          }
         });
       });
     }
@@ -398,9 +413,10 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB, infosDB }) => {
   // /* Main Pathfinding Function */
   function pathFinding(targetLocation, travelType = "both") {
     console.log("Pathfinding");
+    // console.log("Target Location: ", targetLocation.scene);
     // Points Generated in A Star Algorithm
 
-    console.log("Travel Type:", travelType);
+    // console.log("Travel Type:", travelType);
     const graph = generateNodes();
     // console.log("Test: ", graph);
 
@@ -413,8 +429,9 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB, infosDB }) => {
 
     const target_location = () => {
       const target = graph.find((node) => {
-        return node.id === targetLocation.id;
+        return node.id === targetLocation.scene;
       });
+
       return target;
     };
 
@@ -447,6 +464,7 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB, infosDB }) => {
   function pathFindingAlgorithm(graph, start, end, travelType) {
     // Heuristic Function for determining distance of two nodes
     function euclideanDistance(node1, node2) {
+      console.log("node1", node1);
       const dx = node1.x - node2.x;
       const dy = node1.y - node2.y;
       return Math.sqrt(dx * dx + dy * dy);
@@ -602,13 +620,8 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB, infosDB }) => {
       <div ref={osdRef} style={{ width: "100%", height: "100vh", zIndex: 3 }} />
       {/* OSD */}
 
-      {/* Current Location CSS */}
-      <div id="current location">
-        <RiAccountPinCircleLine size={60} className="text-red-600" />
-      </div>
-      {/* Current Location CSS */}
-
       {/* Overlays */}
+
       {/* POI Overlays */}
       {current_overlays.map((overlayType) => {
         let divs = [];
@@ -675,6 +688,13 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB, infosDB }) => {
         return divs;
       })}
       {/* POI Overlays */}
+
+      {/* Current Location CSS */}
+      <div id="current location">
+        <RiMapPinUserFill size={60} className="text-lime-300" />
+      </div>
+      {/* Current Location CSS */}
+
       {/* Overlays */}
 
       {/* OSD CSS */}
