@@ -14,7 +14,7 @@
         "id": 1,
         "type": "info",
         "class": "info",
-        "target": "dit_info",
+        "target": "dit",
         "yaw": 267.12,
         "pitch": 20.42
       }

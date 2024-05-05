@@ -13,22 +13,24 @@ import { FaBuilding } from "react-icons/fa"; // Building Icon (building)
 import { FaInfo } from "react-icons/fa"; // Info Icon (info)
 import { FaRestroom } from "react-icons/fa"; // Restroom Icon (comfort)
 import { FaHandsWash } from "react-icons/fa"; // Hand Wash Icon (comfort)
-import { PiBinocularsDuotone } from "react-icons/pi"; // School Attraction Icon
+import { PiBinocularsFill } from "react-icons/pi"; // Attraction Icon
 import { FaHotel } from "react-icons/fa"; // Venue Icon
 import { FaPeopleRoof } from "react-icons/fa6"; // Batibot Icon
-import { GiWheat } from "react-icons/gi"; // Farm Icon
+import { LuWheat } from "react-icons/lu"; // Farm Icon
 import { FaCoffee } from "react-icons/fa"; // Cafeteria
 import { TbSoccerField } from "react-icons/tb"; // Court Icon
 import { MdEngineering } from "react-icons/md"; // Construction Icon
+import { LuSchool } from "react-icons/lu"; // School Facilities Icon
+import { TbSchool } from "react-icons/tb"; // College Buildings Icon
+import { FaSquareParking } from "react-icons/fa6"; // Parking Lot Icon
+import { FaCircle } from "react-icons/fa6"; // Undefined Icon
+
+import { TbMap } from "react-icons/tb"; // Minimap On Icon
+import { TbMapOff } from "react-icons/tb"; // Minimap Off Icon
 
 /* Components */
 import Navigationbar from "./components/Navigationbar";
 import Minimap from "./components/Minimap";
-import BuildingModal from "./components/BuildingModal";
-
-/* Icons */
-import { TbMap } from "react-icons/tb";
-import { TbMapOff } from "react-icons/tb";
 
 function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
   /* Getting URL Queries */
@@ -197,17 +199,17 @@ function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
         className: "custom-controlbar",
         pieView: {
           resetCamera: { zoom: zoomSettings.min },
-          order: 0,
+          order: 1,
           position: ControlBar.POSITION.TOP_RIGHT,
         },
         fullscreenButton: false,
         gyroButton: {
-          order: 1,
+          order: 2,
           position: ControlBar.POSITION.TOP_RIGHT,
         },
         vrButton: {
-          order: 2,
-          Position: ControlBar.POSITION.TOP_RIGHT,
+          position: ControlBar.POSITION.TOP_RIGHT,
+          order: 3,
         },
       }),
       new LoadingSpinner(),
@@ -229,13 +231,11 @@ function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
       type: [
         { info: <FaInfo className={icons_display_settings} /> },
         {
-          attraction: (
-            <PiBinocularsDuotone className={icons_display_settings} />
-          ),
+          attraction: <PiBinocularsFill className={icons_display_settings} />,
         },
         { cafeteria: <FaCoffee className={icons_display_settings} /> },
         { batibot: <FaPeopleRoof className={icons_display_settings} /> },
-        { farm: <GiWheat className={icons_display_settings} /> },
+        { farm: <LuWheat className={icons_display_settings} /> },
         { court: <TbSoccerField className={icons_display_settings} /> },
         { venue: <FaHotel className={icons_display_settings} /> },
       ],
@@ -250,6 +250,23 @@ function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
         },
       ],
     },
+  };
+
+  const icons = {
+    // Icons for each type of overlay
+    undefined: { icon: FaCircle, color: "gray" }, // ??
+    washarea: { icon: FaHandsWash, color: "#3b82f6" }, // Popup Info
+    restroom: { icon: FaRestroom, color: "#3b82f6" }, // Popup Info
+    school_facilities: { icon: LuSchool, color: "#65a30d" }, // Bldg
+    college_buildings: { icon: TbSchool, color: "#f97316" }, // Bldg
+    cafeteria: { icon: FaCoffee, color: "#fbbf24" }, // info
+    batibot: { icon: FaPeopleRoof, color: "#1e3a8a" }, // popup info
+    attractions: { icon: PiBinocularsFill, color: "#a21caf" }, // info
+    court: { icon: TbSoccerField, color: "#0e7490" }, // info
+    parking: { icon: FaSquareParking, color: "#3b82f6" }, // popup
+    farm: { icon: LuWheat, color: "#15803d" }, // info
+    venue: { icon: FaHotel, color: "#fb7185" }, // info
+    construction: { icon: MdEngineering, color: "#facc15" }, // popup
   };
 
   function getIcon(hotspotType, hotspotClass) {
@@ -282,7 +299,8 @@ function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
       console.log(">Moving to building");
       changeScene(buildingsDB, target);
     } else if (type === "info") {
-      setBldgState(!bldgState); // Triggers Building Modal
+      console.log("Building Target: ", target);
+      openModal(target);
     } else {
       console.log("Display Extra's Image");
       setExtrasState(index);
@@ -338,6 +356,17 @@ function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
     });
 
     setCurr_Extras(newExtras);
+  }
+
+  /* Building Modal State */
+  const [bldgModalState, setBldgModalState] = useState(false); // Building Modal State
+  const [targetScene, setTargetScene] = useState(""); // Target Scene for Building Modal
+
+  // Trigger Building Modal Function
+  function openModal(target) {
+    console.log("Open Modal", target);
+    setBldgModalState(true);
+    setTargetScene(target);
   }
 
   /* Module360 Component */
@@ -459,18 +488,24 @@ function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
             nodesDB={nodesDB}
             extrasDB={extrasDB}
             infosDB={infosDB}
+            loginType={loginType}
+            openModal={openModal}
+            bldgModalState={bldgModalState}
+            targetScene={targetScene}
+            onBldgModalClose={() => setBldgModalState(false)}
+            iconSet={icons}
           />
         </div>
         {/* Navigation bar */}
 
         {/* Building Modal */}
-        {bldgState && (
+        {/* {bldgState && (
           <BuildingModal
             visible={bldgState}
             onClose={() => setBldgState(false)}
             loginType={loginType}
           />
-        )}
+        )} */}
         {/* Building Modal */}
 
         {/* Minimap */}

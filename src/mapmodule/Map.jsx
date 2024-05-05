@@ -8,7 +8,6 @@ import Paper, { Point, Path, Size } from "paper";
 /* Map Module Components */
 import FilterList from "./components/FilterList"; // Overlay Filter Component
 import PathfindingModal from "./components/PathfindingModal"; // Pathfinding Modal Component
-import BuildingModal from "../module360/components/BuildingModal"; // Building Modal Component
 
 /* OSD CSS */
 import { BsFilterRight } from "react-icons/bs"; // Filter Button
@@ -24,15 +23,23 @@ import { LuSchool } from "react-icons/lu"; // School Facilities Icon
 import { TbSchool } from "react-icons/tb"; // College Buildings Icon
 import { FaCoffee } from "react-icons/fa"; // Cafeteria Icon
 import { FaPeopleRoof } from "react-icons/fa6"; // Batibot Icon
-import { PiBinocularsDuotone } from "react-icons/pi"; // School Attraction Icon
-import { GiAbstract068 } from "react-icons/gi"; // Court Icon
+import { PiBinocularsFill } from "react-icons/pi"; // Attraction Icon
+import { TbSoccerField } from "react-icons/tb"; // Court Icon
 import { FaSquareParking } from "react-icons/fa6"; // Parking Lot Icon
 import { FaHotel } from "react-icons/fa"; // Venue Icon
-import { GiWheat } from "react-icons/gi"; // Farm Icon
+import { LuWheat } from "react-icons/lu"; // Farm Icon
 import { MdEngineering } from "react-icons/md"; // Construction Icon
 import { FaCircle } from "react-icons/fa6"; // Undefined Icon
 
-const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB, infosDB }) => {
+const MapModule = ({
+  currLoc,
+  nodesDB,
+  buildingsDB,
+  extrasDB,
+  infosDB,
+  iconsSet,
+  openBldgModal,
+}) => {
   /* OpenSeadragon Viewer */
   const osdRef = useRef(); // Reference to the OSD element
   const [osdLoaded, setOsdLoaded] = useState(false); // If OSD is loaded
@@ -44,6 +51,7 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB, infosDB }) => {
 
   /* Building Modal State */
   const [bldgModalState, setBldgModalState] = useState(false); // Building Modal State
+  const [targetScene, setTargetScene] = useState(""); // Target Scene for Building Modal
 
   /* Overlays */
   // function to generate Point of Interests
@@ -115,22 +123,9 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB, infosDB }) => {
     return temp_overlays;
   });
 
-  const icons = {
-    // Icons for each type of overlay
-    undefined: { icon: FaCircle, color: "gray" }, // ??
-    washarea: { icon: FaHandsWash, color: "#3b82f6" }, // Popup Info
-    restroom: { icon: FaRestroom, color: "#3b82f6" }, // Popup Info
-    school_facilities: { icon: LuSchool, color: "#65a30d" }, // Bldg
-    college_buildings: { icon: TbSchool, color: "#f97316" }, // Bldg
-    cafeteria: { icon: FaCoffee, color: "#fbbf24" }, // info
-    batibot: { icon: FaPeopleRoof, color: "#3b82f6" }, // popup info
-    attractions: { icon: PiBinocularsDuotone, color: "#a21caf" }, // info
-    court: { icon: GiAbstract068, color: "#0e7490" }, // info
-    parking: { icon: FaSquareParking, color: "#3b82f6" }, // popup
-    farm: { icon: GiWheat, color: "#ea580c" }, // info
-    venue: { icon: FaHotel, color: "#fb7185" }, // info
-    construction: { icon: MdEngineering, color: "#facc15" }, // popup
-  };
+  
+
+  // const icons = iconsSet;
 
   const [current_overlays, setCurrentOverlays] = useState(
     // Overlays that are going to be displayed
@@ -219,7 +214,7 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB, infosDB }) => {
 
     // When OSD Canvas is clicked
     viewerInstance.addHandler("canvas-click", function (event) {
-      console.log("Canvas Clicked");
+      // console.log("Canvas Clicked");
       // Gets the VIEWPORT coordinates of the click into the canvas
       const viewportPoint = viewerInstance.viewport.pointFromPixel(
         event.position,
@@ -242,7 +237,8 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB, infosDB }) => {
             // Check if the clicked point is inside the overlay bounds
 
             if (overlayBounds.containsPoint(viewportPoint)) {
-              openModal(overlay.id);
+              console.log("Overlay Scene:", overlay.scene);
+              openBldgModal(overlay.scene);
             }
           }
         });
@@ -307,12 +303,11 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB, infosDB }) => {
 
   /* Building Modal */
 
-  // Overlays Function
-  function openModal(scene) {
-    // console.log(scene);
-    // console.log("Modal Opened");
-    setBldgModalState(true);
-  }
+  // // Overlays Function
+  // function openModal(scene) {
+  //   setBldgModalState(true);
+  //   setTargetScene(scene);
+  // }
 
   /* PathFinding */
 
@@ -793,6 +788,7 @@ const MapModule = ({ currLoc, nodesDB, buildingsDB, extrasDB, infosDB }) => {
               visible={bldgModalState}
               onClose={() => setBldgModalState(false)}
               infosDB={infosDB}
+              scene={targetScene}
             />
           ) : null}
           {/* Content Space */}

@@ -7,7 +7,8 @@ import Helpmodal from "./helpmodal"; // Help Modal
 import Sharelink from "./Sharelink"; // Share Modal
 import Bugmodal from "./Bugmodal"; // Bug Modal
 import MapModule from "../../mapmodule/Map.jsx"; // Map Module
-import Search from "./Search.jsx"; // Search Modal
+import Search from "../../buildingmodule/Search"; // Search Modal
+import BuildingModal from "../../buildingmodule/BuildingModal"; // Building Modal Component
 
 /* Icons */
 import { VscFeedback } from "react-icons/vsc"; // Feedback Button
@@ -26,6 +27,12 @@ const Navigationbar = ({
   nodesDB,
   extrasDB,
   infosDB,
+  iconSet,
+  loginType,
+  openModal,
+  bldgModalState,
+  targetScene,
+  onBldgModalClose,
 }) => {
   /* States */
   const [mapState, setMapState] = useState(false); // Map State
@@ -261,6 +268,8 @@ const Navigationbar = ({
           buildingsDB={buildingsDB}
           extrasDB={extrasDB}
           infosDB={infosDB}
+          iconsSet={icons}
+          openBldgModal={openModal}
         />
       )}
 
@@ -406,6 +415,14 @@ const Navigationbar = ({
         }}
         visible={searchModal}
         infosDB={infosDB}
+      />
+      <BuildingModal
+        visible={bldgModalState}
+        onClose={onBldgModalClose}
+        loginType={loginType}
+        infosDB={infosDB}
+        scene={targetScene}
+        iconSet={iconSet}
       />
     </div>
   );

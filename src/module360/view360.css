@@ -91,8 +91,8 @@
 .view360-controls {
   position: absolute;
   justify-items: center;
-  top: 0;
-  left: 0;
+  top: 75px;
+  right: 10px;
   width: 98%;
   height: 100%;
   margin: 1%;
@@ -127,6 +127,7 @@
 
 .view360-controls-main {
   position: absolute;
+  top: 90px;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -187,7 +188,6 @@
 }
 
 .view360-controls-button {
-  display: inline-block;
   background-color: transparent;
   cursor: pointer;
   border: 0;
@@ -204,6 +204,9 @@
   margin: 6px;
   padding: 8px;
   opacity: 0.8;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
   /*
    * Following background-image svgs are from tabler icons
    * https://github.com/tabler/tabler-icons
@@ -335,8 +338,8 @@
 }
 
 .view360-controls-pie {
-  position: absolute;
-  top: 70px;
+  position: relative;
+  top: 0px;
   right: 0;
   width: 50px;
   height: 50px;
