@@ -149,7 +149,7 @@ function Login({ BACKEND_URL, setLoginType }) {
                   <input
                     className="w-full rounded-lg border p-2 pl-8 text-sm shadow-lg"
                     type="password"
-                    placeholder="Enter username"
+                    placeholder="Enter password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />

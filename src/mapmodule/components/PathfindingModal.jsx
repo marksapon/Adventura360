@@ -77,9 +77,9 @@ const PathfindingModal = ({
   }
 
   return (
-    <div>
+    <div className="relative">
       <div className="z-50 ml-2 mr-2 flex h-full w-auto items-baseline justify-center">
-        <div className="flex h-screen w-full flex-col items-center space-y-1 px-4">
+        <div className="absolute flex h-screen w-full flex-col items-center space-y-1 px-4">
           <div className="pointer-events-auto relative z-10 h-auto w-full gap-2 rounded-xl border-2 bg-white shadow-lg sm:w-3/4 md:w-2/3 lg:w-3/6 xl:w-1/3">
             {/* Close Button */}
             <button
