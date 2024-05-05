@@ -15,26 +15,33 @@ function Login({ BACKEND_URL, setLoginType }) {
   const navigate = useNavigate();
 
   /* AES-256 Decryption */
-  // DO NOT LOSE THE KEY OR YOU WILL GENERATE A NEW ONE AND RE ENCRYPT THE USERS DATABASE
-
   const key =
     "08f810783d07d71f570b34ef3bbbdb98715799ae41a0d9a2f538ba216673ed55";
 
-  /* Fetch Users from the Database */
+  /* Check if user is already logged in and fetch users from the database */
   useEffect(() => {
-    axios
-      .get(`${BACKEND_URL}/getUsers`)
-      .then((users) => {
-        setUsers(users.data);
-      })
-      .catch((err) => {
-        console.log("Login Error:", err.message);
-        setUsers(usersldb);
-      });
+    const loginType = Cookies.get("loginType");
+    if (loginType) {
+      setIsLoginSuccessful(true);
+      setLoginType(loginType);
+    } else {
+      axios
+        .get(`${BACKEND_URL}/getUsers`)
+        .then((users) => {
+          setUsers(users.data);
+        })
+        .catch((err) => {
+          console.log("Login Error:", err.message);
+          setUsers(usersldb);
+        });
+    }
+    window.onbeforeunload = () => {
+      Cookies.remove("loginType");
+    };
+  }, []);
 
-    // console.log("Key:", generateKey()); // Generate a new key
-    // encrypt(key); // Encrypt the users database
-
+  /* Handle login success */
+  useEffect(() => {
     if (isLoginSuccessful) {
       const redirectPath = sessionStorage.getItem("redirectPath");
       navigate(redirectPath || "/app");
@@ -58,9 +65,6 @@ function Login({ BACKEND_URL, setLoginType }) {
 
       // Set a cookie
       Cookies.set("loginType", "account");
-
-      const redirectPath = sessionStorage.getItem("redirectPath");
-      navigate(redirectPath || "/app");
     } else {
       // login failed
       setLoginMessage("Invalid username or password");
