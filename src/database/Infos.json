@@ -3,18 +3,22 @@
     "scene": "dit",
     "name": "Department of Information Technology",
     "acronym": "DIT",
-    "type": "college_building",
+    "type": "college_buildings",
     "tags": ["ceit", "school"],
-    "image": "dit.jpg",
+    "image": "/assets/Building Module/Background/dit.webp",
     "desc": "This is the developers Department. The Department of Information Technology (DIT) is one of the departments of the College of Engineering and Information Technology (CEIT). The DIT offers a Bachelor of Science in Information Technology (BSIT) and Bachelor of Science in Computer Science program. These programs are designed to provide students with cutting edge knowledge and skills in the field of Computer Science and Information Technology. The DIT is equipped with state-of-the-art facilities and laboratories that are essential in the development of the students’ technical skills. The DIT faculty members are highly qualified and experienced in the field of Information Technology and Computer Science. The DIT is committed to provide quality education and training to its students to prepare them for a successful career in the field of Information Technology and Computer Science.",
     "facilities": [],
     "courses": [],
-    "gallery": []
+    "gallery": [
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
+    ]
   },
   {
     "scene": "osa",
     "name": "Office of Student Affairs",
-    "type": "school_building",
+    "type": "school_facilities",
     "acronym": "OSA",
     "tags": ["school"],
     "image": "dit.jpg",

@@ -23,7 +23,7 @@ const Sharelink = ({ visible, onClose }) => {
       id="container"
       className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-25 px-4"
     >
-      <div className="relative flex  flex-col rounded-lg bg-white p-2">
+      <div className="relative z-50 flex  flex-col rounded-lg bg-white p-2">
         <div className="flex h-auto w-full flex-row items-center">
           <div className="relative flex w-full flex-row-reverse items-center justify-items-end">
             <div className="relative flex items-end justify-items-end">

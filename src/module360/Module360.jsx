@@ -58,7 +58,7 @@ function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
   /* States */
 
   // Building Modal State
-  const [bldgState, setBldgState] = useState(false);
+  const [mode, setMode] = useState("360");
 
   // Minimap State
   const [mapButtonVisible, setMapButtonVisibility] = useState(true);
@@ -300,7 +300,7 @@ function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
       changeScene(buildingsDB, target);
     } else if (type === "info") {
       console.log("Building Target: ", target);
-      openModal(target);
+      openModal(target, "360");
     } else {
       console.log("Display Extra's Image");
       setExtrasState(index);
@@ -363,10 +363,10 @@ function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
   const [targetScene, setTargetScene] = useState(""); // Target Scene for Building Modal
 
   // Trigger Building Modal Function
-  function openModal(target) {
-    console.log("Open Modal", target);
-    setBldgModalState(true);
+  function openModal(target, mode) {
     setTargetScene(target);
+    setMode(mode);
+    setBldgModalState(true);
   }
 
   /* Module360 Component */
@@ -494,19 +494,11 @@ function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
             targetScene={targetScene}
             onBldgModalClose={() => setBldgModalState(false)}
             iconSet={icons}
+            mode={mode}
+            changeScene={action}
           />
         </div>
         {/* Navigation bar */}
-
-        {/* Building Modal */}
-        {/* {bldgState && (
-          <BuildingModal
-            visible={bldgState}
-            onClose={() => setBldgState(false)}
-            loginType={loginType}
-          />
-        )} */}
-        {/* Building Modal */}
 
         {/* Minimap */}
         <div className="absolute left-0 top-0 p-1 text-white ">

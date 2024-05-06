@@ -10,9 +10,19 @@ import {
 import "pure-react-carousel/dist/react-carousel.es.css";
 import { useMediaQuery } from "react-responsive";
 
-const BuildingGallery = () => {
-  const images = new Array(10).fill("https://via.placeholder.com/150");
+const BuildingGallery = ({ imageSet }) => {
+  const images = checkImageSet();
+
+  function checkImageSet() {
+    if (imageSet === undefined) {
+      return new Array(10).fill("https://via.placeholder.com/150");
+    } else {
+      return [...imageSet];
+    }
+  }
+
   const isSmallScreen = useMediaQuery({ query: "(max-width: 640px)" });
+
   const iphoneSE = useMediaQuery({ query: "(max-width: 667px)" });
 
   let visibleSlides;
@@ -38,7 +48,7 @@ const BuildingGallery = () => {
             <Slide key={index} index={index}>
               <img
                 src={image}
-                className="h-full w-full rounded-xl p-1"
+                className="h-full w-full rounded-xl object-cover p-1"
                 alt={`Slide ${index + 1}`}
               />
             </Slide>

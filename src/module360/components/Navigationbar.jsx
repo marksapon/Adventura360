@@ -33,6 +33,8 @@ const Navigationbar = ({
   bldgModalState,
   targetScene,
   onBldgModalClose,
+  mode,
+  changeScene,
 }) => {
   /* States */
   const [mapState, setMapState] = useState(false); // Map State
@@ -260,19 +262,6 @@ const Navigationbar = ({
         </div>
       </div>
 
-      {/*MAP MODULE*/}
-      {mapState && (
-        <MapModule
-          currLoc={location}
-          nodesDB={nodesDB}
-          buildingsDB={buildingsDB}
-          extrasDB={extrasDB}
-          infosDB={infosDB}
-          iconsSet={icons}
-          openBldgModal={openModal}
-        />
-      )}
-
       {/*FOOTER*/}
       <div className="sticky bottom-0  start-0 top-4 z-20 mx-2 mb-4 h-14 w-full rounded-xl border-b bg-white md:hidden">
         <div className="flex h-full items-center justify-between px-1 text-base">
@@ -391,39 +380,67 @@ const Navigationbar = ({
           </div>
         </div>
       </div>
-      <Helpmodal
-        onClose={() => {
-          setShowmodal(false);
-        }}
-        visible={Showmodal}
-      />
-      <Sharelink
-        onClose={() => {
-          setShowSharemodal(false);
-        }}
-        visible={Sharemodal}
-      />
-      <Bugmodal
-        onClose={() => {
-          setShowBugmodal(false);
-        }}
-        visible={Bugmdl}
-      />
-      <Search
-        onClose={() => {
-          setSearchModal(false);
-        }}
-        visible={searchModal}
-        infosDB={infosDB}
-      />
-      <BuildingModal
-        visible={bldgModalState}
-        onClose={onBldgModalClose}
-        loginType={loginType}
-        infosDB={infosDB}
-        scene={targetScene}
-        iconSet={iconSet}
-      />
+
+      {/*MAP MODULE*/}
+      {mapState && (
+        <MapModule
+          currLoc={location}
+          nodesDB={nodesDB}
+          buildingsDB={buildingsDB}
+          extrasDB={extrasDB}
+          infosDB={infosDB}
+          iconsSet={iconSet}
+          openBldgModal={openModal}
+        />
+      )}
+
+      {Showmodal && (
+        <Helpmodal
+          onClose={() => {
+            setShowmodal(false);
+          }}
+          visible={Showmodal}
+        />
+      )}
+
+      {Sharemodal && (
+        <Sharelink
+          onClose={() => {
+            setShowSharemodal(false);
+          }}
+          visible={Sharemodal}
+        />
+      )}
+
+      {Bugmdl && (
+        <Bugmodal onClose={() => setShowBugmodal(false)} visible={Bugmdl} />
+      )}
+
+      {searchModal && (
+        <Search
+          onClose={() => {
+            setSearchModal(false);
+          }}
+          visible={searchModal}
+          infosDB={infosDB}
+        />
+      )}
+
+      {bldgModalState && (
+        <BuildingModal
+          visible={bldgModalState}
+          onClose={onBldgModalClose}
+          loginType={loginType}
+          infosDB={infosDB}
+          scene={targetScene}
+          iconSet={iconSet}
+          openShareModal={() => setShowSharemodal(true)}
+          shareModal={Sharemodal}
+          mode={mode}
+          changeScene={changeScene}
+          setMapState={setMapState}
+        />
+      )}
     </div>
   );
 };

@@ -39,6 +39,7 @@ const MapModule = ({
   infosDB,
   iconsSet,
   openBldgModal,
+  setMode,
 }) => {
   /* OpenSeadragon Viewer */
   const osdRef = useRef(); // Reference to the OSD element
@@ -123,9 +124,7 @@ const MapModule = ({
     return temp_overlays;
   });
 
-  
-
-  // const icons = iconsSet;
+  const icons = iconsSet; // Icons Set
 
   const [current_overlays, setCurrentOverlays] = useState(
     // Overlays that are going to be displayed
@@ -238,7 +237,7 @@ const MapModule = ({
 
             if (overlayBounds.containsPoint(viewportPoint)) {
               console.log("Overlay Scene:", overlay.scene);
-              openBldgModal(overlay.scene);
+              openBldgModal(overlay.scene, "map");
             }
           }
         });
