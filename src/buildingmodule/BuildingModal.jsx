@@ -373,7 +373,7 @@ const BuildingModal = ({
   return (
     <div
       id="container"
-      className="pointer-events-auto fixed inset-0 z-40 flex bg-black bg-opacity-25"
+      className={`pointer-events-auto fixed inset-0 z-40 flex ${mode === "search" ? "" : "bg-black bg-opacity-25"}`}
     >
       {/* Screen Container */}
       <div className="z-50 flex h-full w-full items-start pr-2">
@@ -390,14 +390,16 @@ const BuildingModal = ({
               }}
             >
               {/* Close Button */}
-              <div className="relative z-50 flex w-full text-white">
-                <button
-                  className="absolute right-0 items-center justify-center"
-                  onClick={() => handleCloseAndReset()}
-                >
-                  <IoIosClose className="h-12 w-12" />
-                </button>
-              </div>
+              {mode !== "search" && (
+                <div className="relative z-50 flex w-full text-white">
+                  <button
+                    className="absolute right-0 items-center justify-center"
+                    onClick={() => handleCloseAndReset()}
+                  >
+                    <IoIosClose className="h-12 w-12" />
+                  </button>
+                </div>
+              )}
 
               {/* Building Info */}
               <div className="flex h-full w-full flex-row items-end shadow-md shadow-gray-500">
@@ -458,19 +460,21 @@ const BuildingModal = ({
                     )}
 
                     {/* EXPLORE BUTTON */}
-                    {current_info && (loginType === current_info.access ||
-                      loginType === "account") && (
-                      <button
-                        onClick={() => {
-                          setAccess("private");
-                          changeScene("inside", current_info.id);
-                          handleCloseAndReset();
-                        }}
-                        className="flex w-fit items-center justify-center rounded-full bg-green-600 px-4 py-1 text-xs font-bold text-white md:text-base"
-                      >
-                        Explore <RiPhoneFindLine className="h-6 w-6 pl-1" />
-                      </button>
-                    )}
+                    {current_info &&
+                      (loginType === current_info.access ||
+                        loginType === "account") && (
+                        <button
+                          onClick={() => {
+                            setAccess("private");
+                            changeScene("inside", current_info.id);
+                            setMapState(false);
+                            handleCloseAndReset();
+                          }}
+                          className="flex w-fit items-center justify-center rounded-full bg-green-600 px-4 py-1 text-xs font-bold text-white md:text-base"
+                        >
+                          Explore <RiPhoneFindLine className="h-6 w-6 pl-1" />
+                        </button>
+                      )}
                   </div>
                 </div>
               </div>
@@ -622,7 +626,7 @@ const BuildingModal = ({
               )}
 
               {/* Go to Button */}
-              {current_info && current_info.hasScene && mode === "map" && (
+              {current_info && current_info.hasScene && mode !== "360" && (
                 <div className="flex h-auto w-auto flex-col items-center justify-center">
                   <button
                     className="flex items-center justify-center rounded-full bg-green-500 p-2"

@@ -85,6 +85,7 @@
       {
         "type": "popup",
         "class": "batibot",
+        "target": "kioskdit",
         "yaw": 331.58,
         "pitch": 2.78
       },

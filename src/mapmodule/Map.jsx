@@ -11,24 +11,11 @@ import PathfindingModal from "./components/PathfindingModal"; // Pathfinding Mod
 
 /* OSD CSS */
 import { BsFilterRight } from "react-icons/bs"; // Filter Button
-import { RiMapPinUserFill } from "react-icons/ri"; // Current Location Button
 import { GiPathDistance } from "react-icons/gi"; // Path finding Button
 import { ImLocation } from "react-icons/im"; // Current Location Off Button
 import { ImLocation2 } from "react-icons/im"; // Current Location On Button
 
 /* Overlay Icons */
-import { FaRestroom } from "react-icons/fa"; // Restroom Icon
-import { FaHandsWash } from "react-icons/fa"; // Hand Wash Icon
-import { LuSchool } from "react-icons/lu"; // School Facilities Icon
-import { TbSchool } from "react-icons/tb"; // College Buildings Icon
-import { FaCoffee } from "react-icons/fa"; // Cafeteria Icon
-import { FaPeopleRoof } from "react-icons/fa6"; // Batibot Icon
-import { PiBinocularsFill } from "react-icons/pi"; // Attraction Icon
-import { TbSoccerField } from "react-icons/tb"; // Court Icon
-import { FaSquareParking } from "react-icons/fa6"; // Parking Lot Icon
-import { FaHotel } from "react-icons/fa"; // Venue Icon
-import { LuWheat } from "react-icons/lu"; // Farm Icon
-import { MdEngineering } from "react-icons/md"; // Construction Icon
 import { FaCircle } from "react-icons/fa6"; // Undefined Icon
 
 const MapModule = ({
@@ -633,7 +620,15 @@ const MapModule = ({
       }}
     >
       {/* OSD */}
-      <div ref={osdRef} style={{ width: "100%", height: "100vh", zIndex: 3 }} />
+      <div
+        ref={osdRef}
+        style={{
+          width: "100%",
+          height: "100vh",
+          zIndex: 3,
+          backgroundColor: "#fefefe",
+        }}
+      />
       {/* OSD */}
 
       {/* Overlays */}
@@ -706,13 +701,12 @@ const MapModule = ({
       {/* POI Overlays */}
 
       {/* Current Location CSS */}
-      <div id="current location">
-        <img
-          src="/assets/Login Module/adventura logo 2.webp"
-          alt="Adventura 360 logo"
-          className="h-15 w-10"
-        />
-      </div>
+      <img
+        src="/assets/Login Module/adventura logo 2.webp"
+        alt="Adventura 360 logo"
+        className="h-15 image-shadow w-10"
+        style={{ filter: "drop-shadow(0px 0px 10px rgba(0,0,0,0.75))" }}
+      />
       {/* Current Location CSS */}
 
       {/* Overlays */}

@@ -9,14 +9,15 @@ import { TbSchool } from "react-icons/tb";
 import { TbSoccerField } from "react-icons/tb"; // Court Icon
 import { FaHome, FaHotel } from "react-icons/fa";
 
-const Search = ({ visible, onClose, infosDB }) => {
+const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
   /* Existing Buildings Item */
   class Item {
-    constructor(id, name, acronym, tags, type) {
+    constructor(id, name, image, acronym, tags, type) {
       this.id = id;
       this.name = name;
+      this.image = image;
       this.acronym = acronym;
-      this.tag = tags;
+      this.tags = tags;
       this.type = type;
     }
   }
@@ -49,6 +50,7 @@ const Search = ({ visible, onClose, infosDB }) => {
         const item = new Item(
           infosDB[info].scene,
           infosDB[info].name,
+          infosDB[info].image,
           infosDB[info].acronym,
           infosDB[info].tags,
           infosDB[info].type,
@@ -174,6 +176,7 @@ const Search = ({ visible, onClose, infosDB }) => {
       const contents = originalSuggestions[currentKey];
 
       const newFilteredContents = contents.filter((content) => {
+        console.log("Content: ", content);
         const matchesSearchTerm =
           content.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
           (content.acronym &&
@@ -182,7 +185,7 @@ const Search = ({ visible, onClose, infosDB }) => {
         const matchesTag =
           selectedTag.length > 0 &&
           content.tags &&
-          selectedTag.every((tag) => content.tags.includes(tag));
+          selectedTag.some((tag) => content.tags.includes(tag));
 
         const shouldIncludeContent = searchTerm
           ? matchesSearchTerm || matchesTag
@@ -206,11 +209,15 @@ const Search = ({ visible, onClose, infosDB }) => {
   if (!visible) return null;
 
   console.log("Filtered Suggestions: ", filteredSuggestions);
+  console.log("originalSuggestions", originalSuggestions);
+  console.log("sort", sort);
+  console.log("searchTerm", searchTerm);
+  console.log("selectedTag", selectedTag);
 
   return (
     <div
       id="container"
-      className="fixed inset-0 z-50 flex h-full bg-black bg-opacity-25"
+      className="fixed inset-0 z-30 flex h-full bg-black bg-opacity-25"
     >
       {/* main container for the search component. */}
       <div className="flex h-full w-full items-start pr-2">
@@ -401,7 +408,8 @@ const Search = ({ visible, onClose, infosDB }) => {
                             className={`flex flex-col overflow-hidden rounded-lg border-2 px-1 py-1 shadow-lg ${view === "list" ? "h-fit" : "h-auto"} relative border ${clicked ? "bg-slate-100" : "hover:bg-slate-50"}`}
                             onClick={() => {
                               // Log the item when clicked
-                              console.log(item);
+                              console.log("Clicked Item:", item);
+                              openBldgModal(item.id, "search");
                             }}
                           >
                             {/* Conditionally render an img element if view is not "list" */}
@@ -431,7 +439,9 @@ const Search = ({ visible, onClose, infosDB }) => {
                                     : "flex w-auto flex-col items-center justify-center gap-2 text-center text-sm"
                                 }
                               >
-                                <div className="rounded-full border-2 border-white bg-green-600 p-2 text-xl text-white">
+                                <div
+                                  className={`rounded-full border-2 border-white ${keyIcons[item.type].color} p-2 text-xl text-white`}
+                                >
                                   {/* Display the icon associated with the key */}
                                   {keyIcons[item.type].icon}
                                 </div>

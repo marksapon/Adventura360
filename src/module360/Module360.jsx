@@ -419,10 +419,10 @@ function Module360({
     console.log("Changing Scene");
     console.log("Type:", type, "Target:", target);
     if (access !== "private" && isOutside === false) {
+      console.log("Setting Previous Scene:", isOutside);
       setPrevious_Scene(select_Scene);
     }
     console.log("Previous Scene:", previous_Scene);
-    console.log("Data Type:", type);
     console.log("Changing Scene");
     for (const data of type) {
       if (data.scene === target) {

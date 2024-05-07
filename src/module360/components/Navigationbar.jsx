@@ -521,6 +521,7 @@ const Navigationbar = ({
           }}
           visible={searchModal}
           infosDB={infosDB}
+          openBldgModal={openModal}
         />
       )}
 
