@@ -458,7 +458,7 @@ const BuildingModal = ({
                     )}
 
                     {/* EXPLORE BUTTON */}
-                    {(loginType === current_info.access ||
+                    {current_info && (loginType === current_info.access ||
                       loginType === "account") && (
                       <button
                         onClick={() => {

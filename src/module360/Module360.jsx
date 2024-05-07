@@ -619,6 +619,8 @@ function Module360({
                   setAccess("public");
                   changeScene(buildingsDB, insideBuilding);
                 } else {
+                  console.log("Previous Scene:", previous_Scene);
+                  setIsOutside(false);
                   setSelect_Scene(previous_Scene);
                   setBackButton(false);
                 }
