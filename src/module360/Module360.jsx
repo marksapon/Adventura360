@@ -40,16 +40,22 @@ function Module360({
   infosDB,
   internalDB,
 }) {
-  // class Extras {
-  //   constructor(index, scene, image, location, desc) {
-  //     this.id = index;
-  //     this.scene = scene;
-  //     this.image = image;
-  //     this.location = location;
-  //     this.desc = desc;
-  //     this.state = false;
-  //   }
-  // }
+  class Extras {
+    constructor(
+      index,
+      scene,
+      image = "https://via.placeholder.com/150",
+      location,
+      desc,
+    ) {
+      this.id = index;
+      this.scene = scene;
+      this.image = image;
+      this.location = location;
+      this.desc = desc;
+      this.state = false;
+    }
+  }
 
   class Internal {
     constructor(scene, location, image, coords, hotspot) {
@@ -126,7 +132,7 @@ function Module360({
   const [insideBuilding, setInsideBuilding] = useState("");
 
   // Current Extras Popup State
-  // const [curr_Extras, setCurr_Extras] = useState(generateExtras);
+  const [curr_Extras, setCurr_Extras] = useState(generateExtras);
 
   // Function to get the current scene based on the URL queries
   function getScene() {
@@ -343,7 +349,7 @@ function Module360({
   useEffect(() => {
     if (viewerRef.current) {
       viewerRef.current.hotspot.refresh();
-      // setCurr_Extras(generateExtras());
+      setCurr_Extras(generateExtras());
     }
   }, [select_Scene, curr_Internal]);
 
@@ -372,7 +378,7 @@ function Module360({
       openModal(target, "360");
     } else if (type === "popup") {
       console.log("Display Extra's Image");
-      // setExtrasState(index);
+      setExtrasState(index);
     } else if (type === "inside") {
       console.log("Inside Building");
       internalDB.map((internal) => {
@@ -428,46 +434,48 @@ function Module360({
 
   /* Extras Hotspot */
 
-  // // Function to generate Extras
-  // function generateExtras() {
-  //   console.log("Generating Extras");
+  // Function to generate Extras
+  function generateExtras() {
+    console.log("Generating Extras");
 
-  //   const temp_extras = [];
+    const temp_extras = [];
 
-  //   select_Scene.hotspot.map((hotspot, index) => {
-  //     if (hotspot.type === "popup") {
-  //       extrasDB.map((extras) => {
-  //         if (extras.scene === hotspot.target) {
-  //           const extrasFormat = new Extras(
-  //             index,
-  //             extras.scene,
-  //             extras.image,
-  //             extras.location,
-  //             extras.desc,
-  //           );
-  //           temp_extras.push(extrasFormat);
-  //         }
-  //       });
-  //     }
-  //   });
+    if (select_Scene && select_Scene.hotspot) {
+      select_Scene.hotspot.forEach((hotspot, index) => {
+        if (hotspot.type === "popup") {
+          extrasDB.forEach((extras) => {
+            if (extras.scene === hotspot.target) {
+              const extrasFormat = new Extras(
+                index,
+                extras.scene,
+                extras.image,
+                extras.location,
+                extras.desc,
+              );
+              temp_extras.push(extrasFormat);
+            }
+          });
+        }
+      });
+    }
 
-  //   return temp_extras;
-  // }
+    return temp_extras;
+  }
 
-  // function setExtrasState(index) {
-  //   console.log("Setting Extras State");
-  //   const newExtras = curr_Extras.map((extras) => {
-  //     if (extras.id === index) {
-  //       return {
-  //         ...extras,
-  //         state: !extras.state,
-  //       };
-  //     }
-  //     return extras;
-  //   });
+  function setExtrasState(index) {
+    console.log("Setting Extras State");
+    const newExtras = curr_Extras.map((extras) => {
+      if (extras.id === index) {
+        return {
+          ...extras,
+          state: !extras.state,
+        };
+      }
+      return extras;
+    });
 
-  //   setCurr_Extras(newExtras);
-  // }
+    setCurr_Extras(newExtras);
+  }
 
   /* Building Modal State */
   const [bldgModalState, setBldgModalState] = useState(false); // Building Modal State
@@ -542,9 +550,10 @@ function Module360({
                   {/* Hotspot Icon */}
                   {getIcon(hotspot.type, hotspot.class)}
 
-                  {/*hotspot.type === "popup" &&
+                  {hotspot.type === "popup" &&
                     curr_Extras.map((extras, index2) => {
                       if (extras.state === true && extras.id === index) {
+                        console.log("Extras:", extras.image);
                         return (
                           <div
                             style={{ fontSize: "12px" }}
@@ -553,6 +562,7 @@ function Module360({
                           >
                             <img
                               src={extras.image}
+                              alt={extras.desc}
                               className="h-9/16 w-16/9 flex items-center justify-center rounded-sm bg-cover bg-center bg-no-repeat"
                             />
 
@@ -561,22 +571,14 @@ function Module360({
                             >
                               {getIcon(hotspot.type, hotspot.class)}
                             </div>
-
-                            <div
-                              className="flex h-full w-full items-center justify-center text-center"
-                              // DI MALIITAN FUKKKKKKKKKKKKKKKKKKKKKK
-                              style={{
-                                fontSize:
-                                  window.innerWidth >= 768 ? "1rem" : "10px",
-                              }}
-                            >
-                              {extras.text}
+                            <div className="text-center text-xs">
+                              {extras.desc}
                             </div>
                           </div>
                         );
                       }
                       return null; // return null when extras.state is not true
-                    }) */}
+                    })}
                 </div>
               );
             }

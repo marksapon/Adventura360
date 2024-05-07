@@ -69,11 +69,10 @@ const MapModule = ({
         type: building.coords.type,
       });
     });
-
     // Generate a proper layout for the POI in Buildings Extras
     extrasDB.map((building) => {
       temp.push({
-        id: building.scene,
+        scene: building.scene,
         name: building.location,
         x: building.coords.x,
         y: building.coords.y,
@@ -320,7 +319,12 @@ const MapModule = ({
     nodesDB.map((nodes) => {
       const neighbors = [];
       nodes.hotspot.map((hotspot) => {
-        if (hotspot.type === "move" || hotspot.type === "bldg") {
+        if (
+          hotspot.type === "move" ||
+          hotspot.type === "bldg" ||
+          hotspot.type === "popup" ||
+          hotspot.type === "info"
+        ) {
           neighbors.push(hotspot.target);
         }
       });
@@ -349,11 +353,30 @@ const MapModule = ({
         ),
       );
     });
+
+    // extrasDB.map((building) => {
+    //   const neighbors = [];
+    //   building.back.map((nodes) => {
+    //     neighbors.push(nodes);
+    //   });
+    //   console.log("Building: ", building.coords.x);
+    //   temp.push(
+    //     new Node(
+    //       building.scene,
+    //       building.coords.x,
+    //       building.coords.y,
+    //       neighbors,
+    //       building.travelType,
+    //     ),
+    //   );
+    // });
     extrasDB.map((building) => {
       const neighbors = [];
       building.back.map((nodes) => {
         neighbors.push(nodes);
       });
+
+      console.log("Building coords: ", building.coords);
       temp.push(
         new Node(
           building.scene,
@@ -415,6 +438,8 @@ const MapModule = ({
 
     const target_location = () => {
       const target = graph.find((node) => {
+        console.log("Node: ", node);
+        console.log("Target: ", targetLocation);
         return node.id === targetLocation.scene;
       });
 
@@ -451,7 +476,9 @@ const MapModule = ({
     // Heuristic Function for determining distance of two nodes
     function euclideanDistance(node1, node2) {
       console.log("node1", node1);
+      console.log("node2", node2);
       const dx = node1.x - node2.x;
+
       const dy = node1.y - node2.y;
       return Math.sqrt(dx * dx + dy * dy);
     }
@@ -486,6 +513,7 @@ const MapModule = ({
       });
 
       gScore.set(start, 0); // The cost of going from start to start is zero
+      console.log("Goal: ", goal);
       fScore.set(start, euclideanDistance(start, goal)); // For the first node, it is set by distance to target
 
       openSet.add(start); // Add the start node to the open set

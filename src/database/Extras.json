@@ -27,13 +27,14 @@
   {
     "scene": "restroomIH1",
     "back": ["node43"],
-    "location": "Restroom near IH1",
+    "desc": "Restroo, near IH1",
+    "location": "Restroom IH1",
     "coords": {
       "x": 0.556,
       "y": 0.85,
       "type": "restroom"
     },
-    "image": "/assets/Database Images/unrestricted nodes/2.webp"
+    "image": "/assets/Database Images/unrestricted nodes/19.webp"
   },
   {
     "scene": "hostel",

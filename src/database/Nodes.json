@@ -10,7 +10,7 @@
       {
         "type": "move",
         "target": "node2",
-        
+
         "yaw": 280.46,
         "pitch": -20
       },
@@ -71,7 +71,7 @@
       {
         "type": "popup",
         "class": "restroom",
-        "target": "restroomOval",
+        "target": "restroomIH1",
         "yaw": 347.35,
         "pitch": -2.62
       },
