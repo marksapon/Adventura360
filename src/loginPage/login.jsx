@@ -48,8 +48,18 @@ function Login({ BACKEND_URL, setLoginType }) {
     }
   }, [isLoginSuccessful]);
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
+
+    // Wait for the users data to be loaded before proceeding
+    await new Promise((resolve) => {
+      const checkData = setInterval(() => {
+        if (users.length > 0) {
+          clearInterval(checkData);
+          resolve();
+        }
+      }, 100);
+    });
 
     const account = users.find(
       (account) =>
