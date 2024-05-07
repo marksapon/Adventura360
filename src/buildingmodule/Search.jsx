@@ -233,7 +233,7 @@ const Search = ({ visible, onClose, infosDB }) => {
               <div className="flex h-screen w-full flex-col">
                 <h1 className="p-4 text-2xl font-bold"></h1>
                 {/* container for the search input and sort dropdown. */}
-                <div className="flex px-4 pb-2">
+                <div className="flex px-4 pb-2 pt-4">
                   {/* search input. */}
                   <input
                     type="text"

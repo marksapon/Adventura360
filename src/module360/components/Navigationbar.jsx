@@ -102,32 +102,53 @@ const Navigationbar = ({
     }
   };
 
+  const [showTooltip, setShowTooltip] = useState({});
+
+  const handleMouseEnter = (name) => {
+    setShowTooltip({ ...showTooltip, [name]: true });
+  };
+
+  const handleMouseLeave = (name) => {
+    setShowTooltip({ ...showTooltip, [name]: false });
+  };
+
   return (
     <div className="flex h-screen w-full flex-col justify-between pr-4">
       <div className="sticky start-0 top-4 z-10 mx-2 h-max w-full rounded-xl border-b border-gray-200 bg-white dark:border-gray-600">
         <div className="flex h-full items-center justify-between text-base">
           <div className="flex h-full w-auto items-center justify-between px-1 md:w-full lg:px-4">
-            <div>
-              <button
-                type="button"
-                onClick={() => navigate("/")}
-                className="flex h-14 w-14 items-center justify-center"
-              >
-                <span className="sr-only">Adventura Logo</span>
-                <img
-                  src="/assets/Navigation Bar/adventura 360 logo.webp"
-                  alt="share button"
-                  className="h-12 w-auto transition-all duration-200 hover:scale-110"
-                />
-              </button>
-            </div>
+            <button
+              onClick={() => navigate("/")}
+              className="flex h-14 w-14 items-center justify-center"
+              onMouseEnter={() => handleMouseEnter("button1")}
+              onMouseLeave={() => handleMouseLeave("button1")}
+            >
+              {showTooltip["button1"] && (
+                <div className="tooltip absolute top-full mt-2 w-fit rounded-full border-2 border-green-600 bg-slate-50 px-2 py-1 text-center text-xs font-semibold">
+                  Go to homepage
+                </div>
+              )}
+              <span className="sr-only">Adventura Logo</span>
+              <img
+                src="/assets/Navigation Bar/adventura 360 logo.webp"
+                alt="share button"
+                className="h-12 w-auto transition-all duration-200 hover:scale-110"
+              />
+            </button>
 
             <div className="hidden md:flex">
               <button
                 type="button"
                 onClick={() => setMapState(false)}
                 className="inline-flex h-14 w-14 items-center justify-center"
+                onMouseEnter={() => handleMouseEnter("button2")}
+                onMouseLeave={() => handleMouseLeave("button2")}
               >
+                {showTooltip["button2"] && (
+                  <div className="tooltip absolute top-full mt-2 w-fit rounded-full border-2 border-green-600 bg-slate-50 px-2 py-1 text-center text-xs font-semibold">
+                    360 view
+                  </div>
+                )}
                 <span className="sr-only">360</span>
                 <Tb360View
                   className={`h-12 w-12 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${
@@ -144,7 +165,14 @@ const Navigationbar = ({
                 type="button"
                 onClick={() => setMapState(true)}
                 className="inline-flex h-14 w-14 items-center justify-center"
+                onMouseEnter={() => handleMouseEnter("button3")}
+                onMouseLeave={() => handleMouseLeave("button3")}
               >
+                {showTooltip["button3"] && (
+                  <div className="tooltip absolute top-full mt-2 w-fit rounded-full border-2 border-green-600 bg-slate-50 px-2 py-1 text-center text-xs font-semibold">
+                    Map
+                  </div>
+                )}
                 <span className="sr-only">Map</span>
                 <GrMap
                   className={`h-12 w-12 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${mapState ? "h-14 w-14 rounded-lg ring-2 ring-gray-600" : ""}`}
@@ -157,7 +185,14 @@ const Navigationbar = ({
                 type="button"
                 onClick={() => setSearchModal(true)}
                 className="inline-flex h-14 w-14 items-center justify-center"
+                onMouseEnter={() => handleMouseEnter("button4")}
+                onMouseLeave={() => handleMouseLeave("button4")}
               >
+                {showTooltip["button4"] && (
+                  <div className="tooltip absolute top-full mt-2 w-fit rounded-full border-2 border-green-600 bg-slate-50 px-2 py-1 text-center text-xs font-semibold">
+                    Search
+                  </div>
+                )}
                 <span className="sr-only">Search</span>
                 <IoMdSearch className="h-12 w-12 text-green-600 transition-all duration-200 hover:h-14 hover:w-14" />
               </button>
@@ -170,7 +205,14 @@ const Navigationbar = ({
                   setShowmodal(true);
                 }}
                 className="inline-flex h-14 w-14 items-center justify-center"
+                onMouseEnter={() => handleMouseEnter("button5")}
+                onMouseLeave={() => handleMouseLeave("button5")}
               >
+                {showTooltip["button5"] && (
+                  <div className="tooltip absolute top-full mt-2 w-fit rounded-full border-2 border-green-600 bg-slate-50 px-2 py-1 text-center text-xs font-semibold">
+                    Search
+                  </div>
+                )}
                 <span className="sr-only">Help</span>
                 <IoIosHelpCircleOutline
                   className={`h-12 w-12 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Showmodal ? "h-14 w-14 rounded-lg ring-2 ring-gray-600" : ""}`}
@@ -194,7 +236,14 @@ const Navigationbar = ({
                   setMapState(false);
                 }}
                 className="inline-flex h-14 w-14 items-center justify-center"
+                onMouseEnter={() => handleMouseEnter("button6")}
+                onMouseLeave={() => handleMouseLeave("button6")}
               >
+                {showTooltip["button6"] && (
+                  <div className="tooltip absolute top-full mt-2 w-fit rounded-full border-2 border-green-600 bg-slate-50 px-2 py-1 text-center text-xs font-semibold">
+                    Feedback
+                  </div>
+                )}
                 <span className="sr-only">Feedback</span>
                 <VscFeedback
                   className={`h-11 w-11 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Bugmdl ? "h-14 w-14 rounded-lg ring-2 ring-gray-600" : ""}`}
@@ -207,7 +256,14 @@ const Navigationbar = ({
                 type="button"
                 onClick={toggleAutoplay}
                 className="inline-flex h-14 w-14 items-center justify-center"
+                onMouseEnter={() => handleMouseEnter("button7")}
+                onMouseLeave={() => handleMouseLeave("button7")}
               >
+                {showTooltip["button7"] && (
+                  <div className="tooltip absolute top-full mt-2 w-fit rounded-full border-2 border-green-600 bg-slate-50 px-2 py-1 text-center text-xs font-semibold">
+                    Autoplay
+                  </div>
+                )}
                 <span className="sr-only">Autoplay</span>
                 <PiPlayCircleLight className="h-12 w-12 text-green-600 transition-all duration-200 hover:h-14 hover:w-14" />
               </button>
@@ -221,7 +277,14 @@ const Navigationbar = ({
                   setMapState(false);
                 }}
                 className="inline-flex h-14 w-14 items-center justify-center"
+                onMouseEnter={() => handleMouseEnter("button8")}
+                onMouseLeave={() => handleMouseLeave("button8")}
               >
+                {showTooltip["button8"] && (
+                  <div className="tooltip absolute top-full mt-2 w-fit rounded-full border-2 border-green-600 bg-slate-50 px-2 py-1 text-center text-xs font-semibold">
+                    Share
+                  </div>
+                )}
                 <span className="sr-only">Share</span>
                 <FiLink
                   className={`h-10 w-10 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Sharemodal ? "h-14 w-14 rounded-lg ring-2 ring-gray-600" : ""}`}
@@ -234,7 +297,14 @@ const Navigationbar = ({
                 type="button"
                 onClick={toggleFullscreen}
                 className="inline-flex h-14 w-14 items-center justify-center"
+                onMouseEnter={() => handleMouseEnter("button9")}
+                onMouseLeave={() => handleMouseLeave("button9")}
               >
+                {showTooltip["button9"] && (
+                  <div className="tooltip absolute top-full mt-2 w-fit rounded-full border-2 border-green-600 bg-slate-50 px-2 py-1 text-center text-xs font-semibold">
+                    Fullscreen
+                  </div>
+                )}
                 <span className="sr-only">Fullscreen</span>
                 {isFullscreen ? (
                   <TbMaximizeOff className="h-10 w-10 text-green-600 transition-all duration-200 hover:size-12" />
@@ -249,8 +319,14 @@ const Navigationbar = ({
                 type="button"
                 onClick={() => window.open("https://www.cvsu.edu.ph/")} // Redirect to CVSU website
                 className="flex h-12 w-12 items-center justify-center"
+                onMouseEnter={() => handleMouseEnter("button10")}
+                onMouseLeave={() => handleMouseLeave("button10")}
               >
-                <span className="sr-only">CVSU</span>
+                {showTooltip["button10"] && (
+                  <div className="tooltip absolute top-full mt-2 w-fit rounded-full border-2 border-green-600 bg-slate-50 px-2 py-1 text-center text-xs font-semibold">
+                    Visit CvSU Website
+                  </div>
+                )}
                 <img
                   className="transition-all duration-200 hover:scale-110"
                   src="/assets/Navigation Bar/CvSU logo.webp"

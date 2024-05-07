@@ -679,7 +679,11 @@ const MapModule = ({
 
       {/* Current Location CSS */}
       <div id="current location">
-        <RiMapPinUserFill size={60} className="text-lime-300" />
+        <img
+          src="/assets/Login Module/adventura logo 2.webp"
+          alt="Adventura 360 logo"
+          className="h-15 w-10"
+        />
       </div>
       {/* Current Location CSS */}
 
