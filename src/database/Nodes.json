@@ -10,6 +10,7 @@
       {
         "type": "move",
         "target": "node2",
+        
         "yaw": 280.46,
         "pitch": -20
       },
@@ -28,36 +29,42 @@
       {
         "type": "info",
         "class": "info",
+        "target": "",
         "yaw": 326.77,
         "pitch": 2.56
       },
       {
         "type": "info",
         "class": "attraction",
+        "target": "",
         "yaw": 320.86,
         "pitch": 2.78
       },
       {
         "type": "info",
         "class": "cafeteria",
+        "target": "",
         "yaw": 314.84,
         "pitch": 2.78
       },
       {
         "type": "info",
         "class": "farm",
+        "target": "",
         "yaw": 347.23,
         "pitch": 2.78
       },
       {
         "type": "info",
         "class": "court",
+        "target": "",
         "yaw": 336.88,
         "pitch": 2.78
       },
       {
         "type": "info",
         "class": "venue",
+        "target": "",
         "yaw": 341.33,
         "pitch": 2.78
       },

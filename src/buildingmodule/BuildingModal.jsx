@@ -4,12 +4,14 @@ import BuildingGallery from "./BuildingGallery";
 import { IoIosClose } from "react-icons/io"; // Close
 import { FaQuestion } from "react-icons/fa"; // Unknown Icon
 import { RiPhoneFindLine } from "react-icons/ri"; // Go inside
-import { BiBuildings } from "react-icons/bi"; // Facilities
+import { BiBuildings } from "react-icons/bi"; // Departments
 import { GiBlackBook } from "react-icons/gi"; // Courses
 import { MdDirections } from "react-icons/md"; // Go to
 import { FiLink } from "react-icons/fi"; // Share
 import { MdHistoryEdu } from "react-icons/md"; // History
 import { FaPhone } from "react-icons/fa"; // Contact
+import { ImLab } from "react-icons/im"; // Facilities
+import { TbTargetArrow } from "react-icons/tb"; // Mission Vision
 
 const BuildingModal = ({
   visible,
@@ -24,32 +26,171 @@ const BuildingModal = ({
   changeScene,
   setMapState,
   setAccess,
-  access,
+  buildingsDB,
 }) => {
-  class Info {
+  class College {
     constructor(
       id,
       name,
+      access,
       type,
       tags,
       description,
       bg,
-      facilities = [],
-      courses = [],
       gallery = [],
+      info_type,
+      hasScene = false,
+
+      history,
+      dept = [],
+      mission_vision = {},
+      courses = [],
+      contacts = {},
     ) {
       this.id = id;
       this.name = name;
-      this.type = type; //
+      this.access = access;
+      this.type = type;
       this.tags = tags;
       this.description = description;
       this.bg = bg;
-      this.facilities = facilities; //
-      this.courses = courses; //
       this.gallery = gallery;
+      this.info_type = info_type;
+      this.hasScene = hasScene;
+
+      this.history = history;
+      this.dept = dept;
+      this.mission_vision = mission_vision;
+      this.courses = courses; //
+      this.contacts = contacts;
     }
   }
 
+  class Department {
+    constructor(
+      id,
+      name,
+      access,
+      type,
+      tags,
+      description,
+      bg,
+      gallery = [],
+      info_type,
+      hasScene = false,
+
+      facilities = [],
+      courses = [],
+      contacts = {},
+    ) {
+      this.id = id;
+      this.name = name;
+      this.access = access;
+      this.type = type;
+      this.tags = tags;
+      this.description = description;
+      this.bg = bg;
+      this.gallery = gallery;
+      this.info_type = info_type;
+      this.hasScene = hasScene;
+
+      this.facilities = facilities;
+      this.courses = courses;
+      this.contacts = contacts;
+    }
+  }
+
+  class Other_Facility {
+    constructor(
+      id,
+      name,
+      access,
+      type,
+      tags,
+      description,
+      bg,
+      gallery = [],
+      info_type,
+      hasScene = false,
+
+      facilities = [],
+      contacts = {},
+    ) {
+      this.id = id;
+      this.name = name;
+      this.access = access;
+      this.type = type;
+      this.tags = tags;
+      this.description = description;
+      this.bg = bg;
+      this.gallery = gallery;
+      this.info_type = info_type;
+      this.hasScene = hasScene;
+
+      this.facilities = facilities;
+      this.contacts = contacts;
+    }
+  }
+
+  class Info {
+    constructor(
+      id,
+      name,
+      access,
+      type,
+      tags,
+      description,
+      bg,
+      gallery = [],
+      info_type,
+      hasScene = false,
+
+      contacts = {},
+    ) {
+      this.id = id;
+      this.name = name;
+      this.access = access;
+      this.type = type;
+      this.tags = tags;
+      this.description = description;
+      this.bg = bg;
+      this.gallery = gallery;
+      this.info_type = info_type;
+      this.hasScene = hasScene;
+
+      this.contacts = contacts;
+    }
+  }
+
+  class Attraction {
+    constructor(
+      id,
+      name,
+      access,
+      type,
+      tags,
+      description,
+      bg,
+      gallery = [],
+      info_type,
+      hasScene = false,
+
+      history,
+    ) {
+      this.id = id;
+      this.name = name;
+      this.access = access;
+      this.type = type;
+      this.tags = tags;
+      this.description = description;
+      this.bg = bg;
+      this.gallery = gallery;
+      this.info_type = info_type;
+      this.hasScene = hasScene;
+
+      this.history = history;
+    }
+  }
   // Icon Set
   const icons = iconSet;
 
@@ -65,21 +206,113 @@ const BuildingModal = ({
     // console.log("Generating Information");
     const info_temp = [];
     for (const info of infosDB) {
-      info_temp.push(
-        new Info(
-          info.scene,
-          info.name,
-          info.type,
-          info.tags,
-          info.desc,
-          info.image,
-          info.facilities,
-          info.courses,
-          info.gallery,
-        ),
-      );
+      const hasScene = hasSceneCheck(info.scene);
+      if (info.info_type === "department") {
+        info_temp.push(
+          new Department(
+            info.scene, // ID
+            info.name, // name
+            info.access, // access
+            info.type, // type
+            info.tags, // tags
+            info.desc, // description
+            info.image, // bg
+            info.gallery, // gallery
+            info.info_type,
+            hasScene, // If there is a scene
+
+            info.facilities, // facilities
+            info.courses, // courses
+            info.contacts, // contacts
+          ),
+        );
+      } else if (info.info_type === "college") {
+        info_temp.push(
+          new Info(
+            info.scene, // ID
+            info.name, // name
+            info.access, // access
+            info.type, // type
+            info.tags, // tags
+            info.desc, // description
+            info.image, // bg
+            info.gallery, // gallery
+            info.info_type,
+            hasScene, // If there is a scene
+
+            info.history, // history
+            info.dept, // dept
+            info.mission_vision, // mission_vision
+            info.courses, // courses
+            info.contacts, // contacts
+          ),
+        );
+      } else if (info.info_type === "other_facility") {
+        info_temp.push(
+          new Other_Facility(
+            info.scene, // ID
+            info.name, // name
+            info.access, // access
+            info.type, // type
+            info.tags, // tags
+            info.desc, // description
+            info.image, // bg
+            info.gallery, // gallery
+            info.info_type,
+            hasScene, // If there is a scene
+
+            info.facilities, // facilities
+            info.contacts, // contacts
+          ),
+        );
+      } else if (info.info_type === "attraction") {
+        info_temp.push(
+          new Attraction(
+            info.scene, // ID
+            info.name, // name
+            info.access, // access
+            info.type, // type
+            info.tags, // tags
+            info.desc, // description
+            info.image, // bg
+            info.gallery, // gallery
+            info.info_type,
+            hasScene, // If there is a scene
+
+            info.history, // history
+          ),
+        );
+      } else {
+        info_temp.push(
+          new Info(
+            info.scene, // ID
+            info.name, // name
+            info.access, // access
+            info.type, // type
+            info.tags, // tags
+            info.desc, // description
+            info.image, // bg
+            info.gallery, // gallery
+            info.info_type,
+            hasScene, // If there is a scene
+
+            info.contacts, // contacts
+          ),
+        );
+      }
     }
     return info_temp;
+  }
+
+  function hasSceneCheck(scene) {
+    let temp = false;
+    for (const info of buildingsDB) {
+      if (info.scene === scene) {
+        console.log("Scene Found");
+        temp = true;
+      }
+    }
+    return temp;
   }
 
   function setTargetInfo(scene) {
@@ -134,6 +367,8 @@ const BuildingModal = ({
 
   // Return Null if it is not visible
   if (!visible) return null;
+
+  console.log("Current Info:", current_info);
 
   return (
     <div
@@ -222,8 +457,9 @@ const BuildingModal = ({
                       </p>
                     )}
 
-                    {/* GO INSIDE BUTTON */}
-                    {loginType === "account" && (
+                    {/* EXPLORE BUTTON */}
+                    {(loginType === current_info.access ||
+                      loginType === "account") && (
                       <button
                         onClick={() => {
                           setAccess("private");
@@ -232,7 +468,7 @@ const BuildingModal = ({
                         }}
                         className="flex w-fit items-center justify-center rounded-full bg-green-600 px-4 py-1 text-xs font-bold text-white md:text-base"
                       >
-                        Go inside <RiPhoneFindLine className="h-6 w-6 pl-1" />
+                        Explore <RiPhoneFindLine className="h-6 w-6 pl-1" />
                       </button>
                     )}
                   </div>
@@ -259,7 +495,7 @@ const BuildingModal = ({
             {/* Buttons */}
             <div className="flex flex-wrap items-center justify-between border-b px-16 py-4 text-white sm:px-24">
               {/* Facilities */}
-              {current_info && current_info.type === "college_buildings" && (
+              {current_info && current_info.info_type === "department" && (
                 <div className="flex h-20 w-auto flex-col items-center justify-center">
                   <button
                     className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${activeButton === "facilities" ? "bg-green-600" : "bg-white"}`}
@@ -267,7 +503,7 @@ const BuildingModal = ({
                       setActiveButton(resetActiveButton("facilities"));
                     }}
                   >
-                    <BiBuildings
+                    <ImLab
                       className={`size-4 text-green-600 sm:size-6 ${activeButton === "facilities" ? "text-white" : "text-green-600"}`}
                     />
                   </button>
@@ -275,25 +511,101 @@ const BuildingModal = ({
                 </div>
               )}
 
-              {/* Courses */}
-              {current_info && current_info.type === "college_buildings" && (
+              {/* History */}
+              {current_info &&
+                (current_info.info_type === "college" ||
+                  current_info.info_type === "attraction") && (
+                  <div className="flex h-auto w-auto flex-col items-center justify-center">
+                    <button
+                      className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${activeButton === "history" ? "bg-green-600" : "bg-white"}`}
+                      onClick={() => {
+                        setActiveButton(resetActiveButton("history"));
+                      }}
+                    >
+                      <MdHistoryEdu
+                        className={`size-4 text-green-600 sm:size-6 ${activeButton === "history" ? "text-white" : "text-green-600"}`}
+                      />
+                    </button>
+                    <p className="pt-1 text-xs text-green-600">History</p>
+                  </div>
+                )}
+
+              {/* Departments  */}
+              {current_info && current_info.info_type === "college" && (
                 <div className="flex h-auto w-auto flex-col items-center justify-center">
                   <button
-                    className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${activeButton === "courses" ? "bg-green-600" : "bg-white"}`}
+                    className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${activeButton === "departments" ? "bg-green-600" : "bg-white"}`}
                     onClick={() => {
-                      setActiveButton(resetActiveButton("courses"));
+                      setActiveButton(resetActiveButton("departments"));
                     }}
                   >
-                    <GiBlackBook
-                      className={`size-4 text-green-600 sm:size-6 ${activeButton === "courses" ? "text-white" : "text-green-600"}`}
+                    <BiBuildings
+                      className={`size-4 text-green-600 sm:size-6 ${activeButton === "departments" ? "text-white" : "text-green-600"}`}
                     />
                   </button>
-                  <p className="pt-1 text-xs text-green-600">Courses</p>
+                  <p className="pt-1 text-xs text-green-600">Departments</p>
+                </div>
+              )}
+
+              {/* Courses DEPT & COLLEGE */}
+              {current_info &&
+                (current_info.info_type === "college" ||
+                  current_info.info_type === "department") && (
+                  <div className="flex h-auto w-auto flex-col items-center justify-center">
+                    <button
+                      className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${activeButton === "courses" ? "bg-green-600" : "bg-white"}`}
+                      onClick={() => {
+                        setActiveButton(resetActiveButton("courses"));
+                      }}
+                    >
+                      <GiBlackBook
+                        className={`size-4 text-green-600 sm:size-6 ${activeButton === "courses" ? "text-white" : "text-green-600"}`}
+                      />
+                    </button>
+                    <p className="pt-1 text-xs text-green-600">Courses</p>
+                  </div>
+                )}
+
+              {/* Mission Vision */}
+              {current_info && current_info.info_type === "college" && (
+                <div className="flex h-auto w-auto flex-col items-center justify-center">
+                  <button
+                    className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${activeButton === "mission_vision" ? "bg-green-600" : "bg-white"}`}
+                    onClick={() => {
+                      setActiveButton(resetActiveButton("mission_vision"));
+                    }}
+                  >
+                    <TbTargetArrow
+                      className={`size-4 text-green-600 sm:size-6 ${activeButton === "mission_vision" ? "text-white" : "text-green-600"}`}
+                    />
+                  </button>
+                  <p className="pt-1 text-xs text-green-600">
+                    College Mission/Vision/Goal
+                  </p>
+                </div>
+              )}
+
+              {/* COMMON BUTTONS */}
+
+              {/* Contacts */}
+              {current_info && current_info.info_type !== "attraction" && (
+                <div className="flex h-auto w-auto flex-col items-center justify-center">
+                  <button
+                    className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${shareModal ? "bg-green-600" : "bg-white"}`}
+                    onClick={() => {
+                      setActiveButton(resetActiveButton("contacts"));
+                    }}
+                  >
+                    <FaPhone
+                      className={`size-4 text-green-600 sm:size-6 ${shareModal ? "text-white" : "text-green-600"}`}
+                    />
+                  </button>
+                  <p className="pt-1 text-xs text-green-600">Contacts</p>
                 </div>
               )}
 
               {/* Share */}
-              {mode === "360" && (
+              {current_info && mode === "360" && (
                 <div className="flex h-auto w-auto flex-col items-center justify-center">
                   <button
                     className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${shareModal ? "bg-green-600" : "bg-white"}`}
@@ -310,24 +622,22 @@ const BuildingModal = ({
               )}
 
               {/* Go to Button */}
-              {current_info &&
-                (current_info.type === "college_buildings" ||
-                  current_info.type === "school_facilities") &&
-                mode === "map" && (
-                  <div className="flex h-auto w-auto flex-col items-center justify-center">
-                    <button
-                      className="flex items-center justify-center rounded-full bg-green-500 p-2"
-                      onClick={() => {
-                        setMapState(false);
-                        changeScene("bldg", current_info.id);
-                        handleCloseAndReset();
-                      }}
-                    >
-                      <MdDirections className="size-4 sm:size-6" />
-                    </button>
-                    <p className="pt-1 text-xs text-green-600">Go to</p>
-                  </div>
-                )}
+              {current_info && current_info.hasScene && mode === "map" && (
+                <div className="flex h-auto w-auto flex-col items-center justify-center">
+                  <button
+                    className="flex items-center justify-center rounded-full bg-green-500 p-2"
+                    onClick={() => {
+                      setAccess("public");
+                      setMapState(false);
+                      changeScene("bldg", current_info.id);
+                      handleCloseAndReset();
+                    }}
+                  >
+                    <MdDirections className="size-4 sm:size-6" />
+                  </button>
+                  <p className="pt-1 text-xs text-green-600">Go to</p>
+                </div>
+              )}
 
               {/* Go to Button */}
             </div>
@@ -342,6 +652,7 @@ const BuildingModal = ({
             </div>
             {/* Gallery */}
 
+            {/* CONTENT SECTION */}
             <div ref={contentRef}>
               {/* Facilities */}
               {current_info && activeButton === "facilities" && (

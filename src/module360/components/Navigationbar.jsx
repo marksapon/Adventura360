@@ -19,6 +19,8 @@ import { PiPlayCircleLight } from "react-icons/pi"; // Autoplay Button
 import { TbMaximize, TbMaximizeOff } from "react-icons/tb"; // Fullscreen On/Off
 import { IoIosHelpCircleOutline } from "react-icons/io"; // Help Button
 import { Tb360View } from "react-icons/tb"; // 360 Icon
+import { TbLink } from "react-icons/tb"; // Share Link Icon
+import { TbLinkOff } from "react-icons/tb"; // Share Link Icon OFF
 
 const Navigationbar = ({
   toggleAutoplay,
@@ -273,8 +275,12 @@ const Navigationbar = ({
               <button
                 type="button"
                 onClick={() => {
-                  setShowSharemodal(true);
-                  setMapState(false);
+                  if (access !== "private") {
+                    setShowSharemodal(true);
+                    setMapState(false);
+                  } else {
+                    alert("You are not allowed to share this view.");
+                  }
                 }}
                 className="inline-flex h-14 w-14 items-center justify-center"
                 onMouseEnter={() => handleMouseEnter("button8")}
@@ -286,9 +292,15 @@ const Navigationbar = ({
                   </div>
                 )}
                 <span className="sr-only">Share</span>
-                <FiLink
-                  className={`h-10 w-10 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Sharemodal ? "h-14 w-14 rounded-lg ring-2 ring-gray-600" : ""}`}
-                />
+                {access !== "private" ? (
+                  <TbLink
+                    className={`h-10 w-10 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Sharemodal ? "h-14 w-14 rounded-lg ring-2 ring-gray-600" : ""}`}
+                  />
+                ) : (
+                  <TbLinkOff
+                    className={`h-10 w-10 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Sharemodal ? "h-14 w-14 rounded-lg ring-2 ring-gray-600" : ""}`}
+                  />
+                )}
               </button>
             </div>
 
@@ -428,15 +440,25 @@ const Navigationbar = ({
             <button
               type="button"
               onClick={() => {
-                setShowSharemodal(true);
-                setMapState(false);
+                if (access !== "private") {
+                  setShowSharemodal(true);
+                  setMapState(false);
+                } else {
+                  alert("You are not allowed to share this link.");
+                }
               }}
               className="inline-flex h-10 w-10 items-center justify-center"
             >
               <span className="sr-only">Share</span>
-              <FiLink
-                className={`h-8 w-8 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Sharemodal ? "h-14 w-14 rounded-lg ring-2 ring-gray-600" : ""}`}
-              />
+              {access !== "private" ? (
+                <TbLink
+                  className={`h-8 w-8 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Sharemodal ? "h-14 w-14 rounded-lg ring-2 ring-gray-600" : ""}`}
+                />
+              ) : (
+                <TbLinkOff
+                  className={`h-8 w-8 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Sharemodal ? "h-14 w-14 rounded-lg ring-2 ring-gray-600" : ""}`}
+                />
+              )}
             </button>
           </div>
 
@@ -508,6 +530,7 @@ const Navigationbar = ({
           onClose={onBldgModalClose}
           loginType={loginType}
           infosDB={infosDB}
+          buildingsDB={buildingsDB}
           scene={targetScene}
           iconSet={iconSet}
           openShareModal={() => setShowSharemodal(true)}
@@ -516,7 +539,6 @@ const Navigationbar = ({
           changeScene={changeScene}
           setMapState={setMapState}
           setAccess={setAccess}
-          access={access}
         />
       )}
     </div>

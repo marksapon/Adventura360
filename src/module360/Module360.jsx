@@ -40,17 +40,16 @@ function Module360({
   infosDB,
   internalDB,
 }) {
-  console.log("InternalDB:", internalDB);
-  class Extras {
-    constructor(index, scene, image, location, desc) {
-      this.id = index;
-      this.scene = scene;
-      this.image = image;
-      this.location = location;
-      this.desc = desc;
-      this.state = false;
-    }
-  }
+  // class Extras {
+  //   constructor(index, scene, image, location, desc) {
+  //     this.id = index;
+  //     this.scene = scene;
+  //     this.image = image;
+  //     this.location = location;
+  //     this.desc = desc;
+  //     this.state = false;
+  //   }
+  // }
 
   class Internal {
     constructor(scene, location, image, coords, hotspot) {
@@ -80,6 +79,11 @@ function Module360({
           return "building";
         }
       }
+      for (const data of internalDB) {
+        if (data.hasOwnProperty(target)) {
+          return "inside";
+        }
+      }
       return null;
     }
   };
@@ -91,6 +95,9 @@ function Module360({
 
   // Building Modal State
   const [mode, setMode] = useState("360");
+
+  // Back Button State
+  const [backButton, setBackButton] = useState(false);
 
   // Minimap State
   const [mapButtonVisible, setMapButtonVisibility] = useState(true);
@@ -105,11 +112,18 @@ function Module360({
   // Autoplay State
   const [autoplay, setAutoplay] = useState(false);
 
+  // Inside State
+  const [isInside, setIsInside] = useState(false);
+  const [isOutside, setIsOutside] = useState(false);
+
   // Select Curent Scene State
   const [select_Scene, setSelect_Scene] = useState(() => getScene());
 
   // Current Internal Type Active
   const [curr_Internal, setCurr_Internal] = useState([]);
+
+  // Last Building State
+  const [insideBuilding, setInsideBuilding] = useState("");
 
   // Current Extras Popup State
   // const [curr_Extras, setCurr_Extras] = useState(generateExtras);
@@ -129,10 +143,11 @@ function Module360({
       } else if (targetType(target) === "building") {
         buildingsDB.filter((scene) => {
           if (scene.scene === target) {
+            setBackButton(true);
+            setIsOutside(true);
             setYaw(scene.hotspot[0].yaw);
             setPitch(scene.hotspot[0].pitch);
             curr_scene = scene;
-            return scene;
           }
         });
       } else {
@@ -338,18 +353,20 @@ function Module360({
   function action(type, target, index) {
     console.log("Action");
     console.log("Access Type:", access);
+
     if (type === "move") {
       console.log(">Moving to another node");
       if (access === "private") {
         console.log("Moving to Internal Node");
-        console.log("Target:", target);
-        changeScene(curr_Internal, target);
+        changeScene(curr_Internal, target); // Change Scene inside when access is private
       } else {
-        changeScene(nodesDB, target);
+        changeScene(nodesDB, target); // Default Change Scene
       }
     } else if (type === "bldg") {
-      console.log(">Moving to building");
-      changeScene(buildingsDB, target);
+      console.log(">Moving to building"); // Move to Building
+      setBackButton(true); // Set Back Button to True
+      setIsOutside(true);
+      changeScene(buildingsDB, target); // Change Scene
     } else if (type === "info") {
       console.log("Building Target: ", target);
       openModal(target, "360");
@@ -362,17 +379,10 @@ function Module360({
         console.log("Internal:", internal);
         if (internal.hasOwnProperty(target)) {
           console.log("Moving to Internal Node");
+          setInsideBuilding(target);
           restructureInternalNodes(internal[target], target);
         }
-        // setCurr_Internal(building);
-        // changeScene(building, building[0].scene);
       });
-
-      // if (internalDB.hasOwnProperty(target)) {
-      //   console.log("internalDB has target");
-      //   setCurr_Internal(internalDB[target]); // Set the current building internals
-      //   changeScene(internalDB[target], internalDB[target][0]); // Change scene to the first node in the list of nodes inside the building
-      // }
     } else {
       console.log("Undefined Type");
     }
@@ -380,25 +390,32 @@ function Module360({
 
   function restructureInternalNodes(array) {
     const temp = [];
+
     array.map((data) => {
-      array.map((data) => {
-        const temp_internal = new Internal(
-          data.scene,
-          data.location,
-          data.image,
-          select_Scene.coords,
-          data.hotspot,
-        );
-        temp.push(temp_internal);
-      });
+      const temp_internal = new Internal(
+        data.scene,
+        data.location,
+        data.image,
+        select_Scene.coords,
+        data.hotspot,
+      );
+      temp.push(temp_internal);
     });
+
+    setIsInside(true);
     setCurr_Internal(temp);
+    setBackButton(true);
     changeScene(temp, temp[0].scene);
   }
 
   // Function that changes scene based on the hotspot target
   function changeScene(type, target) {
-    // setPrevious_Scene(select_Scene);
+    console.log("Changing Scene");
+    console.log("Type:", type, "Target:", target);
+    if (access !== "private" && isOutside === false) {
+      setPrevious_Scene(select_Scene);
+    }
+    console.log("Previous Scene:", previous_Scene);
     console.log("Data Type:", type);
     console.log("Changing Scene");
     for (const data of type) {
@@ -589,6 +606,43 @@ function Module360({
           />
         </div>
         {/* Navigation bar */}
+
+        {/* Go Back Button */}
+        {backButton && (
+          <div className=" z-50 flex align-baseline">
+            <button
+              type="button"
+              onClick={() => {
+                console.log("Going Back");
+                if (isInside) {
+                  setIsInside(false);
+                  setAccess("public");
+                  changeScene(buildingsDB, insideBuilding);
+                } else {
+                  setSelect_Scene(previous_Scene);
+                  setBackButton(false);
+                }
+              }}
+              className="absolute bottom-0 left-0 flex w-full items-center justify-center gap-x-2 rounded-lg border bg-white px-5 py-2 text-sm text-gray-700 transition-colors duration-200 hover:bg-gray-100 sm:w-1/2 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:bg-gray-800"
+            >
+              <svg
+                className="h-5 w-5 rotate-180 transform"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
+                />
+              </svg>
+              <span>Go back</span>
+            </button>
+          </div>
+        )}
 
         {/* Minimap */}
         <div className="absolute left-0 top-0 p-1 text-white ">

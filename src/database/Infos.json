@@ -2,13 +2,15 @@
   {
     "scene": "dit",
     "name": "Department of Information Technology",
+    "access": "guest",
     "acronym": "DIT",
     "type": "college_buildings",
+    "info_type": "college",
     "tags": ["ceit", "school"],
     "image": "/assets/Building Module/Background/dit.webp",
     "desc": "This is the developers Department. The Department of Information Technology (DIT) is one of the departments of the College of Engineering and Information Technology (CEIT). The DIT offers a Bachelor of Science in Information Technology (BSIT) and Bachelor of Science in Computer Science program. These programs are designed to provide students with cutting edge knowledge and skills in the field of Computer Science and Information Technology. The DIT is equipped with state-of-the-art facilities and laboratories that are essential in the development of the students’ technical skills. The DIT faculty members are highly qualified and experienced in the field of Information Technology and Computer Science. The DIT is committed to provide quality education and training to its students to prepare them for a successful career in the field of Information Technology and Computer Science.",
     "facilities": [],
-    "access": "public",
+
     "courses": [
       "Bachelor of Science in Computer Science",
       "Bachelor of Science in Information Technology"
@@ -39,15 +41,21 @@
   },
   {
     "scene": "saluysoy",
-    "name": "Saluysoy",
-    "acronym": "SALUYSOY",
-    "type": "cafeteria",
-    "tags": ["leisure"],
-    "image": "dit.jpg",
-    "desc": "",
+    "name": "Office of Student Affairs and Services",
+    "acronym": "OSA",
+    "type": "school_buildings",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Background/inosas.webp",
+    "desc": "Some OSAS Description here.",
     "facilities": [],
+    "access": "public",
     "courses": [],
-    "gallery": []
+    "gallery": [
+      "/assets/Building Module/Gallery/osa/01.webp",
+      "/assets/Building Module/Gallery/osa/02.webp",
+      "/assets/Building Module/Gallery/osa/03.webp",
+      "/assets/Building Module/Gallery/osa/04.webp"
+    ]
   },
   {
     "scene": "layatdiwa",
