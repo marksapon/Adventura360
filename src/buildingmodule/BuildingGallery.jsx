@@ -35,7 +35,7 @@ const BuildingGallery = ({ imageSet }) => {
   }
 
   return (
-    <div className="relative border-b-2 pb-2 pl-4">
+    <div className="relative mb-10 border-b-2 pb-2 pl-4">
       <h1 className="p-4 pl-1 text-start text-2xl">Gallery</h1>
       <CarouselProvider
         naturalSlideWidth={50}
@@ -56,10 +56,10 @@ const BuildingGallery = ({ imageSet }) => {
         </Slider>
         <div className="pointer-events-none absolute left-0 top-0 mt-6 flex h-full w-full items-center justify-between px-1">
           <ButtonBack className="pl-2">
-            <GrNext className="pointer-events-auto size-10 rotate-180 transform items-center justify-center rounded-full bg-gray-200 p-1 pl-2" />
+            <GrNext className="pointer-events-auto size-10 rotate-180 transform items-center justify-center rounded-full bg-gray-200 p-1 pl-2 opacity-70 hover:opacity-90" />
           </ButtonBack>
           <ButtonNext className="pr-2">
-            <GrNext className="pointer-events-auto size-10 items-center justify-center rounded-full bg-gray-200 p-1 pl-2 " />
+            <GrNext className="pointer-events-auto size-10 items-center justify-center rounded-full bg-gray-200 p-1 pl-2 opacity-70 hover:opacity-90" />
           </ButtonNext>
         </div>
       </CarouselProvider>

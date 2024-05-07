@@ -248,12 +248,6 @@ const MapModule = ({
           3,
         )}, ${viewportPoint.y.toFixed(3)}`,
       );
-
-      // // Image Coordinates
-      // console.log(
-      //   "Current Location in Image Coordinates: ",
-      //   viewerInstance.viewport.viewportToImageCoordinates(viewportPoint),
-      // );
     });
 
     /* OSD Touch Controls */
@@ -299,14 +293,6 @@ const MapModule = ({
       });
     }
   }, [current_overlays, osdLoaded]);
-
-  /* Building Modal */
-
-  // // Overlays Function
-  // function openModal(scene) {
-  //   setBldgModalState(true);
-  //   setTargetScene(scene);
-  // }
 
   /* PathFinding */
 
@@ -393,8 +379,15 @@ const MapModule = ({
 
   const [pathFindingClicked, setPathFindingClicked] = useState(false); // State to track if pathfinding icon is clicked
 
+  function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent,
+    );
+  }
+
   // /* Function to scale down the given size */
-  function downScale(getContentSize, scale) {
+  function downScale(getContentSize) {
+    const scale = isMobile() ? 12 : 4;
     const size = getContentSize;
     for (const key in size) {
       if (size.hasOwnProperty(key)) {
@@ -406,7 +399,6 @@ const MapModule = ({
 
   // /* Main Pathfinding Function */
   function pathFinding(targetLocation, travelType = "both") {
-    console.log("Pathfinding");
     // console.log("Target Location: ", targetLocation.scene);
     // Points Generated in A Star Algorithm
 
@@ -557,18 +549,20 @@ const MapModule = ({
     document.body.appendChild(paperJS);
     Paper.setup(paperJS);
 
-    const viewSize = downScale(viewer.world.getItemAt(0).getContentSize(), 4);
+    const viewSize = downScale(viewer.world.getItemAt(0).getContentSize());
     Paper.view.viewSize = new Size(viewSize.x, viewSize.y);
 
     const pathData = points.map((point) => {
-      const downscalePoint = downScale(point, 4);
+      const downscalePoint = downScale(point);
       return new Point(downscalePoint.x, downscalePoint.y);
     });
+
+    const strokeWidth = isMobile() ? 10 : 30;
 
     const path = new Path({
       segments: pathData,
       strokeColor: "#22d3ee",
-      strokeWidth: 30,
+      strokeWidth: strokeWidth,
       strokeCap: "round",
     });
 

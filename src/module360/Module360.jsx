@@ -32,7 +32,36 @@ import { TbMapOff } from "react-icons/tb"; // Minimap Off Icon
 import Navigationbar from "./components/Navigationbar";
 import Minimap from "./components/Minimap";
 
-function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
+function Module360({
+  nodesDB,
+  buildingsDB,
+  extrasDB,
+  loginType,
+  infosDB,
+  internalDB,
+}) {
+  console.log("InternalDB:", internalDB);
+  class Extras {
+    constructor(index, scene, image, location, desc) {
+      this.id = index;
+      this.scene = scene;
+      this.image = image;
+      this.location = location;
+      this.desc = desc;
+      this.state = false;
+    }
+  }
+
+  class Internal {
+    constructor(scene, location, image, coords, hotspot) {
+      this.scene = scene;
+      this.location = location;
+      this.image = image;
+      this.coords = coords;
+      this.hotspot = hotspot;
+    }
+  }
+
   /* Getting URL Queries */
 
   const url = new URLSearchParams(window.location.search); // Get URL
@@ -57,6 +86,9 @@ function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
 
   /* States */
 
+  // Access State
+  const [access, setAccess] = useState("public"); // Access for Internal Nodes
+
   // Building Modal State
   const [mode, setMode] = useState("360");
 
@@ -76,29 +108,37 @@ function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
   // Select Curent Scene State
   const [select_Scene, setSelect_Scene] = useState(() => getScene());
 
+  // Current Internal Type Active
+  const [curr_Internal, setCurr_Internal] = useState([]);
+
   // Current Extras Popup State
-  const [curr_Extras, setCurr_Extras] = useState(generateExtras);
+  // const [curr_Extras, setCurr_Extras] = useState(generateExtras);
 
   // Function to get the current scene based on the URL queries
   function getScene() {
     let curr_scene;
-    // If the URL parameters are a node, set the scene to the target
-    if (targetType(target) === "node") {
-      nodesDB.filter((scene) => {
-        if (scene.scene === target) {
-          curr_scene = scene;
-          return curr_scene;
-        }
-      });
-    } else if (targetType(target) === "building") {
-      buildingsDB.filter((scene) => {
-        if (scene.scene === target) {
-          setYaw(scene.hotspot[0].yaw);
-          setPitch(scene.hotspot[0].pitch);
-          curr_scene = scene;
-          return scene;
-        }
-      });
+    if (access !== "private") {
+      // If the URL parameters are a node, set the scene to the target
+      if (targetType(target) === "node") {
+        nodesDB.filter((scene) => {
+          if (scene.scene === target) {
+            curr_scene = scene;
+            return curr_scene;
+          }
+        });
+      } else if (targetType(target) === "building") {
+        buildingsDB.filter((scene) => {
+          if (scene.scene === target) {
+            setYaw(scene.hotspot[0].yaw);
+            setPitch(scene.hotspot[0].pitch);
+            curr_scene = scene;
+            return scene;
+          }
+        });
+      } else {
+        curr_scene = nodesDB[0];
+      }
+      return curr_scene;
     } else {
       curr_scene = nodesDB[0];
     }
@@ -107,17 +147,19 @@ function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
 
   // Function to get URL parameters and set it as initial yaw and pitch
   function getParams(type) {
-    const yawValue = Number(url.get("yaw"));
-    const yaw = isNaN(yawValue) ? 0 : yawValue; // check if yaw is Undefined || null || NaN
-    const pitchValue = Number(url.get("pitch"));
-    const pitch = isNaN(pitchValue) ? 0 : pitchValue; // check if pitch is Undefined || null || NaN
-    if (targetType(target)) {
-      if (type === "yaw") {
-        return yaw;
-      } else if (type === "pitch") {
-        return pitch;
-      } else {
-        return 0;
+    if (access !== "private") {
+      const yawValue = Number(url.get("yaw"));
+      const yaw = isNaN(yawValue) ? 0 : yawValue; // check if yaw is Undefined || null || NaN
+      const pitchValue = Number(url.get("pitch"));
+      const pitch = isNaN(pitchValue) ? 0 : pitchValue; // check if pitch is Undefined || null || NaN
+      if (targetType(target)) {
+        if (type === "yaw") {
+          return yaw;
+        } else if (type === "pitch") {
+          return pitch;
+        } else {
+          return 0;
+        }
       }
     }
   }
@@ -146,9 +188,11 @@ function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
 
   // Update the URL based on the initial yaw and pitch
   useEffect(() => {
-    const newUrl = `/app/${select_Scene.scene}?yaw=${initialYaw}&pitch=${initialPitch}`;
-    navigate(newUrl);
-  }, [initialPitch, initialYaw, select_Scene, navigate]);
+    if (access !== "private") {
+      const newUrl = `/app/${select_Scene.scene}?yaw=${initialYaw}&pitch=${initialPitch}`;
+      navigate(newUrl);
+    }
+  }, [initialPitch, initialYaw, select_Scene, navigate, curr_Internal, access]);
 
   /* Zoom Settings */
 
@@ -234,7 +278,7 @@ function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
           attraction: <PiBinocularsFill className={icons_display_settings} />,
         },
         { cafeteria: <FaCoffee className={icons_display_settings} /> },
-        { batibot: <FaPeopleRoof className={icons_display_settings} /> },
+
         { farm: <LuWheat className={icons_display_settings} /> },
         { court: <TbSoccerField className={icons_display_settings} /> },
         { venue: <FaHotel className={icons_display_settings} /> },
@@ -248,6 +292,7 @@ function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
         {
           construction: <MdEngineering className={icons_display_settings} />,
         },
+        { batibot: <FaPeopleRoof className={icons_display_settings} /> },
       ],
     },
   };
@@ -283,33 +328,79 @@ function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
   useEffect(() => {
     if (viewerRef.current) {
       viewerRef.current.hotspot.refresh();
-      setCurr_Extras(generateExtras());
+      // setCurr_Extras(generateExtras());
     }
-  }, [select_Scene]);
+  }, [select_Scene, curr_Internal]);
 
   /* Hotspot Actions */
 
   // Function that performs action based on type of Hotspot
   function action(type, target, index) {
     console.log("Action");
+    console.log("Access Type:", access);
     if (type === "move") {
       console.log(">Moving to another node");
-      changeScene(nodesDB, target);
+      if (access === "private") {
+        console.log("Moving to Internal Node");
+        console.log("Target:", target);
+        changeScene(curr_Internal, target);
+      } else {
+        changeScene(nodesDB, target);
+      }
     } else if (type === "bldg") {
       console.log(">Moving to building");
       changeScene(buildingsDB, target);
     } else if (type === "info") {
       console.log("Building Target: ", target);
       openModal(target, "360");
-    } else {
+    } else if (type === "popup") {
       console.log("Display Extra's Image");
-      setExtrasState(index);
+      // setExtrasState(index);
+    } else if (type === "inside") {
+      console.log("Inside Building");
+      internalDB.map((internal) => {
+        console.log("Internal:", internal);
+        if (internal.hasOwnProperty(target)) {
+          console.log("Moving to Internal Node");
+          restructureInternalNodes(internal[target], target);
+        }
+        // setCurr_Internal(building);
+        // changeScene(building, building[0].scene);
+      });
+
+      // if (internalDB.hasOwnProperty(target)) {
+      //   console.log("internalDB has target");
+      //   setCurr_Internal(internalDB[target]); // Set the current building internals
+      //   changeScene(internalDB[target], internalDB[target][0]); // Change scene to the first node in the list of nodes inside the building
+      // }
+    } else {
+      console.log("Undefined Type");
     }
+  }
+
+  function restructureInternalNodes(array) {
+    const temp = [];
+    array.map((data) => {
+      array.map((data) => {
+        const temp_internal = new Internal(
+          data.scene,
+          data.location,
+          data.image,
+          select_Scene.coords,
+          data.hotspot,
+        );
+        temp.push(temp_internal);
+      });
+    });
+    setCurr_Internal(temp);
+    changeScene(temp, temp[0].scene);
   }
 
   // Function that changes scene based on the hotspot target
   function changeScene(type, target) {
-    setPrevious_Scene(select_Scene);
+    // setPrevious_Scene(select_Scene);
+    console.log("Data Type:", type);
+    console.log("Changing Scene");
     for (const data of type) {
       if (data.scene === target) {
         console.log("Scene Match");
@@ -320,43 +411,46 @@ function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
 
   /* Extras Hotspot */
 
-  // Function to generate Extras
-  function generateExtras() {
-    // console.log("Generating Extras");
-    const temp_extras = [];
-    select_Scene.hotspot.map((hotspot, index) => {
-      if (hotspot.type === "popup") {
-        extrasDB.map((extras) => {
-          if (extras.scene === hotspot.target) {
-            const extrasFormat = {};
-            extrasFormat["id"] = index;
-            extrasFormat["scene"] = extras.scene;
-            extrasFormat["image"] = extras.image;
-            extrasFormat["text"] = extras.location;
-            extrasFormat["state"] = false;
-            temp_extras.push(extrasFormat);
-          }
-        });
-      }
-    });
+  // // Function to generate Extras
+  // function generateExtras() {
+  //   console.log("Generating Extras");
 
-    return temp_extras;
-  }
+  //   const temp_extras = [];
 
-  function setExtrasState(index) {
-    // console.log("Setting Extras State");
-    const newExtras = curr_Extras.map((extras) => {
-      if (extras.id === index) {
-        return {
-          ...extras,
-          state: !extras.state,
-        };
-      }
-      return extras;
-    });
+  //   select_Scene.hotspot.map((hotspot, index) => {
+  //     if (hotspot.type === "popup") {
+  //       extrasDB.map((extras) => {
+  //         if (extras.scene === hotspot.target) {
+  //           const extrasFormat = new Extras(
+  //             index,
+  //             extras.scene,
+  //             extras.image,
+  //             extras.location,
+  //             extras.desc,
+  //           );
+  //           temp_extras.push(extrasFormat);
+  //         }
+  //       });
+  //     }
+  //   });
 
-    setCurr_Extras(newExtras);
-  }
+  //   return temp_extras;
+  // }
+
+  // function setExtrasState(index) {
+  //   console.log("Setting Extras State");
+  //   const newExtras = curr_Extras.map((extras) => {
+  //     if (extras.id === index) {
+  //       return {
+  //         ...extras,
+  //         state: !extras.state,
+  //       };
+  //     }
+  //     return extras;
+  //   });
+
+  //   setCurr_Extras(newExtras);
+  // }
 
   /* Building Modal State */
   const [bldgModalState, setBldgModalState] = useState(false); // Building Modal State
@@ -431,31 +525,26 @@ function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
                   {/* Hotspot Icon */}
                   {getIcon(hotspot.type, hotspot.class)}
 
-                  {hotspot.type === "popup" &&
+                  {/*hotspot.type === "popup" &&
                     curr_Extras.map((extras, index2) => {
                       if (extras.state === true && extras.id === index) {
                         return (
-                          /* Pop Up info container */
                           <div
                             style={{ fontSize: "12px" }}
                             className="absolute -bottom-11 flex h-28 w-28 flex-col items-center gap-3 rounded-md bg-white p-1 shadow-2xl md:-bottom-11 md:h-48 md:w-60 md:gap-7"
-                            key={index}
+                            key={index2}
                           >
                             <img
                               src={extras.image}
                               className="h-9/16 w-16/9 flex items-center justify-center rounded-sm bg-cover bg-center bg-no-repeat"
                             />
 
-                            {/* Hotspot Icon: Keep bottom value the opposite of the container 
-                            IE: bottom-11 in Icon -bottom-11 for container */}
                             <div
                               className={` absolute bottom-11 h-7 w-7 rounded-full md:h-14 md:w-14 ${colorMap[hotspot.type].color} pointer-events-auto flex cursor-pointer items-center justify-center`}
                             >
                               {getIcon(hotspot.type, hotspot.class)}
                             </div>
-                            {/* Hotspot Icon */}
 
-                            {/* Text */}
                             <div
                               className="flex h-full w-full items-center justify-center text-center"
                               // DI MALIITAN FUKKKKKKKKKKKKKKKKKKKKKK
@@ -467,11 +556,10 @@ function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
                               {extras.text}
                             </div>
                           </div>
-                          /* Pop Up info */
                         );
                       }
                       return null; // return null when extras.state is not true
-                    })}
+                    }) */}
                 </div>
               );
             }
@@ -496,6 +584,8 @@ function Module360({ nodesDB, buildingsDB, extrasDB, loginType, infosDB }) {
             iconSet={icons}
             mode={mode}
             changeScene={action}
+            access={access}
+            setAccess={setAccess}
           />
         </div>
         {/* Navigation bar */}

@@ -2,7 +2,8 @@
   {
     "scene": "bd",
     "back": ["node10", "node16", "node17", "node18"],
-    "location": "This the blue dorm under construction",
+    "location": "Blue Dorm",
+    "desc": "The Blue Dorm under construction",
     "coords": {
       "x": 0.581,
       "y": 1.263,
@@ -14,7 +15,8 @@
   {
     "scene": "pd",
     "back": ["node19"],
-    "location": "This the Pink dorm under construction",
+    "location": "Pink Dorm",
+    "desc": "This the Pink dorm under construction",
     "coords": {
       "x": 0.623,
       "y": 1.25,
@@ -121,7 +123,7 @@
     "image": "/assets/extras/batibotDit.webp"
   },
   {
-    "scene": "courtsnearoval",
+    "scene": "courtsnearOval",
     "back": ["node104"],
     "location": "Court near Oval",
     "coords": {
@@ -132,7 +134,7 @@
     "image": "/assets/extras/batibotDit.webp"
   },
   {
-    "scene": "washareaoval",
+    "scene": "washareaOval",
     "back": ["node15"],
     "location": "washarea near Oval",
     "coords": {
@@ -143,7 +145,7 @@
     "image": "/assets/extras/batibotDit.webp"
   },
   {
-    "scene": "restroomoval",
+    "scene": "restroomOval",
     "back": ["node15"],
     "location": "restroom near Oval",
     "coords": {

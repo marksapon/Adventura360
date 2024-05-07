@@ -45,12 +45,6 @@
       },
       {
         "type": "info",
-        "class": "batibot",
-        "yaw": 331.58,
-        "pitch": 2.78
-      },
-      {
-        "type": "info",
         "class": "farm",
         "yaw": 347.23,
         "pitch": 2.78
@@ -80,6 +74,12 @@
         "target": "washareaOval",
         "yaw": 142.08,
         "pitch": 3.14
+      },
+      {
+        "type": "popup",
+        "class": "batibot",
+        "yaw": 331.58,
+        "pitch": 2.78
       },
       {
         "type": "popup",
@@ -1975,7 +1975,7 @@
         "pitch": 20.42
       },
       {
-        "type": "info",
+        "type": "popup",
         "class": "batibot",
         "target": "kiokdit",
         "yaw": 325.71,
@@ -2771,7 +2771,7 @@
         "pitch": -20
       },
       {
-        "type": "info",
+        "type": "popup",
         "class": "batibot",
         "target": "kioskcas",
         "yaw": 172.95,
@@ -2823,7 +2823,7 @@
         "pitch": -20
       },
       {
-        "type": "info",
+        "type": "popup",
         "class": "batibot",
         "target": "batibotcas",
         "yaw": 242.79,
@@ -3116,7 +3116,7 @@
         "pitch": 8.17
       },
       {
-        "type": "info",
+        "type": "popup",
         "class": "batibot",
         "target": "kioskphysci",
         "yaw": 243.99,

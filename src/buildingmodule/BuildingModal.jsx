@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import BuildingGallery from "./BuildingGallery";
 
 import { IoIosClose } from "react-icons/io"; // Close
@@ -23,9 +23,9 @@ const BuildingModal = ({
   mode,
   changeScene,
   setMapState,
+  setAccess,
+  access,
 }) => {
-  console.log("Mode:", mode);
-
   class Info {
     constructor(
       id,
@@ -53,6 +53,8 @@ const BuildingModal = ({
   // Icon Set
   const icons = iconSet;
 
+  const contentRef = useRef(null);
+
   /* States */
   const infos = generateInfo(); // Generate Infomation List
   const current_info = setTargetInfo(scene); // Current Information
@@ -60,7 +62,7 @@ const BuildingModal = ({
 
   // Generate Information
   function generateInfo() {
-    console.log("Generating Information");
+    // console.log("Generating Information");
     const info_temp = [];
     for (const info of infosDB) {
       info_temp.push(
@@ -81,7 +83,7 @@ const BuildingModal = ({
   }
 
   function setTargetInfo(scene) {
-    console.log("Setting Current Information");
+    // console.log("Setting Current Information");
     let temp_info;
     for (const info of infos) {
       if (info.id === scene) {
@@ -101,9 +103,19 @@ const BuildingModal = ({
   }
 
   // Close Function
-  const handleCloseAndReset = () => {
+  function handleCloseAndReset() {
     onClose();
+  }
+
+  const scrollToContent = () => {
+    if (contentRef.current) {
+      contentRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
+
+  useEffect(() => {
+    scrollToContent();
+  }, [activeButton]);
 
   // Sample Data
   const facilities = [
@@ -160,7 +172,10 @@ const BuildingModal = ({
                     Object.keys(icons).map((icon, index) => {
                       if (icon === current_info.type) {
                         const Icon = icons[icon].icon;
-                        const color = `bg-[${icons[icon].color}]`;
+                        const color =
+                          icons[icon] && icons[icon].color
+                            ? `bg-[${icons[icon].color}]`
+                            : "bg-default";
                         return (
                           <div
                             key={index}
@@ -207,8 +222,16 @@ const BuildingModal = ({
                       </p>
                     )}
 
+                    {/* GO INSIDE BUTTON */}
                     {loginType === "account" && (
-                      <button className="flex w-fit items-center justify-center rounded-full bg-green-600 px-4 py-1 text-xs font-bold text-white md:text-base">
+                      <button
+                        onClick={() => {
+                          setAccess("private");
+                          changeScene("inside", current_info.id);
+                          handleCloseAndReset();
+                        }}
+                        className="flex w-fit items-center justify-center rounded-full bg-green-600 px-4 py-1 text-xs font-bold text-white md:text-base"
+                      >
                         Go inside <RiPhoneFindLine className="h-6 w-6 pl-1" />
                       </button>
                     )}
@@ -319,41 +342,43 @@ const BuildingModal = ({
             </div>
             {/* Gallery */}
 
-            {/* Facilities */}
-            {current_info && activeButton === "facilities" && (
-              <div className="w-full rounded-b-xl border-b-2 px-6 py-2">
-                <ul className="justify-start text-balance">
-                  <h1 className="pb-5 text-2xl">Facilities</h1>
-                  {facilities.map((facilities) => (
-                    <li className="flex items-center" key={facilities.id}>
-                      <h2 className="text-base font-semibold md:text-xl">
-                        •&nbsp;{facilities.name}&nbsp;
-                      </h2>
-                      <span className="text-base">
-                        -&nbsp;{facilities.description}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
+            <div ref={contentRef}>
+              {/* Facilities */}
+              {current_info && activeButton === "facilities" && (
+                <div className="w-full rounded-b-xl border-b-2 px-6 py-2">
+                  <ul className="justify-start text-balance">
+                    <h1 className="pb-5 text-2xl">Facilities</h1>
+                    {facilities.map((facilities) => (
+                      <li className="flex items-center" key={facilities.id}>
+                        <h2 className="text-base font-semibold md:text-xl">
+                          •&nbsp;{facilities.name}&nbsp;
+                        </h2>
+                        <span className="text-base">
+                          -&nbsp;{facilities.description}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
-            {/* Courses */}
-            {current_info && activeButton === "courses" && (
-              <div className="w-full rounded-b-xl border-b-2 px-6 py-2">
-                <ul className="justify-start text-balance">
-                  <h1 className="pb-5 text-2xl">Courses</h1>
-                  {courses.map((Courses) => (
-                    <li className="flex items-center" key={Courses.id}>
-                      <h2 className="text-base font-semibold md:text-lg">
-                        •&nbsp;{Courses.name} -&nbsp;
-                      </h2>
-                      <span className="text-base">{Courses.description}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
+              {/* Courses */}
+              {current_info && activeButton === "courses" && (
+                <div className="w-full rounded-b-xl border-b-2 px-6 py-2">
+                  <ul className="justify-start text-balance">
+                    <h1 className="pb-5 text-2xl">Courses</h1>
+                    {courses.map((Courses) => (
+                      <li className="flex items-center" key={Courses.id}>
+                        <h2 className="text-base font-semibold md:text-lg">
+                          •&nbsp;{Courses.name} -&nbsp;
+                        </h2>
+                        <span className="text-base">{Courses.description}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
           </div>
         </div>
         {/* Main Container */}

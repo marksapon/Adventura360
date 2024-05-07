@@ -7,6 +7,7 @@ import nodesLDB from "../database/Nodes.json";
 import buildingsLDB from "../database/Buildings.json";
 import extrasLDB from "../database/Extras.json";
 import infosLDB from "../database/Infos.json";
+import internalLDB from "../database/Internal_nodes.json";
 
 function Adventura360({ BACKEND_URL, loginType }) {
   /* Fetch DB */
@@ -16,6 +17,7 @@ function Adventura360({ BACKEND_URL, loginType }) {
   const [extrasDB, setExtrasDB] = useState([]); // Extras Database
   const [infosDB, setInfosDB] = useState([]); // Infos Database
   const [isLoaded, setIsLoaded] = useState(false); // Data Loaded
+  const [internalDB, setInternalDB] = useState([]); // Internal DB
 
   useEffect(() => {
     Promise.all([
@@ -40,6 +42,7 @@ function Adventura360({ BACKEND_URL, loginType }) {
         setBuildingsDB(buildingsLDB);
         setExtrasDB(extrasLDB);
         setInfosDB(infosLDB);
+        setInternalDB(internalLDB);
         setTimeout(() => {
           setIsLoaded(true);
         }, 3000);
@@ -55,6 +58,7 @@ function Adventura360({ BACKEND_URL, loginType }) {
           extrasDB={extrasDB}
           loginType={loginType}
           infosDB={infosDB}
+          internalDB={internalDB}
         />
       )}
       {!isLoaded && (

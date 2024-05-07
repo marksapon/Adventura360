@@ -35,6 +35,8 @@ const Navigationbar = ({
   onBldgModalClose,
   mode,
   changeScene,
+  access,
+  setAccess,
 }) => {
   /* States */
   const [mapState, setMapState] = useState(false); // Map State
@@ -177,13 +179,11 @@ const Navigationbar = ({
             </div>
           </div>
 
-          {/* LOCATION */}
           <div className="md:text-1xl flex h-full w-full items-center justify-center border-l-2 border-r-2 px-1 text-center font-roboto text-sm">
             {location.location !== undefined
               ? location.location
               : "Cavite State University Main Campus"}
           </div>
-          {/* LOCATION */}
 
           <div className="flex h-full w-auto items-center justify-between px-1 md:w-full lg:px-4">
             <div className="hidden md:flex">
@@ -439,6 +439,8 @@ const Navigationbar = ({
           mode={mode}
           changeScene={changeScene}
           setMapState={setMapState}
+          setAccess={setAccess}
+          access={access}
         />
       )}
     </div>
