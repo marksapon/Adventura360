@@ -43,7 +43,7 @@
     "scene": "saluysoy",
     "name": "Office of Student Affairs and Services",
     "acronym": "OSA",
-    "type": "school_buildings",
+    "type": "cafeteria",
     "tags": ["school"],
     "image": "/assets/Building Module/Background/inosas.webp",
     "desc": "Some OSAS Description here.",

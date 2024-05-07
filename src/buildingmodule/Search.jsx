@@ -9,8 +9,6 @@ import { TbSchool } from "react-icons/tb";
 import { TbSoccerField } from "react-icons/tb"; // Court Icon
 import { FaHome, FaHotel } from "react-icons/fa";
 
-import BuildingModal from "./BuildingModal";
-
 const Search = ({ visible, onClose, infosDB }) => {
   /* Existing Buildings Item */
   class Item {
@@ -32,16 +30,14 @@ const Search = ({ visible, onClose, infosDB }) => {
 
   const [selectedTag, setSelectedTag] = useState([]); // State for what tag is selected
 
-  const [suggestions, setSuggestions] = useState(() => generateItinerary()); // DB of filtered suggestions
-
   // Function to generate items and push it to category list
   function generateItinerary() {
     // console.log("Generating Itinerary");
 
     const temp_categories = {
       all: [],
-      school_building: [],
-      college_building: [],
+      school_buildings: [],
+      college_buildings: [],
       cafeteria: [],
       attraction: [],
       court: [],
@@ -68,15 +64,6 @@ const Search = ({ visible, onClose, infosDB }) => {
     }
     return temp_categories;
   }
-
-  const categoriesDisplay = {
-    school_building: "School Building",
-    college_building: "College Building",
-    cafeteria: "Cafeteria",
-    attraction: "Attraction",
-    court: "Court",
-    venue: "Venue",
-  };
 
   const [isOpen, setIsOpen] = useState(false); // Dropdown State: True = CLose / False = Open
 
@@ -111,34 +98,39 @@ const Search = ({ visible, onClose, infosDB }) => {
 
   // Function to change Category Value and Change Dropdown State
   const handleSortChange = (key) => {
+    console.log("Sort: ", key);
     setSort(key); // Set Sort State
     setIsOpen(true); // Set Dropdown State
   };
 
   // category icons and colors
   const keyIcons = {
-    school_building: {
+    school_buildings: {
       icon: <LuSchool />,
       color: "bg-lime-600",
-      display: "School Building",
+      display: "School Buildings",
     },
-    college_building: {
+    college_buildings: {
       icon: <TbSchool />,
       color: "bg-orange-500",
-      display: "College Building",
+      display: "College Buildings",
     },
     cafeteria: {
       icon: <GrCafeteria />,
       color: "bg-amber-400",
-      display: "Cafeteria",
+      display: "Cafeterias",
     },
     attraction: {
       icon: <PiBinocularsDuotone />,
       color: "bg-fuchsia-500",
-      display: "Attraction",
+      display: "Attractions",
     },
-    court: { icon: <TbSoccerField />, color: "bg-cyan-700", display: "Court" },
-    venue: { icon: <FaHotel />, color: "bg-rose-400", display: "Venue" },
+    court: {
+      icon: <TbSoccerField />,
+      color: "bg-cyan-700",
+      display: "Courts",
+    },
+    venue: { icon: <FaHotel />, color: "bg-rose-400", display: "Venues" },
     // add more keys as needed
   };
 
@@ -159,60 +151,61 @@ const Search = ({ visible, onClose, infosDB }) => {
     setSelectedTag([]); // Resets the selected tags array
   };
 
-  // Effect to filter suggestions based on search term, sort, and selected tag
-  useEffect(() => {
-    // Get all keys from the suggestions object
-    let keys = Object.keys(suggestions);
+  // State for original suggestions
+  const [originalSuggestions, setOriginalSuggestions] = useState(() =>
+    generateItinerary(),
+  );
 
-    // If a sort option other than "All" is selected, filter the keys to only include the ones that match the sort option
+  // State for filteredSuggestions
+  const [filteredSuggestions, setFilteredSuggestions] = useState({});
+
+  useEffect(() => {
+    // Put your filtering code inside this useEffect hook
+    let keys = Object.keys(originalSuggestions);
+
     if (sort !== "All") {
       keys = keys.filter((key) => key.toLowerCase() === sort.toLowerCase());
     }
 
-    // Reduce the keys to a new object where each key's value is an array of content that matches the search term or selected tag
-    const filteredSuggestions = keys.reduce((obj, key) => {
-      // Filter the content of each key to only include the ones that match the search term or selected tag
-      const filteredContents = suggestions[key].filter(
-        (content) => {
-          // Check if the content's name or acronym matches the search term
-          const matchesSearchTerm =
-            content.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            (content.acronym &&
-              content.acronym.toLowerCase().includes(searchTerm.toLowerCase()));
+    let newFilteredSuggestions = {};
 
-          // Check if the content's tags include the selected tag
-          const matchesTag =
-            selectedTag.length > 0 &&
-            content.tags &&
-            selectedTag.every((tag) => content.tags.includes(tag));
+    for (let i = 0; i < keys.length; i++) {
+      const currentKey = keys[i];
+      const contents = originalSuggestions[currentKey];
 
-          // If a search term is entered, return true if the content matches the search term or selected tag
-          // If no search term is entered but a tag is selected, return true if the content matches the selected tag
-          // If no search term or tag is selected, return true for all content
-          return searchTerm
-            ? matchesSearchTerm || matchesTag
-            : selectedTag.length > 0
-              ? matchesTag
-              : true;
-        },
-        [searchTerm, sort, selectedTag],
-      );
+      const newFilteredContents = contents.filter((content) => {
+        const matchesSearchTerm =
+          content.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          (content.acronym &&
+            content.acronym.toLowerCase().includes(searchTerm.toLowerCase()));
 
-      // If the filtered content array is not empty, add it to the new object
-      if (filteredContents.length > 0) {
-        obj[key] = filteredContents;
+        const matchesTag =
+          selectedTag.length > 0 &&
+          content.tags &&
+          selectedTag.every((tag) => content.tags.includes(tag));
+
+        const shouldIncludeContent = searchTerm
+          ? matchesSearchTerm || matchesTag
+          : selectedTag.length > 0
+            ? matchesTag
+            : true;
+
+        return shouldIncludeContent;
+      });
+
+      if (newFilteredContents.length > 0) {
+        newFilteredSuggestions[currentKey] = newFilteredContents;
       }
+    }
 
-      // Return the new object to be used as the accumulator in the next iteration
-      return obj;
-    }, {});
-
-    // Set the state of suggestions to the new object
-    setSuggestions(filteredSuggestions);
-  }, [searchTerm, sort, selectedTag]); // Run this effect whenever searchTerm, sort, or selectedTag changes
+    // Update filteredSuggestions instead of suggestions
+    setFilteredSuggestions(newFilteredSuggestions);
+  }, [searchTerm, sort, selectedTag, originalSuggestions]); // Add searchTerm, sort, selectedTag, and originalSuggestions as dependencies
 
   // Render the search component
   if (!visible) return null;
+
+  console.log("Filtered Suggestions: ", filteredSuggestions);
 
   return (
     <div
@@ -383,65 +376,75 @@ const Search = ({ visible, onClose, infosDB }) => {
 
                   {/* Display Items Section */}
                   {listDisplay &&
-                    (sort === "All"
-                      ? Object.keys(suggestions).filter(
-                          (key) => suggestions[key].length > 0,
-                        )
-                      : [sort.toLowerCase()]
-                    ).map((key, keyIndex) => (
-                      <div key={keyIndex}>
-                        {/* Check if the suggestions for the key exist */}
-                        {suggestions[key] &&
-                          suggestions[key].map((content, contentIndex) => (
-                            <div
-                              key={`${key}-${contentIndex}`}
-                              className={`flex flex-col overflow-hidden rounded-lg border-2 px-1 py-1 shadow-lg ${view === "list" ? "h-fit" : "h-auto"} relative border ${clicked ? "bg-slate-100" : "hover:bg-slate-50"}`}
-                              onClick={() => {
-                                // Log the content when clicked
-                                console.log(content);
-                              }}
-                            >
-                              {/* Conditionally render an img element if view is not "list" */}
-                              {view !== "list" && (
-                                <div className="h-1/2">
-                                  <img
-                                    src={
-                                      content.image ||
-                                      "https://via.placeholder.com/150"
-                                    }
-                                    alt={content.text}
-                                    className={
-                                      view === "cards"
-                                        ? "h-max w-full object-cover"
-                                        : "h-full w-full object-cover"
-                                    }
-                                  />
-                                </div>
-                              )}
-                              <div
-                                className={`${view === "list" ? "flex w-auto items-center px-4" : "flex h-1/2 flex-col items-center justify-center font-semibold"} gap-2 ${view === "cards" ? "absolute bottom-0 left-0 right-0" : ""}`}
-                              >
-                                <div
-                                  className={
-                                    view === "list"
-                                      ? "flex h-auto items-center justify-center gap-2 text-center text-base"
-                                      : "flex w-auto flex-col items-center justify-center gap-2 text-center text-sm"
+                    (() => {
+                      // Flatten the array of arrays into a single array
+                      let allItems = [].concat(
+                        ...Object.values(filteredSuggestions),
+                      );
+
+                      // Convert the array into a Set to remove duplicates
+                      let uniqueItems = Array.from(
+                        new Set(allItems.map((item) => item.name)),
+                      );
+
+                      // Map over the unique items to display them
+                      return uniqueItems.map((itemName, index) => {
+                        // Find the original item object
+                        let item = allItems.find(
+                          (item) => item.name === itemName,
+                        );
+
+                        // Display the item
+                        return (
+                          <div
+                            key={index}
+                            className={`flex flex-col overflow-hidden rounded-lg border-2 px-1 py-1 shadow-lg ${view === "list" ? "h-fit" : "h-auto"} relative border ${clicked ? "bg-slate-100" : "hover:bg-slate-50"}`}
+                            onClick={() => {
+                              // Log the item when clicked
+                              console.log(item);
+                            }}
+                          >
+                            {/* Conditionally render an img element if view is not "list" */}
+                            {view !== "list" && (
+                              <div className="h-1/2">
+                                <img
+                                  src={
+                                    item.image ||
+                                    "https://via.placeholder.com/150"
                                   }
-                                >
-                                  <div className="rounded-full border-2 border-white bg-green-600 p-2 text-xl text-white">
-                                    {/* Display the icon associated with the key */}
-                                    {keyIcons[key]}
-                                  </div>
-                                  <div className="w-full overflow-auto rounded-full border-2 border-green-600 bg-white px-2 text-sm">
-                                    {/* Display the text of the content */}
-                                    {content.text}
-                                  </div>
+                                  alt={item.text}
+                                  className={
+                                    view === "cards"
+                                      ? "h-max w-full object-cover"
+                                      : "h-full w-full object-cover"
+                                  }
+                                />
+                              </div>
+                            )}
+                            <div
+                              className={`${view === "list" ? "flex w-auto items-center px-4" : "flex h-1/2 flex-col items-center justify-center font-semibold"} gap-2 ${view === "cards" ? "absolute bottom-0 left-0 right-0" : ""}`}
+                            >
+                              <div
+                                className={
+                                  view === "list"
+                                    ? "flex h-auto items-center justify-center gap-2 text-center text-base"
+                                    : "flex w-auto flex-col items-center justify-center gap-2 text-center text-sm"
+                                }
+                              >
+                                <div className="rounded-full border-2 border-white bg-green-600 p-2 text-xl text-white">
+                                  {/* Display the icon associated with the key */}
+                                  {keyIcons[item.type].icon}
+                                </div>
+                                <div className="w-full overflow-auto rounded-full border-2 border-green-600 bg-white px-2 text-sm">
+                                  {/* Display the text of the item */}
+                                  {item.name}
                                 </div>
                               </div>
                             </div>
-                          ))}
-                      </div>
-                    ))}
+                          </div>
+                        );
+                      });
+                    })()}
                 </div>
               </div>
 
