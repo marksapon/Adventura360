@@ -611,7 +611,7 @@ function Module360({
 
         {/* Go Back Button */}
         {backButton && (
-          <div className=" z-50 flex align-baseline">
+          <div className=" relative z-50 flex items-center justify-center">
             <button
               type="button"
               onClick={() => {
@@ -627,7 +627,7 @@ function Module360({
                   setBackButton(false);
                 }
               }}
-              className="absolute bottom-0 left-0 flex w-full items-center justify-center gap-x-2 rounded-lg border bg-white px-5 py-2 text-sm text-gray-700 transition-colors duration-200 hover:bg-gray-100 sm:w-1/2 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:bg-gray-800"
+              className="absolute mb-48 flex w-auto items-center justify-center gap-x-2 rounded-lg border bg-white px-5 py-2 text-sm text-gray-700 transition-colors duration-200 hover:bg-gray-100 sm:mb-48 md:mb-20 lg:mb-16  dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:bg-gray-800 "
             >
               <svg
                 className="h-5 w-5 rotate-180 transform"
@@ -643,7 +643,7 @@ function Module360({
                   d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
                 />
               </svg>
-              <span>Go back</span>
+              <span>Back</span>
             </button>
           </div>
         )}
@@ -651,7 +651,7 @@ function Module360({
         {/* Minimap */}
         <div className="absolute left-0 top-0 p-1 text-white ">
           <div className="relative flex flex-row justify-between">
-            <div className="pb-2 pl-2 pt-16 md:pt-20">
+            <div className="mt-20 pb-2 pl-2">
               {mapButtonVisible && (
                 <Minimap
                   x={select_Scene.coords.x}
