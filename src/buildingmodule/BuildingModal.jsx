@@ -367,7 +367,7 @@ const BuildingModal = ({
       {/* Screen Container */}
       <div className="z-50 flex h-full w-full items-start pr-2">
         {/* Main Container */}
-        <div className="flex h-screen max-w-[350px] flex-col rounded-br-2xl rounded-tr-2xl bg-white transition-all duration-200 ease-in-out sm:max-w-[500px]">
+        <div className="flex h-screen w-[500px] flex-col rounded-br-2xl rounded-tr-2xl bg-white transition-all duration-200 ease-in-out">
           {/* Header Section */}
           <div className="w-full">
             {/* BG Image */}
@@ -674,17 +674,19 @@ const BuildingModal = ({
             <div ref={contentRef}>
               {/* History */}
               {current_info && activeButton === "history" && (
-                <div className="w-full rounded-b-xl border-b-2 px-6 py-2">
+                <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">
                   <ul className="justify-start text-balance">
                     <h1 className="pb-5 text-2xl">History</h1>
-                    <p className="text-justify">{current_info.history}</p>
+                    <p className="text-justify text-xs sm:text-base">
+                      {current_info.history}
+                    </p>
                   </ul>
                 </div>
               )}
 
               {/* Facilities */}
               {current_info && activeButton === "facilities" && (
-                <div className="w-full rounded-b-xl border-b-2 px-6 py-2">
+                <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">
                   <ul className="justify-start text-balance">
                     <h1 className="pb-5 text-2xl">Facilities</h1>
                     {current_info.facilities.map((facilities) => (
@@ -700,13 +702,15 @@ const BuildingModal = ({
 
               {/* Departments */}
               {current_info && activeButton === "departments" && (
-                <div className="w-full rounded-b-xl border-b-2 px-6 py-2">
+                <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">
                   <ul className="justify-start text-balance">
                     <h1 className="pb-5 text-2xl">Departments</h1>
                     {current_info.dept.map((dept, index) => (
                       <li key={index} className="flex flex-col gap-2">
                         <h2 className="text-base">•&nbsp;{dept}</h2>
-                        <span className="text-base">{dept.description}</span>
+                        <span className="text-xs sm:text-base">
+                          {dept.description}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -715,12 +719,12 @@ const BuildingModal = ({
 
               {/* Courses */}
               {current_info && activeButton === "courses" && (
-                <div className="w-full rounded-b-xl border-b-2 px-6 py-2">
+                <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">
                   <ul className="justify-start text-balance">
                     <h1 className="pb-3 text-2xl">Courses</h1>
                     {current_info.courses.map((Courses) => (
                       <li className="flex items-center" key={Courses.id}>
-                        <h2 className="py-2 text-base">
+                        <h2 className="py-2 text-xs sm:text-base">
                           •&nbsp;{Courses.name}
                         </h2>
                       </li>
@@ -731,8 +735,8 @@ const BuildingModal = ({
 
               {/* Mission Vision */}
               {current_info && activeButton === "mission_vision" && (
-                <div className="w-full rounded-b-xl border-b-2 px-6 py-2">
-                  <ul className="flex flex-col justify-start gap-4 text-balance">
+                <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">
+                  <ul className="flex flex-col justify-start gap-4 text-xs sm:text-base">
                     <h1 className="text-2xl">Mission, Vision, and Goal</h1>
                     {current_info.mission_vision.mission && (
                       <p className="text-base">
@@ -758,15 +762,15 @@ const BuildingModal = ({
 
               {/* Contacts */}
               {current_info && activeButton === "contacts" && (
-                <div className="w-full rounded-b-xl border-b-2 px-6 py-2">
+                <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">
                   <ul className="justify-start text-balance">
                     <h1 className="pb-5 text-2xl">Contacts</h1>
                     {Object.keys(current_info.contacts).map((key, index) => (
                       <li className="flex items-center" key={index}>
-                        <h2 className="text-base font-semibold md:text-lg">
+                        <h2 className="text-xs font-semibold sm:text-base">
                           {key} -&nbsp;
                         </h2>
-                        <span className="text-base">
+                        <span className="text-xs sm:text-base">
                           {current_info.contacts[key]}
                         </span>
                       </li>
