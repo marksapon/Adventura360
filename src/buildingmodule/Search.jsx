@@ -224,6 +224,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
         {/* container for the search box. */}
         <div className="md:w- flex h-screen w-[500px] flex-col rounded-br-2xl rounded-tr-2xl bg-white transition-all duration-200 ease-in-out">
           {/* container for the search box content. */}
+
           <div className="h-full w-auto">
             {/* container for the search box header. */}
 

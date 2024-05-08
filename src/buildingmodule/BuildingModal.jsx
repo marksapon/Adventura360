@@ -12,6 +12,7 @@ import { MdHistoryEdu } from "react-icons/md"; // History
 import { FaPhone } from "react-icons/fa"; // Contact
 import { ImLab } from "react-icons/im"; // Facilities
 import { TbTargetArrow } from "react-icons/tb"; // Mission Vision
+import { IoMdArrowRoundBack } from "react-icons/io";
 
 const BuildingModal = ({
   visible,
@@ -228,7 +229,7 @@ const BuildingModal = ({
         );
       } else if (info.info_type === "college") {
         info_temp.push(
-          new Info(
+          new College(
             info.scene, // ID
             info.name, // name
             info.access, // access
@@ -350,18 +351,6 @@ const BuildingModal = ({
     scrollToContent();
   }, [activeButton]);
 
-  // Sample Data
-  const facilities = [
-    { id: 1, name: "facilities 1", description: "This is facilities 1" },
-    { id: 2, name: "facilities 2", description: "This is facilities 2" },
-    { id: 3, name: "facilities 3", description: "This is facilities 3" },
-  ];
-  const courses = [
-    { id: 1, name: "courses 1", description: "This is courses 1" },
-    { id: 2, name: "courses 2", description: "This is courses 2" },
-    { id: 3, name: "courses 3", description: "This is courses 3" },
-  ];
-
   // Component Did Mount
   // useEffect(() => {}, [current_info, scene]);
 
@@ -400,6 +389,13 @@ const BuildingModal = ({
                   </button>
                 </div>
               )}
+
+              {/* Back Button */}
+              <div className="relative z-50 flex w-full text-white">
+                <button className="absolute left-0 items-center justify-center">
+                  <IoMdArrowRoundBack className="h-12 w-12 p-2" />
+                </button>
+              </div>
 
               {/* Building Info */}
               <div className="flex h-full w-full flex-row items-end shadow-md shadow-gray-500">
@@ -442,22 +438,24 @@ const BuildingModal = ({
 
                   {/* Building Tags */}
                   <div className="flex w-full flex-row justify-between pr-4">
-                    {current_info ? (
-                      current_info.tags.map((tag, index) => {
-                        return (
-                          <p
-                            key={index}
-                            className="flex w-fit items-center justify-center rounded-full bg-orange-500 px-2 text-xs font-bold md:text-sm"
-                          >
-                            {tag.toUpperCase()}
-                          </p>
-                        );
-                      })
-                    ) : (
-                      <p className="flex w-fit items-center justify-center rounded-full bg-orange-500 px-2 text-xs font-bold md:text-sm">
-                        Tag
-                      </p>
-                    )}
+                    <div className="flex w-full gap-2">
+                      {current_info ? (
+                        current_info.tags.map((tag, index) => {
+                          return (
+                            <p
+                              key={index}
+                              className="flex w-fit items-center justify-center rounded-full bg-orange-500 px-2 text-xs font-bold md:text-sm"
+                            >
+                              {tag.toUpperCase()}
+                            </p>
+                          );
+                        })
+                      ) : (
+                        <p className="flex w-fit items-center justify-center rounded-full bg-orange-500 px-2 text-xs font-bold md:text-sm">
+                          Tag
+                        </p>
+                      )}
+                    </div>
 
                     {/* EXPLORE BUTTON */}
                     {current_info &&
@@ -497,10 +495,10 @@ const BuildingModal = ({
             </div>
 
             {/* Buttons */}
-            <div className="flex flex-wrap items-center justify-between border-b px-16 py-4 text-white sm:px-24">
+            <div className="flex flex-wrap items-center justify-center gap-4 border-b p-4 text-white sm:px-8">
               {/* Facilities */}
               {current_info && current_info.info_type === "department" && (
-                <div className="flex h-20 w-auto flex-col items-center justify-center">
+                <div className="flex h-20 w-auto flex-col items-center justify-start">
                   <button
                     className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${activeButton === "facilities" ? "bg-green-600" : "bg-white"}`}
                     onClick={() => {
@@ -519,7 +517,7 @@ const BuildingModal = ({
               {current_info &&
                 (current_info.info_type === "college" ||
                   current_info.info_type === "attraction") && (
-                  <div className="flex h-auto w-auto flex-col items-center justify-center">
+                  <div className="flex h-20 w-auto flex-col items-center justify-start">
                     <button
                       className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${activeButton === "history" ? "bg-green-600" : "bg-white"}`}
                       onClick={() => {
@@ -536,7 +534,7 @@ const BuildingModal = ({
 
               {/* Departments  */}
               {current_info && current_info.info_type === "college" && (
-                <div className="flex h-auto w-auto flex-col items-center justify-center">
+                <div className="flex h-20 w-auto flex-col items-center justify-start">
                   <button
                     className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${activeButton === "departments" ? "bg-green-600" : "bg-white"}`}
                     onClick={() => {
@@ -555,7 +553,7 @@ const BuildingModal = ({
               {current_info &&
                 (current_info.info_type === "college" ||
                   current_info.info_type === "department") && (
-                  <div className="flex h-auto w-auto flex-col items-center justify-center">
+                  <div className="flex h-20 w-auto flex-col items-center justify-start">
                     <button
                       className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${activeButton === "courses" ? "bg-green-600" : "bg-white"}`}
                       onClick={() => {
@@ -572,20 +570,24 @@ const BuildingModal = ({
 
               {/* Mission Vision */}
               {current_info && current_info.info_type === "college" && (
-                <div className="flex h-auto w-auto flex-col items-center justify-center">
-                  <button
-                    className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${activeButton === "mission_vision" ? "bg-green-600" : "bg-white"}`}
-                    onClick={() => {
-                      setActiveButton(resetActiveButton("mission_vision"));
-                    }}
-                  >
-                    <TbTargetArrow
-                      className={`size-4 text-green-600 sm:size-6 ${activeButton === "mission_vision" ? "text-white" : "text-green-600"}`}
-                    />
-                  </button>
-                  <p className="pt-1 text-xs text-green-600">
-                    College Mission/Vision/Goal
-                  </p>
+                <div className="w-15 flex h-20 flex-col items-center justify-start">
+                  <div>
+                    <button
+                      className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${activeButton === "mission_vision" ? "bg-green-600" : "bg-white"}`}
+                      onClick={() => {
+                        setActiveButton(resetActiveButton("mission_vision"));
+                      }}
+                    >
+                      <TbTargetArrow
+                        className={`size-4 text-green-600 sm:size-6 ${activeButton === "mission_vision" ? "text-white" : "text-green-600"}`}
+                      />
+                    </button>
+                  </div>
+                  <div>
+                    <p className="pt-1 text-center text-xs text-green-600">
+                      Mission, Vision, <br /> and Goal
+                    </p>
+                  </div>
                 </div>
               )}
 
@@ -593,24 +595,30 @@ const BuildingModal = ({
 
               {/* Contacts */}
               {current_info && current_info.info_type !== "attraction" && (
-                <div className="flex h-auto w-auto flex-col items-center justify-center">
-                  <button
-                    className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${shareModal ? "bg-green-600" : "bg-white"}`}
-                    onClick={() => {
-                      setActiveButton(resetActiveButton("contacts"));
-                    }}
-                  >
-                    <FaPhone
-                      className={`size-4 text-green-600 sm:size-6 ${shareModal ? "text-white" : "text-green-600"}`}
-                    />
-                  </button>
-                  <p className="pt-1 text-xs text-green-600">Contacts</p>
+                <div className="w-15 flex h-20 flex-col items-center justify-start">
+                  <div>
+                    <button
+                      className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${activeButton === "contacts" ? "bg-green-600" : "bg-white"}`}
+                      onClick={() => {
+                        setActiveButton(resetActiveButton("contacts"));
+                      }}
+                    >
+                      <FaPhone
+                        className={`size-4 text-green-600 sm:size-6 ${activeButton === "contacts" ? "text-white" : "text-green-600"}`}
+                      />
+                    </button>
+                  </div>
+                  <div>
+                    <p className="pt-1 text-center text-xs text-green-600">
+                      Contacts
+                    </p>
+                  </div>
                 </div>
               )}
 
               {/* Share */}
               {current_info && mode === "360" && (
-                <div className="flex h-auto w-auto flex-col items-center justify-center">
+                <div className="flex h-20 w-auto flex-col items-center justify-start">
                   <button
                     className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${shareModal ? "bg-green-600" : "bg-white"}`}
                     onClick={() => {
@@ -627,9 +635,9 @@ const BuildingModal = ({
 
               {/* Go to Button */}
               {current_info && current_info.hasScene && mode !== "360" && (
-                <div className="flex h-auto w-auto flex-col items-center justify-center">
+                <div className="flex h-auto w-auto flex-col items-center justify-start">
                   <button
-                    className="flex items-center justify-center rounded-full bg-green-500 p-2"
+                    className="flex items-center justify-center rounded-full border bg-green-500 p-2"
                     onClick={() => {
                       setAccess("public");
                       setMapState(false);
@@ -637,7 +645,7 @@ const BuildingModal = ({
                       handleCloseAndReset();
                     }}
                   >
-                    <MdDirections className="size-4 sm:size-6" />
+                    <MdDirections className="size-5 sm:size-7" />
                   </button>
                   <p className="pt-1 text-xs text-green-600">Go to</p>
                 </div>
@@ -658,19 +666,41 @@ const BuildingModal = ({
 
             {/* CONTENT SECTION */}
             <div ref={contentRef}>
+              {/* History */}
+              {current_info && activeButton === "history" && (
+                <div className="w-full rounded-b-xl border-b-2 px-6 py-2">
+                  <ul className="justify-start text-balance">
+                    <h1 className="pb-5 text-2xl">History</h1>
+                    <p className="text-justify">{current_info.history}</p>
+                  </ul>
+                </div>
+              )}
+
               {/* Facilities */}
               {current_info && activeButton === "facilities" && (
                 <div className="w-full rounded-b-xl border-b-2 px-6 py-2">
                   <ul className="justify-start text-balance">
                     <h1 className="pb-5 text-2xl">Facilities</h1>
-                    {facilities.map((facilities) => (
-                      <li className="flex items-center" key={facilities.id}>
+                    {current_info.facilities.map((facilities) => (
+                      <li className="flex items-center">
                         <h2 className="text-base font-semibold md:text-xl">
                           •&nbsp;{facilities.name}&nbsp;
                         </h2>
-                        <span className="text-base">
-                          -&nbsp;{facilities.description}
-                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Departments */}
+              {current_info && activeButton === "departments" && (
+                <div className="w-full rounded-b-xl border-b-2 px-6 py-2">
+                  <ul className="justify-start text-balance">
+                    <h1 className="pb-5 text-2xl">Departments</h1>
+                    {current_info.dept.map((dept, index) => (
+                      <li key={index} className="flex flex-col gap-2">
+                        <h2 className="text-base">•&nbsp;{dept}</h2>
+                        <span className="text-base">{dept.description}</span>
                       </li>
                     ))}
                   </ul>
@@ -681,13 +711,58 @@ const BuildingModal = ({
               {current_info && activeButton === "courses" && (
                 <div className="w-full rounded-b-xl border-b-2 px-6 py-2">
                   <ul className="justify-start text-balance">
-                    <h1 className="pb-5 text-2xl">Courses</h1>
-                    {courses.map((Courses) => (
-                      <li className="flex items-center" key={Courses.id}>
-                        <h2 className="text-base font-semibold md:text-lg">
-                          •&nbsp;{Courses.name} -&nbsp;
+                    <h1 className="pb-3 text-2xl">Courses</h1>
+                    {current_info.courses.map((Courses) => (
+                      <li className="flex items-center">
+                        <h2 className="py-2 text-base">
+                          •&nbsp;{Courses.name}
                         </h2>
-                        <span className="text-base">{Courses.description}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Mission Vision */}
+              {current_info && activeButton === "mission_vision" && (
+                <div className="w-full rounded-b-xl border-b-2 px-6 py-2">
+                  <ul className="flex flex-col justify-start gap-4 text-balance">
+                    <h1 className="text-2xl">Mission, Vision, and Goal</h1>
+                    {current_info.mission_vision.mission && (
+                      <p className="text-base">
+                        <span className="font-bold">Mission: </span>{" "}
+                        {current_info.mission_vision.mission}
+                      </p>
+                    )}
+                    {current_info.mission_vision.vision && (
+                      <p className="text-base">
+                        <span className="font-bold">Vision: </span>{" "}
+                        {current_info.mission_vision.vision}
+                      </p>
+                    )}
+                    {current_info.mission_vision.goal && (
+                      <p className="text-base">
+                        <span className="font-bold">Goal: </span>
+                        {current_info.mission_vision.goal}
+                      </p>
+                    )}
+                  </ul>
+                </div>
+              )}
+
+              {/* Contacts */}
+              {current_info && activeButton === "contacts" && (
+                <div className="w-full rounded-b-xl border-b-2 px-6 py-2">
+                  <ul className="justify-start text-balance">
+                    <h1 className="pb-5 text-2xl">Contacts</h1>
+                    {Object.keys(current_info.contacts).map((key, index) => (
+                      <li className="flex items-center" key={index}>
+                        <h2 className="text-base font-semibold md:text-lg">
+                          {key} -&nbsp;
+                        </h2>
+                        <span className="text-base">
+                          {current_info.contacts[key]}
+                        </span>
                       </li>
                     ))}
                   </ul>
