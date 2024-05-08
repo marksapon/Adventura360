@@ -701,12 +701,15 @@ const MapModule = ({
       {/* POI Overlays */}
 
       {/* Current Location CSS */}
-      <img
-        src="/assets/Login Module/adventura logo 2.webp"
-        alt="Adventura 360 logo"
-        className="h-15 image-shadow w-10"
-        style={{ filter: "drop-shadow(0px 0px 10px rgba(0,0,0,0.75))" }}
-      />
+      <div id="current location">
+        <img
+          src="/assets/Login Module/adventura logo 2.webp"
+          alt="Adventura 360 logo"
+          className="h-15 w-10"
+          style={{ filter: "drop-shadow(0px 0px 10px rgba(0,0,0,0.75))" }}
+        />
+      </div>
+
       {/* Current Location CSS */}
 
       {/* Overlays */}
