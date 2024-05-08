@@ -611,7 +611,7 @@ function Module360({
 
         {/* Go Back Button */}
         {backButton && (
-          <div className=" relative z-30 flex items-center justify-center">
+          <div className=" relative z-0 flex items-center justify-center">
             <button
               type="button"
               onClick={() => {
