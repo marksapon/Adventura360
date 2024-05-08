@@ -391,11 +391,16 @@ const BuildingModal = ({
               )}
 
               {/* Back Button */}
-              <div className="relative z-50 flex w-full text-white">
-                <button className="absolute left-0 items-center justify-center">
-                  <IoMdArrowRoundBack className="h-12 w-12 p-2" />
-                </button>
-              </div>
+              {mode === "search" && (
+                <div className="relative z-50 flex w-full text-white">
+                  <button
+                    className="absolute right-0 items-center justify-center"
+                    onClick={onClose}
+                  >
+                    <IoMdArrowRoundBack className="h-12 w-12 p-2" />
+                  </button>
+                </div>
+              )}
 
               {/* Building Info */}
               <div className="flex h-full w-full flex-row items-end shadow-md shadow-gray-500">
