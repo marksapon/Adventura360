@@ -460,7 +460,8 @@ const BuildingModal = ({
                     {/* EXPLORE BUTTON */}
                     {current_info &&
                       (loginType === current_info.access ||
-                        loginType === "account") && (
+                        loginType === "account") &&
+                      loginType !== "guest" && (
                         <button
                           onClick={() => {
                             setAccess("private");
@@ -635,9 +636,9 @@ const BuildingModal = ({
 
               {/* Go to Button */}
               {current_info && current_info.hasScene && mode !== "360" && (
-                <div className="flex h-auto w-auto flex-col items-center justify-start">
+                <div className="flex h-20 w-auto flex-col items-center justify-start">
                   <button
-                    className="flex items-center justify-center rounded-full border bg-green-500 p-2"
+                    className="flex items-center justify-center rounded-full bg-green-500 p-2"
                     onClick={() => {
                       setAccess("public");
                       setMapState(false);
@@ -713,7 +714,7 @@ const BuildingModal = ({
                   <ul className="justify-start text-balance">
                     <h1 className="pb-3 text-2xl">Courses</h1>
                     {current_info.courses.map((Courses) => (
-                      <li className="flex items-center">
+                      <li className="flex items-center" key={Courses.id}>
                         <h2 className="py-2 text-base">
                           •&nbsp;{Courses.name}
                         </h2>
