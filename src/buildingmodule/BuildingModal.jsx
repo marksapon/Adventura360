@@ -465,8 +465,7 @@ const BuildingModal = ({
                     {/* EXPLORE BUTTON */}
                     {current_info &&
                       (loginType === current_info.access ||
-                        loginType === "account") &&
-                      loginType !== "guest" && (
+                        loginType === "account") && (
                         <button
                           onClick={() => {
                             setAccess("private");
