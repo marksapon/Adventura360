@@ -583,7 +583,7 @@ function Module360({
                             />
 
                             <div
-                              className={` absolute bottom-11 h-7 w-7 rounded-full md:h-14 md:w-14 ${colorMap[hotspot.type].color} pointer-events-auto flex cursor-pointer items-center justify-center`}
+                              className={` absolute bottom-11 h-7 w-7 rounded-full md:h-14 md:w-14 ${colorMap[hotspot.type] || "defaultcolor"} pointer-events-auto flex cursor-pointer items-center justify-center`}
                             >
                               {getIcon(hotspot.type, hotspot.class)}
                             </div>

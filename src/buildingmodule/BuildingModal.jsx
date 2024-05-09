@@ -412,7 +412,7 @@ const BuildingModal = ({
                         const Icon = icons[icon].icon;
                         const color =
                           icons[icon] && icons[icon].color
-                            ? `bg-[${icons[icon].color}]`
+                            ? `${icons[icon].color_tailwind}`
                             : "bg-default";
                         return (
                           <div
