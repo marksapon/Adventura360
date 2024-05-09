@@ -287,61 +287,77 @@ function Module360({
   const icons_display_settings = "text-white md:h-7 md:w-7"; // Icon size and color settings
 
   const colorMap = {
-    bldg: {
-      color: "bg-green-500",
-      type: [{ bldg: <FaBuilding className={icons_display_settings} /> }],
-    },
-    info: {
-      color: "bg-orange-500",
-      type: [
-        { info: <FaInfo className={icons_display_settings} /> },
-        {
-          attraction: <PiBinocularsFill className={icons_display_settings} />,
-        },
-        { cafeteria: <FaCoffee className={icons_display_settings} /> },
-
-        { farm: <LuWheat className={icons_display_settings} /> },
-        { court: <TbSoccerField className={icons_display_settings} /> },
-        { venue: <FaHotel className={icons_display_settings} /> },
-      ],
-    },
-    popup: {
-      color: "bg-blue-500",
-      type: [
-        { restroom: <FaRestroom className={icons_display_settings} /> },
-        { handwash: <FaHandsWash className={icons_display_settings} /> },
-        {
-          construction: <MdEngineering className={icons_display_settings} />,
-        },
-        { batibot: <FaPeopleRoof className={icons_display_settings} /> },
-      ],
-    },
+    bldg: "bg-green-500",
+    info: "bg-orange-500",
+    popup: "bg-blue-500",
   };
 
   const icons = {
-    // Icons for each type of overlay
-    undefined: { icon: FaCircle, color: "gray" }, // ??
-    washarea: { icon: FaHandsWash, color: "#3b82f6" }, // Popup Info
-    restroom: { icon: FaRestroom, color: "#3b82f6" }, // Popup Info
-    school_facilities: { icon: LuSchool, color: "#65a30d" }, // Bldg
-    college_buildings: { icon: TbSchool, color: "#f97316" }, // Bldg
-    cafeteria: { icon: FaCoffee, color: "#fbbf24" }, // info
-    batibot: { icon: FaPeopleRoof, color: "#1e3a8a" }, // popup info
-    attractions: { icon: PiBinocularsFill, color: "#a21caf" }, // info
-    court: { icon: TbSoccerField, color: "#0e7490" }, // info
-    parking: { icon: FaSquareParking, color: "#3b82f6" }, // popup
-    farm: { icon: LuWheat, color: "#15803d" }, // info
-    venue: { icon: FaHotel, color: "#fb7185" }, // info
-    construction: { icon: MdEngineering, color: "#facc15" }, // popup
+    undefined: { icon: FaCircle, color: "gray", color_tailwind: "bg-gray-500" },
+    washarea: {
+      icon: FaHandsWash,
+      color: "#3b82f6",
+      color_tailwind: "bg-blue-600",
+    },
+    restroom: {
+      icon: FaRestroom,
+      color: "#3b82f6",
+      color_tailwind: "bg-blue-600",
+    },
+    school_facilities: {
+      icon: LuSchool,
+      color: "#65a30d",
+      color_tailwind: "bg-lime-600",
+    },
+    college_buildings: {
+      icon: TbSchool,
+      color: "#f97316",
+      color_tailwind: "bg-orange-600",
+    },
+    cafeteria: {
+      icon: FaCoffee,
+      color: "#fbbf24",
+      color_tailwind: "bg-yellow-500",
+    },
+    batibot: {
+      icon: FaPeopleRoof,
+      color: "#1e3a8a",
+      color_tailwind: "bg-blue-900",
+    },
+    attractions: {
+      icon: PiBinocularsFill,
+      color: "#a21caf",
+      color_tailwind: "bg-purple-600",
+    },
+    court: {
+      icon: TbSoccerField,
+      color: "#0e7490",
+      color_tailwind: "bg-teal-600",
+    },
+    parking: {
+      icon: FaSquareParking,
+      color: "#3b82f6",
+      color_tailwind: "bg-red-600",
+    },
+    farm: { icon: LuWheat, color: "#15803d", color_tailwind: "bg-green-700" },
+    venue: { icon: FaHotel, color: "#fb7185", color_tailwind: "bg-pink-500" },
+    construction: {
+      icon: MdEngineering,
+      color: "#facc15",
+      color_tailwind: "bg-yellow-400",
+    },
+    bldg: {
+      icon: FaBuilding,
+      color: "#10b981",
+      color_tailwind: "bg-green-500",
+    },
+    info: { icon: FaInfo, color: "#f97316", color_tailwind: "bg-orange-500" },
   };
 
-  function getIcon(hotspotType, hotspotClass) {
-    if (colorMap.hasOwnProperty(hotspotType)) {
-      for (const data of colorMap[hotspotType].type) {
-        if (data.hasOwnProperty(hotspotClass)) {
-          return data[hotspotClass];
-        }
-      }
+  function getIcon(hotspotClass) {
+    if (icons.hasOwnProperty(hotspotClass)) {
+      const Icon = icons[hotspotClass].icon;
+      return <Icon className={icons_display_settings} />;
     }
   }
 
@@ -540,7 +556,7 @@ function Module360({
                 // Add the key prop here
                 <div
                   key={index}
-                  className={` view360-hotspot h-7 w-7 rounded-full md:h-14 md:w-14 ${colorMap[hotspot.type]?.color || "defaultcolor"} pointer-events-auto flex cursor-pointer items-center justify-center `}
+                  className={` view360-hotspot h-7 w-7 rounded-full md:h-14 md:w-14 ${colorMap[hotspot.type] || "defaultcolor"} pointer-events-auto flex cursor-pointer items-center justify-center `}
                   data-yaw={hotspot.yaw}
                   data-pitch={hotspot.pitch}
                   onClick={() => {
@@ -548,7 +564,7 @@ function Module360({
                   }}
                 >
                   {/* Hotspot Icon */}
-                  {getIcon(hotspot.type, hotspot.class)}
+                  {getIcon(hotspot.class)}
 
                   {hotspot.type === "popup" &&
                     curr_Extras.map((extras, index2) => {
