@@ -528,7 +528,7 @@
         "id": 2,
         "type": "popup",
         "class": "restroom",
-        "target": "restroomoval",
+        "target": "restroomOval",
         "yaw": 319.93,
         "pitch": 0.96
       },
@@ -536,9 +536,9 @@
         "id": 3,
         "type": "popup",
         "class": "handwash",
-        "target": "washareaoval",
-        "yaw": 244.56,
-        "pitch": 0.48
+        "target": "washareaOval",
+        "yaw": 244.8,
+        "pitch": 0.86
       }
     ]
   },
@@ -1482,8 +1482,8 @@
     "scene": "node45",
     "image": "/assets/Database Images/unrestricted nodes/45.webp",
     "coords": {
-      "x": 0.555,
-      "y": 0.912
+      "x": 0.524,
+      "y": 0.797
     },
     "hotspot": [
       {
@@ -1544,6 +1544,13 @@
         "target": "node45",
         "yaw": 281.39,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "attractions",
+        "target": "lagoon",
+        "yaw": 8.07,
+        "pitch": 3.26
       }
     ]
   },
@@ -1568,6 +1575,13 @@
         "target": "node46",
         "yaw": 282.42,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "attractions",
+        "target": "lagoon",
+        "yaw": 341.35,
+        "pitch": 4.81
       }
     ]
   },
@@ -3329,6 +3343,13 @@
         "target": "node101",
         "yaw": 287.27,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "cafeteria",
+        "target": "canteen",
+        "yaw": 106.4,
+        "pitch": 4.08
       }
     ]
   },
@@ -3497,9 +3518,16 @@
       {
         "id": 2,
         "type": "move",
-        "target": "node109",
+        "target": "",
         "yaw": 14.13,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "venue",
+        "target": "grandstand",
+        "yaw": 19.73,
+        "pitch": 8.16
       }
     ]
   },
@@ -3793,6 +3821,13 @@
         "target": "node123",
         "yaw": 283.47,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "venue",
+        "target": "grandstand",
+        "yaw": 105.2,
+        "pitch": 12.17
       }
     ]
   },
@@ -3845,7 +3880,7 @@
       {
         "id": 2,
         "type": "move",
-        "target": "node120",
+        "target": "",
         "yaw": 102.62,
         "pitch": -20
       }
@@ -6503,7 +6538,7 @@
         "pitch": -20
       },
       {
-        "type": "info",
+        "type": "popup",
         "class": "cafeteria",
         "target": "saaluysoy",
         "yaw": 234.48,
@@ -6539,6 +6574,13 @@
         "target": "node224",
         "yaw": 105.51,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "attractions",
+        "target": "lagoon",
+        "yaw": 92.2,
+        "pitch": 9.55
       }
     ]
   },
@@ -6618,6 +6660,14 @@
         "target": "node229",
         "yaw": 330.29,
         "pitch": -20
+      },
+
+      {
+        "type": "popup",
+        "class": "attractions",
+        "target": "lagoon",
+        "yaw": 134.13,
+        "pitch": 6.23
       }
     ]
   },
@@ -6756,6 +6806,13 @@
         "target": "node227",
         "yaw": 281.14,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "attractions",
+        "target": "lagoon",
+        "yaw": 192.39,
+        "pitch": 6.16
       }
     ]
   },

@@ -39,10 +39,11 @@
   {
     "scene": "hostel",
     "back": ["node45"],
-    "location": "Hostel is Under Construction",
+    "location": "Hostel Tropicana",
+    "desc": "Hostel is Under Construction",
     "coords": {
-      "x": 0.568,
-      "y": 0.815,
+      "x": 0.524,
+      "y": 0.806,
       "type": "construction"
     },
     "image": "/assets/Database Images/unrestricted nodes/2.webp"
@@ -136,23 +137,25 @@
     "scene": "washareaOval",
     "back": ["node15"],
     "location": "washarea near Oval",
+    "desc": "This is the wash area near the Oval",
     "coords": {
       "x": 0.506,
       "y": 1.117,
       "type": "washarea"
     },
-    "image": "/assets/extras/batibotDit.webp"
+    "image": "/assets/Database Images/unrestricted nodes/15.webp"
   },
   {
     "scene": "restroomOval",
     "back": ["node15"],
     "location": "restroom near Oval",
+    "desc": "This is the restroom near the Oval",
     "coords": {
       "x": 0.504,
       "y": 1.105,
       "type": "restroom"
     },
-    "image": "/assets/extras/batibotDit.webp"
+    "image": "/assets/Database Images/unrestricted nodes/15.webp"
   },
   {
     "scene": "brite",
@@ -197,5 +200,105 @@
       "type": "venue"
     },
     "image": "/assets/extras/batibotDit.webp"
+  },
+  {
+    "scene": "icon",
+    "back": ["node236", "node238"],
+    "location": "Interntional Convention Center (ICON)",
+    "coords": {
+      "x": 0.673,
+      "y": 0.813,
+      "type": "venue"
+    },
+    "image": "/assets/extras/batibotDit.webp"
+  },
+  {
+    "scene": "grandstand",
+    "location": "Grandstand",
+    "desc": "This is the university's grandstand",
+    "coords": {
+      "x": 0.406,
+      "y": 1.165,
+      "type": "venue"
+    },
+    "image": "/assets/Database Images/unrestricted nodes/108.webp"
+  },
+  {
+    "scene": "kaong",
+    "location": "Green Houses & Kaong Project",
+    "desc": "This is the Green Houses & Kaong Project",
+    "coords": {
+      "x": 0.558,
+      "y": 1.055,
+      "type": "farm"
+    },
+    "image": "/assets/Database Images/unrestricted nodes/108.webp"
+  },
+  {
+    "scene": "pool",
+    "location": "Swimming Pool",
+    "desc": "This is the university's swimming pool",
+    "coords": {
+      "x": 0.442,
+      "y": 0.771,
+      "type": "school_facilities"
+    },
+    "image": "/assets/Database Images/unrestricted nodes/108.webp"
+  },
+  {
+    "scene": "eng_shop",
+    "location": "Engineer Shops",
+    "desc": "This is the university's Engineer Shops",
+    "coords": {
+      "x": 0.342,
+      "y": 0.889,
+      "type": "school_facilities"
+    },
+    "image": "/assets/Database Images/unrestricted nodes/108.webp"
+  },
+  {
+    "scene": "hevted",
+    "location": "HEVTED Building",
+    "desc": "This is the university's HEVTED Building",
+    "coords": {
+      "x": 0.29,
+      "y": 1.013,
+      "type": "school_facilities"
+    },
+    "image": "/assets/Database Images/unrestricted nodes/108.webp"
+  },
+  {
+    "scene": "pps",
+    "location": "Physical Plant Services",
+    "desc": "This is the university's Physical Plant Services",
+    "coords": {
+      "x": 0.33,
+      "y": 0.84,
+      "type": "school_facilities"
+    },
+    "image": "/assets/Database Images/unrestricted nodes/108.webp"
+  },
+  {
+    "scene": "canteen",
+    "location": "Canteen & Marketing Center",
+    "desc": "This is the university's Canteen & Marketing Center",
+    "coords": {
+      "x": 0.33,
+      "y": 0.84,
+      "type": "school_facilities"
+    },
+    "image": "/assets/Database Images/unrestricted nodes/108.webp"
+  },
+  {
+    "scene": "lagoon",
+    "location": "Lagoon",
+    "desc": "This is the university's lagoon",
+    "coords": {
+      "x": 0.33,
+      "y": 0.84,
+      "type": "attractions"
+    },
+    "image": "/assets/Database Images/unrestricted nodes/108.webp"
   }
+  
 ]
