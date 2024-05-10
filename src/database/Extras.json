@@ -42,8 +42,8 @@
     "location": "Hostel Tropicana",
     "desc": "Hostel is Under Construction",
     "coords": {
-      "x": 0.524,
-      "y": 0.806,
+      "x": 0.569,
+      "y": 0.815,
       "type": "construction"
     },
     "image": "/assets/Database Images/unrestricted nodes/2.webp"
@@ -180,45 +180,12 @@
     "image": "/assets/extras/batibotDit.webp"
   },
   {
-    "scene": "rollehall",
-    "back": ["node231", "node232", "node233"],
-    "location": "CvSU Rolle Hall",
-    "coords": {
-      "x": 0.673,
-      "y": 0.813,
-      "type": "venue"
-    },
-    "image": "/assets/extras/batibotDit.webp"
-  },
-  {
-    "scene": "icon",
-    "back": ["node236", "node238"],
-    "location": "Interntional Convention Center (ICON)",
-    "coords": {
-      "x": 0.673,
-      "y": 0.813,
-      "type": "venue"
-    },
-    "image": "/assets/extras/batibotDit.webp"
-  },
-  {
-    "scene": "icon",
-    "back": ["node236", "node238"],
-    "location": "Interntional Convention Center (ICON)",
-    "coords": {
-      "x": 0.673,
-      "y": 0.813,
-      "type": "venue"
-    },
-    "image": "/assets/extras/batibotDit.webp"
-  },
-  {
     "scene": "grandstand",
     "location": "Grandstand",
     "desc": "This is the university's grandstand",
     "coords": {
-      "x": 0.406,
-      "y": 1.165,
+      "x": 0.392,
+      "y": 1.139,
       "type": "venue"
     },
     "image": "/assets/Database Images/unrestricted nodes/108.webp"
@@ -299,6 +266,27 @@
       "type": "attractions"
     },
     "image": "/assets/Database Images/unrestricted nodes/108.webp"
+  },
+  {
+    "scene": "restroomadmin",
+    "location": "Restroom beside Admin Building",
+    "desc": "Restroom near Admin",
+    "coords": {
+      "x": 0.42,
+      "y": 1.006,
+      "type": "restroom"
+    },
+    "image": ""
+  },
+  {
+    "scene": "washareaAdmin",
+    "location": "Wash Area beside Admin Building",
+    "desc": "Wash Area near Admin",
+    "coords": {
+      "x": 0.421,
+      "y": 1.009,
+      "type": "washarea"
+    },
+    "image": ""
   }
-  
 ]
