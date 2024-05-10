@@ -2,34 +2,13 @@
   {
     "scene": "dit",
     "name": "Department of Information Technology",
-    "access": "guest",
+    "access": "account",
     "acronym": "DIT",
     "type": "college_buildings",
-    "info_type": "college",
     "tags": ["ceit", "school"],
     "image": "/assets/Building Module/Background/dit.webp",
-    "desc": "This is the developers Department. The Department of Information Technology (DIT) is one of the departments of the College of Engineering and Information Technology (CEIT). The DIT offers a Bachelor of Science in Information Technology (BSIT) and Bachelor of Science in Computer Science program. These programs are designed to provide students with cutting edge knowledge and skills in the field of Computer Science and Information Technology. The DIT is equipped with state-of-the-art facilities and laboratories that are essential in the development of the students’ technical skills. The DIT faculty members are highly qualified and experienced in the field of Information Technology and Computer Science. The DIT is committed to provide quality education and training to its students to prepare them for a successful career in the field of Information Technology and Computer Science.",
+    "desc": "The Department of Information Technology (DIT), nestled within the College of Engineering and Information Technology (CEIT), is housed in a modern building characterized by sleek architecture and cutting-edge facilities. Its spacious atrium welcomes students and visitors, while state-of-the-art classrooms, labs, and collaborative spaces provide an ideal environment for learning and research. From interactive displays showcasing the latest advancements to dedicated research wings driving innovation, the department's building serves as a dynamic hub for aspiring technologists and researchers alike.",
 
-    "history": "The Department of Information Technology (DIT) was established in 2001. The DIT offers a Bachelor of Science in Information Technology (BSIT) and Bachelor of Science in Computer Science program. The DIT is equipped with state-of-the-art facilities and laboratories that are essential in the development of the students’ technical skills. The DIT faculty members are highly qualified and experienced in the field of Information Technology and Computer Science. The DIT is committed to provide quality education and training to its students to prepare them for a successful career in the field of Information Technology and Computer Science.",
-    "dept": [
-      "Department of Information Technology",
-      "College of Engineering and Information Technology",
-      "University of Science and Technology of Southern Philippines",
-      "Cagayan de Oro City"
-    ],
-    "mission_vision": {
-      "mission": "The Department of Information Technology is committed to provide quality education and training to its students to prepare them for a successful career in the field of Information Technology and Computer Science.",
-      "vision": "The Department of Information Technology envisions to be a center of excellence in the field of Information Technology and Computer Science."
-    },
-    "courses": [
-      {
-        "name": "Bachelor of Science in Computer Science"
-      },
-      {
-        "name": "Bachelor of Science in Information Technology"
-      }
-    ],
-    "contacts": { "email": "lewdadw@gmail.ckm" },
     "gallery": [
       "/assets/Building Module/Gallery/dit/01.webp",
       "/assets/Building Module/Gallery/dit/02.webp",
@@ -39,69 +18,205 @@
   {
     "scene": "osa",
     "name": "Office of Student Affairs and Services",
-    "acronym": "OSA",
-    "type": "school_buildings",
+    "access": "account",
+    "acronym": "osas",
+    "type": "school_facilities",
     "tags": ["school"],
     "image": "/assets/Building Module/Background/inosas.webp",
-    "desc": "Some OSAS Description here.",
-    "facilities": [],
-    "access": "public",
-    "courses": [],
+    "desc": "As an institution of higher learning, the Cavite State University caters to the needs of students, not only in the acquisition of education but also in their personality development. To ensure that the students’ potentials for advancement are maximized, the Student Welfare Services was established. The Student Welfare Services had been renamed Office of Student Affairs (OSA). It is a major project under the Office of the Vice President for Academic Affairs. The Office of Student Affairs started as one of the functional units of the then Don Severino Agricultural College (DSAC) in 1980. Through the years, the name of the Office was changed to Student Services Project in 1986, Student Services in 1989, Student Welfare Services in 1991 and renamed again to Office of Student Affairs in 1998 when DSAC was elevated into a university, the Cavite State University. Since then, the Office has been providing different student services to its clients such as guidance and counseling, admission and testing, and student development services like student organization and socio-cultural affairs, student publication and placement of students and graduates. The mandated National Service Training Program (NSTP) subject was also offered by the Office in 2002. The Office will continue and shall remain committed to provide student welfare and development activities to the CvSU academic community and the public.",
+
+    "contacts": {},
     "gallery": [
-      "/assets/Building Module/Gallery/osa/01.webp",
-      "/assets/Building Module/Gallery/osa/02.webp",
-      "/assets/Building Module/Gallery/osa/03.webp",
-      "/assets/Building Module/Gallery/osa/04.webp"
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
     ]
   },
   {
-    "scene": "saluysoy",
-    "name": "Saluysoy",
-    "acronym": "saluysoy",
-    "type": "cafeteria",
-    "tags": ["school"],
-    "image": "/assets/Building Module/Background/saluysoy.webp",
-    "desc": "Saluysoy is the main cafeteria of the university. It is located at the ground floor of the main building. It offers a variety of food choices for students, faculty, and staff.",
-    "facilities": [],
-    "access": "public",
-    "courses": [],
-    "gallery": [
-      "/assets/Building Module/Gallery/osa/01.webp",
-      "/assets/Building Module/Gallery/osa/02.webp",
-      "/assets/Building Module/Gallery/osa/03.webp",
-      "/assets/Building Module/Gallery/osa/04.webp"
-    ]
-  },
-  {
-    "scene": "layatdiwa",
-    "name": "Laya at Diwa",
-    "acronym": "LAYA DIWA",
-    "type": "attraction",
-    "tags": ["historical"],
-    "desc": "",
-    "facilities": [],
-    "courses": [],
-    "gallery": []
-  },
-  {
-    "scene": "quad",
-    "name": "Quadrangle",
-    "type": "court",
-    "tags": ["school", "leisure"],
-    "desc": "",
-    "facilities": [],
-    "courses": [],
-    "gallery": []
-  },
-  {
-    "scene": "icon",
-    "name": "International Convention Center",
-    "acronym": "ICON",
+    "scene": "ih2",
+    "name": "International House 2",
+    "access": "account",
+    "acronym": "ih2",
     "type": "venue",
-    "tags": [],
-    "desc": "",
-    "facilities": [],
-    "courses": [],
-    "gallery": []
+    "info_type": "info",
+    "tags": ["school", "leisure"],
+    "image": "/assets/Building Module/Background/IH2.webp",
+    "desc": "Welcome to International House 2, the epitome of campus living for ! Nestled in the heart of campus, this modern dormitory offers a safe and welcoming environment for residents to call home. With its contemporary design and well-appointed facilities, International House 2 provides a comfortable and inclusive living space. From cozy bedrooms to communal lounges, every corner is designed to foster a sense of community and belonging. Whether studying late into the night or enjoying downtime with friends, residents of International House 2 experience the best of campus life in a supportive and vibrant environment.",
+
+    "contacts": {},
+    "gallery": [
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
+    ]
+  },
+  {
+    "scene": "cspear",
+    "name": "College of Sports, Physical Education, and Recreation",
+    "access": "account",
+    "acronym": "cspear",
+    "type": "college_buildings",
+    "tags": ["cspear", "school"],
+    "image": "/assets/Building Module/Background/gym.webp",
+    "desc": "Welcome to the College of Sports, Physical Education, and Recreation Building, where athleticism meets academic excellence! This dynamic facility is a hub of activity, boasting state-of-the-art gyms, spacious classrooms, and cutting-edge research labs. From basketball courts to fitness centers, students and faculty alike have access to top-notch amenities to support their pursuit of health and wellness. With its modern design and vibrant atmosphere, the College of Sports, Physical Education, and Recreation Building inspires a passion for fitness and sportsmanship while providing a supportive environment for learning and growth.",
+
+    "dept": [
+      "Physical Education, Exercise and Sports Science",
+      "Physical Education"
+    ],
+    "gallery": [
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
+    ]
+  },
+  {
+    "scene": "bahayalumni",
+    "name": "Bahay ng Alumni",
+    "access": "account",
+    "acronym": "alumni",
+    "type": "venue",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Background/gym.webp",
+    "desc": "Welcome to the College of Sports, Physical Education, and Recreation Building, where athleticism meets academic excellence! This dynamic facility is a hub of activity, boasting state-of-the-art gyms, spacious classrooms, and cutting-edge research labs. From basketball courts to fitness centers, students and faculty alike have access to top-notch amenities to support their pursuit of health and wellness. With its modern design and vibrant atmosphere, the College of Sports, Physical Education, and Recreation Building inspires a passion for fitness and sportsmanship while providing a supportive environment for learning and growth.",
+
+    "contacts": {},
+    "gallery": [
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
+    ]
+  },
+  {
+    "scene": "ncrdec",
+    "name": "National Coffee Research, Development and Extension Center",
+    "access": "account",
+    "acronym": "coffee research",
+    "type": "school_facilities",
+    "tags": ["school", "laboratory"],
+    "image": "/assets/Building Module/Background/ncrdec.webp",
+    "desc": "Welcome to the National Coffee Research, Development, and Extension Center—a beacon of innovation in the world of coffee cultivation! Nestled amidst lush coffee plantations, this cutting-edge facility is dedicated to advancing the science and sustainability of coffee production. Equipped with state-of-the-art laboratories, experimental farms, and training facilities, the center serves as a hub for research, development, and knowledge dissemination in the coffee industry. From breeding new coffee varieties to implementing best practices in cultivation and processing, the center's work impacts coffee farmers and enthusiasts worldwide. With its commitment to excellence and collaboration, the National Coffee Research, Development, and Extension Center stands as a driving force behind the future of coffee agriculture.",
+
+    "gallery": [
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
+    ]
+  },
+  {
+    "scene": "wtc",
+    "name": "Water Testing Center",
+    "access": "account",
+    "acronym": "water laboratory",
+    "type": "school_facilities",
+    "tags": ["school", "laboratory"],
+    "image": "/assets/Building Module/Background/cwtlab.webp",
+    "desc": "Welcome to the National Coffee Research, Development, and Extension Center—a beacon of innovation in the world of coffee cultivation! Nestled amidst lush coffee plantations, this cutting-edge facility is dedicated to advancing the science and sustainability of coffee production. Equipped with state-of-the-art laboratories, experimental farms, and training facilities, the center serves as a hub for research, development, and knowledge dissemination in the coffee industry. From breeding new coffee varieties to implementing best practices in cultivation and processing, the center's work impacts coffee farmers and enthusiasts worldwide. With its commitment to excellence and collaboration, the National Coffee Research, Development, and Extension Center stands as a driving force behind the future of coffee agriculture.",
+
+    "gallery": [
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
+    ]
+  },
+  {
+    "scene": "newcemds",
+    "name": "College of Economics, Management and Development Studies New Building",
+    "access": "account",
+    "acronym": "new cemds",
+    "type": "college_buildings",
+    "tags": ["school", "cemds"],
+    "image": "",
+    "desc": "Welcome to the College of Economics, Management, and Development Studies New Building—a modern marvel of academia and innovation! Situated at the heart of campus, this state-of-the-art facility embodies the spirit of forward-thinking education and research. With its sleek design and advanced technology, the building provides a dynamic environment for students and faculty to explore the complexities of economics, management, and development studies. From spacious lecture halls to collaborative workspaces, every corner is designed to inspire creativity and critical thinking. Whether studying economic theory, honing management skills, or researching sustainable development practices, the College of Economics, Management, and Development Studies New Building offers a vibrant setting for academic excellence and growth.",
+
+    "dept": [
+      "Department of Management",
+      "Department of Economics",
+      "Department of Development Studies",
+      "Department of Accountancy"
+    ],
+    "courses": {
+      "BS OFFICE ADMINISTRATION": null,
+      "BS ACCOUNTANCY": null,
+      "BS BUSINESS ADMINISTRATION": [
+        "Financial Management",
+        "Human Resource Development Management",
+        "Marketing Management",
+        "Operations Management",
+        "Service Management Program"
+      ],
+      "BS ECONOMICS": null,
+      "BS DEVELOPMENT MANAGEMENT": [
+        "Rural Development Management",
+        "Training Program Management "
+      ],
+      "BS INTERNATIONAL STUDIES": ["Asian Studies", "European Studies"],
+      "GRADUATE PROGRAMS": [
+        "Master in Business Administration",
+        "Master in Management",
+        "Master in Public Administration"
+      ]
+    },
+    "contacts": {},
+    "gallery": [
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
+    ]
+  },
+  {
+    "scene": "cafenr",
+    "name": "College of Agriculture, Forestry, Environment and Natural Resources",
+    "access": "account",
+    "acronym": "cafenr",
+    "type": "college_buildings",
+    "tags": ["cafenr", "school"],
+    "image": "",
+    "desc": "The College of Agriculture, Forestry, Environment, and Natural Resources building embodies innovation and sustainability. Its modern design integrates seamlessly with nature, featuring spacious interiors filled with natural light and cutting-edge facilities. With a focus on eco-friendly practices, including energy-efficient systems and green rooftops, the building serves as a hub for interdisciplinary learning and research. Surrounded by lush gardens and outdoor spaces, it inspires environmental stewardship and fosters collaboration among students and faculty.",
+
+    "dept": [
+      "Department of Animal Science (DAS) ",
+      "Department of Agricultural Entrepreneurship (DAE)",
+      "Department of Crop Science (DCS)",
+      "Department of Accountancy",
+      "Department of Forestry and Environmental Science (DFES)",
+      "Institute of Food Science and Technology (IFST)"
+    ],
+    
+    "facilities": {
+      "Fruit Crops Nursery & Production": "This project are focuses on the production, propagation maintenance &amp; marketing of selected fruit crops such as rambutan, mangosteen, cacao, lemon, calamansi, lanzones, etc.",
+      "Ornamental Nursery & Production": null,
+      "CHARMS Project": null,
+      "High-Value Vegetable Production Area": null
+    },
+
+    "courses": {
+      "BS OFFICE ADMINISTRATION": null,
+      "BS ACCOUNTANCY": null,
+      "BS BUSINESS ADMINISTRATION": [
+        "Financial Management",
+        "Human Resource Development Management",
+        "Marketing Management",
+        "Operations Management",
+        "Service Management Program"
+      ],
+      "BS ECONOMICS": null,
+      "BS DEVELOPMENT MANAGEMENT": [
+        "Rural Development Management",
+        "Training Program Management "
+      ],
+      "BS INTERNATIONAL STUDIES": ["Asian Studies", "European Studies"],
+      "GRADUATE PROGRAMS": [
+        "Master in Business Administration",
+        "Master in Management",
+        "Master in Public Administration"
+      ]
+    },
+    "contacts": {},
+    "gallery": [
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
+    ]
   }
 ]

@@ -540,6 +540,9 @@ const Navigationbar = ({
           changeScene={changeScene}
           setMapState={setMapState}
           setAccess={setAccess}
+          closeSearch={() => {
+            setSearchModal(false);
+          }}
         />
       )}
     </div>

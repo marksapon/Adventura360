@@ -37,11 +37,10 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
 
     const temp_categories = {
       all: [],
-      school_buildings: [],
+      school_facilities: [],
       college_buildings: [],
       cafeteria: [],
       attraction: [],
-      court: [],
       venue: [],
     };
 
@@ -107,7 +106,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
 
   // category icons and colors
   const keyIcons = {
-    school_buildings: {
+    school_facilities: {
       icon: <LuSchool />,
       color: "bg-lime-600",
       display: "School Buildings",
@@ -126,11 +125,6 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
       icon: <PiBinocularsDuotone />,
       color: "bg-fuchsia-500",
       display: "Attractions",
-    },
-    court: {
-      icon: <TbSoccerField />,
-      color: "bg-cyan-700",
-      display: "Courts",
     },
     venue: { icon: <FaHotel />, color: "bg-rose-400", display: "Venues" },
     // add more keys as needed
@@ -208,12 +202,6 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
   // Render the search component
   if (!visible) return null;
 
-  console.log("Filtered Suggestions: ", filteredSuggestions);
-  console.log("originalSuggestions", originalSuggestions);
-  console.log("sort", sort);
-  console.log("searchTerm", searchTerm);
-  console.log("selectedTag", selectedTag);
-
   return (
     <div
       id="container"
@@ -242,6 +230,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                     className="mt-1 block w-full rounded-md border bg-white px-2 py-4 text-base shadow-md focus:border-green-600 focus:outline-none"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
+                    onSelect={(e) => setListDisplay(true)}
                   />
                 </div>
 
@@ -265,7 +254,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
 
                       {/*FILTER DROPDOWN */}
                       <div
-                        className={`origin-top transform overflow-hidden text-sm transition-all duration-300 ease-in-out sm:text-base ${isOpen ? "max-h-0 scale-y-0 opacity-0" : "max-h-full scale-y-100 opacity-100"}`}
+                        className={`origin-top transform overflow-hidden text-sm transition-all duration-300 ease-in-out sm:text-base ${listDisplay ? "max-h-0 scale-y-0 opacity-0" : "max-h-full scale-y-100 opacity-100"}`}
                       >
                         <div className="m-2">
                           <div

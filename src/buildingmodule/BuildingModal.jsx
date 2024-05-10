@@ -11,8 +11,8 @@ import { FiLink } from "react-icons/fi"; // Share
 import { MdHistoryEdu } from "react-icons/md"; // History
 import { FaPhone } from "react-icons/fa"; // Contact
 import { ImLab } from "react-icons/im"; // Facilities
-import { TbTargetArrow } from "react-icons/tb"; // Mission Vision
-import { IoMdArrowRoundBack } from "react-icons/io";
+import { IoMdArrowRoundBack } from "react-icons/io"; //
+import { MdHomeRepairService } from "react-icons/md";
 
 const BuildingModal = ({
   visible,
@@ -28,170 +28,8 @@ const BuildingModal = ({
   setMapState,
   setAccess,
   buildingsDB,
+  closeSearch,
 }) => {
-  class College {
-    constructor(
-      id,
-      name,
-      access,
-      type,
-      tags,
-      description,
-      bg,
-      gallery = [],
-      info_type,
-      hasScene = false,
-
-      history,
-      dept = [],
-      mission_vision = {},
-      courses = [],
-      contacts = {},
-    ) {
-      this.id = id;
-      this.name = name;
-      this.access = access;
-      this.type = type;
-      this.tags = tags;
-      this.description = description;
-      this.bg = bg;
-      this.gallery = gallery;
-      this.info_type = info_type;
-      this.hasScene = hasScene;
-
-      this.history = history;
-      this.dept = dept;
-      this.mission_vision = mission_vision;
-      this.courses = courses; //
-      this.contacts = contacts;
-    }
-  }
-
-  class Department {
-    constructor(
-      id,
-      name,
-      access,
-      type,
-      tags,
-      description,
-      bg,
-      gallery = [],
-      info_type,
-      hasScene = false,
-
-      facilities = [],
-      courses = [],
-      contacts = {},
-    ) {
-      this.id = id;
-      this.name = name;
-      this.access = access;
-      this.type = type;
-      this.tags = tags;
-      this.description = description;
-      this.bg = bg;
-      this.gallery = gallery;
-      this.info_type = info_type;
-      this.hasScene = hasScene;
-
-      this.facilities = facilities;
-      this.courses = courses;
-      this.contacts = contacts;
-    }
-  }
-
-  class Other_Facility {
-    constructor(
-      id,
-      name,
-      access,
-      type,
-      tags,
-      description,
-      bg,
-      gallery = [],
-      info_type,
-      hasScene = false,
-
-      facilities = [],
-      contacts = {},
-    ) {
-      this.id = id;
-      this.name = name;
-      this.access = access;
-      this.type = type;
-      this.tags = tags;
-      this.description = description;
-      this.bg = bg;
-      this.gallery = gallery;
-      this.info_type = info_type;
-      this.hasScene = hasScene;
-
-      this.facilities = facilities;
-      this.contacts = contacts;
-    }
-  }
-
-  class Info {
-    constructor(
-      id,
-      name,
-      access,
-      type,
-      tags,
-      description,
-      bg,
-      gallery = [],
-      info_type,
-      hasScene = false,
-
-      contacts = {},
-    ) {
-      this.id = id;
-      this.name = name;
-      this.access = access;
-      this.type = type;
-      this.tags = tags;
-      this.description = description;
-      this.bg = bg;
-      this.gallery = gallery;
-      this.info_type = info_type;
-      this.hasScene = hasScene;
-
-      this.contacts = contacts;
-    }
-  }
-
-  class Attraction {
-    constructor(
-      id,
-      name,
-      access,
-      type,
-      tags,
-      description,
-      bg,
-      gallery = [],
-      info_type,
-      hasScene = false,
-
-      history,
-    ) {
-      this.id = id;
-      this.name = name;
-      this.access = access;
-      this.type = type;
-      this.tags = tags;
-      this.description = description;
-      this.bg = bg;
-      this.gallery = gallery;
-      this.info_type = info_type;
-      this.hasScene = hasScene;
-
-      this.history = history;
-    }
-  }
   // Icon Set
   const icons = iconSet;
 
@@ -201,108 +39,25 @@ const BuildingModal = ({
   const infos = generateInfo(); // Generate Infomation List
   const current_info = setTargetInfo(scene); // Current Information
   const [activeButton, setActiveButton] = useState(""); // Active Button
+  const [isOpen, setIsOpen] = useState({});
+
+  const handleClick = (key) => {
+    setIsOpen((prevState) => ({ ...prevState, [key]: !prevState[key] }));
+  };
 
   // Generate Information
   function generateInfo() {
-    // console.log("Generating Information");
-    const info_temp = [];
+    const temp = [];
     for (const info of infosDB) {
-      const hasScene = hasSceneCheck(info.scene);
-      if (info.info_type === "department") {
-        info_temp.push(
-          new Department(
-            info.scene, // ID
-            info.name, // name
-            info.access, // access
-            info.type, // type
-            info.tags, // tags
-            info.desc, // description
-            info.image, // bg
-            info.gallery, // gallery
-            info.info_type,
-            hasScene, // If there is a scene
-
-            info.facilities, // facilities
-            info.courses, // courses
-            info.contacts, // contacts
-          ),
-        );
-      } else if (info.info_type === "college") {
-        info_temp.push(
-          new College(
-            info.scene, // ID
-            info.name, // name
-            info.access, // access
-            info.type, // type
-            info.tags, // tags
-            info.desc, // description
-            info.image, // bg
-            info.gallery, // gallery
-            info.info_type,
-            hasScene, // If there is a scene
-
-            info.history, // history
-            info.dept, // dept
-            info.mission_vision, // mission_vision
-            info.courses, // courses
-            info.contacts, // contacts
-          ),
-        );
-      } else if (info.info_type === "other_facility") {
-        info_temp.push(
-          new Other_Facility(
-            info.scene, // ID
-            info.name, // name
-            info.access, // access
-            info.type, // type
-            info.tags, // tags
-            info.desc, // description
-            info.image, // bg
-            info.gallery, // gallery
-            info.info_type,
-            hasScene, // If there is a scene
-
-            info.facilities, // facilities
-            info.contacts, // contacts
-          ),
-        );
-      } else if (info.info_type === "attraction") {
-        info_temp.push(
-          new Attraction(
-            info.scene, // ID
-            info.name, // name
-            info.access, // access
-            info.type, // type
-            info.tags, // tags
-            info.desc, // description
-            info.image, // bg
-            info.gallery, // gallery
-            info.info_type,
-            hasScene, // If there is a scene
-
-            info.history, // history
-          ),
-        );
+      if (hasSceneCheck(info.scene)) {
+        info.hasScene = true;
+        temp.push(info);
       } else {
-        info_temp.push(
-          new Info(
-            info.scene, // ID
-            info.name, // name
-            info.access, // access
-            info.type, // type
-            info.tags, // tags
-            info.desc, // description
-            info.image, // bg
-            info.gallery, // gallery
-            info.info_type,
-            hasScene, // If there is a scene
-
-            info.contacts, // contacts
-          ),
-        );
+        info.hasScene = false;
+        temp.push(info);
       }
     }
-    return info_temp;
+    return temp;
   }
 
   function hasSceneCheck(scene) {
@@ -320,7 +75,7 @@ const BuildingModal = ({
     // console.log("Setting Current Information");
     let temp_info;
     for (const info of infos) {
-      if (info.id === scene) {
+      if (info.scene === scene) {
         temp_info = info;
       }
     }
@@ -375,7 +130,7 @@ const BuildingModal = ({
               className="h-[150px] w-full rounded-tr-2xl bg-cover bg-center bg-no-repeat transition-all md:h-[200px]"
               style={{
                 opacity: 1,
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${current_info ? current_info.bg : "https://via.placeholder.com/150"}')`,
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${current_info ? current_info.image : "https://via.placeholder.com/150"}')`,
               }}
             >
               {/* Close Button */}
@@ -465,11 +220,12 @@ const BuildingModal = ({
                     {/* EXPLORE BUTTON */}
                     {current_info &&
                       (loginType === current_info.access ||
-                        loginType === "account") && (
+                        loginType === "account") &&
+                      current_info.hasScene && (
                         <button
                           onClick={() => {
                             setAccess("private");
-                            changeScene("inside", current_info.id);
+                            changeScene("inside", current_info.scene);
                             setMapState(false);
                             handleCloseAndReset();
                           }}
@@ -490,7 +246,7 @@ const BuildingModal = ({
             <div className="border-b pt-2">
               {current_info ? (
                 <p className="mb-2 max-h-[150px] overflow-auto px-6 py-2 text-justify text-xs md:text-base">
-                  {current_info.description}
+                  {current_info.desc}
                 </p>
               ) : (
                 <p className="mb-2 max-h-[150px] overflow-auto px-6 py-2 text-justify text-xs md:text-base">
@@ -502,7 +258,7 @@ const BuildingModal = ({
             {/* Buttons */}
             <div className="flex flex-wrap items-center justify-center gap-4 border-b p-4 text-white sm:px-8">
               {/* Facilities */}
-              {current_info && current_info.info_type === "department" && (
+              {current_info && current_info.facilities && (
                 <div className="flex h-20 w-auto flex-col items-center justify-start">
                   <button
                     className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${activeButton === "facilities" ? "bg-green-600" : "bg-white"}`}
@@ -519,26 +275,41 @@ const BuildingModal = ({
               )}
 
               {/* History */}
-              {current_info &&
-                (current_info.info_type === "college" ||
-                  current_info.info_type === "attraction") && (
-                  <div className="flex h-20 w-auto flex-col items-center justify-start">
-                    <button
-                      className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${activeButton === "history" ? "bg-green-600" : "bg-white"}`}
-                      onClick={() => {
-                        setActiveButton(resetActiveButton("history"));
-                      }}
-                    >
-                      <MdHistoryEdu
-                        className={`size-4 text-green-600 sm:size-6 ${activeButton === "history" ? "text-white" : "text-green-600"}`}
-                      />
-                    </button>
-                    <p className="pt-1 text-xs text-green-600">History</p>
-                  </div>
-                )}
+              {current_info && current_info.history && (
+                <div className="flex h-20 w-auto flex-col items-center justify-start">
+                  <button
+                    className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${activeButton === "history" ? "bg-green-600" : "bg-white"}`}
+                    onClick={() => {
+                      setActiveButton(resetActiveButton("history"));
+                    }}
+                  >
+                    <MdHistoryEdu
+                      className={`size-4 text-green-600 sm:size-6 ${activeButton === "history" ? "text-white" : "text-green-600"}`}
+                    />
+                  </button>
+                  <p className="pt-1 text-xs text-green-600">History</p>
+                </div>
+              )}
+
+              {/* Services  */}
+              {current_info && current_info.services && (
+                <div className="flex h-20 w-auto flex-col items-center justify-start">
+                  <button
+                    className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${activeButton === "services" ? "bg-green-600" : "bg-white"}`}
+                    onClick={() => {
+                      setActiveButton(resetActiveButton("services"));
+                    }}
+                  >
+                    <MdHomeRepairService
+                      className={`size-4 text-green-600 sm:size-6 ${activeButton === "services" ? "text-white" : "text-green-600"}`}
+                    />
+                  </button>
+                  <p className="pt-1 text-xs text-green-600">Services</p>
+                </div>
+              )}
 
               {/* Departments  */}
-              {current_info && current_info.info_type === "college" && (
+              {current_info && current_info.dept && (
                 <div className="flex h-20 w-auto flex-col items-center justify-start">
                   <button
                     className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${activeButton === "departments" ? "bg-green-600" : "bg-white"}`}
@@ -555,51 +326,26 @@ const BuildingModal = ({
               )}
 
               {/* Courses DEPT & COLLEGE */}
-              {current_info &&
-                (current_info.info_type === "college" ||
-                  current_info.info_type === "department") && (
-                  <div className="flex h-20 w-auto flex-col items-center justify-start">
-                    <button
-                      className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${activeButton === "courses" ? "bg-green-600" : "bg-white"}`}
-                      onClick={() => {
-                        setActiveButton(resetActiveButton("courses"));
-                      }}
-                    >
-                      <GiBlackBook
-                        className={`size-4 text-green-600 sm:size-6 ${activeButton === "courses" ? "text-white" : "text-green-600"}`}
-                      />
-                    </button>
-                    <p className="pt-1 text-xs text-green-600">Courses</p>
-                  </div>
-                )}
-
-              {/* Mission Vision */}
-              {current_info && current_info.info_type === "college" && (
-                <div className="w-15 flex h-20 flex-col items-center justify-start">
-                  <div>
-                    <button
-                      className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${activeButton === "mission_vision" ? "bg-green-600" : "bg-white"}`}
-                      onClick={() => {
-                        setActiveButton(resetActiveButton("mission_vision"));
-                      }}
-                    >
-                      <TbTargetArrow
-                        className={`size-4 text-green-600 sm:size-6 ${activeButton === "mission_vision" ? "text-white" : "text-green-600"}`}
-                      />
-                    </button>
-                  </div>
-                  <div>
-                    <p className="pt-1 text-center text-xs text-green-600">
-                      Mission, Vision, <br /> and Goal
-                    </p>
-                  </div>
+              {current_info && current_info.courses && (
+                <div className="flex h-20 w-auto flex-col items-center justify-start">
+                  <button
+                    className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${activeButton === "courses" ? "bg-green-600" : "bg-white"}`}
+                    onClick={() => {
+                      setActiveButton(resetActiveButton("courses"));
+                    }}
+                  >
+                    <GiBlackBook
+                      className={`size-4 text-green-600 sm:size-6 ${activeButton === "courses" ? "text-white" : "text-green-600"}`}
+                    />
+                  </button>
+                  <p className="pt-1 text-xs text-green-600">Courses</p>
                 </div>
               )}
 
               {/* COMMON BUTTONS */}
 
               {/* Contacts */}
-              {current_info && current_info.info_type !== "attraction" && (
+              {current_info && current_info.contacts && (
                 <div className="w-15 flex h-20 flex-col items-center justify-start">
                   <div>
                     <button
@@ -646,7 +392,8 @@ const BuildingModal = ({
                     onClick={() => {
                       setAccess("public");
                       setMapState(false);
-                      changeScene("bldg", current_info.id);
+                      changeScene("bldg", current_info.scene);
+                      closeSearch();
                       handleCloseAndReset();
                     }}
                   >
@@ -691,7 +438,7 @@ const BuildingModal = ({
                     {current_info.facilities.map((facilities) => (
                       <li className="flex items-center">
                         <h2 className="text-base font-semibold md:text-xl">
-                          •&nbsp;{facilities.name}&nbsp;
+                          •&nbsp;{facilities}&nbsp;
                         </h2>
                       </li>
                     ))}
@@ -707,9 +454,6 @@ const BuildingModal = ({
                     {current_info.dept.map((dept, index) => (
                       <li key={index} className="flex flex-col gap-2">
                         <h2 className="text-base">•&nbsp;{dept}</h2>
-                        <span className="text-xs sm:text-base">
-                          {dept.description}
-                        </span>
                       </li>
                     ))}
                   </ul>
@@ -720,41 +464,30 @@ const BuildingModal = ({
               {current_info && activeButton === "courses" && (
                 <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">
                   <ul className="justify-start text-balance">
-                    <h1 className="pb-3 text-2xl">Courses</h1>
-                    {current_info.courses.map((Courses) => (
-                      <li className="flex items-center" key={Courses.id}>
-                        <h2 className="py-2 text-xs sm:text-base">
-                          •&nbsp;{Courses.name}
-                        </h2>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {/* Mission Vision */}
-              {current_info && activeButton === "mission_vision" && (
-                <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">
-                  <ul className="flex flex-col justify-start gap-4 text-xs sm:text-base">
-                    <h1 className="text-2xl">Mission, Vision, and Goal</h1>
-                    {current_info.mission_vision.mission && (
-                      <p className="text-base">
-                        <span className="font-bold">Mission: </span>{" "}
-                        {current_info.mission_vision.mission}
-                      </p>
-                    )}
-                    {current_info.mission_vision.vision && (
-                      <p className="text-base">
-                        <span className="font-bold">Vision: </span>{" "}
-                        {current_info.mission_vision.vision}
-                      </p>
-                    )}
-                    {current_info.mission_vision.goal && (
-                      <p className="text-base">
-                        <span className="font-bold">Goal: </span>
-                        {current_info.mission_vision.goal}
-                      </p>
-                    )}
+                    <h1 className="pb-5 text-2xl">Courses</h1>
+                    {Object.keys(current_info.courses).map((key, index) => {
+                      return (
+                        <div className="flex items-center" key={index}>
+                          <li>
+                            <button
+                              onClick={() =>
+                                Array.isArray(current_info.courses[key]) &&
+                                handleClick(key)
+                              }
+                            >
+                              <h2 className="text-xs font-semibold sm:text-base">
+                                {key}
+                              </h2>
+                            </button>
+                            {isOpen[key] &&
+                              Array.isArray(current_info.courses[key]) &&
+                              current_info.courses[key].map((course, index) => (
+                                <div key={index}>{course}</div>
+                              ))}
+                          </li>
+                        </div>
+                      );
+                    })}
                   </ul>
                 </div>
               )}
@@ -777,6 +510,25 @@ const BuildingModal = ({
                   </ul>
                 </div>
               )}
+
+              {/* Services */}
+              {current_info && activeButton === "services" && (
+                <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">
+                  <ul className="justify-start text-balance">
+                    <h1 className="pb-5 text-2xl">Services</h1>
+                    {Object.keys(current_info.services).map((key, index) => (
+                      <li className="flex items-center" key={index}>
+                        <h2 className="text-xs font-semibold sm:text-base">
+                          {key} -&nbsp;
+                        </h2>
+                        <span className="text-xs sm:text-base">
+                          {current_info.services[key]}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -788,3 +540,12 @@ const BuildingModal = ({
 };
 
 export default BuildingModal;
+
+{
+  /* 
+<span className="text-xs sm:text-base">
+                          {dept.description}
+                        </span>
+
+*/
+}
