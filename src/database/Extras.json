@@ -272,8 +272,8 @@
     "location": "Restroom beside Admin Building",
     "desc": "Restroom near Admin",
     "coords": {
-      "x": 0.42,
-      "y": 1.006,
+      "x": 0.418,
+      "y": 1.003,
       "type": "restroom"
     },
     "image": ""
@@ -283,10 +283,21 @@
     "location": "Wash Area beside Admin Building",
     "desc": "Wash Area near Admin",
     "coords": {
-      "x": 0.421,
-      "y": 1.009,
+      "x": 0.423,
+      "y": 1.011,
       "type": "washarea"
     },
     "image": ""
+  },
+  {
+    "scene": "wtc",
+    "location": "Water Testing Center",
+    "desc": "Water Testing Center building soon to open",
+    "coords": {
+      "x": 0.33,
+      "y": 0.84,
+      "type": "attractions"
+    },
+    "image": "/assets/Database Images/unrestricted nodes/108.webp"
   }
 ]

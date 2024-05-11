@@ -169,7 +169,7 @@
   {
     "scene": "cafenr",
     "location": "College of Agriculture, Forestry, Environment and Natural Resources",
-    "image": "/assets/Database Images/unrestricted nodes/33.webp",
+    "image": "/assets/Database Images/unrestricted nodes/283.webp",
     "back": ["node33"],
     "coords": {
       "x": 0.558,
@@ -182,8 +182,8 @@
         "type": "info",
         "class": "info",
         "target": "cafenr",
-        "yaw": 113.71,
-        "pitch": 14.32
+        "yaw": 127.91,
+        "pitch": 20.28
       }
     ]
   },
@@ -378,9 +378,9 @@
   },
   {
     "scene": "ceit",
-    "location": "College of Engineering and Information",
-    "image": "/assets/Database Images/unrestricted nodes/92.webp",
-    "back": ["node64", "node92", "node91"],
+    "location": "College of Engineering and Information Technology",
+    "image": "/assets/Database Images/unrestricted nodes/279.webp",
+    "back": ["node64", "node92", "node91", "node278", "node279", "node280"],
     "coords": {
       "x": 0.361,
       "y": 0.951,
@@ -392,8 +392,8 @@
         "type": "info",
         "class": "info",
         "target": "dafe",
-        "yaw": 14.68,
-        "pitch": 12.63
+        "yaw": 18.02,
+        "pitch": 19.08
       }
     ]
   },
