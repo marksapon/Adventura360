@@ -294,11 +294,10 @@
     "location": "Lagoon",
     "desc": "This is the university's lagoon",
     "coords": {
-      "x": 0.33,
-      "y": 0.84,
+      "x": 0.498,
+      "y": 0.792,
       "type": "attractions"
     },
     "image": "/assets/Database Images/unrestricted nodes/108.webp"
   }
-  
 ]

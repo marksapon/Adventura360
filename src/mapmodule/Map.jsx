@@ -222,6 +222,9 @@ const MapModule = ({
             // Check if the clicked point is inside the overlay bounds
 
             if (overlayBounds.containsPoint(viewportPoint)) {
+              if (overlay.type === "bldg" || ) {
+
+              }
               console.log("Overlay Scene:", overlay.scene);
               openBldgModal(overlay.scene, "map");
             }
@@ -327,9 +330,12 @@ const MapModule = ({
     });
     buildingsDB.map((building) => {
       const neighbors = [];
-      building.back.map((nodes) => {
-        neighbors.push(nodes);
-      });
+      if (buildingsDB.back) {
+        building.back.map((nodes) => {
+          neighbors.push(nodes);
+        });
+      }
+
       temp.push(
         new Node(
           building.scene,
@@ -341,29 +347,14 @@ const MapModule = ({
       );
     });
 
-    // extrasDB.map((building) => {
-    //   const neighbors = [];
-    //   building.back.map((nodes) => {
-    //     neighbors.push(nodes);
-    //   });
-    //   console.log("Building: ", building.coords.x);
-    //   temp.push(
-    //     new Node(
-    //       building.scene,
-    //       building.coords.x,
-    //       building.coords.y,
-    //       neighbors,
-    //       building.travelType,
-    //     ),
-    //   );
-    // });
     extrasDB.map((building) => {
       const neighbors = [];
-      building.back.map((nodes) => {
-        neighbors.push(nodes);
-      });
+      if (building.back) {
+        building.back.map((nodes) => {
+          neighbors.push(nodes);
+        });
+      }
 
-      console.log("Building coords: ", building.coords);
       temp.push(
         new Node(
           building.scene,

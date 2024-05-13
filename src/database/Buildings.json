@@ -90,7 +90,7 @@
     "coords": {
       "x": 0.594,
       "y": 1.199,
-      "type": "school_facilities"
+      "type": "venue"
     },
     "hotspot": [
       {
@@ -125,27 +125,6 @@
     ]
   },
   {
-    "scene": "wtc",
-    "location": "Water Testing Center",
-    "image": "/assets/Database Images/unrestricted nodes/29.webp",
-    "back": ["node29", "node30"],
-    "coords": {
-      "x": 0.63,
-      "y": 1.038,
-      "type": "school_facilities"
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "info",
-        "class": "info",
-        "target": "wtc",
-        "yaw": 275.2,
-        "pitch": 1.34
-      }
-    ]
-  },
-  {
     "scene": "newcemds",
     "location": "College of Economics, Management and Development Studies New Building",
     "image": "/assets/Database Images/unrestricted nodes/33.webp",
@@ -153,7 +132,7 @@
     "coords": {
       "x": 0.605,
       "y": 0.994,
-      "type": "school_facilities"
+      "type": "college_buildings"
     },
     "hotspot": [
       {
@@ -189,7 +168,7 @@
   },
   {
     "scene": "rc",
-    "location": "Reasech Center",
+    "location": "Research Center",
     "image": "/assets/Database Images/unrestricted nodes/35.webp",
     "back": ["node34", "node35"],
     "coords": {
@@ -210,7 +189,7 @@
   },
   {
     "scene": "library",
-    "location": "Ladislao N. Diwa Memorial Library and Museum (LDMLM)",
+    "location": "Ladislao N. Diwa Memorial Library and Museum",
     "image": "/assets/Database Images/unrestricted nodes/35.webp",
     "back": ["node34", "node35"],
     "coords": {
@@ -273,7 +252,7 @@
   },
   {
     "scene": "biosci",
-    "location": "Biological Sciences Building",
+    "location": "Department of Biological Sciences",
     "image": "/assets/Database Images/unrestricted nodes/43.webp",
     "back": ["node43"],
     "coords": {
@@ -294,7 +273,7 @@
   },
   {
     "scene": "con",
-    "location": "Biological Sciences Building",
+    "location": "College of Nursing",
     "image": "/assets/Database Images/unrestricted nodes/48.webp",
     "back": ["node44", "node48", "node98"],
     "coords": {
@@ -377,8 +356,8 @@
     ]
   },
   {
-    "scene": "dafe",
-    "location": "Department of Agricultural and Food Engineering",
+    "scene": "ceit",
+    "location": "College of Engineering and Information",
     "image": "/assets/Database Images/unrestricted nodes/92.webp",
     "back": ["node64", "node92", "node91"],
     "coords": {
@@ -419,21 +398,21 @@
     ]
   },
   {
-    "scene": "hs",
-    "location": "Cavite Science Highschool",
+    "scene": "nhs",
+    "location": "Cavite Science Highschool Building 2",
     "image": "/assets/Database Images/unrestricted nodes/71.webp",
     "back": ["node71"],
     "coords": {
       "x": 0.357,
       "y": 1.124,
-      "type": "college_buildings"
+      "type": "school_facilities"
     },
     "hotspot": [
       {
         "id": 1,
         "type": "info",
         "class": "info",
-        "target": "hs",
+        "target": "nhs",
         "yaw": 112.8,
         "pitch": 12.34
       }
@@ -447,7 +426,7 @@
     "coords": {
       "x": 0.279,
       "y": 0.983,
-      "type": "college_buildings"
+      "type": "school_facilities"
     },
     "hotspot": [
       {
@@ -483,7 +462,7 @@
   },
   {
     "scene": "physci",
-    "location": "Phyical Sciences Building",
+    "location": "Physical Sciences Building",
     "image": "/assets/Database Images/unrestricted nodes/96.webp",
     "back": ["node96", "node97"],
     "coords": {
@@ -517,9 +496,249 @@
         "id": 1,
         "type": "info",
         "class": "info",
-        "target": "physci",
+        "target": "oldcemds",
         "yaw": 93.09,
         "pitch": 3.93
+      }
+    ]
+  },
+  {
+    "scene": "cropsci",
+    "location": "Crop Science Building",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.539,
+      "y": 1.005,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "cropsci",
+        "yaw": "",
+        "pitch": ""
+      }
+    ]
+  },
+  {
+    "scene": "rolle",
+    "location": "Rolle Hall",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.442,
+      "y": 0.771,
+      "type": "venue"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "rolle",
+        "yaw": "",
+        "pitch": ""
+      }
+    ]
+  },
+  {
+    "scene": "cvmbs",
+    "location": "College of Veterinary Medicine and Biomedical Sciences",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.458,
+      "y": 0.62,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "cvmbs",
+        "yaw": "",
+        "pitch": ""
+      }
+    ]
+  },
+  {
+    "scene": "cvmbs_hosp",
+    "location": "Veterinary Hospital",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.443,
+      "y": 0.582,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "cvmbs_hosp",
+        "yaw": "",
+        "pitch": ""
+      }
+    ]
+  },
+  {
+    "scene": "an_sci",
+    "location": "Animal Science Building",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.503,
+      "y": 0.596,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "an_sci",
+        "yaw": "",
+        "pitch": ""
+      }
+    ]
+  },
+  {
+    "scene": "mat_lab",
+    "location": "Material Testing Laboratory",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.418,
+      "y": 0.931,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "mat_lab",
+        "yaw": "",
+        "pitch": ""
+      }
+    ]
+  },
+  {
+    "scene": "ogs",
+    "location": "Open Graduate School",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.471,
+      "y": 0.993,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "ogs",
+        "yaw": "",
+        "pitch": ""
+      }
+    ]
+  },
+  {
+    "scene": "ced",
+    "location": "College of Education",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.331,
+      "y": 1.02,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "ced",
+        "yaw": "",
+        "pitch": ""
+      }
+    ]
+  },
+  {
+    "scene": "hs",
+    "location": "Cavite Science Highschool Building",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.367,
+      "y": 1.163,
+      "type": "school_facilities"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "hs",
+        "yaw": 112.8,
+        "pitch": 12.34
+      }
+    ]
+  },
+  {
+    "scene": "infirmary",
+    "location": "University Infirmary Building",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.289,
+      "y": 1.161,
+      "type": "school_facilities"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "infirmary",
+        "yaw": 112.8,
+        "pitch": 12.34
+      }
+    ]
+  },
+  {
+    "scene": "chapel",
+    "location": "University Chapel",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.24,
+      "y": 1.055,
+      "type": "venue"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "chapel",
+        "yaw": 112.8,
+        "pitch": 12.34
+      }
+    ]
+  },
+  {
+    "scene": "icon",
+    "location": "International Convention Center",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.48,
+      "y": 0.712,
+      "type": "venue"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "icon",
+        "yaw": 112.8,
+        "pitch": 12.34
       }
     ]
   }

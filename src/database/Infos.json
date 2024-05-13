@@ -23,9 +23,10 @@
     "type": "school_facilities",
     "tags": ["school"],
     "image": "/assets/Building Module/Background/inosas.webp",
-    "desc": "As an institution of higher learning, the Cavite State University caters to the needs of students, not only in the acquisition of education but also in their personality development. To ensure that the students’ potentials for advancement are maximized, the Student Welfare Services was established. The Student Welfare Services had been renamed Office of Student Affairs (OSA). It is a major project under the Office of the Vice President for Academic Affairs. The Office of Student Affairs started as one of the functional units of the then Don Severino Agricultural College (DSAC) in 1980. Through the years, the name of the Office was changed to Student Services Project in 1986, Student Services in 1989, Student Welfare Services in 1991 and renamed again to Office of Student Affairs in 1998 when DSAC was elevated into a university, the Cavite State University. Since then, the Office has been providing different student services to its clients such as guidance and counseling, admission and testing, and student development services like student organization and socio-cultural affairs, student publication and placement of students and graduates. The mandated National Service Training Program (NSTP) subject was also offered by the Office in 2002. The Office will continue and shall remain committed to provide student welfare and development activities to the CvSU academic community and the public.",
+    "desc": "Welcome to the Office of Student Affairs and Services at Cavite State University — A cornerstone of student support and development. Established in 1980, our office has evolved to meet the diverse needs of our students. From counseling and testing to financial assistance and talent development, we're here to empower students to reach their full potential. Whether it's guidance, training, or placement services, we're committed to fostering an environment where every student can thrive intellectually, emotionally, and socially.",
 
-    "contacts": {},
+    "more_info": "https://cvsu.edu.ph/office-of-student-affairs-and-services/",
+
     "gallery": [
       "/assets/Building Module/Gallery/dit/01.webp",
       "/assets/Building Module/Gallery/dit/02.webp",
@@ -34,16 +35,17 @@
   },
   {
     "scene": "ih2",
-    "name": "International House 2",
+    "name": "International House 2 (Dormitory)",
     "access": "account",
     "acronym": "ih2",
     "type": "venue",
     "info_type": "info",
     "tags": ["school", "leisure"],
     "image": "/assets/Building Module/Background/IH2.webp",
-    "desc": "Welcome to International House 2, the epitome of campus living for ! Nestled in the heart of campus, this modern dormitory offers a safe and welcoming environment for residents to call home. With its contemporary design and well-appointed facilities, International House 2 provides a comfortable and inclusive living space. From cozy bedrooms to communal lounges, every corner is designed to foster a sense of community and belonging. Whether studying late into the night or enjoying downtime with friends, residents of International House 2 experience the best of campus life in a supportive and vibrant environment.",
+    "desc": "Welcome to International House 2, the epitome of campus living for everyone! Nestled near gate 1 of the campus, this modern dormitory offers a safe and welcoming environment for residents to call home. With its contemporary design and well-appointed facilities, International House 2 provides a comfortable and inclusive living space. From cozy bedrooms to communal lounges, every corner is designed to foster a sense of community and belonging. Whether studying late into the night or enjoying downtime with friends, residents of International House 2 experience the best of campus life in a supportive and vibrant environment.",
 
-    "contacts": {},
+    "more_info": "https://cvsu.edu.ph/university-dormitory/",
+
     "gallery": [
       "/assets/Building Module/Gallery/dit/01.webp",
       "/assets/Building Module/Gallery/dit/02.webp",
@@ -58,12 +60,20 @@
     "type": "college_buildings",
     "tags": ["cspear", "school"],
     "image": "/assets/Building Module/Background/gym.webp",
-    "desc": "Welcome to the College of Sports, Physical Education, and Recreation Building, where athleticism meets academic excellence! This dynamic facility is a hub of activity, boasting state-of-the-art gyms, spacious classrooms, and cutting-edge research labs. From basketball courts to fitness centers, students and faculty alike have access to top-notch amenities to support their pursuit of health and wellness. With its modern design and vibrant atmosphere, the College of Sports, Physical Education, and Recreation Building inspires a passion for fitness and sportsmanship while providing a supportive environment for learning and growth.",
+    "desc": "Introducing the College of Sports, Physical Education, and Recreation at Cavite State University, established in 1998 to promote excellence in sports across the Southern Tagalog Region. Our mission is to provide top-tier instruction in physical education and recreation sciences while fostering a culture of active living among students and the community. With a focus on leadership and collaboration, we're dedicated to shaping competent professionals and elevating the region's sporting landscape.",
 
     "dept": [
       "Physical Education, Exercise and Sports Science",
       "Physical Education"
     ],
+
+    "courses": {
+      "BACHELOR OF PHYSICAL EDUCATION": null,
+      "BACHELOR IN SPORTS AND RECREATIONAL MANAGEMENT": null
+    },
+
+    "more_info": "https://cvsu.edu.ph/2018/01/college-of-sports-and-physical-education-and-recreation/",
+
     "gallery": [
       "/assets/Building Module/Gallery/dit/01.webp",
       "/assets/Building Module/Gallery/dit/02.webp",
@@ -76,11 +86,12 @@
     "access": "account",
     "acronym": "alumni",
     "type": "venue",
-    "tags": ["school"],
-    "image": "/assets/Building Module/Background/gym.webp",
-    "desc": "Welcome to the College of Sports, Physical Education, and Recreation Building, where athleticism meets academic excellence! This dynamic facility is a hub of activity, boasting state-of-the-art gyms, spacious classrooms, and cutting-edge research labs. From basketball courts to fitness centers, students and faculty alike have access to top-notch amenities to support their pursuit of health and wellness. With its modern design and vibrant atmosphere, the College of Sports, Physical Education, and Recreation Building inspires a passion for fitness and sportsmanship while providing a supportive environment for learning and growth.",
+    "tags": ["school", "leisure"],
+    "image": "",
+    "desc": "Welcome to Bahay ng Alumni—a cozy retreat found near the Gymnasium of the University. Our inviting rooms offer a blend of comfort and nostalgia, providing guests with a home-away-from-home experience. Whether you're here for a trip down memory lane or attending an event, we promise a memorable stay filled with warmth and hospitality.",
 
     "contacts": {},
+
     "gallery": [
       "/assets/Building Module/Gallery/dit/01.webp",
       "/assets/Building Module/Gallery/dit/02.webp",
@@ -95,23 +106,14 @@
     "type": "school_facilities",
     "tags": ["school", "laboratory"],
     "image": "/assets/Building Module/Background/ncrdec.webp",
-    "desc": "Welcome to the National Coffee Research, Development, and Extension Center—a beacon of innovation in the world of coffee cultivation! Nestled amidst lush coffee plantations, this cutting-edge facility is dedicated to advancing the science and sustainability of coffee production. Equipped with state-of-the-art laboratories, experimental farms, and training facilities, the center serves as a hub for research, development, and knowledge dissemination in the coffee industry. From breeding new coffee varieties to implementing best practices in cultivation and processing, the center's work impacts coffee farmers and enthusiasts worldwide. With its commitment to excellence and collaboration, the National Coffee Research, Development, and Extension Center stands as a driving force behind the future of coffee agriculture.",
+    "desc": "Welcome to the National Coffee Research, Development, and Extension Center (NCRDEC) at Cavite State University (CvSU)—a pioneering force in Philippine coffee innovation since 2005. Our center, established under the Agriculture and Fisheries Modernization Act (AFMA) of 1997, conducts cutting-edge research, provides vital extension services, and produces top-quality planting materials. With a vision to be recognized locally and internationally for our coffee programs, we're dedicated to increasing productivity, sustainability, and global competitiveness in the Philippine coffee industry.",
 
-    "gallery": [
-      "/assets/Building Module/Gallery/dit/01.webp",
-      "/assets/Building Module/Gallery/dit/02.webp",
-      "/assets/Building Module/Gallery/dit/03.webp"
-    ]
-  },
-  {
-    "scene": "wtc",
-    "name": "Water Testing Center",
-    "access": "account",
-    "acronym": "water laboratory",
-    "type": "school_facilities",
-    "tags": ["school", "laboratory"],
-    "image": "/assets/Building Module/Background/cwtlab.webp",
-    "desc": "Welcome to the National Coffee Research, Development, and Extension Center—a beacon of innovation in the world of coffee cultivation! Nestled amidst lush coffee plantations, this cutting-edge facility is dedicated to advancing the science and sustainability of coffee production. Equipped with state-of-the-art laboratories, experimental farms, and training facilities, the center serves as a hub for research, development, and knowledge dissemination in the coffee industry. From breeding new coffee varieties to implementing best practices in cultivation and processing, the center's work impacts coffee farmers and enthusiasts worldwide. With its commitment to excellence and collaboration, the National Coffee Research, Development, and Extension Center stands as a driving force behind the future of coffee agriculture.",
+    "contacts": {
+      "Email": "ncrdec.cvsu@gmail.com",
+      "Mobile": "+639165047049"
+    },
+
+    "more_info": "https://cvsu.edu.ph/ovpre-ncrdec/",
 
     "gallery": [
       "/assets/Building Module/Gallery/dit/01.webp",
@@ -171,7 +173,7 @@
     "acronym": "cafenr",
     "type": "college_buildings",
     "tags": ["cafenr", "school"],
-    "image": "",
+    "image": "/assets/Building Module/Background/cafenr.webp",
     "desc": "The College of Agriculture, Forestry, Environment, and Natural Resources building embodies innovation and sustainability. Its modern design integrates seamlessly with nature, featuring spacious interiors filled with natural light and cutting-edge facilities. With a focus on eco-friendly practices, including energy-efficient systems and green rooftops, the building serves as a hub for interdisciplinary learning and research. Surrounded by lush gardens and outdoor spaces, it inspires environmental stewardship and fosters collaboration among students and faculty.",
 
     "dept": [
@@ -182,37 +184,162 @@
       "Department of Forestry and Environmental Science (DFES)",
       "Institute of Food Science and Technology (IFST)"
     ],
-    
+
     "facilities": {
       "Fruit Crops Nursery & Production": "This project are focuses on the production, propagation maintenance &amp; marketing of selected fruit crops such as rambutan, mangosteen, cacao, lemon, calamansi, lanzones, etc.",
-      "Ornamental Nursery & Production": null,
-      "CHARMS Project": null,
-      "High-Value Vegetable Production Area": null
+      "Ornamental Nursery & Production": "This area is allotted for the different ornamental crops available ate the greenhouse, for propagation, and nursery establishment.",
+      "CHARMS Project": "This demo area focuses on the various medicinal plants, herbs and spices available for general consumption.",
+      "High-Value Vegetable Production Area": "This production area is allotted for the different high-value vegetable crops produced and managed by students conducting. Their research and entrepreneurial development studies."
     },
 
     "courses": {
-      "BS OFFICE ADMINISTRATION": null,
-      "BS ACCOUNTANCY": null,
-      "BS BUSINESS ADMINISTRATION": [
-        "Financial Management",
-        "Human Resource Development Management",
-        "Marketing Management",
-        "Operations Management",
-        "Service Management Program"
+      "BS AGRICULTURE": ["Animal Science", "Crop Science"],
+      "BS IN ENVIRONMENTAL SCIENCES": null,
+      "BS IN FOOD TECHNOLOGY": null,
+      "BS IN LAND USE DESIGN AND MANAGEMENT": null,
+      "BACHELOR IN AGRICULTURAL ENTREPRENEURSHIP": null,
+      "CERTIFICATE IN AGRICULTURAL SCIENCE": null,
+
+      "DOCTOR OF PHILOSOPHY IN AGRICULTURE": [
+        "Animal Science",
+        "Crop Science ",
+        "Farming System "
       ],
-      "BS ECONOMICS": null,
-      "BS DEVELOPMENT MANAGEMENT": [
-        "Rural Development Management",
-        "Training Program Management "
+      "DOCTOR OF PHILOSOPHY IN FOOD SCIENCE": null,
+      "MASTER OF SCIENCE IN AGRICULTURE": [
+        "Animal Science",
+        "Crop Science ",
+        "Farming System ",
+        "Crop Protection "
       ],
-      "BS INTERNATIONAL STUDIES": ["Asian Studies", "European Studies"],
-      "GRADUATE PROGRAMS": [
-        "Master in Business Administration",
-        "Master in Management",
-        "Master in Public Administration"
-      ]
+      "MASTER OF SCIENCE IN FOOD SCIENCE": null
     },
+
+    "contacts": {
+      "Telephone": "(046) 423 1162",
+      "Email": "cafenr@cvsu.edu.ph",
+      "(Facebook) Araw ng Kalikasan sa CvSU": "https://www.facebook.com/cvsuarawngkalikasan/",
+      "(Facebook) CvSU Environmental Geo-Information and Remote Sensing": "https://www.facebook.com/Cvsu-Environmental-Geo-Information-and-Remote-Sensing-Laboratory-104676587621183/"
+    },
+
+    "more_info": "https://cvsu.edu.ph/2018/01/college-of-agriculture-forestry-environment-and-natural-resources/",
+
+    "gallery": [
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
+    ]
+  },
+  {
+    "scene": "rc",
+    "name": "Research Center",
+    "access": "account",
+    "acronym": "research",
+    "type": "school_facilities",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Background/rccenter.webp",
+    "desc": "Introducing the Research Center Building at Cavite State University: a nexus of innovation and collaboration. Equipped with cutting-edge facilities, it fosters groundbreaking research across disciplines, especially in agriculture. Designed for knowledge dissemination and external engagement, it serves as a hub for forging partnerships, training, and recognizing outstanding achievements. A beacon of progress, it embodies the university's commitment to improving lives and advancing knowledge for the community.",
+
+    "contacts": {
+      "Telephone": "(046) 862-1654",
+      "Email": "researchcenter@cvsu.edu.ph",
+      "Mobile": "+639270110387"
+    },
+
+    "more_info": "https://cvsu.edu.ph/ovpre-research-center/",
+
+    "gallery": [
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
+    ]
+  },
+  {
+    "scene": "library",
+    "name": "Ladislao N. Diwa Memorial Library and Museum",
+    "access": "account",
+    "acronym": "library",
+    "type": "school_facilities",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Background/library.webp",
+    "desc": "Welcome to the Ladislao N. Diwa Memorial Library and Museum (LDMLM)—a symbol of knowledge and heritage since 1980. With a collection of over 106,000 volumes and 5,000 series titles, LDMLM honors Ladislao N. Diwa's contributions to academia. Operating under an open shelf system, our mission is to provide excellent, equitable, and relevant library services. We aim to support academic excellence, encourage maximum utilization of resources, and collaborate with all colleges and campuses to supplement research and instruction. Step inside and discover a world of knowledge and inspiration.",
+
     "contacts": {},
+
+    "more_info": "https://cvsu.edu.ph/2018/01/13/library/",
+
+    "gallery": [
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
+    ]
+  },
+  {
+    "scene": "irb",
+    "name": "Interdisciplinary Research Building",
+    "access": "account",
+    "acronym": "interdisciplinary",
+    "type": "school_facilities",
+    "tags": ["school"],
+    "image": "",
+    "desc": "Welcome to the Interdisciplinary Research Building (IDRB) at the University. Here, cutting-edge research thrives in specialized laboratories spanning engineering, microbiology, genetics, and more. Led by expert faculty researchers, these labs are hubs of innovation, fostering collaboration and pushing the boundaries of knowledge. With state-of-the-art facilities and close coordination with the Technical Services Division, the IDRB is where breakthroughs happen. Welcome to a space where interdisciplinary exploration knows no bounds.",
+
+    "contacts": {},
+
+    "gallery": [
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
+    ]
+  },
+  {
+    "scene": "ih1",
+    "name": "International House 1 (Dormitory)",
+    "access": "account",
+    "acronym": "ih2",
+    "type": "venue",
+    "info_type": "info",
+    "tags": ["school", "leisure"],
+    "image": "/assets/Building Module/Background/IH1.webp",
+    "desc": "Welcome to International House 1—a bustling dormitory designed to be a home away from home for university students. Here, students from diverse backgrounds come together to form a vibrant community, fostering lifelong friendships and unforgettable experiences. With comfortable living spaces and modern amenities, International House 1 provides a supportive environment where students can thrive academically, socially, and personally. International House 1 is currently under College of Nursing.",
+
+    "more_info": "https://cvsu.edu.ph/university-dormitory/",
+
+    "gallery": [
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
+    ]
+  },
+  {
+    "scene": "ih1",
+    "name": "International House 1 (Dormitory)",
+    "access": "account",
+    "acronym": "ih2",
+    "type": "venue",
+    "info_type": "info",
+    "tags": ["school", "leisure"],
+    "image": "/assets/Building Module/Background/IH1.webp",
+    "desc": "Welcome to International House 1—a bustling dormitory designed to be a home away from home for university students. Here, students from diverse backgrounds come together to form a vibrant community, fostering lifelong friendships and unforgettable experiences. With comfortable living spaces and modern amenities, International House 1 provides a supportive environment where students can thrive academically, socially, and personally. International House 1 is currently under College of Nursing.",
+
+    "more_info": "https://cvsu.edu.ph/university-dormitory/",
+
+    "gallery": [
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
+    ]
+  },
+  {
+    "scene": "biosci",
+    "name": "Department of Biological Sciences",
+    "access": "account",
+    "acronym": "bio sci",
+    "type": "college_buildings",
+    "tags": ["cas", "school"],
+    "image": "/assets/Building Module/Background/dit.webp",
+    "desc": "Welcome to the Department of Biological Sciences at the University. Our state-of-the-art facilities and passionate community of scholars are dedicated to exploring the wonders of life. From molecular biology to ecology, we're committed to advancing our understanding of the natural world and addressing global challenges. Join us on a journey of discovery and exploration. Welcome to the heart of scientific inquiry.",
+
     "gallery": [
       "/assets/Building Module/Gallery/dit/01.webp",
       "/assets/Building Module/Gallery/dit/02.webp",

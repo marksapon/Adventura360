@@ -12,7 +12,8 @@ import { MdHistoryEdu } from "react-icons/md"; // History
 import { FaPhone } from "react-icons/fa"; // Contact
 import { ImLab } from "react-icons/im"; // Facilities
 import { IoMdArrowRoundBack } from "react-icons/io"; //
-import { MdHomeRepairService } from "react-icons/md";
+import { MdHomeRepairService } from "react-icons/md"; // Services
+import { FaInfo } from "react-icons/fa";
 
 const BuildingModal = ({
   visible,
@@ -402,8 +403,22 @@ const BuildingModal = ({
                   <p className="pt-1 text-xs text-green-600">Go to</p>
                 </div>
               )}
-
               {/* Go to Button */}
+
+              {/* More info */}
+              {current_info && current_info.more_info && (
+                <div className="flex h-20 w-auto flex-col items-center justify-start">
+                  <button
+                    className={`flex items-center justify-center rounded-full border border-orange-600 bg-orange-600 p-2`}
+                    onClick={() => {
+                      window.open(current_info.more_info);
+                    }}
+                  >
+                    <FaInfo className={`size-4 text-white sm:size-6`} />
+                  </button>
+                  <p className="pt-1 text-xs text-green-600">Learn more</p>
+                </div>
+              )}
             </div>
 
             {/* Gallery */}
@@ -431,17 +446,35 @@ const BuildingModal = ({
               )}
 
               {/* Facilities */}
-              {current_info && activeButton === "facilities" && (
+              {current_info && activeButton === "courses" && (
                 <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">
                   <ul className="justify-start text-balance">
                     <h1 className="pb-5 text-2xl">Facilities</h1>
-                    {current_info.facilities.map((facilities) => (
-                      <li className="flex items-center">
-                        <h2 className="text-base font-semibold md:text-xl">
-                          •&nbsp;{facilities}&nbsp;
-                        </h2>
-                      </li>
-                    ))}
+                    {Object.keys(current_info.facilities).map((key, index) => {
+                      return (
+                        <div className="flex items-center" key={index}>
+                          <li>
+                            <button
+                              onClick={() =>
+                                Array.isArray(current_info.facilities[key]) &&
+                                handleClick(key)
+                              }
+                            >
+                              <h2 className="text-xs font-semibold sm:text-base">
+                                {key}
+                              </h2>
+                            </button>
+                            {isOpen[key] &&
+                              Array.isArray(current_info.facilities[key]) &&
+                              current_info.facilities[key].map(
+                                (course, index) => (
+                                  <div key={index}>{course}</div>
+                                ),
+                              )}
+                          </li>
+                        </div>
+                      );
+                    })}
                   </ul>
                 </div>
               )}
