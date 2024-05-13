@@ -148,7 +148,7 @@
   {
     "scene": "cafenr",
     "location": "College of Agriculture, Forestry, Environment and Natural Resources",
-    "image": "/assets/Database Images/unrestricted nodes/33.webp",
+    "image": "/assets/Database Images/unrestricted nodes/283.webp",
     "back": ["node33"],
     "coords": {
       "x": 0.558,
@@ -161,8 +161,8 @@
         "type": "info",
         "class": "info",
         "target": "cafenr",
-        "yaw": 113.71,
-        "pitch": 14.32
+        "yaw": 127.91,
+        "pitch": 20.28
       }
     ]
   },
@@ -357,9 +357,9 @@
   },
   {
     "scene": "ceit",
-    "location": "College of Engineering and Information",
-    "image": "/assets/Database Images/unrestricted nodes/92.webp",
-    "back": ["node64", "node92", "node91"],
+    "location": "College of Engineering and Information Technology",
+    "image": "/assets/Database Images/unrestricted nodes/279.webp",
+    "back": ["node64", "node92", "node91", "node278", "node279", "node280"],
     "coords": {
       "x": 0.361,
       "y": 0.951,
@@ -371,15 +371,15 @@
         "type": "info",
         "class": "info",
         "target": "dafe",
-        "yaw": 14.68,
-        "pitch": 12.63
+        "yaw": 18.02,
+        "pitch": 19.08
       }
     ]
   },
   {
     "scene": "admin",
     "location": "Administration Building",
-    "image": "/assets/Database Images/unrestricted nodes/65.webp",
+    "image": "/assets/Database Images/unrestricted nodes/258.webp",
     "back": ["node65"],
     "coords": {
       "x": 0.4,
@@ -394,6 +394,26 @@
         "target": "admin",
         "yaw": 258.49,
         "pitch": 2.55
+      }
+    ]
+  },
+  {
+    "scene": "admin2",
+    "location": "Administration Building",
+    "image": "/assets/Database Images/unrestricted nodes/267.webp",
+    "coords": {
+      "x": 0.4,
+      "y": 1.021,
+      "type": "school_facilities"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "admin2",
+        "yaw": 54.81,
+        "pitch": 9.5
       }
     ]
   },
@@ -737,6 +757,326 @@
         "type": "info",
         "class": "info",
         "target": "icon",
+        "yaw": 112.8,
+        "pitch": 12.34
+      }
+    ]
+  },
+  {
+    "scene": "cropsci",
+    "location": "Crop Science Building",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.539,
+      "y": 1.005,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "cropsci",
+        "yaw": "",
+        "pitch": ""
+      }
+    ]
+  },
+  {
+    "scene": "rolle",
+    "location": "Rolle Hall",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.442,
+      "y": 0.771,
+      "type": "venue"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "rolle",
+        "yaw": "",
+        "pitch": ""
+      }
+    ]
+  },
+  {
+    "scene": "cvmbs",
+    "location": "College of Veterinary Medicine and Biomedical Sciences",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.458,
+      "y": 0.62,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "cvmbs",
+        "yaw": "",
+        "pitch": ""
+      }
+    ]
+  },
+  {
+    "scene": "cvmbs_hosp",
+    "location": "Veterinary Hospital",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.443,
+      "y": 0.582,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "cvmbs_hosp",
+        "yaw": "",
+        "pitch": ""
+      }
+    ]
+  },
+  {
+    "scene": "an_sci",
+    "location": "Animal Science Building",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.503,
+      "y": 0.596,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "an_sci",
+        "yaw": "",
+        "pitch": ""
+      }
+    ]
+  },
+  {
+    "scene": "mat_lab",
+    "location": "Material Testing Laboratory",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.418,
+      "y": 0.931,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "mat_lab",
+        "yaw": "",
+        "pitch": ""
+      }
+    ]
+  },
+  {
+    "scene": "ogs",
+    "location": "Open Graduate School",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.471,
+      "y": 0.993,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "ogs",
+        "yaw": "",
+        "pitch": ""
+      }
+    ]
+  },
+  {
+    "scene": "ced",
+    "location": "College of Education",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.331,
+      "y": 1.02,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "ced",
+        "yaw": "",
+        "pitch": ""
+      }
+    ]
+  },
+  {
+    "scene": "hs",
+    "location": "Cavite Science Highschool Building",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.367,
+      "y": 1.163,
+      "type": "school_facilities"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "hs",
+        "yaw": 112.8,
+        "pitch": 12.34
+      }
+    ]
+  },
+  {
+    "scene": "infirmary",
+    "location": "University Infirmary Building",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.289,
+      "y": 1.161,
+      "type": "school_facilities"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "infirmary",
+        "yaw": 112.8,
+        "pitch": 12.34
+      }
+    ]
+  },
+  {
+    "scene": "chapel",
+    "location": "University Chapel",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.24,
+      "y": 1.055,
+      "type": "venue"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "chapel",
+        "yaw": 112.8,
+        "pitch": 12.34
+      }
+    ]
+  },
+  {
+    "scene": "icon",
+    "location": "International Convention Center",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.48,
+      "y": 0.712,
+      "type": "venue"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "icon",
+        "yaw": 112.8,
+        "pitch": 12.34
+      }
+    ]
+  },
+  {
+    "scene": "eco_tour",
+    "location": "Agri-Eco Tourism Park",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.582,
+      "y": 0.785,
+      "type": "attractions"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "eco_tour",
+        "yaw": 112.8,
+        "pitch": 12.34
+      }
+    ]
+  },
+  {
+    "scene": "info_center",
+    "location": "Information Center Building",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.613,
+      "y": 0.808,
+      "type": "school_facilities"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "info_center",
+        "yaw": 112.8,
+        "pitch": 12.34
+      }
+    ]
+  },
+  {
+    "scene": "bee",
+    "location": "CvSU Bee Program Facility",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.613,
+      "y": 0.808,
+      "type": "school_facilities"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "bee",
+        "yaw": 112.8,
+        "pitch": 12.34
+      }
+    ]
+  },
+  {
+    "scene": "ccj",
+    "location": "College of Criminology and Justice",
+    "image": "",
+    "back": [""],
+    "coords": {
+      "x": 0.269,
+      "y": 1.108,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "ccj",
         "yaw": 112.8,
         "pitch": 12.34
       }

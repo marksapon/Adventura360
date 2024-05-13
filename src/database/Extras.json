@@ -42,8 +42,8 @@
     "location": "Hostel Tropicana",
     "desc": "Hostel is Under Construction",
     "coords": {
-      "x": 0.524,
-      "y": 0.806,
+      "x": 0.569,
+      "y": 0.815,
       "type": "construction"
     },
     "image": "/assets/Database Images/unrestricted nodes/2.webp"
@@ -180,45 +180,12 @@
     "image": "/assets/extras/batibotDit.webp"
   },
   {
-    "scene": "rollehall",
-    "back": ["node231", "node232", "node233"],
-    "location": "CvSU Rolle Hall",
-    "coords": {
-      "x": 0.673,
-      "y": 0.813,
-      "type": "venue"
-    },
-    "image": "/assets/extras/batibotDit.webp"
-  },
-  {
-    "scene": "icon",
-    "back": ["node236", "node238"],
-    "location": "Interntional Convention Center (ICON)",
-    "coords": {
-      "x": 0.673,
-      "y": 0.813,
-      "type": "venue"
-    },
-    "image": "/assets/extras/batibotDit.webp"
-  },
-  {
-    "scene": "icon",
-    "back": ["node236", "node238"],
-    "location": "Interntional Convention Center (ICON)",
-    "coords": {
-      "x": 0.673,
-      "y": 0.813,
-      "type": "venue"
-    },
-    "image": "/assets/extras/batibotDit.webp"
-  },
-  {
     "scene": "grandstand",
     "location": "Grandstand",
     "desc": "This is the university's grandstand",
     "coords": {
-      "x": 0.406,
-      "y": 1.165,
+      "x": 0.392,
+      "y": 1.139,
       "type": "venue"
     },
     "image": "/assets/Database Images/unrestricted nodes/108.webp"
@@ -296,6 +263,39 @@
     "coords": {
       "x": 0.498,
       "y": 0.792,
+      "type": "attractions"
+    },
+    "image": "/assets/Database Images/unrestricted nodes/108.webp"
+  },
+  {
+    "scene": "restroomadmin",
+    "location": "Restroom beside Admin Building",
+    "desc": "Restroom near Admin",
+    "coords": {
+      "x": 0.418,
+      "y": 1.003,
+      "type": "restroom"
+    },
+    "image": ""
+  },
+  {
+    "scene": "washareaAdmin",
+    "location": "Wash Area beside Admin Building",
+    "desc": "Wash Area near Admin",
+    "coords": {
+      "x": 0.423,
+      "y": 1.011,
+      "type": "washarea"
+    },
+    "image": ""
+  },
+  {
+    "scene": "wtc",
+    "location": "Water Testing Center",
+    "desc": "Water Testing Center building soon to open",
+    "coords": {
+      "x": 0.33,
+      "y": 0.84,
       "type": "attractions"
     },
     "image": "/assets/Database Images/unrestricted nodes/108.webp"
