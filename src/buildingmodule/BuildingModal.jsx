@@ -111,7 +111,7 @@ const BuildingModal = ({
   // useEffect(() => {}, [current_info, scene]);
 
   // Return Null if it is not visible
-  if (!visible) return null;
+  if (!visible || !current_info) return null;
 
   console.log("Current Info:", current_info);
 

@@ -222,8 +222,7 @@ const MapModule = ({
             // Check if the clicked point is inside the overlay bounds
 
             if (overlayBounds.containsPoint(viewportPoint)) {
-              if (overlay.type === "bldg" || ) {
-
+              if (overlay.type === "bldg") {
               }
               console.log("Overlay Scene:", overlay.scene);
               openBldgModal(overlay.scene, "map");
