@@ -12,7 +12,6 @@ import BuildingModal from "../../buildingmodule/BuildingModal"; // Building Moda
 
 /* Icons */
 import { VscFeedback } from "react-icons/vsc"; // Feedback Button
-import { FiLink } from "react-icons/fi"; // Share Button
 import { GrMap } from "react-icons/gr"; // Map Button
 import { IoMdSearch } from "react-icons/io"; // Search Button
 import { PiPlayCircleLight } from "react-icons/pi"; // Autoplay Button

@@ -14,6 +14,7 @@ import { BsFilterRight } from "react-icons/bs"; // Filter Button
 import { GiPathDistance } from "react-icons/gi"; // Path finding Button
 import { ImLocation } from "react-icons/im"; // Current Location Off Button
 import { ImLocation2 } from "react-icons/im"; // Current Location On Button
+import { IoIosClose } from "react-icons/io"; // Close Button
 
 /* Overlay Icons */
 import { FaCircle } from "react-icons/fa6"; // Undefined Icon
@@ -28,6 +29,9 @@ const MapModule = ({
   openBldgModal,
   setMode,
 }) => {
+  const [selected_extra, setSelectedExtra] = useState(); // Selected Extra State
+  const [extraCheck, setExtraCheck] = useState(false); // Extra Check State
+
   /* OpenSeadragon Viewer */
   const osdRef = useRef(); // Reference to the OSD element
   const [osdLoaded, setOsdLoaded] = useState(false); // If OSD is loaded
@@ -42,6 +46,7 @@ const MapModule = ({
   const [targetScene, setTargetScene] = useState(""); // Target Scene for Building Modal
 
   /* Overlays */
+
   // function to generate Point of Interests
   function generatePOI() {
     const temp = []; // Temporary Array where modified parts of database will be stored
@@ -64,6 +69,7 @@ const MapModule = ({
         x: building.coords.x,
         y: building.coords.y,
         type: building.coords.type,
+        state: false,
       });
     });
     return temp;
@@ -128,7 +134,11 @@ const MapModule = ({
         viewer.removeOverlay(overlay.id);
       });
     });
+
     viewer.removeOverlay("current location");
+
+    viewer.removeOverlay("popup");
+
     Object.keys(overlays).forEach((key) => {
       overlays[key].map((overlay) => {
         const div = document.getElementById(overlay.id);
@@ -197,6 +207,11 @@ const MapModule = ({
       }
     });
 
+    function popupUI(overlay, index) {
+      console.log("Displaying Extras Popup");
+      return <div id="test" className="h-10 w-10 bg-black"></div>;
+    }
+
     // When OSD Canvas is clicked
     viewerInstance.addHandler("canvas-click", function (event) {
       // console.log("Canvas Clicked");
@@ -207,7 +222,7 @@ const MapModule = ({
 
       // Map through all overlays to get overlayid and bounds
       current_overlays.map((overlayType) => {
-        overlays[overlayType].map((overlay) => {
+        overlays[overlayType].map((overlay, index) => {
           if (
             currLoc.coords.x !== overlay.x &&
             currLoc.coords.y !== overlay.y
@@ -222,10 +237,24 @@ const MapModule = ({
             // Check if the clicked point is inside the overlay bounds
 
             if (overlayBounds.containsPoint(viewportPoint)) {
-              if (overlay.type === "bldg") {
+              let found = false;
+              buildingsDB.find((buildings) => {
+                if (buildings.scene === overlay.scene) {
+                  console.log("Building ", overlay);
+                  openBldgModal(overlay.scene, "map");
+                  found = true;
+                }
+              });
+              if (!found) {
+                extrasDB.find((extras) => {
+                  if (extras.scene === overlay.scene) {
+                    overlay.state = !overlay.state;
+                    console.log("Overlay:", overlay);
+                    setSelectedExtra(extras);
+                    setExtraCheck(overlay.state);
+                  }
+                });
               }
-              console.log("Overlay Scene:", overlay.scene);
-              openBldgModal(overlay.scene, "map");
             }
           }
         });
@@ -247,6 +276,11 @@ const MapModule = ({
       viewerInstance.destroy();
     };
   }, []);
+
+  // Subject for remove
+  useEffect(() => {
+    console.log("Extra Check:", extraCheck);
+  }, [extraCheck]);
 
   /* Dynamic Overlay Loader */
   useEffect(() => {
@@ -711,6 +745,7 @@ const MapModule = ({
         >
           {/* Header Space */}
           <div className="py-10" />
+
           {/* Header Space */}
           {/* Content Space */}
           <div className=" relative w-full">
@@ -722,6 +757,48 @@ const MapModule = ({
                 pathfinding={pathFinding}
                 generatePOI={generatePOI}
               />
+            ) : null}
+
+            {/* Extras Display Modal */}
+            {selected_extra && extraCheck ? (
+              <div className="pointer-events-none relative z-20 flex h-full items-center justify-center bg-black bg-opacity-30">
+                <div
+                  style={{ fontSize: "12px" }}
+                  className="relative bottom-11 flex h-28 w-28 flex-col items-center rounded-md bg-green-500 p-1 shadow-2xl md:h-64 md:w-96"
+                >
+                  {/* Close Button */}
+                  <button
+                    className="pointer-events-auto absolute right-0 p-1"
+                    onClick={() => {
+                      setSelectedExtra();
+                      setExtraCheck(!extraCheck);
+                    }}
+                  >
+                    <IoIosClose size={30} />
+                  </button>
+                  <div className="p3 flex h-3/4 w-3/4 flex-col items-center justify-center overflow-hidden pt-6 shadow-lg">
+                    <img
+                      src={
+                        selected_extra.image
+                          ? selected_extra.image
+                          : "https://via.placeholder.com/150"
+                      }
+                      className="h-full w-full rounded-md object-cover shadow-md"
+                    />
+                  </div>
+                  <div className="m-5 flex flex-col items-center justify-center gap-3">
+                    <div className="full h-auto w-auto rounded-3xl bg-white p-2 shadow-lg">
+                      <div className="text-center font-roboto text-xl font-semibold text-green-500">
+                        {selected_extra.location}
+                      </div>
+                    </div>
+
+                    <div className="text-center font-roboto text-xs text-white">
+                      {selected_extra.desc ? `(${selected_extra.desc})` : null}
+                    </div>
+                  </div>
+                </div>
+              </div>
             ) : null}
 
             {/* Filter Button */}
@@ -806,7 +883,7 @@ const MapModule = ({
           {/* Content Space */}
 
           {/* Footer Space */}
-          <div className="py-10 md:hidden"></div>
+          <div className="py-10 md:hidden" />
         </div>
       )}
       {/* Map Legend (Placeholder: Not responsive in mobile)*/}

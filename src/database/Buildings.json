@@ -398,8 +398,8 @@
     ]
   },
   {
-    "scene": "admin2",
-    "location": "Administration Building",
+    "scene": "cashier",
+    "location": "University Cashier",
     "image": "/assets/Database Images/unrestricted nodes/267.webp",
     "coords": {
       "x": 0.4,
@@ -411,7 +411,7 @@
         "id": 1,
         "type": "info",
         "class": "info",
-        "target": "admin2",
+        "target": "cashier",
         "yaw": 54.81,
         "pitch": 9.5
       }

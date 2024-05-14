@@ -447,7 +447,7 @@ const BuildingModal = ({
               )}
 
               {/* Facilities */}
-              {current_info && activeButton === "courses" && (
+              {current_info && activeButton === "facilities" && (
                 <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">
                   <ul className="justify-start text-balance">
                     <h1 className="pb-5 text-2xl">Facilities</h1>
