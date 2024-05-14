@@ -208,8 +208,9 @@ function Module360({
   };
 
   // Update the URL based on the initial yaw and pitch
+  // need to remove private after testing
   useEffect(() => {
-    if (access !== "private") {
+    if (access !== "public" || access !== "private") {
       const newUrl = `/app/${select_Scene.scene}?yaw=${initialYaw}&pitch=${initialPitch}`;
       navigate(newUrl);
     }
