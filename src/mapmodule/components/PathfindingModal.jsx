@@ -148,14 +148,14 @@ const PathfindingModal = ({
                   {/* Destination Container */}
                   {/* Vehicle State Button */}
                   <div className="flex items-center p-1">
-                    <button
+                    {/* <button
                       className={`flex h-full items-center justify-center rounded-full border-2 p-1 ${travelType === "vehicle" ? "bg-blue-500 text-white" : "text-blue-500"} border-blue-500`}
                       onClick={() => {
                         setTravelType("vehicle");
                       }}
                     >
                       <FaCarAlt size={25} />
-                    </button>
+                    </button> */}
                   </div>
                 </div>
                 {/* Vehicle State Button */}

@@ -9,9 +9,8 @@
       "y": 1.263,
       "type": "construction"
     },
-    "image": "/assets/Database Images/unrestricted nodes/17.webp"
+    "image": "/assets/Building Module/Extras/blue dorm under construction.webp"
   },
-
   {
     "scene": "pd",
     "back": ["node19"],
@@ -22,19 +21,19 @@
       "y": 1.25,
       "type": "construction"
     },
-    "image": "/assets/Database Images/unrestricted nodes/19.webp"
+    "image": "/assets/Building Module/Extras/bdpd.webp"
   },
   {
     "scene": "restroomIH1",
     "back": ["node43"],
-    "desc": "Restroo, near IH1",
+    "desc": "Restroom, near IH1",
     "location": "Restroom IH1",
     "coords": {
       "x": 0.556,
       "y": 0.85,
       "type": "restroom"
     },
-    "image": "/assets/Database Images/unrestricted nodes/19.webp"
+    "image": "/assets/Building Module/Extras/bio_sci_rr.webp"
   },
   {
     "scene": "hostel",
@@ -46,7 +45,7 @@
       "y": 0.815,
       "type": "construction"
     },
-    "image": "/assets/Database Images/unrestricted nodes/2.webp"
+    "image": "/assets/Building Module/Extras/hostel.webp"
   },
   {
     "scene": "batibotcas",
@@ -56,7 +55,8 @@
       "x": 0.485,
       "y": 0.969,
       "type": "batibot"
-    }
+    },
+    "image": "/assets/Building Module/Extras/batibot_cas.webp"
   },
   {
     "scene": "kioskdit",
@@ -66,7 +66,8 @@
       "x": 0.343,
       "y": 0.921,
       "type": "batibot"
-    }
+    },
+    "image": "/assets/Building Module/Extras/kiosk dit.webp"
   },
   {
     "scene": "Vase",
@@ -87,7 +88,7 @@
       "y": 0.906,
       "type": "attractions"
     },
-    "image": "/assets/extras/batibotDit.webp"
+    "image": "/assets/Building Module/Extras/big jar.webp"
   },
   {
     "scene": "quad",
@@ -103,13 +104,14 @@
   {
     "scene": "ces",
     "back": ["node25", "node26"],
-    "location": "Central Expert Station",
+    "location": "Central Experiment Station",
+    "desc": "Central Experiment Station is a crops farm where crop experimentation is usually is being conducted",
     "coords": {
       "x": 0.675,
       "y": 1.116,
       "type": "farm"
     },
-    "image": "/assets/extras/batibotDit.webp"
+    "image": ""
   },
   {
     "scene": "kioskphysci",
@@ -119,17 +121,6 @@
       "x": 0.458,
       "y": 0.904,
       "type": "batibot"
-    },
-    "image": "/assets/extras/batibotDit.webp"
-  },
-  {
-    "scene": "courtsnearOval",
-    "back": ["node104"],
-    "location": "Court near Oval",
-    "coords": {
-      "x": 0.434,
-      "y": 1.227,
-      "type": "court"
     },
     "image": "/assets/extras/batibotDit.webp"
   },
@@ -155,7 +146,7 @@
       "y": 1.105,
       "type": "restroom"
     },
-    "image": "/assets/Database Images/unrestricted nodes/15.webp"
+    "image": "/assets/Building Module/Extras/osas_rr.webp"
   },
   {
     "scene": "brite",
@@ -177,7 +168,7 @@
       "y": 0.813,
       "type": "cafeteria"
     },
-    "image": "/assets/extras/batibotDit.webp"
+    "image": "/assets/Building Module/Extras/saluysoy.webp"
   },
   {
     "scene": "grandstand",
@@ -188,7 +179,7 @@
       "y": 1.139,
       "type": "venue"
     },
-    "image": "/assets/Database Images/unrestricted nodes/108.webp"
+    "image": "/assets/Building Module/Extras/grandstand.webp"
   },
   {
     "scene": "kaong",
@@ -254,7 +245,7 @@
       "y": 0.84,
       "type": "school_facilities"
     },
-    "image": "/assets/Database Images/unrestricted nodes/108.webp"
+    "image": "/assets/Building Module/Extras/recreational.webp"
   },
   {
     "scene": "lagoon",
@@ -265,7 +256,7 @@
       "y": 0.792,
       "type": "attractions"
     },
-    "image": "/assets/Database Images/unrestricted nodes/108.webp"
+    "image": "/assets/Building Module/Extras/lagoon.webp"
   },
   {
     "scene": "restroomadmin",
@@ -276,7 +267,7 @@
       "y": 1.003,
       "type": "restroom"
     },
-    "image": ""
+    "image": "/assets/Building Module/Extras/admin_rr.webp"
   },
   {
     "scene": "washareaAdmin",
@@ -298,6 +289,6 @@
       "y": 0.84,
       "type": "attractions"
     },
-    "image": "/assets/Database Images/unrestricted nodes/108.webp"
+    "image": "/assets/Building Module/Extras/cwtlab.webp"
   }
 ]

@@ -14,7 +14,7 @@ const BuildingGallery = ({ imageSet }) => {
   const images = checkImageSet();
 
   function checkImageSet() {
-    if (imageSet === undefined) {
+    if (imageSet === undefined || imageSet.length === 0) {
       return new Array(10).fill("https://via.placeholder.com/150");
     } else {
       return [...imageSet];

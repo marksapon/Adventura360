@@ -423,13 +423,16 @@ const BuildingModal = ({
             </div>
 
             {/* Gallery */}
-            <div className="h-auto w-full sm:h-auto">
-              {current_info ? (
-                <BuildingGallery imageSet={current_info.gallery} />
-              ) : (
-                <BuildingGallery />
-              )}
-            </div>
+            {current_info && current_info.gallery && (
+              <div className="h-auto w-full sm:h-auto">
+                {current_info ? (
+                  <BuildingGallery imageSet={current_info.gallery} />
+                ) : (
+                  <BuildingGallery />
+                )}
+              </div>
+            )}
+
             {/* Gallery */}
 
             {/* CONTENT SECTION */}

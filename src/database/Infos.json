@@ -8,12 +8,7 @@
     "tags": ["ceit", "school"],
     "image": "/assets/Building Module/Background/dit.webp",
     "desc": "The Department of Information Technology (DIT), nestled within the College of Engineering and Information Technology (CEIT), is housed in a modern building characterized by sleek architecture and cutting-edge facilities. Its spacious atrium welcomes students and visitors, while state-of-the-art classrooms, labs, and collaborative spaces provide an ideal environment for learning and research. From interactive displays showcasing the latest advancements to dedicated research wings driving innovation, the department's building serves as a dynamic hub for aspiring technologists and researchers alike.",
-
-    "gallery": [
-      "/assets/Building Module/Gallery/dit/01.webp",
-      "/assets/Building Module/Gallery/dit/02.webp",
-      "/assets/Building Module/Gallery/dit/03.webp"
-    ]
+    "gallery": []
   },
   {
     "scene": "osa",
@@ -27,11 +22,7 @@
 
     "more_info": "https://cvsu.edu.ph/office-of-student-affairs-and-services/",
 
-    "gallery": [
-      "/assets/Building Module/Gallery/dit/01.webp",
-      "/assets/Building Module/Gallery/dit/02.webp",
-      "/assets/Building Module/Gallery/dit/03.webp"
-    ]
+    "gallery": []
   },
   {
     "scene": "ih2",
@@ -47,9 +38,10 @@
     "more_info": "https://cvsu.edu.ph/university-dormitory/",
 
     "gallery": [
-      "/assets/Building Module/Gallery/dit/01.webp",
-      "/assets/Building Module/Gallery/dit/02.webp",
-      "/assets/Building Module/Gallery/dit/03.webp"
+      "/assets/Building Module/Gallery/IH2/01.webp",
+      "/assets/Building Module/Gallery/IH2/02.webp",
+      "/assets/Building Module/Gallery/IH2/03.webp",
+      "/assets/Building Module/Gallery/IH2/04.webp"
     ]
   },
   {
@@ -74,11 +66,7 @@
 
     "more_info": "https://cvsu.edu.ph/2018/01/college-of-sports-and-physical-education-and-recreation/",
 
-    "gallery": [
-      "/assets/Building Module/Gallery/dit/01.webp",
-      "/assets/Building Module/Gallery/dit/02.webp",
-      "/assets/Building Module/Gallery/dit/03.webp"
-    ]
+    "gallery": []
   },
   {
     "scene": "bahayalumni",
@@ -128,7 +116,7 @@
     "acronym": "new cemds",
     "type": "college_buildings",
     "tags": ["school", "cemds"],
-    "image": "",
+    "image": "/assets/Building Module/Background/cemds.webp",
     "desc": "Welcome to the College of Economics, Management, and Development Studies New Building—a modern marvel of academia and innovation! Situated at the heart of campus, this state-of-the-art facility embodies the spirit of forward-thinking education and research. With its sleek design and advanced technology, the building provides a dynamic environment for students and faculty to explore the complexities of economics, management, and development studies. From spacious lecture halls to collaborative workspaces, every corner is designed to inspire creativity and critical thinking. Whether studying economic theory, honing management skills, or researching sustainable development practices, the College of Economics, Management, and Development Studies New Building offers a vibrant setting for academic excellence and growth.",
 
     "dept": [
@@ -301,35 +289,16 @@
     "info_type": "info",
     "tags": ["school", "leisure"],
     "image": "/assets/Building Module/Background/IH1.webp",
-    "desc": "Welcome to International House 1—a bustling dormitory designed to be a home away from home for university students. Here, students from diverse backgrounds come together to form a vibrant community, fostering lifelong friendships and unforgettable experiences. With comfortable living spaces and modern amenities, International House 1 provides a supportive environment where students can thrive academically, socially, and personally. International House 1 is currently under College of Nursing.",
+    "desc": "Welcome to International House 1 —a bustling dormitory designed to be a home away from home for university students. Here, students from diverse backgrounds come together to form a vibrant community, fostering lifelong friendships and unforgettable experiences. With comfortable living spaces and modern amenities, International House 1 provides a supportive environment where students can thrive academically, socially, and personally. International House 1 is currently under College of Nursing.",
 
     "more_info": "https://cvsu.edu.ph/university-dormitory/",
 
     "gallery": [
-      "/assets/Building Module/Gallery/dit/01.webp",
-      "/assets/Building Module/Gallery/dit/02.webp",
-      "/assets/Building Module/Gallery/dit/03.webp"
+      "/assets/Building Module/Gallery/IH1/01.webp",
+      "/assets/Building Module/Gallery/IH1/02.webp"
     ]
   },
-  {
-    "scene": "ih1",
-    "name": "International House 1 (Dormitory)",
-    "access": "account",
-    "acronym": "ih2",
-    "type": "venue",
-    "info_type": "info",
-    "tags": ["school", "leisure"],
-    "image": "/assets/Building Module/Background/IH1.webp",
-    "desc": "Welcome to International House 1—a bustling dormitory designed to be a home away from home for university students. Here, students from diverse backgrounds come together to form a vibrant community, fostering lifelong friendships and unforgettable experiences. With comfortable living spaces and modern amenities, International House 1 provides a supportive environment where students can thrive academically, socially, and personally. International House 1 is currently under College of Nursing.",
 
-    "more_info": "https://cvsu.edu.ph/university-dormitory/",
-
-    "gallery": [
-      "/assets/Building Module/Gallery/dit/01.webp",
-      "/assets/Building Module/Gallery/dit/02.webp",
-      "/assets/Building Module/Gallery/dit/03.webp"
-    ]
-  },
   {
     "scene": "biosci",
     "name": "Department of Biological Sciences",

@@ -25,76 +25,6 @@
         "target": "node103",
         "yaw": 324.59,
         "pitch": -20
-      },
-      {
-        "type": "info",
-        "class": "info",
-        "target": "",
-        "yaw": 326.77,
-        "pitch": 2.56
-      },
-      {
-        "type": "info",
-        "class": "attractions",
-        "target": "",
-        "yaw": 320.86,
-        "pitch": 2.78
-      },
-      {
-        "type": "info",
-        "class": "cafeteria",
-        "target": "",
-        "yaw": 314.84,
-        "pitch": 2.78
-      },
-      {
-        "type": "info",
-        "class": "farm",
-        "target": "",
-        "yaw": 347.23,
-        "pitch": 2.78
-      },
-      {
-        "type": "info",
-        "class": "court",
-        "target": "",
-        "yaw": 336.88,
-        "pitch": 2.78
-      },
-      {
-        "type": "info",
-        "class": "venue",
-        "target": "",
-        "yaw": 341.33,
-        "pitch": 2.78
-      },
-      {
-        "type": "popup",
-        "class": "restroom",
-        "target": "restroomIH1",
-        "yaw": 347.35,
-        "pitch": -2.62
-      },
-      {
-        "type": "popup",
-        "class": "washarea",
-        "target": "washareaOval",
-        "yaw": 142.08,
-        "pitch": 3.14
-      },
-      {
-        "type": "popup",
-        "class": "batibot",
-        "target": "kioskdit",
-        "yaw": 331.58,
-        "pitch": 2.78
-      },
-      {
-        "type": "popup",
-        "class": "construction",
-        "target": "renovate",
-        "yaw": 155.01,
-        "pitch": 3.14
       }
     ],
     "travelType": "walk"
@@ -853,7 +783,7 @@
         "pitch": -20
       },
       {
-        "type": "info",
+        "type": "popup",
         "class": "farm",
         "target": "ces",
         "yaw": 317.22,
@@ -958,7 +888,7 @@
       {
         "id": 1,
         "type": "move",
-        "target": "node30",
+        "target": "node31",
         "yaw": 15.19,
         "pitch": -20
       },
@@ -970,45 +900,15 @@
         "pitch": -20
       },
       {
-        "type": "bldg",
-        "class": "bldg",
+        "type": "popup",
+        "class": "school_facilities",
         "target": "wtc",
-        "yaw": 324.9,
-        "pitch": 3.27
+        "yaw": 275.6,
+        "pitch": 1.49
       }
     ]
   },
-  {
-    "scene": "node30",
-    "image": "/assets/Database Images/unrestricted nodes/30.webp",
-    "coords": {
-      "x": 0.61,
-      "y": 1.045
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node31",
-        "yaw": 26.19,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node29",
-        "yaw": 204.52,
-        "pitch": -20
-      },
-      {
-        "type": "bldg",
-        "class": "bldg",
-        "target": "wtc",
-        "yaw": 275.2,
-        "pitch": 1.34
-      }
-    ]
-  },
+
   {
     "scene": "node31",
     "image": "/assets/Database Images/unrestricted nodes/31.webp",
@@ -1027,7 +927,7 @@
       {
         "id": 2,
         "type": "move",
-        "target": "node30",
+        "target": "node29",
         "yaw": 194.59,
         "pitch": -20
       },
