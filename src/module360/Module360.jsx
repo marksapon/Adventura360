@@ -408,7 +408,9 @@ function Module360({
           setInsideBuilding(target);
           restructureInternalNodes(internal[target], target);
           console.log("Internal Extras:", internal[`${target}_extras`]);
-          setCurr_InternalExtras(internal[`${target}_extras`]);
+          if (internal[`${target}_extras`]) {
+            setCurr_InternalExtras(internal[`${target}_extras`]);
+          }
         }
       });
     } else {
@@ -593,39 +595,39 @@ function Module360({
                         console.log("Extras:", extras.image);
                         return (
                           <div
-                            className="absolute -top-20 flex h-28 w-28 items-center rounded-md bg-white p-1 shadow-2xl md:-bottom-11 md:h-40 md:w-72 md:gap-7"
+                            className="absolute flex h-28 w-28 items-center justify-center rounded-md bg-white md:h-56 md:w-72"
                             key={index2}
                           >
-                            <div className="absolute left-0 top-0 flex h-full w-full items-center justify-center">
+                            <div className="h-full w-full grid-cols-2">
+                              {/* IMAGE */}
+                              {extras.image && (
+                                <div className=" flex md:h-28 w-full flex-col items-center justify-center">
+                                  <img
+                                    src={extras.image}
+                                    className="flex h-full w-full items-center justify-center rounded-sm object-cover shadow-md"
+                                  />
+                                </div>
+                              )}
+                              {/* Content */}
                               <div
-                                className={`h-7 w-7 rounded-full md:h-14 md:w-14 ${colorMap[hotspot.type] || "defaultcolor"} pointer-events-auto flex cursor-pointer items-center justify-center`}
-                              >
-                                {getIcon(hotspot.class)}
-                              </div>
-                            </div>
-
-                            <div>
-                              <div
-                                className="flex h-28 w-28 flex-col items-center rounded-md bg-white p-1 shadow-2xl md:h-56 md:w-72 md:gap-7"
+                                className="relative mt-3 flex h-full w-full flex-col items-center gap-1 overflow-hidden shadow-2xl"
                                 key={index2}
                               >
-                                {extras.image && (
-                                  <div className="p3 flex h-48 w-full flex-col items-center justify-center overflow-hidden p-2 shadow-lg">
-                                    <img
-                                      src={extras.image}
-                                      className="h-full w-full rounded-md object-cover shadow-md"
-                                    />
-                                  </div>
-                                )}
-                                <div className="text-center text-xs">
-                                  <div className="full h-auto w-auto rounded-3xl bg-white p-2 shadow-lg">
-                                    <div className="text-center font-roboto text-xl font-semibold text-green-500">
-                                      {extras.location}
-                                    </div>
-                                  </div>
-
-                                  <div>{extras.desc}</div>
+                                {/* TEXT */}
+                                <div className="flex-shrink-1 flex h-16 w-full items-center justify-center text-center font-roboto text-lg font-semibold text-green-500">
+                                  {extras.location}
                                 </div>
+                                <div className="flex-shrink-1 flex h-16 w-full justify-center items-start text-center font-roboto text-xs">
+                                  {extras.desc}
+                                </div>
+                              </div>
+                            </div>
+                            {/* ICON */}
+                            <div className="absolute z-10 flex h-full w-full items-center justify-center">
+                              <div
+                                className={`h-7 w-7 rounded-full  md:h-14 md:w-14 ${colorMap[hotspot.type] || "defaultcolor"} pointer-events-auto flex cursor-pointer items-center justify-center`}
+                              >
+                                {getIcon(hotspot.class)}
                               </div>
                             </div>
                           </div>
