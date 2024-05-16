@@ -127,12 +127,15 @@ function Module360({
 
   // Current Internal Type Active
   const [curr_Internal, setCurr_Internal] = useState([]);
+  const [curr_InternalExtras, setCurr_InternalExtras] = useState([]);
 
   // Last Building State
   const [insideBuilding, setInsideBuilding] = useState("");
 
   // Current Extras Popup State
   const [curr_Extras, setCurr_Extras] = useState(generateExtras);
+
+  // Current Extras
 
   // Function to get the current scene based on the URL queries
   function getScene() {
@@ -388,7 +391,7 @@ function Module360({
     } else if (type === "bldg") {
       console.log(">Moving to building"); // Move to Building
       setBackButton(true); // Set Back Button to True
-      setIsOutside(true);
+      setIsOutside(true); //
       changeScene(buildingsDB, target); // Change Scene
     } else if (type === "info") {
       console.log("Building Target: ", target);
@@ -404,6 +407,8 @@ function Module360({
           console.log("Moving to Internal Node");
           setInsideBuilding(target);
           restructureInternalNodes(internal[target], target);
+          console.log("Internal Extras:", internal[`${target}_extras`]);
+          setCurr_InternalExtras(internal[`${target}_extras`]);
         }
       });
     } else {
@@ -460,18 +465,33 @@ function Module360({
     if (select_Scene && select_Scene.hotspot) {
       select_Scene.hotspot.forEach((hotspot, index) => {
         if (hotspot.type === "popup") {
-          extrasDB.forEach((extras) => {
-            if (extras.scene === hotspot.target) {
-              const extrasFormat = new Extras(
-                index,
-                extras.scene,
-                extras.image,
-                extras.location,
-                extras.desc,
-              );
-              temp_extras.push(extrasFormat);
-            }
-          });
+          if (isInside) {
+            curr_InternalExtras.forEach((extras) => {
+              if (extras.scene === hotspot.target) {
+                const extrasFormat = {
+                  id: index,
+                  scene: extras.scene,
+                  location: extras.location,
+                  desc: extras.desc,
+                  state: false,
+                };
+                temp_extras.push(extrasFormat);
+              }
+            });
+          } else {
+            extrasDB.forEach((extras) => {
+              if (extras.scene === hotspot.target) {
+                const extrasFormat = new Extras(
+                  index,
+                  extras.scene,
+                  extras.image,
+                  extras.location,
+                  extras.desc,
+                );
+                temp_extras.push(extrasFormat);
+              }
+            });
+          }
         }
       });
     }
@@ -573,23 +593,40 @@ function Module360({
                         console.log("Extras:", extras.image);
                         return (
                           <div
-                            style={{ fontSize: "12px" }}
-                            className="absolute -bottom-11 flex h-28 w-28 flex-col items-center gap-3 rounded-md bg-white p-1 shadow-2xl md:-bottom-11 md:h-48 md:w-60 md:gap-7"
+                            className="absolute -top-20 flex h-28 w-28 items-center rounded-md bg-white p-1 shadow-2xl md:-bottom-11 md:h-40 md:w-72 md:gap-7"
                             key={index2}
                           >
-                            <img
-                              src={extras.image}
-                              alt={extras.desc}
-                              className="h-9/16 w-16/9 flex items-center justify-center rounded-sm bg-cover bg-center bg-no-repeat"
-                            />
-
-                            <div
-                              className={` absolute bottom-11 h-7 w-7 rounded-full md:h-14 md:w-14 ${colorMap[hotspot.type] || "defaultcolor"} pointer-events-auto flex cursor-pointer items-center justify-center`}
-                            >
-                              {getIcon(hotspot.class)}
+                            <div className="absolute left-0 top-0 flex h-full w-full items-center justify-center">
+                              <div
+                                className={`h-7 w-7 rounded-full md:h-14 md:w-14 ${colorMap[hotspot.type] || "defaultcolor"} pointer-events-auto flex cursor-pointer items-center justify-center`}
+                              >
+                                {getIcon(hotspot.class)}
+                              </div>
                             </div>
-                            <div className="text-center text-xs">
-                              {extras.desc}
+
+                            <div>
+                              <div
+                                className="flex h-28 w-28 flex-col items-center rounded-md bg-white p-1 shadow-2xl md:h-56 md:w-72 md:gap-7"
+                                key={index2}
+                              >
+                                {extras.image && (
+                                  <div className="p3 flex h-48 w-full flex-col items-center justify-center overflow-hidden p-2 shadow-lg">
+                                    <img
+                                      src={extras.image}
+                                      className="h-full w-full rounded-md object-cover shadow-md"
+                                    />
+                                  </div>
+                                )}
+                                <div className="text-center text-xs">
+                                  <div className="full h-auto w-auto rounded-3xl bg-white p-2 shadow-lg">
+                                    <div className="text-center font-roboto text-xl font-semibold text-green-500">
+                                      {extras.location}
+                                    </div>
+                                  </div>
+
+                                  <div>{extras.desc}</div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         );
@@ -679,6 +716,12 @@ function Module360({
             </div>
           </div>
         </div>
+
+        <div className="absolute bottom-0 left-0 z-20 m-2 text-white">
+          <div>Location: {select_Scene.scene}</div>
+          <div>Source: {select_Scene.image}</div>
+        </div>
+
         {/* Minimap */}
         {/* Toggle Minimap */}
         <div className="absolute bottom-0 right-0  flex items-center justify-center pb-20 pr-2 sm:pb-20 sm:pr-2 md:pb-2 md:pr-2 lg:pb-2 lg:pr-2">
@@ -712,8 +755,7 @@ function Module360({
 
 export default Module360;
 /* DEBUG PURPOSE
-<div>Location: {select_Scene.scene}</div>
-<div>Source: {select_Scene.image}</div>
+
 
 
 
