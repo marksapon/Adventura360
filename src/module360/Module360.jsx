@@ -595,13 +595,13 @@ function Module360({
                         console.log("Extras:", extras.image);
                         return (
                           <div
-                            className="absolute flex h-28 w-28 items-center justify-center rounded-md bg-white md:h-56 md:w-72"
+                            className="absolute flex h-36 w-36 items-center justify-center rounded-md bg-white md:h-56 md:w-72"
                             key={index2}
                           >
-                            <div className="h-full w-full grid-cols-2">
+                            <div className="grid h-full w-full grid-rows-2">
                               {/* IMAGE */}
                               {extras.image && (
-                                <div className=" flex md:h-28 w-full flex-col items-center justify-center">
+                                <div className=" flex w-full flex-col items-center justify-center md:h-28">
                                   <img
                                     src={extras.image}
                                     className="flex h-full w-full items-center justify-center rounded-sm object-cover shadow-md"
@@ -610,20 +610,24 @@ function Module360({
                               )}
                               {/* Content */}
                               <div
-                                className="relative mt-3 flex h-full w-full flex-col items-center gap-1 overflow-hidden shadow-2xl"
+                                className="= relative mt-3 flex h-full w-full flex-col items-center gap-1 overflow-hidden"
                                 key={index2}
                               >
                                 {/* TEXT */}
-                                <div className="flex-shrink-1 flex h-16 w-full items-center justify-center text-center font-roboto text-lg font-semibold text-green-500">
+                                <div className="flex-shrink-1 flex h-auto w-full items-center justify-center text-center font-roboto text-xs font-semibold text-green-500 md:h-16 md:text-lg">
                                   {extras.location}
                                 </div>
-                                <div className="flex-shrink-1 flex h-16 w-full justify-center items-start text-center font-roboto text-xs">
+                                <div
+                                  className={`flex-shrink-1 text-2xs flex w-full items-start justify-center  text-center font-roboto font-thin md:h-16 md:text-xs`}
+                                >
                                   {extras.desc}
                                 </div>
                               </div>
                             </div>
                             {/* ICON */}
-                            <div className="absolute z-10 flex h-full w-full items-center justify-center">
+                            <div
+                              className={`absolute z-10 flex h-full w-full ${extras.image ? "items-center" : "items-end p-2"} justify-center`}
+                            >
                               <div
                                 className={`h-7 w-7 rounded-full  md:h-14 md:w-14 ${colorMap[hotspot.type] || "defaultcolor"} pointer-events-auto flex cursor-pointer items-center justify-center`}
                               >
@@ -719,10 +723,10 @@ function Module360({
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 z-20 m-2 text-white">
+        {/* <div className="absolute bottom-0 left-0 z-20 m-2 text-white">
           <div>Location: {select_Scene.scene}</div>
           <div>Source: {select_Scene.image}</div>
-        </div>
+        </div> */}
 
         {/* Minimap */}
         {/* Toggle Minimap */}

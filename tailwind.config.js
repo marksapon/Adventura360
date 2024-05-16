@@ -11,6 +11,9 @@ export default {
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
       },
+      fontSize: {
+        "2xs": "8px",
+      },
     },
   },
   plugins: ["prettier-plugin-tailwindcss"],
