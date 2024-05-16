@@ -691,8 +691,8 @@ const MapModule = ({
                       bottom: "0%",
                       transform: "translateX(-50%)",
                       borderTop: `18px solid ${color}`,
-                      borderLeft: "12px solid transparent",
-                      borderRight: "12px solid transparent",
+                      borderLeft: "13px solid transparent",
+                      borderRight: "13px solid transparent",
                     }}
                   />
 
@@ -706,14 +706,21 @@ const MapModule = ({
                       width: "30px",
                       height: "30px",
                       borderRadius: "50%",
-                      backgroundColor: color,
+                      backgroundColor: "#fcfcfc",
                       alignItems: "center",
                       justifyContent: "center",
-                      color: "white",
+                      color: color,
                       pointerEvents: "auto",
                     }}
                   >
-                    {icon()}
+                    <div
+                      className="rounded-full p-1"
+                      style={{
+                        border: `4px solid ${color}`,
+                      }}
+                    >
+                      {icon()}
+                    </div>
                   </div>
                 </div>
               </div>

@@ -10,7 +10,6 @@
       {
         "type": "move",
         "target": "node2",
-
         "yaw": 280.46,
         "pitch": -20
       },
@@ -25,6 +24,13 @@
         "target": "node103",
         "yaw": 324.59,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "info",
+        "target": "gate1",
+        "yaw": 149.81,
+        "pitch": 18.12
       }
     ],
     "travelType": "walk"
@@ -50,6 +56,13 @@
         "target": "node1",
         "yaw": 88.51,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "info",
+        "target": "gate1",
+        "yaw": 104.11,
+        "pitch": 8.92
       }
     ]
   },
@@ -57,8 +70,8 @@
     "scene": "node3",
     "image": "/assets/Database Images/unrestricted nodes/3.webp",
     "coords": {
-      "x": 0.433,
-      "y": 1.268
+      "x": 0.432,
+      "y": 1.269
     },
     "hotspot": [
       {
@@ -76,11 +89,18 @@
         "pitch": -20
       },
       {
+        "id": 3,
+        "type": "move",
+        "target": "node343",
+        "yaw": 193.8,
+        "pitch": -20
+      },
+      {
         "type": "bldg",
         "class": "bldg",
         "target": "ih2",
-        "yaw": 221.81,
-        "pitch": 11.94
+        "yaw": 225.82,
+        "pitch": 6.33
       }
     ]
   },
@@ -135,6 +155,13 @@
         "type": "move",
         "target": "node4",
         "yaw": 98.31,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node342",
+        "yaw": 188.44,
         "pitch": -20
       },
       {
@@ -202,7 +229,7 @@
       {
         "id": 3,
         "type": "move",
-        "target": "",
+        "target": "node341",
         "yaw": 188.25,
         "pitch": -20
       },
@@ -463,7 +490,6 @@
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "popup",
         "class": "restroom",
         "target": "restroomOval",
@@ -471,7 +497,6 @@
         "pitch": 0.96
       },
       {
-        "id": 3,
         "type": "popup",
         "class": "washarea",
         "target": "washareaOval",
@@ -502,7 +527,6 @@
         "yaw": 97.71,
         "pitch": -20
       },
-
       {
         "type": "popup",
         "class": "construction",
@@ -1526,8 +1550,8 @@
         "id": 3,
         "type": "move",
         "target": "",
-        "yaw": 257.21,
-        "pitch": -20
+        "yaw": 198.17,
+        "pitch": -32
       },
       {
         "type": "bldg",
@@ -1786,6 +1810,13 @@
         "target": "node315",
         "yaw": 17.47,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "batibot",
+        "target": "kioskDEE",
+        "yaw": 120.78,
+        "pitch": 6.67
       }
     ]
   },
@@ -1831,6 +1862,13 @@
         "target": "ie",
         "yaw": 279.24,
         "pitch": 6.61
+      },
+      {
+        "type": "popup",
+        "class": "batibot",
+        "target": "kioskDEE",
+        "yaw": 57.36,
+        "pitch": 4.9
       }
     ]
   },
@@ -2231,13 +2269,6 @@
         "target": "",
         "yaw": 279.63,
         "pitch": -20
-      },
-      {
-        "id": 4,
-        "type": "move",
-        "target": "",
-        "yaw": 151.49,
-        "pitch": -20
       }
     ]
   },
@@ -2458,6 +2489,13 @@
         "target": "node77",
         "yaw": 20.7,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "info",
+        "target": "gate1",
+        "yaw": 193.64,
+        "pitch": 1.29
       }
     ]
   },
@@ -2698,6 +2736,13 @@
         "pitch": -20
       },
       {
+        "id": 4,
+        "type": "move",
+        "target": "",
+        "yaw": 15.23,
+        "pitch": -20
+      },
+      {
         "type": "bldg",
         "class": "bldg",
         "target": "cas",
@@ -2776,7 +2821,7 @@
       {
         "id": 5,
         "type": "move",
-        "target": "",
+        "target": "node333",
         "yaw": 31.16,
         "pitch": -20
       },
@@ -2989,20 +3034,6 @@
         "target": "node93",
         "yaw": 182.06,
         "pitch": -20
-      },
-      {
-        "id": 3,
-        "type": "move",
-        "target": "",
-        "yaw": 280.99,
-        "pitch": -20
-      },
-      {
-        "type": "bldg",
-        "class": "bldg",
-        "target": "cas",
-        "yaw": 278.71,
-        "pitch": 15.78
       }
     ]
   },
@@ -3055,14 +3086,14 @@
       {
         "id": 3,
         "type": "move",
-        "target": "",
+        "target": "node339",
         "yaw": 249.31,
         "pitch": -20
       },
       {
         "id": 4,
         "type": "move",
-        "target": "",
+        "target": "node334",
         "yaw": 88.58,
         "pitch": -20
       },
@@ -3114,7 +3145,7 @@
       {
         "id": 3,
         "type": "move",
-        "target": "",
+        "target": "node340",
         "yaw": 273.11,
         "pitch": -20
       },
@@ -6970,7 +7001,7 @@
       {
         "id": 1,
         "type": "move",
-        "target": "node237",
+        "target": "node242",
         "yaw": 279.57,
         "pitch": -20
       },
@@ -7134,6 +7165,13 @@
         "type": "move",
         "target": "node241",
         "yaw": 209.22,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node237",
+        "yaw": 117.12,
         "pitch": -20
       }
     ]
@@ -8338,7 +8376,7 @@
       {
         "id": 3,
         "type": "move",
-        "target": "",
+        "target": "node330",
         "yaw": 127.07,
         "pitch": -25.93
       },
@@ -8503,8 +8541,8 @@
     "scene": "node290",
     "image": "/assets/Database Images/unrestricted nodes/290.webp",
     "coords": {
-      "x": 0.447,
-      "y": 1.206
+      "x": 0.309,
+      "y": 1.011
     },
     "hotspot": [
       {
@@ -8527,8 +8565,8 @@
     "scene": "node291",
     "image": "/assets/Database Images/unrestricted nodes/291.webp",
     "coords": {
-      "x": 0.447,
-      "y": 1.206
+      "x": 0.311,
+      "y": 1.022
     },
     "hotspot": [
       {
@@ -8551,6 +8589,20 @@
         "target": "node301",
         "yaw": 280.61,
         "pitch": -25.93
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "ced",
+        "yaw": 262.66,
+        "pitch": 7.9
+      },
+      {
+        "type": "popup",
+        "class": "restroom",
+        "target": "restroomCED",
+        "yaw": 147.71,
+        "pitch": 3.06
       }
     ]
   },
@@ -8558,8 +8610,8 @@
     "scene": "node292",
     "image": "/assets/Database Images/unrestricted nodes/292.webp",
     "coords": {
-      "x": 0.447,
-      "y": 1.206
+      "x": 0.315,
+      "y": 1.035
     },
     "hotspot": [
       {
@@ -8589,6 +8641,20 @@
         "target": "",
         "yaw": 85.0,
         "pitch": -25.93
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "ced",
+        "yaw": 298.56,
+        "pitch": 4.02
+      },
+      {
+        "type": "popup",
+        "class": "restroom",
+        "target": "restroomCED",
+        "yaw": 104.69,
+        "pitch": 5.86
       }
     ]
   },
@@ -8596,8 +8662,8 @@
     "scene": "node293",
     "image": "/assets/Database Images/unrestricted nodes/293.webp",
     "coords": {
-      "x": 0.447,
-      "y": 1.206
+      "x": 0.312,
+      "y": 1.039
     },
     "hotspot": [
       {
@@ -8613,6 +8679,13 @@
         "target": "node292",
         "yaw": 21.0,
         "pitch": -25.93
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "hevted",
+        "yaw": 170.75,
+        "pitch": 4.21
       }
     ]
   },
@@ -8620,8 +8693,8 @@
     "scene": "node294",
     "image": "/assets/Database Images/unrestricted nodes/294.webp",
     "coords": {
-      "x": 0.447,
-      "y": 1.206
+      "x": 0.32,
+      "y": 1.065
     },
     "hotspot": [
       {
@@ -8644,6 +8717,13 @@
         "target": "node300",
         "yaw": 244.98,
         "pitch": -25.93
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "hevted",
+        "yaw": 111.37,
+        "pitch": 7.52
       }
     ]
   },
@@ -8651,8 +8731,8 @@
     "scene": "node295",
     "image": "/assets/Database Images/unrestricted nodes/295.webp",
     "coords": {
-      "x": 0.447,
-      "y": 1.206
+      "x": 0.325,
+      "y": 1.071
     },
     "hotspot": [
       {
@@ -8682,6 +8762,13 @@
         "target": "node300",
         "yaw": 290.78,
         "pitch": -25.93
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "hevted",
+        "yaw": 61.15,
+        "pitch": 6.25
       }
     ]
   },
@@ -8689,8 +8776,8 @@
     "scene": "node296",
     "image": "/assets/Database Images/unrestricted nodes/296.webp",
     "coords": {
-      "x": 0.447,
-      "y": 1.206
+      "x": 0.313,
+      "y": 1.078
     },
     "hotspot": [
       {
@@ -8720,8 +8807,8 @@
     "scene": "node297",
     "image": "/assets/Database Images/unrestricted nodes/297.webp",
     "coords": {
-      "x": 0.447,
-      "y": 1.206
+      "x": 0.324,
+      "y": 1.122
     },
     "hotspot": [
       {
@@ -8744,8 +8831,8 @@
     "scene": "node298",
     "image": "/assets/Database Images/unrestricted nodes/298.webp",
     "coords": {
-      "x": 0.447,
-      "y": 1.206
+      "x": 0.339,
+      "y": 1.076
     },
     "hotspot": [
       {
@@ -8768,8 +8855,8 @@
     "scene": "node299",
     "image": "/assets/Database Images/unrestricted nodes/299.webp",
     "coords": {
-      "x": 0.447,
-      "y": 1.206
+      "x": 0.35,
+      "y": 1.114
     },
     "hotspot": [
       {
@@ -8785,8 +8872,8 @@
     "scene": "node300",
     "image": "/assets/Database Images/unrestricted nodes/300.webp",
     "coords": {
-      "x": 0.447,
-      "y": 1.206
+      "x": 0.343,
+      "y": 1.066
     },
     "hotspot": [
       {
@@ -8833,6 +8920,13 @@
         "target": "node291",
         "yaw": 85.23,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "ced",
+        "yaw": 230.36,
+        "pitch": 5.45
       }
     ]
   },
@@ -8857,6 +8951,13 @@
         "target": "node301",
         "yaw": 26.96,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "ced",
+        "yaw": 248.43,
+        "pitch": 8.99
       }
     ]
   },
@@ -8881,6 +8982,13 @@
         "target": "node302",
         "yaw": 334.45,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "ced",
+        "yaw": 296.81,
+        "pitch": 8.51
       }
     ]
   },
@@ -8960,6 +9068,20 @@
         "target": "node307",
         "yaw": 23.92,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "washarea",
+        "target": "washareaDEE",
+        "yaw": 54.68,
+        "pitch": 2.04
+      },
+      {
+        "type": "popup",
+        "class": "batibot",
+        "target": "kioskDEE",
+        "yaw": 1.28,
+        "pitch": 2.73
       }
     ]
   },
@@ -8991,6 +9113,13 @@
         "target": "node310",
         "yaw": 2.46,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "parking",
+        "target": "parkingDEE",
+        "yaw": 30.04,
+        "pitch": 2.91
       }
     ]
   },
@@ -9015,6 +9144,20 @@
         "target": "node307",
         "yaw": 279.52,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "parking",
+        "target": "parkingDEE",
+        "yaw": 339.56,
+        "pitch": -0.16
+      },
+      {
+        "type": "popup",
+        "class": "construction",
+        "target": "underconstructionDEE",
+        "yaw": 117.47,
+        "pitch": 15.71
       }
     ]
   },
@@ -9032,6 +9175,20 @@
         "target": "node308",
         "yaw": 286.07,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "construction",
+        "target": "underconstructionDEE",
+        "yaw": 137.99,
+        "pitch": 19.53
+      },
+      {
+        "type": "popup",
+        "class": "parking",
+        "target": "parkingDEE",
+        "yaw": 329.69,
+        "pitch": 0.61
       }
     ]
   },
@@ -9063,6 +9220,13 @@
         "target": "node313",
         "yaw": 19.86,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "parking",
+        "target": "parkingDEE",
+        "yaw": 75.27,
+        "pitch": 7.47
       }
     ]
   },
@@ -9087,6 +9251,13 @@
         "target": "node312",
         "yaw": 18.02,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "parking",
+        "target": "parkingDEE",
+        "yaw": 18.26,
+        "pitch": 4.95
       }
     ]
   },
@@ -9111,6 +9282,13 @@
         "target": "node313",
         "yaw": 288.33,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "parking",
+        "target": "parkingDEE",
+        "yaw": 224.49,
+        "pitch": 3.04
       }
     ]
   },
@@ -9142,6 +9320,13 @@
         "target": "node314",
         "yaw": 275.02,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "parking",
+        "target": "parkingDEE",
+        "yaw": 153.15,
+        "pitch": 4.95
       }
     ]
   },
@@ -9149,8 +9334,8 @@
     "scene": "node314",
     "image": "/assets/Database Images/unrestricted nodes/314.webp",
     "coords": {
-      "x": 0.447,
-      "y": 1.206
+      "x": 0.299,
+      "y": 0.812
     },
     "hotspot": [
       {
@@ -9166,6 +9351,13 @@
         "target": "node315",
         "yaw": 183.07,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "parking",
+        "target": "parkingDEE",
+        "yaw": 134.38,
+        "pitch": 5.02
       }
     ]
   },
@@ -9173,8 +9365,8 @@
     "scene": "node315",
     "image": "/assets/Database Images/unrestricted nodes/315.webp",
     "coords": {
-      "x": 0.447,
-      "y": 1.206
+      "x": 0.307,
+      "y": 0.848
     },
     "hotspot": [
       {
@@ -9190,6 +9382,13 @@
         "target": "node314",
         "yaw": 10.85,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "parking",
+        "target": "parkingDEE",
+        "yaw": 106.4,
+        "pitch": 4.47
       }
     ]
   },
@@ -9221,6 +9420,13 @@
         "target": "node319",
         "yaw": 116.52,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "restroom",
+        "target": "restroomBatibot",
+        "yaw": 205.06,
+        "pitch": -1.63
       }
     ]
   },
@@ -9254,11 +9460,18 @@
         "pitch": -20
       },
       {
-        "id": 3,
+        "id": 4,
         "type": "move",
         "target": "node320",
         "yaw": 266.01,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "restroom",
+        "target": "restroomBatibot",
+        "yaw": 193.17,
+        "pitch": 3.13
       }
     ]
   },
@@ -9383,7 +9596,7 @@
       {
         "id": 3,
         "type": "move",
-        "target": "node323",
+        "target": "node332",
         "yaw": 112.63,
         "pitch": -20
       }
@@ -9417,6 +9630,13 @@
         "target": "node325",
         "yaw": 206.21,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "restroom",
+        "target": "restroomBatibot",
+        "yaw": 69.25,
+        "pitch": 0.95
       }
     ]
   },
@@ -9441,6 +9661,13 @@
         "target": "node323",
         "yaw": 199.86,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "restroom",
+        "target": "restroomBatibot",
+        "yaw": 127.42,
+        "pitch": -4.22
       }
     ]
   },
@@ -9575,16 +9802,406 @@
       {
         "id": 1,
         "type": "move",
-        "target": "node331",
-        "yaw": 288.94,
+        "target": "node284",
+        "yaw": 285.53,
         "pitch": -20
       },
       {
         "id": 2,
         "type": "move",
-        "target": "",
-        "yaw": 103.0,
+        "target": "node331",
+        "yaw": 111.18,
         "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node331",
+    "image": "/assets/Database Images/unrestricted nodes/331.webp",
+    "coords": {
+      "x": 0.447,
+      "y": 1.206
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node332",
+        "yaw": 298.45,
+        "pitch": -32
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node330",
+        "yaw": 115.57,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node332",
+    "image": "/assets/Database Images/unrestricted nodes/332.webp",
+    "coords": {
+      "x": 0.447,
+      "y": 1.206
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node331",
+        "yaw": 296.79,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node322",
+        "yaw": 119.6,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node333",
+    "image": "/assets/Database Images/unrestricted nodes/333.webp",
+    "coords": {
+      "x": 0.447,
+      "y": 1.206
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node334",
+        "yaw": 15.94,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node87",
+        "yaw": 223.79,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node338",
+        "yaw": 107.14,
+        "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "oldcemds",
+        "yaw": 28.56,
+        "pitch": 14.17
+      }
+    ]
+  },
+  {
+    "scene": "node334",
+    "image": "/assets/Database Images/unrestricted nodes/334.webp",
+    "coords": {
+      "x": 0.447,
+      "y": 1.206
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node335",
+        "yaw": 9.64,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node333",
+        "yaw": 187.77,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node96",
+        "yaw": 280.58,
+        "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "oldcemds",
+        "yaw": 93.26,
+        "pitch": 18.39
+      }
+    ]
+  },
+  {
+    "scene": "node335",
+    "image": "/assets/Database Images/unrestricted nodes/335.webp",
+    "coords": {
+      "x": 0.447,
+      "y": 1.206
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node336",
+        "yaw": 109.28,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node334",
+        "yaw": 199.55,
+        "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "oldcemds",
+        "yaw": 186.64,
+        "pitch": 3.34
+      }
+    ]
+  },
+  {
+    "scene": "node336",
+    "image": "/assets/Database Images/unrestricted nodes/336.webp",
+    "coords": {
+      "x": 0.447,
+      "y": 1.206
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node337",
+        "yaw": 213.48,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node335",
+        "yaw": 301.61,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node337",
+    "image": "/assets/Database Images/unrestricted nodes/337.webp",
+    "coords": {
+      "x": 0.447,
+      "y": 1.206
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node338",
+        "yaw": 205.58,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node336",
+        "yaw": 26.38,
+        "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "restroom",
+        "target": "restroomOval",
+        "yaw": 140.01,
+        "pitch": 6.4
+      }
+    ]
+  },
+  {
+    "scene": "node338",
+    "image": "/assets/Database Images/unrestricted nodes/338.webp",
+    "coords": {
+      "x": 0.447,
+      "y": 1.206
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node339",
+        "yaw": 133.93,
+        "pitch": -30
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node337",
+        "yaw": 26.38,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node333",
+        "yaw": 289.29,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node339",
+    "image": "/assets/Database Images/unrestricted nodes/339.webp",
+    "coords": {
+      "x": 0.447,
+      "y": 1.206
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node96",
+        "yaw": 148.53,
+        "pitch": -30
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node340",
+        "yaw": 17.41,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node340",
+    "image": "/assets/Database Images/unrestricted nodes/340.webp",
+    "coords": {
+      "x": 0.447,
+      "y": 1.206
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node339",
+        "yaw": 217.23,
+        "pitch": -30
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node97",
+        "yaw": 75.27,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node341",
+    "image": "/assets/Database Images/unrestricted nodes/341.webp",
+    "coords": {
+      "x": 0.492,
+      "y": 1.267
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node7",
+        "yaw": 348.88,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node342",
+        "yaw": 100.18,
+        "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "ih2",
+        "yaw": 111.56,
+        "pitch": 11.94
+      }
+    ]
+  },
+  {
+    "scene": "node342",
+    "image": "/assets/Database Images/unrestricted nodes/342.webp",
+    "coords": {
+      "x": 0.467,
+      "y": 1.273
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node343",
+        "yaw": 110.62,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node341",
+        "yaw": 263.57,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node5",
+        "yaw": 8.97,
+        "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "ih2",
+        "yaw": 196.85,
+        "pitch": 11.94
+      }
+    ]
+  },
+
+  {
+    "scene": "node343",
+    "image": "/assets/Database Images/unrestricted nodes/343.webp",
+    "coords": {
+      "x": 0.441,
+      "y": 1.277
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node342",
+        "yaw": 271.21,
+        "pitch": -30
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node3",
+        "yaw": 39.11,
+        "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "ih2",
+        "yaw": 254.19,
+        "pitch": 11.94
       }
     ]
   }
