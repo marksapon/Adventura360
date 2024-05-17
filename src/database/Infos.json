@@ -313,5 +313,68 @@
       "/assets/Building Module/Gallery/dit/02.webp",
       "/assets/Building Module/Gallery/dit/03.webp"
     ]
+  },
+  {
+    "scene": "ceit",
+    "name": "College of Engineering and Information Technology",
+    "access": "account",
+    "acronym": "ceit",
+    "type": "college_buildings",
+    "tags": ["ceit", "school"],
+    "image": "/assets/Building Module/Background/dit.webp",
+    "desc": "Welcome to the College of Engineering and Information Technology at our University. Here, our vibrant community of scholars is dedicated to advancing infrastructure and urban development. From designing resilient structures to sustainable transportation systems, we're committed to pushing the boundaries of engineering innovation. Join us as we tackle global challenges and pave the way for a better tomorrow. Welcome to the forefront of engineering excellence.",
+
+    "gallery": [
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
+    ]
+  },
+  {
+    "scene": "diet",
+    "name": "Department of Industrial Engineering and Technology",
+    "access": "account",
+    "acronym": "diet",
+    "type": "college_buildings",
+    "tags": ["ceit", "school"],
+    "image": "/assets/Building Module/Background/dit.webp",
+    "desc": "Welcome to the Department of Industrial Engineering and Technology at our University. Within our dedicated community, we explore the forefront of technology and innovation. From optimizing manufacturing processes to enhancing supply chain efficiency, we're committed to solving real-world challenges and driving industry forward. Join us as we embark on a journey of discovery and innovation. Welcome to the heart of industrial engineering excellence.",
+
+    "gallery": [
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
+    ]
+  },
+  {
+    "scene": "dcee",
+    "name": "Department of Computer, Electronics, and Electrical Engineering",
+    "access": "account",
+    "acronym": "dceee",
+    "type": "college_buildings",
+    "tags": ["ceit", "school"],
+    "image": "/assets/Building Module/Background/dit.webp",
+    "desc": "Welcome to the Department of Computer, Electronics, and Electrical Engineering at our University. Within our dedicated community, we delve into the forefront of technology and innovation. From developing cutting-edge software solutions to designing efficient electronic systems, we're committed to tackling real-world challenges and propelling industries forward. Join us as we embark on a journey of discovery and innovation. Welcome to the heart of engineering excellence.",
+
+    "gallery": [
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
+    ]
+  },
+  {
+    "scene": "admin",
+    "name": "Administration Building",
+    "access": "account",
+    "type": "school_facilities",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Background/dit.webp",
+    "desc": "Welcome to the Cavite State University Administration  Building at our University.",
+
+    "gallery": [
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
+    ]
   }
 ]
