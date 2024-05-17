@@ -189,7 +189,7 @@
   {
     "scene": "library",
     "location": "Ladislao N. Diwa Memorial Library",
-    "image": "/assets/Database Images/unrestricted nodes/35.webp",
+    "image": "/assets/Database Images/unrestricted nodes/285.webp",
     "back": ["node34", "node35"],
     "coords": {
       "x": 0.527,
@@ -202,8 +202,8 @@
         "type": "info",
         "class": "info",
         "target": "library",
-        "yaw": 113.71,
-        "pitch": 14.32
+        "yaw": 120.8,
+        "pitch": 6.93
       }
     ]
   },
@@ -391,8 +391,8 @@
         "type": "info",
         "class": "info",
         "target": "admin",
-        "yaw": 258.49,
-        "pitch": 2.55
+        "yaw": 246.67,
+        "pitch": 2.14
       }
     ]
   },

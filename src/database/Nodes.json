@@ -8424,6 +8424,13 @@
         "target": "node284",
         "yaw": 216.55,
         "pitch": -25.93
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "library",
+        "yaw": 120.8,
+        "pitch": 6.93
       }
     ]
   },

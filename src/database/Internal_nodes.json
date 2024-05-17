@@ -59,6 +59,20 @@
             "target": "dit02",
             "yaw": 93.59,
             "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "faculty1",
+            "yaw": 103.0,
+            "pitch": -4.85
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "faculty1",
+            "yaw": 288.09,
+            "pitch": -0.97
           }
         ]
       },
@@ -227,12 +241,6 @@
             "target": "dit10",
             "yaw": 320.72,
             "pitch": -20
-          },
-          {
-            "type": "move",
-            "target": "",
-            "yaw": 43.4,
-            "pitch": -20
           }
         ]
       },
@@ -320,6 +328,11 @@
         "scene": "csso",
         "location": "CSSO Office",
         "desc": "The CSSO Office is located at the 2nd floor of the DIT Building. It is where the College of Engineering and Information Technology (CEIT) Student Council is located. The office is open to all students who wish to inquire about the council's activities and events."
+      },
+      {
+        "scene": "faculty1",
+        "location": "Faculty Room",
+        "desc": "This is the Faculty room in Department of Information Technology."
       }
     ]
   },
@@ -946,6 +959,20 @@
             "target": "admin08",
             "yaw": 64.67,
             "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "cashier",
+            "yaw": 163.05,
+            "pitch": 3.41
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "cashier",
+            "yaw": 330.98,
+            "pitch": 3.69
           }
         ]
       },
@@ -1448,6 +1475,274 @@
         "scene": "adminrestroomF1-2",
         "location": "Restroom 1st Floor",
         "desc": "Restroom "
+      },
+      {
+        "scene": "adminrestroomF2-1",
+        "location": "Restroom 2nd Floor",
+        "desc": "Restroom"
+      },
+      {
+        "scene": "adminrestroomF2-2",
+        "location": "Restroom 2nd Floor",
+        "desc": "Restroom"
+      },
+      {
+        "scene": "cashier",
+        "location": "Univerity Cashier's Office",
+        "desc": "This is the  University Cashier's Office"
+      }
+    ]
+  },
+  {
+    "library": [
+      {
+        "scene": "lib01",
+        "image": "/assets/Building Module/Internal Nodes/library/1.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "lib02",
+            "yaw": 179.52,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "lib02",
+        "image": "/assets/Building Module/Internal Nodes/library/2.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "lib03",
+            "yaw": 211.61,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "lib01",
+            "yaw": 15.04,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "lib03",
+        "image": "/assets/Building Module/Internal Nodes/library/3.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "lib04",
+            "yaw": 87.27,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "lib02",
+            "yaw": 330.31,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "lib04",
+        "image": "/assets/Building Module/Internal Nodes/library/4.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "lib05",
+            "yaw": 136.7,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "lib03",
+            "yaw": 295.05,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "lib06",
+            "yaw": 42.83,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "lib05",
+        "image": "/assets/Building Module/Internal Nodes/library/5.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "lib04",
+            "yaw": 298.5,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "lib06",
+        "image": "/assets/Building Module/Internal Nodes/library/6.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "lib07",
+            "yaw": 154.62,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "lib05",
+            "yaw": 63.61,
+            "pitch": -37.24
+          },
+          {
+            "type": "move",
+            "target": "lib08",
+            "yaw": 25.29,
+            "pitch": -37.97
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "nolielfili",
+            "yaw": 214.97,
+            "pitch": -1.48
+          }
+        ]
+      },
+      {
+        "scene": "lib07",
+        "image": "/assets/Building Module/Internal Nodes/library/7.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "lib06",
+            "yaw": 293.62,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "lib08",
+        "image": "/assets/Building Module/Internal Nodes/library/8.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "lib09",
+            "yaw": 157.01,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "lib06",
+            "yaw": 50.58,
+            "pitch": -40.0
+          },
+          {
+            "type": "move",
+            "target": "lib10",
+            "yaw": 5.37,
+            "pitch": -39.49
+          }
+        ]
+      },
+      {
+        "scene": "lib09",
+        "image": "/assets/Building Module/Internal Nodes/library/9.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "lib08",
+            "yaw": 296.2,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "lib10",
+        "image": "/assets/Building Module/Internal Nodes/library/10.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "lib11",
+            "yaw": 163.22,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "lib08",
+            "yaw": 55.74,
+            "pitch": -40.0
+          },
+          {
+            "type": "move",
+            "target": "lib12",
+            "yaw": 6.78,
+            "pitch": -40.0
+          }
+        ]
+      },
+      {
+        "scene": "lib11",
+        "image": "/assets/Building Module/Internal Nodes/library/11.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "lib10",
+            "yaw": 294.76,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "colabarea",
+            "yaw": 46.27,
+            "pitch": 1.09
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "colabarea",
+            "yaw": 350.81,
+            "pitch": 0.25
+          }
+        ]
+      },
+      {
+        "scene": "lib12",
+        "image": "/assets/Building Module/Internal Nodes/library/12.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "lib10",
+            "yaw": 36.6,
+            "pitch": -40.0
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "staarrdec",
+            "yaw": 125.69,
+            "pitch": -1.57
+          }
+        ]
+      }
+    ],
+    "library_extras": [
+      {
+        "scene": "nolielfili",
+        "location": "2nd Floor",
+        "desc": "The Noli Me Tangere and El Filibusterismo Collection."
+      },
+      {
+        "scene": "colabarea",
+        "location": "4thFloor",
+        "desc": "Collaboration Area, where students can study and work together."
+      },
+      {
+        "scene": "staarrdec",
+        "location": "5th Floor",
+        "desc": "This is the office of The Southern Tagalog Agriculture, Aquatic and Resources Research, Development and Extension Consortium (STAARRDEC)"
       }
     ]
   }
