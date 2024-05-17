@@ -28,7 +28,7 @@ const BuildingModal = ({
   changeScene,
   setMapState,
   setAccess,
-  buildingsDB,
+  internalDB,
   closeSearch,
 }) => {
   // Icon Set
@@ -63,8 +63,8 @@ const BuildingModal = ({
 
   function hasSceneCheck(scene) {
     let temp = false;
-    for (const info of buildingsDB) {
-      if (info.scene === scene) {
+    for (const info of internalDB) {
+      if (info.hasOwnProperty(scene)) {
         console.log("Scene Found");
         temp = true;
       }

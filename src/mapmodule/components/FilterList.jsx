@@ -233,7 +233,7 @@ const FilterList = ({ icons, overlays, OSDinstance, OSD }) => {
           onClick={() => {
             setParkingState((prevState) => {
               const newState = !prevState;
-              filter("court", newState);
+              filter("parking", newState);
               return newState;
             });
           }}
@@ -249,7 +249,7 @@ const FilterList = ({ icons, overlays, OSDinstance, OSD }) => {
           onClick={() => {
             setVenueState((prevState) => {
               const newState = !prevState;
-              filter("court", newState);
+              filter("venue", newState);
               return newState;
             });
           }}

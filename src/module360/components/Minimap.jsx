@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./Minimap.css";
 import OpenSeadragon from "openseadragon";
 
-const Minimap = ({ x, y, onClick, previous_Scene }) => {
+const Minimap = ({ x, y, onClick, previous_Scene, buildingsDB, extrasDB }) => {
   // Map Button mount
   useEffect(() => {
     /* Coordinates */
@@ -72,31 +72,3 @@ const Minimap = ({ x, y, onClick, previous_Scene }) => {
   );
 };
 export default Minimap;
-
-/*A  
-
-<button
-        className="w-[172px] h-[90px] sm:w-[264px] sm:h-[152px] md:w-[336px] md:h-[172px] lg:w-[336px] lg:h-[172px]"
-        id="viewer"
-        onClick={onClick}
-      />
-
-
-const overlay = viewer.paperjsOverlay();
-
-    // Create a new Paper.js path
-    const path = new overlay.paper.Path();
-    path.strokeColor = "black";
-
-    // Add points to the path
-    const point1 = new overlay.paper.Point(30, 75);
-    const point2 = new overlay.paper.Point(30, 25);
-    const point3 = new overlay.paper.Point(80, 25);
-
-    path.add(point1);
-    path.add(point2);
-    path.add(point3);
-
-    // Redraw the overlay
-    overlay.paper.view.draw();
-*/

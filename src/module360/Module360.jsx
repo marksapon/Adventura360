@@ -665,6 +665,7 @@ function Module360({
             changeScene={action}
             access={access}
             setAccess={setAccess}
+            internalDB={internalDB}
           />
         </div>
         {/* Navigation bar */}
@@ -717,6 +718,8 @@ function Module360({
                   x={select_Scene.coords.x}
                   y={select_Scene.coords.y}
                   previous_Scene={previous_Scene}
+                  extrasDB={extrasDB}
+                  buildingsDB={buildingsDB}
                 />
               )}
             </div>

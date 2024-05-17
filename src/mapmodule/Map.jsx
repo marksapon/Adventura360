@@ -27,7 +27,6 @@ const MapModule = ({
   infosDB,
   iconsSet,
   openBldgModal,
-  setMode,
 }) => {
   const [selected_extra, setSelectedExtra] = useState(); // Selected Extra State
   const [extraCheck, setExtraCheck] = useState(false); // Extra Check State
@@ -206,11 +205,6 @@ const MapModule = ({
         setCheckCenter(false);
       }
     });
-
-    function popupUI(overlay, index) {
-      console.log("Displaying Extras Popup");
-      return <div id="test" className="h-10 w-10 bg-black"></div>;
-    }
 
     // When OSD Canvas is clicked
     viewerInstance.addHandler("canvas-click", function (event) {

@@ -38,6 +38,7 @@ const Navigationbar = ({
   changeScene,
   access,
   setAccess,
+  internalDB,
 }) => {
   /* States */
   const [mapState, setMapState] = useState(false); // Map State
@@ -530,7 +531,7 @@ const Navigationbar = ({
           onClose={onBldgModalClose}
           loginType={loginType}
           infosDB={infosDB}
-          buildingsDB={buildingsDB}
+          internalDB={internalDB}
           scene={targetScene}
           iconSet={iconSet}
           openShareModal={() => setShowSharemodal(true)}
