@@ -8,7 +8,7 @@
       "y": 1.263,
       "type": "construction"
     },
-    "image": "/assets/Building Module/Extras/blue dorm under construction.webp"
+    "image": "/assets/Building Module/Extras/bdpd.webp"
   },
   {
     "scene": "pd",
@@ -26,8 +26,8 @@
     "desc": "Restroom, near IH1",
     "location": "Restroom IH1",
     "coords": {
-      "x": 0.556,
-      "y": 0.85,
+      "x": 0.553,
+      "y": 0.852,
       "type": "restroom"
     },
     "image": "/assets/Building Module/Extras/bio_sci_rr.webp"
@@ -47,8 +47,8 @@
     "scene": "batibotcas",
     "location": "Kiosk near College of Arts and Sciences",
     "coords": {
-      "x": 0.485,
-      "y": 0.969,
+      "x": 0.488,
+      "y": 0.965,
       "type": "batibot"
     },
     "image": "/assets/Building Module/Extras/batibot_cas.webp"
@@ -61,14 +61,14 @@
       "y": 0.921,
       "type": "batibot"
     },
-    "image": "/assets/Building Module/Extras/kiosk dit.webp"
+    "image": "/assets/Building Module/Extras/DIT kiosk.webp"
   },
   {
     "scene": "washareaDIT",
     "location": "Wash Area near Department of Information Technology",
     "coords": {
-      "x": 0.343,
-      "y": 0.921,
+      "x": 0.338,
+      "y": 0.951,
       "type": "washarea"
     },
     "image": "/assets/Building Module/Extras/DIT wash area.webp"
@@ -77,8 +77,8 @@
     "scene": "restroomDIT",
     "location": "Restroom near Department of Information Technology",
     "coords": {
-      "x": 0.343,
-      "y": 0.921,
+      "x": 0.364,
+      "y": 0.916,
       "type": "restroom"
     },
     "image": "/assets/Building Module/Extras/DIT restroom.webp"
@@ -108,8 +108,8 @@
     "location": "Central Experiment Station",
     "desc": "Central Experiment Station is a crops farm where crop experimentation is usually is being conducted",
     "coords": {
-      "x": 0.675,
-      "y": 1.116,
+      "x": 0.657,
+      "y": 1.127,
       "type": "farm"
     },
     "image": "/assets/Building Module/Extras/central experiment station.webp"
@@ -118,22 +118,22 @@
     "scene": "kioskphysci",
     "location": "Kiosk near Physical Science Building",
     "coords": {
-      "x": 0.458,
-      "y": 0.904,
+      "x": 0.46,
+      "y": 0.91,
       "type": "batibot"
     },
-    "image": "/assets/extras/batibotDit.webp"
+    "image": "/assets/Building Module/Extras/kioskPhySci.webp"
   },
   {
     "scene": "washareaOval",
     "location": "washarea near Oval",
     "desc": "This is the wash area near the Oval",
     "coords": {
-      "x": 0.506,
-      "y": 1.117,
+      "x": 0.507,
+      "y": 1.119,
       "type": "washarea"
     },
-    "image": "/assets/Database Images/unrestricted nodes/15.webp"
+    "image": "/assets//Building Module/Extras/OSAS washarea.webp"
   },
   {
     "scene": "restroomOval",
@@ -141,28 +141,28 @@
     "location": "restroom near Oval",
     "desc": "This is the restroom near the Oval",
     "coords": {
-      "x": 0.504,
-      "y": 1.105,
+      "x": 0.508,
+      "y": 1.113,
       "type": "restroom"
     },
-    "image": "/assets/Building Module/Extras/osas_rr.webp"
+    "image": "/assets//Building Module/Extras/OSAS washarea.webp"
   },
   {
     "scene": "brite",
     "location": "CvSU Brite Center DEMONSTRATION AREA",
     "coords": {
-      "x": 0.673,
-      "y": 0.813,
+      "x": 0.67,
+      "y": 0.819,
       "type": "farm"
     },
-    "image": "/assets/extras/batibotDit.webp"
+    "image": ""
   },
   {
     "scene": "saluysoy",
     "location": "Saluysoy",
     "coords": {
-      "x": 0.673,
-      "y": 0.813,
+      "x": 0.554,
+      "y": 0.709,
       "type": "cafeteria"
     },
     "image": "/assets/Building Module/Extras/saluysoy.webp"
@@ -227,8 +227,8 @@
     "location": "Lagoon",
     "desc": "This is the university's lagoon",
     "coords": {
-      "x": 0.498,
-      "y": 0.792,
+      "x": 0.496,
+      "y": 0.791,
       "type": "attractions"
     },
     "image": "/assets/Building Module/Extras/lagoon.webp"
@@ -282,7 +282,7 @@
     "location": "Gate 1",
     "desc": "This is the university's Gate 1",
     "coords": {
-      "x": 0.407,
+      "x": 0.408,
       "y": 1.279,
       "type": "attractions"
     },
@@ -315,8 +315,8 @@
     "location": "Parking lot near Department of Electrical Engineering",
     "desc": "This is the parking lot near Department of Electrical Engineering",
     "coords": {
-      "x": 0.279,
-      "y": 0.815,
+      "x": 0.283,
+      "y": 0.834,
       "type": "parking"
     },
     "image": "/assets/Building Module/Extras/DEE parking.webp"
@@ -359,8 +359,8 @@
     "location": "Restroom near Batibot",
     "desc": "This is the restroom near Batibot",
     "coords": {
-      "x": 0.492,
-      "y": 1.033,
+      "x": 0.475,
+      "y": 1.004,
       "type": "restroom"
     },
     "image": "/assets/Building Module/Extras/batibot restroom.webp"
@@ -370,8 +370,8 @@
     "location": "Wash Area near College of Arts and Sciences",
     "desc": "This is the wash area near College of Arts and Sciences",
     "coords": {
-      "x": 0.485,
-      "y": 0.923,
+      "x": 0.476,
+      "y": 0.926,
       "type": "washarea"
     },
     "image": "/assets/Building Module/Extras/CAS wash area.webp"
@@ -392,8 +392,8 @@
     "location": "Kiosk near College of Nursing",
     "desc": "This is the kiosk near College of Nursing",
     "coords": {
-      "x": 0.439,
-      "y": 0.439,
+      "x": 0.437,
+      "y": 0.845,
       "type": "batibot"
     },
     "image": "/assets/Building Module/Extras/CON kiosk.webp"
@@ -403,8 +403,8 @@
     "location": "Wash Area near College of Nursing",
     "desc": "This is the wash area near College of Nursing",
     "coords": {
-      "x": 0.491,
-      "y": 0.83,
+      "x": 0.476,
+      "y": 0.836,
       "type": "washarea"
     },
     "image": "/assets/Building Module/Extras/CON wash area.webp"
@@ -436,11 +436,22 @@
     "location": "Restroom near Department of Agriculture and Fisheries Education",
     "desc": "This is the restroom near Department of Agriculture and Fisheries Education",
     "coords": {
-      "x": 0.423,
+      "x": 0.418,
       "y": 0.945,
       "type": "restroom"
     },
     "image": "/assets/Building Module/Extras/DAFE restroom.webp"
+  },
+  {
+    "scene": "washareaDAFE",
+    "location": "Wash Area near Department of Agriculture and Fisheries Education",
+    "desc": "This is the wash area near Department of Agriculture and Fisheries Education",
+    "coords": {
+      "x": 0.435,
+      "y": 0.934,
+      "type": "washarea"
+    },
+    "image": "/assets/Building Module/Extras/DAFE wash area.webp"
   },
   {
     "scene": "donseverinoStatue",
@@ -469,9 +480,9 @@
     "location": "Parking Area near International Convention Center",
     "desc": "This is the parking area near International Convention Center",
     "coords": {
-      "x": 0.503,
-      "y": 0.706,
-      "type": "washarea"
+      "x": 0.499,
+      "y": 0.698,
+      "type": "parking"
     },
     "image": "/assets/Building Module/Extras/icon parking lot.webp"
   },
@@ -480,8 +491,8 @@
     "location": "Layat Diwa Statue",
     "desc": "This is the Layat Diwa statue",
     "coords": {
-      "x": 0.405,
-      "y": 1.322,
+      "x": 0.408,
+      "y": 1.326,
       "type": "attractions"
     },
     "image": "/assets/Building Module/Extras/layat diwa (2).webp"
@@ -513,8 +524,8 @@
     "location": "Restroom near Saluysoy",
     "desc": "This is the restroom near Saluysoy",
     "coords": {
-      "x": 0.506,
-      "y": 1.117,
+      "x": 0.53,
+      "y": 0.726,
       "type": "restroom"
     },
     "image": "/assets/Building Module/Extras/saluysoy restroom.webp"
@@ -524,8 +535,8 @@
     "location": "Wash Area near Science High School",
     "desc": "This is the wash area near Science High School",
     "coords": {
-      "x": 0.506,
-      "y": 1.117,
+      "x": 0.371,
+      "y": 1.16,
       "type": "washarea"
     },
     "image": "/assets/Building Module/Extras/science hs wash area.webp"
@@ -535,9 +546,9 @@
     "location": "Main building of NCRDEC",
     "desc": "Under construction main building of NCRDEC",
     "coords": {
-      "x": 0.506,
-      "y": 1.117,
-      "type": "washarea"
+      "x": 0.729,
+      "y": 1.237,
+      "type": "construction"
     },
     "image": "/assets/Building Module/Extras/soon to rise NCRDEC main bldg.webp"
   },
@@ -557,11 +568,11 @@
     "location": "Restroom near University mall",
     "desc": "This is the restroom near University mall",
     "coords": {
-      "x": 0.566,
-      "y": 1.297,
+      "x": 0.576,
+      "y": 1.293,
       "type": "restroom"
     },
-    "image": "/assets/Building Module/Extras/university mall restroom.webp"
+    "image": "/assets/Building Module/Extras/umall_rr.webp"
   },
   {
     "scene": "UniversityPool",
@@ -584,5 +595,16 @@
       "type": "cafeteria"
     },
     "image": "/assets/Building Module/Extras/university mall.webp"
+  },
+  {
+    "scene": "AnthuriumHouse",
+    "location": "Anthurium House",
+    "desc": "This is the Anthurium House",
+    "coords": {
+      "x": 0.693,
+      "y": 1.137,
+      "type": "farm"
+    },
+    "image": "/assets/Building Module/Extras/anthurium house (1).webp"
   }
 ]

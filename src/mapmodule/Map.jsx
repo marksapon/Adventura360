@@ -667,7 +667,7 @@ const MapModule = ({
               id={overlay.id}
               style={{
                 pointerEvents: "auto",
-                zIndex: 4,
+                zIndex: 5,
               }}
             >
               <div
@@ -691,6 +691,7 @@ const MapModule = ({
                   />
 
                   <div
+                    className="rounded-full"
                     style={{
                       position: "absolute",
                       display: "flex",
@@ -705,16 +706,10 @@ const MapModule = ({
                       justifyContent: "center",
                       color: color,
                       pointerEvents: "auto",
+                      border: `4px solid ${color}`,
                     }}
                   >
-                    <div
-                      className="rounded-full p-1"
-                      style={{
-                        border: `4px solid ${color}`,
-                      }}
-                    >
-                      {icon()}
-                    </div>
+                    {icon()}
                   </div>
                 </div>
               </div>
