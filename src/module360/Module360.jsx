@@ -595,30 +595,30 @@ function Module360({
                         console.log("Extras:", extras.image);
                         return (
                           <div
-                            className="absolute flex h-36 w-36 items-center justify-center rounded-md bg-white md:h-56 md:w-72"
+                            className="absolute flex h-fit w-40 items-center justify-center rounded-md bg-white md:w-72"
                             key={index2}
                           >
-                            <div className="grid h-full w-full grid-rows-2">
+                            <div className="grid h-fit w-full grid-rows-2">
                               {/* IMAGE */}
                               {extras.image && (
-                                <div className=" flex w-full flex-col items-center justify-center md:h-28">
+                                <div className="flex w-full flex-col items-center justify-center">
                                   <img
                                     src={extras.image}
-                                    className="flex h-full w-full items-center justify-center rounded-sm object-cover shadow-md"
+                                    className="flex h-auto w-full items-center justify-center rounded-t-md object-cover shadow-md"
                                   />
                                 </div>
                               )}
                               {/* Content */}
                               <div
-                                className="= relative mt-3 flex h-full w-full flex-col items-center gap-1 overflow-hidden"
+                                className="= relative mt-3 flex h-full w-full flex-col items-center overflow-hidden"
                                 key={index2}
                               >
                                 {/* TEXT */}
-                                <div className="flex-shrink-1 flex h-auto w-full items-center justify-center text-center font-roboto text-xs font-semibold text-green-500 md:h-16 md:text-lg">
+                                <div className="flex-shrink-1 flex h-auto w-full items-center justify-center px-4 text-center font-roboto text-xs font-semibold text-green-500 md:h-16 md:text-lg">
                                   {extras.location}
                                 </div>
                                 <div
-                                  className={`flex-shrink-1 text-2xs flex w-full items-start justify-center  text-center font-roboto font-thin md:h-16 md:text-xs`}
+                                  className={`flex-shrink-1 w-full flex-wrap items-start justify-center px-2 text-center font-roboto text-2xs font-thin md:text-xs`}
                                 >
                                   {extras.desc}
                                 </div>
@@ -629,7 +629,7 @@ function Module360({
                               className={`absolute z-10 flex h-full w-full ${extras.image ? "items-center" : "items-end p-2"} justify-center`}
                             >
                               <div
-                                className={`h-7 w-7 rounded-full  md:h-14 md:w-14 ${colorMap[hotspot.type] || "defaultcolor"} pointer-events-auto flex cursor-pointer items-center justify-center`}
+                                className={`h-7 w-7 rounded-full border-2 md:h-14 md:w-14 ${colorMap[hotspot.type] || "defaultcolor"} pointer-events-auto flex cursor-pointer items-center justify-center`}
                               >
                                 {getIcon(hotspot.class)}
                               </div>

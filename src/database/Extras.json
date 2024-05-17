@@ -23,7 +23,7 @@
   },
   {
     "scene": "restroomIH1",
-    "desc": "Restroom, near IH1",
+    "desc": "Restroom near IH1",
     "location": "Restroom IH1",
     "coords": {
       "x": 0.553,
@@ -55,7 +55,7 @@
   },
   {
     "scene": "kioskdit",
-    "location": "Batibot near Department of Information Technology",
+    "location": "Kiosk near Department of Information Technology",
     "coords": {
       "x": 0.343,
       "y": 0.921,
@@ -126,7 +126,7 @@
   },
   {
     "scene": "washareaOval",
-    "location": "washarea near Oval",
+    "location": "Wash area near Office of Student Affairs",
     "desc": "This is the wash area near the Oval",
     "coords": {
       "x": 0.507,
@@ -138,7 +138,7 @@
   {
     "scene": "restroomOval",
 
-    "location": "restroom near Oval",
+    "location": "restroom near Office of Student Affairs",
     "desc": "This is the restroom near the Oval",
     "coords": {
       "x": 0.508,
@@ -149,7 +149,7 @@
   },
   {
     "scene": "brite",
-    "location": "CvSU Brite Center DEMONSTRATION AREA",
+    "location": "CvSU Brite Center Demonstration Area",
     "coords": {
       "x": 0.67,
       "y": 0.819,
@@ -246,7 +246,7 @@
   },
   {
     "scene": "washareaAdmin",
-    "location": "Wash Area beside Admin Building",
+    "location": "Wash area beside Admin Building",
     "desc": "Wash Area near Admin",
     "coords": {
       "x": 0.423,
@@ -257,8 +257,8 @@
   },
   {
     "scene": "parkingAdmin",
-    "location": "Parking Area beside Admin Building",
-    "desc": "Parking Area near Admin",
+    "location": "Parking area beside Admin Building",
+    "desc": "Parking area near Admin",
     "coords": {
       "x": 0.36,
       "y": 0.999,
@@ -290,7 +290,7 @@
   },
   {
     "scene": "washareaDEE",
-    "location": "Washarea near Department of Electrical Engineering",
+    "location": "Wash area near Department of Electrical Engineering",
     "desc": "This is the wash area near Department of Electrical Engineering",
     "coords": {
       "x": 0.301,
@@ -313,7 +313,7 @@
   {
     "scene": "parkingDEE",
     "location": "Parking lot near Department of Electrical Engineering",
-    "desc": "This is the parking lot near Department of Electrical Engineering",
+    "desc": "This is the parking area near Department of Electrical Engineering",
     "coords": {
       "x": 0.283,
       "y": 0.834,
@@ -345,7 +345,7 @@
   },
   {
     "scene": "washroomCED",
-    "location": "Wash Area near College of Education",
+    "location": "Wash area near College of Education",
     "desc": "This is the washroom near College of Education",
     "coords": {
       "x": 0.289,
@@ -367,7 +367,7 @@
   },
   {
     "scene": "washareaCAS",
-    "location": "Wash Area near College of Arts and Sciences",
+    "location": "Wash area near College of Arts and Sciences",
     "desc": "This is the wash area near College of Arts and Sciences",
     "coords": {
       "x": 0.476,
@@ -400,7 +400,7 @@
   },
   {
     "scene": "washareaFrontCON",
-    "location": "Wash Area near College of Nursing",
+    "location": "Wash area near College of Nursing",
     "desc": "This is the wash area near College of Nursing",
     "coords": {
       "x": 0.476,
@@ -411,7 +411,7 @@
   },
   {
     "scene": "washareaBackCON",
-    "location": "Wash Area near College of Nursing",
+    "location": "Wash area near College of Nursing",
     "desc": "This is the wash area near College of Nursing",
     "coords": {
       "x": 0.518,
@@ -422,7 +422,7 @@
   },
   {
     "scene": "washareaCVMBS",
-    "location": "Wash Area near College of Veterinary Medicine and Biomedical Sciences",
+    "location": "Wash area near College of Veterinary Medicine and Biomedical Sciences",
     "desc": "This is the wash area near College of Veterinary Medicine and Biomedical Sciences",
     "coords": {
       "x": 0.471,
@@ -433,8 +433,8 @@
   },
   {
     "scene": "restroomDAFE",
-    "location": "Restroom near Department of Agriculture and Fisheries Education",
-    "desc": "This is the restroom near Department of Agriculture and Fisheries Education",
+    "location": "Restroom near Department of Agriculture and Food Engineering",
+    "desc": "This is the restroom near Department of Agriculture and Food Engineering",
     "coords": {
       "x": 0.418,
       "y": 0.945,
@@ -444,8 +444,8 @@
   },
   {
     "scene": "washareaDAFE",
-    "location": "Wash Area near Department of Agriculture and Fisheries Education",
-    "desc": "This is the wash area near Department of Agriculture and Fisheries Education",
+    "location": "Wash area near Department of Agriculture and Food Engineering",
+    "desc": "This is the wash area near Department of Agriculture and Food Engineering",
     "coords": {
       "x": 0.435,
       "y": 0.934,
@@ -456,7 +456,7 @@
   {
     "scene": "donseverinoStatue",
     "location": "Don Severino Statue",
-    "desc": "This is the statue of Don Severino",
+    "desc": "This is the statue of Don Severino Delas Alas",
     "coords": {
       "x": 0.347,
       "y": 1.168,
@@ -466,7 +466,7 @@
   },
   {
     "scene": "washareaEcoTourism",
-    "location": "Wash Area near Eco-Tourism",
+    "location": "Wash area near Eco-Tourism",
     "desc": "This is the wash area near Eco-Tourism",
     "coords": {
       "x": 0.589,
@@ -477,7 +477,7 @@
   },
   {
     "scene": "parkingICON",
-    "location": "Parking Area near International Convention Center",
+    "location": "Parking area near International Convention Center",
     "desc": "This is the parking area near International Convention Center",
     "coords": {
       "x": 0.499,
@@ -499,7 +499,7 @@
   },
   {
     "scene": "washareaOldCemds",
-    "location": "Wash Area near Old College of Engineering and Design Studies",
+    "location": "Wash area near Old College of Economics, Management and Development Studies",
     "desc": "This is the wash area near Old College of Engineering and Design Studies",
     "coords": {
       "x": 0.422,
@@ -510,7 +510,7 @@
   },
   {
     "scene": "washareaPhySci",
-    "location": "Wash Area near Physical Science Building",
+    "location": "Wash area near Physical Science Building",
     "desc": "This is the wash area near Physical Science Building",
     "coords": {
       "x": 0.449,

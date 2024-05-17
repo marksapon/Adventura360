@@ -1110,7 +1110,7 @@
       {
         "id": 3,
         "type": "move",
-        "target": "",
+        "target": "node285",
         "yaw": 95.92,
         "pitch": -20
       },
@@ -1118,8 +1118,8 @@
         "id": 4,
         "type": "move",
         "target": "",
-        "yaw": 288.75,
-        "pitch": -20
+        "yaw": 275.18,
+        "pitch": -27.83
       },
       {
         "type": "bldg",

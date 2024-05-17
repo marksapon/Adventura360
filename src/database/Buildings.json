@@ -369,7 +369,7 @@
         "id": 1,
         "type": "info",
         "class": "info",
-        "target": "dafe",
+        "target": ";",
         "yaw": 18.02,
         "pitch": 19.08
       }
@@ -1047,8 +1047,8 @@
     "image": "",
     "back": [""],
     "coords": {
-      "x": 0.508,
-      "y": 0.973,
+      "x": 0.541,
+      "y": 0.956,
       "type": "school_facilities"
     },
     "hotspot": [
