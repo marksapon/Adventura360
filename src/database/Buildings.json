@@ -192,8 +192,8 @@
     "image": "/assets/Database Images/unrestricted nodes/285.webp",
     "back": ["node34", "node35"],
     "coords": {
-      "x": 0.527,
-      "y": 0.965,
+      "x": 0.541,
+      "y": 0.956,
       "type": "school_facilities"
     },
     "hotspot": [
@@ -1047,8 +1047,8 @@
     "image": "",
     "back": [""],
     "coords": {
-      "x": 0.541,
-      "y": 0.956,
+      "x": 0.508,
+      "y": 0.971,
       "type": "school_facilities"
     },
     "hotspot": [
