@@ -1859,7 +1859,7 @@
       {
         "type": "bldg",
         "class": "bldg",
-        "target": "ie",
+        "target": "diet",
         "yaw": 279.24,
         "pitch": 6.61
       },

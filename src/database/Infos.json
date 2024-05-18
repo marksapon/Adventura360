@@ -37,12 +37,7 @@
 
     "more_info": "https://cvsu.edu.ph/university-dormitory/",
 
-    "gallery": [
-      "/assets/Building Module/Gallery/IH2/01.webp",
-      "/assets/Building Module/Gallery/IH2/02.webp",
-      "/assets/Building Module/Gallery/IH2/03.webp",
-      "/assets/Building Module/Gallery/IH2/04.webp"
-    ]
+    "gallery": []
   },
   {
     "scene": "cspear",
@@ -80,11 +75,7 @@
 
     "contacts": {},
 
-    "gallery": [
-      "/assets/Building Module/Gallery/dit/01.webp",
-      "/assets/Building Module/Gallery/dit/02.webp",
-      "/assets/Building Module/Gallery/dit/03.webp"
-    ]
+    "gallery": []
   },
   {
     "scene": "ncrdec",
@@ -103,11 +94,7 @@
 
     "more_info": "https://cvsu.edu.ph/ovpre-ncrdec/",
 
-    "gallery": [
-      "/assets/Building Module/Gallery/dit/01.webp",
-      "/assets/Building Module/Gallery/dit/02.webp",
-      "/assets/Building Module/Gallery/dit/03.webp"
-    ]
+    "gallery": []
   },
   {
     "scene": "newcemds",
@@ -148,11 +135,7 @@
       ]
     },
     "contacts": {},
-    "gallery": [
-      "/assets/Building Module/Gallery/dit/01.webp",
-      "/assets/Building Module/Gallery/dit/02.webp",
-      "/assets/Building Module/Gallery/dit/03.webp"
-    ]
+    "gallery": []
   },
   {
     "scene": "cafenr",
@@ -212,11 +195,7 @@
 
     "more_info": "https://cvsu.edu.ph/2018/01/college-of-agriculture-forestry-environment-and-natural-resources/",
 
-    "gallery": [
-      "/assets/Building Module/Gallery/dit/01.webp",
-      "/assets/Building Module/Gallery/dit/02.webp",
-      "/assets/Building Module/Gallery/dit/03.webp"
-    ]
+    "gallery": []
   },
   {
     "scene": "rc",
@@ -236,11 +215,7 @@
 
     "more_info": "https://cvsu.edu.ph/ovpre-research-center/",
 
-    "gallery": [
-      "/assets/Building Module/Gallery/dit/01.webp",
-      "/assets/Building Module/Gallery/dit/02.webp",
-      "/assets/Building Module/Gallery/dit/03.webp"
-    ]
+    "gallery": []
   },
   {
     "scene": "library",
@@ -256,11 +231,7 @@
 
     "more_info": "https://cvsu.edu.ph/2018/01/13/library/",
 
-    "gallery": [
-      "/assets/Building Module/Gallery/dit/01.webp",
-      "/assets/Building Module/Gallery/dit/02.webp",
-      "/assets/Building Module/Gallery/dit/03.webp"
-    ]
+    "gallery": []
   },
   {
     "scene": "irb",
@@ -274,11 +245,7 @@
 
     "contacts": {},
 
-    "gallery": [
-      "/assets/Building Module/Gallery/dit/01.webp",
-      "/assets/Building Module/Gallery/dit/02.webp",
-      "/assets/Building Module/Gallery/dit/03.webp"
-    ]
+    "gallery": []
   },
   {
     "scene": "ih1",
@@ -289,7 +256,7 @@
     "info_type": "info",
     "tags": ["school", "leisure"],
     "image": "/assets/Building Module/Background/IH1.webp",
-    "desc": "Welcome to International House 1 —a bustling dormitory designed to be a home away from home for university students. Here, students from diverse backgrounds come together to form a vibrant community, fostering lifelong friendships and unforgettable experiences. With comfortable living spaces and modern amenities, International House 1 provides a supportive environment where students can thrive academically, socially, and personally. International House 1 is currently under College of Nursing.",
+    "desc": "Welcome to International House 1 —a bustling dormitory designed to be a home away from home for university students. Here, students from diverse backgrounds come together to form a vibrant community, fostering lifelong friendships and unforgettable experiences. With comfortable living spaces and modern amenities, International House 1 provides a supportive environment where students can thrive academically, socially, and personally. International House 1 is currently under College of Medicine.",
 
     "more_info": "https://cvsu.edu.ph/university-dormitory/",
 
@@ -308,11 +275,7 @@
     "image": "/assets/Building Module/Background/dit.webp",
     "desc": "Welcome to the Department of Biological Sciences at the University. Our state-of-the-art facilities and passionate community of scholars are dedicated to exploring the wonders of life. From molecular biology to ecology, we're committed to advancing our understanding of the natural world and addressing global challenges. Join us on a journey of discovery and exploration. Welcome to the heart of scientific inquiry.",
 
-    "gallery": [
-      "/assets/Building Module/Gallery/dit/01.webp",
-      "/assets/Building Module/Gallery/dit/02.webp",
-      "/assets/Building Module/Gallery/dit/03.webp"
-    ]
+    "gallery": []
   },
   {
     "scene": "ceit",
@@ -324,11 +287,7 @@
     "image": "/assets/Building Module/Background/dit.webp",
     "desc": "Welcome to the College of Engineering and Information Technology at our University. Here, our vibrant community of scholars is dedicated to advancing infrastructure and urban development. From designing resilient structures to sustainable transportation systems, we're committed to pushing the boundaries of engineering innovation. Join us as we tackle global challenges and pave the way for a better tomorrow. Welcome to the forefront of engineering excellence.",
 
-    "gallery": [
-      "/assets/Building Module/Gallery/dit/01.webp",
-      "/assets/Building Module/Gallery/dit/02.webp",
-      "/assets/Building Module/Gallery/dit/03.webp"
-    ]
+    "gallery": []
   },
   {
     "scene": "diet",
@@ -340,11 +299,7 @@
     "image": "/assets/Building Module/Background/dit.webp",
     "desc": "Welcome to the Department of Industrial Engineering and Technology at our University. Within our dedicated community, we explore the forefront of technology and innovation. From optimizing manufacturing processes to enhancing supply chain efficiency, we're committed to solving real-world challenges and driving industry forward. Join us as we embark on a journey of discovery and innovation. Welcome to the heart of industrial engineering excellence.",
 
-    "gallery": [
-      "/assets/Building Module/Gallery/dit/01.webp",
-      "/assets/Building Module/Gallery/dit/02.webp",
-      "/assets/Building Module/Gallery/dit/03.webp"
-    ]
+    "gallery": []
   },
   {
     "scene": "dcee",
@@ -356,11 +311,7 @@
     "image": "/assets/Building Module/Background/dit.webp",
     "desc": "Welcome to the Department of Computer, Electronics, and Electrical Engineering at our University. Within our dedicated community, we delve into the forefront of technology and innovation. From developing cutting-edge software solutions to designing efficient electronic systems, we're committed to tackling real-world challenges and propelling industries forward. Join us as we embark on a journey of discovery and innovation. Welcome to the heart of engineering excellence.",
 
-    "gallery": [
-      "/assets/Building Module/Gallery/dit/01.webp",
-      "/assets/Building Module/Gallery/dit/02.webp",
-      "/assets/Building Module/Gallery/dit/03.webp"
-    ]
+    "gallery": []
   },
   {
     "scene": "admin",
@@ -371,10 +322,39 @@
     "image": "/assets/Building Module/Background/dit.webp",
     "desc": "Welcome to the Cavite State University Administration  Building at our University.",
 
-    "gallery": [
-      "/assets/Building Module/Gallery/dit/01.webp",
-      "/assets/Building Module/Gallery/dit/02.webp",
-      "/assets/Building Module/Gallery/dit/03.webp"
-    ]
+    "gallery": []
+  },
+  {
+    "scene": "ced",
+    "name": "College of Education",
+    "access": "account",
+    "type": "college_buildings",
+    "tags": ["ced", " school"],
+    "image": "/assets/Building Module/Background/dit.webp",
+    "desc": "Welcome to College of Education, where we believe in the transformative power of education. Our diverse and inclusive community, led by dedicated mentors, provides the tools and support for you to succeed in the dynamic field of education. From innovative research opportunities to hands-on experiences, we empower you to make a meaningful impact in classrooms and communities. Welcome to a place where learning knows no bounds and excellence is the standard. Welcome to College of Education.",
+
+    "gallery": []
+  },
+  {
+    "scene": "cdc",
+    "name": "Child Development Center",
+    "access": "account",
+    "type": "school_facilities",
+    "tags": [" school"],
+    "image": "/assets/Building Module/Background/dit.webp",
+    "desc": "Welcome to the Child Development Center, where we cherish the transformative potential of early childhood education. Our nurturing and inclusive community, guided by passionate mentors, equips you with the resources and encouragement to thrive in the dynamic realm of child development. From engaging in innovative research endeavors to immersing in hands-on experiences, we empower you to create a profound difference in the lives of children and families. Step into a world where learning is boundless, and excellence is the norm.",
+
+    "gallery": []
+  },
+  {
+    "scene": "con",
+    "name": "College of Nursing",
+    "access": "account",
+    "type": "college_buildings",
+    "tags": ["con", "school"],
+    "image": "/assets/Building Module/Background/dit.webp",
+    "desc": "Welcome to the College of Nursing, where we embrace the profound impact of early nurturing and education on lifelong health and well-being. Within our supportive and inclusive community, dedicated mentors guide you to excel in the intricate field of nursing, equipping you with the knowledge and skills to make a tangible difference in the lives of individuals and families. Through innovative research and immersive practical experiences, we empower you to navigate the complexities of healthcare and emerge as compassionate, competent caregivers. Join us in a journey where learning knows no bounds, and excellence is the standard.",
+
+    "gallery": []
   }
 ]

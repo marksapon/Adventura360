@@ -273,7 +273,7 @@
   {
     "scene": "con",
     "location": "College of Nursing",
-    "image": "/assets/Database Images/unrestricted nodes/48.webp",
+    "image": "/assets/Building Module/Internal Nodes/nursing/1.webp",
     "back": ["node44", "node48", "node98"],
     "coords": {
       "x": 0.481,
@@ -286,8 +286,8 @@
         "type": "info",
         "class": "info",
         "target": "con",
-        "yaw": 203.81,
-        "pitch": 12.77
+        "yaw": 200.97,
+        "pitch": 13.5
       }
     ]
   },
@@ -313,7 +313,7 @@
     ]
   },
   {
-    "scene": "ie",
+    "scene": "diet",
     "location": "Industial Engineering Building",
     "image": "/assets/Database Images/unrestricted nodes/58.webp",
     "back": ["node58"],
@@ -327,7 +327,7 @@
         "id": 1,
         "type": "info",
         "class": "info",
-        "target": "ie",
+        "target": "diet",
         "yaw": 279.24,
         "pitch": 6.61
       }
