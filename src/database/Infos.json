@@ -269,7 +269,7 @@
     "scene": "biosci",
     "name": "Department of Biological Sciences",
     "access": "account",
-    "acronym": "bio sci",
+    "acronym": "biosci",
     "type": "college_buildings",
     "tags": ["cas", "school"],
     "image": "/assets/Building Module/Background/dit.webp",
@@ -317,10 +317,59 @@
     "scene": "admin",
     "name": "Administration Building",
     "access": "account",
+    "acronym": "admin",
     "type": "school_facilities",
     "tags": ["school"],
     "image": "/assets/Building Module/Background/dit.webp",
     "desc": "Welcome to the Cavite State University Administration  Building at our University.",
+
+    "gallery": [
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
+    ]
+  },
+  {
+    "scene": "hs",
+    "name": "Cavite State University Science High School",
+    "access": "account",
+    "acronym": "shs",
+    "type": "school_facilities",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Background/shs.webp",
+    "desc": "Welcome to the Cavite State University Science High School at our University.",
+
+    "gallery": [
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
+    ]
+  },
+  {
+    "scene": "nhs",
+    "name": "Cavite State University Science High School 2",
+    "access": "account",
+    "acronym": "shs",
+    "type": "school_facilities",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Background/shs.webp",
+    "desc": "Welcome to the Cavite State University Science High School at our University.",
+
+    "gallery": [
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
+    ]
+  },
+  {
+    "scene": "physci",
+    "name": "Physical Science Building",
+    "access": "account",
+    "acronym": "physci",
+    "type": "school_facilities",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Background/shs.webp",
+    "desc": "This is the Physical Science Building at our University.",
 
     "gallery": []
   },

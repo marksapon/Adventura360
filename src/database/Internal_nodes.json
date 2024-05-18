@@ -2733,5 +2733,1163 @@
         "desc": "Office of the College Secretary, where 1 student can be accommodated at a time."
       }
     ]
+  },
+  {
+    "hs": [
+      {
+        "scene": "shs11",
+        "image": "/assets/Building Module/Internal Nodes/shs/11.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs3",
+            "yaw": 109.11,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs10",
+            "yaw": 291.34,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs16",
+            "yaw": 21.57,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "DonSeverinoStatue",
+            "yaw": 200.84,
+            "pitch": -1.35
+          }
+        ]
+      },
+      {
+        "scene": "shs1",
+        "image": "/assets/Building Module/Internal Nodes/shs/1.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs2",
+            "yaw": 166.61,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "shs2",
+        "image": "/assets/Building Module/Internal Nodes/shs/2.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs1",
+            "yaw": 346.94,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs3",
+            "yaw": 207.29,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "shs3",
+        "image": "/assets/Building Module/Internal Nodes/shs/3.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs2",
+            "yaw": 0.58,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs4",
+            "yaw": 180.72,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs11",
+            "yaw": 299.15,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "DonSeverinoStatue",
+            "yaw": 229.17,
+            "pitch": -2.51
+          }
+        ]
+      },
+      {
+        "scene": "shs4",
+        "image": "/assets/Building Module/Internal Nodes/shs/4.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs3",
+            "yaw": 3.99,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs5",
+            "yaw": 185.88,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "DonSeverinoStatue",
+            "yaw": 278.6,
+            "pitch": -3.46
+          }
+        ]
+      },
+      {
+        "scene": "shs5",
+        "image": "/assets/Building Module/Internal Nodes/shs/5.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs4",
+            "yaw": 2.94,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs6",
+            "yaw": 273.07,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "DonSeverinoStatue",
+            "yaw": 328.02,
+            "pitch": 1.99
+          }
+        ]
+      },
+      {
+        "scene": "shs6",
+        "image": "/assets/Building Module/Internal Nodes/shs/6.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs5",
+            "yaw": 100.86,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs7",
+            "yaw": 281.0,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "DonSeverinoStatue",
+            "yaw": 3.92,
+            "pitch": 3.96
+          }
+        ]
+      },
+      {
+        "scene": "shs7",
+        "image": "/assets/Building Module/Internal Nodes/shs/7.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs6",
+            "yaw": 96.78,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs8",
+            "yaw": 280.42,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "DonSeverinoStatue",
+            "yaw": 47.76,
+            "pitch": 4.78
+          }
+        ]
+      },
+      {
+        "scene": "shs8",
+        "image": "/assets/Building Module/Internal Nodes/shs/8.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs7",
+            "yaw": 182.69,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs9",
+            "yaw": 10.29,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs12",
+            "yaw": 280.5,
+            "pitch": -32.21
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "DonSeverinoStatue",
+            "yaw": 65.47,
+            "pitch": 2.6
+          }
+        ]
+      },
+      {
+        "scene": "shs9",
+        "image": "/assets/Building Module/Internal Nodes/shs/9.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs8",
+            "yaw": 204.53,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs10",
+            "yaw": 29.76,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "DonSeverinoStatue",
+            "yaw": 116.41,
+            "pitch": 2.4
+          }
+        ]
+      },
+      {
+        "scene": "shs10",
+        "image": "/assets/Building Module/Internal Nodes/shs/10.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs9",
+            "yaw": 242.03,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs11",
+            "yaw": 98.3,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs17",
+            "yaw": 14.95,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "shs12",
+        "image": "/assets/Building Module/Internal Nodes/shs/12.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs8",
+            "yaw": 123.48,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs13",
+            "yaw": 196.57,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "shs13",
+        "image": "/assets/Building Module/Internal Nodes/shs/13.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs12",
+            "yaw": 16.47,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs14",
+            "yaw": 104.71,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "shs14",
+        "image": "/assets/Building Module/Internal Nodes/shs/14.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs13",
+            "yaw": 242.03,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs15",
+            "yaw": 104.48,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "shs15",
+        "image": "/assets/Building Module/Internal Nodes/shs/15.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs14",
+            "yaw": 286.01,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "104.71",
+            "yaw": 98.3,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "shs16",
+        "image": "/assets/Building Module/Internal Nodes/shs/16.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs11",
+            "yaw": 195.95,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs17",
+            "yaw": 283.41,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "shs17",
+        "image": "/assets/Building Module/Internal Nodes/shs/17.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs10",
+            "yaw": 143.88,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs16",
+            "yaw": 99.08,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs18",
+            "yaw": 277.94,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "shs18",
+        "image": "/assets/Building Module/Internal Nodes/shs/18.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs17",
+            "yaw": 96.09,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs19",
+            "yaw": 184.8,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "shs19",
+        "image": "/assets/Building Module/Internal Nodes/shs/19.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs18",
+            "yaw": 21.13,
+            "pitch": -20
+          }
+        ]
+      }
+    ],
+    "hs_extras": [
+      {
+        "scene": "DonSeverinoStatue",
+        "location": "Don Severino Statue",
+        "desc": "Don Severino Statue"
+      }
+    ]
+  },
+  {
+    "nhs": [
+      {
+        "scene": "shs20",
+        "image": "/assets/Building Module/Internal Nodes/shs/20.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs22",
+            "yaw": 97.64,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs25",
+            "yaw": 11.5,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "1stFloorRestroom",
+            "yaw": 68.39,
+            "pitch": 12.34
+          }
+        ]
+      },
+      {
+        "scene": "shs21",
+        "image": "/assets/Building Module/Internal Nodes/shs/21.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs23",
+            "yaw": 11.62,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs22",
+            "yaw": 276.73,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "shs22",
+        "image": "/assets/Building Module/Internal Nodes/shs/22.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs21",
+            "yaw": 96.6,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs22",
+            "yaw": 279.3,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "shs23",
+        "image": "/assets/Building Module/Internal Nodes/shs/23.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs21",
+            "yaw": 347.37,
+            "pitch": -33.83
+          },
+          {
+            "type": "move",
+            "target": "shs24",
+            "yaw": 258.66,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "shs24",
+        "image": "/assets/Building Module/Internal Nodes/shs/24.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs23",
+            "yaw": 101.49,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "shs25",
+            "yaw": 284.89,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "shs25",
+        "image": "/assets/Building Module/Internal Nodes/shs/25.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "shs20",
+            "yaw": 352.27,
+            "pitch": -33.9
+          },
+          {
+            "type": "move",
+            "target": "shs24",
+            "yaw": 82.61,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "2ndFloorRestroom",
+            "yaw": 58.59,
+            "pitch": 10.23
+          }
+        ]
+      }
+    ],
+    "nhs_extras": [
+      {
+        "scene": "1stFloorRestroom",
+        "location": "1st Floor",
+        "desc": "Restroom"
+      },
+      {
+        "scene": "2ndFloorRestroom",
+        "location": "2nd Floor",
+        "desc": "Restroom"
+      }
+    ]
+  },
+  {
+    "physci": [
+      {
+        "scene": "physci1",
+        "image": "/assets/Building Module/Internal Nodes/physci/1.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "physci2",
+            "yaw": 197.02,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "physci3",
+            "yaw": 285.75,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "physci6",
+            "yaw": 232.12,
+            "pitch": -40
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "restroom1stfloor",
+            "yaw": 196.3,
+            "pitch": 2.42
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "facultyroom",
+            "yaw": 292.14,
+            "pitch": 0.45
+          }
+        ]
+      },
+      {
+        "scene": "physci2",
+        "image": "/assets/Building Module/Internal Nodes/physci/2.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "physci1",
+            "yaw": 37.87,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "restroom1stfloor",
+            "yaw": 222.53,
+            "pitch": 3.71
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "facultyroom",
+            "yaw": 29.15,
+            "pitch": -0.24
+          }
+        ]
+      },
+      {
+        "scene": "physci3",
+        "image": "/assets/Building Module/Internal Nodes/physci/3.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "physci1",
+            "yaw": 113.19,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "physci4",
+            "yaw": 296.83,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "facultyroom",
+            "yaw": 24.95,
+            "pitch": 14.68
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "bldgUnderConstruction",
+            "yaw": 259.05,
+            "pitch": 1.55
+          }
+        ]
+      },
+      {
+        "scene": "physci4",
+        "image": "/assets/Building Module/Internal Nodes/physci/4.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "physci3",
+            "yaw": 111.97,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "physci5",
+            "yaw": 292.58,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "biosci",
+            "yaw": 292.98,
+            "pitch": -0.89
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "bldgUnderConstruction",
+            "yaw": 202.62,
+            "pitch": -1.65
+          }
+        ]
+      },
+      {
+        "scene": "physci5",
+        "image": "/assets/Building Module/Internal Nodes/physci/5.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "physci13",
+            "yaw": 24.29,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "physci4",
+            "yaw": 114.77,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "con",
+            "yaw": 23.55,
+            "pitch": 1.74
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "biosci",
+            "yaw": 294.38,
+            "pitch": -1.91
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "bldgUnderConstruction",
+            "yaw": 186.29,
+            "pitch": 0.74
+          }
+        ]
+      },
+      {
+        "scene": "physci6",
+        "image": "/assets/Building Module/Internal Nodes/physci/6.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "physci1",
+            "yaw": 286.98,
+            "pitch": -37
+          },
+          {
+            "type": "move",
+            "target": "physci7",
+            "yaw": 193.77,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "physci8",
+            "yaw": 14.9,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "restroom2ndfloor",
+            "yaw": 196.41,
+            "pitch": -0.78
+          }
+        ]
+      },
+      {
+        "scene": "physci7",
+        "image": "/assets/Building Module/Internal Nodes/physci/7.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "physci6",
+            "yaw": 9.88,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "restroom2ndfloor",
+            "yaw": 188.25,
+            "pitch": -1.6
+          }
+        ]
+      },
+      {
+        "scene": "physci8",
+        "image": "/assets/Building Module/Internal Nodes/physci/8.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "physci9",
+            "yaw": 286.17,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "physci6",
+            "yaw": 195.1,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "restroom2ndfloor",
+            "yaw": 195.94,
+            "pitch": -1.8
+          }
+        ]
+      },
+      {
+        "scene": "physci9",
+        "image": "/assets/Building Module/Internal Nodes/physci/9.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "physci8",
+            "yaw": 130.68,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "physci10",
+            "yaw": 312.29,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "physci10",
+        "image": "/assets/Building Module/Internal Nodes/physci/16.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "physci9",
+            "yaw": 98.97,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "physci11",
+            "yaw": 18.33,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "physci13",
+            "yaw": 347.14,
+            "pitch": -40
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "biosci",
+            "yaw": 278.12,
+            "pitch": -3.46
+          }
+        ]
+      },
+      {
+        "scene": "physci11",
+        "image": "/assets/Building Module/Internal Nodes/physci/11.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "physci10",
+            "yaw": 204.08,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "physci12",
+            "yaw": 109.98,
+            "pitch": -30
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "con",
+            "yaw": 45.36,
+            "pitch": -14.47
+          }
+        ]
+      },
+      {
+        "scene": "physci12",
+        "image": "/assets/Building Module/Internal Nodes/physci/12.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "physci11",
+            "yaw": 193.0,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "physci13",
+            "yaw": 283.13,
+            "pitch": -30
+          },
+          {
+            "type": "move",
+            "target": "physci13",
+            "yaw": 107.06,
+            "pitch": -30
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "con",
+            "yaw": 15.74,
+            "pitch": 0.38
+          }
+        ]
+      },
+      {
+        "scene": "physci13",
+        "image": "/assets/Building Module/Internal Nodes/physci/13.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "physci12",
+            "yaw": 35.71,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "physci5",
+            "yaw": 201.16,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "physci10",
+            "yaw": 232.06,
+            "pitch": -30
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "con",
+            "yaw": 38.48,
+            "pitch": 13.05
+          }
+        ]
+      }
+    ],
+    "physci_extras": [
+      {
+        "scene": "restroom1stfloor",
+        "location": "1st Floor",
+        "desc": "Restroom at 1st Floor"
+      },
+      {
+        "scene": "restroom2ndfloor",
+        "location": "1st Floor",
+        "desc": "Restroom at 1st Floor"
+      },
+      {
+        "scene": "facultyroom",
+        "location": "Faculty Room Physical Science",
+        "desc": "This is where the Faculty Room of Physical Science is located."
+      },
+      {
+        "scene": "biosci",
+        "location": "Biological Science Building",
+        "desc": "This is where the Biological Science Building is located."
+      },
+      {
+        "scene": "con",
+        "location": "College of Nursing",
+        "desc": "This is where the College of Nursing is located."
+      },
+      {
+        "scene": "bldgUnderConstruction",
+        "location": "Building Under Construction",
+        "desc": "Theres a building here that is under construction."
+      }
+    ]
+  },
+  {
+    "biosci": [
+      {
+        "scene": "biosci5",
+        "image": "/assets/Building Module/Internal Nodes/biosci/5.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "biosci4",
+            "yaw": 80.11,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "biosci6",
+            "yaw": 166.44,
+            "pitch": -30
+          },
+          {
+            "type": "move",
+            "target": "biosci8",
+            "yaw": 300.78,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "biosci1",
+        "image": "/assets/Building Module/Internal Nodes/biosci/1.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "biosci3",
+            "yaw": 294.19,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "biosci3",
+        "image": "/assets/Building Module/Internal Nodes/biosci/3.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "biosci4",
+            "yaw": 286.57,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "biosci1",
+            "yaw": 107.98,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "biosci11",
+            "yaw": 4.8,
+            "pitch": -40
+          }
+        ]
+      },
+      {
+        "scene": "biosci4",
+        "image": "/assets/Building Module/Internal Nodes/biosci/4.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "biosci5",
+            "yaw": 264.35,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "biosci3",
+            "yaw": 121.73,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "biosci6",
+            "yaw": 179.52,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "biosci8",
+        "image": "/assets/Building Module/Internal Nodes/biosci/8.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "biosci5",
+            "yaw": 179.52,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "biosci9",
+            "yaw": 79.52,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "biosci9",
+        "image": "/assets/Building Module/Internal Nodes/biosci/9.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "biosci8",
+            "yaw": 309.92,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "biosci7",
+            "yaw": 213.7,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "biosci10",
+            "yaw": 33.89,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "biosci10",
+        "image": "/assets/Building Module/Internal Nodes/biosci/10.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "biosci9",
+            "yaw": 200.05,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "biosci11",
+            "yaw": 200.05,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "biosci11",
+        "image": "/assets/Building Module/Internal Nodes/biosci/11.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "biosci10",
+            "yaw": 280.55,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "biosci3",
+            "yaw": 11.2,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "",
+            "yaw": 98.85,
+            "pitch": -20
+          }
+        ]
+      }
+    ],
+    "biosci_extras": [
+      {
+        "scene": "restroom1stfloor",
+        "location": "1st Floor",
+        "desc": "Restroom at 1st Floor"
+      }
+    ]
   }
 ]

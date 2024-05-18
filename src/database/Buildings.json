@@ -150,8 +150,8 @@
     "image": "/assets/Database Images/unrestricted nodes/283.webp",
     "back": ["node33"],
     "coords": {
-      "x": 0.558,
-      "y": 1.001,
+      "x": 0.565,
+      "y": 0.996,
       "type": "college_buildings"
     },
     "hotspot": [
@@ -255,8 +255,8 @@
     "image": "/assets/Database Images/unrestricted nodes/43.webp",
     "back": ["node43"],
     "coords": {
-      "x": 0.521,
-      "y": 0.86,
+      "x": 0.516,
+      "y": 0.848,
       "type": "college_buildings"
     },
     "hotspot": [
@@ -360,8 +360,8 @@
     "image": "/assets/Database Images/unrestricted nodes/279.webp",
     "back": ["node64", "node92", "node91", "node278", "node279", "node280"],
     "coords": {
-      "x": 0.413,
-      "y": 0.93,
+      "x": 0.361,
+      "y": 0.951,
       "type": "college_buildings"
     },
     "hotspot": [
@@ -482,11 +482,11 @@
   {
     "scene": "physci",
     "location": "Physical Sciences Building",
-    "image": "/assets/Database Images/unrestricted nodes/96.webp",
+    "image": "/assets/Database Images/unrestricted nodes/340.webp",
     "back": ["node96", "node97"],
     "coords": {
-      "x": 0.466,
-      "y": 0.879,
+      "x": 0.461,
+      "y": 0.867,
       "type": "college_buildings"
     },
     "hotspot": [
@@ -864,11 +864,11 @@
   {
     "scene": "hs",
     "location": "Cavite Science Highschool Building",
-    "image": "",
+    "image": "/assets/Database Images/unrestricted nodes/73.webp",
     "back": [""],
     "coords": {
-      "x": 0.367,
-      "y": 1.163,
+      "x": 0.36,
+      "y": 1.139,
       "type": "school_facilities"
     },
     "hotspot": [
@@ -876,8 +876,8 @@
         "type": "info",
         "class": "info",
         "target": "hs",
-        "yaw": 112.8,
-        "pitch": 12.34
+        "yaw": 108.6,
+        "pitch": 5.19
       }
     ]
   },
