@@ -3891,5 +3891,367 @@
         "desc": "Restroom at 1st Floor"
       }
     ]
+  },
+  {
+    "cafenr": [
+      {
+        "scene": "cafenr01",
+        "image": "/assets/Building Module/Internal Nodes/cafenr/1st Floor/1.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cafenr02",
+            "yaw": 108.74,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "cafenr02",
+        "image": "/assets/Building Module/Internal Nodes/cafenr/1st Floor/2.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cafenr03",
+            "yaw": 118.88,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "cafenr01",
+            "yaw": 295.28,
+            "pitch": -31.12
+          },
+          {
+            "type": "move",
+            "target": "cafenr04",
+            "yaw": 207.02,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "cafenr06",
+            "yaw": 28.18,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "collegeregistrar",
+            "yaw": 47.5,
+            "pitch": 0.81
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "collegeregistrar",
+            "yaw": 89.95,
+            "pitch": 2.62
+          }
+        ]
+      },
+      {
+        "scene": "cafenr03",
+        "image": "/assets/Building Module/Internal Nodes/cafenr/1st Floor/3.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cafenr02",
+            "yaw": 293.63,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "collegeregistrar",
+            "yaw": 41.43,
+            "pitch": 5.81
+          }
+        ]
+      },
+      {
+        "scene": "cafenr04",
+        "image": "/assets/Building Module/Internal Nodes/cafenr/1st Floor/4.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cafenr05",
+            "yaw": 207.94,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "cafenr02",
+            "yaw": 24.08,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "cafenr07",
+            "yaw": 89.18,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "cafenr05",
+        "image": "/assets/Building Module/Internal Nodes/cafenr/1st Floor/5.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cafenr04",
+            "yaw": 26.01,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "cafenr06",
+        "image": "/assets/Building Module/Internal Nodes/cafenr/1st Floor/6.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cafenr02",
+            "yaw": 207.3,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "deansoffice",
+            "yaw": 5.55,
+            "pitch": -3.39
+          }
+        ]
+      },
+      {
+        "scene": "cafenr07",
+        "image": "/assets/Building Module/Internal Nodes/cafenr/2nd Floor/7.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cafenr08",
+            "yaw": 195.59,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "cafenr04",
+            "yaw": 119.93,
+            "pitch": -32.14
+          },
+          {
+            "type": "move",
+            "target": "cafenr11",
+            "yaw": 70.91,
+            "pitch": -27.74
+          },
+          {
+            "type": "move",
+            "target": "cafenr09",
+            "yaw": 11.47,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "cafenr08",
+        "image": "/assets/Building Module/Internal Nodes/cafenr/2nd Floor/8.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cafenr07",
+            "yaw": 55.47,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "restroom",
+            "yaw": 146.05,
+            "pitch": -3.73
+          }
+        ]
+      },
+      {
+        "scene": "cafenr09",
+        "image": "/assets/Building Module/Internal Nodes/cafenr/2nd Floor/9.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cafenr10",
+            "yaw": 22.38,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "cafenr07",
+            "yaw": 198.12,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "faculty",
+            "yaw": 157.25,
+            "pitch": -4.62
+          }
+        ]
+      },
+      {
+        "scene": "cafenr10",
+        "image": "/assets/Building Module/Internal Nodes/cafenr/2nd Floor/10.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cafenr09",
+            "yaw": 211.78,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "cafenr11",
+        "image": "/assets/Building Module/Internal Nodes/cafenr/3rd Floor/11.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cafenr12",
+            "yaw": 196.62,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "cafenr07",
+            "yaw": 127.27,
+            "pitch": -29.38
+          },
+          {
+            "type": "move",
+            "target": "cafenr13",
+            "yaw": 17.52,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "cafenr15",
+            "yaw": 84.18,
+            "pitch": -26.35
+          }
+        ]
+      },
+      {
+        "scene": "cafenr12",
+        "image": "/assets/Building Module/Internal Nodes/cafenr/3rd Floor/12.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cafenr11",
+            "yaw": 34.52,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "cafenr13",
+        "image": "/assets/Building Module/Internal Nodes/cafenr/3rd Floor/13.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cafenr11",
+            "yaw": 197.92,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "cafenr14",
+            "yaw": 18.82,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "cafenr14",
+        "image": "/assets/Building Module/Internal Nodes/cafenr/3rd Floor/14.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cafenr13",
+            "yaw": 203.07,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "cafenr15",
+        "image": "/assets/Building Module/Internal Nodes/cafenr/4th Floor/15.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cafenr11",
+            "yaw": 160.25,
+            "pitch": -40.0
+          },
+          {
+            "type": "move",
+            "target": "cafenr16",
+            "yaw": 218.53,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "cafenr17",
+            "yaw": 42.78,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "cafenr16",
+        "image": "/assets/Building Module/Internal Nodes/cafenr/4th Floor/16.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cafenr15",
+            "yaw": 0.28,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "cafenr17",
+        "image": "/assets/Building Module/Internal Nodes/cafenr/4th Floor/17.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cafenr15",
+            "yaw": 220.16,
+            "pitch": -20
+          }
+        ]
+      }
+    ],
+    "cafenr_extras": [
+      {
+        "scene": "deansoffice",
+        "location": "College Dean Office",
+        "desc": "College of Agriculture, Forestry, Environment and Natural Resources Dean's Office"
+      },
+      {
+        "scene": "collegeregistrar",
+        "location": "College Registrar",
+        "desc": "This is the College of Agriculture, Forestry, Environment and Natural Resources Registrar"
+      },
+      {
+        "scene": "restroom",
+        "location": "Restroom",
+        "desc": "This is the Restroom"
+      },
+      {
+        "scene": "faculty",
+        "location": "Faculty Room",
+        "desc": "This is the Faculty Room"
+      }
+    ]
   }
 ]
