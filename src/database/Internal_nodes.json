@@ -2418,7 +2418,7 @@
             "type": "move",
             "target": "con01",
             "yaw": 47.35,
-            "pitch": -20
+            "pitch": -38.43
           }
         ]
       },
@@ -2545,6 +2545,13 @@
             "target": "con14",
             "yaw": 285.37,
             "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "officesec",
+            "yaw": 296.46,
+            "pitch": -3.67
           }
         ]
       },
@@ -2717,6 +2724,13 @@
             "pitch": -20
           }
         ]
+      }
+    ],
+    "con_extras": [
+      {
+        "scene": "officesec",
+        "location": "Office of the College Secretary",
+        "desc": "Office of the College Secretary, where 1 student can be accommodated at a time."
       }
     ]
   }
