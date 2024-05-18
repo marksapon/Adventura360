@@ -15,8 +15,7 @@ function Login({ BACKEND_URL, setLoginType }) {
   const navigate = useNavigate();
 
   /* AES-256 Decryption */
-  const key =
-    "08f810783d07d71f570b34ef3bbbdb98715799ae41a0d9a2f538ba216673ed55";
+  const key = import.meta.env.VITE_AES_KEY;
 
   /* Check if user is already logged in and fetch users from the database */
   useEffect(() => {
