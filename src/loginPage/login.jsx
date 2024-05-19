@@ -24,15 +24,19 @@ function Login({ BACKEND_URL, setLoginType }) {
       setIsLoginSuccessful(true);
       setLoginType(loginType);
     } else {
-      axios
-        .get(`${BACKEND_URL}/getUsers`)
-        .then((users) => {
-          setUsers(users.data);
-        })
-        .catch((err) => {
-          console.log("Login Error:", err.message);
-          setUsers(usersldb);
-        });
+      /* MongoDB (DO NOT DELETE) */
+      // axios
+      //   .get(`${BACKEND_URL}/getUsers`)
+      //   .then((users) => {
+      //     setUsers(users.data);
+      //   })
+      //   .catch((err) => {
+      //     alert("Error Occured. Loading Local Database...");
+      //     setUsers(usersldb);
+      //   });
+
+      /* Local Database */
+      setUsers(usersldb);
     }
     // window.onbeforeunload = () => {
     //   Cookies.remove("loginType");

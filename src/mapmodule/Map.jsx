@@ -54,11 +54,12 @@ const MapModule = ({
     if (checkOrientation() === "landscape") {
       return 7;
     } else {
-      return isMobile() ? 28 : 7;
+      return isMobile() ? 7 : 7; // 28 for mobile
     }
   };
   const [zoomLevel, setZoomLevel] = useState(maxZoom());
   const [poiNameState, setPoiNameState] = useState(false); // POI Name State
+  const poiNameStateRef = useRef(poiNameState);
   const [overlayState, setOverlayState] = useState(false); // Overlay State
 
   /* OpenSeadragon Viewer */
@@ -147,23 +148,18 @@ const MapModule = ({
 
   const icons = iconsSet; // Icons Set
 
-  const [current_overlays, setCurrentOverlays] = useState(
-    // Overlays that are going to be displayed
-    Object.keys(overlays),
-  );
+  const [current_overlays, setCurrentOverlays] = useState([]);
 
   // Create a ref for current_overlays
   const currentOverlaysRef = useRef(current_overlays);
 
   /* Overlay Filter */
-  const [filterClicked, setFilterClicked] = useState(false); // Filter Button State
+  const [filterClicked, setFilterClicked] = useState(true); // Filter Button State
 
   // Refresh Overlays when filter is disconnected
   function refresh() {
-    setCurrentOverlays(Object.keys(overlays));
-
     console.log("Map Refresh");
-    Object.keys(overlays).map((type) => {
+    current_overlays.map((type) => {
       overlays[type].map((overlay) => {
         viewer.removeOverlay(overlay.id);
       });
@@ -171,7 +167,7 @@ const MapModule = ({
 
     viewer.removeOverlay("current location");
 
-    Object.keys(overlays).forEach((key) => {
+    current_overlays.forEach((key) => {
       overlays[key].map((overlay) => {
         const div = document.getElementById(overlay.id);
         if (currLoc.coords.x !== overlay.x && currLoc.coords.y !== overlay.y) {
@@ -205,39 +201,24 @@ const MapModule = ({
 
   function addOverlays(filterList) {
     console.log("Adding Overlay");
-    if (filterList.length > 0) {
-      console.log("Filter List:", filterList);
-      // If there is an element in the filterList add them to the OSD
-      filterList.map((type) => {
-        console.log("Object:", overlays[type]);
-        overlays[type].map((overlay) => {
-          const div = document.getElementById(overlay.id);
-          viewer.addOverlay({
-            element: div,
-            location: new OpenSeadragon.Point(overlay.x, overlay.y),
-            placement: OpenSeadragon.Placement.BOTTOM,
-            rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
-          });
+    removeOverlays();
+
+    console.log("Filter List:", filterList);
+    // If there is an element in the filterList add them to the OSD
+    filterList.map((type) => {
+      console.log("Object:", overlays[type]);
+      overlays[type].map((overlay) => {
+        const div = document.getElementById(overlay.id);
+        viewer.addOverlay({
+          element: div,
+          location: new OpenSeadragon.Point(overlay.x, overlay.y),
+          placement: OpenSeadragon.Placement.BOTTOM,
+          rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
         });
       });
+    });
 
-      setCurrentOverlays(filterList);
-    } else {
-      // Else add all the overlays to the OSD
-      Object.keys(overlays).forEach((key) => {
-        overlays[key].map((overlay) => {
-          const div = document.getElementById(overlay.id);
-          viewer.addOverlay({
-            element: div,
-            location: new OpenSeadragon.Point(overlay.x, overlay.y),
-            placement: OpenSeadragon.Placement.BOTTOM,
-            rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
-          });
-        });
-      });
-
-      setCurrentOverlays(Object.keys(overlays));
-    }
+    setCurrentOverlays(filterList);
   }
 
   /* Map Button Mount */
@@ -265,12 +246,12 @@ const MapModule = ({
       showNavigationControl: false, // Hides the navigation control
       zoomPerClick: 1, // Disables zoom per click
       gestureSettingsTouch: {
-        scrollToZoom: false,
-        clickToZoom: false,
-        dblClickToZoom: false,
-        pinchToZoom: true,
-        flickEnabled: false,
-        pinchRotate: false,
+        scrollToZoom: false, // disable scroll to zoom
+        clickToZoom: false, // disable click to zoom
+        dblClickToZoom: false, // enable double click to zoom
+        pinchToZoom: true, // enable pinch to zoom
+        flickEnabled: false, // enable flick
+        pinchRotate: false, // disable pinch to rotate
       },
     });
 
@@ -282,6 +263,14 @@ const MapModule = ({
       setOsdLoaded(true); // Set state when OSD is loaded
 
       viewerInstance.viewport.panTo(location, true); // Starts from current location
+
+      viewerInstance.addOverlay({
+        id: "current location",
+        x: currLoc.coords.x,
+        y: currLoc.coords.y,
+        placement: OpenSeadragon.Placement.BOTTOM,
+        rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
+      });
     });
 
     // When OSD is panned
@@ -299,11 +288,8 @@ const MapModule = ({
       // Get the current zoom level
       const currentZoomLevel = viewerInstance.viewport.getZoom();
 
-      setZoomLevel(currentZoomLevel);
+      setPoiNameState(() => (currentZoomLevel >= 6 ? true : false));
     });
-
-    /* OSD Touch Controls */
-    // viewerInstance.gestureSettingsByDeviceType("touch").pinchRotate = true;
 
     return () => {
       // Clean up OpenSeadragon viewer when unmounts prevents multiple OSD instances
@@ -312,54 +298,18 @@ const MapModule = ({
     };
   }, []);
 
-  /* Dynamic Overlay Loader */
-  useEffect(() => {
-    // Add overlays to the OSD
-    if (osdLoaded) {
-      // Dynamic Overlay Loader
-
-      viewer.addOverlay({
-        id: "current location",
-        x: currLoc.coords.x,
-        y: currLoc.coords.y,
-        placement: OpenSeadragon.Placement.BOTTOM,
-        rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
-      });
-
-      Object.keys(overlays).map((overlayType) => {
-        overlays[overlayType].map((overlay) => {
-          if (
-            currLoc.coords.x !== overlay.x &&
-            currLoc.coords.y !== overlay.y
-          ) {
-            const div = document.getElementById(overlay.id);
-
-            viewer.addOverlay({
-              element: div,
-              location: new OpenSeadragon.Point(overlay.x, overlay.y),
-              placement: OpenSeadragon.Placement.BOTTOM,
-              rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
-            });
-          }
-        });
-      });
-    }
-  }, [osdLoaded]);
-
   useEffect(() => {
     const maxZoomLevel = maxZoom();
     console.log("Zoom Level:", zoomLevel);
     console.log("Max Zoom Level:", maxZoomLevel);
-    if (osdLoaded) {
-      if (zoomLevel === maxZoomLevel) {
-        console.log("Displaying POI with Names");
-        setPoiNameState(true);
-        console.log("POI:", poiNameState);
-      } else {
-        setPoiNameState(false);
-      }
-    }
-  }, [osdLoaded, zoomLevel, current_overlays]);
+
+    // if (zoomLevel >= 6) {
+    //   console.log("Displaying POI with Names");
+    //   setPoiNameState(true);
+    // } else {
+    //   setPoiNameState(false);
+    // }
+  }, [zoomLevel]);
 
   // OSD Click Event Handler
   useEffect(() => {
@@ -370,47 +320,49 @@ const MapModule = ({
       viewer.addHandler("canvas-click", function (event) {
         console.log("CLICK EVENT");
         const viewportPoint = viewer.viewport.pointFromPixel(event.position);
+        console.log("currentOverlaysRef:", currentOverlaysRef.current);
+        if (currentOverlaysRef.current.length > 0) {
+          currentOverlaysRef.current.map((overlayType) => {
+            overlays[overlayType].map((overlay, index) => {
+              if (
+                currLoc.coords.x !== overlay.x &&
+                currLoc.coords.y !== overlay.y
+              ) {
+                const clickedOverlay = viewer.getOverlayById(overlay.id); // Get the overlay by ID
+                console.log("Overlays:", clickedOverlay);
 
-        currentOverlaysRef.current.map((overlayType) => {
-          overlays[overlayType].map((overlay, index) => {
-            if (
-              currLoc.coords.x !== overlay.x &&
-              currLoc.coords.y !== overlay.y
-            ) {
-              const clickedOverlay = viewer.getOverlayById(overlay.id); // Get the overlay by ID
-              // console.log("Clicked Overlay:", clickedOverlay);
+                // Get the bounds of the overlay
+                const overlayBounds = clickedOverlay.getBounds(viewer.viewport);
+                // console.log("Overlay Bounds:", overlayBounds);
 
-              // Get the bounds of the overlay
-              const overlayBounds = clickedOverlay.getBounds(viewer.viewport);
-              // console.log("Overlay Bounds:", overlayBounds);
+                // Check if the clicked point is inside the overlay bounds
 
-              // Check if the clicked point is inside the overlay bounds
-
-              if (overlayBounds.containsPoint(viewportPoint)) {
-                console.log("Overlay Clicked:", overlay);
-                let found = false;
-                buildingsDB.find((buildings) => {
-                  if (buildings.scene === overlay.scene) {
-                    openBldgModal(overlay.scene, "map");
-                    found = true;
-                  }
-                });
-
-                if (!found) {
-                  extrasDB.find((extras) => {
-                    if (extras.scene === overlay.scene) {
-                      console.log("Found Extras");
-                      const extraState = !overlay.state;
-                      setExtraCheck(extraState);
-                      setSelectedExtra(extras);
-                      console.log("Overlay Extra State:", overlay.state);
+                if (overlayBounds.containsPoint(viewportPoint)) {
+                  console.log("Overlay Clicked:", overlay);
+                  let found = false;
+                  buildingsDB.find((buildings) => {
+                    if (buildings.scene === overlay.scene) {
+                      openBldgModal(overlay.scene, "map");
+                      found = true;
                     }
                   });
+
+                  if (!found) {
+                    extrasDB.find((extras) => {
+                      if (extras.scene === overlay.scene) {
+                        console.log("Found Extras");
+                        const extraState = !overlay.state;
+                        setExtraCheck(extraState);
+                        setSelectedExtra(extras);
+                        console.log("Overlay Extra State:", overlay.state);
+                      }
+                    });
+                  }
                 }
               }
-            }
+            });
           });
-        });
+        }
 
         // Viewport Coordinates when clicking
         console.log(
@@ -470,7 +422,7 @@ const MapModule = ({
 
     buildingsDB.map((building) => {
       const neighbors = [];
-      if (buildingsDB.back) {
+      if (building.back) {
         building.back.map((nodes) => {
           neighbors.push(nodes);
         });
@@ -489,11 +441,6 @@ const MapModule = ({
 
     extrasDB.map((building) => {
       const neighbors = [];
-      if (building.back) {
-        building.back.map((nodes) => {
-          neighbors.push(nodes);
-        });
-      }
 
       temp.push(
         new Node(
@@ -549,8 +496,8 @@ const MapModule = ({
 
     const target_location = () => {
       const target = graph.find((node) => {
-        console.log("Node: ", node);
-        console.log("Target: ", targetLocation);
+        // console.log("Node: ", node);
+        // console.log("Target: ", targetLocation);
         return node.id === targetLocation.scene;
       });
 
@@ -567,6 +514,7 @@ const MapModule = ({
     if (typeof generatedPath === "string") {
       if (Paper.project) {
         Paper.project.clear(); // Clear the written paths in PaperJS
+        alert("No existing paths"); // No path found
       }
     } else {
       // Convert generatedPath to Pixel Coordinates
@@ -621,7 +569,7 @@ const MapModule = ({
       });
 
       gScore.set(start, 0); // The cost of going from start to start is zero
-      console.log("Goal: ", goal);
+      // console.log("Goal: ", goal);
       fScore.set(start, euclideanDistance(start, goal)); // For the first node, it is set by distance to target
 
       openSet.add(start); // Add the start node to the open set
@@ -666,7 +614,7 @@ const MapModule = ({
     }
 
     const generatedPath = astar(graph, start, end, travelType);
-    // console.log("Generated Path: ", generatedPath);
+    console.log("Generated Path: ", generatedPath);
 
     return generatedPath; // Set the generated path to the state
   }
@@ -706,7 +654,8 @@ const MapModule = ({
       element: paperJS,
       location: viewer.world.getItemAt(0).getBounds(),
     });
-    setFilterClicked(false);
+
+    setFilterClicked(true);
     refresh();
   }
 
@@ -817,7 +766,7 @@ const MapModule = ({
                 </div>
               </div>
 
-              {poiNameState && (
+              {poiNameStateRef.current && (
                 <div
                   className="absolute -left-28 flex h-auto w-60 items-center justify-center rounded-md border-2 border-gray-300 bg-white text-sm shadow-lg"
                   style={{
@@ -874,10 +823,7 @@ const MapModule = ({
             {/* Extras Display Modal */}
             {selected_extra && extraCheck ? (
               <>
-                <div
-                  className="absolute -top-20 z-20 h-screen w-screen bg-black bg-opacity-70"
-                  style={{ pointerEvents: "auto" }}
-                ></div>
+                <div className="absolute -top-20 z-20 h-screen w-screen bg-black bg-opacity-70"></div>
                 <div className="pointer-events-none relative z-20 flex h-full items-center justify-center p-4">
                   <div
                     style={{ fontSize: "12px" }}
@@ -929,9 +875,7 @@ const MapModule = ({
                   onClick={() => {
                     setFilterClicked((prev) => {
                       const newState = !prev;
-                      if (!newState) {
-                        refresh();
-                      }
+                      removeOverlays();
                       return newState;
                     });
                   }}

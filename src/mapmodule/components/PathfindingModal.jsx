@@ -91,7 +91,7 @@ const PathfindingModal = ({
         <>
           {/* Minimize Button */}
           <div className="pointer-events-auto absolute -left-12 top-0 flex h-full items-center justify-end">
-            <div className="z-40 flex h-fit w-20 items-center justify-end rounded-lg bg-slate-200 py-8">
+            <div className="z-40 flex h-fit w-20 items-center justify-end rounded-lg bg-slate-50 bg-opacity-50 py-8 hover:bg-opacity-100">
               <button
                 onClick={() => {
                   console.log("Minimize Button Clicked");
@@ -108,7 +108,7 @@ const PathfindingModal = ({
         </>
       ) : (
         <>
-          <div className="pointer-events-none absolute -top-20 left-0 z-10 h-screen w-screen bg-black bg-opacity-70" />
+          <div className="pointer-events-auto absolute -top-20 left-0 z-10 h-screen w-screen bg-black bg-opacity-70" />
           <div className="pointer-events-auto absolute -left-2 z-50 flex h-full w-5/6 flex-col gap-2 rounded-lg shadow-md sm:w-7/12 lg:w-2/6">
             {/* Current location */}
             <div className="flex h-full w-full">
@@ -270,7 +270,7 @@ const PathfindingModal = ({
               </div>
               <div className="flex h-full flex-col justify-center">
                 <button
-                  className="z-40 flex h-fit w-auto items-center justify-end rounded-br-lg rounded-tr-lg bg-slate-50 py-8"
+                  className="z-40 flex h-fit w-auto items-center justify-end rounded-br-lg rounded-tr-lg bg-slate-50 bg-opacity-50 py-8 hover:bg-opacity-100"
                   onClick={() => {
                     console.log("Minimize Button Clicked");
                     setMinimized(!minimized);

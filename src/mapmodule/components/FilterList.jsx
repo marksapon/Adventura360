@@ -4,10 +4,6 @@ import { useEffect } from "react";
 const FilterList = ({
   icons,
 
-  overlays,
-  setOverlays,
-
-  refreshOverlays,
   removeOverlays,
   addOverlays,
 }) => {
@@ -33,13 +29,9 @@ const FilterList = ({
   function refresh(filterList) {
     console.log("Refresh");
     // console.log("Filter List: ", filterList);
-    if (filterList.length === 0) {
-      refreshOverlays();
-    } else {
-      // Else add all the overlays that are in the filterList
-      removeOverlays();
-      addOverlays(filterList);
-    }
+
+    removeOverlays();
+    addOverlays(filterList);
   }
 
   // Function that controls the filter list
@@ -47,7 +39,6 @@ const FilterList = ({
     // console.log("Filter:", type, state);
     if (state) {
       // If the state is true add the type to the filter list
-
       setFilterOverlay((prevState) => {
         const newFilterList = [...prevState, type];
         refresh(newFilterList);
@@ -55,9 +46,9 @@ const FilterList = ({
       });
     } else {
       // Else remove the type from the filter list
-
       setFilterOverlay((prevState) => {
         const newFilterList = prevState.filter((item) => item !== type);
+        console.log("New Filter List: ", newFilterList);
         refresh(newFilterList);
         return newFilterList;
       });
