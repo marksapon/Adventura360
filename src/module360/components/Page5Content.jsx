@@ -1,8 +1,9 @@
 import React from "react";
-import { PiPlayCircleLight } from "react-icons/pi"; // Autoplay Button
-import { TbMaximize, TbMaximizeOff } from "react-icons/tb"; // Fullscreen On/Off
-import { IoMdSearch } from "react-icons/io"; // Search Button
-const Page4Content = () => (
+
+import { GrMap } from "react-icons/gr"; // Map Button
+import { Tb360View } from "react-icons/tb"; // 360 Icon
+
+const Page5Content = () => (
   <div className="flex h-full w-full items-center justify-center">
     <div className="flex h-full max-h-[600px] w-full max-w-[800px] flex-col justify-between rounded-2xl border-black bg-white">
       <div className="relative flex h-full w-full flex-col items-center">
@@ -16,9 +17,9 @@ const Page4Content = () => (
               alt="mouse"
               className="h-10 w-10"
             /> */}
-            <PiPlayCircleLight className="h-10 w-10 text-green-600" />
+            <GrMap className="h-10 w-10 text-green-600" />
             <p className="flex h-full w-full items-center justify-start text-xs">
-              Share the location and view to other people through a link.
+              Click this button when you want to return in the 360 experience.
             </p>
           </div>
           <div className="flex w-full flex-row gap-5">
@@ -27,23 +28,10 @@ const Page4Content = () => (
               alt="mouse"
               className="h-10 w-10"
             /> */}
-            <TbMaximize className="h-10 w-10 text-green-600" />
+            <Tb360View className="h-10 w-10 text-green-600" />
             <p className="flex h-full w-full items-center justify-start text-xs">
-              This is the Fullscreen button. Click this when you you want to
-              experience Anventura360° in fullscreen.
-            </p>
-          </div>
-
-          <div className="flex w-full flex-row gap-5">
-            {/* <img
-              src={"/assets/Modals/help modal/fullscreen.webp"}
-              alt="mouse"
-              className="h-10 w-10"
-            /> */}
-            <IoMdSearch className="h-10 w-10 text-green-600" />
-            <p className="flex h-full w-full items-center justify-start text-xs">
-              This is the search button. Click this when you need to search a
-              building or a landmark in Adventura360°.
+              This is the Map button. Click this when you you want to to go and
+              have a lool at the map of our University.
             </p>
           </div>
         </div>
@@ -52,4 +40,4 @@ const Page4Content = () => (
   </div>
 );
 
-export default Page4Content;
+export default Page5Content;

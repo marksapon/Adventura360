@@ -144,7 +144,7 @@ const Bugmodal = ({ visible, onClose }) => {
                       className="cursor-pointer border-b p-2 text-center hover:bg-gray-100"
                       onClick={() => selectItem("Bug")}
                     >
-                      Bug
+                      Bug Report
                     </li>
                     <li
                       className="cursor-pointer border-b p-2 text-center hover:bg-gray-100"

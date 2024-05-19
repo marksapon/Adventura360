@@ -68,7 +68,7 @@ const MapModule = ({
 
   /* Current Location */
   const location = new OpenSeadragon.Point(currLoc.coords.x, currLoc.coords.y); // Current Point Location
-  const [checkCenter, setCheckCenter] = useState(true); // Check if user view is in the current location
+  const [checkCenter, setCheckCenter] = useState(false); // Check if user view is in the current location
 
   /* Building Modal State */
   const [bldgModalState, setBldgModalState] = useState(false); // Building Modal State
@@ -256,11 +256,11 @@ const MapModule = ({
         },
       ],
       defaultZoomLevel: maxZoom(),
-      maxZoomLevel: maxZoom(), // Modify this to limit the zoom level to the level which pixels are not blurred
+      maxZoomLevel: maxZoom(),
       minZoomLevel: 1, //
       animationTime: 2.0, // Animation time when Panning
       visibilityRatio: 1.0, // The visibility ratio
-      constrainDuringPan: true, // Whether to constrain during pan
+      constrainDuringPan: false, // Whether to constrain during pan
       scrollToZoom: false, // scroll to zoom
       showNavigationControl: false, // Hides the navigation control
       zoomPerClick: 1, // Disables zoom per click
@@ -355,40 +355,13 @@ const MapModule = ({
         console.log("Displaying POI with Names");
         setPoiNameState(true);
         console.log("POI:", poiNameState);
-      } else if (zoomLevel >= 4 && zoomLevel < maxZoomLevel) {
-        console.log("Displaying POI without Names");
+      } else {
         setPoiNameState(false);
-        console.log("POI:", poiNameState);
-
-        if (overlayState) {
-          current_overlays.forEach((key) => {
-            overlays[key].map((overlay) => {
-              const div = document.getElementById(overlay.id);
-              if (
-                currLoc.coords.x !== overlay.x &&
-                currLoc.coords.y !== overlay.y
-              ) {
-                viewer.addOverlay({
-                  element: div,
-                  location: new OpenSeadragon.Point(overlay.x, overlay.y),
-                  placement: OpenSeadragon.Placement.BOTTOM,
-                  rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
-                });
-              }
-            });
-          });
-          setOverlayState(false);
-        }
-      } else if (zoomLevel < 4) {
-        console.log("Not Displaying POI");
-        removeOverlays();
-        setOverlayState(true);
       }
     }
   }, [osdLoaded, zoomLevel, current_overlays]);
 
   // OSD Click Event Handler
-
   useEffect(() => {
     console.log("Event Handler");
     currentOverlaysRef.current = current_overlays;
@@ -724,7 +697,7 @@ const MapModule = ({
 
     const path = new Path({
       segments: pathData,
-      strokeColor: "#22d3ee",
+      strokeColor: "#3c096c", //70e000 for green
       strokeWidth: strokeWidth,
       strokeCap: "round",
     });

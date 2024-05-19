@@ -6,10 +6,12 @@ import {
   IoIosRadioButtonOff,
   IoIosRadioButtonOn,
 } from "react-icons/io";
+
 import Page1Content from "./Page1Content";
 import Page2Content from "./Page2Content";
 import Page3Content from "./Page3Content";
 import Page4Content from "./Page4Content";
+import Page5Content from "./Page5Content";
 
 const HelpModal = ({ visible, onClose }) => {
   const [page, setPage] = useState(1);
@@ -26,7 +28,7 @@ const HelpModal = ({ visible, onClose }) => {
   };
 
   const handleNext = () => {
-    if (page < 4) {
+    if (page < 5) {
       setPage(page + 1);
     } else {
       setPage(1);
@@ -37,7 +39,7 @@ const HelpModal = ({ visible, onClose }) => {
     if (page > 1) {
       setPage(page - 1);
     } else {
-      setPage(4);
+      setPage(5);
     }
   };
 
@@ -67,6 +69,7 @@ const HelpModal = ({ visible, onClose }) => {
             {page === 2 && <Page2Content />}
             {page === 3 && <Page3Content />}
             {page === 4 && <Page4Content />}
+            {page === 5 && <Page5Content />}
 
             <div className="flex h-full w-auto flex-col items-center">
               <div className="relative flex h-full flex-col">
@@ -129,6 +132,16 @@ const HelpModal = ({ visible, onClose }) => {
               onClick={() => setPage(4)}
             >
               {page === 4 ? (
+                <IoIosRadioButtonOn color="#4CAF4F" />
+              ) : (
+                <IoIosRadioButtonOff />
+              )}
+            </button>
+            <button
+              className="flex items-center justify-center"
+              onClick={() => setPage(5)}
+            >
+              {page === 5 ? (
                 <IoIosRadioButtonOn color="#4CAF4F" />
               ) : (
                 <IoIosRadioButtonOff />
