@@ -34,9 +34,9 @@ function Login({ BACKEND_URL, setLoginType }) {
           setUsers(usersldb);
         });
     }
-    window.onbeforeunload = () => {
-      Cookies.remove("loginType");
-    };
+    // window.onbeforeunload = () => {
+    //   Cookies.remove("loginType");
+    // };
   }, []);
 
   /* Handle login success */
