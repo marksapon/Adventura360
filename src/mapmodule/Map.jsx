@@ -28,8 +28,38 @@ const MapModule = ({
   iconsSet,
   openBldgModal,
 }) => {
+  /* Device Check */
+  // Check if User on Mobile
+  function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent,
+    );
+  }
+
+  // Check if Landscape or Portrait
+  function checkOrientation() {
+    if (window.innerWidth > window.innerHeight) {
+      return "landscape";
+    } else {
+      return "portrait";
+    }
+  }
+
   const [selected_extra, setSelectedExtra] = useState(); // Selected Extra State
   const [extraCheck, setExtraCheck] = useState(true); // Extra Check State
+
+  /* Zoom Level */
+  // Max Zoom Level based on Device
+  const maxZoom = () => {
+    if (checkOrientation() === "landscape") {
+      return 7;
+    } else {
+      return isMobile() ? 28 : 7;
+    }
+  };
+  const [zoomLevel, setZoomLevel] = useState(maxZoom());
+  const [poiNameState, setPoiNameState] = useState(false); // POI Name State
+  const [overlayState, setOverlayState] = useState(false); // Overlay State
 
   /* OpenSeadragon Viewer */
   const osdRef = useRef(); // Reference to the OSD element
@@ -43,11 +73,6 @@ const MapModule = ({
   /* Building Modal State */
   const [bldgModalState, setBldgModalState] = useState(false); // Building Modal State
   const [targetScene, setTargetScene] = useState(""); // Target Scene for Building Modal
-
-  const [displayOverlay, setDisplayOverlay] = useState([
-    "restroom",
-    "washarea",
-  ]); // Display Overlay State
 
   /* Overlays */
 
@@ -176,8 +201,6 @@ const MapModule = ({
         viewer.removeOverlay(overlay.id);
       });
     });
-
-    setCurrentOverlays([]);
   }
 
   function addOverlays(filterList) {
@@ -232,15 +255,23 @@ const MapModule = ({
           fileFormat: "webp",
         },
       ],
-      defaultZoomLevel: 4,
-      maxZoomLevel: 7, // Modify this to limit the zoom level to the level which pixels are not blurred
-      minZoomLevel: 4, //
+      defaultZoomLevel: maxZoom(),
+      maxZoomLevel: maxZoom(), // Modify this to limit the zoom level to the level which pixels are not blurred
+      minZoomLevel: 1, //
       animationTime: 2.0, // Animation time when Panning
       visibilityRatio: 1.0, // The visibility ratio
-      constrainDuringPan: false, // Whether to constrain during pan
+      constrainDuringPan: true, // Whether to constrain during pan
       scrollToZoom: false, // scroll to zoom
       showNavigationControl: false, // Hides the navigation control
       zoomPerClick: 1, // Disables zoom per click
+      gestureSettingsTouch: {
+        scrollToZoom: false,
+        clickToZoom: false,
+        dblClickToZoom: false,
+        pinchToZoom: false,
+        flickEnabled: false,
+        pinchRotate: false,
+      },
     });
 
     setViewer(viewerInstance);
@@ -263,8 +294,16 @@ const MapModule = ({
       }
     });
 
+    // Add a zoom event handler
+    viewerInstance.addHandler("zoom", function (event) {
+      // Get the current zoom level
+      const currentZoomLevel = viewerInstance.viewport.getZoom();
+
+      setZoomLevel(currentZoomLevel);
+    });
+
     /* OSD Touch Controls */
-    viewerInstance.gestureSettingsByDeviceType("touch").pinchRotate = true;
+    // viewerInstance.gestureSettingsByDeviceType("touch").pinchRotate = true;
 
     return () => {
       // Clean up OpenSeadragon viewer when unmounts prevents multiple OSD instances
@@ -307,11 +346,51 @@ const MapModule = ({
     }
   }, [osdLoaded]);
 
+  useEffect(() => {
+    const maxZoomLevel = maxZoom();
+    console.log("Zoom Level:", zoomLevel);
+    console.log("Max Zoom Level:", maxZoomLevel);
+    if (osdLoaded) {
+      if (zoomLevel === maxZoomLevel) {
+        console.log("Displaying POI with Names");
+        setPoiNameState(true);
+        console.log("POI:", poiNameState);
+      } else if (zoomLevel >= 4 && zoomLevel < maxZoomLevel) {
+        console.log("Displaying POI without Names");
+        setPoiNameState(false);
+        console.log("POI:", poiNameState);
+
+        if (overlayState) {
+          current_overlays.forEach((key) => {
+            overlays[key].map((overlay) => {
+              const div = document.getElementById(overlay.id);
+              if (
+                currLoc.coords.x !== overlay.x &&
+                currLoc.coords.y !== overlay.y
+              ) {
+                viewer.addOverlay({
+                  element: div,
+                  location: new OpenSeadragon.Point(overlay.x, overlay.y),
+                  placement: OpenSeadragon.Placement.BOTTOM,
+                  rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
+                });
+              }
+            });
+          });
+          setOverlayState(false);
+        }
+      } else if (zoomLevel < 4) {
+        console.log("Not Displaying POI");
+        removeOverlays();
+        setOverlayState(true);
+      }
+    }
+  }, [osdLoaded, zoomLevel, current_overlays]);
+
   // OSD Click Event Handler
 
   useEffect(() => {
     console.log("Event Handler");
-    console.log("Current Overlays:", current_overlays);
     currentOverlaysRef.current = current_overlays;
     // When OSD Canvas is clicked
     if (osdLoaded) {
@@ -320,7 +399,6 @@ const MapModule = ({
         const viewportPoint = viewer.viewport.pointFromPixel(event.position);
 
         currentOverlaysRef.current.map((overlayType) => {
-          console.log("Overlay Type:", overlayType);
           overlays[overlayType].map((overlay, index) => {
             if (
               currLoc.coords.x !== overlay.x &&
@@ -370,10 +448,6 @@ const MapModule = ({
       });
     }
   }, [osdLoaded, current_overlays]);
-
-  useEffect(() => {
-    console.log("Extras Check State:", extraCheck);
-  }, [extraCheck]);
 
   /* PathFinding */
 
@@ -473,12 +547,6 @@ const MapModule = ({
 
   const [pathFindingClicked, setPathFindingClicked] = useState(false); // State to track if pathfinding icon is clicked
 
-  function isMobile() {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent,
-    );
-  }
-
   // /* Function to scale down the given size */
   function downScale(getContentSize) {
     const scale = isMobile() ? 12 : 4;
@@ -493,7 +561,6 @@ const MapModule = ({
 
   // /* Main Pathfinding Function */
   function pathFinding(targetLocation, travelType = "both") {
-    // console.log("Target Location: ", targetLocation.scene);
     // Points Generated in A Star Algorithm
 
     // console.log("Travel Type:", travelType);
@@ -525,7 +592,6 @@ const MapModule = ({
     );
 
     if (typeof generatedPath === "string") {
-      console.log(generatedPath);
       if (Paper.project) {
         Paper.project.clear(); // Clear the written paths in PaperJS
       }
@@ -546,8 +612,6 @@ const MapModule = ({
   function pathFindingAlgorithm(graph, start, end, travelType) {
     // Heuristic Function for determining distance of two nodes
     function euclideanDistance(node1, node2) {
-      console.log("node1", node1);
-      console.log("node2", node2);
       const dx = node1.x - node2.x;
 
       const dy = node1.y - node2.y;
@@ -669,7 +733,7 @@ const MapModule = ({
       element: paperJS,
       location: viewer.world.getItemAt(0).getBounds(),
     });
-
+    setFilterClicked(false);
     refresh();
   }
 
@@ -692,8 +756,6 @@ const MapModule = ({
       }, 2000);
     }
   }
-
-  console.log("Extras:", selected_extra, extraCheck);
 
   return (
     <div
@@ -750,7 +812,7 @@ const MapModule = ({
                     style={{
                       position: "absolute",
                       left: "50%",
-                      bottom: "0%",
+                      bottom: "2%",
                       transform: "translateX(-50%)",
                       borderTop: `18px solid ${color}`,
                       borderLeft: "13px solid transparent",
@@ -781,6 +843,19 @@ const MapModule = ({
                   </div>
                 </div>
               </div>
+
+              {poiNameState && (
+                <div
+                  className="absolute -left-28 flex h-auto w-60 items-center justify-center rounded-md border-2 border-gray-300 bg-white text-sm shadow-lg"
+                  style={{
+                    color: color,
+                    WebkitTextStroke: "0.4px white",
+                    fontWeight: "bold",
+                  }}
+                >
+                  {overlay.name}
+                </div>
+              )}
             </button>,
           );
         }
