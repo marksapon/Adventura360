@@ -29,7 +29,7 @@ const MapModule = ({
   openBldgModal,
 }) => {
   const [selected_extra, setSelectedExtra] = useState(); // Selected Extra State
-  const [extraCheck, setExtraCheck] = useState(false); // Extra Check State
+  const [extraCheck, setExtraCheck] = useState(true); // Extra Check State
 
   /* OpenSeadragon Viewer */
   const osdRef = useRef(); // Reference to the OSD element
@@ -309,7 +309,6 @@ const MapModule = ({
 
   // OSD Click Event Handler
 
-
   useEffect(() => {
     console.log("Event Handler");
     console.log("Current Overlays:", current_overlays);
@@ -350,10 +349,10 @@ const MapModule = ({
                   extrasDB.find((extras) => {
                     if (extras.scene === overlay.scene) {
                       console.log("Found Extras");
-                      overlay.state = !overlay.state;
-
+                      const extraState = !overlay.state;
+                      setExtraCheck(extraState);
                       setSelectedExtra(extras);
-                      setExtraCheck(overlay.state);
+                      console.log("Overlay Extra State:", overlay.state);
                     }
                   });
                 }
@@ -373,9 +372,8 @@ const MapModule = ({
   }, [osdLoaded, current_overlays]);
 
   useEffect(() => {
-    console.log("Selected Extra:", selected_extra);
-    console.log("Extra Check:", extraCheck);
-  }, [selected_extra, extraCheck]);
+    console.log("Extras Check State:", extraCheck);
+  }, [extraCheck]);
 
   /* PathFinding */
 
@@ -422,6 +420,7 @@ const MapModule = ({
         ),
       );
     });
+
     buildingsDB.map((building) => {
       const neighbors = [];
       if (buildingsDB.back) {
@@ -694,6 +693,8 @@ const MapModule = ({
     }
   }
 
+  console.log("Extras:", selected_extra, extraCheck);
+
   return (
     <div
       style={{
@@ -824,44 +825,52 @@ const MapModule = ({
 
             {/* Extras Display Modal */}
             {selected_extra && extraCheck ? (
-              <div className="pointer-events-none relative z-20 flex h-full items-center justify-center p-4">
+              <>
                 <div
-                  style={{ fontSize: "12px" }}
-                  className="relative bottom-11 flex max-h-fit max-w-96 flex-col items-center rounded-md border-2 bg-slate-50 p-1 shadow-2xl"
-                >
-                  {/* Close Button */}
-                  <button
-                    className="pointer-events-auto absolute right-0 pr-1"
-                    onClick={() => {
-                      setSelectedExtra();
-                      setExtraCheck(!extraCheck);
-                    }}
+                  className="absolute -top-20 z-20 h-screen w-screen bg-black bg-opacity-70"
+                  style={{ pointerEvents: "auto" }}
+                ></div>
+                <div className="pointer-events-none relative z-20 flex h-full items-center justify-center p-4">
+                  <div
+                    style={{ fontSize: "12px" }}
+                    className="relative bottom-11 flex max-h-fit max-w-96 flex-col items-center rounded-md border-2 bg-slate-50 p-1 shadow-2xl"
                   >
-                    <IoIosClose size={30} />
-                  </button>
-                  <div className="p3 flex h-3/4 flex-col items-center justify-center overflow-hidden pt-8 shadow-lg">
-                    <img
-                      src={
-                        selected_extra.image
-                          ? selected_extra.image
-                          : "https://via.placeholder.com/150"
-                      }
-                      className="h-full w-full border-2 object-cover shadow-md"
-                    />
-                  </div>
-                  <div className="m-2 flex flex-col items-center justify-center gap-2">
-                    <div className="full h-auto w-auto rounded-3xl border-2 bg-white p-1 shadow-lg">
-                      <div className="px-2 text-center font-roboto text-base font-semibold text-green-500 sm:text-lg">
-                        {selected_extra.location}
-                      </div>
+                    {/* Close Button */}
+                    <button
+                      className="pointer-events-auto absolute right-0 pr-1"
+                      onClick={() => {
+                        setSelectedExtra();
+                        setExtraCheck(!extraCheck);
+                      }}
+                    >
+                      <IoIosClose size={30} />
+                    </button>
+                    <div className="p3 flex h-3/4 flex-col items-center justify-center overflow-hidden pt-8 shadow-lg">
+                      <img
+                        src={
+                          selected_extra.image
+                            ? selected_extra.image
+                            : "https://via.placeholder.com/150"
+                        }
+                        className="h-full w-full border-2 object-cover shadow-md"
+                      />
                     </div>
+                    <div className="m-2 flex flex-col items-center justify-center gap-2">
+                      <div className="full h-auto w-auto rounded-3xl border-2 bg-white p-1 shadow-lg">
+                        <div className="px-2 text-center font-roboto text-base font-semibold text-green-500 sm:text-lg">
+                          {selected_extra.location}
+                        </div>
+                      </div>
 
-                    <div className="px-2 text-center font-roboto text-xs text-black">
-                      {selected_extra.desc ? `(${selected_extra.desc})` : null}
+                      <div className="px-2 text-center font-roboto text-xs text-black">
+                        {selected_extra.desc
+                          ? `(${selected_extra.desc})`
+                          : null}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </>
             ) : null}
 
             {/* Filter Button */}
