@@ -1,6 +1,16 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 
-const FilterList = ({ icons, overlays, OSDinstance, OSD }) => {
+const FilterList = ({
+  icons,
+
+  overlays,
+  setOverlays,
+
+  refreshOverlays,
+  removeOverlays,
+  addOverlays,
+}) => {
   /* Filter Buttons States */
   const [restroomState, setRestroomState] = useState(false); // Restroom State
   const [washareaState, setwashareaState] = useState(false); // Hand Wash State
@@ -16,52 +26,15 @@ const FilterList = ({ icons, overlays, OSDinstance, OSD }) => {
   const [venueState, setVenueState] = useState(false); // Venue State
 
   /* Filter Current Overlays */
+
   const [filterOverlay, setFilterOverlay] = useState([]); // Filter List of Overlay that would be displayed in OSD
 
-  // Function for removing all overlays
-  function removeOverlays() {
-    Object.keys(overlays).map((type) => {
-      overlays[type].map((overlay) => {
-        OSDinstance.removeOverlay(overlay.id);
-      });
-    });
-  }
-
-  // Function for adding overlays
-  function addOverlays(filterList) {
-    if (filterList) {
-      // If there is an element in the filterList add them to the OSD
-      filterList.map((type) => {
-        overlays[type].map((overlay) => {
-          const div = document.getElementById(overlay.id);
-          OSDinstance.addOverlay({
-            element: div,
-            location: new OSD.Point(overlay.x, overlay.y),
-            placement: OSD.Placement.BOTTOM,
-          });
-        });
-      });
-    } else {
-      // Else add all the overlays to the OSD
-      Object.keys(overlays).forEach((key) => {
-        overlays[key].map((overlay) => {
-          const div = document.getElementById(overlay.id);
-          OSDinstance.addOverlay({
-            element: div,
-            location: new OSD.Point(overlay.x, overlay.y),
-            placement: OSD.Placement.BOTTOM,
-          });
-        });
-      });
-    }
-  }
-
-  // Function for controlling the behavior of the overlay filter
+  // // Function for controlling the behavior of the overlay filter
   function refresh(filterList) {
+    console.log("Refresh");
+    // console.log("Filter List: ", filterList);
     if (filterList.length === 0) {
-      // If Filterlist is empty add all overlays
-      removeOverlays();
-      addOverlays();
+      refreshOverlays();
     } else {
       // Else add all the overlays that are in the filterList
       removeOverlays();
@@ -71,8 +44,10 @@ const FilterList = ({ icons, overlays, OSDinstance, OSD }) => {
 
   // Function that controls the filter list
   function filter(type, state) {
+    // console.log("Filter:", type, state);
     if (state) {
       // If the state is true add the type to the filter list
+
       setFilterOverlay((prevState) => {
         const newFilterList = [...prevState, type];
         refresh(newFilterList);
@@ -80,6 +55,7 @@ const FilterList = ({ icons, overlays, OSDinstance, OSD }) => {
       });
     } else {
       // Else remove the type from the filter list
+
       setFilterOverlay((prevState) => {
         const newFilterList = prevState.filter((item) => item !== type);
         refresh(newFilterList);

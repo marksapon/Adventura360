@@ -91,27 +91,45 @@ const PathfindingModal = ({
         <>
           {/* Minimize Button */}
           <div className="pointer-events-auto absolute -left-12 top-0 flex h-full items-center justify-end">
-            <div className="z-40 flex h-full w-20 items-center justify-end rounded-lg bg-gray-200">
-              <button
-                onClick={() => {
-                  console.log("Minimize Button Clicked");
-                  setMinimized(!minimized);
-                }}
-              >
+            <button
+              className="z-40 flex h-full w-20 items-center justify-end rounded-lg bg-gray-200 bg-opacity-70   hover:bg-opacity-100"
+              onClick={() => {
+                console.log("Minimize Button Clicked");
+                setMinimized(!minimized);
+              }}
+            >
+              <div>
                 <IoIosArrowBack
                   size={30}
                   className="rotate-180 text-gray-600"
                 />
-              </button>
-            </div>
+              </div>
+            </button>
           </div>
         </>
       ) : (
         <>
-          <div className="pointer-events-none absolute -top-20 left-0 z-10 h-screen w-screen bg-black bg-opacity-70" />
-          <div className="pointer-events-auto absolute -left-2 z-50 grid h-full w-72 grid-rows-6 gap-2 rounded-lg bg-white p-2 shadow-md sm:flex sm:flex-col">
+          <div
+            className="absolute  -top-20 left-0 z-10 h-screen w-screen bg-black bg-opacity-70"
+            style={{ pointerEvents: "auto" }}
+          />
+          <div className="pointer-events-auto absolute -left-2 z-50 grid h-full w-72 grid-rows-6 gap-2 rounded-lg bg-white p-2 shadow-md sm:flex sm:flex-col md:grid-rows-12">
+            {/* Close Button */}
+            <div className="absolute flex w-full items-baseline justify-center bg-slate-500 md:relative md:row-span-1">
+              <button
+                className="absolute right-0 z-20 m-1"
+                onClick={() => {
+                  setPathModalState(false);
+                  console.log("Path Modal Closed");
+                  removePath();
+                }}
+              >
+                <IoIosClose size={30} />
+              </button>
+            </div>
+
             {/* Current location */}
-            <div className="grid h-16 grid-cols-6 gap-y-0 sm:h-20">
+            <div className="grid h-16 grid-cols-6 gap-y-0  sm:h-20 md:row-span-2">
               {/* Current Location ICON */}
               <div className="flex h-full w-full items-end justify-center">
                 <div className="flex h-11 w-full items-center justify-center text-green-600">
@@ -144,7 +162,7 @@ const PathfindingModal = ({
             </div>
 
             {/* Direction */}
-            <div className="grid grid-cols-6 grid-rows-2  ">
+            <div className="grid grid-cols-6 grid-rows-2  md:row-span-2 ">
               {/* Direction ICON */}
               <div className="flex h-full w-full items-start justify-center ">
                 <div className="flex h-10 w-10 items-center justify-center">
@@ -184,7 +202,7 @@ const PathfindingModal = ({
 
               {/* Direction Button */}
               {directionState && (
-                <div className="col-span-6 m-1 flex h-full w-full items-center justify-center">
+                <div className="col-span-7 m-1 flex h-full w-full items-center justify-center">
                   <button
                     className="relative flex w-auto items-center justify-center rounded-full bg-green-500 px-2 text-white"
                     onClick={() => {
@@ -247,33 +265,20 @@ const PathfindingModal = ({
                 )}
               </div>
             )}
-
-            {/* Close Button */}
-            <div className=" absolute right-0 flex h-10 w-10 items-center justify-center">
-              <button
-                className="absolute right-0 z-20 m-1"
-                onClick={() => {
-                  setPathModalState(false);
-                  console.log("Path Modal Closed");
-                  removePath();
-                }}
-              >
-                <IoIosClose size={30} />
-              </button>
-            </div>
           </div>
           {/* Minimize Button */}
           <div className="pointer-events-auto absolute left-5 top-0 flex h-full w-72 items-center justify-end">
-            <div className="z-40 flex h-full w-20 items-center justify-end rounded-lg bg-gray-200">
-              <button
-                onClick={() => {
-                  console.log("Minimize Button Clicked");
-                  setMinimized(!minimized);
-                }}
-              >
+            <button
+              className="z-40 flex h-full w-20 items-center justify-end rounded-lg bg-gray-200 bg-opacity-70 hover:bg-opacity-100"
+              onClick={() => {
+                console.log("Minimize Button Clicked");
+                setMinimized(!minimized);
+              }}
+            >
+              <div>
                 <IoIosArrowBack size={30} className="text-gray-600" />
-              </button>
-            </div>
+              </div>
+            </button>
           </div>
         </>
       )}
