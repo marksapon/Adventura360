@@ -405,5 +405,16 @@
     "desc": "Welcome to the College of Nursing, where we embrace the profound impact of early nurturing and education on lifelong health and well-being. Within our supportive and inclusive community, dedicated mentors guide you to excel in the intricate field of nursing, equipping you with the knowledge and skills to make a tangible difference in the lives of individuals and families. Through innovative research and immersive practical experiences, we empower you to navigate the complexities of healthcare and emerge as compassionate, competent caregivers. Join us in a journey where learning knows no bounds, and excellence is the standard.",
 
     "gallery": []
+  },
+  {
+    "scene": "ogs",
+    "name": "Open Graduate School",
+    "access": "account",
+    "type": "college_buildings",
+    "tags": ["cas", "school"],
+    "image": "/assets/Building Module/Background/grad school.webp",
+    "desc": "Welcome to the Open Graduate School at our University. Our vibrant community of scholars is dedicated to advancing knowledge and fostering intellectual growth. From cutting-edge research to interdisciplinary collaboration, we're committed to pushing the boundaries of academic excellence. Join us as we explore new frontiers of learning and discovery. Welcome to a place where innovation thrives and curiosity reigns.",
+
+    "gallery": []
   }
 ]

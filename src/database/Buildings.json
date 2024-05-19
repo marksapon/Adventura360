@@ -644,11 +644,11 @@
   {
     "scene": "ogs",
     "location": "Open Graduate School",
-    "image": "",
+    "image": "/assets/Database Images/unrestricted nodes/319.webp",
     "back": [""],
     "coords": {
-      "x": 0.449,
-      "y": 0.978,
+      "x": 0.451,
+      "y": 0.966,
       "type": "college_buildings"
     },
     "hotspot": [
@@ -656,8 +656,8 @@
         "type": "info",
         "class": "info",
         "target": "ogs",
-        "yaw": "",
-        "pitch": ""
+        "yaw": 133.53,
+        "pitch": 1.09
       }
     ]
   },
@@ -816,26 +816,6 @@
         "type": "info",
         "class": "info",
         "target": "mat_lab",
-        "yaw": "",
-        "pitch": ""
-      }
-    ]
-  },
-  {
-    "scene": "ogs",
-    "location": "Open Graduate School",
-    "image": "",
-    "back": [""],
-    "coords": {
-      "x": 0.471,
-      "y": 0.993,
-      "type": "college_buildings"
-    },
-    "hotspot": [
-      {
-        "type": "info",
-        "class": "info",
-        "target": "ogs",
         "yaw": "",
         "pitch": ""
       }

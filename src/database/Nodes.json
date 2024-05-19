@@ -9448,6 +9448,13 @@
         "target": "restroomBatibot",
         "yaw": 205.06,
         "pitch": -1.63
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "ogs",
+        "yaw": 116.36,
+        "pitch": 15.71
       }
     ]
   },
@@ -9493,6 +9500,13 @@
         "target": "restroomBatibot",
         "yaw": 193.17,
         "pitch": 3.13
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "ogs",
+        "yaw": 65.5,
+        "pitch": 10.14
       }
     ]
   },
@@ -9517,6 +9531,13 @@
         "target": "node319",
         "yaw": 34.61,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "ogs",
+        "yaw": 66.88,
+        "pitch": 7.97
       }
     ]
   },
@@ -9541,6 +9562,13 @@
         "target": "node316",
         "yaw": 308.4,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "ogs",
+        "yaw": 131.93,
+        "pitch": 1.24
       }
     ]
   },
