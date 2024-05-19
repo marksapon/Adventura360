@@ -82,12 +82,9 @@ const Showcase = () => {
 
   return (
     <div id="Showcase" className="h-full w-full">
-      <h2 className="mb-2 flex w-full items-center justify-center text-4xl font-semibold">
+      <h2 className="mb-8 flex w-full items-center justify-center text-4xl font-semibold">
         Gallery
       </h2>
-      <p className="flex w-full items-center justify-center pb-8 text-gray-700">
-        showcases the beauty of the university and thesis ??
-      </p>
       <div className="z-40 h-full w-full px-4 pb-16">
         <CarouselProvider
           naturalSlideWidth={100}

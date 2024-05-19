@@ -91,194 +91,195 @@ const PathfindingModal = ({
         <>
           {/* Minimize Button */}
           <div className="pointer-events-auto absolute -left-12 top-0 flex h-full items-center justify-end">
-            <button
-              className="z-40 flex h-full w-20 items-center justify-end rounded-lg bg-gray-200 bg-opacity-70   hover:bg-opacity-100"
-              onClick={() => {
-                console.log("Minimize Button Clicked");
-                setMinimized(!minimized);
-              }}
-            >
-              <div>
+            <div className="z-40 flex h-fit w-20 items-center justify-end rounded-lg bg-slate-200 py-8">
+              <button
+                onClick={() => {
+                  console.log("Minimize Button Clicked");
+                  setMinimized(!minimized);
+                }}
+              >
                 <IoIosArrowBack
                   size={30}
                   className="rotate-180 text-gray-600"
                 />
-              </div>
-            </button>
+              </button>
+            </div>
           </div>
         </>
       ) : (
         <>
-          <div
-            className="absolute  -top-20 left-0 z-10 h-screen w-screen bg-black bg-opacity-70"
-            style={{ pointerEvents: "auto" }}
-          />
-          <div className="pointer-events-auto absolute -left-2 z-50 grid h-full w-72 grid-rows-6 gap-2 rounded-lg bg-white p-2 shadow-md sm:flex sm:flex-col md:grid-rows-12">
-            {/* Close Button */}
-            <div className="absolute flex w-full items-baseline justify-center bg-slate-500 md:relative md:row-span-1">
-              <button
-                className="absolute right-0 z-20 m-1"
-                onClick={() => {
-                  setPathModalState(false);
-                  console.log("Path Modal Closed");
-                  removePath();
-                }}
-              >
-                <IoIosClose size={30} />
-              </button>
-            </div>
-
+          <div className="pointer-events-none absolute -top-20 left-0 z-10 h-screen w-screen bg-black bg-opacity-70" />
+          <div className="pointer-events-auto absolute -left-2 z-50 flex h-full w-5/6 flex-col gap-2 rounded-lg shadow-md sm:w-7/12 lg:w-2/6">
             {/* Current location */}
-            <div className="grid h-16 grid-cols-6 gap-y-0  sm:h-20 md:row-span-2">
-              {/* Current Location ICON */}
-              <div className="flex h-full w-full items-end justify-center">
-                <div className="flex h-11 w-full items-center justify-center text-green-600">
-                  <ImLocation2 size={25} />
-                </div>
-              </div>
+            <div className="flex h-full w-full">
+              <div className="flex w-full flex-col gap-2 rounded-br-lg rounded-tr-lg bg-slate-50 px-2 pb-2">
+                {/* Close Button */}
+                <div className="mt-2 flex h-auto flex-col">
+                  <div className="flex w-full justify-end pb-2">
+                    <button
+                      onClick={() => {
+                        setPathModalState(false);
+                        console.log("Path Modal Closed");
+                        removePath();
+                      }}
+                    >
+                      <IoIosClose size={30} />
+                    </button>
+                  </div>
+                  <div className="flex gap-2">
+                    {/* Current Location ICON */}
+                    <div className="flex h-full">
+                      <div className="flex h-full w-10 items-center justify-center text-green-600">
+                        <ImLocation2 size={25} />
+                      </div>
+                    </div>
 
-              {/* Current Location Text Bar */}
-              <div className="col-span-4 flex h-full w-full items-end ">
-                <div className="flex h-10 w-full items-center justify-center ">
-                  <div className="flex h-full w-full items-end justify-center rounded-full border-2 py-2 text-sm hover:border-green-600 hover:bg-slate-50">
-                    Current location
+                    {/* Current Location Text Bar */}
+                    <div className="flex h-full w-full flex-grow items-end ">
+                      <div className="flex h-10 w-full items-center justify-center ">
+                        <div className="flex h-full w-full justify-center rounded-full border-2 bg-white py-2 text-sm hover:border-green-600 hover:bg-slate-50">
+                          Current location
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Walk Button */}
+                    <div className="flex">
+                      <div className="flex h-10 w-full items-center justify-center ">
+                        <button
+                          className={`flex h-9 rounded-full border-2 p-1 ${travelType === "walk" ? "bg-blue-500 text-white" : "text-blue-500"} border-blue-500`}
+                          onClick={() => {
+                            setTravelType("walk");
+                          }}
+                        >
+                          <FaWalking size={25} />
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Walk Button */}
-              <div className="flex items-end justify-center  ">
-                <div className="flex h-10 w-10 items-center justify-center">
-                  <button
-                    className={`flex h-9 rounded-full border-2 p-1 ${travelType === "walk" ? "bg-blue-500 text-white" : "text-blue-500"} border-blue-500`}
-                    onClick={() => {
-                      setTravelType("walk");
-                    }}
-                  >
-                    <FaWalking size={25} />
-                  </button>
-                </div>
-              </div>
-            </div>
+                {/* Direction */}
+                <div className="flex flex-col gap-2">
+                  <div className="flex flex-col border-b-2 pb-2">
+                    <div className="flex gap-2 pb-2">
+                      {/* Direction ICON */}
+                      <div className="flex h-full w-10 items-start">
+                        <div className="flex h-10 w-10 items-center justify-center">
+                          <div className="flex h-full w-10 items-center justify-center text-orange-500">
+                            <MdOutlineGpsFixed size={25} />
+                          </div>
+                        </div>
+                      </div>
 
-            {/* Direction */}
-            <div className="grid grid-cols-6 grid-rows-2  md:row-span-2 ">
-              {/* Direction ICON */}
-              <div className="flex h-full w-full items-start justify-center ">
-                <div className="flex h-10 w-10 items-center justify-center">
-                  <div className="flex h-full w-10 items-center justify-center text-orange-500">
-                    <MdOutlineGpsFixed size={25} />
+                      {/* Direction Text Bar */}
+                      <div className="flex h-full w-full flex-grow items-center justify-center  ">
+                        <div className="flex h-10 w-full items-center justify-center">
+                          <input
+                            className="flex h-full w-full rounded-full border-2 px-1 text-center text-sm hover:border-green-600 hover:bg-slate-50"
+                            placeholder="Destination"
+                            type="text"
+                            onChange={search}
+                            onClick={() => {
+                              setBuildingsListState(true);
+                            }}
+                            value={destination}
+                          />
+                        </div>
+                      </div>
+                      {/* Walk Button */}
+                      <div className="flex items-end justify-center  ">
+                        <div className="flex h-10 w-10 items-center justify-center">
+                          {/* <button
+                          className={`flex h-9 rounded-full border-2 p-1 ${travelType === "walk" ? "bg-blue-500 text-white" : "text-blue-500"} border-blue-500`}
+                          onClick={() => {
+                            setTravelType("walk");
+                          }}
+                        >
+                          <FaWalking size={25} />
+                        </button> */}
+                        </div>
+                      </div>
+                    </div>
+                    {/* Direction Button */}
+                    {directionState && (
+                      <div className="flex h-full w-full items-center justify-center p-1">
+                        <button
+                          className="relative flex w-auto items-center justify-center rounded-full bg-green-500 px-2 text-white"
+                          onClick={() => {
+                            console.log("Directions Button Clicked");
+                            pathfinding(finalDestination, travelType);
+                            setMinimized(true);
+                          }}
+                        >
+                          Directions
+                          <MdDirections className="" size={25} />
+                        </button>
+                      </div>
+                    )}
                   </div>
                 </div>
-              </div>
 
-              {/* Direction Text Bar */}
-              <div className="col-span-4 flex h-full w-full items-center justify-center  ">
-                <div className="flex h-10 w-full items-center justify-center">
-                  <input
-                    className="flex h-full w-full rounded-full border-2 px-1 text-center text-sm hover:border-green-600 hover:bg-slate-50"
-                    placeholder="Destination"
-                    type="text"
-                    onChange={search}
-                    onClick={() => {
-                      setBuildingsListState(true);
-                    }}
-                    value={destination}
-                  />
-                </div>
-              </div>
-
-              {/* Vehicle Button */}
-              <div className=" flex items-center justify-center">
-                {/* <button
-            className={`flex h-9 items-center justify-center rounded-full border-2 p-1 ${travelType === "vehicle" ? "bg-blue-500 text-white" : "text-blue-500"} border-blue-500`}
-            onClick={() => {
-              setTravelType("vehicle");
-            }}
-          >
-            <FaCarAlt size={25} />
-          </button> */}
-              </div>
-
-              {/* Direction Button */}
-              {directionState && (
-                <div className="col-span-7 m-1 flex h-full w-full items-center justify-center">
-                  <button
-                    className="relative flex w-auto items-center justify-center rounded-full bg-green-500 px-2 text-white"
-                    onClick={() => {
-                      console.log("Directions Button Clicked");
-                      pathfinding(finalDestination, travelType);
-                      setMinimized(true);
-                    }}
-                  >
-                    Directions
-                    <MdDirections className="my-1 ml-2" size={25} />
-                  </button>
-                </div>
-              )}
-            </div>
-
-            {/* List */}
-            {isLandscape ? (
-              buildingsListState &&
-              buildingsList.length > 0 && (
-                <div className="absolute left-2 top-0 z-50 flex h-full w-screen items-center justify-center bg-white">
-                  <div
-                    className={`no-scrollbar relative flex h-full w-full flex-col gap-1 overflow-auto rounded-lg border-2 bg-white p-2 shadow-lg `}
-                  >
-                    {buildingsList.map((building, index) => (
-                      <button
-                        className="flex justify-start rounded-lg border p-1 px-2 text-left text-sm hover:border-green-600 hover:bg-slate-50"
-                        onClick={() => {
-                          setBuildingsListState(false);
-                          setDestination(building.name);
-                          checkDestination(building.name);
-                        }}
-                        key={index}
+                {/* List */}
+                {isLandscape ? (
+                  buildingsListState &&
+                  buildingsList.length > 0 && (
+                    <div className="absolute left-2 top-0 z-50 flex h-full w-screen items-center justify-center bg-white">
+                      <div
+                        className={`no-scrollbar relative flex h-full w-full flex-col gap-1 overflow-auto rounded-lg border-2 bg-white p-2 shadow-lg `}
                       >
-                        {building.name}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )
-            ) : (
-              <div className={`row-span-4 h-80 w-full md:h-96`}>
-                {buildingsListState && buildingsList.length > 0 && (
-                  <div
-                    className={`no-scrollbar relative flex h-full flex-col gap-1 overflow-auto rounded-lg border-2 bg-white p-2 shadow-lg `}
-                  >
-                    {buildingsList.map((building, index) => (
-                      <button
-                        className="flex justify-start rounded-lg border p-1 px-2 text-left text-sm hover:border-green-600 hover:bg-slate-50"
-                        onClick={() => {
-                          setBuildingsListState(false);
-                          setDestination(building.name);
-                          checkDestination(building.name);
-                        }}
-                        key={index}
+                        {buildingsList.map((building, index) => (
+                          <button
+                            className="flex justify-start rounded-lg border p-1 px-2 text-left text-sm hover:border-green-600 hover:bg-slate-50"
+                            onClick={() => {
+                              setBuildingsListState(false);
+                              setDestination(building.name);
+                              checkDestination(building.name);
+                            }}
+                            key={index}
+                          >
+                            {building.name}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )
+                ) : (
+                  <div className="flex-grow overflow-auto pl-2">
+                    {buildingsListState && buildingsList.length > 0 && (
+                      <div
+                        className={`no-scrollbar relative flex h-full flex-col gap-1 overflow-auto bg-slate-50 p-2 shadow-lg `}
                       >
-                        {building.name}
-                      </button>
-                    ))}
+                        {buildingsList.map((building, index) => (
+                          <button
+                            className="flex justify-start border bg-white p-2 text-left text-sm hover:border-green-600 hover:bg-slate-100"
+                            onClick={() => {
+                              setBuildingsListState(false);
+                              setDestination(building.name);
+                              checkDestination(building.name);
+                            }}
+                            key={index}
+                          >
+                            {building.name}
+                          </button>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
-            )}
-          </div>
-          {/* Minimize Button */}
-          <div className="pointer-events-auto absolute left-5 top-0 flex h-full w-72 items-center justify-end">
-            <button
-              className="z-40 flex h-full w-20 items-center justify-end rounded-lg bg-gray-200 bg-opacity-70 hover:bg-opacity-100"
-              onClick={() => {
-                console.log("Minimize Button Clicked");
-                setMinimized(!minimized);
-              }}
-            >
-              <div>
-                <IoIosArrowBack size={30} className="text-gray-600" />
+              <div className="flex h-full flex-col justify-center">
+                <button
+                  className="z-40 flex h-fit w-auto items-center justify-end rounded-br-lg rounded-tr-lg bg-slate-50 py-8"
+                  onClick={() => {
+                    console.log("Minimize Button Clicked");
+                    setMinimized(!minimized);
+                  }}
+                >
+                  <IoIosArrowBack size={30} className="text-gray-600" />
+                </button>
               </div>
-            </button>
+            </div>
           </div>
         </>
       )}

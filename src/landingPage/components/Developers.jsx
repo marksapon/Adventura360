@@ -1,44 +1,83 @@
 import React from "react";
-import { LuLink, LuExternalLink } from "react-icons/lu";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
 
 const developers = [
   {
+    name: "Mark Dharel Sapon",
+    role: "Front & Backend Developer",
+    img: "../assets/Landing Page/developers/maki.webp",
+    socials: {
+      facebook: "https://www.facebook.com/mark.sapon.33",
+      instagram: "https://www.instagram.com/dharelo_/",
+      email: "mailto:markdharel.sapon@cvsu.edu.ph",
+      github: "https://www.linkedin.com/in/marksapon23/",
+    },
+  },
+  {
     name: "John Joshua Sagpao",
-    role: "Main developer of Adventura 360°",
-    img: "../assets/Landing Page/developers/1111.jpg",
+    role: "UI/UX Designer & Frontend Developer",
+    img: "../assets/Landing Page/developers/josh.webp",
+    socials: {
+      facebook: "https://www.facebook.com/johnjoshua.solitesagpao",
+      instagram: "https://www.instagram.com/joshuasagpao/",
+      email: "mailto:johnjoshua.sagpao@cvsu.edu.ph",
+      github: "https://github.com/JoshuaSagpao",
+    },
   },
   {
     name: "Kevin Roi Nuesca",
-    role: "Main developer of Adventura 360°",
-    img: "../assets/Landing Page/developers/1111.jpg",
+    role: "UI/UX Designer & Frontend Developer",
+    img: "../assets/Landing Page/developers/kevin.webp",
+    socials: {
+      facebook: "https://facebook.com/username",
+      instagram: "https://instagram.com/username",
+      email: "mailto:kevinroi.nuesca@cvsu.edu.ph",
+      github: "https://github.com/username",
+      linkedin: "https://www.linkedin.com/in/kevin-roi-nuesca-07b756281/",
+    },
   },
   {
-    name: "Mark Darrel Sapon",
-    role: "Main developer of Adventura 360°",
-    img: "../assets/Landing Page/developers/1111.jpg",
+    name: "Alex Kal-el Buenviaje",
+    role: "Project Manager",
+    img: "../assets/Landing Page/developers/lex.webp",
+    socials: {
+      facebook: "https://www.facebook.com/LexBuenviaje",
+      instagram: "https://www.instagram.com/lxbnvj/",
+      email: "mailto:alexkalel.buenviaje@cvsu.edu.ph",
+    },
   },
-  {
-    name: "Alex kalel buinviahje",
-    role: "Main developer of Adventura 360°",
-    img: "../assets/Landing Page/developers/1111.jpg",
-  },
-  // Add more developers as needed
 ];
 
 const sections = [
   {
     title: "Important Links",
-    links: ["Link1", "Link2", "Link3", "Link4"],
+    links: [
+      { name: "Cavite State University", url: "https://cvsu.edu.ph/" },
+      { name: "Github", url: "https://github.com/marksapon/Adventura360" },
+    ],
   },
   {
-    title: "Socials",
-    links: ["Link1", "Link2", "Link3", "Link4"],
+    title: "Social Links",
+    links: [
+      { name: "kevin", url: "https://www.facebook.com/mark.sapon.33" },
+      { name: "joshua", url: "https://www.facebook.com/wtf.kevs/" },
+      { name: "mark", url: "https://www.facebook.com/johnjoshua.solitesagpao" },
+      { name: "lex", url: "https://www.facebook.com/LexBuenviaje" },
+    ],
   },
   {
-    title: "Other",
-    links: ["Link1", "Link2", "Link3", "Link4"],
+    title: "Other Links",
+    links: [
+      { name: "Link1", url: "http://example.com/1" },
+      { name: "Link2", url: "http://example.com/2" },
+    ],
   },
-  // Add more sections as needed
 ];
 
 const Developers = () => {
@@ -55,11 +94,14 @@ const Developers = () => {
               State University - Indang Campus, known as Sen'Py.
             </h2>
           </div>
-          <div className="xl-grid-cols-1 z-40 grid h-fit w-full grid-cols-1 gap-4 p-4 text-center md:grid-cols-2 xl:w-1/2">
-            {developers.map((developer) => (
-              <div className="flex w-full flex-col rounded-2xl border bg-white shadow-xl duration-300 hover:bg-slate-200">
+          <div className="z-40 grid h-full w-full grid-cols-1 gap-4 p-4 text-center sm:grid-cols-2 xl:w-1/2">
+            {developers.map((developer, index) => (
+              <div
+                key={developer.id} // unique key prop here
+                className="flex w-full flex-col rounded-2xl border bg-white shadow-xl duration-300 hover:bg-slate-200"
+              >
                 <div
-                  className="m-1 flex h-[220px] w-auto items-center justify-center rounded-t-lg"
+                  className="m-1 flex h-[500px] items-center justify-center rounded-t-lg sm:h-[300px]"
                   style={{
                     backgroundImage: `url("${developer.img}")`,
                     backgroundSize: "cover",
@@ -73,6 +115,48 @@ const Developers = () => {
                   <div className=" text-sm text-gray-500 xl:text-base">
                     {developer.role}
                   </div>
+                  <div className="flex justify-start gap-2 py-2">
+                    {developer.socials.facebook && (
+                      <a
+                        href={developer.socials.facebook}
+                        className="hover:text-green-600"
+                      >
+                        <FaFacebook />
+                      </a>
+                    )}
+                    {developer.socials.instagram && (
+                      <a
+                        href={developer.socials.instagram}
+                        className="hover:text-green-600"
+                      >
+                        <FaInstagram />
+                      </a>
+                    )}
+                    {developer.socials.email && (
+                      <a
+                        href={developer.socials.email}
+                        className="hover:text-green-600"
+                      >
+                        <FaEnvelope />
+                      </a>
+                    )}
+                    {developer.socials.github && (
+                      <a
+                        href={developer.socials.github}
+                        className="hover:text-green-600"
+                      >
+                        <FaGithub />
+                      </a>
+                    )}
+                    {developer.socials.linkedin && (
+                      <a
+                        href={developer.socials.linkedin}
+                        className="hover:text-green-600"
+                      >
+                        <FaLinkedin />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}
@@ -80,29 +164,10 @@ const Developers = () => {
         </div>
       </div>
 
-      <div className="mx-auto border-t px-8 pb-8 pt-4">
-        <div className="grid grid-cols-3 gap-4 md:grid-cols-6">
-          <div className="col-span-3">
-            <div className="flex items-center space-x-5">
-              <p className="flex cursor-pointer items-center text-2xl font-semibold">
-                Adventura 360°
-              </p>
-            </div>
-            <p className="text-muted-foreground mt-3">sub heading for title</p>
-          </div>
-          {sections.map((section) => (
-            <div className="col-span-1">
-              <p className="text-secondary-foreground mt-3 font-semibold sm:mb-3 sm:mt-0 ">
-                {section.title}
-              </p>
-              <div className="flex flex-col">
-                {section.links.map((link) => (
-                  <a href="">{link}</a>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+      <div className="p-8">
+        <p className="text-muted-foreground text-center text-sm text-gray-500">
+          Adventura 360° is a project by Sen'Py.
+        </p>
       </div>
     </footer>
   );

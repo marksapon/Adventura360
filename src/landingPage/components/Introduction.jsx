@@ -31,8 +31,11 @@ const Introduction = () => {
               <span className="font-semibold">
                 College of Engineering and Information Technology.&nbsp;
               </span>
-              Adventura 360° is designed to be a guide to visitors, students,
-              faculty, and accreditors in venturing the campus.
+              <span className="font-bold text-green-600">
+                Adventura 360°&nbsp;
+              </span>
+              is designed to be a guide to visitors, students, faculty, and
+              accreditors in venturing the campus.
             </h2>
           </div>
         </div>
@@ -93,15 +96,6 @@ const Introduction = () => {
                     1
                   </h4>
                   <p className="">Client</p>
-                </div>
-              </div>
-              <div className="item-center flex gap-4">
-                <img src="assets/Landing Page/introduction/school.png" alt="" />
-                <div>
-                  <h4 className="text-xl font-semibold text-gray-700 sm:text-2xl">
-                    CvSU
-                  </h4>
-                  <p className="">University</p>
                 </div>
               </div>
             </div>
