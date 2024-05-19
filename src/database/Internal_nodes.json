@@ -3071,12 +3071,6 @@
             "target": "shs14",
             "yaw": 286.01,
             "pitch": -20
-          },
-          {
-            "type": "move",
-            "target": "104.71",
-            "yaw": 98.3,
-            "pitch": -20
           }
         ]
       },
@@ -3218,7 +3212,7 @@
           },
           {
             "type": "move",
-            "target": "shs22",
+            "target": "shs20",
             "yaw": 279.3,
             "pitch": -20
           }
