@@ -268,7 +268,7 @@ const MapModule = ({
         scrollToZoom: false,
         clickToZoom: false,
         dblClickToZoom: false,
-        pinchToZoom: false,
+        pinchToZoom: true,
         flickEnabled: false,
         pinchRotate: false,
       },

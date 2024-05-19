@@ -14,48 +14,43 @@ const Showcase = () => {
   const lg = useMediaQuery({ query: "(max-width: 1024px)" });
 
   const images = [
-    "https://schoolfiber.com/wp-content/uploads/2016/08/landscape2-dummy-768x435.jpg",
-    "https://rylind.com/wp-content/uploads/2021/04/efe.jpg",
-    "https://rylind.com/wp-content/uploads/2021/04/efe.jpg",
-    "https://rylind.com/wp-content/uploads/2021/04/efe.jpg",
-    "https://rylind.com/wp-content/uploads/2021/04/efe.jpg",
-    "https://rylind.com/wp-content/uploads/2021/04/efe.jpg",
-    "https://rylind.com/wp-content/uploads/2021/04/efe.jpg",
-    "https://rylind.com/wp-content/uploads/2021/04/efe.jpg",
-    "https://rylind.com/wp-content/uploads/2021/04/efe.jpg",
-    "https://rylind.com/wp-content/uploads/2021/04/efe.jpg",
-    "https://rylind.com/wp-content/uploads/2021/04/efe.jpg",
-    "https://rylind.com/wp-content/uploads/2021/04/efe.jpg",
+    "/assets/Landing Page/snapshots/1.webp",
+    "/assets/Landing Page/snapshots/2.webp",
+    "/assets/Landing Page/snapshots/3.webp",
+    "/assets/Landing Page/snapshots/4.webp",
+    "/assets/Landing Page/snapshots/5.webp",
+    "/assets/Landing Page/snapshots/6.webp",
+    "/assets/Landing Page/snapshots/7.webp",
+    "/assets/Landing Page/snapshots/8.webp",
   ];
 
   const images2 = [
-    "https://schoolfiber.com/wp-content/uploads/2016/08/landscape2-dummy-768x435.jpg",
-    "https://schoolfiber.com/wp-content/uploads/2016/08/landscape2-dummy-768x435.jpg",
-    "https://rylind.com/wp-content/uploads/2021/04/efe.jpg",
-    "https://schoolfiber.com/wp-content/uploads/2016/08/landscape2-dummy-768x435.jpg",
-    "https://rylind.com/wp-content/uploads/2021/04/efe.jpg",
-    "https://schoolfiber.com/wp-content/uploads/2016/08/landscape2-dummy-768x435.jpg",
-    "https://rylind.com/wp-content/uploads/2021/04/efe.jpg",
-    "https://rylind.com/wp-content/uploads/2021/04/efe.jpg",
-    "https://rylind.com/wp-content/uploads/2021/04/efe.jpg",
-    "https://rylind.com/wp-content/uploads/2021/04/efe.jpg",
-    "https://rylind.com/wp-content/uploads/2021/04/efe.jpg",
-    "https://rylind.com/wp-content/uploads/2021/04/efe.jpg",
+    "/assets/Building Module/Background/cafenr.webp",
+    "/assets/Building Module/Background/cemds.webp",
+    "/assets/Building Module/Background/cwtlab.webp",
+    "/assets/Building Module/Background/dit.webp",
+    "/assets/Building Module/Background/grad school.webp",
+    "/assets/Building Module/Background/gym.webp",
+    "/assets/Building Module/Background/IH1.webp",
+    "/assets/Building Module/Background/IH2.webp",
+    "/assets/Building Module/Background/inosas.webp",
+    "/assets/Building Module/Background/library.webp",
+    "/assets/Building Module/Background/ncrdec.webp",
+    "/assets/Building Module/Background/rccenter.webp",
+    "/assets/Building Module/Background/shs.webp",
   ];
 
   const images3 = [
-    "https://schoolfiber.com/wp-content/uploads/2016/08/landscape2-dummy-768x435.jpg",
-    "https://schoolfiber.com/wp-content/uploads/2016/08/landscape2-dummy-768x435.jpg",
-    "https://schoolfiber.com/wp-content/uploads/2016/08/landscape2-dummy-768x435.jpg",
-    "https://schoolfiber.com/wp-content/uploads/2016/08/landscape2-dummy-768x435.jpg",
-    "https://schoolfiber.com/wp-content/uploads/2016/08/landscape2-dummy-768x435.jpg",
-    "https://schoolfiber.com/wp-content/uploads/2016/08/landscape2-dummy-768x435.jpg",
-    "https://schoolfiber.com/wp-content/uploads/2016/08/landscape2-dummy-768x435.jpg",
-    "https://schoolfiber.com/wp-content/uploads/2016/08/landscape2-dummy-768x435.jpg",
-    "https://rylind.com/wp-content/uploads/2021/04/efe.jpg",
-    "https://rylind.com/wp-content/uploads/2021/04/efe.jpg",
-    "https://rylind.com/wp-content/uploads/2021/04/efe.jpg",
-    "https://rylind.com/wp-content/uploads/2021/04/efe.jpg",
+    "/assets/Landing Page/snapshots/9.webp",
+    "/assets/Landing Page/snapshots/10.webp",
+    "/assets/Landing Page/snapshots/11.webp",
+    "/assets/Landing Page/snapshots/12.webp",
+    "/assets/Landing Page/snapshots/13.webp",
+    "/assets/Landing Page/snapshots/14.webp",
+    "/assets/Landing Page/snapshots/15.webp",
+    "/assets/Landing Page/snapshots/16.webp",
+    "/assets/Landing Page/snapshots/17.webp",
+    "/assets/Landing Page/snapshots/18.webp",
   ];
 
   let layer1;
@@ -139,13 +134,13 @@ const Showcase = () => {
         <CarouselProvider
           naturalSlideWidth={100}
           naturalSlideHeight={45}
-          totalSlides={images2.length}
+          totalSlides={images3.length}
           visibleSlides={layer3}
           isPlaying={true} // Start the slideshow
           interval={3500} // Change slides every 3 seconds
         >
           <Slider>
-            {images2.map((image, index) => (
+            {images3.map((image, index) => (
               <Slide index={index} key={index}>
                 <img
                   className="h-full w-full object-cover p-1"
