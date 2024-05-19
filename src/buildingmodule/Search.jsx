@@ -372,79 +372,84 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                   </div>
 
                   {/* Display Items Section */}
-                  {listDisplay &&
-                    (() => {
-                      // Flatten the array of arrays into a single array
-                      let allItems = [].concat(
-                        ...Object.values(filteredSuggestions),
-                      );
-
-                      // Convert the array into a Set to remove duplicates
-                      let uniqueItems = Array.from(
-                        new Set(allItems.map((item) => item.name)),
-                      );
-
-                      // Map over the unique items to display them
-                      return uniqueItems.map((itemName, index) => {
-                        // Find the original item object
-                        let item = allItems.find(
-                          (item) => item.name === itemName,
+                  {listDisplay && (
+                    <div
+                      className={`grid ${view === "grid" ? "grid-cols-2" : "grid-cols-1 gap-1 px-2 py-1"}`}
+                    >
+                      {(() => {
+                        // Flatten the array of arrays into a single array
+                        let allItems = [].concat(
+                          ...Object.values(filteredSuggestions),
                         );
 
-                        // Display the item
-                        return (
-                          <div
-                            key={index}
-                            className={`flex flex-col overflow-hidden rounded-lg border-2 px-1 py-1 shadow-lg ${view === "list" ? "h-fit" : "h-auto"} relative border ${clicked ? "bg-slate-100" : "hover:bg-slate-50"}`}
-                            onClick={() => {
-                              // Log the item when clicked
-                              console.log("Clicked Item:", item);
-                              openBldgModal(item.id, "search");
-                            }}
-                          >
-                            {/* Conditionally render an img element if view is not "list" */}
-                            {view !== "list" && (
-                              <div className="h-1/2">
-                                <img
-                                  src={
-                                    item.image ||
-                                    "https://via.placeholder.com/150"
-                                  }
-                                  alt={item.text}
-                                  className={
-                                    view === "cards"
-                                      ? "h-max w-full object-cover"
-                                      : "h-full w-full object-cover"
-                                  }
-                                />
-                              </div>
-                            )}
+                        // Convert the array into a Set to remove duplicates
+                        let uniqueItems = Array.from(
+                          new Set(allItems.map((item) => item.name)),
+                        );
+
+                        // Map over the unique items to display them
+                        return uniqueItems.map((itemName, index) => {
+                          // Find the original item object
+                          let item = allItems.find(
+                            (item) => item.name === itemName,
+                          );
+
+                          // Display the item
+                          return (
                             <div
-                              className={`${view === "list" ? "flex w-auto items-center px-4" : "flex h-1/2 flex-col items-center justify-center font-semibold"} gap-2 ${view === "cards" ? "absolute bottom-0 left-0 right-0" : ""}`}
+                              key={index}
+                              className={`flex flex-col overflow-hidden rounded-lg border-2 px-1 py-1 shadow-lg ${view === "list" ? "h-fit" : "h-auto"} relative border ${clicked ? "bg-slate-100" : "hover:bg-slate-50"}`}
+                              onClick={() => {
+                                // Log the item when clicked
+                                console.log("Clicked Item:", item);
+                                openBldgModal(item.id, "search");
+                              }}
                             >
+                              {/* Conditionally render an img element if view is not "list" */}
+                              {view !== "list" && (
+                                <div className="h-1/2">
+                                  <img
+                                    src={
+                                      item.image ||
+                                      "https://via.placeholder.com/150"
+                                    }
+                                    alt={item.text}
+                                    className={
+                                      view === "cards"
+                                        ? "h-max w-full object-cover"
+                                        : "h-full w-full object-cover"
+                                    }
+                                  />
+                                </div>
+                              )}
                               <div
-                                className={
-                                  view === "list"
-                                    ? "flex h-auto items-center justify-center gap-2 text-center text-base"
-                                    : "flex w-auto flex-col items-center justify-center gap-2 text-center text-sm"
-                                }
+                                className={`${view === "list" ? "flex w-auto items-center px-2" : "flex h-1/2 flex-col items-center justify-center font-semibold"} gap-2 ${view === "cards" ? "absolute bottom-0 left-0 right-0" : ""}`}
                               >
                                 <div
-                                  className={`rounded-full border-2 border-white ${keyIcons[item.type].color} p-2 text-xl text-white`}
+                                  className={
+                                    view === "list"
+                                      ? "flex h-auto items-center justify-center gap-2 text-start text-base"
+                                      : "flex w-auto flex-col items-center justify-center gap-2 text-center text-sm"
+                                  }
                                 >
-                                  {/* Display the icon associated with the key */}
-                                  {keyIcons[item.type].icon}
-                                </div>
-                                <div className="w-full overflow-auto rounded-full border-2 border-green-600 bg-white px-2 text-sm">
-                                  {/* Display the text of the item */}
-                                  {item.name}
+                                  <div
+                                    className={`rounded-full border-2 border-white ${keyIcons[item.type].color} p-2 text-xl text-white`}
+                                  >
+                                    {/* Display the icon associated with the key */}
+                                    {keyIcons[item.type].icon}
+                                  </div>
+                                  <div className="w-full overflow-auto rounded-full border-2 border-green-600 bg-white px-4 text-sm">
+                                    {/* Display the text of the item */}
+                                    {item.name}
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        );
-                      });
-                    })()}
+                          );
+                        });
+                      })()}
+                    </div>
+                  )}
                 </div>
               </div>
 

@@ -381,8 +381,8 @@
     "image": "/assets/Database Images/unrestricted nodes/258.webp",
     "back": ["node65"],
     "coords": {
-      "x": 0.4,
-      "y": 1.021,
+      "x": 0.391,
+      "y": 1.018,
       "type": "school_facilities"
     },
     "hotspot": [
@@ -401,8 +401,8 @@
     "location": "University Cashier",
     "image": "/assets/Database Images/unrestricted nodes/267.webp",
     "coords": {
-      "x": 0.4,
-      "y": 1.021,
+      "x": 0.407,
+      "y": 1.026,
       "type": "school_facilities"
     },
     "hotspot": [
