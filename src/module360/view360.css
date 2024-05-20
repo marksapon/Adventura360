@@ -90,12 +90,12 @@
 
 .view360-controls {
   position: absolute;
-  top: 10%;
-  left: 0;
-  width: 100%;
+  justify-items: center;
+  top: 75px;
+  right: 10px;
+  width: 98%;
   height: 100%;
-  padding: 0;
-  margin: 0;
+  margin: 1%;
   border: 0;
   pointer-events: none;
   -ms-user-select: none;
@@ -127,6 +127,7 @@
 
 .view360-controls-main {
   position: absolute;
+  top: 90px;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -187,7 +188,6 @@
 }
 
 .view360-controls-button {
-  display: inline-block;
   background-color: transparent;
   cursor: pointer;
   border: 0;
@@ -204,6 +204,9 @@
   margin: 6px;
   padding: 8px;
   opacity: 0.8;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
   /*
    * Following background-image svgs are from tabler icons
    * https://github.com/tabler/tabler-icons
@@ -295,7 +298,9 @@
   display: inline-flex;
   flex-direction: row;
   align-items: center;
-  transition: width 250ms, background-color 250ms;
+  transition:
+    width 250ms,
+    background-color 250ms;
   overflow: hidden;
 }
 
@@ -333,12 +338,13 @@
 }
 
 .view360-controls-pie {
-  width: 36px;
-  height: 36px;
-  margin: 6px;
-  padding: 0;
+  position: relative;
+  top: 0px;
+  right: 0;
+  width: 50px;
+  height: 50px;
   border-radius: 18px;
-  opacity: 0.8;
+  opacity: 1;
   pointer-events: all;
   cursor: pointer;
   color: #fff;
@@ -419,32 +425,6 @@
   display: none !important;
 }
 
-@media screen and (max-width: 768px) {
-  .view360-controls-button {
-    background-size: 18px 18px;
-    width: 30px;
-    height: 30px;
-    margin: 4.5px;
-    padding: 6px;
-    border-radius: 15px;
-  }
-  .view360-controls-volume .view360-controls-button {
-    width: 18px;
-    height: 18px;
-  }
-  .view360-controls-volume:not(:disabled):hover,
-  .view360-controls-volume:not(:disabled).view360-controls-fixed {
-    width: 84px;
-  }
-  .view360-controls-pie {
-    width: 27px;
-    height: 27px;
-    margin: 4.5px;
-    padding: 0;
-    border-radius: 13.5px;
-  }
-}
-
 .view360-spinner {
   position: absolute;
   top: 0;
@@ -469,7 +449,7 @@
   border-style: solid;
   border-radius: 50%;
   border-width: 10px;
-  border-color: #fff;
+  border-color: #323232;
   border-bottom-color: transparent;
   animation: view360-spin-animation 1.2s linear infinite;
 }
@@ -521,21 +501,22 @@
   cursor: pointer;
   transition: opacity 250ms;
   /* Add background image */
-  background-image: url("/assets/360_hotspots/arrow.png");
+  background-image: url("/assets/360 Module/buttons/move.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center; /* or any other position */
 }
+
 .bldg {
-  opacity: 0.8;
+  opacity: 1;
   pointer-events: all;
   cursor: pointer;
   transition: opacity 250ms;
   /* Add background image */
-  background-image: url("/assets/360_buttons/building_button.png");
+  /* background-image: url("/assets/360 Module/hotspots/building.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center; /* or any other position */
+  background-position: center; or any other position */
 }
 
 .info {
@@ -544,8 +525,8 @@
   cursor: pointer;
   transition: opacity 250ms;
   /* Add background image */
-  background-image: url("/assets/360_buttons/info_button.png");
+  /* background-image: url("/assets/360 Module/hotspots/info.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center; /* or any other position */
+  background-position: center; or any other position */
 }

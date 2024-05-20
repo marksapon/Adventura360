@@ -1,20 +1,27 @@
+import React, { useEffect } from "react";
+import Cookies from "js-cookie";
 import "./App.css";
 import NavBar from "./components/NavBar";
-import Home from "./components/Home";
-import Services from "./components/Services";
-import Products from "./components/products";
-import About from "./components/About";
-import Blog from "./components/Blog";
+import OurTech from "./components/OurTech";
+import TechStack from "./components/TechStack";
+import Showcase from "./components/Showcase";
+import Introduction from "./components/Introduction";
+import Developers from "./components/Developers";
 
 function LandingPage() {
+  useEffect(() => {
+    // Remove the cookie when the component is mounted
+    Cookies.remove("loginType");
+  }, []);
+
   return (
     <>
       <NavBar />
-      <Home />
-      <Services />
-      <About />
-      <Products />
-      <Blog />
+      <OurTech />
+      <Introduction />
+      <TechStack />
+      <Showcase />
+      <Developers />
     </>
   );
 }

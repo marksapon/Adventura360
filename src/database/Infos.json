@@ -1,0 +1,424 @@
+[
+  {
+    "scene": "dit",
+    "name": "Department of Information Technology",
+    "access": "account",
+    "acronym": "DIT",
+    "type": "college_buildings",
+    "tags": ["ceit", "school"],
+    "image": "/assets/Building Module/Background/dit.webp",
+    "desc": "The Department of Information Technology (DIT), nestled within the College of Engineering and Information Technology (CEIT), is housed in a modern building characterized by sleek architecture and cutting-edge facilities. Its spacious atrium welcomes students and visitors, while state-of-the-art classrooms, labs, and collaborative spaces provide an ideal environment for learning and research. From interactive displays showcasing the latest advancements to dedicated research wings driving innovation, the department's building serves as a dynamic hub for aspiring technologists and researchers alike.",
+    "gallery": []
+  },
+  {
+    "scene": "osa",
+    "name": "Office of Student Affairs and Services",
+    "access": "account",
+    "acronym": "osas",
+    "type": "school_facilities",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Background/inosas.webp",
+    "desc": "Welcome to the Office of Student Affairs and Services at Cavite State University — A cornerstone of student support and development. Established in 1980, our office has evolved to meet the diverse needs of our students. From counseling and testing to financial assistance and talent development, we're here to empower students to reach their full potential. Whether it's guidance, training, or placement services, we're committed to fostering an environment where every student can thrive intellectually, emotionally, and socially.",
+
+    "more_info": "https://cvsu.edu.ph/office-of-student-affairs-and-services/",
+
+    "gallery": []
+  },
+  {
+    "scene": "ih2",
+    "name": "International House 2 (Dormitory)",
+    "access": "account",
+    "acronym": "ih2",
+    "type": "venue",
+    "info_type": "info",
+    "tags": ["school", "leisure"],
+    "image": "/assets/Building Module/Background/IH2.webp",
+    "desc": "Welcome to International House 2, the epitome of campus living for everyone! Nestled near gate 1 of the campus, this modern dormitory offers a safe and welcoming environment for residents to call home. With its contemporary design and well-appointed facilities, International House 2 provides a comfortable and inclusive living space. From cozy bedrooms to communal lounges, every corner is designed to foster a sense of community and belonging. Whether studying late into the night or enjoying downtime with friends, residents of International House 2 experience the best of campus life in a supportive and vibrant environment.",
+
+    "more_info": "https://cvsu.edu.ph/university-dormitory/",
+
+    "gallery": []
+  },
+  {
+    "scene": "cspear",
+    "name": "College of Sports, Physical Education, and Recreation",
+    "access": "account",
+    "acronym": "cspear",
+    "type": "college_buildings",
+    "tags": ["cspear", "school"],
+    "image": "/assets/Building Module/Background/gym.webp",
+    "desc": "Introducing the College of Sports, Physical Education, and Recreation at Cavite State University, established in 1998 to promote excellence in sports across the Southern Tagalog Region. Our mission is to provide top-tier instruction in physical education and recreation sciences while fostering a culture of active living among students and the community. With a focus on leadership and collaboration, we're dedicated to shaping competent professionals and elevating the region's sporting landscape.",
+
+    "dept": [
+      "Physical Education, Exercise and Sports Science",
+      "Physical Education"
+    ],
+
+    "courses": {
+      "BACHELOR OF PHYSICAL EDUCATION": null,
+      "BACHELOR IN SPORTS AND RECREATIONAL MANAGEMENT": null
+    },
+
+    "more_info": "https://cvsu.edu.ph/2018/01/college-of-sports-and-physical-education-and-recreation/",
+
+    "gallery": []
+  },
+  {
+    "scene": "bahayalumni",
+    "name": "Bahay ng Alumni",
+    "access": "account",
+    "acronym": "alumni",
+    "type": "venue",
+    "tags": ["school", "leisure"],
+    "image": "",
+    "desc": "Welcome to Bahay ng Alumni—a cozy retreat found near the Gymnasium of the University. Our inviting rooms offer a blend of comfort and nostalgia, providing guests with a home-away-from-home experience. Whether you're here for a trip down memory lane or attending an event, we promise a memorable stay filled with warmth and hospitality.",
+
+    "contacts": {},
+
+    "gallery": []
+  },
+  {
+    "scene": "ncrdec",
+    "name": "National Coffee Research, Development and Extension Center",
+    "access": "account",
+    "acronym": "coffee research",
+    "type": "school_facilities",
+    "tags": ["school", "laboratory"],
+    "image": "/assets/Building Module/Background/ncrdec.webp",
+    "desc": "Welcome to the National Coffee Research, Development, and Extension Center (NCRDEC) at Cavite State University (CvSU)—a pioneering force in Philippine coffee innovation since 2005. Our center, established under the Agriculture and Fisheries Modernization Act (AFMA) of 1997, conducts cutting-edge research, provides vital extension services, and produces top-quality planting materials. With a vision to be recognized locally and internationally for our coffee programs, we're dedicated to increasing productivity, sustainability, and global competitiveness in the Philippine coffee industry.",
+
+    "contacts": {
+      "Email": "ncrdec.cvsu@gmail.com",
+      "Mobile": "+639165047049"
+    },
+
+    "more_info": "https://cvsu.edu.ph/ovpre-ncrdec/",
+
+    "gallery": []
+  },
+  {
+    "scene": "newcemds",
+    "name": "College of Economics, Management and Development Studies New Building",
+    "access": "account",
+    "acronym": "new cemds",
+    "type": "college_buildings",
+    "tags": ["school", "cemds"],
+    "image": "/assets/Building Module/Background/cemds.webp",
+    "desc": "Welcome to the College of Economics, Management, and Development Studies New Building—a modern marvel of academia and innovation! Situated at the heart of campus, this state-of-the-art facility embodies the spirit of forward-thinking education and research. With its sleek design and advanced technology, the building provides a dynamic environment for students and faculty to explore the complexities of economics, management, and development studies. From spacious lecture halls to collaborative workspaces, every corner is designed to inspire creativity and critical thinking. Whether studying economic theory, honing management skills, or researching sustainable development practices, the College of Economics, Management, and Development Studies New Building offers a vibrant setting for academic excellence and growth.",
+
+    "dept": [
+      "Department of Management",
+      "Department of Economics",
+      "Department of Development Studies",
+      "Department of Accountancy"
+    ],
+    "courses": {
+      "BS OFFICE ADMINISTRATION": null,
+      "BS ACCOUNTANCY": null,
+      "BS BUSINESS ADMINISTRATION": [
+        "Financial Management",
+        "Human Resource Development Management",
+        "Marketing Management",
+        "Operations Management",
+        "Service Management Program"
+      ],
+      "BS ECONOMICS": null,
+      "BS DEVELOPMENT MANAGEMENT": [
+        "Rural Development Management",
+        "Training Program Management "
+      ],
+      "BS INTERNATIONAL STUDIES": ["Asian Studies", "European Studies"],
+      "GRADUATE PROGRAMS": [
+        "Master in Business Administration",
+        "Master in Management",
+        "Master in Public Administration"
+      ]
+    },
+    "contacts": {},
+    "gallery": []
+  },
+  {
+    "scene": "cafenr",
+    "name": "College of Agriculture, Forestry, Environment and Natural Resources",
+    "access": "account",
+    "acronym": "cafenr",
+    "type": "college_buildings",
+    "tags": ["cafenr", "school"],
+    "image": "/assets/Building Module/Background/cafenr.webp",
+    "desc": "The College of Agriculture, Forestry, Environment, and Natural Resources building embodies innovation and sustainability. Its modern design integrates seamlessly with nature, featuring spacious interiors filled with natural light and cutting-edge facilities. With a focus on eco-friendly practices, including energy-efficient systems and green rooftops, the building serves as a hub for interdisciplinary learning and research. Surrounded by lush gardens and outdoor spaces, it inspires environmental stewardship and fosters collaboration among students and faculty.",
+
+    "dept": [
+      "Department of Animal Science (DAS) ",
+      "Department of Agricultural Entrepreneurship (DAE)",
+      "Department of Crop Science (DCS)",
+      "Department of Accountancy",
+      "Department of Forestry and Environmental Science (DFES)",
+      "Institute of Food Science and Technology (IFST)"
+    ],
+
+    "facilities": {
+      "Fruit Crops Nursery & Production": "This project are focuses on the production, propagation maintenance &amp; marketing of selected fruit crops such as rambutan, mangosteen, cacao, lemon, calamansi, lanzones, etc.",
+      "Ornamental Nursery & Production": "This area is allotted for the different ornamental crops available ate the greenhouse, for propagation, and nursery establishment.",
+      "CHARMS Project": "This demo area focuses on the various medicinal plants, herbs and spices available for general consumption.",
+      "High-Value Vegetable Production Area": "This production area is allotted for the different high-value vegetable crops produced and managed by students conducting. Their research and entrepreneurial development studies."
+    },
+
+    "courses": {
+      "BS AGRICULTURE": ["Animal Science", "Crop Science"],
+      "BS IN ENVIRONMENTAL SCIENCES": null,
+      "BS IN FOOD TECHNOLOGY": null,
+      "BS IN LAND USE DESIGN AND MANAGEMENT": null,
+      "BACHELOR IN AGRICULTURAL ENTREPRENEURSHIP": null,
+      "CERTIFICATE IN AGRICULTURAL SCIENCE": null,
+
+      "DOCTOR OF PHILOSOPHY IN AGRICULTURE": [
+        "Animal Science",
+        "Crop Science ",
+        "Farming System "
+      ],
+      "DOCTOR OF PHILOSOPHY IN FOOD SCIENCE": null,
+      "MASTER OF SCIENCE IN AGRICULTURE": [
+        "Animal Science",
+        "Crop Science ",
+        "Farming System ",
+        "Crop Protection "
+      ],
+      "MASTER OF SCIENCE IN FOOD SCIENCE": null
+    },
+
+    "contacts": {
+      "Telephone": "(046) 423 1162",
+      "Email": "cafenr@cvsu.edu.ph",
+      "(Facebook) Araw ng Kalikasan sa CvSU": "https://www.facebook.com/cvsuarawngkalikasan/",
+      "(Facebook) CvSU Environmental Geo-Information and Remote Sensing": "https://www.facebook.com/Cvsu-Environmental-Geo-Information-and-Remote-Sensing-Laboratory-104676587621183/"
+    },
+
+    "more_info": "https://cvsu.edu.ph/2018/01/college-of-agriculture-forestry-environment-and-natural-resources/",
+
+    "gallery": []
+  },
+  {
+    "scene": "rc",
+    "name": "Research Center",
+    "access": "account",
+    "acronym": "research",
+    "type": "school_facilities",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Background/rccenter.webp",
+    "desc": "Introducing the Research Center Building at Cavite State University: a nexus of innovation and collaboration. Equipped with cutting-edge facilities, it fosters groundbreaking research across disciplines, especially in agriculture. Designed for knowledge dissemination and external engagement, it serves as a hub for forging partnerships, training, and recognizing outstanding achievements. A beacon of progress, it embodies the university's commitment to improving lives and advancing knowledge for the community.",
+
+    "contacts": {
+      "Telephone": "(046) 862-1654",
+      "Email": "researchcenter@cvsu.edu.ph",
+      "Mobile": "+639270110387"
+    },
+
+    "more_info": "https://cvsu.edu.ph/ovpre-research-center/",
+
+    "gallery": []
+  },
+  {
+    "scene": "library",
+    "name": "Ladislao N. Diwa Memorial Library and Museum",
+    "access": "account",
+    "acronym": "library",
+    "type": "school_facilities",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Background/library.webp",
+    "desc": "Welcome to the Ladislao N. Diwa Memorial Library and Museum (LDMLM)—a symbol of knowledge and heritage since 1980. With a collection of over 106,000 volumes and 5,000 series titles, LDMLM honors Ladislao N. Diwa's contributions to academia. Operating under an open shelf system, our mission is to provide excellent, equitable, and relevant library services. We aim to support academic excellence, encourage maximum utilization of resources, and collaborate with all colleges and campuses to supplement research and instruction. Step inside and discover a world of knowledge and inspiration.",
+
+    "contacts": {},
+
+    "more_info": "https://cvsu.edu.ph/2018/01/13/library/",
+
+    "gallery": []
+  },
+  {
+    "scene": "irb",
+    "name": "Interdisciplinary Research Building",
+    "access": "account",
+    "acronym": "interdisciplinary",
+    "type": "school_facilities",
+    "tags": ["school"],
+    "image": "",
+    "desc": "Welcome to the Interdisciplinary Research Building (IDRB) at the University. Here, cutting-edge research thrives in specialized laboratories spanning engineering, microbiology, genetics, and more. Led by expert faculty researchers, these labs are hubs of innovation, fostering collaboration and pushing the boundaries of knowledge. With state-of-the-art facilities and close coordination with the Technical Services Division, the IDRB is where breakthroughs happen. Welcome to a space where interdisciplinary exploration knows no bounds.",
+
+    "contacts": {},
+
+    "gallery": []
+  },
+  {
+    "scene": "ih1",
+    "name": "International House 1 (Dormitory)",
+    "access": "account",
+    "acronym": "ih2",
+    "type": "venue",
+    "info_type": "info",
+    "tags": ["school", "leisure"],
+    "image": "/assets/Building Module/Background/IH1.webp",
+    "desc": "Welcome to International House 1 —a bustling dormitory designed to be a home away from home for university students. Here, students from diverse backgrounds come together to form a vibrant community, fostering lifelong friendships and unforgettable experiences. With comfortable living spaces and modern amenities, International House 1 provides a supportive environment where students can thrive academically, socially, and personally. International House 1 is currently under College of Medicine.",
+
+    "more_info": "https://cvsu.edu.ph/university-dormitory/",
+
+    "gallery": [
+      "/assets/Building Module/Gallery/IH1/01.webp",
+      "/assets/Building Module/Gallery/IH1/02.webp"
+    ]
+  },
+  {
+    "scene": "biosci",
+    "name": "Department of Biological Sciences",
+    "access": "account",
+    "acronym": "biosci",
+    "type": "college_buildings",
+    "tags": ["cas", "school"],
+    "image": "/assets/Building Module/Background/dit.webp",
+    "desc": "Welcome to the Department of Biological Sciences at the University. Our state-of-the-art facilities and passionate community of scholars are dedicated to exploring the wonders of life. From molecular biology to ecology, we're committed to advancing our understanding of the natural world and addressing global challenges. Join us on a journey of discovery and exploration. Welcome to the heart of scientific inquiry.",
+
+    "gallery": []
+  },
+  {
+    "scene": "ceit",
+    "name": "College of Engineering and Information Technology",
+    "access": "account",
+    "acronym": "ceit",
+    "type": "college_buildings",
+    "tags": ["ceit", "school"],
+    "image": "/assets/Building Module/Background/dit.webp",
+    "desc": "Welcome to the College of Engineering and Information Technology at our University. Here, our vibrant community of scholars is dedicated to advancing infrastructure and urban development. From designing resilient structures to sustainable transportation systems, we're committed to pushing the boundaries of engineering innovation. Join us as we tackle global challenges and pave the way for a better tomorrow. Welcome to the forefront of engineering excellence.",
+
+    "gallery": []
+  },
+  {
+    "scene": "diet",
+    "name": "Department of Industrial Engineering and Technology",
+    "access": "account",
+    "acronym": "diet",
+    "type": "college_buildings",
+    "tags": ["ceit", "school"],
+    "image": "/assets/Building Module/Background/dit.webp",
+    "desc": "Welcome to the Department of Industrial Engineering and Technology at our University. Within our dedicated community, we explore the forefront of technology and innovation. From optimizing manufacturing processes to enhancing supply chain efficiency, we're committed to solving real-world challenges and driving industry forward. Join us as we embark on a journey of discovery and innovation. Welcome to the heart of industrial engineering excellence.",
+
+    "gallery": []
+  },
+  {
+    "scene": "dcee",
+    "name": "Department of Computer, Electronics, and Electrical Engineering",
+    "access": "account",
+    "acronym": "dceee",
+    "type": "college_buildings",
+    "tags": ["ceit", "school"],
+    "image": "/assets/Building Module/Background/dit.webp",
+    "desc": "Welcome to the Department of Computer, Electronics, and Electrical Engineering at our University. Within our dedicated community, we delve into the forefront of technology and innovation. From developing cutting-edge software solutions to designing efficient electronic systems, we're committed to tackling real-world challenges and propelling industries forward. Join us as we embark on a journey of discovery and innovation. Welcome to the heart of engineering excellence.",
+
+    "gallery": []
+  },
+  {
+    "scene": "admin",
+    "name": "Administration Building",
+    "access": "account",
+    "acronym": "admin",
+    "type": "school_facilities",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Background/dit.webp",
+    "desc": "Welcome to the Cavite State University Administration  Building at our University.",
+
+    "gallery": [
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
+    ]
+  },
+  {
+    "scene": "hs",
+    "name": "Cavite State University Science High School",
+    "access": "account",
+    "acronym": "shs",
+    "type": "school_facilities",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Background/shs.webp",
+    "desc": "Welcome to the Cavite State University Science High School at our University.",
+
+    "gallery": [
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
+    ]
+  },
+  {
+    "scene": "nhs",
+    "name": "Cavite State University Science High School 2",
+    "access": "account",
+    "acronym": "shs",
+    "type": "school_facilities",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Background/shs.webp",
+    "desc": "Welcome to the Cavite State University Science High School at our University.",
+
+    "gallery": [
+      "/assets/Building Module/Gallery/dit/01.webp",
+      "/assets/Building Module/Gallery/dit/02.webp",
+      "/assets/Building Module/Gallery/dit/03.webp"
+    ]
+  },
+  {
+    "scene": "physci",
+    "name": "Physical Science Building",
+    "access": "account",
+    "acronym": "physci",
+    "type": "school_facilities",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Background/shs.webp",
+    "desc": "This is the Physical Science Building at our University.",
+
+    "gallery": []
+  },
+  {
+    "scene": "ced",
+    "name": "College of Education",
+    "access": "account",
+    "acronym": "ced",
+    "type": "college_buildings",
+    "tags": ["ced", " school"],
+    "image": "/assets/Building Module/Background/dit.webp",
+    "desc": "Welcome to College of Education, where we believe in the transformative power of education. Our diverse and inclusive community, led by dedicated mentors, provides the tools and support for you to succeed in the dynamic field of education. From innovative research opportunities to hands-on experiences, we empower you to make a meaningful impact in classrooms and communities. Welcome to a place where learning knows no bounds and excellence is the standard. Welcome to College of Education.",
+
+    "gallery": []
+  },
+  {
+    "scene": "cdc",
+    "name": "Child Development Center",
+    "access": "account",
+    "acronym": "cdc",
+    "type": "school_facilities",
+    "tags": [" school"],
+    "image": "/assets/Building Module/Background/dit.webp",
+    "desc": "Welcome to the Child Development Center, where we cherish the transformative potential of early childhood education. Our nurturing and inclusive community, guided by passionate mentors, equips you with the resources and encouragement to thrive in the dynamic realm of child development. From engaging in innovative research endeavors to immersing in hands-on experiences, we empower you to create a profound difference in the lives of children and families. Step into a world where learning is boundless, and excellence is the norm.",
+
+    "gallery": []
+  },
+  {
+    "scene": "con",
+    "name": "College of Nursing",
+    "access": "account",
+    "acronym": "con",
+    "type": "college_buildings",
+    "tags": ["con", "school"],
+    "image": "/assets/Building Module/Background/dit.webp",
+    "desc": "Welcome to the College of Nursing, where we embrace the profound impact of early nurturing and education on lifelong health and well-being. Within our supportive and inclusive community, dedicated mentors guide you to excel in the intricate field of nursing, equipping you with the knowledge and skills to make a tangible difference in the lives of individuals and families. Through innovative research and immersive practical experiences, we empower you to navigate the complexities of healthcare and emerge as compassionate, competent caregivers. Join us in a journey where learning knows no bounds, and excellence is the standard.",
+
+    "gallery": []
+  },
+  {
+    "scene": "ogs",
+    "name": "Open Graduate School",
+    "access": "account",
+    "acronym": "grad school",
+    "type": "college_buildings",
+    "tags": ["cas", "school"],
+    "image": "/assets/Building Module/Background/grad school.webp",
+    "desc": "Welcome to the Open Graduate School at our University. Our vibrant community of scholars is dedicated to advancing knowledge and fostering intellectual growth. From cutting-edge research to interdisciplinary collaboration, we're committed to pushing the boundaries of academic excellence. Join us as we explore new frontiers of learning and discovery. Welcome to a place where innovation thrives and curiosity reigns.",
+
+    "gallery": []
+  }
+]
