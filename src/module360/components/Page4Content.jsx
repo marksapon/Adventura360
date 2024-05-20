@@ -18,7 +18,7 @@ const Page4Content = () => (
             /> */}
             <PiPlayCircleLight className="h-10 w-10 text-green-600" />
             <p className="flex h-full w-full items-center justify-start text-xs">
-              Share the location and view to other people through a link.
+              Tired of scrolling through 360° images? Click this button to auto play the 360° images.
             </p>
           </div>
           <div className="flex w-full flex-row gap-5">

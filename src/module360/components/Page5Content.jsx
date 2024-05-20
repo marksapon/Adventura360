@@ -19,7 +19,8 @@ const Page5Content = () => (
             /> */}
             <GrMap className="h-10 w-10 text-green-600" />
             <p className="flex h-full w-full items-center justify-start text-xs">
-              Click this button when you want to return in the 360 experience.
+              This is the Map button. Click this when you you want to to go and
+              have a lool at the map of our University.
             </p>
           </div>
           <div className="flex w-full flex-row gap-5">
@@ -30,8 +31,7 @@ const Page5Content = () => (
             /> */}
             <Tb360View className="h-10 w-10 text-green-600" />
             <p className="flex h-full w-full items-center justify-start text-xs">
-              This is the Map button. Click this when you you want to to go and
-              have a lool at the map of our University.
+              Click this button when you want to return in the 360 experience.
             </p>
           </div>
         </div>

@@ -192,6 +192,7 @@ const MapModule = ({
 
   function removeOverlays() {
     console.log("Remove Overlays");
+
     Object.keys(overlays).map((type) => {
       overlays[type].map((overlay) => {
         viewer.removeOverlay(overlay.id);
@@ -319,27 +320,25 @@ const MapModule = ({
     if (osdLoaded) {
       viewer.addHandler("canvas-click", function (event) {
         console.log("CLICK EVENT");
-        const viewportPoint = viewer.viewport.pointFromPixel(event.position);
-        console.log("currentOverlaysRef:", currentOverlaysRef.current);
-        if (currentOverlaysRef.current.length > 0) {
-          currentOverlaysRef.current.map((overlayType) => {
-            overlays[overlayType].map((overlay, index) => {
-              if (
-                currLoc.coords.x !== overlay.x &&
-                currLoc.coords.y !== overlay.y
-              ) {
-                const clickedOverlay = viewer.getOverlayById(overlay.id); // Get the overlay by ID
-                console.log("Overlays:", clickedOverlay);
 
+        const viewportPoint = viewer.viewport.pointFromPixel(event.position);
+
+        Object.keys(overlays).map((overlayType) => {
+          overlays[overlayType].map((overlay, index) => {
+            if (
+              currLoc.coords.x !== overlay.x &&
+              currLoc.coords.y !== overlay.y
+            ) {
+              const clickedOverlay = viewer.getOverlayById(overlay.id); // Get the overlay by ID
+
+              if (clickedOverlay) {
                 // Get the bounds of the overlay
                 const overlayBounds = clickedOverlay.getBounds(viewer.viewport);
-                // console.log("Overlay Bounds:", overlayBounds);
 
                 // Check if the clicked point is inside the overlay bounds
-
                 if (overlayBounds.containsPoint(viewportPoint)) {
-                  console.log("Overlay Clicked:", overlay);
                   let found = false;
+
                   buildingsDB.find((buildings) => {
                     if (buildings.scene === overlay.scene) {
                       openBldgModal(overlay.scene, "map");
@@ -351,18 +350,24 @@ const MapModule = ({
                     extrasDB.find((extras) => {
                       if (extras.scene === overlay.scene) {
                         console.log("Found Extras");
+
                         const extraState = !overlay.state;
+
                         setExtraCheck(extraState);
+
                         setSelectedExtra(extras);
+
                         console.log("Overlay Extra State:", overlay.state);
                       }
                     });
                   }
                 }
+              } else {
+                console.log("No Overlay Found");
               }
-            });
+            }
           });
-        }
+        });
 
         // Viewport Coordinates when clicking
         console.log(
@@ -498,6 +503,7 @@ const MapModule = ({
       const target = graph.find((node) => {
         // console.log("Node: ", node);
         // console.log("Target: ", targetLocation);
+
         return node.id === targetLocation.scene;
       });
 
@@ -525,7 +531,7 @@ const MapModule = ({
         return pixelPoint;
       });
 
-      displayPath(pixelPaths);
+      displayPath(pixelPaths, targetLocation);
     }
   }
 
@@ -619,7 +625,7 @@ const MapModule = ({
     return generatedPath; // Set the generated path to the state
   }
 
-  function displayPath(points) {
+  function displayPath(points, target_location) {
     // Remove the old canvas if it exists
     const oldCanvas = document.getElementById("myCanvas");
     if (oldCanvas) {
@@ -656,7 +662,40 @@ const MapModule = ({
     });
 
     setFilterClicked(true);
-    refresh();
+
+    // removeOverlays();
+
+    viewer.removeOverlay("current location");
+
+    viewer.addOverlay({
+      id: "current location",
+      x: currLoc.coords.x,
+      y: currLoc.coords.y,
+      placement: OpenSeadragon.Placement.BOTTOM,
+      rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
+    });
+
+    console.log("Target Location:", target_location);
+
+    Object.keys(overlays).forEach((key) => {
+      overlays[key].map((overlay) => {
+        if (overlay.scene === target_location.scene) {
+          console.log("Overlay Found");
+          const div = document.getElementById(overlay.id);
+          if (
+            currLoc.coords.x !== overlay.x &&
+            currLoc.coords.y !== overlay.y
+          ) {
+            viewer.addOverlay({
+              element: div,
+              location: new OpenSeadragon.Point(overlay.x, overlay.y),
+              placement: OpenSeadragon.Placement.BOTTOM,
+              rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
+            });
+          }
+        }
+      });
+    });
   }
 
   function removePath() {
