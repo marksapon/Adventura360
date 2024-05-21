@@ -529,7 +529,7 @@ function Module360({
 
   /* Module360 Component */
   return (
-    <div className="relative flex h-svh w-full items-center justify-center">
+    <div className="relative flex h-dvh w-full items-center justify-center">
       {/* View360 Component */}
       <View360
         autoplay={autoplay ? { delay: 1000, speed: 0.5 } : false}
