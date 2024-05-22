@@ -8,7 +8,11 @@
     "tags": ["ceit", "school"],
     "image": "/assets/Building Module/Background/dit.webp",
     "desc": "The Department of Information Technology (DIT), nestled within the College of Engineering and Information Technology (CEIT), is housed in a modern building characterized by sleek architecture and cutting-edge facilities. Its spacious atrium welcomes students and visitors, while state-of-the-art classrooms, labs, and collaborative spaces provide an ideal environment for learning and research. From interactive displays showcasing the latest advancements to dedicated research wings driving innovation, the department's building serves as a dynamic hub for aspiring technologists and researchers alike.",
-    "gallery": []
+    "gallery": [],
+    "courses": {
+      "BACHELOR OF SCIENCE IN COMPUTER SCIENCE": null,
+      "BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY": null
+    }
   },
   {
     "scene": "osa",
@@ -286,7 +290,22 @@
     "tags": ["ceit", "school"],
     "image": "/assets/Building Module/Background/dit.webp",
     "desc": "Welcome to the College of Engineering and Information Technology at our University. Here, our vibrant community of scholars is dedicated to advancing infrastructure and urban development. From designing resilient structures to sustainable transportation systems, we're committed to pushing the boundaries of engineering innovation. Join us as we tackle global challenges and pave the way for a better tomorrow. Welcome to the forefront of engineering excellence.",
-
+    "courses": {
+      "BACHELOR OF SCIENCE IN COMPUTER SCIENCE": null,
+      "BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY": null,
+      "BACHELOR OF SCIENCE IN BACHELOR OF SCIENCE IN CIVIL ENGINEERING": null,
+      "BS ARCHITECTURE": null,
+      "BACHELOR OF SCIENCE IN AGRICULTURAL AND BIOSYSTEMS ENGINEERING": null,
+      "BACHELOR OF SCIENCE IN ELECTRICAL ENGINEERING": null,
+      "BACHELOR OF SCIENCE IN INDUSTRIAL TECHNOLOGY (formerly Bachelor of Industrial Technology)": [
+        "Automotive Technology",
+        "Electrical Technology",
+        "Electronics Technology"
+      ],
+      "BACHELOR OF SCIENCE IN COMPUTER ENGINEERING": null,
+      "BACHELOR OF SCIENCE IN ELECTRONICS ENGINEERING (formerly BS Electronics & Communications Engineering)": null
+    },
+    "more_info": "https://cvsu.edu.ph/2018/01/13/ceit-academic-programs/",
     "gallery": []
   },
   {
