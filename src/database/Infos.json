@@ -9,9 +9,12 @@
     "image": "/assets/Building Module/Background/dit.webp",
     "desc": "The Department of Information Technology (DIT), nestled within the College of Engineering and Information Technology (CEIT), is housed in a modern building characterized by sleek architecture and cutting-edge facilities. Its spacious atrium welcomes students and visitors, while state-of-the-art classrooms, labs, and collaborative spaces provide an ideal environment for learning and research. From interactive displays showcasing the latest advancements to dedicated research wings driving innovation, the department's building serves as a dynamic hub for aspiring technologists and researchers alike.",
     "gallery": [],
+
+    "contacts": {},
+
     "courses": {
-      "BACHELOR OF SCIENCE IN COMPUTER SCIENCE": null,
-      "BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY": null
+      "BS Computer Science": null,
+      "BS Information Technology": null
     }
   },
   {
@@ -23,6 +26,16 @@
     "tags": ["school"],
     "image": "/assets/Building Module/Background/inosas.webp",
     "desc": "Welcome to the Office of Student Affairs and Services at Cavite State University — A cornerstone of student support and development. Established in 1980, our office has evolved to meet the diverse needs of our students. From counseling and testing to financial assistance and talent development, we're here to empower students to reach their full potential. Whether it's guidance, training, or placement services, we're committed to fostering an environment where every student can thrive intellectually, emotionally, and socially.",
+
+    "services": { "Service 1": null },
+
+    "contacts": {
+      "Telephone": "(046) 481 8722",
+      "Email": "cvsuosasmain@cvsu.edu.ph",
+      "additional": {
+        "(Facebook) Cavite State University-Main OSAS": "https://www.facebook.com/CvSUOSAS/"
+      }
+    },
 
     "more_info": "https://cvsu.edu.ph/office-of-student-affairs-and-services/",
 
@@ -37,7 +50,7 @@
     "info_type": "info",
     "tags": ["school", "leisure"],
     "image": "/assets/Building Module/Background/IH2.webp",
-    "desc": "Welcome to International House 2, the epitome of campus living for everyone! Nestled near gate 1 of the campus, this modern dormitory offers a safe and welcoming environment for residents to call home. With its contemporary design and well-appointed facilities, International House 2 provides a comfortable and inclusive living space. From cozy bedrooms to communal lounges, every corner is designed to foster a sense of community and belonging. Whether studying late into the night or enjoying downtime with friends, residents of International House 2 experience the best of campus life in a supportive and vibrant environment.",
+    "desc": "International House 2 is a modern dorm near campus gate 1. It offers comfortable rooms, common areas, and a friendly atmosphere for students to live and socialize.",
 
     "more_info": "https://cvsu.edu.ph/university-dormitory/",
 
@@ -59,9 +72,11 @@
     ],
 
     "courses": {
-      "BACHELOR OF PHYSICAL EDUCATION": null,
-      "BACHELOR IN SPORTS AND RECREATIONAL MANAGEMENT": null
+      "Bachelor of Physical Education": null,
+      "Bachelor in Sports and Recreational Management": null
     },
+
+    "contacts": {},
 
     "more_info": "https://cvsu.edu.ph/2018/01/college-of-sports-and-physical-education-and-recreation/",
 
@@ -117,22 +132,22 @@
       "Department of Accountancy"
     ],
     "courses": {
-      "BS OFFICE ADMINISTRATION": null,
-      "BS ACCOUNTANCY": null,
-      "BS BUSINESS ADMINISTRATION": [
+      "BS Office Administration": null,
+      "BS Accountancy": null,
+      "BS Business Administration": [
         "Financial Management",
         "Human Resource Development Management",
         "Marketing Management",
         "Operations Management",
         "Service Management Program"
       ],
-      "BS ECONOMICS": null,
-      "BS DEVELOPMENT MANAGEMENT": [
+      "BS Economics": null,
+      "BS Development Management": [
         "Rural Development Management",
         "Training Program Management "
       ],
-      "BS INTERNATIONAL STUDIES": ["Asian Studies", "European Studies"],
-      "GRADUATE PROGRAMS": [
+      "BS International Studies": ["Asian Studies", "European Studies"],
+      "Graduate Programs": [
         "Master in Business Administration",
         "Master in Management",
         "Master in Public Administration"
@@ -168,33 +183,35 @@
     },
 
     "courses": {
-      "BS AGRICULTURE": ["Animal Science", "Crop Science"],
-      "BS IN ENVIRONMENTAL SCIENCES": null,
-      "BS IN FOOD TECHNOLOGY": null,
-      "BS IN LAND USE DESIGN AND MANAGEMENT": null,
-      "BACHELOR IN AGRICULTURAL ENTREPRENEURSHIP": null,
-      "CERTIFICATE IN AGRICULTURAL SCIENCE": null,
+      "BS Agriculture": ["Animal Science", "Crop Science"],
+      "BS in Environmental Sciences": null,
+      "BS in Food Technology": null,
+      "BS in Land Use Design and Management": null,
+      "Bachelor in Agricultural Entrepreneurship": null,
+      "Certificate in Agriculture Science": null,
 
-      "DOCTOR OF PHILOSOPHY IN AGRICULTURE": [
+      "Doctor of Philosophy in Agriculture": [
         "Animal Science",
         "Crop Science ",
         "Farming System "
       ],
-      "DOCTOR OF PHILOSOPHY IN FOOD SCIENCE": null,
-      "MASTER OF SCIENCE IN AGRICULTURE": [
+      "Doctor of Philosophy in Food Science": null,
+      "Master of Science in Agriculture": [
         "Animal Science",
         "Crop Science ",
         "Farming System ",
         "Crop Protection "
       ],
-      "MASTER OF SCIENCE IN FOOD SCIENCE": null
+      "Master of Science in Food Science": null
     },
 
     "contacts": {
       "Telephone": "(046) 423 1162",
       "Email": "cafenr@cvsu.edu.ph",
-      "(Facebook) Araw ng Kalikasan sa CvSU": "https://www.facebook.com/cvsuarawngkalikasan/",
-      "(Facebook) CvSU Environmental Geo-Information and Remote Sensing": "https://www.facebook.com/Cvsu-Environmental-Geo-Information-and-Remote-Sensing-Laboratory-104676587621183/"
+      "additional": {
+        "(Facebook) Araw ng Kalikasan sa CvSU": "https://www.facebook.com/cvsuarawngkalikasan/",
+        "(Facebook) CvSU Environmental Geo-Information and Remote Sensing": "https://www.facebook.com/Cvsu-Environmental-Geo-Information-and-Remote-Sensing-Laboratory-104676587621183/"
+      }
     },
 
     "more_info": "https://cvsu.edu.ph/2018/01/college-of-agriculture-forestry-environment-and-natural-resources/",
@@ -262,6 +279,17 @@
     "image": "/assets/Building Module/Background/IH1.webp",
     "desc": "Welcome to International House 1 —a bustling dormitory designed to be a home away from home for university students. Here, students from diverse backgrounds come together to form a vibrant community, fostering lifelong friendships and unforgettable experiences. With comfortable living spaces and modern amenities, International House 1 provides a supportive environment where students can thrive academically, socially, and personally. International House 1 is currently under College of Medicine.",
 
+    "services": { "Service 1": "Description for Service 1" },
+
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "Add Email Address Here",
+      "additional": {
+        "Website": "https://cvsu.edu.ph/university-dormitory/"
+      }
+    },
+
     "more_info": "https://cvsu.edu.ph/university-dormitory/",
 
     "gallery": [
@@ -279,7 +307,11 @@
     "image": "/assets/Building Module/Background/dit.webp",
     "desc": "Welcome to the Department of Biological Sciences at the University. Our state-of-the-art facilities and passionate community of scholars are dedicated to exploring the wonders of life. From molecular biology to ecology, we're committed to advancing our understanding of the natural world and addressing global challenges. Join us on a journey of discovery and exploration. Welcome to the heart of scientific inquiry.",
 
-    "gallery": []
+    "gallery": [],
+
+    "contacts": {},
+
+    "more_info": "https://www.facebook.com/CvSUDBS/"
   },
   {
     "scene": "ceit",
@@ -290,22 +322,27 @@
     "tags": ["ceit", "school"],
     "image": "/assets/Building Module/Background/dit.webp",
     "desc": "Welcome to the College of Engineering and Information Technology at our University. Here, our vibrant community of scholars is dedicated to advancing infrastructure and urban development. From designing resilient structures to sustainable transportation systems, we're committed to pushing the boundaries of engineering innovation. Join us as we tackle global challenges and pave the way for a better tomorrow. Welcome to the forefront of engineering excellence.",
+
     "courses": {
-      "BACHELOR OF SCIENCE IN COMPUTER SCIENCE": null,
-      "BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY": null,
-      "BACHELOR OF SCIENCE IN BACHELOR OF SCIENCE IN CIVIL ENGINEERING": null,
-      "BS ARCHITECTURE": null,
-      "BACHELOR OF SCIENCE IN AGRICULTURAL AND BIOSYSTEMS ENGINEERING": null,
-      "BACHELOR OF SCIENCE IN ELECTRICAL ENGINEERING": null,
-      "BACHELOR OF SCIENCE IN INDUSTRIAL TECHNOLOGY (formerly Bachelor of Industrial Technology)": [
+      "Bachelor of Science in Computer Science": null,
+      "Bachelor of Science in Information Technology": null,
+      "Bachelor OF Science in Civil Engineering": null,
+      "Bachelor of Science in Architecture": null,
+      "Bachelor of Science in Agricultural and Biosystems Engineering": null,
+      "Bachelor of Science in Electrical Engineering": null,
+      "Bachelor of Science IN Industrial Technology": [
         "Automotive Technology",
         "Electrical Technology",
         "Electronics Technology"
       ],
-      "BACHELOR OF SCIENCE IN COMPUTER ENGINEERING": null,
-      "BACHELOR OF SCIENCE IN ELECTRONICS ENGINEERING (formerly BS Electronics & Communications Engineering)": null
+      "Bachelor of Science in Computer Engineering": null,
+      "Bachelor of Science in Electronics Engineering": null
     },
+
+    "contacts": {},
+
     "more_info": "https://cvsu.edu.ph/2018/01/13/ceit-academic-programs/",
+
     "gallery": []
   },
   {
@@ -317,6 +354,8 @@
     "tags": ["ceit", "school"],
     "image": "/assets/Building Module/Background/dit.webp",
     "desc": "Welcome to the Department of Industrial Engineering and Technology at our University. Within our dedicated community, we explore the forefront of technology and innovation. From optimizing manufacturing processes to enhancing supply chain efficiency, we're committed to solving real-world challenges and driving industry forward. Join us as we embark on a journey of discovery and innovation. Welcome to the heart of industrial engineering excellence.",
+
+    "contacts": {},
 
     "gallery": []
   },
@@ -340,13 +379,19 @@
     "type": "school_facilities",
     "tags": ["school"],
     "image": "/assets/Building Module/Background/dit.webp",
-    "desc": "Welcome to the Cavite State University Administration  Building at our University.",
+    "desc": "Welcome to the Cavite State University Administration Building at our University.",
 
-    "gallery": [
-      "/assets/Building Module/Gallery/dit/01.webp",
-      "/assets/Building Module/Gallery/dit/02.webp",
-      "/assets/Building Module/Gallery/dit/03.webp"
-    ]
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "Add Email Address Here"
+    },
+
+    "services": { "Service 1": null },
+
+    "more_info": "https://cvsu.edu.ph/2018/01/administration-building/",
+
+    "gallery": []
   },
   {
     "scene": "hs",
@@ -410,7 +455,7 @@
     "access": "account",
     "acronym": "cdc",
     "type": "school_facilities",
-    "tags": [" school"],
+    "tags": ["school"],
     "image": "/assets/Building Module/Background/dit.webp",
     "desc": "Welcome to the Child Development Center, where we cherish the transformative potential of early childhood education. Our nurturing and inclusive community, guided by passionate mentors, equips you with the resources and encouragement to thrive in the dynamic realm of child development. From engaging in innovative research endeavors to immersing in hands-on experiences, we empower you to create a profound difference in the lives of children and families. Step into a world where learning is boundless, and excellence is the norm.",
 
@@ -434,7 +479,7 @@
     "access": "account",
     "acronym": "grad school",
     "type": "college_buildings",
-    "tags": ["cas", "school"],
+    "tags": ["school"],
     "image": "/assets/Building Module/Background/grad school.webp",
     "desc": "Welcome to the Open Graduate School at our University. Our vibrant community of scholars is dedicated to advancing knowledge and fostering intellectual growth. From cutting-edge research to interdisciplinary collaboration, we're committed to pushing the boundaries of academic excellence. Join us as we explore new frontiers of learning and discovery. Welcome to a place where innovation thrives and curiosity reigns.",
 

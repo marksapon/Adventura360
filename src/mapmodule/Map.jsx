@@ -289,32 +289,25 @@ const MapModule = ({
     });
 
     // Add a zoom event handler
-    viewerInstance.addHandler("zoom", function (event) {
-      // Get the current zoom level
-      const currentZoomLevel = viewerInstance.viewport.getZoom();
+    // viewerInstance.addHandler("zoom", function (event) {
+    //   // Get the current zoom level
+    //   const currentZoomLevel = viewerInstance.viewport.getZoom();
 
-      setPoiNameState(() => (currentZoomLevel >= 6 ? true : false));
-    });
+    //   if (currentZoomLevel >= 6) {
+    //     console.log("Displaying POI with Names");
+    //     setPoiNameState(true);
+    //   } else {
+    //     setPoiNameState(false);
+    //   }
+
+    // });
 
     return () => {
       // Clean up OpenSeadragon viewer when unmounts prevents multiple OSD instances
       removePath();
       viewerInstance.destroy();
     };
-  }, []);
-
-  useEffect(() => {
-    const maxZoomLevel = maxZoom();
-    console.log("Zoom Level:", zoomLevel);
-    console.log("Max Zoom Level:", maxZoomLevel);
-
-    // if (zoomLevel >= 6) {
-    //   console.log("Displaying POI with Names");
-    //   setPoiNameState(true);
-    // } else {
-    //   setPoiNameState(false);
-    // }
-  }, [zoomLevel]);
+  }, []); 
 
   // OSD Click Event Handler
   useEffect(() => {
@@ -807,7 +800,7 @@ const MapModule = ({
                 </div>
               </div>
 
-              {poiNameStateRef.current && (
+              {poiNameState && (
                 <div
                   className="absolute -left-28 flex h-auto w-60 items-center justify-center rounded-md border-2 border-gray-300 bg-white text-sm shadow-lg"
                   style={{

@@ -902,26 +902,6 @@
     ]
   },
   {
-    "scene": "icon",
-    "location": "International Convention Center",
-    "image": "",
-    "back": [""],
-    "coords": {
-      "x": 0.48,
-      "y": 0.712,
-      "type": "venue"
-    },
-    "hotspot": [
-      {
-        "type": "info",
-        "class": "info",
-        "target": "icon",
-        "yaw": 112.8,
-        "pitch": 12.34
-      }
-    ]
-  },
-  {
     "scene": "eco_tour",
     "location": "Agri-Eco Tourism Park",
     "image": "",
