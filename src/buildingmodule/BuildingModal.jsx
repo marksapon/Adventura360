@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import DOMPurify from "dompurify";
 import BuildingGallery from "./BuildingGallery";
 
 import { IoIosClose } from "react-icons/io"; // Close
@@ -101,6 +102,12 @@ const BuildingModal = ({
     if (contentRef.current) {
       contentRef.current.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  // Purify Text
+  const purifyText = ({ text }) => {
+    const sanitizedHTML = DOMPurify.sanitize(text);
+    return <div dangerouslySetInnerHTML={{ __html: sanitizedHTML }} />;
   };
 
   useEffect(() => {
@@ -247,7 +254,7 @@ const BuildingModal = ({
             <div className="border-b pt-2">
               {current_info ? (
                 <p className="mb-2 max-h-[150px] overflow-auto px-6 py-2 text-justify text-xs md:text-base">
-                  {current_info.desc}
+                  {purifyText(current_info.desc)}
                 </p>
               ) : (
                 <p className="mb-2 max-h-[150px] overflow-auto px-6 py-2 text-justify text-xs md:text-base">
@@ -442,7 +449,7 @@ const BuildingModal = ({
                   <ul className="justify-start text-balance">
                     <h1 className="pb-5 text-2xl">History</h1>
                     <p className="text-justify text-xs sm:text-base">
-                      {current_info.history}
+                      {purifyText(current_info.history)}
                     </p>
                   </ul>
                 </div>

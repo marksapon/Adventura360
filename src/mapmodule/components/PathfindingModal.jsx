@@ -10,6 +10,9 @@ import { MdDirections } from "react-icons/md"; // Directions Button
 import { IoIosArrowBack } from "react-icons/io"; // Minimize Button
 
 const PathfindingModal = ({
+  minimized,
+  setMinimized,
+
   setPathModalState,
   pathfinding,
   removePath,
@@ -24,7 +27,7 @@ const PathfindingModal = ({
   const [destination, setDestination] = useState(""); // Destination Variable
   const [finalDestination, setFinalDestination] = useState(); // Final Destination Variable
 
-  const [minimized, setMinimized] = useState(false); // Minimized State
+  // const [minimized, setMinimized] = useState(false); // Minimized State
 
   /* Buildings Search */
   // Buildings List

@@ -75,6 +75,10 @@ const MapModule = ({
   const [bldgModalState, setBldgModalState] = useState(false); // Building Modal State
   const [targetScene, setTargetScene] = useState(""); // Target Scene for Building Modal
 
+  /* Pathfinding Modal */
+  const [pathFindingClicked, setPathFindingClicked] = useState(false); // State to track if pathfinding icon is clicked
+  const [minimized, setMinimized] = useState(false); // Pathfinding Modal Minimized State
+
   /* Overlays */
 
   // function to generate Point of Interests
@@ -470,8 +474,6 @@ const MapModule = ({
     return temp;
   }
 
-  const [pathFindingClicked, setPathFindingClicked] = useState(false); // State to track if pathfinding icon is clicked
-
   // /* Function to scale down the given size */
   function downScale(getContentSize) {
     const scale = isMobile() ? 12 : 4;
@@ -852,6 +854,8 @@ const MapModule = ({
             {/* Pathfinding Modal */}
             {pathFindingClicked ? (
               <PathfindingModal
+                setMinimized={setMinimized}
+                minimized={minimized}
                 setPathModalState={setPathFindingClicked}
                 removePath={removePath}
                 pathfinding={pathFinding}
@@ -964,8 +968,9 @@ const MapModule = ({
                 <div className="group">
                   <button
                     className="pointer-events-auto rounded-full bg-white p-2 text-white drop-shadow-xl"
+                    disabled={pathFindingClicked}
                     onClick={() => {
-                      setPathFindingClicked(!pathFindingClicked);
+                      setPathFindingClicked(true);
                     }}
                   >
                     <GiPathDistance

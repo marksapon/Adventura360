@@ -43,7 +43,7 @@ const Navigationbar = ({
   /* States */
   const [mapState, setMapState] = useState(false); // Map State
   const [isFullscreen, setIsFullscreen] = useState(false); // Fullscreen State
-  const [Showmodal, setShowmodal] = useState(false); // Help Modal State
+  const [Showmodal, setShowmodal] = useState(true); // Help Modal State
   const [Sharemodal, setShowSharemodal] = useState(false); // Share Modal State
   const [Bugmdl, setShowBugmodal] = useState(false); // Bug Modal State
   const [searchModal, setSearchModal] = useState(false); // Search Modal State
