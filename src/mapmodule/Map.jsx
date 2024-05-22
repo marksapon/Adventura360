@@ -476,7 +476,7 @@ const MapModule = ({
 
   // /* Function to scale down the given size */
   function downScale(getContentSize) {
-    const scale = isMobile() ? 12 : 4;
+    const scale = isMobile() ? 20 : 4;
     const size = getContentSize;
     for (const key in size) {
       if (size.hasOwnProperty(key)) {

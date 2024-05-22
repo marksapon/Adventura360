@@ -4401,5 +4401,860 @@
         ]
       }
     ]
+  },
+  {
+    "ih1": [
+      {
+        "scene": "ih1",
+        "image": "/assets/Building Module/Internal Nodes/IH1/1.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih2",
+            "yaw": 279.15,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "ih2",
+        "image": "/assets/Building Module/Internal Nodes/IH1/2.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih3",
+            "yaw": 23.24,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ih1",
+            "yaw": 115.88,
+            "pitch": -40.0
+          },
+          {
+            "type": "move",
+            "target": "ih12",
+            "yaw": 197.97,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "ih3",
+        "image": "/assets/Building Module/Internal Nodes/IH1/3.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih4",
+            "yaw": 24.66,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ih2",
+            "yaw": 199.77,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "infodesk",
+            "yaw": 290.73,
+            "pitch": -7.12
+          }
+        ]
+      },
+      {
+        "scene": "ih4",
+        "image": "/assets/Building Module/Internal Nodes/IH1/4.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih5",
+            "yaw": 23.37,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ih3",
+            "yaw": 198.74,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "ih5",
+        "image": "/assets/Building Module/Internal Nodes/IH1/5.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih6",
+            "yaw": 15.91,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ih4",
+            "yaw": 192.3,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "ih6",
+        "image": "/assets/Building Module/Internal Nodes/IH1/6.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih7",
+            "yaw": 5.61,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ih5",
+            "yaw": 188.19,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ih8",
+            "yaw": 280.7,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "ih7",
+        "image": "/assets/Building Module/Internal Nodes/IH1/7.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih19",
+            "yaw": 299.74,
+            "pitch": -40.0
+          },
+          {
+            "type": "move",
+            "target": "ih6",
+            "yaw": 188.57,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "ih8",
+        "image": "/assets/Building Module/Internal Nodes/IH1/8.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih9",
+            "yaw": 290.46,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ih6",
+            "yaw": 106.35,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "restroom",
+            "target": "restroom",
+            "yaw": 20.02,
+            "pitch": -4.25
+          }
+        ]
+      },
+      {
+        "scene": "ih9",
+        "image": "/assets/Building Module/Internal Nodes/IH1/9.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih10",
+            "yaw": 296.13,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ih8",
+            "yaw": 113.42,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "ih10",
+        "image": "/assets/Building Module/Internal Nodes/IH1/10.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih9",
+            "yaw": 113.05,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ih11",
+            "yaw": 312.35,
+            "pitch": -40.0
+          }
+        ]
+      },
+      {
+        "scene": "ih11",
+        "image": "/assets/Building Module/Internal Nodes/IH1/11.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih10",
+            "yaw": 270.15,
+            "pitch": -30.6
+          }
+        ]
+      },
+      {
+        "scene": "ih12",
+        "image": "/assets/Building Module/Internal Nodes/IH1/12.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih13",
+            "yaw": 199.25,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ih2",
+            "yaw": 18.09,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "ih13",
+        "image": "/assets/Building Module/Internal Nodes/IH1/13.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih14",
+            "yaw": 216.88,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ih12",
+            "yaw": 31.35,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ih15",
+            "yaw": 299.22,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "ih14",
+        "image": "/assets/Building Module/Internal Nodes/IH1/14.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih13",
+            "yaw": 35.08,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ih17",
+            "yaw": 277.86,
+            "pitch": -40.0
+          }
+        ]
+      },
+      {
+        "scene": "ih15",
+        "image": "/assets/Building Module/Internal Nodes/IH1/15.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih16",
+            "yaw": 291.5,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ih13",
+            "yaw": 111.89,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "ih16",
+        "image": "/assets/Building Module/Internal Nodes/IH1/16.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih15",
+            "yaw": 111.89,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "ih17",
+        "image": "/assets/Building Module/Internal Nodes/IH1/17.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih18",
+            "yaw": 33.02,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ih14",
+            "yaw": 313.38,
+            "pitch": -37.61
+          },
+          {
+            "type": "move",
+            "target": "ih20",
+            "yaw": 267.06,
+            "pitch": -32.17
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "ido",
+            "yaw": 73.81,
+            "pitch": -1.75
+          }
+        ]
+      },
+      {
+        "scene": "ih18",
+        "image": "/assets/Building Module/Internal Nodes/IH1/18.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih19",
+            "yaw": 3.43,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ih17",
+            "yaw": 182.65,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "ih19",
+        "image": "/assets/Building Module/Internal Nodes/IH1/19.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih25",
+            "yaw": 333.45,
+            "pitch": -34.78
+          },
+          {
+            "type": "move",
+            "target": "ih18",
+            "yaw": 183.43,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ih7",
+            "yaw": 273.88,
+            "pitch": -33.96
+          }
+        ]
+      },
+      {
+        "scene": "ih20",
+        "image": "/assets/Building Module/Internal Nodes/IH1/20.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih21",
+            "yaw": 10.76,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ih17",
+            "yaw": 292.92,
+            "pitch": -35.6
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "restroomway",
+            "yaw": 351.2,
+            "pitch": -0.53
+          }
+        ]
+      },
+      {
+        "scene": "ih21",
+        "image": "/assets/Building Module/Internal Nodes/IH1/21.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih22",
+            "yaw": 32.12,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ih20",
+            "yaw": 210.32,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "ih22",
+        "image": "/assets/Building Module/Internal Nodes/IH1/22.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih23",
+            "yaw": 4.97,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ih21",
+            "yaw": 192.43,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "ih23",
+        "image": "/assets/Building Module/Internal Nodes/IH1/23.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih24",
+            "yaw": 13.98,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ih22",
+            "yaw": 195.91,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "ih24",
+        "image": "/assets/Building Module/Internal Nodes/IH1/24.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih25",
+            "yaw": 30.32,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ih23",
+            "yaw": 210.06,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "restroomway",
+            "yaw": 351.2,
+            "pitch": -0.53
+          }
+        ]
+      },
+      {
+        "scene": "ih25",
+        "image": "/assets/Building Module/Internal Nodes/IH1/25.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ih19",
+            "yaw": 296.39,
+            "pitch": -36.35
+          },
+          {
+            "type": "move",
+            "target": "ih24",
+            "yaw": 201.83,
+            "pitch": -20
+          }
+        ]
+      }
+    ],
+    "ih1_extras": [
+      {
+        "scene": "infodesk",
+        "location": "Information Desk",
+        "desc": "This is the Information Desk"
+      },
+      {
+        "scene": "restroom",
+        "location": "Restroom",
+        "desc": "This is a restroom for faculty only."
+      },
+      {
+        "scene": "ido",
+        "location": "Institutional Development Office",
+        "desc": "This is the Institutional Development Office"
+      },
+      {
+        "scene": "restroomway",
+        "location": "Restroom",
+        "desc": "This is the way to the restroom.."
+      }
+    ]
+  },
+  {
+    "osa": [
+      {
+        "scene": "osa01",
+        "image": "/assets/Building Module/Internal Nodes/OSAS/1.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "osa2",
+            "yaw": 306.56,
+            "pitch": -32.33
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "recieve",
+            "yaw": 203.49,
+            "pitch": -1.01
+          }
+        ]
+      },
+      {
+        "scene": "osa2",
+        "image": "/assets/Building Module/Internal Nodes/OSAS/2.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "osa3",
+            "yaw": 13.72,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "osa01",
+            "yaw": 129.64,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "osa12",
+            "yaw": 281.08,
+            "pitch": -26.66
+          },
+          {
+            "type": "popup",
+            "class": "restroom",
+            "target": "restroom",
+            "yaw": 302.82,
+            "pitch": -3.84
+          }
+        ]
+      },
+      {
+        "scene": "osa3",
+        "image": "/assets/Building Module/Internal Nodes/OSAS/3.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "osa13",
+            "yaw": 355.19,
+            "pitch": -30.32
+          },
+          {
+            "type": "move",
+            "target": "osa4",
+            "yaw": 277.48,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "osa2",
+            "yaw": 189.47,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "osa4",
+        "image": "/assets/Building Module/Internal Nodes/OSAS/4.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "osa5",
+            "yaw": 358.66,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "osa2",
+            "yaw": 275.8,
+            "pitch": -40.0
+          },
+          {
+            "type": "move",
+            "target": "osa6",
+            "yaw": 187.54,
+            "pitch": -36.79
+          }
+        ]
+      },
+      {
+        "scene": "osa5",
+        "image": "/assets/Building Module/Internal Nodes/OSAS/5.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "osa4",
+            "yaw": 201.57,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "gazette",
+            "yaw": 132.98,
+            "pitch": -1.97
+          }
+        ]
+      },
+      {
+        "scene": "osa6",
+        "image": "/assets/Building Module/Internal Nodes/OSAS/6.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "osa7",
+            "yaw": 198.09,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "osa4",
+            "yaw": 92.72,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "osa7",
+        "image": "/assets/Building Module/Internal Nodes/OSAS/7.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "osa6",
+            "yaw": 51.54,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "osa8",
+            "yaw": 232.19,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "osasoffice",
+            "yaw": 237.59,
+            "pitch": -5.33
+          }
+        ]
+      },
+      {
+        "scene": "osa8",
+        "image": "/assets/Building Module/Internal Nodes/OSAS/8.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "osa9",
+            "yaw": 288.54,
+            "pitch": -40.0
+          },
+          {
+            "type": "move",
+            "target": "osa7",
+            "yaw": 16.93,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "osasoffice",
+            "yaw": 8.95,
+            "pitch": -2.64
+          }
+        ]
+      },
+      {
+        "scene": "osa9",
+        "image": "/assets/Building Module/Internal Nodes/OSAS/9.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "osa8",
+            "yaw": 288.54,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "osa10",
+            "yaw": 18.99,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "osa10",
+        "image": "/assets/Building Module/Internal Nodes/OSAS/10.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "osa11",
+            "yaw": 352.36,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "release",
+            "yaw": 79.46,
+            "pitch": -0.64
+          },
+          {
+            "type": "move",
+            "target": "osa9",
+            "yaw": 164.25,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "osa11",
+        "image": "/assets/Building Module/Internal Nodes/OSAS/11.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "osa12",
+            "yaw": 355.06,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "osa10",
+            "yaw": 170.3,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "osa12",
+        "image": "/assets/Building Module/Internal Nodes/OSAS/12.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "osa2",
+            "yaw": 110.45,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "restroom",
+            "target": "restroom",
+            "yaw": 348.28,
+            "pitch": -4.05
+          },
+          {
+            "type": "move",
+            "target": "osa11",
+            "yaw": 206.53,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "osa13",
+        "image": "/assets/Building Module/Internal Nodes/OSAS/13.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "osa3",
+            "yaw": 180.0,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "osa14",
+            "yaw": 15.26,
+            "pitch": -37.62
+          }
+        ]
+      },
+      {
+        "scene": "osa14",
+        "image": "/assets/Building Module/Internal Nodes/OSAS/14.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "osa13",
+            "yaw": 180.0,
+            "pitch": -35.53
+          }
+        ]
+      }
+    ],
+    "osa_extras": [
+      {
+        "scene": "osasoffice",
+        "location": "OSAS Office",
+        "desc": "This is the Office of Student Affairs and Services"
+      },
+      {
+        "scene": "gazette",
+        "location": "Gazette",
+        "desc": "This is the Gazette office"
+      },
+      {
+        "scene": "release",
+        "location": "Releasing Area",
+        "desc": "This is the Releasing Area of the Office of Student Affairs and Services, where students can get their documents that they requested from the office."
+      },
+      {
+        "scene": "restroom",
+        "location": "Restroom",
+        "desc": "This is the Restroom"
+      },
+      {
+        "scene": "recieve",
+        "location": "Receaving Area",
+        "desc": "This is the Recieving Area of the Office of Student Affairs and Services, where students can request for documents and other services."
+      }
+    ]
   }
 ]
