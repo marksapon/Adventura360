@@ -1,6 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import DOMPurify from "dompurify";
-import BuildingGallery from "./BuildingGallery";
+
+/* Components */
+import BuildingGallery from "./components/BuildingGallery";
+
+/* CSS */
+import "./BuildingModal.css";
 
 import { IoIosClose } from "react-icons/io"; // Close
 import { FaQuestion } from "react-icons/fa"; // Unknown Icon
@@ -14,7 +19,16 @@ import { FaPhone } from "react-icons/fa"; // Contact
 import { ImLab } from "react-icons/im"; // Facilities
 import { IoMdArrowRoundBack } from "react-icons/io"; //
 import { MdHomeRepairService } from "react-icons/md"; // Services
-import { FaInfo } from "react-icons/fa";
+import { FaInfo } from "react-icons/fa"; // More Info
+
+import { MdExpandMore } from "react-icons/md"; // Expand More
+import { MdExpandLess } from "react-icons/md"; // Expand Less
+
+/* Contacts */
+import { MdEmail } from "react-icons/md"; // Email
+import { FaMobile } from "react-icons/fa6"; // Mobile
+import { BsFillTelephoneInboundFill } from "react-icons/bs"; // Telephone
+import { IoGlobeSharp } from "react-icons/io5"; // Website
 
 const BuildingModal = ({
   visible,
@@ -105,7 +119,7 @@ const BuildingModal = ({
   };
 
   // Purify Text
-  const purifyText = ({ text }) => {
+  const purifyText = (text) => {
     const sanitizedHTML = DOMPurify.sanitize(text);
     return <div dangerouslySetInnerHTML={{ __html: sanitizedHTML }} />;
   };
@@ -113,9 +127,6 @@ const BuildingModal = ({
   useEffect(() => {
     scrollToContent();
   }, [activeButton]);
-
-  // Component Did Mount
-  // useEffect(() => {}, [current_info, scene]);
 
   // Return Null if it is not visible
   if (!visible || !current_info) return null;
@@ -458,98 +469,215 @@ const BuildingModal = ({
               {/* Facilities */}
               {current_info && activeButton === "facilities" && (
                 <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">
-                  <ul className="justify-start text-balance">
-                    <h1 className="pb-5 text-2xl">Facilities</h1>
-                    {Object.keys(current_info.facilities).map((key, index) => {
-                      return (
-                        <div className="flex items-center" key={index}>
-                          <li>
+                  <div className="justify-start text-balance">
+                    <h1 className="flex flex-row items-center gap-3 pb-5 font-roboto text-2xl font-medium text-green-500">
+                      <ImLab className={`size-4 text-green-600 sm:size-6`} />{" "}
+                      Facilities
+                    </h1>
+                    <ul className="flex list-inside flex-col gap-1">
+                      {Object.keys(current_info.facilities).map(
+                        (key, index) => (
+                          <div className="flex flex-col gap-1" key={index}>
                             <button
-                              onClick={() =>
-                                Array.isArray(current_info.facilities[key]) &&
-                                handleClick(key)
-                              }
+                              onClick={() => handleClick(key)}
+                              className="flex items-center justify-between rounded-lg border-2 border-green-600 bg-white p-2"
                             >
-                              <h2 className="text-xs font-semibold sm:text-base">
+                              <div className="single-content-bullet text-left font-roboto text-base font-medium">
                                 {key}
-                              </h2>
+                              </div>
+
+                              {current_info.facilities[key] &&
+                                (isOpen[key] ? (
+                                  <MdExpandLess />
+                                ) : (
+                                  <MdExpandMore />
+                                ))}
                             </button>
-                            {isOpen[key] &&
-                              Array.isArray(current_info.facilities[key]) &&
-                              current_info.facilities[key].map(
-                                (course, index) => (
-                                  <div key={index}>{course}</div>
-                                ),
-                              )}
-                          </li>
-                        </div>
-                      );
-                    })}
-                  </ul>
+                            {isOpen[key] && current_info.facilities[key] && (
+                              <div className="mb-2 flex w-full flex-auto rounded-md border-2 border-gray-500 border-opacity-60">
+                                <div className="p-2 text-sm text-gray-800">
+                                  {purifyText(current_info.facilities[key])}
+                                </div>
+                              </div>
+                            )}
+                          </div>
+                        ),
+                      )}
+                    </ul>
+                  </div>
                 </div>
               )}
 
               {/* Departments */}
               {current_info && activeButton === "departments" && (
                 <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">
-                  <ul className="justify-start text-balance">
-                    <h1 className="pb-5 text-2xl">Departments</h1>
-                    {current_info.dept.map((dept, index) => (
-                      <li key={index} className="flex flex-col gap-2">
-                        <h2 className="text-base">•&nbsp;{dept}</h2>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="justify-start text-balance">
+                    <h1 className="flex flex-row items-center gap-3 pb-5 font-roboto text-2xl font-medium text-green-500">
+                      <BiBuildings
+                        className={`size-4 text-green-600 sm:size-6`}
+                      />
+                      Departments
+                    </h1>
+                    <ul className="flex list-inside flex-col gap-1">
+                      {current_info.dept.map((dept, index) => (
+                        <div className="flex rounded-lg border-2 border-green-600 bg-white p-2">
+                          <li
+                            key={index}
+                            className="single-content-bullet font-roboto text-base font-medium"
+                          >
+                            {dept}
+                          </li>
+                        </div>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               )}
 
               {/* Courses */}
               {current_info && activeButton === "courses" && (
                 <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">
-                  <ul className="justify-start text-balance">
-                    <h1 className="pb-5 text-2xl">Courses</h1>
-                    {Object.keys(current_info.courses).map((key, index) => {
-                      return (
-                        <div className="flex items-center" key={index}>
-                          <li>
-                            <button
-                              onClick={() =>
-                                Array.isArray(current_info.courses[key]) &&
-                                handleClick(key)
-                              }
-                            >
-                              <h2 className="text-xs font-semibold sm:text-base">
-                                {key}
-                              </h2>
-                            </button>
-                            {isOpen[key] &&
-                              Array.isArray(current_info.courses[key]) &&
-                              current_info.courses[key].map((course, index) => (
-                                <div key={index}>{course}</div>
+                  <div className="justify-start text-balance">
+                    <h1 className="flex flex-row items-center gap-3 pb-5 font-roboto text-2xl font-medium text-green-500">
+                      <GiBlackBook
+                        className={`size-4 text-green-600 sm:size-6`}
+                      />
+                      Courses Offered
+                    </h1>
+
+                    <ul className="flex list-inside flex-col gap-1">
+                      {Object.keys(current_info.courses).map((key, index) => (
+                        <div className="flex flex-col gap-1" key={index}>
+                          <button
+                            onClick={() => handleClick(key)}
+                            className="flex items-center justify-between rounded-lg border-2 border-green-600 bg-white p-2"
+                          >
+                            <div className="single-content-bullet text-left font-roboto text-base font-medium">
+                              {key}
+                            </div>
+
+                            {current_info.courses[key] &&
+                              (isOpen[key] ? (
+                                <MdExpandLess />
+                              ) : (
+                                <MdExpandMore />
                               ))}
-                          </li>
+                          </button>
+                          {isOpen[key] && current_info.courses[key] && (
+                            <div className="mb-2 flex w-full flex-auto rounded-md border-2 border-gray-500 border-opacity-60">
+                              <uv>
+                                {current_info.courses[key].map(
+                                  (subCourse, index) => (
+                                    <li
+                                      className="single-content-bullet p-2 text-sm"
+                                      key={index}
+                                    >
+                                      {subCourse}
+                                    </li>
+                                  ),
+                                )}
+                              </uv>
+                            </div>
+                          )}
                         </div>
-                      );
-                    })}
-                  </ul>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               )}
 
               {/* Contacts */}
               {current_info && activeButton === "contacts" && (
-                <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">
-                  <ul className="justify-start text-balance">
-                    <h1 className="pb-5 text-2xl">Contacts</h1>
-                    {Object.keys(current_info.contacts).map((key, index) => (
-                      <li className="flex items-center" key={index}>
-                        <h2 className="text-xs font-semibold sm:text-base">
-                          {key} -&nbsp;
-                        </h2>
-                        <span className="text-xs sm:text-base">
-                          {current_info.contacts[key]}
-                        </span>
-                      </li>
-                    ))}
+                <div className="flex w-full flex-col gap-10 rounded-b-xl border-b-2 px-6 pb-8 pt-2">
+                  <ul className="flex flex-col justify-start text-balance">
+                    <div className="m-2 flex flex-col">
+                      <h1 className="flex flex-row items-center gap-3 pb-5 font-roboto text-2xl font-medium text-green-500">
+                        <FaPhone
+                          className={`size-4 text-green-600 sm:size-6`}
+                        />
+                        Contacts
+                      </h1>
+                      <div className="flex flex-col justify-center gap-4 rounded-md p-2">
+                        {Object.keys(current_info.contacts).map(
+                          (key, index) => (
+                            <>
+                              <li
+                                className="flex flex-row items-center gap-2 "
+                                key={index}
+                              >
+                                {key === "Email" && (
+                                  <MdEmail
+                                    size={23}
+                                    className="h-auto w-auto text-green-500"
+                                  />
+                                )}
+
+                                {key === "Mobile" && (
+                                  <FaMobile
+                                    size={23}
+                                    className="h-auto w-auto text-green-500"
+                                  />
+                                )}
+
+                                {key === "Telephone" && (
+                                  <BsFillTelephoneInboundFill
+                                    size={23}
+                                    className="h-auto w-auto text-green-500"
+                                  />
+                                )}
+
+                                {key !== "additional" && (
+                                  <span className="font-roboto text-xs font-thin sm:text-base">
+                                    {current_info.contacts[key]}
+                                  </span>
+                                )}
+                              </li>
+                            </>
+                          ),
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="m-2 flex flex-col">
+                      <h2 className=" flex flex-row items-center gap-2 pb-2 font-roboto text-xl font-medium text-green-500">
+                        <IoGlobeSharp
+                          className={`size-4 text-green-600 sm:size-6`}
+                        />
+                        Additional Information:
+                      </h2>
+                      <div className="flex flex-col items-center justify-start gap-2 ">
+                        {Object.keys(current_info.contacts).map(
+                          (key, index) =>
+                            key === "additional" &&
+                            Object.keys(current_info.contacts[key]).map(
+                              (subKey, subIndex) => {
+                                console.log(subKey);
+                                return (
+                                  <button
+                                    className="flex w-full flex-row items-center justify-start gap-x-4 "
+                                    key={subIndex}
+                                  >
+                                    <div className="flex h-10 w-10 justify-center ">
+                                      <IoGlobeSharp className="h-10 w-10 p-2 text-green-500" />
+                                    </div>
+
+                                    <span
+                                      className="flex w-full text-left font-roboto text-xs font-thin hover:text-green-500 sm:text-base"
+                                      onClick={() =>
+                                        window.open(
+                                          current_info.contacts[key][subKey],
+                                        )
+                                      }
+                                    >
+                                      {subKey}
+                                    </span>
+                                  </button>
+                                );
+                              },
+                            ),
+                        )}
+                      </div>
+                    </div>
                   </ul>
                 </div>
               )}
@@ -557,17 +685,37 @@ const BuildingModal = ({
               {/* Services */}
               {current_info && activeButton === "services" && (
                 <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">
-                  <ul className="justify-start text-balance">
-                    <h1 className="pb-5 text-2xl">Services</h1>
+                  <h1 className="flex flex-row items-center gap-3 pb-5 font-roboto text-2xl font-medium text-green-500">
+                    <MdHomeRepairService
+                      className={`size-4 text-green-600 sm:size-6`}
+                    />
+                    Services
+                  </h1>
+
+                  <ul className="flex list-inside flex-col gap-1">
                     {Object.keys(current_info.services).map((key, index) => (
-                      <li className="flex items-center" key={index}>
-                        <h2 className="text-xs font-semibold sm:text-base">
-                          {key} -&nbsp;
-                        </h2>
-                        <span className="text-xs sm:text-base">
-                          {current_info.services[key]}
-                        </span>
-                      </li>
+                      <div className="flex flex-col gap-1">
+                        <button
+                          onClick={() => handleClick(key)}
+                          className="flex items-center justify-between rounded-lg border-2 border-green-600 bg-white p-2"
+                        >
+                          <div
+                            key={index}
+                            className="single-content-bullet font-roboto text-base font-medium"
+                          >
+                            {key}
+                          </div>
+                          {current_info.services[key] &&
+                            (isOpen[key] ? <MdExpandLess /> : <MdExpandMore />)}
+                        </button>
+                        {isOpen[key] && current_info.services[key] && (
+                          <div className="mb-2 flex w-full flex-auto rounded-md border-2 border-gray-500 border-opacity-60">
+                            <div className="p-2 text-sm ">
+                              {current_info.services[key]}
+                            </div>
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </ul>
                 </div>
@@ -583,12 +731,3 @@ const BuildingModal = ({
 };
 
 export default BuildingModal;
-
-{
-  /* 
-<span className="text-xs sm:text-base">
-                          {dept.description}
-                        </span>
-
-*/
-}

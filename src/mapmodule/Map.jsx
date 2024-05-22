@@ -860,6 +860,7 @@ const MapModule = ({
                 removePath={removePath}
                 pathfinding={pathFinding}
                 generatePOI={generatePOI}
+                removeOverlays={removeOverlays}
               />
             ) : null}
 

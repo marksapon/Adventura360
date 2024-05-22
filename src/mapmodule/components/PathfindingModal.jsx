@@ -17,6 +17,8 @@ const PathfindingModal = ({
   pathfinding,
   removePath,
   generatePOI,
+
+  removeOverlays,
 }) => {
   const poi = generatePOI(); // Generate Points of Interest
 
@@ -79,6 +81,9 @@ const PathfindingModal = ({
         state = true;
       }
     });
+    if (!state) {
+      setFinalDestination();
+    }
     setDirectionState(state); // Hide the Directions Button
   }
 
@@ -125,6 +130,7 @@ const PathfindingModal = ({
                         setPathModalState(false);
                         console.log("Path Modal Closed");
                         removePath();
+                        removeOverlays();
                       }}
                     >
                       <IoIosClose size={30} />

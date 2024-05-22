@@ -1,0 +1,4 @@
+.single-content-bullet::before {
+  content: "• ";
+  color: green; /* Replace with the color you want */
+}
