@@ -94,19 +94,20 @@ const PathfindingModal = ({
         <>
           {/* Minimize Button */}
           <div className="pointer-events-auto absolute -left-12 top-0 flex h-full items-center justify-end">
-            <div className="z-40 flex h-fit w-20 items-center justify-end rounded-lg bg-slate-50 bg-opacity-50 py-8 hover:bg-opacity-100">
-              <button
-                onClick={() => {
-                  console.log("Minimize Button Clicked");
-                  setMinimized(!minimized);
-                }}
-              >
+            <button
+              className="z-40 flex h-fit w-20 items-center justify-end rounded-lg bg-slate-50 bg-opacity-50 py-8 hover:bg-opacity-100"
+              onClick={() => {
+                console.log("Minimize Button Clicked");
+                setMinimized(!minimized);
+              }}
+            >
+              <div>
                 <IoIosArrowBack
                   size={30}
                   className="rotate-180 text-gray-600"
                 />
-              </button>
-            </div>
+              </div>
+            </button>
           </div>
         </>
       ) : (
