@@ -548,5 +548,17 @@
     },
     "contacts": {},
     "gallery": []
+  },
+  {
+    "scene": "irb",
+    "name": "Interdisciplinary Research Facility Building",
+    "access": "account",
+    "acronym": "interdisciplinary",
+    "type": "school_facilities",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Background/rccenter.webp",
+    "desc": "Welcome to our Interdisciplinary Research Facility! Here, experts from different fields team up to solve big problems together. From combining new technologies to tackling real-world issues, we're all about working together to make a difference. Join us as we break down barriers and find creative solutions. Welcome to a place where collaboration leads to breakthroughs!",
+
+    "gallery": []
   }
 ]

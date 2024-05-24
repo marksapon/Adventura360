@@ -230,7 +230,7 @@
   },
   {
     "scene": "irb",
-    "location": "Interdisciplinary Research Building",
+    "location": "Interdisciplinary Research Facility Building",
     "image": "/assets/Database Images/unrestricted nodes/37.webp",
     "back": ["node37"],
     "coords": {
@@ -244,8 +244,8 @@
         "type": "info",
         "class": "info",
         "target": "irb",
-        "yaw": 113.71,
-        "pitch": 14.32
+        "yaw": 268.43,
+        "pitch": 5.21
       }
     ]
   },
