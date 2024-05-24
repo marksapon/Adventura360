@@ -45,6 +45,8 @@ const BuildingModal = ({
   setAccess,
   internalDB,
   closeSearch,
+  setSearchModal,
+  searchModal,
 }) => {
   // Icon Set
   const icons = iconSet;
@@ -247,6 +249,9 @@ const BuildingModal = ({
                             changeScene("inside", current_info.scene);
                             setMapState(false);
                             handleCloseAndReset();
+                            if (searchModal) {
+                              setSearchModal(false);
+                            }
                           }}
                           className="flex w-fit items-center justify-center rounded-full bg-green-600 px-4 py-1 text-xs font-bold text-white md:text-base"
                         >
