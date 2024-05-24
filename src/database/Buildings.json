@@ -145,6 +145,27 @@
     ]
   },
   {
+    "scene": "newcemds2",
+    "location": "College of Economics, Management and Development Studies New Building",
+    "image": "/assets/Database Images/unrestricted nodes/34.webp",
+    "back": ["node31", "node32", "node33"],
+    "coords": {
+      "x": 0.605,
+      "y": 0.994,
+      "type": "college_buildings"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "newcemds2",
+        "yaw": 276.01,
+        "pitch": 3.19
+      }
+    ]
+  },
+  {
     "scene": "cafenr",
     "location": "College of Agriculture, Forestry, Environment and Natural Resources",
     "image": "/assets/Database Images/unrestricted nodes/283.webp",

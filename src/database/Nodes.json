@@ -1082,6 +1082,13 @@
         "target": "library",
         "yaw": 92.53,
         "pitch": 14.01
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "newcemds2",
+        "yaw": 276.01,
+        "pitch": 3.19
       }
     ]
   },

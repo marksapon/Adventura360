@@ -484,5 +484,69 @@
     "desc": "Welcome to the Open Graduate School at our University. Our vibrant community of scholars is dedicated to advancing knowledge and fostering intellectual growth. From cutting-edge research to interdisciplinary collaboration, we're committed to pushing the boundaries of academic excellence. Join us as we explore new frontiers of learning and discovery. Welcome to a place where innovation thrives and curiosity reigns.",
 
     "gallery": []
+  },
+  {
+    "scene": "cas",
+    "name": "College of Arts and Sciences",
+    "access": "account",
+    "acronym": "cas",
+    "type": "college_buildings",
+    "tags": ["cas", "school"],
+    "image": "/assets/Building Module/Background/dit.webp",
+    "desc": "Welcome to the College of Arts and Sciences at our University. Within our dynamic community, scholars delve into the depths of human expression and exploration. From unraveling the mysteries of the cosmos to dissecting the complexities of human behavior, we're dedicated to expanding the frontiers of knowledge and understanding. Join us as we embrace diverse perspectives and creative inquiry to address the complexities of our world. Welcome to the vanguard of intellectual exploration and artistic expression.",
+    "courses": {
+      "BACHELOR OF SCIENCE IN BIOLOGY": null,
+      "BACHELOR OF ARTS IN JOURNALISM": null,
+      "BACHELOR OF SCIENCE IN BACHELOR OF SCIENCE IN CIVIL ENGINEERING": null,
+      "BACHELOR OF ARTS IN ENGLISH": null,
+      "BACHELOR OF SCIENCE IN PSYCHOLOGY ": null,
+      "BACHELOR OF SCIENCE IN ELECTRICAL ENGINEERING": null,
+      "BACHELOR OF ARTS IN POLITICAL SCIENCE": null,
+      "BACHELOR OF SCIENCE IN SOCIAL WORK": null,
+      "BACHELOR OF SCIENCE IN APPLIED MATHEMATICS (Major in Statistics)": null
+    },
+    "more_info": "https://cvsu.edu.ph/2018/01/12/college-of-arts-and-sciences/",
+    "gallery": []
+  },
+  {
+    "scene": "newcemds2",
+    "name": "College of Economics, Management and Development Studies New Building",
+    "access": "account",
+    "acronym": "new cemds",
+    "type": "college_buildings",
+    "tags": ["school", "cemds"],
+    "image": "/assets/Building Module/Background/cemds.webp",
+    "desc": "Welcome to the College of Economics, Management, and Development Studies New Building—a modern marvel of academia and innovation! Situated at the heart of campus, this state-of-the-art facility embodies the spirit of forward-thinking education and research. With its sleek design and advanced technology, the building provides a dynamic environment for students and faculty to explore the complexities of economics, management, and development studies. From spacious lecture halls to collaborative workspaces, every corner is designed to inspire creativity and critical thinking. Whether studying economic theory, honing management skills, or researching sustainable development practices, the College of Economics, Management, and Development Studies New Building offers a vibrant setting for academic excellence and growth.",
+
+    "dept": [
+      "Department of Management",
+      "Department of Economics",
+      "Department of Development Studies",
+      "Department of Accountancy"
+    ],
+    "courses": {
+      "BS OFFICE ADMINISTRATION": null,
+      "BS ACCOUNTANCY": null,
+      "BS BUSINESS ADMINISTRATION": [
+        "Financial Management",
+        "Human Resource Development Management",
+        "Marketing Management",
+        "Operations Management",
+        "Service Management Program"
+      ],
+      "BS ECONOMICS": null,
+      "BS DEVELOPMENT MANAGEMENT": [
+        "Rural Development Management",
+        "Training Program Management "
+      ],
+      "BS INTERNATIONAL STUDIES": ["Asian Studies", "European Studies"],
+      "GRADUATE PROGRAMS": [
+        "Master in Business Administration",
+        "Master in Management",
+        "Master in Public Administration"
+      ]
+    },
+    "contacts": {},
+    "gallery": []
   }
 ]
