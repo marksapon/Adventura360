@@ -6,7 +6,6 @@ import { GrCafeteria } from "react-icons/gr";
 import { LuSchool } from "react-icons/lu";
 import { PiBinocularsDuotone } from "react-icons/pi";
 import { TbSchool } from "react-icons/tb";
-import { TbSoccerField } from "react-icons/tb"; // Court Icon
 import { FaHome, FaHotel } from "react-icons/fa";
 
 const Search = ({ visible, onClose, infosDB, openBldgModal }) => {

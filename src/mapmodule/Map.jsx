@@ -46,7 +46,7 @@ const MapModule = ({
   }
 
   const [selected_extra, setSelectedExtra] = useState(); // Selected Extra State
-  const [extraCheck, setExtraCheck] = useState(true); // Extra Check State
+  const [extraCheck, setExtraCheck] = useState(false); // Extra Check State
 
   /* Zoom Level */
   // Max Zoom Level based on Device
@@ -58,9 +58,7 @@ const MapModule = ({
     }
   };
   const [zoomLevel, setZoomLevel] = useState(maxZoom());
-  const [poiNameState, setPoiNameState] = useState(false); // POI Name State
-  const poiNameStateRef = useRef(poiNameState);
-  const [overlayState, setOverlayState] = useState(false); // Overlay State
+  const [poiNameStates, setPoiNameStates] = useState(true); // POI Name State
 
   /* OpenSeadragon Viewer */
   const osdRef = useRef(); // Reference to the OSD element
@@ -93,6 +91,7 @@ const MapModule = ({
         x: building.coords.x,
         y: building.coords.y,
         type: building.coords.type,
+        nameState: "hide",
       });
     });
     // Generate a proper layout for the POI in Buildings Extras
@@ -104,6 +103,7 @@ const MapModule = ({
         y: building.coords.y,
         type: building.coords.type,
         state: false,
+        nameState: "hide",
       });
     });
     return temp;
@@ -111,10 +111,9 @@ const MapModule = ({
 
   const poi = generatePOI(); // Points of Interests
 
-  const [overlays, setOverlays] = useState(() => {
-    // Adding data to the overlays
-    // console.log("Loading overlay");
+  const [overlays, setOverlays] = useState(generateOverlays());
 
+  function generateOverlays() {
     const temp_overlays = {
       // Overlay Types
       undefined: [],
@@ -148,7 +147,7 @@ const MapModule = ({
     });
     // console.log("Overlay Loaded");
     return temp_overlays;
-  });
+  }
 
   const icons = iconsSet; // Icons Set
 
@@ -160,40 +159,6 @@ const MapModule = ({
   /* Overlay Filter */
   const [filterClicked, setFilterClicked] = useState(true); // Filter Button State
 
-  // Refresh Overlays when filter is disconnected
-  function refresh() {
-    console.log("Map Refresh");
-    current_overlays.map((type) => {
-      overlays[type].map((overlay) => {
-        viewer.removeOverlay(overlay.id);
-      });
-    });
-
-    viewer.removeOverlay("current location");
-
-    current_overlays.forEach((key) => {
-      overlays[key].map((overlay) => {
-        const div = document.getElementById(overlay.id);
-        if (currLoc.coords.x !== overlay.x && currLoc.coords.y !== overlay.y) {
-          viewer.addOverlay({
-            element: div,
-            location: new OpenSeadragon.Point(overlay.x, overlay.y),
-            placement: OpenSeadragon.Placement.BOTTOM,
-            rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
-          });
-        }
-      });
-    });
-
-    viewer.addOverlay({
-      id: "current location",
-      x: currLoc.coords.x,
-      y: currLoc.coords.y,
-      placement: OpenSeadragon.Placement.BOTTOM,
-      rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
-    });
-  }
-
   function removeOverlays() {
     console.log("Remove Overlays");
 
@@ -202,28 +167,6 @@ const MapModule = ({
         viewer.removeOverlay(overlay.id);
       });
     });
-  }
-
-  function addOverlays(filterList) {
-    console.log("Adding Overlay");
-    removeOverlays();
-
-    console.log("Filter List:", filterList);
-    // If there is an element in the filterList add them to the OSD
-    filterList.map((type) => {
-      console.log("Object:", overlays[type]);
-      overlays[type].map((overlay) => {
-        const div = document.getElementById(overlay.id);
-        viewer.addOverlay({
-          element: div,
-          location: new OpenSeadragon.Point(overlay.x, overlay.y),
-          placement: OpenSeadragon.Placement.BOTTOM,
-          rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
-        });
-      });
-    });
-
-    setCurrentOverlays(filterList);
   }
 
   /* Map Button Mount */
@@ -278,6 +221,25 @@ const MapModule = ({
       });
     });
 
+    viewerInstance.addHandler("zoom", function (event) {
+      // Get the current zoom level
+      const currentZoomLevel = viewerInstance.viewport.getZoom();
+
+      // Update the nameState property of each overlay based on the current zoom level
+      setOverlays((prevOverlays) => {
+        const newOverlays = JSON.parse(JSON.stringify(prevOverlays)); // Deep copy the overlays
+        for (const overlayType in newOverlays) {
+          newOverlays[overlayType] = newOverlays[overlayType].map(
+            (overlay) => ({
+              ...overlay,
+              nameState: currentZoomLevel >= 6 ? "show" : "hide",
+            }),
+          );
+        }
+        return newOverlays;
+      });
+    });
+
     // When OSD is panned
     viewerInstance.addHandler("pan", function (event) {
       // Change current location button state when location is on center
@@ -288,26 +250,42 @@ const MapModule = ({
       }
     });
 
-    // Add a zoom event handler
-    // viewerInstance.addHandler("zoom", function (event) {
-    //   // Get the current zoom level
-    //   const currentZoomLevel = viewerInstance.viewport.getZoom();
-
-    //   if (currentZoomLevel >= 6) {
-    //     console.log("Displaying POI with Names");
-    //     setPoiNameState(true);
-    //   } else {
-    //     setPoiNameState(false);
-    //   }
-
-    // });
-
     return () => {
       // Clean up OpenSeadragon viewer when unmounts prevents multiple OSD instances
       removePath();
       viewerInstance.destroy();
     };
-  }, []); 
+  }, []);
+
+  useEffect(() => {
+    console.log("Overlay Changed");
+
+    if (osdLoaded) {
+      if (current_overlays.length === 0) {
+        removeOverlays();
+      } else if (current_overlays.length > 0) {
+        removeOverlays();
+
+        console.log("Adding Overlay");
+        current_overlays.map((type) => {
+          overlays[type].map((overlay) => {
+            const div = document.getElementById(overlay.id);
+            viewer.addOverlay({
+              element: div,
+              location: new OpenSeadragon.Point(overlay.x, overlay.y),
+              placement: OpenSeadragon.Placement.BOTTOM,
+              rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
+            });
+            viewer.forceRedraw();
+          });
+        });
+      }
+    }
+  }, [current_overlays, osdLoaded]);
+
+  useEffect(() => {
+    console.log("POI Name States: ", poiNameStates);
+  }, [poiNameStates]);
 
   // OSD Click Event Handler
   useEffect(() => {
@@ -800,12 +778,11 @@ const MapModule = ({
                 </div>
               </div>
 
-              {poiNameState && (
+              {overlay.nameState === "show" && (
                 <div
                   className="absolute -left-28 flex h-auto w-60 items-center justify-center rounded-md border-2 border-gray-300 bg-white text-sm shadow-lg"
                   style={{
                     color: color,
-                    WebkitTextStroke: "0.4px white",
                     fontWeight: "bold",
                   }}
                 >
@@ -910,11 +887,12 @@ const MapModule = ({
                 <button
                   className={`${filterClicked ? "bg-green-500" : "bg-white"} pointer-events-auto mb-1 ml-1 flex items-center justify-center rounded-full p-2 drop-shadow-xl`}
                   onClick={() => {
-                    setFilterClicked((prev) => {
-                      const newState = !prev;
+                    if (filterClicked) {
                       removeOverlays();
-                      return newState;
-                    });
+                      setCurrentOverlays([]);
+                    }
+
+                    setFilterClicked(!filterClicked);
                   }}
                 >
                   <BsFilterRight
@@ -924,13 +902,9 @@ const MapModule = ({
                 {filterClicked ? (
                   <FilterList
                     setOverlays={setCurrentOverlays}
-                    refreshOverlays={refresh}
-                    addOverlays={addOverlays}
+                    current_overlays={current_overlays}
                     removeOverlays={removeOverlays}
                     icons={icons}
-                    overlays={overlays}
-                    OSDinstance={viewer}
-                    OSD={OpenSeadragon}
                   />
                 ) : null}
               </div>

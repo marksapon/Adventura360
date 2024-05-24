@@ -179,7 +179,7 @@ function Login({ BACKEND_URL, setLoginType }) {
               className="my-4 w-full rounded-lg border border-gray-300 py-2 text-black shadow-lg hover:border-green-600 hover:bg-slate-100"
               form="loginForm"
             >
-              Login as administrator
+              Login
             </button>
             <div className="flex items-center space-x-2">
               <hr className="flex-grow border-t-2 border-gray-500" />

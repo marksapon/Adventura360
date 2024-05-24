@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 
 const FilterList = ({
+  current_overlays,
+  setOverlays,
+
   icons,
 
   removeOverlays,
@@ -21,35 +24,19 @@ const FilterList = ({
   const [constructionState, setConstructionState] = useState(false); // Construction State
   const [venueState, setVenueState] = useState(false); // Venue State
 
-  /* Filter Current Overlays */
-
-  const [filterOverlay, setFilterOverlay] = useState([]); // Filter List of Overlay that would be displayed in OSD
-
-  // // Function for controlling the behavior of the overlay filter
-  function refresh(filterList) {
-    console.log("Refresh");
-    // console.log("Filter List: ", filterList);
-
-    removeOverlays();
-    addOverlays(filterList);
-  }
-
   // Function that controls the filter list
   function filter(type, state) {
     // console.log("Filter:", type, state);
     if (state) {
       // If the state is true add the type to the filter list
-      setFilterOverlay((prevState) => {
+      setOverlays((prevState) => {
         const newFilterList = [...prevState, type];
-        refresh(newFilterList);
         return newFilterList;
       });
     } else {
       // Else remove the type from the filter list
-      setFilterOverlay((prevState) => {
+      setOverlays((prevState) => {
         const newFilterList = prevState.filter((item) => item !== type);
-        console.log("New Filter List: ", newFilterList);
-        refresh(newFilterList);
         return newFilterList;
       });
     }

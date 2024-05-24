@@ -539,7 +539,15 @@ function Module360({
         key={zoomSettings.min + autoplay}
         ref={viewerRef}
         projection={projection}
-        style={{ width: "100%", height: "100svh", overflow: "hidden" }}
+        style={{
+          width: "100%",
+          height: "100dvh",
+          overflow: "hidden",
+          paddingLeft: "env(safe-area-inset-left)",
+          paddingRight: "env(safe-area-inset-right)",
+          paddingTop: "env(safe-area-inset-top)",
+          paddingBottom: "env(safe-area-inset-bottom)",
+        }}
         plugins={plugins}
         pitchRange={{ min: -40, max: 40 }}
         initialZoom={zoomSettings.min}
