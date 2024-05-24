@@ -930,9 +930,11 @@ const MapModule = ({
                 <div className="group">
                   <button
                     className="pointer-events-auto rounded-full bg-white p-2 text-white drop-shadow-xl"
-                    disabled={pathFindingClicked}
                     onClick={() => {
                       setPathFindingClicked(true);
+                      if (minimized) {
+                        setMinimized(false);
+                      }
                     }}
                   >
                     <GiPathDistance

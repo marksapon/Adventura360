@@ -135,7 +135,8 @@ function Module360({
   // Current Extras Popup State
   const [curr_Extras, setCurr_Extras] = useState(generateExtras);
 
-  // Current Extras
+  // Map State
+  const [mapState, setMapState] = useState(false); // Map State
 
   // Function to get the current scene based on the URL queries
   function getScene() {
@@ -677,6 +678,8 @@ function Module360({
             access={access}
             setAccess={setAccess}
             internalDB={internalDB}
+            mapState={mapState}
+            setMapState={setMapState}
           />
         </div>
         {/* Navigation bar */}
@@ -721,11 +724,12 @@ function Module360({
         )}
 
         {/* Minimap */}
-        <div className="pointer-events-auto absolute left-0 top-0 p-1 text-white ">
+        <div className="pointer-events-auto absolute left-0 top-0 p-1 text-white">
           <div className="relative flex flex-row justify-between">
             <div className="mt-20 pb-2 pl-2">
               {mapButtonVisible && (
                 <Minimap
+                  onClick={() => setMapState(true)}
                   x={select_Scene.coords.x}
                   y={select_Scene.coords.y}
                   previous_Scene={previous_Scene}
