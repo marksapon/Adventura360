@@ -83,7 +83,7 @@ function Adventura360({ BACKEND_URL, loginType }) {
               className="absolute bottom-0 mx-auto w-3/12 animate-bounce object-contain md:w-2/12 lg:w-2/12"
               src="/assets/Login Module/adventura logo 2.webp"
               alt="Loading"
-              style={{ transform: "translateZ(0)" }}
+              
             />
             <div className="ripple mx-auto border-2 border-green-600"></div>
           </div>

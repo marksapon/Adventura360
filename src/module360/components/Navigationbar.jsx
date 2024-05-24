@@ -24,9 +24,7 @@ import { TbLinkOff } from "react-icons/tb"; // Share Link Icon OFF
 const Navigationbar = ({
   toggleAutoplay,
   location,
-  buildingsDB,
-  nodesDB,
-  extrasDB,
+
   infosDB,
   iconSet,
   loginType,
@@ -36,14 +34,21 @@ const Navigationbar = ({
   onBldgModalClose,
   mode,
   changeScene,
+
   access,
   setAccess,
+
+  mapState,
+  setMapState,
+
+  buildingsDB,
   internalDB,
+  nodesDB,
+  extrasDB,
 }) => {
   /* States */
-  const [mapState, setMapState] = useState(false); // Map State
   const [isFullscreen, setIsFullscreen] = useState(false); // Fullscreen State
-  const [Showmodal, setShowmodal] = useState(true); // Help Modal State
+  const [Showmodal, setShowmodal] = useState(getHelpState()); // Help Modal State
   const [Sharemodal, setShowSharemodal] = useState(false); // Share Modal State
   const [Bugmdl, setShowBugmodal] = useState(false); // Bug Modal State
   const [searchModal, setSearchModal] = useState(false); // Search Modal State
@@ -82,6 +87,19 @@ const Navigationbar = ({
       );
     };
   }, []);
+
+  function getHelpState() {
+    console.log("Help Function");
+    const help = sessionStorage.getItem("helpState");
+    console.log("Help State: ", help);
+    if (help === null) {
+      console.log("Displaying Help");
+      return true;
+    } else {
+      console.log("Not Displaying Help");
+      return false;
+    }
+  }
 
   const toggleFullscreen = () => {
     // Toggle Fullscreen
@@ -261,7 +279,10 @@ const Navigationbar = ({
               <div className="hidden md:flex">
                 <button
                   type="button"
-                  onClick={toggleAutoplay}
+                  onClick={() => {
+                    sessionStorage.setItem("helpState", "false");
+                    toggleAutoplay();
+                  }}
                   className="inline-flex h-14 w-14 items-center justify-center"
                   onMouseEnter={() => handleMouseEnter("button7")}
                   onMouseLeave={() => handleMouseLeave("button7")}
@@ -435,7 +456,10 @@ const Navigationbar = ({
             <div className="flex md:hidden">
               <button
                 type="button"
-                onClick={toggleAutoplay}
+                onClick={() => {
+                  sessionStorage.setItem("helpState", "false");
+                  toggleAutoplay();
+                }}
                 className="inline-flex h-10 w-10 items-center justify-center"
               >
                 <span className="sr-only">Autoplay</span>
@@ -553,6 +577,8 @@ const Navigationbar = ({
           closeSearch={() => {
             setSearchModal(false);
           }}
+          setSearchModal={setSearchModal}
+          searchModal={searchModal}
         />
       )}
     </div>
