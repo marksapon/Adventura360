@@ -530,7 +530,7 @@ function Module360({
   /* Module360 Component */
   return (
     <div
-      className="relative flex h-dvh w-full items-center justify-center"
+      className="relative flex h-dvh w-dvw items-center justify-center"
       style={{
         paddingLeft: "env(safe-area-inset-left)",
         paddingRight: "env(safe-area-inset-right)",
@@ -549,7 +549,6 @@ function Module360({
         projection={projection}
         style={{
           width: "100%",
-          height: "100vh",
           overflow: "hidden",
         }}
         plugins={plugins}
@@ -722,7 +721,7 @@ function Module360({
         )}
 
         {/* Minimap */}
-        <div className="absolute left-0 top-0 p-1 text-white ">
+        <div className="pointer-events-auto absolute left-0 top-0 p-1 text-white ">
           <div className="relative flex flex-row justify-between">
             <div className="mt-20 pb-2 pl-2">
               {mapButtonVisible && (
@@ -745,7 +744,7 @@ function Module360({
 
         {/* Minimap */}
         {/* Toggle Minimap */}
-        <div className="absolute bottom-0 right-0  flex items-center justify-center pb-20 pr-2 sm:pb-20 sm:pr-2 md:pb-2 md:pr-2 lg:pb-2 lg:pr-2">
+        <div className="pointer-events-auto absolute bottom-0  right-0 flex items-center justify-center pb-20 pr-2 sm:pb-20 sm:pr-2 md:pb-2 md:pr-2 lg:pb-2 lg:pr-2">
           <button
             className="shadow-2xl-inner rounded-full bg-gray-100 p-2 text-white drop-shadow-md"
             onClick={() => {
@@ -775,9 +774,3 @@ function Module360({
 }
 
 export default Module360;
-/* DEBUG PURPOSE
-
-
-
-
-*/

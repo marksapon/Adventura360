@@ -91,7 +91,6 @@ const MapModule = ({
         x: building.coords.x,
         y: building.coords.y,
         type: building.coords.type,
-        nameState: "hide",
       });
     });
     // Generate a proper layout for the POI in Buildings Extras
@@ -103,7 +102,6 @@ const MapModule = ({
         y: building.coords.y,
         type: building.coords.type,
         state: false,
-        nameState: "hide",
       });
     });
     return temp;
@@ -221,24 +219,24 @@ const MapModule = ({
       });
     });
 
-    viewerInstance.addHandler("zoom", function (event) {
-      // Get the current zoom level
-      const currentZoomLevel = viewerInstance.viewport.getZoom();
+    // viewerInstance.addHandler("zoom", function (event) {
+    //   // Get the current zoom level
+    //   const currentZoomLevel = viewerInstance.viewport.getZoom();
 
-      // Update the nameState property of each overlay based on the current zoom level
-      setOverlays((prevOverlays) => {
-        const newOverlays = JSON.parse(JSON.stringify(prevOverlays)); // Deep copy the overlays
-        for (const overlayType in newOverlays) {
-          newOverlays[overlayType] = newOverlays[overlayType].map(
-            (overlay) => ({
-              ...overlay,
-              nameState: currentZoomLevel >= 6 ? "show" : "hide",
-            }),
-          );
-        }
-        return newOverlays;
-      });
-    });
+    //   // Update the nameState property of each overlay based on the current zoom level
+    //   setOverlays((prevOverlays) => {
+    //     const newOverlays = JSON.parse(JSON.stringify(prevOverlays)); // Deep copy the overlays
+    //     for (const overlayType in newOverlays) {
+    //       newOverlays[overlayType] = newOverlays[overlayType].map(
+    //         (overlay) => ({
+    //           ...overlay,
+    //           nameState: currentZoomLevel >= 6 ? "show" : "hide",
+    //         }),
+    //       );
+    //     }
+    //     return newOverlays;
+    //   });
+    // });
 
     // When OSD is panned
     viewerInstance.addHandler("pan", function (event) {
@@ -282,10 +280,6 @@ const MapModule = ({
       }
     }
   }, [current_overlays, osdLoaded]);
-
-  useEffect(() => {
-    console.log("POI Name States: ", poiNameStates);
-  }, [poiNameStates]);
 
   // OSD Click Event Handler
   useEffect(() => {
@@ -778,7 +772,7 @@ const MapModule = ({
                 </div>
               </div>
 
-              {overlay.nameState === "show" && (
+              {/* {overlay.nameState === "show" && (
                 <div
                   className="absolute -left-28 flex h-auto w-60 items-center justify-center rounded-md border-2 border-gray-300 bg-white text-sm shadow-lg"
                   style={{
@@ -788,7 +782,7 @@ const MapModule = ({
                 >
                   {overlay.name}
                 </div>
-              )}
+              )} */}
             </button>,
           );
         }
