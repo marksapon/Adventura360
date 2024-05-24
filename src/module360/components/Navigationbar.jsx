@@ -574,6 +574,8 @@ const Navigationbar = ({
           closeSearch={() => {
             setSearchModal(false);
           }}
+          setSearchModal={setSearchModal}
+          searchModal={searchModal}
         />
       )}
     </div>
