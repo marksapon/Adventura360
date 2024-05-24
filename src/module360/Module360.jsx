@@ -529,7 +529,15 @@ function Module360({
 
   /* Module360 Component */
   return (
-    <div className="relative flex h-dvh w-full items-center justify-center">
+    <div
+      className="relative flex h-dvh w-full items-center justify-center"
+      style={{
+        paddingLeft: "env(safe-area-inset-left)",
+        paddingRight: "env(safe-area-inset-right)",
+        paddingTop: "env(safe-area-inset-top)",
+        paddingBottom: "env(safe-area-inset-bottom)",
+      }}
+    >
       {/* View360 Component */}
       <View360
         autoplay={autoplay ? { delay: 1000, speed: 0.5 } : false}
@@ -541,12 +549,8 @@ function Module360({
         projection={projection}
         style={{
           width: "100%",
-          height: "100dvh",
+          height: "100vh",
           overflow: "hidden",
-          paddingLeft: "env(safe-area-inset-left)",
-          paddingRight: "env(safe-area-inset-right)",
-          paddingTop: "env(safe-area-inset-top)",
-          paddingBottom: "env(safe-area-inset-bottom)",
         }}
         plugins={plugins}
         pitchRange={{ min: -40, max: 40 }}
