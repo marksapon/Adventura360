@@ -7,7 +7,7 @@ const Bugmodal = ({ visible, onClose }) => {
   const [message, setMessage] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
-  const [showThankYouModal, setShowThankYouModal] = useState(true);
+  const [showThankYouModal, setShowThankYouModal] = useState(false);
 
   const handleCloseAndReset = () => {
     onClose();
@@ -211,10 +211,10 @@ const Bugmodal = ({ visible, onClose }) => {
         </div>
         {showThankYouModal && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-25">
-            <div className="relative flex h-auto w-1/2 flex-col rounded-lg border border-green-600 bg-white p-2 shadow-lg">
+            <div className="relative flex h-auto flex-col rounded-lg border border-green-600 bg-white p-2 shadow-lg md:w-1/2">
               <button
                 className="absolute right-0 top-0 h-12 w-12"
-                onClick={() => setShowThankYouModal(false)}
+                onClick={handleCloseAndReset}
               >
                 <IoIosClose className="h-full w-full" />
               </button>
