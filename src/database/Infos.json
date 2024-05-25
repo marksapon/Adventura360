@@ -172,7 +172,7 @@
     "acronym": "cafenr",
     "type": "college_buildings",
     "tags": ["cafenr", "school"],
-    "image": "/assets/Building Module/Background/cafenr.webp",
+    "image": "/assets/Building Module/Background/inter disciplinary research building.webp",
     "desc": "The College of Agriculture, Forestry, Environment, and Natural Resources building embodies innovation and sustainability. Its modern design integrates seamlessly with nature, featuring spacious interiors filled with natural light and cutting-edge facilities. With a focus on eco-friendly practices, including energy-efficient systems and green rooftops, the building serves as a hub for interdisciplinary learning and research. Surrounded by lush gardens and outdoor spaces, it inspires environmental stewardship and fosters collaboration among students and faculty.",
 
     "dept": [
@@ -313,7 +313,7 @@
     "acronym": "biosci",
     "type": "college_buildings",
     "tags": ["cas", "school"],
-    "image": "/assets/Building Module/Background/dit.webp",
+    "image": "/assets/Building Module/Background/bio_sci.webp",
     "desc": "Welcome to the Department of Biological Sciences at the University. Our state-of-the-art facilities and passionate community of scholars are dedicated to exploring the wonders of life. From molecular biology to ecology, we're committed to advancing our understanding of the natural world and addressing global challenges. Join us on a journey of discovery and exploration. Welcome to the heart of scientific inquiry.",
 
     "gallery": [],
@@ -477,7 +477,7 @@
     "acronym": "con",
     "type": "college_buildings",
     "tags": ["con", "school"],
-    "image": "/assets/Building Module/Background/dit.webp",
+    "image": "/assets/Building Module/Background/con_.webp",
     "desc": "Welcome to the College of Nursing, where we embrace the profound impact of early nurturing and education on lifelong health and well-being. Within our supportive and inclusive community, dedicated mentors guide you to excel in the intricate field of nursing, equipping you with the knowledge and skills to make a tangible difference in the lives of individuals and families. Through innovative research and immersive practical experiences, we empower you to navigate the complexities of healthcare and emerge as compassionate, competent caregivers. Join us in a journey where learning knows no bounds, and excellence is the standard.",
 
     "gallery": []
@@ -501,7 +501,7 @@
     "acronym": "cas",
     "type": "college_buildings",
     "tags": ["cas", "school"],
-    "image": "/assets/Building Module/Background/dit.webp",
+    "image": "/assets/Building Module/Background/cas.webp",
     "desc": "Welcome to the College of Arts and Sciences at our University. Within our dynamic community, scholars delve into the depths of human expression and exploration. From unraveling the mysteries of the cosmos to dissecting the complexities of human behavior, we're dedicated to expanding the frontiers of knowledge and understanding. Join us as we embrace diverse perspectives and creative inquiry to address the complexities of our world. Welcome to the vanguard of intellectual exploration and artistic expression.",
     "courses": {
       "BACHELOR OF SCIENCE IN BIOLOGY": null,
@@ -617,6 +617,30 @@
     "tags": ["cafenr", "school"],
     "image": "/assets/Building Module/Background/crop science.webp",
     "desc": "Welcome to the Department of Crop Science at the University. Our state-of-the-art facilities and passionate community of scholars are dedicated to exploring the wonders of life. From molecular biology to ecology, we're committed to advancing our understanding of the natural world and addressing global challenges. Join us on a journey of discovery and exploration. Welcome to the heart of scientific inquiry.",
+
+    "gallery": []
+  },
+  {
+    "scene": "cashier",
+    "name": "University Cashier",
+    "access": "account",
+    "acronym": "cashier",
+    "type": "school_facilities",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Background/cashier.webp",
+    "desc": "Welcome to the University Cashier at our University. Our state-of-the-art facilities and passionate community of scholars are dedicated to exploring the wonders of life. From molecular biology to ecology, we're committed to advancing our understanding of the natural world and addressing global challenges. Join us on a journey of discovery and exploration. Welcome to the heart of scientific inquiry.",
+
+    "gallery": []
+  },
+  {
+    "scene": "icon",
+    "name": "International Convention Center",
+    "access": "account",
+    "acronym": "cashier",
+    "type": "school_facilities",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Background/ICON.webp",
+    "desc": "Welcome to the International Convention Center at our University.",
 
     "gallery": []
   }

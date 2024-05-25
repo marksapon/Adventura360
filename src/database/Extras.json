@@ -188,7 +188,7 @@
       "y": 1.055,
       "type": "farm"
     },
-    "image": "/assets/Database Images/unrestricted nodes/108.webp"
+    "image": "/assets/Building Module/Extras/kaong.webp"
   },
   {
     "scene": "eng_shop",
@@ -197,17 +197,6 @@
     "coords": {
       "x": 0.342,
       "y": 0.889,
-      "type": "school_facilities"
-    },
-    "image": "/assets/Database Images/unrestricted nodes/108.webp"
-  },
-  {
-    "scene": "pps",
-    "location": "Physical Plant Services",
-    "desc": "This is the university's Physical Plant Services",
-    "coords": {
-      "x": 0.33,
-      "y": 0.84,
       "type": "school_facilities"
     },
     "image": "/assets/Database Images/unrestricted nodes/108.webp"
@@ -305,8 +294,8 @@
     "location": "Kiosk near Department of Electrical Engineering",
     "desc": "This is the kiosk near Department of Electrical Engineering",
     "coords": {
-      "x": 0.304,
-      "y": 0.865,
+      "x": 0.29,
+      "y": 0.88,
       "type": "batibot"
     },
     "image": "/assets/Building Module/Extras/DEE kiosk.webp"
@@ -327,8 +316,8 @@
     "location": "Extension building of Department of Electrical Engineering",
     "desc": "This is the under construction extension Department of Electrical Engineering",
     "coords": {
-      "x": 0.269,
-      "y": 0.881,
+      "x": 0.251,
+      "y": 0.895,
       "type": "construction"
     },
     "image": "/assets/Building Module/Extras/DEE under construction.webp"
@@ -543,17 +532,6 @@
     "image": "/assets/Building Module/Extras/science hs wash area.webp"
   },
   {
-    "scene": "mainBldgNCRDEC",
-    "location": "Main building of NCRDEC",
-    "desc": "Under construction main building of NCRDEC",
-    "coords": {
-      "x": 0.729,
-      "y": 1.237,
-      "type": "construction"
-    },
-    "image": "/assets/Building Module/Extras/soon to rise NCRDEC main bldg.webp"
-  },
-  {
     "scene": "universityHospital",
     "location": "University Hospital",
     "desc": "Soon to rise University Hospital",
@@ -631,13 +609,13 @@
     "image": "/assets/Building Module/Extras/tori gate.webp"
   },
   {
-    "scene": "ncrdec",
+    "scene": "ncrdecMain",
     "location": "NCRDEC Main Building",
     "desc": "National Coffee Research, Development and Extension Center Main Building under construction",
     "coords": {
-      "x": 0.73,
+      "x": 0.731,
       "y": 1.236,
-      "type": "attractions"
+      "type": "construction"
     },
     "image": "/assets/Building Module/Extras/ncrdecmain.webp"
   },

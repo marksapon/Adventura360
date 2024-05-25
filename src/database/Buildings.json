@@ -109,7 +109,7 @@
     "back": ["node24"],
     "coords": {
       "x": 0.711,
-      "y": 1.194,
+      "y": 1.193,
       "type": "school_facilities"
     },
     "hotspot": [
@@ -378,7 +378,7 @@
   {
     "scene": "admin",
     "location": "Administration Building",
-    "image": "/assets/Database Images/unrestricted nodes/258.webp",
+    "image": "/assets/Building Module/Background/admin.webp",
     "back": ["node65"],
     "coords": {
       "x": 0.391,
@@ -704,7 +704,7 @@
   {
     "scene": "ced",
     "location": "College of Education",
-    "image": "/assets/Database Images/unrestricted nodes/302.webp",
+    "image": "/assets/Building Module/Background/CED.webp",
     "back": [""],
     "coords": {
       "x": 0.331,
@@ -738,26 +738,6 @@
         "target": "hs",
         "yaw": 108.6,
         "pitch": 5.19
-      }
-    ]
-  },
-  {
-    "scene": "chapel",
-    "location": "University Chapel",
-    "image": "",
-    "back": [""],
-    "coords": {
-      "x": 0.24,
-      "y": 1.055,
-      "type": "venue"
-    },
-    "hotspot": [
-      {
-        "type": "info",
-        "class": "info",
-        "target": "chapel",
-        "yaw": 112.8,
-        "pitch": 12.34
       }
     ]
   },
