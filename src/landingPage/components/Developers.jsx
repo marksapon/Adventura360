@@ -95,7 +95,7 @@ const Developers = () => {
             </h2>
           </div>
           <div className="z-40 grid h-full w-full grid-cols-1 gap-4 p-4 text-center sm:grid-cols-2 xl:w-1/2">
-            {developers.map((developer, index) => (
+            {developers.map((developer) => (
               <div
                 key={developer.id} // unique key prop here
                 className="flex w-full flex-col rounded-2xl border bg-white shadow-xl duration-300 hover:bg-slate-200"

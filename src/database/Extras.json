@@ -85,12 +85,13 @@
   },
   {
     "scene": "Vase",
-    "location": "Big Jar",
+    "location": "Centennial Jar",
     "coords": {
       "x": 0.545,
       "y": 0.906,
       "type": "attractions"
     },
+    "desc": "This is the university's Centennial Jar",
     "image": "/assets/Building Module/Extras/big jar.webp"
   },
   {
@@ -597,6 +598,17 @@
     "image": "/assets/Building Module/Extras/university mall.webp"
   },
   {
+    "scene": "umallConstruction",
+    "location": "University Mall",
+    "desc": "University Mall under construction",
+    "coords": {
+      "x": 0.548,
+      "y": 1.313,
+      "type": "construction"
+    },
+    "image": "/assets/Building Module/Extras/university mall.webp"
+  },
+  {
     "scene": "AnthuriumHouse",
     "location": "Anthurium House",
     "desc": "This is the Anthurium House",
@@ -606,5 +618,38 @@
       "type": "farm"
     },
     "image": "/assets/Building Module/Extras/anthurium house (1).webp"
+  },
+  {
+    "scene": "torigate",
+    "location": "Tori Gate",
+    "desc": "This is the Tori Gate located near NRDEC",
+    "coords": {
+      "x": 0.676,
+      "y": 1.2,
+      "type": "attractions"
+    },
+    "image": "/assets/Building Module/Extras/tori gate.webp"
+  },
+  {
+    "scene": "ncrdec",
+    "location": "NCRDEC Main Building",
+    "desc": "National Coffee Research, Development and Extension Center Main Building under construction",
+    "coords": {
+      "x": 0.73,
+      "y": 1.236,
+      "type": "attractions"
+    },
+    "image": "/assets/Building Module/Extras/ncrdecmain.webp"
+  },
+  {
+    "scene": "gate3",
+    "location": "Gate 3",
+    "desc": "This is the university's Gate 3",
+    "coords": {
+      "x": 0.676,
+      "y": 1.2,
+      "type": "attractions"
+    },
+    "image": "/assets/Building Module/Extras/gate 3.webp"
   }
 ]

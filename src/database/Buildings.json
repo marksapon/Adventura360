@@ -251,7 +251,7 @@
   },
   {
     "scene": "ih1",
-    "location": "International House 1",
+    "location": "International House 1 / College of Medicine",
     "image": "/assets/Database Images/unrestricted nodes/39.webp",
     "back": ["node38", "node39", "node40"],
     "coords": {
@@ -545,7 +545,7 @@
   {
     "scene": "cropsci",
     "location": "Crop Science Building",
-    "image": "",
+    "image": "/assets/Database Images/unrestricted nodes/348.webp",
     "back": [""],
     "coords": {
       "x": 0.539,
@@ -557,8 +557,8 @@
         "type": "info",
         "class": "info",
         "target": "cropsci",
-        "yaw": "",
-        "pitch": ""
+        "yaw": "121.35",
+        "pitch": "6.08"
       }
     ]
   },
@@ -739,26 +739,6 @@
         "target": "icon",
         "yaw": 112.8,
         "pitch": 12.34
-      }
-    ]
-  },
-  {
-    "scene": "cropsci",
-    "location": "Crop Science Building",
-    "image": "",
-    "back": [""],
-    "coords": {
-      "x": 0.539,
-      "y": 1.005,
-      "type": "college_buildings"
-    },
-    "hotspot": [
-      {
-        "type": "info",
-        "class": "info",
-        "target": "cropsci",
-        "yaw": "",
-        "pitch": ""
       }
     ]
   },
@@ -1024,9 +1004,9 @@
   },
   {
     "scene": "museum",
-    "location": "University Museum",
-    "image": "",
-    "back": [""],
+    "location": "Historical and Cultural Museum",
+    "image": "/assets/Database Images/unrestricted nodes/321.webp",
+    "back": ["node34", "node35"],
     "coords": {
       "x": 0.508,
       "y": 0.971,
@@ -1037,9 +1017,9 @@
         "id": 1,
         "type": "info",
         "class": "info",
-        "target": "library",
-        "yaw": 113.71,
-        "pitch": 14.32
+        "target": "museum",
+        "yaw": 126.4,
+        "pitch": -3.52
       }
     ]
   }

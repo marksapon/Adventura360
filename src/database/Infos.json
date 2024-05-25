@@ -89,7 +89,7 @@
     "acronym": "alumni",
     "type": "venue",
     "tags": ["school", "leisure"],
-    "image": "",
+    "image": "/assets/Building Module/Background/bahay ng alumni.webp",
     "desc": "Welcome to Bahay ng Alumni—a cozy retreat found near the Gymnasium of the University. Our inviting rooms offer a blend of comfort and nostalgia, providing guests with a home-away-from-home experience. Whether you're here for a trip down memory lane or attending an event, we promise a memorable stay filled with warmth and hospitality.",
 
     "contacts": {},
@@ -270,12 +270,12 @@
   },
   {
     "scene": "ih1",
-    "name": "International House 1 (Dormitory)",
+    "name": "International House 1 / College of Medicine",
     "access": "account",
-    "acronym": "ih2",
-    "type": "venue",
+    "acronym": "ih1",
+    "type": "school_facilities",
     "info_type": "info",
-    "tags": ["school", "leisure"],
+    "tags": ["school"],
     "image": "/assets/Building Module/Background/IH1.webp",
     "desc": "Welcome to International House 1 —a bustling dormitory designed to be a home away from home for university students. Here, students from diverse backgrounds come together to form a vibrant community, fostering lifelong friendships and unforgettable experiences. With comfortable living spaces and modern amenities, International House 1 provides a supportive environment where students can thrive academically, socially, and personally. International House 1 is currently under College of Medicine.",
 
@@ -558,6 +558,31 @@
     "tags": ["school"],
     "image": "/assets/Building Module/Background/rccenter.webp",
     "desc": "Welcome to our Interdisciplinary Research Facility! Here, experts from different fields team up to solve big problems together. From combining new technologies to tackling real-world issues, we're all about working together to make a difference. Join us as we break down barriers and find creative solutions. Welcome to a place where collaboration leads to breakthroughs!",
+
+    "gallery": []
+  },
+  {
+    "scene": "museum",
+    "name": "Historical and Cultural Museum",
+    "access": "account",
+    "acronym": "museum",
+    "type": "school_facilities",
+    "tags": ["school", "historical"],
+    "image": "/assets/Building Module/Background/museum.webp",
+    "desc": "Welcome to the Historical and Cultural Museum at our University. Our museum is a treasure trove of artifacts, stories, and memories that celebrate our rich heritage and diverse culture. From ancient relics to modern masterpieces, we showcase the beauty and complexity of our shared history. Step inside and embark on a journey through time and tradition. Welcome to a place where the past comes alive and the present is illuminated.",
+
+    "contacts": {},
+    "gallery": []
+  },
+  {
+    "scene": "cropsci",
+    "name": "Department of Crop Science",
+    "access": "account",
+    "acronym": "cropsci",
+    "type": "school_facilities",
+    "tags": ["cafenr", "school"],
+    "image": "/assets/Building Module/Background/crop science.webp",
+    "desc": "Welcome to the Department of Crop Science at the University. Our state-of-the-art facilities and passionate community of scholars are dedicated to exploring the wonders of life. From molecular biology to ecology, we're committed to advancing our understanding of the natural world and addressing global challenges. Join us on a journey of discovery and exploration. Welcome to the heart of scientific inquiry.",
 
     "gallery": []
   }
