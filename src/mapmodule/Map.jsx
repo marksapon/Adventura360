@@ -227,24 +227,16 @@ const MapModule = ({
       });
     });
 
-    // viewerInstance.addHandler("zoom", function (event) {
-    //   // Get the current zoom level
-    //   const currentZoomLevel = viewerInstance.viewport.getZoom();
+    viewerInstance.addHandler("zoom", function (event) {
+      // Get the current zoom level
+      const currentZoomLevel = viewerInstance.viewport.getZoom();
 
-    //   // Update the nameState property of each overlay based on the current zoom level
-    //   setOverlays((prevOverlays) => {
-    //     const newOverlays = JSON.parse(JSON.stringify(prevOverlays)); // Deep copy the overlays
-    //     for (const overlayType in newOverlays) {
-    //       newOverlays[overlayType] = newOverlays[overlayType].map(
-    //         (overlay) => ({
-    //           ...overlay,
-    //           nameState: currentZoomLevel >= 6 ? "show" : "hide",
-    //         }),
-    //       );
-    //     }
-    //     return newOverlays;
-    //   });
-    // });
+      if (currentZoomLevel >= zoomLevel) {
+        setPoiNameStates(true);
+      } else {
+        setPoiNameStates(false);
+      }
+    });
 
     // When OSD is panned
     viewerInstance.addHandler("pan", function (event) {
@@ -288,6 +280,42 @@ const MapModule = ({
       }
     }
   }, [current_overlays, osdLoaded]);
+
+  function removeOverlaysName() {
+    Object.keys(overlays).map((type) => {
+      overlays[type].map((overlay) => {
+        const div = document.getElementById(overlay.id + "name");
+        viewer.removeOverlay(div);
+      });
+    });
+  }
+
+  useEffect(() => {
+    if (osdLoaded) {
+      if (poiNameStates) {
+        removeOverlaysName();
+
+        current_overlays.map((type) => {
+          overlays[type].map((overlay) => {
+            const div = document.getElementById(overlay.id + "name");
+            viewer.addOverlay({
+              element: div,
+              location: new OpenSeadragon.Point(overlay.x, overlay.y),
+              placement: OpenSeadragon.Placement.TOP,
+              rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
+            });
+          });
+        });
+      } else {
+        Object.keys(overlays).map((type) => {
+          overlays[type].map((overlay) => {
+            const div = document.getElementById(overlay.id + "name");
+            viewer.removeOverlay(div);
+          });
+        });
+      }
+    }
+  }, [poiNameStates, current_overlays]);
 
   // OSD Click Event Handler
   useEffect(() => {
@@ -788,6 +816,28 @@ const MapModule = ({
         }
         return divs;
       })}
+
+      {Object.keys(overlays).map((overlayType) => {
+        return overlays[overlayType].map((overlay) => {
+          const color = icons[overlay.type].color
+            ? icons[overlay.type].color
+            : "gray";
+          return (
+            <div
+              className="flex h-auto w-60 items-center justify-center rounded-md border-2 border-gray-300 bg-white text-center text-sm shadow-lg"
+              style={{
+                color: color,
+                fontWeight: "bold",
+              }}
+              key={overlay.id + "name"}
+              id={overlay.id + "name"}
+            >
+              {overlay.name}
+            </div>
+          );
+        });
+      })}
+
       {/* POI Overlays */}
 
       {/* Current Location CSS */}
