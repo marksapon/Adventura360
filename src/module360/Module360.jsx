@@ -378,44 +378,56 @@ function Module360({
 
   // Function that performs action based on type of Hotspot
   function action(type, target, index) {
-    console.log("Action");
-    console.log("Access Type:", access);
+    // console.log("Action");
+    // console.log("Access Type:", access);
 
     if (type === "move") {
-      console.log(">Moving to another node");
+      // console.log(">Moving to another node");
       if (access === "private") {
-        console.log("Moving to Internal Node");
+        // console.log("Moving to Internal Node");
+
         changeScene(curr_Internal, target); // Change Scene inside when access is private
       } else {
         changeScene(nodesDB, target); // Default Change Scene
       }
     } else if (type === "bldg") {
-      console.log(">Moving to building"); // Move to Building
-      setBackButton(true); // Set Back Button to True
-      setIsOutside(true); //
+      // console.log(">Moving to building"); // Move to Building
+
+      setBackButton(true);
+
+      setIsOutside(true);
+
       changeScene(buildingsDB, target); // Change Scene
     } else if (type === "info") {
-      console.log("Building Target: ", target);
+      // console.log("Building Target: ", target);
+
       openModal(target, "360");
     } else if (type === "popup") {
-      console.log("Display Extra's Image");
+      // console.log("Display Extra's Image");
+
       setExtrasState(index);
     } else if (type === "inside") {
-      console.log("Inside Building");
+      // console.log("Inside Building");
+
       internalDB.map((internal) => {
-        console.log("Internal:", internal);
+        // console.log("Internal:", internal);
+
         if (internal.hasOwnProperty(target)) {
-          console.log("Moving to Internal Node");
+          // console.log("Moving to Internal Node");
+
           setInsideBuilding(target);
+
           restructureInternalNodes(internal[target], target);
-          console.log("Internal Extras:", internal[`${target}_extras`]);
+
+          // console.log("Internal Extras:", internal[`${target}_extras`]);
+
           if (internal[`${target}_extras`]) {
             setCurr_InternalExtras(internal[`${target}_extras`]);
           }
         }
       });
     } else {
-      console.log("Undefined Type");
+      // console.log("Undefined Type");
     }
   }
 
@@ -441,14 +453,16 @@ function Module360({
 
   // Function that changes scene based on the hotspot target
   function changeScene(type, target) {
-    console.log("Changing Scene");
-    console.log("Type:", type, "Target:", target);
+    // console.log("Changing Scene");
+    // console.log("Type:", type, "Target:", target);
+
     if (access !== "private" && isOutside === false) {
-      console.log("Setting Previous Scene:", isOutside);
+      // console.log("Setting Previous Scene:", isOutside);
       setPrevious_Scene(select_Scene);
     }
-    console.log("Previous Scene:", previous_Scene);
-    console.log("Changing Scene");
+
+    // console.log("Previous Scene:", previous_Scene);
+
     for (const data of type) {
       if (data.scene === target) {
         console.log("Scene Match");
@@ -461,7 +475,7 @@ function Module360({
 
   // Function to generate Extras
   function generateExtras() {
-    console.log("Generating Extras");
+    // console.log("Generating Extras");
 
     const temp_extras = [];
 
@@ -503,7 +517,7 @@ function Module360({
   }
 
   function setExtrasState(index) {
-    console.log("Setting Extras State");
+    // console.log("Setting Extras State");
     const newExtras = curr_Extras.map((extras) => {
       if (extras.id === index) {
         return {
@@ -523,6 +537,7 @@ function Module360({
 
   // Trigger Building Modal Function
   function openModal(target, mode) {
+    // console.log("Opening Modal", target);
     setTargetScene(target);
     setMode(mode);
     setBldgModalState(true);
@@ -604,7 +619,7 @@ function Module360({
                   {hotspot.type === "popup" &&
                     curr_Extras.map((extras, index2) => {
                       if (extras.state === true && extras.id === index) {
-                        console.log("Extras:", extras.image);
+                        // console.log("Extras:", extras.image);
                         return (
                           <div
                             className="absolute flex h-fit w-40 items-center justify-center rounded-md bg-white md:w-72"
@@ -690,13 +705,13 @@ function Module360({
             <button
               type="button"
               onClick={() => {
-                console.log("Going Back");
+                // console.log("Going Back");
                 if (isInside) {
                   setIsInside(false);
                   setAccess("public");
                   changeScene(buildingsDB, insideBuilding);
                 } else {
-                  console.log("Previous Scene:", previous_Scene);
+                  // console.log("Previous Scene:", previous_Scene);
                   setIsOutside(false);
                   setSelect_Scene(previous_Scene);
                   setBackButton(false);

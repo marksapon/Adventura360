@@ -98,7 +98,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
 
   // Function to change Category Value and Change Dropdown State
   const handleSortChange = (key) => {
-    console.log("Sort: ", key);
+    // console.log("Sort: ", key);
     setSort(key); // Set Sort State
     setIsOpen(true); // Set Dropdown State
   };
@@ -169,7 +169,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
       const contents = originalSuggestions[currentKey];
 
       const newFilteredContents = contents.filter((content) => {
-        console.log("Content: ", content);
+        // console.log("Content: ", content);
         const matchesSearchTerm =
           content.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
           (content.acronym &&
@@ -400,7 +400,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                               className={`flex flex-col overflow-hidden rounded-lg border-2 px-1 py-1 shadow-lg ${view === "list" ? "h-fit" : "h-auto"} relative border ${clicked ? "bg-slate-100" : "hover:bg-slate-50"}`}
                               onClick={() => {
                                 // Log the item when clicked
-                                console.log("Clicked Item:", item);
+                                // console.log("Clicked Item:", item);
                                 openBldgModal(item.id, "search");
                               }}
                             >

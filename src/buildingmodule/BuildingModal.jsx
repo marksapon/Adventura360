@@ -82,7 +82,6 @@ const BuildingModal = ({
     let temp = false;
     for (const info of internalDB) {
       if (info.hasOwnProperty(scene)) {
-        console.log("Scene Found");
         temp = true;
       }
     }
@@ -90,7 +89,6 @@ const BuildingModal = ({
   }
 
   function setTargetInfo(scene) {
-    // console.log("Setting Current Information");
     let temp_info;
     for (const info of infos) {
       if (info.scene === scene) {
@@ -98,7 +96,6 @@ const BuildingModal = ({
       }
     }
     return temp_info;
-    // console.log("Target Not Found");
   }
 
   function resetActiveButton(target) {
@@ -131,9 +128,7 @@ const BuildingModal = ({
   }, [activeButton]);
 
   // Return Null if it is not visible
-  if (!visible || !current_info) return null;
-
-  console.log("Current Info:", current_info);
+  if (!visible) return null;
 
   return (
     <div
@@ -392,7 +387,7 @@ const BuildingModal = ({
               )}
 
               {/* Share */}
-              {current_info && mode === "360" && (
+              {mode === "360" && (
                 <div className="flex h-20 w-auto flex-col items-center justify-start">
                   <button
                     className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${shareModal ? "bg-green-600" : "bg-white"}`}
@@ -445,15 +440,14 @@ const BuildingModal = ({
             </div>
 
             {/* Gallery */}
-            {current_info && current_info.gallery && (
-              <div className="h-auto w-full sm:h-auto">
-                {current_info ? (
-                  <BuildingGallery imageSet={current_info.gallery} />
-                ) : (
-                  <BuildingGallery />
-                )}
-              </div>
-            )}
+
+            <div className="h-auto w-full sm:h-auto">
+              {current_info ? (
+                <BuildingGallery imageSet={current_info.gallery} />
+              ) : (
+                <BuildingGallery />
+              )}
+            </div>
 
             {/* Gallery */}
 
@@ -656,7 +650,6 @@ const BuildingModal = ({
                             key === "additional" &&
                             Object.keys(current_info.contacts[key]).map(
                               (subKey, subIndex) => {
-                                console.log(subKey);
                                 return (
                                   <button
                                     className="flex w-full flex-row items-center justify-start gap-x-4 "

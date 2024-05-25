@@ -158,7 +158,7 @@ const MapModule = ({
   const [filterClicked, setFilterClicked] = useState(true); // Filter Button State
 
   function removeOverlays() {
-    console.log("Remove Overlays");
+    // console.log("Remove Overlays");
 
     Object.keys(overlays).map((type) => {
       overlays[type].map((overlay) => {
@@ -256,7 +256,7 @@ const MapModule = ({
   }, []);
 
   useEffect(() => {
-    console.log("Overlay Changed");
+    // console.log("Overlay Changed");
 
     if (osdLoaded) {
       if (current_overlays.length === 0) {
@@ -264,7 +264,7 @@ const MapModule = ({
       } else if (current_overlays.length > 0) {
         removeOverlays();
 
-        console.log("Adding Overlay");
+        // console.log("Adding Overlay");
         current_overlays.map((type) => {
           overlays[type].map((overlay) => {
             const div = document.getElementById(overlay.id);
@@ -283,12 +283,12 @@ const MapModule = ({
 
   // OSD Click Event Handler
   useEffect(() => {
-    console.log("Event Handler");
+    // console.log("Event Handler");
     currentOverlaysRef.current = current_overlays;
     // When OSD Canvas is clicked
     if (osdLoaded) {
       viewer.addHandler("canvas-click", function (event) {
-        console.log("CLICK EVENT");
+        // console.log("CLICK EVENT");
 
         const viewportPoint = viewer.viewport.pointFromPixel(event.position);
 
@@ -318,7 +318,7 @@ const MapModule = ({
                   if (!found) {
                     extrasDB.find((extras) => {
                       if (extras.scene === overlay.scene) {
-                        console.log("Found Extras");
+                        // console.log("Found Extras");
 
                         const extraState = !overlay.state;
 
@@ -326,13 +326,13 @@ const MapModule = ({
 
                         setSelectedExtra(extras);
 
-                        console.log("Overlay Extra State:", overlay.state);
+                        // console.log("Overlay Extra State:", overlay.state);
                       }
                     });
                   }
                 }
               } else {
-                console.log("No Overlay Found");
+                // console.log("No Overlay Found");
               }
             }
           });
@@ -587,7 +587,7 @@ const MapModule = ({
     }
 
     const generatedPath = astar(graph, start, end, travelType);
-    console.log("Generated Path: ", generatedPath);
+    // console.log("Generated Path: ", generatedPath);
 
     return generatedPath; // Set the generated path to the state
   }
@@ -642,12 +642,12 @@ const MapModule = ({
       rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
     });
 
-    console.log("Target Location:", target_location);
+    // console.log("Target Location:", target_location);
 
     Object.keys(overlays).forEach((key) => {
       overlays[key].map((overlay) => {
         if (overlay.scene === target_location.scene) {
-          console.log("Overlay Found");
+          // console.log("Overlay Found");
           const div = document.getElementById(overlay.id);
           if (
             currLoc.coords.x !== overlay.x &&
@@ -772,17 +772,6 @@ const MapModule = ({
                 </div>
               </div>
 
-              {/* {overlay.nameState === "show" && (
-                <div
-                  className="absolute -left-28 flex h-auto w-60 items-center justify-center rounded-md border-2 border-gray-300 bg-white text-sm shadow-lg"
-                  style={{
-                    color: color,
-                    fontWeight: "bold",
-                  }}
-                >
-                  {overlay.name}
-                </div>
-              )} */}
             </button>,
           );
         }
