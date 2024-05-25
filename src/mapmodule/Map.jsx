@@ -52,9 +52,9 @@ const MapModule = ({
   // Max Zoom Level based on Device
   const maxZoom = () => {
     if (checkOrientation() === "landscape") {
-      return 7;
+      return 6;
     } else {
-      return isMobile() ? 7 : 7; // 28 for mobile
+      return isMobile() ? 7 : 6; // 28 for mobile
     }
   };
   const [zoomLevel, setZoomLevel] = useState(maxZoom());
@@ -448,6 +448,7 @@ const MapModule = ({
         size[key] = size[key] / scale;
       }
     }
+    console.log("Size: ", scale);
     return size;
   }
 
@@ -614,13 +615,14 @@ const MapModule = ({
       return new Point(downscalePoint.x, downscalePoint.y);
     });
 
-    const strokeWidth = isMobile() ? 10 : 30;
+    const strokeWidth = isMobile() ? 10 : 15;
 
     const path = new Path({
       segments: pathData,
-      strokeColor: "#3c096c", //70e000 for green
+      strokeColor: "#dc2626", //70e000 for green
       strokeWidth: strokeWidth,
       strokeCap: "round",
+      dashArray: [1, 30], // This will create a dashed line with dashes 10 units long and gaps 12 units long
     });
 
     viewer.addOverlay({
@@ -771,7 +773,6 @@ const MapModule = ({
                   </div>
                 </div>
               </div>
-
             </button>,
           );
         }
@@ -785,7 +786,6 @@ const MapModule = ({
           src="/assets/Login Module/adventura logo 2.webp"
           alt="Adventura 360 logo"
           className="h-15 w-10"
-          style={{ filter: "drop-shadow(0px 0px 10px rgba(0,0,0,0.75))" }}
         />
       </div>
 
@@ -866,22 +866,28 @@ const MapModule = ({
 
             {/* Filter Button */}
             <div className="group">
-              <div className="absolute right-0 top-0 m-2 flex flex-col items-center sm:flex-row-reverse lg:flex-col">
-                <button
-                  className={`${filterClicked ? "bg-green-500" : "bg-white"} pointer-events-auto mb-1 ml-1 flex items-center justify-center rounded-full p-2 drop-shadow-xl`}
-                  onClick={() => {
-                    if (filterClicked) {
-                      removeOverlays();
-                      setCurrentOverlays([]);
-                    }
+              <div className="absolute right-0 top-0 m-2 flex flex-col items-center justify-center sm:flex-row-reverse lg:flex-col">
+                <div className="relative flex items-center justify-center ">
+                  <div className=" absolute right-full top-1/2 mr-2 w-32 -translate-y-1/2 transform rounded-lg bg-black px-3 py-2 text-center text-xs text-white opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
+                    Filter Overlays
+                  </div>
+                  <button
+                    className={`${filterClicked ? "bg-green-500" : "bg-white"} pointer-events-auto mb-1 ml-1 flex items-center justify-center rounded-full p-2 drop-shadow-xl`}
+                    onClick={() => {
+                      if (filterClicked) {
+                        removeOverlays();
+                        setCurrentOverlays([]);
+                      }
 
-                    setFilterClicked(!filterClicked);
-                  }}
-                >
-                  <BsFilterRight
-                    className={`${filterClicked ? "text-white" : "text-gray-500 group-hover:text-green-600"} md:h-9/12 h-6 w-6 md:w-full lg:h-10 lg:w-10 `}
-                  />
-                </button>
+                      setFilterClicked(!filterClicked);
+                    }}
+                  >
+                    <BsFilterRight
+                      className={`${filterClicked ? "text-white" : "text-gray-500 group-hover:text-green-600"} md:h-9/12 h-6 w-6 md:w-full lg:h-10 lg:w-10 `}
+                    />
+                  </button>
+                </div>
+
                 {filterClicked ? (
                   <FilterList
                     setOverlays={setCurrentOverlays}
@@ -897,7 +903,10 @@ const MapModule = ({
             <div className="absolute bottom-0 right-0 p-2">
               <div className="flex flex-col-reverse space-y-2 space-y-reverse">
                 {/* Current Location Button */}
-                <div className="group">
+                <div className="group relative inline-block">
+                  <div className="absolute right-full top-1/2 mr-2 w-32 -translate-y-1/2 transform rounded-lg bg-black px-3 py-2 text-center text-xs text-white opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
+                    Current Location
+                  </div>
                   <button
                     className="pointer-events-auto rounded-full bg-white p-2 text-white drop-shadow-xl"
                     onClick={() => {
@@ -911,12 +920,15 @@ const MapModule = ({
                     ) : (
                       <ImLocation className="md:h-9/12 h-6 w-6 text-gray-500 group-hover:text-green-600 md:w-full lg:h-10 lg:w-10" />
                     )}
-                  </button>{" "}
+                  </button>
                 </div>
                 {/* Current Location Button */}
 
                 {/* Pathfinding Button */}
-                <div className="group">
+                <div className="group relative inline-block">
+                  <div className="absolute right-full top-1/2 mr-2 w-32 -translate-y-1/2 transform rounded-lg bg-black px-3 py-2 text-center text-xs text-white opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
+                    Directions
+                  </div>
                   <button
                     className="pointer-events-auto rounded-full bg-white p-2 text-white drop-shadow-xl"
                     onClick={() => {
