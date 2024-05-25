@@ -6,11 +6,11 @@ const Bugmodal = ({ visible, onClose }) => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [isOpen, setIsOpen] = useState(false);
-  const [showThankYouModal, setShowThankYouModal] = React.useState(false);
+
+  const [showThankYouModal, setShowThankYouModal] = useState(true);
 
   const handleCloseAndReset = () => {
     onClose();
-    resetState();
   };
 
   const selectItem = (item) => {
@@ -88,7 +88,6 @@ const Bugmodal = ({ visible, onClose }) => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         } else {
-          handleCloseAndReset(); // Close the modal and reset the state
           setShowThankYouModal(true); // Show the "Thank You" modal
         }
       })
@@ -108,125 +107,134 @@ const Bugmodal = ({ visible, onClose }) => {
   if (!visible) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-25 px-2">
-      <div className="flex h-auto w-full items-center justify-center">
-        <div className="flex h-[520px] w-[300px] flex-col justify-center rounded-2xl border border-black bg-white px-4">
-          <div className="flex h-full flex-col items-end py-2">
-            <button
-              className="flex items-center justify-center"
-              onClick={() => {
-                onClose();
-              }}
-            >
-              <IoIosClose className="h-10 w-10" />
-            </button>
-            <div className="gap-2">
-              <h1 className="flex text-3xl font-bold text-green-600">
-                Feedback
-              </h1>
-              <p className="text-full text-1xl mt-3 flex font-sans">
-                Your feedback is crucial to us. Please share any thoughts or
-                concerns to help us improve. Thank you for being part of our
-                journey!
-              </p>
+    <>
+      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-25 px-2">
+        <div className="flex h-auto w-full items-center justify-center">
+          {/* Modal Content */}
+          {!showThankYouModal && (
+            <div className="flex h-[520px] w-[300px] flex-col justify-center rounded-2xl border border-black bg-white px-4">
+              <div className="flex h-full flex-col items-end py-2">
+                <button
+                  className="flex items-center justify-center"
+                  onClick={() => {
+                    onClose();
+                  }}
+                >
+                  <IoIosClose className="h-10 w-10" />
+                </button>
+                <div className="gap-2">
+                  <h1 className="flex text-3xl font-bold text-green-600">
+                    Feedback
+                  </h1>
+                  <p className="text-full text-1xl mt-3 flex font-sans">
+                    Your feedback is crucial to us. Please share any thoughts or
+                    concerns to help us improve. Thank you for being part of our
+                    journey!
+                  </p>
+                </div>
+              </div>
+              <div className="flex h-full w-full flex-col justify-between">
+                <div className="mb-2 h-full w-full">
+                  <div
+                    className="dropdown-header h-12 w-full cursor-pointer items-center justify-center rounded-lg border border-green-600 p-2"
+                    onClick={toggleDropdown}
+                  >
+                    {selectedItem ? selectedItem : "Category"}
+                    {isOpen && (
+                      <ul className="relative z-auto mt-6 w-full max-w-[508px] flex-row rounded-lg border border-green-600 bg-white shadow-lg">
+                        <li
+                          className="cursor-pointer border-b p-2 text-center hover:bg-gray-100"
+                          onClick={() => selectItem("Bug")}
+                        >
+                          Bug Report
+                        </li>
+                        <li
+                          className="cursor-pointer border-b p-2 text-center hover:bg-gray-100"
+                          onClick={() => selectItem("Suggestions")}
+                        >
+                          Suggestions
+                        </li>
+                        <li
+                          className="cursor-pointer border-b p-2 text-center hover:bg-gray-100"
+                          onClick={() => selectItem("Content Request")}
+                        >
+                          Content Request
+                        </li>
+                        <li
+                          className="cursor-pointer border-b p-2 text-center hover:bg-gray-100"
+                          onClick={() => selectItem("Feature Request")}
+                        >
+                          Feature Request
+                        </li>
+                        <li
+                          className="cursor-pointer border-b p-2 text-center hover:bg-gray-100"
+                          onClick={() => selectItem("Others")}
+                        >
+                          Others
+                        </li>
+                      </ul>
+                    )}
+                  </div>
+
+                  <div className="flex w-full">
+                    <input
+                      type="email"
+                      className="mt-2 h-12 w-full rounded-lg border border-green-600 p-2"
+                      placeholder="Enter your email here..."
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                  </div>
+
+                  <div className="flex w-full">
+                    <textarea
+                      id="message"
+                      className="mt-2 h-36 w-full resize-none rounded-lg border border-green-600 bg-white p-2 text-sm text-gray-900"
+                      placeholder="Write your message here..."
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                    />
+                  </div>
+                </div>
+
+                <div className="flex w-auto items-center justify-center">
+                  <button
+                    className=" mb-4 h-auto w-auto rounded-full border border-gray-400 bg-white px-4 text-3xl text-green-600"
+                    onClick={handleSubmit}
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="flex h-full w-full flex-col justify-between">
-            <div className="mb-2 h-full w-full">
-              <div
-                className="dropdown-header h-12 w-full cursor-pointer items-center justify-center rounded-lg border border-green-600 p-2"
-                onClick={toggleDropdown}
-              >
-                {selectedItem ? selectedItem : "Category"}
-                {isOpen && (
-                  <ul className="relative z-auto mt-6 w-full max-w-[508px] flex-row rounded-lg border border-green-600 bg-white shadow-lg">
-                    <li
-                      className="cursor-pointer border-b p-2 text-center hover:bg-gray-100"
-                      onClick={() => selectItem("Bug")}
-                    >
-                      Bug Report
-                    </li>
-                    <li
-                      className="cursor-pointer border-b p-2 text-center hover:bg-gray-100"
-                      onClick={() => selectItem("Suggestions")}
-                    >
-                      Suggestions
-                    </li>
-                    <li
-                      className="cursor-pointer border-b p-2 text-center hover:bg-gray-100"
-                      onClick={() => selectItem("Content Request")}
-                    >
-                      Content Request
-                    </li>
-                    <li
-                      className="cursor-pointer border-b p-2 text-center hover:bg-gray-100"
-                      onClick={() => selectItem("Feature Request")}
-                    >
-                      Feature Request
-                    </li>
-                    <li
-                      className="cursor-pointer border-b p-2 text-center hover:bg-gray-100"
-                      onClick={() => selectItem("Others")}
-                    >
-                      Others
-                    </li>
-                  </ul>
-                )}
-              </div>
-
-              <div className="flex w-full">
-                <input
-                  type="email"
-                  className="mt-2 h-12 w-full rounded-lg border border-green-600 p-2"
-                  placeholder="Enter your email here..."
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
-
-              <div className="flex w-full">
-                <textarea
-                  id="message"
-                  className="mt-2 h-36 w-full resize-none rounded-lg border border-green-600 bg-white p-2 text-sm text-gray-900"
-                  placeholder="Write your message here..."
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                />
-              </div>
-            </div>
-
-            <div className="flex w-auto items-center justify-center">
+          )}
+        </div>
+        {showThankYouModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-25">
+            <div className="relative flex h-auto w-1/2 flex-col rounded-lg border border-green-600 bg-white p-2 shadow-lg">
               <button
-                className=" mb-4 h-auto w-auto rounded-full border border-gray-400 bg-white px-4 text-3xl text-green-600"
-                onClick={handleSubmit}
-              >
-                Submit
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      {showThankYouModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-25">
-          <div className="flex h-[320px] w-[360px] flex-col rounded-lg border border-green-600 bg-white shadow-lg">
-            <button className="flex items-end justify-end p-2">
-              <IoIosClose
-                className="h-12 w-12"
+                className="absolute right-0 top-0 h-12 w-12"
                 onClick={() => setShowThankYouModal(false)}
-              />
-            </button>
-            <div className="flex items-center justify-center">
-              <h1 className="text-4xl font-bold text-green-600">Thank You!</h1>
-            </div>
-            <div className="mt-4 flex items-center justify-center">
-              <p className="text-lg text-gray-700">
-                Your feedback has been submitted successfully.
-              </p>
+              >
+                <IoIosClose className="h-full w-full" />
+              </button>
+
+              <div className="flex flex-col items-center justify-center">
+                <h1 className="text-4xl font-bold text-green-600">
+                  Thank You!
+                </h1>
+
+                <div className="mb-4 mt-4 flex items-center justify-center">
+                  <p className="text-center text-lg text-gray-700">
+                    Your feedback has been submitted successfully.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+    </>
   );
 };
 

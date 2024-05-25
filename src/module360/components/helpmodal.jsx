@@ -49,6 +49,7 @@ const HelpModal = ({ visible, onClose }) => {
     <div
       id="container"
       className="fixed inset-0 z-40 flex items-center justify-center bg-black bg-opacity-25"
+      style={{ cursor: "default" }}
     >
       {/* For small Devices */}
       <div className="flex h-full w-full items-center justify-center p-2">

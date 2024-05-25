@@ -545,15 +545,7 @@ function Module360({
 
   /* Module360 Component */
   return (
-    <div
-      className="relative flex h-dvh w-dvw items-center justify-center"
-      style={{
-        paddingLeft: "env(safe-area-inset-left)",
-        paddingRight: "env(safe-area-inset-right)",
-        paddingTop: "env(safe-area-inset-top)",
-        paddingBottom: "env(safe-area-inset-bottom)",
-      }}
-    >
+    <div className="relative flex h-dvh w-screen items-center justify-center">
       {/* View360 Component */}
       <View360
         autoplay={autoplay ? { delay: 1000, speed: 0.5 } : false}
@@ -564,6 +556,7 @@ function Module360({
         ref={viewerRef}
         projection={projection}
         style={{
+          height: "100%",
           width: "100%",
           overflow: "hidden",
         }}
@@ -677,6 +670,7 @@ function Module360({
         <div className="flex h-full w-full">
           <Navigationbar
             toggleAutoplay={() => setAutoplay(!autoplay)}
+            autoplay={autoplay}
             location={select_Scene}
             buildingsDB={buildingsDB}
             nodesDB={nodesDB}

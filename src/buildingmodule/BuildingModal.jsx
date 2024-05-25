@@ -133,7 +133,7 @@ const BuildingModal = ({
   return (
     <div
       id="container"
-      className={`pointer-events-auto fixed inset-0 z-40 flex ${mode === "search" ? "" : "bg-black bg-opacity-25"}`}
+      className={`pointer-events-auto fixed inset-0 z-40 flex ${mode === "search" ? "" : "bg-black bg-opacity-25"} h-full w-full`}
     >
       {/* Screen Container */}
       <div className="z-50 flex h-full w-full items-start pr-2">
@@ -452,7 +452,7 @@ const BuildingModal = ({
             {/* Gallery */}
 
             {/* CONTENT SECTION */}
-            <div ref={contentRef}>
+            <div ref={contentRef} className="pb-20">
               {/* History */}
               {current_info && activeButton === "history" && (
                 <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">

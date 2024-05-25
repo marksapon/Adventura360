@@ -15,6 +15,7 @@ import { VscFeedback } from "react-icons/vsc"; // Feedback Button
 import { GrMap } from "react-icons/gr"; // Map Button
 import { IoMdSearch } from "react-icons/io"; // Search Button
 import { PiPlayCircleLight } from "react-icons/pi"; // Autoplay Button
+import { PiPlayCircleFill } from "react-icons/pi";
 import { TbMaximize, TbMaximizeOff } from "react-icons/tb"; // Fullscreen On/Off
 import { IoIosHelpCircleOutline } from "react-icons/io"; // Help Button
 import { Tb360View } from "react-icons/tb"; // 360 Icon
@@ -23,6 +24,7 @@ import { TbLinkOff } from "react-icons/tb"; // Share Link Icon OFF
 
 const Navigationbar = ({
   toggleAutoplay,
+  autoplay,
   location,
 
   infosDB,
@@ -89,14 +91,14 @@ const Navigationbar = ({
   }, []);
 
   function getHelpState() {
-    console.log("Help Function");
+    // console.log("Help Function");
     const help = sessionStorage.getItem("helpState");
-    console.log("Help State: ", help);
+    // console.log("Help State: ", help);
     if (help === null) {
-      console.log("Displaying Help");
+      // console.log("Displaying Help");
       return true;
     } else {
-      console.log("Not Displaying Help");
+      // console.log("Not Displaying Help");
       return false;
     }
   }
@@ -293,7 +295,11 @@ const Navigationbar = ({
                     </div>
                   )}
                   <span className="sr-only">Autoplay</span>
-                  <PiPlayCircleLight className="h-12 w-12 text-green-600 transition-all duration-200 hover:h-14 hover:w-14" />
+                  {autoplay ? (
+                    <PiPlayCircleFill className="h-12 w-12 text-green-600 transition-all duration-200 hover:h-14 hover:w-14" />
+                  ) : (
+                    <PiPlayCircleLight className="h-12 w-12 text-green-600 transition-all duration-200 hover:h-14 hover:w-14" />
+                  )}
                 </button>
               </div>
 
@@ -463,7 +469,11 @@ const Navigationbar = ({
                 className="inline-flex h-10 w-10 items-center justify-center"
               >
                 <span className="sr-only">Autoplay</span>
-                <PiPlayCircleLight className="h-8 w-8 text-green-600 transition-all duration-200 hover:h-14 hover:w-14" />
+                {autoplay ? (
+                  <PiPlayCircleFill className="h-8 w-8 text-green-600 transition-all duration-200 hover:h-14 hover:w-14" />
+                ) : (
+                  <PiPlayCircleLight className="h-8 w-8 text-green-600 transition-all duration-200 hover:h-14 hover:w-14" />
+                )}
               </button>
             </div>
 

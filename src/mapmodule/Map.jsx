@@ -8,6 +8,7 @@ import Paper, { Point, Path, Size } from "paper";
 /* Map Module Components */
 import FilterList from "./components/FilterList"; // Overlay Filter Component
 import PathfindingModal from "./components/PathfindingModal"; // Pathfinding Modal Component
+import MapLegend from "./components/MapLegend";
 
 /* OSD CSS */
 import { BsFilterRight } from "react-icons/bs"; // Filter Button
@@ -15,6 +16,9 @@ import { GiPathDistance } from "react-icons/gi"; // Path finding Button
 import { ImLocation } from "react-icons/im"; // Current Location Off Button
 import { ImLocation2 } from "react-icons/im"; // Current Location On Button
 import { IoIosClose } from "react-icons/io"; // Close Button
+
+import { RiMapPinRangeLine } from "react-icons/ri";
+import { RiMapPinRangeFill } from "react-icons/ri";
 
 /* Overlay Icons */
 import { FaCircle } from "react-icons/fa6"; // Undefined Icon
@@ -48,13 +52,17 @@ const MapModule = ({
   const [selected_extra, setSelectedExtra] = useState(); // Selected Extra State
   const [extraCheck, setExtraCheck] = useState(false); // Extra Check State
 
+  const [mapLegendState, setMapLegendState] = useState(
+    isMobile() ? false : true,
+  );
+
   /* Zoom Level */
   // Max Zoom Level based on Device
   const maxZoom = () => {
     if (checkOrientation() === "landscape") {
-      return 6;
+      return 4;
     } else {
-      return isMobile() ? 7 : 6; // 28 for mobile
+      return isMobile() ? 7 : 4; // 28 for mobile
     }
   };
   const [zoomLevel, setZoomLevel] = useState(maxZoom());
@@ -615,14 +623,16 @@ const MapModule = ({
       return new Point(downscalePoint.x, downscalePoint.y);
     });
 
-    const strokeWidth = isMobile() ? 10 : 15;
+    const strokeWidth = isMobile() ? 5 : 15;
+
+    const space = isMobile() ? [1, 15] : [1, 30];
 
     const path = new Path({
       segments: pathData,
       strokeColor: "#dc2626", //70e000 for green
       strokeWidth: strokeWidth,
       strokeCap: "round",
-      dashArray: [1, 30], // This will create a dashed line with dashes 10 units long and gaps 12 units long
+      dashArray: space, // This will create a dashed line with dashes 10 units long and gaps 12 units long
     });
 
     viewer.addOverlay({
@@ -693,7 +703,7 @@ const MapModule = ({
         position: "absolute",
         zIndex: 2,
         backgroundColor: "#f5f5f5",
-        width: "100vw",
+        width: "100%",
         height: "100vh",
       }}
     >
@@ -820,7 +830,7 @@ const MapModule = ({
             {/* Extras Display Modal */}
             {selected_extra && extraCheck ? (
               <>
-                <div className="absolute -top-20 z-20 h-screen w-screen bg-black bg-opacity-70"></div>
+                <div className="absolute -top-20 z-20 h-screen w-screen bg-black bg-opacity-70" />
                 <div className="pointer-events-none relative z-20 flex h-full items-center justify-center p-4">
                   <div
                     style={{ fontSize: "12px" }}
@@ -863,6 +873,10 @@ const MapModule = ({
                 </div>
               </>
             ) : null}
+
+            {mapLegendState && (
+              <MapLegend setMapLegendState={setMapLegendState} />
+            )}
 
             {/* Filter Button */}
             <div className="group">
@@ -924,6 +938,25 @@ const MapModule = ({
                 </div>
                 {/* Current Location Button */}
 
+                {/* Map Legend Button */}
+                <div className="group relative inline-block">
+                  <div className="absolute right-full top-1/2 mr-2 w-32 -translate-y-1/2 transform rounded-lg bg-black px-3 py-2 text-center text-xs text-white opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
+                    Toggle Map Legend
+                  </div>
+                  <button
+                    className="pointer-events-auto rounded-full bg-white p-2 text-white drop-shadow-xl"
+                    onClick={() => {
+                      setMapLegendState(!mapLegendState);
+                    }}
+                  >
+                    {mapLegendState ? (
+                      <RiMapPinRangeFill className="md:h-9/12 h-6 w-6 p-1 text-green-500 md:w-full lg:h-10 lg:w-10" />
+                    ) : (
+                      <RiMapPinRangeLine className="md:h-9/12 h-6 w-6 p-1 text-gray-500 group-hover:text-green-600 md:w-full lg:h-10 lg:w-10" />
+                    )}
+                  </button>
+                </div>
+
                 {/* Pathfinding Button */}
                 <div className="group relative inline-block">
                   <div className="absolute right-full top-1/2 mr-2 w-32 -translate-y-1/2 transform rounded-lg bg-black px-3 py-2 text-center text-xs text-white opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
@@ -957,26 +990,13 @@ const MapModule = ({
               scene={targetScene}
             />
           ) : null}
+
           {/* Content Space */}
 
           {/* Footer Space */}
           <div className="py-10 md:hidden" />
         </div>
       )}
-      {/* Map Legend (Placeholder: Not responsive in mobile)*/}
-      {/* <div
-        style={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          height: "20%",
-          width: "15%",
-          paddingBottom: 78,
-          paddingLeft: 5,
-        }}
-      >
-        <img src="/assets/MapModule/map_legend.png" alt="Map Legend" />
-      </div> */}
     </div>
   );
 };
