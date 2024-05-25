@@ -401,7 +401,7 @@
   },
   {
     "scene": "washareaFrontCON",
-    "location": "Wash area near College of Nursing",
+    "location": "Wash area at the front of College of Nursing",
     "desc": "This is the wash area near College of Nursing",
     "coords": {
       "x": 0.476,
@@ -412,7 +412,7 @@
   },
   {
     "scene": "washareaBackCON",
-    "location": "Wash area near College of Nursing",
+    "location": "Wash area at the back of College of Nursing",
     "desc": "This is the wash area near College of Nursing",
     "coords": {
       "x": 0.518,

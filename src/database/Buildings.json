@@ -145,27 +145,6 @@
     ]
   },
   {
-    "scene": "newcemds2",
-    "location": "College of Economics, Management and Development Studies New Building",
-    "image": "/assets/Database Images/unrestricted nodes/34.webp",
-    "back": ["node31", "node32", "node33"],
-    "coords": {
-      "x": 0.605,
-      "y": 0.994,
-      "type": "college_buildings"
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "info",
-        "class": "info",
-        "target": "newcemds2",
-        "yaw": 276.01,
-        "pitch": 3.19
-      }
-    ]
-  },
-  {
     "scene": "cafenr",
     "location": "College of Agriculture, Forestry, Environment and Natural Resources",
     "image": "/assets/Database Images/unrestricted nodes/283.webp",
@@ -703,26 +682,6 @@
     ]
   },
   {
-    "scene": "chapel",
-    "location": "University Chapel",
-    "image": "",
-    "back": [""],
-    "coords": {
-      "x": 0.24,
-      "y": 1.055,
-      "type": "venue"
-    },
-    "hotspot": [
-      {
-        "type": "info",
-        "class": "info",
-        "target": "chapel",
-        "yaw": 112.8,
-        "pitch": 12.34
-      }
-    ]
-  },
-  {
     "scene": "icon",
     "location": "International Convention Center",
     "image": "",
@@ -739,86 +698,6 @@
         "target": "icon",
         "yaw": 112.8,
         "pitch": 12.34
-      }
-    ]
-  },
-  {
-    "scene": "rolle",
-    "location": "Rolle Hall",
-    "image": "",
-    "back": [""],
-    "coords": {
-      "x": 0.442,
-      "y": 0.771,
-      "type": "venue"
-    },
-    "hotspot": [
-      {
-        "type": "info",
-        "class": "info",
-        "target": "rolle",
-        "yaw": "",
-        "pitch": ""
-      }
-    ]
-  },
-  {
-    "scene": "cvmbs",
-    "location": "College of Veterinary Medicine and Biomedical Sciences",
-    "image": "",
-    "back": [""],
-    "coords": {
-      "x": 0.458,
-      "y": 0.62,
-      "type": "college_buildings"
-    },
-    "hotspot": [
-      {
-        "type": "info",
-        "class": "info",
-        "target": "cvmbs",
-        "yaw": "",
-        "pitch": ""
-      }
-    ]
-  },
-  {
-    "scene": "cvmbs_hosp",
-    "location": "Veterinary Hospital",
-    "image": "",
-    "back": [""],
-    "coords": {
-      "x": 0.443,
-      "y": 0.582,
-      "type": "college_buildings"
-    },
-    "hotspot": [
-      {
-        "type": "info",
-        "class": "info",
-        "target": "cvmbs_hosp",
-        "yaw": "",
-        "pitch": ""
-      }
-    ]
-  },
-  {
-    "scene": "mat_lab",
-    "location": "Material Testing Laboratory",
-    "image": "",
-    "back": [""],
-    "coords": {
-      "x": 0.418,
-      "y": 0.931,
-      "type": "college_buildings"
-    },
-    "hotspot": [
-      {
-        "type": "info",
-        "class": "info",
-        "target": "mat_lab",
-        "yaw": "",
-        "pitch": ""
       }
     ]
   },
@@ -859,26 +738,6 @@
         "target": "hs",
         "yaw": 108.6,
         "pitch": 5.19
-      }
-    ]
-  },
-  {
-    "scene": "infirmary",
-    "location": "University Infirmary Building",
-    "image": "",
-    "back": [""],
-    "coords": {
-      "x": 0.289,
-      "y": 1.161,
-      "type": "school_facilities"
-    },
-    "hotspot": [
-      {
-        "type": "info",
-        "class": "info",
-        "target": "infirmary",
-        "yaw": 112.8,
-        "pitch": 12.34
       }
     ]
   },
