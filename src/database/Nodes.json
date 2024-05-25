@@ -2090,8 +2090,8 @@
     "scene": "node65",
     "image": "/assets/Database Images/unrestricted nodes/65.webp",
     "coords": {
-      "x": 0.336,
-      "y": 1.0
+      "x": 0.339,
+      "y": 1.013
     },
     "hotspot": [
       {
@@ -2114,13 +2114,6 @@
         "target": "node257",
         "yaw": 305.43,
         "pitch": -12.67
-      },
-      {
-        "type": "bldg",
-        "class": "bldg",
-        "target": "admin",
-        "yaw": 258.49,
-        "pitch": 2.55
       }
     ]
   },
@@ -7514,7 +7507,7 @@
     "scene": "node256",
     "image": "/assets/Database Images/unrestricted nodes/256.webp",
     "coords": {
-      "x": 0.355,
+      "x": 0.35,
       "y": 1.034
     },
     "hotspot": [
@@ -7569,6 +7562,13 @@
         "target": "node258",
         "yaw": 258.07,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "admin",
+        "yaw": 253.05,
+        "pitch": 2.27
       }
     ]
   },
@@ -8633,6 +8633,13 @@
         "pitch": -25.93
       },
       {
+        "id": 4,
+        "type": "move",
+        "target": "node364",
+        "yaw": 135.53,
+        "pitch": -25.93
+      },
+      {
         "type": "bldg",
         "class": "bldg",
         "target": "ced",
@@ -8680,7 +8687,7 @@
       {
         "id": 4,
         "type": "move",
-        "target": "",
+        "target": "node363",
         "yaw": 85.0,
         "pitch": -25.93
       },
@@ -10618,14 +10625,272 @@
         "id": 1,
         "type": "move",
         "target": "node102",
-        "yaw": 106.58,
+        "yaw": 281.24,
         "pitch": -20
       },
       {
         "id": 2,
         "type": "move",
+        "target": "node356",
+        "yaw": 195.78,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
         "target": "",
-        "yaw": 206.58,
+        "yaw": 19.38,
+        "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "attractions",
+        "target": "canteen",
+        "yaw": 106.59,
+        "pitch": 11.33
+      }
+    ]
+  },
+  {
+    "scene": "node356",
+    "image": "/assets/Database Images/unrestricted nodes/356.webp",
+    "coords": {
+      "x": 0.55,
+      "y": 0.997
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node355",
+        "yaw": 7.06,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node357",
+        "yaw": 185.93,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node358",
+        "yaw": 142.63,
+        "pitch": -25
+      }
+    ]
+  },
+  {
+    "scene": "node357",
+    "image": "/assets/Database Images/unrestricted nodes/357.webp",
+    "coords": {
+      "x": 0.55,
+      "y": 0.997
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node356",
+        "yaw": 359.53,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node359",
+        "yaw": 179.25,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node358",
+        "yaw": 89.81,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node358",
+    "image": "/assets/Database Images/unrestricted nodes/358.webp",
+    "coords": {
+      "x": 0.55,
+      "y": 0.997
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node357",
+        "yaw": 285.25,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node356",
+        "yaw": 335.62,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node359",
+        "yaw": 225.08,
+        "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "attractions",
+        "target": "chapel",
+        "yaw": 118.89,
+        "pitch": 16.79
+      }
+    ]
+  },
+  {
+    "scene": "node359",
+    "image": "/assets/Database Images/unrestricted nodes/359.webp",
+    "coords": {
+      "x": 0.55,
+      "y": 0.997
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node357",
+        "yaw": 324.73,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node360",
+        "yaw": 173.77,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node358",
+        "yaw": 7.23,
+        "pitch": -25.19
+      }
+    ]
+  },
+  {
+    "scene": "node360",
+    "image": "/assets/Database Images/unrestricted nodes/360.webp",
+    "coords": {
+      "x": 0.55,
+      "y": 0.997
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node359",
+        "yaw": 18.43,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node361",
+        "yaw": 202.67,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node361",
+    "image": "/assets/Database Images/unrestricted nodes/361.webp",
+    "coords": {
+      "x": 0.55,
+      "y": 0.997
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node360",
+        "yaw": 8.45,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node362",
+        "yaw": 190.8,
+        "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "ccj",
+        "yaw": 117.37,
+        "pitch": 7.09
+      }
+    ]
+  },
+  {
+    "scene": "node362",
+    "image": "/assets/Database Images/unrestricted nodes/362.webp",
+    "coords": {
+      "x": 0.55,
+      "y": 0.997
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node361",
+        "yaw": 65.68,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node363",
+    "image": "/assets/Database Images/unrestricted nodes/363.webp",
+    "coords": {
+      "x": 0.55,
+      "y": 0.997
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node292",
+        "yaw": 280.5,
+        "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "restroom",
+        "target": "restroomCED",
+        "yaw": 105.47,
+        "pitch": 3.86
+      }
+    ]
+  },
+  {
+    "scene": "node364",
+    "image": "/assets/Database Images/unrestricted nodes/364.webp",
+    "coords": {
+      "x": 0.55,
+      "y": 0.997
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node291",
+        "yaw": 293.67,
         "pitch": -20
       }
     ]

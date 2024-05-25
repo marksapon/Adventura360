@@ -6836,202 +6836,304 @@
     ]
   },
   {
-    "museum": [
+    "ccj": [
       {
-        "scene": "museum1",
-        "image": "/assets/Building Module/Internal Nodes/museum/1.webp",
+        "scene": "ccj2",
+        "image": "/assets/Building Module/Internal Nodes/ccj/2.webp",
         "hotspot": [
           {
             "type": "move",
-            "target": "museum2",
-            "yaw": 218.63,
+            "target": "ccj4",
+            "yaw": 197.14,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ccj5",
+            "yaw": 15.78,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ccj7",
+            "yaw": 128.94,
             "pitch": -20
           }
         ]
       },
       {
-        "scene": "museum2",
-        "image": "/assets/Building Module/Internal Nodes/museum/2.webp",
+        "scene": "ccj1",
+        "image": "/assets/Building Module/Internal Nodes/ccj/1.webp",
         "hotspot": [
           {
             "type": "move",
-            "target": "museum1",
-            "yaw": 20.87,
+            "target": "ccj4",
+            "yaw": 304.22,
             "pitch": -20
           },
           {
             "type": "move",
-            "target": "museum3",
-            "yaw": 291.8,
-            "pitch": -30
+            "target": "ccj8",
+            "yaw": 64.72,
+            "pitch": -23
           }
         ]
       },
       {
-        "scene": "museum3",
-        "image": "/assets/Building Module/Internal Nodes/museum/3.webp",
+        "scene": "ccj3",
+        "image": "/assets/Building Module/Internal Nodes/ccj/3.webp",
         "hotspot": [
           {
             "type": "move",
-            "target": "museum2",
-            "yaw": 109.32,
+            "target": "ccj5",
+            "yaw": 193.07,
             "pitch": -20
           },
           {
             "type": "move",
-            "target": "museum4",
-            "yaw": 199.87,
-            "pitch": -20
-          },
-          {
-            "type": "move",
-            "target": "museum10",
-            "yaw": 290.68,
-            "pitch": -25
-          },
-          {
-            "type": "move",
-            "target": "museum9",
-            "yaw": 20.75,
-            "pitch": -20
+            "target": "ccj6",
+            "yaw": 83.98,
+            "pitch": -23
           }
         ]
       },
       {
-        "scene": "museum4",
-        "image": "/assets/Building Module/Internal Nodes/museum/4.webp",
+        "scene": "ccj4",
+        "image": "/assets/Building Module/Internal Nodes/ccj/4.webp",
         "hotspot": [
           {
             "type": "move",
-            "target": "museum3",
-            "yaw": 27.33,
+            "target": "ccj1",
+            "yaw": 204.22,
             "pitch": -20
           },
           {
             "type": "move",
-            "target": "museum5",
-            "yaw": 207.08,
-            "pitch": -20
-          },
-          {
-            "type": "move",
-            "target": "museum11",
-            "yaw": 296.02,
-            "pitch": -30
-          }
-        ]
-      },
-      {
-        "scene": "museum5",
-        "image": "/assets/Building Module/Internal Nodes/museum/5.webp",
-        "hotspot": [
-          {
-            "type": "move",
-            "target": "museum4",
-            "yaw": 28.2,
-            "pitch": -20
-          },
-          {
-            "type": "move",
-            "target": "museum6",
-            "yaw": 296.15,
-            "pitch": -35
-          }
-        ]
-      },
-      {
-        "scene": "museum6",
-        "image": "/assets/Building Module/Internal Nodes/museum/6.webp",
-        "hotspot": [
-          {
-            "type": "move",
-            "target": "museum5",
-            "yaw": 101.37,
-            "pitch": -20
-          },
-          {
-            "type": "move",
-            "target": "museum7",
-            "yaw": 15.95,
+            "target": "ccj2",
+            "yaw": 25.22,
             "pitch": -20
           }
         ]
       },
       {
-        "scene": "museum7",
-        "image": "/assets/Building Module/Internal Nodes/museum/7.webp",
+        "scene": "ccj5",
+        "image": "/assets/Building Module/Internal Nodes/ccj/5.webp",
         "hotspot": [
           {
             "type": "move",
-            "target": "museum6",
-            "yaw": 202.49,
+            "target": "ccj2",
+            "yaw": 195.15,
             "pitch": -20
           },
           {
             "type": "move",
-            "target": "museum8",
-            "yaw": 21.62,
+            "target": "ccj3",
+            "yaw": 15.65,
             "pitch": -20
           }
         ]
       },
       {
-        "scene": "museum8",
-        "image": "/assets/Building Module/Internal Nodes/museum/8.webp",
+        "scene": "ccj6",
+        "image": "/assets/Building Module/Internal Nodes/ccj/6.webp",
         "hotspot": [
           {
             "type": "move",
-            "target": "museum7",
-            "yaw": 200.12,
+            "target": "ccj7",
+            "yaw": 203.73,
             "pitch": -20
           },
           {
             "type": "move",
-            "target": "museum9",
-            "yaw": 110.31,
-            "pitch": -20
-          }
-        ]
-      },
-      {
-        "scene": "museum9",
-        "image": "/assets/Building Module/Internal Nodes/museum/9.webp",
-        "hotspot": [
-          {
-            "type": "move",
-            "target": "museum8",
-            "yaw": 290.06,
+            "target": "ccj3",
+            "yaw": 119.01,
             "pitch": -20
           },
           {
             "type": "move",
-            "target": "museum3",
-            "yaw": 200.87,
+            "target": "ccj12",
+            "yaw": 76.52,
             "pitch": -20
           }
         ]
       },
       {
-        "scene": "museum10",
-        "image": "/assets/Building Module/Internal Nodes/museum/10.webp",
+        "scene": "ccj7",
+        "image": "/assets/Building Module/Internal Nodes/ccj/7.webp",
         "hotspot": [
           {
             "type": "move",
-            "target": "museum3",
-            "yaw": 113.79,
-            "pitch": -12
+            "target": "ccj8",
+            "yaw": 201.61,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ccj6",
+            "yaw": 21.24,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ccj2",
+            "yaw": 125.34,
+            "pitch": -20
           }
         ]
       },
       {
-        "scene": "museum11",
-        "image": "/assets/Building Module/Internal Nodes/museum/11.webp",
+        "scene": "ccj8",
+        "image": "/assets/Building Module/Internal Nodes/ccj/8.webp",
         "hotspot": [
           {
             "type": "move",
-            "target": "museum4",
-            "yaw": 113.05,
-            "pitch": -15
+            "target": "ccj1",
+            "yaw": 101.86,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ccj7",
+            "yaw": 15.65,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ccj15",
+            "yaw": 145.34,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "ccj9",
+        "image": "/assets/Building Module/Internal Nodes/ccj/9.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ccj10",
+            "yaw": 33.54,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ccj15",
+            "yaw": 212.3,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "ccj10",
+        "image": "/assets/Building Module/Internal Nodes/ccj/10.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ccj11",
+            "yaw": 20.63,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ccj9",
+            "yaw": 200.63,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "ccj11",
+        "image": "/assets/Building Module/Internal Nodes/ccj/11.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ccj12",
+            "yaw": 2.37,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ccj10",
+            "yaw": 180.01,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "ccj12",
+        "image": "/assets/Building Module/Internal Nodes/ccj/12.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ccj13",
+            "yaw": 67.46,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ccj11",
+            "yaw": 187.96,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ccj6",
+            "yaw": 103.36,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "ccj13",
+        "image": "/assets/Building Module/Internal Nodes/ccj/13.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ccj14",
+            "yaw": 191.68,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ccj12",
+            "yaw": 106.47,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "ccj14",
+        "image": "/assets/Building Module/Internal Nodes/ccj/14.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ccj13",
+            "yaw": 343.73,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "ccj15",
+        "image": "/assets/Building Module/Internal Nodes/ccj/15.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "ccj9",
+            "yaw": 14.17,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ccj8",
+            "yaw": 102.49,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "ccj14",
+            "yaw": 143.36,
+            "pitch": -20
           }
         ]
       }

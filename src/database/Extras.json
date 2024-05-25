@@ -651,5 +651,27 @@
       "type": "attractions"
     },
     "image": "/assets/Building Module/Extras/gate 3.webp"
+  },
+  {
+    "scene": "chapel",
+    "location": "University Chapel",
+    "desc": "This is the university's Chapel",
+    "coords": {
+      "x": 0.241,
+      "y": 1.055,
+      "type": "attractions"
+    },
+    "image": "/assets/Building Module/Extras/chapel.webp"
+  },
+  {
+    "scene": "inangkalikasan",
+    "location": "Ina ng Kalikasan",
+    "desc": "This statue is called Ina ng Kalikasan",
+    "coords": {
+      "x": 0.539,
+      "y": 0.754,
+      "type": "attractions"
+    },
+    "image": ""
   }
 ]

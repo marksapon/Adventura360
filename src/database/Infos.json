@@ -8,14 +8,23 @@
     "tags": ["ceit", "school"],
     "image": "/assets/Building Module/Background/dit.webp",
     "desc": "The Department of Information Technology (DIT), nestled within the College of Engineering and Information Technology (CEIT), is housed in a modern building characterized by sleek architecture and cutting-edge facilities. Its spacious atrium welcomes students and visitors, while state-of-the-art classrooms, labs, and collaborative spaces provide an ideal environment for learning and research. From interactive displays showcasing the latest advancements to dedicated research wings driving innovation, the department's building serves as a dynamic hub for aspiring technologists and researchers alike.",
-    "gallery": [],
 
-    "contacts": {},
-
+    "contacts": {
+      "Telephone": "(046) 481 1900",
+      "Email": "dit@cvsu.edu.ph",
+      "additional": {
+        "(Facebook) Computer Science Student Organization": "https://www.facebook.com/CSSO2016"
+      }
+    },
+    "facilities": {
+      "Computer Laboratory": "The Computer Laboratory is equipped with the latest hardware and software to support students in their coursework and research. From programming to networking, students have access to the tools they need to succeed."
+    },
     "courses": {
       "BS Computer Science": null,
       "BS Information Technology": null
-    }
+    },
+    "more_info": "https://cvsu.edu.ph/?s=ceit&swpmfe=652ea0d21b1427a1bfa685e40d9bc1de",
+    "gallery": []
   },
   {
     "scene": "osa",
@@ -570,6 +579,31 @@
     "tags": ["school", "historical"],
     "image": "/assets/Building Module/Background/museum.webp",
     "desc": "Welcome to the Historical and Cultural Museum at our University. Our museum is a treasure trove of artifacts, stories, and memories that celebrate our rich heritage and diverse culture. From ancient relics to modern masterpieces, we showcase the beauty and complexity of our shared history. Step inside and embark on a journey through time and tradition. Welcome to a place where the past comes alive and the present is illuminated.",
+
+    "contacts": {},
+    "gallery": []
+  },
+  {
+    "scene": "cropsci",
+    "name": "Department of Crop Science",
+    "access": "account",
+    "acronym": "cropsci",
+    "type": "school_facilities",
+    "tags": ["cafenr", "school"],
+    "image": "/assets/Building Module/Background/crop science.webp",
+    "desc": "Welcome to the Department of Crop Science at the University. Our state-of-the-art facilities and passionate community of scholars are dedicated to exploring the wonders of life. From molecular biology to ecology, we're committed to advancing our understanding of the natural world and addressing global challenges. Join us on a journey of discovery and exploration. Welcome to the heart of scientific inquiry.",
+
+    "gallery": []
+  },
+  {
+    "scene": "ccj",
+    "name": "College of Criminal Justice",
+    "access": "account",
+    "acronym": "ccj",
+    "type": "school_facilities",
+    "tags": ["school", "ccj"],
+    "image": "/assets/Building Module/Background/ccj.webp",
+    "desc": "Welcome to the College of Criminal Justice at our University. Our college is dedicated to the study and practice of law enforcement, criminal justice, and public safety. With a focus on ethics, professionalism, and community service, we prepare students for careers in law enforcement, corrections, and security. From hands-on training to cutting-edge research, we provide a comprehensive education that equips students with the skills and knowledge needed to make a positive impact in their communities. Join us as we work together to create a safer, more just society. Welcome to the College of Criminal Justice.",
 
     "contacts": {},
     "gallery": []

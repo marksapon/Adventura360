@@ -824,7 +824,7 @@
   {
     "scene": "ccj",
     "location": "College of Criminology and Justice",
-    "image": "",
+    "image": "/assets/Database Images/unrestricted nodes/361.webp",
     "back": [""],
     "coords": {
       "x": 0.269,
@@ -847,7 +847,7 @@
     "image": "",
     "back": [""],
     "coords": {
-      "x": 0.269,
+      "x": 0.369,
       "y": 1.108,
       "type": "college_buildings"
     },
@@ -855,7 +855,7 @@
       {
         "type": "info",
         "class": "info",
-        "target": "ccj",
+        "target": "",
         "yaw": 112.8,
         "pitch": 12.34
       }
