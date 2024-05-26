@@ -63,7 +63,7 @@
   {
     "scene": "cspear",
     "location": "College of Sports, Physical Education and Recreation",
-    "image": "/assets/Database Images/unrestricted nodes/12.webp",
+    "image": "/assets/Building Module/Internal Nodes/cspear/1.webp",
     "back": ["node11", "node12", "node13"],
     "coords": {
       "x": 0.56,
@@ -76,8 +76,8 @@
         "type": "info",
         "class": "info",
         "target": "cspear",
-        "yaw": 277.61,
-        "pitch": 13.64
+        "yaw": 286.58,
+        "pitch": 13.98
       }
     ]
   },

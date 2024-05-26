@@ -172,7 +172,7 @@
     "acronym": "cafenr",
     "type": "college_buildings",
     "tags": ["cafenr", "school"],
-    "image": "/assets/Building Module/Background/inter disciplinary research building.webp",
+    "image": "/assets/Building Module/Background/cafenr.webp",
     "desc": "The College of Agriculture, Forestry, Environment, and Natural Resources building embodies innovation and sustainability. Its modern design integrates seamlessly with nature, featuring spacious interiors filled with natural light and cutting-edge facilities. With a focus on eco-friendly practices, including energy-efficient systems and green rooftops, the building serves as a hub for interdisciplinary learning and research. Surrounded by lush gardens and outdoor spaces, it inspires environmental stewardship and fosters collaboration among students and faculty.",
 
     "dept": [
@@ -565,7 +565,7 @@
     "acronym": "interdisciplinary",
     "type": "school_facilities",
     "tags": ["school"],
-    "image": "/assets/Building Module/Background/rccenter.webp",
+    "image": "/assets/Building Module/Background/inter disciplinary research building.webp",
     "desc": "Welcome to our Interdisciplinary Research Facility! Here, experts from different fields team up to solve big problems together. From combining new technologies to tackling real-world issues, we're all about working together to make a difference. Join us as we break down barriers and find creative solutions. Welcome to a place where collaboration leads to breakthroughs!",
 
     "gallery": []
