@@ -67,6 +67,7 @@ function Adventura360({ BACKEND_URL, loginType }) {
     <div
       className="flex h-dvh w-screen items-center justify-center"
       style={{ cursor: "default" }}
+      tabIndex="-1"
     >
       {isLoaded && (
         <Module360

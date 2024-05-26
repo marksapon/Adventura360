@@ -19,6 +19,8 @@ const PathfindingModal = ({
   generatePOI,
 
   removeOverlays,
+
+  setTargetLocation,
 }) => {
   const poi = generatePOI(); // Generate Points of Interest
 
@@ -131,6 +133,7 @@ const PathfindingModal = ({
                         console.log("Path Modal Closed");
                         removePath();
                         removeOverlays();
+                        // setTargetLocation();
                       }}
                     >
                       <IoIosClose size={30} />
@@ -218,6 +221,7 @@ const PathfindingModal = ({
                           className="relative flex w-auto items-center justify-center rounded-full bg-green-500 px-2 text-white"
                           onClick={() => {
                             console.log("Directions Button Clicked");
+                            setTargetLocation(finalDestination);
                             pathfinding(finalDestination, travelType);
                             setMinimized(true);
                           }}

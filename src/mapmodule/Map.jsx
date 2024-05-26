@@ -85,6 +85,12 @@ const MapModule = ({
   const [pathFindingClicked, setPathFindingClicked] = useState(false); // State to track if pathfinding icon is clicked
   const [minimized, setMinimized] = useState(false); // Pathfinding Modal Minimized State
 
+  const [targetLocation, setTargetLocation] = useState(); // Target Location for Pathfinding
+
+  useEffect(() => {
+    console.log("TargetLocation:", targetLocation);
+  }, [targetLocation]);
+
   /* Overlays */
 
   // function to generate Point of Interests
@@ -139,7 +145,8 @@ const MapModule = ({
 
     // Mapping the data to the overlays
     poi.map((overlay, index) => {
-      overlay["id"] = `overlayId${index}`; // Generating ID per overlay
+      // overlay["id"] = `overlayId${index}`; // Generating ID per overlay
+      overlay["id"] = overlay.scene; // Generating ID per overlay
 
       if (temp_overlays.hasOwnProperty(overlay.type)) {
         for (const overlayType in temp_overlays) {
@@ -165,12 +172,14 @@ const MapModule = ({
   /* Overlay Filter */
   const [filterClicked, setFilterClicked] = useState(true); // Filter Button State
 
-  function removeOverlays() {
-    // console.log("Remove Overlays");
-
+  function removeOverlays(target_loc = null) {
+    console.log("Removing Overlays:", target_loc);
     Object.keys(overlays).map((type) => {
       overlays[type].map((overlay) => {
-        viewer.removeOverlay(overlay.id);
+        if (target_loc && overlay.scene === target_loc.scene) {
+        } else {
+          viewer.removeOverlay(overlay.id);
+        }
       });
     });
   }
@@ -260,9 +269,9 @@ const MapModule = ({
 
     if (osdLoaded) {
       if (current_overlays.length === 0) {
-        removeOverlays();
+        removeOverlays(targetLocation);
       } else if (current_overlays.length > 0) {
-        removeOverlays();
+        removeOverlays(targetLocation);
 
         // console.log("Adding Overlay");
         current_overlays.map((type) => {
@@ -306,6 +315,19 @@ const MapModule = ({
             });
           });
         });
+
+        // Add target location overlay name
+        if (targetLocation) {
+          console.log("Adding Target Location Name");
+          const targetOverlay = targetLocation;
+          const name = document.getElementById(targetOverlay.scene + "name");
+          viewer.addOverlay({
+            element: name,
+            location: new OpenSeadragon.Point(targetOverlay.x, targetOverlay.y),
+            placement: OpenSeadragon.Placement.TOP,
+            rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
+          });
+        }
       } else {
         Object.keys(overlays).map((type) => {
           overlays[type].map((overlay) => {
@@ -314,8 +336,10 @@ const MapModule = ({
           });
         });
       }
+
+      viewer.forceRedraw();
     }
-  }, [poiNameStates, current_overlays]);
+  }, [poiNameStates, current_overlays, targetLocation]); // Add target_location to the dependency array
 
   // OSD Click Event Handler
   useEffect(() => {
@@ -634,6 +658,10 @@ const MapModule = ({
     const oldCanvas = document.getElementById("myCanvas");
     if (oldCanvas) {
       viewer.removeOverlay("myCanvas");
+      removeOverlays(target_location);
+
+      // removeOverlaysName();
+
       oldCanvas.remove();
     }
 
@@ -670,8 +698,6 @@ const MapModule = ({
 
     setFilterClicked(true);
 
-    // removeOverlays();
-
     viewer.removeOverlay("current location");
 
     viewer.addOverlay({
@@ -689,6 +715,7 @@ const MapModule = ({
         if (overlay.scene === target_location.scene) {
           // console.log("Overlay Found");
           const div = document.getElementById(overlay.id);
+          const name = document.getElementById(overlay.id + "name");
           if (
             currLoc.coords.x !== overlay.x &&
             currLoc.coords.y !== overlay.y
@@ -767,6 +794,7 @@ const MapModule = ({
                 pointerEvents: "auto",
                 zIndex: 5,
               }}
+              tabIndex="-1"
             >
               <div
                 style={{
@@ -831,6 +859,7 @@ const MapModule = ({
               }}
               key={overlay.id + "name"}
               id={overlay.id + "name"}
+              tabIndex="-1"
             >
               {overlay.name}
             </div>
@@ -874,6 +903,7 @@ const MapModule = ({
                 pathfinding={pathFinding}
                 generatePOI={generatePOI}
                 removeOverlays={removeOverlays}
+                setTargetLocation={setTargetLocation}
               />
             ) : null}
 
@@ -939,7 +969,7 @@ const MapModule = ({
                     className={`${filterClicked ? "bg-green-500" : "bg-white"} pointer-events-auto mb-1 ml-1 flex items-center justify-center rounded-full p-2 drop-shadow-xl`}
                     onClick={() => {
                       if (filterClicked) {
-                        removeOverlays();
+                        removeOverlays(targetLocation);
                         setCurrentOverlays([]);
                       }
 

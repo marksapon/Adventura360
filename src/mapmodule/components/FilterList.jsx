@@ -1,42 +1,26 @@
 import React, { useState } from "react";
-import { useEffect } from "react";
 
 const FilterList = ({
-  current_overlays,
   setOverlays,
 
   icons,
-
-  removeOverlays,
-  addOverlays,
 }) => {
   /* Filter Buttons States */
-  const [restroomState, setRestroomState] = useState(false); // Restroom State
-  const [washareaState, setwashareaState] = useState(false); // Hand Wash State
-  const [schoolFacilitiesState, setSchoolFacilitiesState] = useState(false); // School Facilities State
-  const [collegeBuildingsState, setCollegeBuildingsState] = useState(false); // College Buildings State
-  const [cafeteriaState, setCafeteriaState] = useState(false); // Cafeteria State
-  const [attractionState, setAttractionState] = useState(false); // School Attraction State
-  const [courtState, setCourtState] = useState(false); // Court State
-  const [parkingState, setParkingState] = useState(false); // Parking Lot State
-  const [batibotState, setBatibotState] = useState(false); // Batibot State
-  const [farmState, setFarmState] = useState(false); // Farm State
-  const [constructionState, setConstructionState] = useState(false); // Construction State
-  const [venueState, setVenueState] = useState(false); // Venue State
+  const [activeOverlay, setActiveOverlay] = useState("");
 
   // Function that controls the filter list
-  function filter(type, state) {
-    // console.log("Filter:", type, state);
-    if (state) {
+  function filter(type) {
+    if (type) {
       // If the state is true add the type to the filter list
-      setOverlays((prevState) => {
-        const newFilterList = [...prevState, type];
+      // setActiveOverlay(type);
+      setOverlays(() => {
+        const newFilterList = [type];
         return newFilterList;
       });
     } else {
       // Else remove the type from the filter list
-      setOverlays((prevState) => {
-        const newFilterList = prevState.filter((item) => item !== type);
+      setOverlays(() => {
+        const newFilterList = [];
         return newFilterList;
       });
     }
@@ -52,15 +36,17 @@ const FilterList = ({
         <button
           className={`flex h-10 w-10 items-center justify-center rounded-full`}
           onClick={() => {
-            setRestroomState((prevState) => {
-              const newState = !prevState;
-              filter("restroom", newState);
-              return newState;
-            });
+            if (activeOverlay !== "restroom") {
+              setActiveOverlay("restroom");
+              filter("restroom");
+            } else {
+              setActiveOverlay();
+              filter();
+            }
           }}
         >
           <icons.restroom.icon
-            className={`${restroomState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
+            className={`${activeOverlay === "restroom" ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
           />
         </button>
         {/* Restroom */}
@@ -68,15 +54,17 @@ const FilterList = ({
         <button
           className={`flex h-10 w-10 flex-none items-center justify-center rounded-full`}
           onClick={() => {
-            setwashareaState((prevState) => {
-              const newState = !prevState;
-              filter("washarea", newState);
-              return newState;
-            });
+            if (activeOverlay !== "washarea") {
+              setActiveOverlay("washarea");
+              filter("washarea");
+            } else {
+              setActiveOverlay();
+              filter();
+            }
           }}
         >
           <icons.washarea.icon
-            className={`${washareaState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
+            className={`${activeOverlay === "washarea" ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
           />
         </button>
         {/* Hand Wash */}
@@ -84,15 +72,17 @@ const FilterList = ({
         <button
           className={`flex h-10 w-10 flex-none items-center justify-center rounded-full`}
           onClick={() => {
-            setSchoolFacilitiesState((prevState) => {
-              const newState = !prevState;
-              filter("school_facilities", newState);
-              return newState;
-            });
+            if (activeOverlay !== "school_facilities") {
+              setActiveOverlay("school_facilities");
+              filter("school_facilities");
+            } else {
+              setActiveOverlay();
+              filter();
+            }
           }}
         >
           <icons.school_facilities.icon
-            className={`${schoolFacilitiesState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
+            className={`${activeOverlay === "school_facilities" ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
           />
         </button>
         {/* School Facilities */}
@@ -100,15 +90,17 @@ const FilterList = ({
         <button
           className={`flex h-10 w-10 flex-none items-center justify-center rounded-full`}
           onClick={() => {
-            setCollegeBuildingsState((prevState) => {
-              const newState = !prevState;
-              filter("college_buildings", newState);
-              return newState;
-            });
+            if (activeOverlay !== "college_buildings") {
+              setActiveOverlay("college_buildings");
+              filter("college_buildings");
+            } else {
+              setActiveOverlay();
+              filter();
+            }
           }}
         >
           <icons.college_buildings.icon
-            className={`${collegeBuildingsState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
+            className={`${activeOverlay === "college_buildings" ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
           />
         </button>
         {/* College Buildings */}
@@ -116,15 +108,17 @@ const FilterList = ({
         <button
           className={`flex h-10 w-10 flex-none items-center justify-center rounded-full`}
           onClick={() => {
-            setCafeteriaState((prevState) => {
-              const newState = !prevState;
-              filter("cafeteria", newState);
-              return newState;
-            });
+            if (activeOverlay !== "cafeteria") {
+              setActiveOverlay("cafeteria");
+              filter("cafeteria");
+            } else {
+              setActiveOverlay();
+              filter();
+            }
           }}
         >
           <icons.cafeteria.icon
-            className={`${cafeteriaState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
+            className={`${activeOverlay === "cafeteria" ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
           />
         </button>
         {/* Cafeteria */}
@@ -137,15 +131,17 @@ const FilterList = ({
         <button
           className={`flex h-10 w-10 items-center justify-center rounded-full`}
           onClick={() => {
-            setBatibotState((prevState) => {
-              const newState = !prevState;
-              filter("batibot", newState);
-              return newState;
-            });
+            if (activeOverlay !== "batibot") {
+              setActiveOverlay("batibot");
+              filter("batibot");
+            } else {
+              setActiveOverlay();
+              filter();
+            }
           }}
         >
           <icons.batibot.icon
-            className={`${batibotState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
+            className={`${activeOverlay === "batibot" ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
           />
         </button>
         {/* Batibot */}
@@ -153,15 +149,17 @@ const FilterList = ({
         <button
           className={`flex h-10 w-10 flex-none items-center justify-center rounded-full`}
           onClick={() => {
-            setAttractionState((prevState) => {
-              const newState = !prevState;
-              filter("attractions", newState);
-              return newState;
-            });
+            if (activeOverlay !== "attractions") {
+              setActiveOverlay("attractions");
+              filter("attractions");
+            } else {
+              setActiveOverlay();
+              filter();
+            }
           }}
         >
           <icons.attractions.icon
-            className={`${attractionState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
+            className={`${activeOverlay === "attractions" ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
           />
         </button>
         {/* School Attraction */}
@@ -169,15 +167,17 @@ const FilterList = ({
         <button
           className={`flex h-10 w-10 flex-none items-center justify-center rounded-full`}
           onClick={() => {
-            setCourtState((prevState) => {
-              const newState = !prevState;
-              filter("court", newState);
-              return newState;
-            });
+            if (activeOverlay !== "court") {
+              setActiveOverlay("court");
+              filter("court");
+            } else {
+              setActiveOverlay();
+              filter();
+            }
           }}
         >
           <icons.court.icon
-            className={`${courtState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
+            className={`${activeOverlay === "court" ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
           />
         </button>
         {/* Court */}
@@ -185,15 +185,17 @@ const FilterList = ({
         <button
           className={`flex h-10 w-10 flex-none items-center justify-center rounded-full`}
           onClick={() => {
-            setParkingState((prevState) => {
-              const newState = !prevState;
-              filter("parking", newState);
-              return newState;
-            });
+            if (activeOverlay !== "parking") {
+              setActiveOverlay("parking");
+              filter("parking");
+            } else {
+              setActiveOverlay();
+              filter();
+            }
           }}
         >
           <icons.parking.icon
-            className={`${parkingState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
+            className={`${activeOverlay === "parking" ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
           />
         </button>
         {/* Parking Lot */}
@@ -201,15 +203,17 @@ const FilterList = ({
         <button
           className={`flex h-10 w-10 flex-none items-center justify-center rounded-full`}
           onClick={() => {
-            setVenueState((prevState) => {
-              const newState = !prevState;
-              filter("venue", newState);
-              return newState;
-            });
+            if (activeOverlay !== "venue") {
+              setActiveOverlay("venue");
+              filter("venue");
+            } else {
+              setActiveOverlay();
+              filter();
+            }
           }}
         >
           <icons.venue.icon
-            className={`${venueState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
+            className={`${activeOverlay === "venue" ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
           />
         </button>
         {/* Venues */}
@@ -222,15 +226,17 @@ const FilterList = ({
         <button
           className={`flex h-10 w-10 items-center justify-center rounded-full`}
           onClick={() => {
-            setFarmState((prevState) => {
-              const newState = !prevState;
-              filter("farm", newState);
-              return newState;
-            });
+            if (activeOverlay !== "farm") {
+              setActiveOverlay("farm");
+              filter("farm");
+            } else {
+              setActiveOverlay();
+              filter();
+            }
           }}
         >
           <icons.farm.icon
-            className={`${farmState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
+            className={`${activeOverlay === "farm" ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
           />
         </button>
         {/* Farm */}
@@ -238,15 +244,17 @@ const FilterList = ({
         <button
           className={`flex h-10 w-10 flex-none items-center justify-center rounded-full`}
           onClick={() => {
-            setConstructionState((prevState) => {
-              const newState = !prevState;
-              filter("construction", newState);
-              return newState;
-            });
+            if (activeOverlay !== "construction") {
+              setActiveOverlay("construction");
+              filter("construction");
+            } else {
+              setActiveOverlay();
+              filter();
+            }
           }}
         >
           <icons.construction.icon
-            className={`${constructionState ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
+            className={`${activeOverlay === "construction" ? "text-green-500" : "text-gray-500 hover:text-green-500"} size-6 `}
           />
         </button>
         {/* School Attraction */}
