@@ -28,9 +28,12 @@ import { FaCircle } from "react-icons/fa6"; // Undefined Icon
 import { TbMap } from "react-icons/tb"; // Minimap On Icon
 import { TbMapOff } from "react-icons/tb"; // Minimap Off Icon
 
+import { TbMessageChatbot } from "react-icons/tb"; // Chatbot Icon
+
 /* Components */
 import Navigationbar from "./components/Navigationbar";
 import Minimap from "./components/Minimap";
+import VN from "../VNmodule/VN"; // VN Module
 
 function Module360({
   nodesDB,
@@ -39,6 +42,8 @@ function Module360({
   loginType,
   infosDB,
   internalDB,
+  eventsDB,
+  charactersDB,
 }) {
   class Extras {
     constructor(
@@ -137,6 +142,9 @@ function Module360({
 
   // Map State
   const [mapState, setMapState] = useState(false); // Map State
+
+  // VN State
+  const [vnState, setVNState] = useState(true); // VN State
 
   // Function to get the current scene based on the URL queries
   function getScene() {
@@ -734,8 +742,8 @@ function Module360({
 
         {/* Minimap */}
         <div className="pointer-events-auto absolute left-0 top-0 p-1 text-white">
-          <div className="relative flex flex-row justify-between">
-            <div className="mt-20 pb-2 pl-2">
+          <div className="relative mt-20 flex flex-col justify-between gap-2 pb-2 pl-2">
+            <div className="">
               {mapButtonVisible && (
                 <Minimap
                   onClick={() => setMapState(true)}
@@ -747,8 +755,32 @@ function Module360({
                 />
               )}
             </div>
+
+            <div className="group flex items-center gap-2">
+              <button
+                className="flex h-12 w-12 transform items-center justify-center rounded-full border-2 border-transparent bg-white p-2 transition-transform duration-500 ease-in-out hover:scale-110 hover:border-green-500"
+                onClick={() => setVNState(true)}
+              >
+                <TbMessageChatbot
+                  size={50}
+                  style={{ stroke: "green", fill: "white" }}
+                />
+              </button>
+              <div className="flex w-32 items-center justify-center rounded-lg bg-white p-2 text-center font-sans text-sm font-semibold text-gray-500 opacity-0 shadow-xl transition duration-200 ease-in-out group-hover:opacity-100">
+                Tour Guide
+              </div>
+            </div>
           </div>
         </div>
+
+        {/* Visual Novel */}
+        {vnState && (
+          <VN
+            eventsDB={eventsDB}
+            charactersDB={charactersDB}
+            setVNState={setVNState}
+          />
+        )}
 
         {/* <div className="absolute bottom-0 left-0 z-20 m-2 text-white">
           <div>Location: {select_Scene.scene}</div>
@@ -774,6 +806,7 @@ function Module360({
             )}
           </button>
         </div>
+
         {/* Toggle Minimap */}
         {/* UI */}
       </View360>

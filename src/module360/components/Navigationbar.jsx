@@ -96,7 +96,7 @@ const Navigationbar = ({
     // console.log("Help State: ", help);
     if (help === null) {
       // console.log("Displaying Help");
-      return true;
+      return false;
     } else {
       // console.log("Not Displaying Help");
       return false;

@@ -1,0 +1,11 @@
+[
+  {
+    "scene": "intro",
+    "text": [
+      "Hello My name is monika, I will be your tour guide!",
+      "Currently I am trapped here. But hey such is life!"
+    ],
+    "character": "monika"
+  },
+  { "scene": "dit", "text": ["Welcome to DIT"], "character": "monika" }
+]

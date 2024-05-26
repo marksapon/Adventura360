@@ -8,6 +8,8 @@ import buildingsLDB from "../database/Buildings.json";
 import extrasLDB from "../database/Extras.json";
 import infosLDB from "../database/Infos.json";
 import internalLDB from "../database/Internal_nodes.json";
+import charactersLDB from "../database/Characters.json";
+import eventsLDB from "../database/Events.json";
 
 function Adventura360({ BACKEND_URL, loginType }) {
   /* Fetch DB */
@@ -16,8 +18,11 @@ function Adventura360({ BACKEND_URL, loginType }) {
   const [buildingsDB, setBuildingsDB] = useState([]); // Buildings Database
   const [extrasDB, setExtrasDB] = useState([]); // Extras Database
   const [infosDB, setInfosDB] = useState([]); // Infos Database
-  const [isLoaded, setIsLoaded] = useState(false); // Data Loaded
   const [internalDB, setInternalDB] = useState([]); // Internal DB
+  const [eventsDB, setEventsDB] = useState([]); // Events Database
+  const [charactersDB, setCharactersDB] = useState([]); // Characters Database
+
+  const [isLoaded, setIsLoaded] = useState(false); // Data Loaded
 
   useEffect(() => {
     /* Backend Server (DO NOT DELETE)*/
@@ -58,6 +63,8 @@ function Adventura360({ BACKEND_URL, loginType }) {
     setExtrasDB(extrasLDB);
     setInfosDB(infosLDB);
     setInternalDB(internalLDB);
+    setCharactersDB(charactersLDB);
+    setEventsDB(eventsLDB);
     setTimeout(() => {
       setIsLoaded(true);
     }, 3000);
@@ -71,12 +78,14 @@ function Adventura360({ BACKEND_URL, loginType }) {
     >
       {isLoaded && (
         <Module360
+          loginType={loginType}
           nodesDB={nodesDB}
           buildingsDB={buildingsDB}
           extrasDB={extrasDB}
-          loginType={loginType}
           infosDB={infosDB}
           internalDB={internalDB}
+          eventsDB={eventsDB}
+          charactersDB={charactersDB}
         />
       )}
 

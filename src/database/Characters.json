@@ -1,0 +1,19 @@
+[
+  {
+    "name": "Monika",
+    "sprites": [
+      {
+        "mood": "normal",
+        "image": "/assets/VN Module/character/normal.webp"
+      },
+      {
+        "mood": "greet",
+        "image": "/assets/VN Module/character/greet.webp"
+      },
+      {
+        "mood": "speaking",
+        "image": "assets/VN Module/character/speaking.webp"
+      }
+    ]
+  }
+]
