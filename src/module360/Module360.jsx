@@ -144,7 +144,11 @@ function Module360({
   const [mapState, setMapState] = useState(false); // Map State
 
   // VN State
-  const [vnState, setVNState] = useState(true); // VN State
+
+  const [firstTime, setFirstTime] = useState(isFirstTime()); // First Time State
+  const [eventList, setEventList] = useState([]); // Event List State
+  const [overallEvents, setOverallEvents] = useState(eventsDB); // Overall Events State
+  const [vnState, setVNState] = useState(false); // VN State
 
   // Function to get the current scene based on the URL queries
   function getScene() {
@@ -244,6 +248,14 @@ function Module360({
     }
   }
 
+  function isFirstTime() {
+    if (sessionStorage.getItem("isFirst") === null) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   // Event listener for detecting device orientation
   useEffect(() => {
     function handleOrientationChange() {
@@ -251,6 +263,10 @@ function Module360({
     }
 
     window.addEventListener("resize", handleOrientationChange);
+
+    sessionStorage.setItem("isFirst", "false");
+
+    setFirstTime(false);
 
     return () => {
       window.removeEventListener("resize", handleOrientationChange);
@@ -386,7 +402,7 @@ function Module360({
 
   // Function that performs action based on type of Hotspot
   function action(type, target, index) {
-    // console.log("Action");
+    console.log("Action");
     // console.log("Access Type:", access);
 
     if (type === "move") {
@@ -404,6 +420,8 @@ function Module360({
       setBackButton(true);
 
       setIsOutside(true);
+
+      eventHandler(target);
 
       changeScene(buildingsDB, target); // Change Scene
     } else if (type === "info") {
@@ -549,6 +567,37 @@ function Module360({
     setTargetScene(target);
     setMode(mode);
     setBldgModalState(true);
+  }
+
+  useEffect(() => {
+    // console.log("First Time:", firstTime);
+    if (firstTime) {
+      eventHandler();
+    }
+  }, [firstTime]);
+
+  useEffect(() => {
+    console.log("Event List:", eventList);
+  }, [eventList]);
+
+  // useEffect(() => {
+  //   console.log("Event List:", eventList);
+  // }, [vnState]);
+
+  /* VN Component */
+  function eventHandler(target) {
+    console.log("Event Handler");
+
+    if (firstTime) {
+      setEventList((prev) => [...prev, "intro"]);
+    } else {
+      if (target) {
+        setEventList((prev) => [...prev, target]);
+      } else {
+        setEventList((prev) => [...prev, "default"]);
+      }
+    }
+    setVNState(true);
   }
 
   /* Module360 Component */
@@ -756,18 +805,24 @@ function Module360({
               )}
             </div>
 
-            <div className="group flex items-center gap-2">
-              <button
-                className="flex h-12 w-12 transform items-center justify-center rounded-full border-2 border-transparent bg-white p-2 transition-transform duration-500 ease-in-out hover:scale-110 hover:border-green-500"
-                onClick={() => setVNState(true)}
-              >
-                <TbMessageChatbot
-                  size={50}
-                  style={{ stroke: "green", fill: "white" }}
-                />
-              </button>
-              <div className="flex w-32 items-center justify-center rounded-lg bg-white p-2 text-center font-sans text-sm font-semibold text-gray-500 opacity-0 shadow-xl transition duration-200 ease-in-out group-hover:opacity-100">
-                Tour Guide
+            <div className="flex items-center gap-2">
+              <div className="relative">
+                <div className="group">
+                  <button
+                    className="flex h-12 w-12 transform items-center justify-center rounded-full border-2 border-transparent bg-white p-2 transition-transform duration-500 ease-in-out hover:scale-110 hover:border-green-500"
+                    onClick={() => {
+                      eventHandler();
+                    }}
+                  >
+                    <TbMessageChatbot
+                      size={50}
+                      style={{ stroke: "green", fill: "white" }}
+                    />
+                  </button>
+                  <div className="absolute left-full top-1/2 ml-2 flex w-32 -translate-y-1/2 transform items-center justify-center rounded-lg bg-white p-2 text-center font-sans text-sm font-semibold text-gray-500 opacity-0 shadow-xl transition duration-200 ease-in-out group-hover:opacity-100">
+                    Tour Guide
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -779,6 +834,9 @@ function Module360({
             eventsDB={eventsDB}
             charactersDB={charactersDB}
             setVNState={setVNState}
+            eventList={eventList}
+            setOverallEvents={setOverallEvents}
+            overallEvents={overallEvents}
           />
         )}
 

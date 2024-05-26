@@ -1,11 +1,35 @@
 [
   {
     "scene": "intro",
-    "text": [
-      "Hello My name is monika, I will be your tour guide!",
-      "Currently I am trapped here. But hey such is life!"
+    "dialogue": [
+      {
+        "text": "Hello My name is monika, I will be your tour guide!",
+        "character": "Monika"
+      },
+      {
+        "text": "Currently I am trapped here. But hey such is life!",
+        "character": "Monika"
+      }
     ],
+    "character": "Monika"
+  },
+  {
+    "scene": "default",
+    "dialogue": [{ "text": "Hmm?", "character": "Monika" }],
     "character": "monika"
   },
-  { "scene": "dit", "text": ["Welcome to DIT"], "character": "monika" }
+  {
+    "scene": "dit",
+    "dialogue": [
+      {
+        "text": "Welcome to Department of Information Technology or in short DIT.",
+        "character": "Monika"
+      },
+      {
+        "text": "Where the person who made me is studying.",
+        "character": "Monika"
+      }
+    ],
+    "character": "monika"
+  }
 ]

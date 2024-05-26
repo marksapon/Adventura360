@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from "react";
 
-
-
 /* Components */
 import Display from "./components/Display";
 
-function VN({ charactersDB, eventsDB, setVNState }) {
-  const [current_character, setCurrentCharacter] = useState();
-  const [current_event, setCurrentEvent] = useState();
-  const [current_dialogue, setCurrentDialogue] = useState();
+function VN({
+  charactersDB,
+  eventsDB,
+  setVNState,
+  eventList,
+  overallEvents,
+  setOverallEvents,
+}) {
+  const [eventLoad, setEventLoad] = useState([]);
 
-  // Generating Characters
+  // Character Class
   class Character {
     constructor(name, sprites) {
       this.name = name;
@@ -18,8 +21,20 @@ function VN({ charactersDB, eventsDB, setVNState }) {
     }
   }
 
-  const characters = generateCharacters();
+  // Event Class
+  class Event {
+    constructor(scene, dialogue, character) {
+      this.scene = scene;
+      this.dialogue = dialogue;
+      this.character = character;
+    }
+  }
 
+  const characters = generateCharacters(); // Generate Characters
+
+  const events = generateEvents(); // Generate Events that are still
+
+  // Generate Characters Function
   function generateCharacters() {
     const characters = [];
 
@@ -34,36 +49,52 @@ function VN({ charactersDB, eventsDB, setVNState }) {
     return characters;
   }
 
-  // Generating Events
-  class Event {
-    constructor(scene, dialogue, character) {
-      this.scene = scene;
-      this.dialogue = dialogue;
-      this.character = character;
-    }
-  }
-
-  const events = generateCharacters();
-
   function generateEvents() {
     const events = [];
 
-    eventsDB.forEach((event) => {
+    overallEvents.forEach((event) => {
       events.push(new Event(event.scene, event.dialogue, event.character));
     });
 
     return events;
   }
 
-  console.log("Characters:", characters);
-  console.log("Events:", events);
+  function getEvents() {
+    eventList.map((eventTarget) => {
+      console.log("Event:", eventTarget);
+      events.map((event) => {
+        console.log("Event:", event);
+        if (event.scene === eventTarget) {
+          console.log("Event found!");
+          setEventLoad([...eventLoad, event]);
+        } else {
+          console.log("Event not found!");
+        }
+      });
+    });
+  }
+
+  useEffect(() => {
+    // console.log("Event List:", eventList);
+    // console.log("Characters:", characters);
+    // console.log("Events:", events);
+    getEvents();
+  }, []);
+
+  useEffect(() => {
+    console.log("Event Load:", eventLoad);
+  }, [eventLoad]);
 
   return (
-    <Display
-      current_character={current_character}
-      current_dialogue={current_dialogue}
-      setVNState={setVNState}
-    />
+    <>
+      {eventLoad && eventLoad.length > 0 && (
+        <Display
+          eventLoad={eventLoad}
+          setVNState={setVNState}
+          characters={characters}
+        />
+      )}
+    </>
   );
 }
 
