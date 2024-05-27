@@ -34,6 +34,7 @@ import { TbMessageChatbot } from "react-icons/tb"; // Chatbot Icon
 import Navigationbar from "./components/Navigationbar";
 import Minimap from "./components/Minimap";
 import VN from "../VNmodule/VN"; // VN Module
+import { GiConsoleController } from "react-icons/gi";
 
 function Module360({
   nodesDB,
@@ -147,7 +148,6 @@ function Module360({
 
   const [firstTime, setFirstTime] = useState(isFirstTime()); // First Time State
   const [eventList, setEventList] = useState([]); // Event List State
-  const [overallEvents, setOverallEvents] = useState(eventsDB); // Overall Events State
   const [vnState, setVNState] = useState(false); // VN State
 
   // Function to get the current scene based on the URL queries
@@ -394,15 +394,27 @@ function Module360({
   useEffect(() => {
     if (viewerRef.current) {
       viewerRef.current.hotspot.refresh();
+
       setCurr_Extras(generateExtras());
     }
   }, [select_Scene, curr_Internal]);
+
+  useEffect(() => {
+    if (firstTime) {
+      eventHandler();
+    } else if (
+      targetType(select_Scene.scene) === "building" &&
+      eventCheck(select_Scene.scene)
+    ) {
+      eventHandler();
+    }
+  }, [select_Scene]);
 
   /* Hotspot Actions */
 
   // Function that performs action based on type of Hotspot
   function action(type, target, index) {
-    console.log("Action");
+    // console.log("Action");
     // console.log("Access Type:", access);
 
     if (type === "move") {
@@ -421,7 +433,7 @@ function Module360({
 
       setIsOutside(true);
 
-      eventHandler(target);
+      // eventHandler();
 
       changeScene(buildingsDB, target); // Change Scene
     } else if (type === "info") {
@@ -491,7 +503,7 @@ function Module360({
 
     for (const data of type) {
       if (data.scene === target) {
-        console.log("Scene Match");
+        // console.log("Scene Match");
         setSelect_Scene(data);
       }
     }
@@ -569,13 +581,7 @@ function Module360({
     setBldgModalState(true);
   }
 
-  useEffect(() => {
-    // console.log("First Time:", firstTime);
-    if (firstTime) {
-      eventHandler();
-    }
-  }, [firstTime]);
-
+  /* Event List */
   useEffect(() => {
     console.log("Event List:", eventList);
   }, [eventList]);
@@ -584,20 +590,41 @@ function Module360({
   //   console.log("Event List:", eventList);
   // }, [vnState]);
 
+  function eventCheck(target) {
+    let result = false;
+    eventsDB.forEach((event) => {
+      if (event.scene === target) {
+        result = true;
+      }
+    });
+
+    return result;
+  }
+
   /* VN Component */
-  function eventHandler(target) {
+  function eventHandler() {
     console.log("Event Handler");
 
     if (firstTime) {
+      console.log("First Time Event");
       setEventList((prev) => [...prev, "intro"]);
-    } else {
-      if (target) {
-        setEventList((prev) => [...prev, target]);
-      } else {
-        setEventList((prev) => [...prev, "default"]);
+
+      if (targetType(select_Scene.scene) === "building") {
+        setEventList((prev) =>
+          Array.from(new Set([...prev, select_Scene.scene])),
+        );
       }
+      console.log("Displaying VN");
+      setVNState(true);
+    } else {
+      if (targetType(select_Scene.scene) === "building") {
+        setEventList((prev) =>
+          Array.from(new Set([...prev, select_Scene.scene])),
+        );
+      }
+      console.log("Displaying VN");
+      setVNState(true);
     }
-    setVNState(true);
   }
 
   /* Module360 Component */
@@ -811,7 +838,7 @@ function Module360({
                   <button
                     className="flex h-12 w-12 transform items-center justify-center rounded-full border-2 border-transparent bg-white p-2 transition-transform duration-500 ease-in-out hover:scale-110 hover:border-green-500"
                     onClick={() => {
-                      eventHandler();
+                      setVNState(true);
                     }}
                   >
                     <TbMessageChatbot
@@ -831,12 +858,11 @@ function Module360({
         {/* Visual Novel */}
         {vnState && (
           <VN
-            eventsDB={eventsDB}
             charactersDB={charactersDB}
+            eventsDB={eventsDB}
             setVNState={setVNState}
             eventList={eventList}
-            setOverallEvents={setOverallEvents}
-            overallEvents={overallEvents}
+            setEventList={setEventList}
           />
         )}
 

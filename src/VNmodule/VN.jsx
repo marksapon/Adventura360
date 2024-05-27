@@ -7,12 +7,10 @@ function VN({
   charactersDB,
   eventsDB,
   setVNState,
-  eventList,
-  overallEvents,
-  setOverallEvents,
-}) {
-  const [eventLoad, setEventLoad] = useState([]);
 
+  eventList,
+  setEventList,
+}) {
   // Character Class
   class Character {
     constructor(name, sprites) {
@@ -30,11 +28,7 @@ function VN({
     }
   }
 
-  const characters = generateCharacters(); // Generate Characters
-
-  const events = generateEvents(); // Generate Events that are still
-
-  // Generate Characters Function
+  // Generate All Characters Class
   function generateCharacters() {
     const characters = [];
 
@@ -49,51 +43,94 @@ function VN({
     return characters;
   }
 
+  // Generate All Events Class
   function generateEvents() {
     const events = [];
 
-    overallEvents.forEach((event) => {
+    eventsDB.forEach((event) => {
       events.push(new Event(event.scene, event.dialogue, event.character));
     });
 
     return events;
   }
 
+  const characters = generateCharacters(); // Generate Characters Classes
+
+  const events = generateEvents(); // Generate Events Classes
+
+  // Store target Events in Event Load
   function getEvents() {
-    eventList.map((eventTarget) => {
-      console.log("Event:", eventTarget);
-      events.map((event) => {
-        console.log("Event:", event);
+    const temp = [];
+
+    eventList.forEach((eventTarget, index) => {
+      events.forEach((event) => {
         if (event.scene === eventTarget) {
-          console.log("Event found!");
-          setEventLoad([...eventLoad, event]);
-        } else {
-          console.log("Event not found!");
+          temp.push(event);
+          // If it's not the last event in the list, add a transition event
+          if (index < eventList.length - 1) {
+            temp.push(addTransitionEvent()[0]);
+          }
         }
       });
     });
+
+    return temp;
+  }
+
+  const [eventLoad, setEventLoad] = useState(getEvents()); // Events that needed to be executed
+
+  // Set Default Event
+  function defaultEvent() {
+    const temp = [
+      {
+        scene: "default",
+        dialogue: [{ text: "Hmm?" }],
+      },
+    ];
+
+    return temp;
+  }
+
+  // Add Transition Event Between Events
+  function addTransitionEvent() {
+    const temp = [
+      {
+        scene: "transition",
+        dialogue: [{ text: "Anyway" }],
+      },
+    ];
+
+    return temp;
   }
 
   useEffect(() => {
+    // console.log("VN Event List:", events);
     // console.log("Event List:", eventList);
-    // console.log("Characters:", characters);
-    // console.log("Events:", events);
-    getEvents();
-  }, []);
+    console.log("Event Load:", eventLoad);
+
+    // getEvents();
+  }, [eventList]);
 
   useEffect(() => {
-    console.log("Event Load:", eventLoad);
+    if (eventLoad.length === 0) {
+      console.log("Default Event");
+      setEventLoad(defaultEvent());
+    }
   }, [eventLoad]);
 
   return (
     <>
-      {eventLoad && eventLoad.length > 0 && (
-        <Display
-          eventLoad={eventLoad}
-          setVNState={setVNState}
-          characters={characters}
-        />
-      )}
+      {eventLoad &&
+        eventLoad.length > 0 &&
+        characters &&
+        characters.length !== 0 && (
+          <Display
+            eventLoad={eventLoad}
+            setVNState={setVNState}
+            characters={characters}
+            setEventList={setEventList}
+          />
+        )}
     </>
   );
 }

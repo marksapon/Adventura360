@@ -3,16 +3,16 @@
     "name": "Monika",
     "sprites": [
       {
-        "mood": "normal",
-        "image": "/assets/VN Module/character/normal.webp"
-      },
-      {
-        "mood": "greet",
+        "sprite": "greet",
         "image": "/assets/VN Module/character/greet.webp"
       },
       {
-        "mood": "speaking",
-        "image": "assets/VN Module/character/speaking.webp"
+        "sprite": "normal",
+        "image": "/assets/VN Module/character/normal.webp"
+      },
+      {
+        "sprite": "speaking",
+        "image": "/assets/VN Module/character/speaking.webp"
       }
     ]
   }
