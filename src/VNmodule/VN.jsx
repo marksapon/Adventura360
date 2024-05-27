@@ -96,7 +96,7 @@ function VN({
     const temp = [
       {
         scene: "transition",
-        dialogue: [{ text: "Anyway" }],
+        dialogue: [{ text: "Anyway..." }],
       },
     ];
 
