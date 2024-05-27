@@ -11,14 +11,6 @@ function VN({
   eventList,
   setEventList,
 }) {
-  // Character Class
-  class Character {
-    constructor(name, sprites) {
-      this.name = name;
-      this.sprites = sprites;
-    }
-  }
-
   // Event Class
   class Event {
     constructor(scene, dialogue, character) {
@@ -26,21 +18,6 @@ function VN({
       this.dialogue = dialogue;
       this.character = character;
     }
-  }
-
-  // Generate All Characters Class
-  function generateCharacters() {
-    const characters = [];
-
-    charactersDB.forEach((character) => {
-      const sprites = [];
-      character.sprites.forEach((sprite) => {
-        sprites.push(sprite);
-      });
-      characters.push(new Character(character.name, sprites));
-    });
-
-    return characters;
   }
 
   // Generate All Events Class
@@ -54,7 +31,7 @@ function VN({
     return events;
   }
 
-  const characters = generateCharacters(); // Generate Characters Classes
+  const characters = charactersDB; // Generate Characters Classes
 
   const events = generateEvents(); // Generate Events Classes
 

@@ -40,29 +40,31 @@ function Display({ characters, eventLoad, setVNState, setEventList }) {
 
   // Get Characters
   function getCharacter(name, sprite) {
-    let temp;
+    let temp = { name: "", image: "" };
 
     if (name && sprite) {
       characters.forEach((character) => {
         if (character.name === name) {
+          temp["name"] = character.name;
           character.sprites.forEach((charSprite) => {
             if (charSprite.sprite === sprite) {
-              temp = charSprite;
+              temp["image"] = charSprite.image;
             }
           });
         }
       });
     } else {
-      temp = characters[0].sprites[0];
+      temp["name"] = characters[0].name;
+      temp["image"] = characters[0].sprites[0].image;
     }
 
     return temp;
   }
 
   // Check for Event Load
-  useEffect(() => {
-    console.log("VN Event Load:", displayEventList); // Events that needed to be executed
-  }, [displayEventList]);
+  // useEffect(() => {
+  //   console.log("VN Event Load:", displayEventList); // Events that needed to be executed
+  // }, [displayEventList]);
 
   // Check for Current Character
   useEffect(() => {
@@ -72,7 +74,7 @@ function Display({ characters, eventLoad, setVNState, setEventList }) {
   // Check for Current Dialogue
   useEffect(() => {
     console.log("VN Dialogue:", dialogue); // Current Dialogue
-    if (dialogue.character || dialogue.sprite) {
+    if (dialogue.character && dialogue.sprite) {
       setCharacter(getCharacter(dialogue.character, dialogue.sprite));
     } else {
       setCharacter(getCharacter());
@@ -112,6 +114,11 @@ function Display({ characters, eventLoad, setVNState, setEventList }) {
                 nextDialogue();
               }}
             >
+              <div className="absolute -top-12 flex">
+                <div className="text-bold font-sans text-5xl font-extrabold text-green-500">
+                  {character.name}
+                </div>
+              </div>
               <div className="font-sans text-base font-semibold text-black md:text-xl">
                 {purifyText(dialogue.text)}
               </div>

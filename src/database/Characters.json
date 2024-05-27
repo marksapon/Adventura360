@@ -1,18 +1,36 @@
 [
   {
-    "name": "Monika",
+    "name": "Joshua",
+    "sprites": [
+      {
+        "sprite": "normal",
+        "image": "/assets/VN Module/character/Josh.png"
+      }
+    ]
+  },
+  {
+    "name": "Macky",
+    "sprites": [
+      {
+        "sprite": "normal",
+        "image": "/assets/VN Module/character/macky neutral.webp"
+      }
+    ]
+  },
+  {
+    "name": "Character Name",
     "sprites": [
       {
         "sprite": "greet",
-        "image": "/assets/VN Module/character/greet.webp"
+        "image": "image path of greet sprite"
       },
       {
         "sprite": "normal",
-        "image": "/assets/VN Module/character/normal.webp"
+        "image": "image path of normal sprite"
       },
       {
         "sprite": "speaking",
-        "image": "/assets/VN Module/character/speaking.webp"
+        "image": "image path of speaking sprite"
       }
     ]
   }
