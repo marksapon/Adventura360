@@ -232,7 +232,6 @@
     "scene": "ih1",
     "location": "International House 1 / College of Medicine",
     "image": "/assets/Database Images/unrestricted nodes/39.webp",
-    "back": ["node38", "node39", "node40"],
     "coords": {
       "x": 0.576,
       "y": 0.878,
@@ -274,7 +273,6 @@
     "scene": "con",
     "location": "College of Nursing",
     "image": "/assets/Building Module/Internal Nodes/nursing/1.webp",
-    "back": ["node44", "node48", "node98"],
     "coords": {
       "x": 0.481,
       "y": 0.843,

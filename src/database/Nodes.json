@@ -1427,8 +1427,8 @@
     "scene": "node44",
     "image": "/assets/Database Images/unrestricted nodes/44.webp",
     "coords": {
-      "x": 0.566,
-      "y": 0.941
+      "x": 0.53,
+      "y": 0.82
     },
     "hotspot": [
       {
@@ -1596,13 +1596,6 @@
         "target": "node47",
         "yaw": 288.5,
         "pitch": -20
-      },
-      {
-        "id": 3,
-        "type": "move",
-        "target": "",
-        "yaw": 198.17,
-        "pitch": -32
       },
       {
         "type": "bldg",
@@ -3236,13 +3229,6 @@
         "type": "move",
         "target": "node97",
         "yaw": 186.86,
-        "pitch": -20
-      },
-      {
-        "id": 3,
-        "type": "move",
-        "target": "",
-        "yaw": 310.74,
         "pitch": -20
       },
       {
