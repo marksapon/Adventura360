@@ -4,7 +4,21 @@ import DOMPurify from "dompurify";
 /* Icons */
 import { FaWindowClose } from "react-icons/fa";
 
-function Display({ characters, eventLoad, setVNState, setEventList }) {
+function Display({
+  characters,
+
+  eventLoad,
+
+  setVNState,
+
+  setEventList,
+
+  setEventsAvailable,
+
+  setTourState,
+
+  setEventDone,
+}) {
   const [displayEventList, setDisplayEventList] = useState(eventLoad);
 
   const [current_event, setCurrentEvent] = useState(displayEventList[0]);
@@ -13,6 +27,28 @@ function Display({ characters, eventLoad, setVNState, setEventList }) {
   const [character, setCharacter] = useState(getCharacter());
 
   const [dialogueCounter, setDialogueCounter] = useState(0);
+
+  function finishedEvents(removeAll) {
+    if (removeAll) {
+      for (const event of eventLoad) {
+        setEventsAvailable((prev) =>
+          prev.filter((e) => e.scene !== event.scene),
+        );
+        if (current_event.scene !== "default") {
+          setEventDone((prev) => Array.from(new Set([...prev, event.scene])));
+        }
+      }
+    } else {
+      setEventsAvailable((prev) =>
+        prev.filter((e) => e.scene !== current_event.scene),
+      );
+      if (current_event.scene !== "default") {
+        setEventDone((prev) =>
+          Array.from(new Set([...prev, current_event.scene])),
+        );
+      }
+    }
+  }
 
   function nextDialogue() {
     // Execute this as long as there is an event in EventLoad
@@ -31,7 +67,9 @@ function Display({ characters, eventLoad, setVNState, setEventList }) {
           setCurrentEvent(displayEventList[1]); // Set the next event
           setDialogue(displayEventList[1].dialogue[0]); // Set the dialogue of the next event
         } else {
+          setTourState(false);
           setEventList([]); // If there's no more event, set the event list to empty
+          finishedEvents(); // Remove the event from the available events
           setVNState(false); // Close the VN
         }
       }
@@ -67,13 +105,13 @@ function Display({ characters, eventLoad, setVNState, setEventList }) {
   // }, [displayEventList]);
 
   // Check for Current Character
-  useEffect(() => {
-    console.log("VN Current Character:", character); // Current Event
-  }, [character]);
+  // useEffect(() => {
+  //   console.log("VN Current Character:", character); // Current Event
+  // }, [character]);
 
   // Check for Current Dialogue
   useEffect(() => {
-    console.log("VN Dialogue:", dialogue); // Current Dialogue
+    // console.log("VN Dialogue:", dialogue); // Current Dialogue
     if (dialogue.character && dialogue.sprite) {
       setCharacter(getCharacter(dialogue.character, dialogue.sprite));
     } else {
@@ -88,17 +126,21 @@ function Display({ characters, eventLoad, setVNState, setEventList }) {
   }
 
   return (
-    <div className=" absolute bottom-0 z-20 h-full w-full">
+    <div className=" absolute bottom-0 z-20 h-full w-full ">
       <div className="absolute h-screen w-screen bg-black bg-opacity-80" />
 
       {/* Content */}
       <div className="position-relative absolute flex h-full w-full animate-fade-in items-end justify-center ">
         {/* Character */}
-        <div className="absolute flex h-full w-full items-end md:w-1/2">
-          <div className="relative flex h-full w-full animate-fade-in items-end justify-center overflow-hidden">
+        <div className="absolute flex h-5/6 w-full items-end  md:w-1/2">
+          <div className="relative flex h-full w-full animate-fade-in items-end justify-center overflow-hidden ">
             <img
-              className="absolute left-1/2 top-0 h-full -translate-x-1/2 transform object-contain md:object-contain"
-              src={character.image}
+              className="absolute left-1/2 top-0 h-full -translate-x-1/2 transform  object-contain md:object-contain"
+              src={
+                character.image
+                  ? character.image
+                  : "https://via.placeholder.com/150"
+              }
               alt="Character"
             />
           </div>
@@ -127,6 +169,7 @@ function Display({ characters, eventLoad, setVNState, setEventList }) {
               <button
                 onClick={() => {
                   setEventList([]);
+                  finishedEvents(true);
                   setVNState(false);
                 }}
               >

@@ -10,37 +10,25 @@ function VN({
 
   eventList,
   setEventList,
+
+  events_available,
+  setEventsAvailable,
+
+  setEventDone,
+
+  tourState,
+  setTourState,
 }) {
-  // Event Class
-  class Event {
-    constructor(scene, dialogue, character) {
-      this.scene = scene;
-      this.dialogue = dialogue;
-      this.character = character;
-    }
-  }
-
-  // Generate All Events Class
-  function generateEvents() {
-    const events = [];
-
-    eventsDB.forEach((event) => {
-      events.push(new Event(event.scene, event.dialogue, event.character));
-    });
-
-    return events;
-  }
+  // const events = events_available;
 
   const characters = charactersDB; // Generate Characters Classes
-
-  const events = generateEvents(); // Generate Events Classes
 
   // Store target Events in Event Load
   function getEvents() {
     const temp = [];
 
     eventList.forEach((eventTarget, index) => {
-      events.forEach((event) => {
+      eventsDB.forEach((event) => {
         if (event.scene === eventTarget) {
           temp.push(event);
           // If it's not the last event in the list, add a transition event
@@ -55,6 +43,10 @@ function VN({
   }
 
   const [eventLoad, setEventLoad] = useState(getEvents()); // Events that needed to be executed
+
+  useEffect(() => {
+    console.log("Event Load:", eventLoad);
+  }, []);
 
   // Set Default Event
   function defaultEvent() {
@@ -80,20 +72,30 @@ function VN({
     return temp;
   }
 
+  // useEffect(() => {
+  //   console.log("VN Module");
+  // }, []);
+
   useEffect(() => {
     // console.log("VN Event List:", events);
     // console.log("Event List:", eventList);
-    console.log("Event Load:", eventLoad);
-
+    // console.log("Event Load:", eventLoad);
+    // console.log("Events Available:", events_available);
     // getEvents();
   }, [eventList]);
 
+  // useEffect(() => {
+  //   console.log("Event List:", eventList);
+  //   console.log("Tour State:", tourState);
+  // }, [tourState]);
+
   useEffect(() => {
-    if (eventLoad.length === 0) {
-      console.log("Default Event");
+    if (eventLoad.length === 0 && tourState) {
       setEventLoad(defaultEvent());
+    } else if (events_available.length === 0) {
+      console.log("No more events");
     }
-  }, [eventLoad]);
+  }, [eventLoad, tourState]);
 
   return (
     <>
@@ -106,6 +108,9 @@ function VN({
             setVNState={setVNState}
             characters={characters}
             setEventList={setEventList}
+            setEventsAvailable={setEventsAvailable}
+            setTourState={setTourState}
+            setEventDone={setEventDone}
           />
         )}
     </>

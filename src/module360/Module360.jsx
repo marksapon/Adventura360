@@ -34,7 +34,6 @@ import { TbMessageChatbot } from "react-icons/tb"; // Chatbot Icon
 import Navigationbar from "./components/Navigationbar";
 import Minimap from "./components/Minimap";
 import VN from "../VNmodule/VN"; // VN Module
-import { GiConsoleController } from "react-icons/gi";
 
 function Module360({
   nodesDB,
@@ -46,6 +45,67 @@ function Module360({
   eventsDB,
   charactersDB,
 }) {
+  /* Event */
+  class Event {
+    constructor(scene, dialogue, character) {
+      this.scene = scene;
+      this.dialogue = dialogue;
+      this.character = character;
+    }
+  }
+
+  // Generate All Events Class
+  function generateEvents() {
+    const events = [];
+
+    eventsDB.forEach((event) => {
+      events.push(new Event(event.scene, event.dialogue, event.character));
+    });
+
+    return events;
+  }
+
+  const events = generateEvents(); // Generate Events Classes
+
+  const [events_available, setEventsAvailable] = useState(events); // Available Events
+
+  const [event_done, setEventDone] = useState([]); // Events Done
+
+  const [tourState, setTourState] = useState(false); // Tour State
+
+  const events_copy = events_available; // Copy of Events Available
+
+  function checkEvent(scene, tour = false) {
+    console.log("Checking Event:", scene);
+
+    let result = false;
+
+    if (tour) {
+      console.log("Checking Event TOUR STATE");
+      console.log("Events Done:", event_done);
+      for (const event of event_done) {
+        if (event === scene) {
+          console.log("EVENT FOUND:", scene);
+          result = true;
+        }
+      }
+    } else {
+      console.log("Checking Event NORMAL STATE");
+      for (const event of events_available) {
+        if (event.scene === scene) {
+          console.log("EVENT FOUND:", scene);
+          result = true;
+        }
+      }
+    }
+
+    return result;
+  }
+
+  useEffect(() => {
+    console.log("Events Completed:", event_done);
+  }, [event_done]);
+
   class Extras {
     constructor(
       index,
@@ -401,12 +461,9 @@ function Module360({
 
   useEffect(() => {
     if (firstTime) {
-      eventHandler();
-    } else if (
-      targetType(select_Scene.scene) === "building" &&
-      eventCheck(select_Scene.scene)
-    ) {
-      eventHandler();
+      eventHandler(select_Scene.scene);
+    } else if (checkEvent(select_Scene.scene)) {
+      eventHandler(select_Scene.scene);
     }
   }, [select_Scene]);
 
@@ -432,8 +489,6 @@ function Module360({
       setBackButton(true);
 
       setIsOutside(true);
-
-      // eventHandler();
 
       changeScene(buildingsDB, target); // Change Scene
     } else if (type === "info") {
@@ -558,6 +613,8 @@ function Module360({
     // console.log("Setting Extras State");
     const newExtras = curr_Extras.map((extras) => {
       if (extras.id === index) {
+        eventHandler(extras.scene);
+
         return {
           ...extras,
           state: !extras.state,
@@ -586,43 +643,50 @@ function Module360({
     console.log("Event List:", eventList);
   }, [eventList]);
 
-  // useEffect(() => {
-  //   console.log("Event List:", eventList);
-  // }, [vnState]);
-
-  function eventCheck(target) {
-    let result = false;
-    eventsDB.forEach((event) => {
-      if (event.scene === target) {
-        result = true;
-      }
-    });
-
-    return result;
-  }
-
   /* VN Component */
-  function eventHandler() {
-    console.log("Event Handler");
+  function eventHandler(scene, tour = false) {
+    // console.log("Event Handler");
+
+    function getEvent(scene) {
+      // console.log("Getting Event");
+
+      if (tour) {
+        console.log("Getting Event TOUR STATE");
+        console.log("Event Done:", event_done);
+        for (const event of event_done) {
+          if (event === scene) {
+            console.log("Event Found Completed:", scene);
+            setEventList((prev) => Array.from(new Set([...prev, scene])));
+          }
+        }
+      } else {
+        // console.log("Normal State");
+        for (const event of events_available) {
+          if (event.scene === scene) {
+            setEventList((prev) => Array.from(new Set([...prev, scene])));
+          }
+        }
+      }
+    }
 
     if (firstTime) {
       console.log("First Time Event");
       setEventList((prev) => [...prev, "intro"]);
 
-      if (targetType(select_Scene.scene) === "building") {
-        setEventList((prev) =>
-          Array.from(new Set([...prev, select_Scene.scene])),
-        );
+      if (checkEvent(scene, tour)) {
+        getEvent(scene);
       }
-      console.log("Displaying VN");
+
+      // console.log("Displaying VN");
+
       setVNState(true);
     } else {
-      if (targetType(select_Scene.scene) === "building") {
-        setEventList((prev) =>
-          Array.from(new Set([...prev, select_Scene.scene])),
-        );
+      console.log("Normal Event");
+      if (checkEvent(scene, tour)) {
+        getEvent(scene);
       }
-      console.log("Displaying VN");
+
+      // console.log("Displaying VN");
       setVNState(true);
     }
   }
@@ -838,7 +902,8 @@ function Module360({
                   <button
                     className="flex h-12 w-12 transform items-center justify-center rounded-full border-2 border-transparent bg-white p-2 transition-transform duration-500 ease-in-out hover:scale-110 hover:border-green-500"
                     onClick={() => {
-                      setVNState(true);
+                      setTourState(true);
+                      eventHandler(select_Scene.scene, true);
                     }}
                   >
                     <TbMessageChatbot
@@ -863,6 +928,12 @@ function Module360({
             setVNState={setVNState}
             eventList={eventList}
             setEventList={setEventList}
+            setEventsAvailable={setEventsAvailable}
+            events_available={events_copy}
+            event_done={event_done}
+            setEventDone={setEventDone}
+            setTourState={setTourState}
+            tourState={tourState}
           />
         )}
 

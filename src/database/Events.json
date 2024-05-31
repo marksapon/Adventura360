@@ -15,9 +15,6 @@
         "text": "Our campus is quite big. So this tour will might take a while."
       },
       {
-        "text": "Right now, we're at the front of gate 1 in the campus."
-      },
-      {
         "text": "You can roam around as you please, but if you need me, just click on the Tour Guide button on the upper left below the minimap."
       },
       {
@@ -74,7 +71,7 @@
     ]
   },
   {
-    "scene": "osas",
+    "scene": "osa",
     "dialogue": [
       {
         "text": "This is the Offeice of Student Affairs and Services or in short OSAS."
@@ -470,17 +467,11 @@
       }
     ]
   },
-
   {
-    "scene": "sample event",
+    "scene": "bd",
     "dialogue": [
       {
-        "text": "Welcome to Adventura 360. A virtual tour inside the Cavite State University Indang Campus.",
-        "character": "character name",
-        "sprite": "character name image variations"
-      },
-      {
-        "text": "Welcome to Adventura 360. A virtual tour inside the Cavite State University Indang Campus."
+        "text": "This is the blue dorm which is under construction."
       }
     ]
   }
