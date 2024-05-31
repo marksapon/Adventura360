@@ -643,5 +643,18 @@
     "desc": "Welcome to the International Convention Center at our University.",
 
     "gallery": []
+  },
+  {
+    "scene": "pool",
+    "name": "Saluysoy Resort",
+    "access": "account",
+    "acronym": "pool",
+    "type": "school_facilities",
+    "tags": ["school", "leisure"],
+    "image": "/assets/Building Module/Background/cwtlab.webp",
+    "desc": "Welcome to Saluysoy Resort, where every moment is a celebration of nature's beauty and the warmth of Filipino hospitality. Nestled amidst lush greenery and serene waters, our resort is a haven of relaxation and rejuvenation. Explore the wonders of our pristine surroundings, from tranquil lakes to vibrant flora and fauna. Whether you're seeking adventure or simply a peaceful retreat, Saluysoy offers an unforgettable experience for all. Step into a world where time slows down, and every breath is filled with the essence of tranquility. Welcome to Saluysoy Resort, where nature's embrace awaits.",
+
+    "contacts": {},
+    "gallery": []
   }
 ]

@@ -818,6 +818,14 @@
         "target": "torigate",
         "yaw": 224.8,
         "pitch": 9.73
+      },
+
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node418",
+        "yaw": 286.79,
+        "pitch": -20
       }
     ]
   },
@@ -4671,6 +4679,13 @@
         "target": "node146",
         "yaw": 204.01,
         "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node419",
+        "yaw": 124.67,
+        "pitch": -20
       }
     ]
   },
@@ -4714,13 +4729,6 @@
     },
     "hotspot": [
       {
-        "id": 1,
-        "type": "move",
-        "target": "node150",
-        "yaw": 291.91,
-        "pitch": -20
-      },
-      {
         "id": 2,
         "type": "move",
         "target": "node148",
@@ -4730,7 +4738,7 @@
       {
         "id": 3,
         "type": "move",
-        "target": "",
+        "target": "node419",
         "yaw": 170.69,
         "pitch": -20
       }
@@ -6547,6 +6555,13 @@
         "target": "saaluysoy",
         "yaw": 234.48,
         "pitch": -2.73
+      },
+      {
+        "type": "info",
+        "class": "school_facilities",
+        "target": "pool",
+        "yaw": 315.22,
+        "pitch": -4.89
       }
     ]
   },
@@ -12285,6 +12300,61 @@
         "type": "move",
         "target": "node411",
         "yaw": 193.12,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node418",
+    "image": "/assets/Database Images/unrestricted nodes/418.webp",
+    "coords": {
+      "x": 0.55,
+      "y": 0.997
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node419",
+        "yaw": 283.31,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node24",
+        "yaw": 103.31,
+        "pitch": -20
+      }
+    ]
+  },
+  {
+    "scene": "node419",
+    "image": "/assets/Database Images/unrestricted nodes/419.webp",
+    "coords": {
+      "x": 0.55,
+      "y": 0.997
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "move",
+        "target": "node147",
+        "yaw": 332.46,
+        "pitch": -20
+      },
+      {
+        "id": 2,
+        "type": "move",
+        "target": "node418",
+        "yaw": 149.11,
+        "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node149",
+        "yaw": 69.99,
         "pitch": -20
       }
     ]

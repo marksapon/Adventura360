@@ -105,7 +105,7 @@
   {
     "scene": "ncrdec",
     "location": "National Coffee Research, Development and Extension Center",
-    "image": "/assets/Database Images/unrestricted nodes/24.webp",
+    "image": "/assets/Building Module/Internal Nodes/ncrdec/1.webp",
     "back": ["node24"],
     "coords": {
       "x": 0.711,
@@ -118,8 +118,8 @@
         "type": "info",
         "class": "info",
         "target": "ncrdec",
-        "yaw": 255.76,
-        "pitch": 9.72
+        "yaw": 299.27,
+        "pitch": 10.36
       }
     ]
   },
@@ -857,6 +857,26 @@
         "target": "museum",
         "yaw": 126.4,
         "pitch": -3.52
+      }
+    ]
+  },
+  {
+    "scene": "pool",
+    "location": "Saluysoy Resort",
+    "image": "/assets/Database Images/unrestricted nodes/222.webp",
+    "coords": {
+      "x": 0.633,
+      "y": 0.673,
+      "type": "school_facilities"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "pool",
+        "yaw": 315.22,
+        "pitch": -4.89
       }
     ]
   }
