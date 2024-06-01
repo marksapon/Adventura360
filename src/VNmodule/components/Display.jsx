@@ -54,11 +54,11 @@ function Display({
     // Execute this as long as there is an event in EventLoad
     if (displayEventList.length !== 0) {
       if (dialogueCounter < current_event.dialogue.length - 1) {
-        console.log("Next Dialogue");
+        // console.log("Next Dialogue");
         setDialogue(current_event.dialogue[dialogueCounter + 1]);
         setDialogueCounter(dialogueCounter + 1);
       } else if (dialogueCounter === current_event.dialogue.length - 1) {
-        console.log("Next Event");
+        // console.log("Next Event");
         setDialogueCounter(0);
         setDisplayEventList((prev) => prev.slice(1));
 

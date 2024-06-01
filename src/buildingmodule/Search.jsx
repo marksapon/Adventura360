@@ -272,7 +272,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                           <div className="mt-4 grid grid-cols-2 grid-rows-5 gap-2 sm:gap-4">
                             {/* Map over the keys of the contentMap object */}
                             {Object.keys(keyIcons).map((key, index) => (
-                              <div
+                              <button
                                 key={index}
                                 className={`
       flex items-center gap-2 rounded-lg p-1 text-center transition-all duration-300 ease-in-out sm:p-3 
@@ -291,7 +291,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                                   {keyIcons[key].icon}
                                 </span>
                                 {keyIcons[key].display}
-                              </div>
+                              </button>
                             ))}
                           </div>
                         </div>

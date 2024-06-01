@@ -80,24 +80,24 @@ function Module360({
   const events_copy = events_available; // Copy of Events Available
 
   function checkEvent(scene, tour = false) {
-    console.log("Checking Event:", scene);
+    // console.log("Checking Event:", scene);
 
     let result = false;
 
     if (tour) {
-      console.log("Checking Event TOUR STATE");
-      console.log("Events Done:", event_done);
+      // console.log("Checking Event TOUR STATE");
+      // console.log("Events Done:", event_done);
       for (const event of event_done) {
         if (event === scene) {
-          console.log("EVENT FOUND:", scene);
+          // console.log("EVENT FOUND:", scene);
           result = true;
         }
       }
     } else {
-      console.log("Checking Event NORMAL STATE");
+      // console.log("Checking Event NORMAL STATE");
       for (const event of events_available) {
         if (event.scene === scene) {
-          console.log("EVENT FOUND:", scene);
+          // console.log("EVENT FOUND:", scene);
           result = true;
         }
       }
@@ -106,9 +106,9 @@ function Module360({
     return result;
   }
 
-  useEffect(() => {
-    console.log("Events Completed:", event_done);
-  }, [event_done]);
+  // useEffect(() => {
+  //   console.log("Events Completed:", event_done);
+  // }, [event_done]);
 
   class Extras {
     constructor(
@@ -548,10 +548,10 @@ function Module360({
 
   // Function that changes scene based on the hotspot target
   function changeScene(type, target) {
-    console.log("Changing Scene");
-    console.log("Type:", type, "Target:", target);
+    // console.log("Changing Scene");
+    // console.log("Type:", type, "Target:", target);
 
-    if (access !== "private" && status === "inside") {
+    if (access !== "private" && status !== "outside") {
       // Can be used to check only if the access is
       // console.log("Setting Previous Scene:", isOutside);
       setPrevious_Scene(select_Scene);
@@ -566,6 +566,11 @@ function Module360({
       }
     }
   }
+
+  useEffect(() => {
+    console.log("Access Type:", access);
+    console.log("Status:", status);
+  }, [status, access]);
 
   /* Extras Hotspot */
 
@@ -642,9 +647,9 @@ function Module360({
   }
 
   /* Event List */
-  useEffect(() => {
-    console.log("Event List:", eventList);
-  }, [eventList]);
+  // useEffect(() => {
+  //   console.log("Event List:", eventList);
+  // }, [eventList]);
 
   /* VN Component */
   function eventHandler(scene, tour = false) {
@@ -673,7 +678,7 @@ function Module360({
     }
 
     if (firstTime) {
-      console.log("First Time Event");
+      // console.log("First Time Event");
       setEventList((prev) => [...prev, "intro"]);
 
       if (checkEvent(scene, tour)) {
@@ -684,7 +689,7 @@ function Module360({
 
       setVNState(true);
     } else {
-      console.log("Normal Event");
+      // console.log("Normal Event");
       if (checkEvent(scene, tour)) {
         getEvent(scene);
       }
@@ -694,12 +699,30 @@ function Module360({
     }
   }
 
-  function returnFunction() {}
+  function returnFunction() {
+    // console.log("Going Back");
+
+    if (status === "inside") {
+      // if inside the building set the access back to public and change the scene back to the scene of building.
+      setStatus("outside");
+
+      setAccess("public");
+      changeScene(buildingsDB, insideBuilding);
+    } else {
+      // console.log("Previous Scene:", previous_Scene);
+      // if outside the building set the outside value and change the scene back to the previous scene then remove the back button.
+      setStatus();
+
+      setSelect_Scene(previous_Scene);
+      setBackButton(false);
+    }
+  }
 
   function exitFunction() {
-    console.log("Current Scene:", select_Scene);
+    // console.log("Current Scene:", select_Scene);
     changeScene(nodesDB, select_Scene.back[0]);
     setStatus();
+    setAccess("public");
     setBackButton(false);
   }
 
@@ -858,24 +881,7 @@ function Module360({
           <div className=" relative z-0 flex items-center justify-center">
             <button
               type="button"
-              onClick={() => {
-                // console.log("Going Back");
-
-                if (status === "inside") {
-                  // if inside the building set the access back to public and change the scene back to the scene of building.
-                  setStatus("outside");
-
-                  setAccess("public");
-                  changeScene(buildingsDB, insideBuilding);
-                } else {
-                  // console.log("Previous Scene:", previous_Scene);
-                  // if outside the building set the outside value and change the scene back to the previous scene then remove the back button.
-                  setStatus("inside");
-
-                  setSelect_Scene(previous_Scene);
-                  setBackButton(false);
-                }
-              }}
+              onClick={() => returnFunction()}
               className={`absolute mb-48 flex w-auto items-center justify-center gap-x-2 rounded-lg border px-5 py-2 text-sm text-gray-700 transition-colors duration-200 sm:mb-48 md:mb-20 lg:mb-16 ${status === "outside" ? "dark:bg-green-500" : "dark:bg-orange-500"} dark:text-white ${status === "outside" ? "dark:hover:bg-green-400" : "dark:hover:bg-orange-400"} `}
             >
               {status === "inside" && (

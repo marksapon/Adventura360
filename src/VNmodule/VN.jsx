@@ -44,9 +44,9 @@ function VN({
 
   const [eventLoad, setEventLoad] = useState(getEvents()); // Events that needed to be executed
 
-  useEffect(() => {
-    console.log("Event Load:", eventLoad);
-  }, []);
+  // useEffect(() => {
+  //   console.log("Event Load:", eventLoad);
+  // }, []);
 
   // Set Default Event
   function defaultEvent() {

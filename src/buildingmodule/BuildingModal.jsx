@@ -404,7 +404,7 @@ const BuildingModal = ({
               )}
 
               {/* Go to Button */}
-              {current_info && current_info.hasScene && mode !== "360" && (
+              {current_info && mode !== "360" && (
                 <div className="flex h-20 w-auto flex-col items-center justify-start">
                   <button
                     className="flex items-center justify-center rounded-full bg-green-500 p-2"
