@@ -720,7 +720,12 @@ function Module360({
 
   function exitFunction() {
     // console.log("Current Scene:", select_Scene);
-    changeScene(nodesDB, select_Scene.back[0]);
+    if (select_Scene.back) {
+      changeScene(nodesDB, select_Scene.back[0]);
+    } else {
+      setSelect_Scene(previous_Scene);
+    }
+
     setStatus();
     setAccess("public");
     setBackButton(false);
