@@ -3,8 +3,8 @@
     "scene": "node406",
     "image": "/assets/Database Images/unrestricted nodes/406.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.355,
+      "y": 1.297
     },
     "hotspot": [
       {
@@ -56,11 +56,24 @@
         "pitch": -20
       },
       {
+        "type": "move",
+        "target": "node405",
+        "yaw": 109.02,
+        "pitch": -20
+      },
+      {
         "type": "popup",
         "class": "info",
         "target": "gate1",
         "yaw": 149.81,
         "pitch": 18.12
+      },
+      {
+        "type": "popup",
+        "class": "court",
+        "target": "field",
+        "yaw": 49.43,
+        "pitch": 0.39
       }
     ],
     "travelType": "walk"
@@ -205,8 +218,8 @@
         "type": "bldg",
         "class": "bldg",
         "target": "ih2",
-        "yaw": 185.2,
-        "pitch": 18.34
+        "yaw": 187.24,
+        "pitch": 14.58
       }
     ]
   },
@@ -2014,6 +2027,13 @@
         "target": "kioskdit",
         "yaw": 325.71,
         "pitch": 0.05
+      },
+      {
+        "type": "popup",
+        "class": "washarea",
+        "target": "washareaDIT",
+        "yaw": 227.04,
+        "pitch": -0.65
       }
     ]
   },
@@ -2045,6 +2065,13 @@
         "target": "dit",
         "yaw": 332.15,
         "pitch": 21.02
+      },
+      {
+        "type": "popup",
+        "class": "washarea",
+        "target": "washareaDIT",
+        "yaw": 261.36,
+        "pitch": 3.37
       }
     ]
   },
@@ -2340,13 +2367,6 @@
         "pitch": -20
       },
       {
-        "id": 3,
-        "type": "move",
-        "target": "",
-        "yaw": 112.7,
-        "pitch": -20
-      },
-      {
         "type": "bldg",
         "class": "bldg",
         "target": "nhs",
@@ -2407,6 +2427,13 @@
         "target": "hs",
         "yaw": 108.84,
         "pitch": 5.33
+      },
+      {
+        "type": "popup",
+        "class": "info",
+        "target": "washareaSHS",
+        "yaw": 82.21,
+        "pitch": 1.98
       }
     ]
   },
@@ -2430,13 +2457,6 @@
         "type": "move",
         "target": "node73",
         "yaw": 14.18,
-        "pitch": -20
-      },
-      {
-        "id": 3,
-        "type": "move",
-        "target": "",
-        "yaw": 286.38,
         "pitch": -20
       }
     ]
@@ -2493,6 +2513,13 @@
         "target": "node416",
         "yaw": 150.68,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "court",
+        "target": "field",
+        "yaw": 149.8,
+        "pitch": -1.48
       }
     ]
   },
@@ -2524,6 +2551,13 @@
         "target": "node416",
         "yaw": 133.56,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "court",
+        "target": "field",
+        "yaw": 134.63,
+        "pitch": -0.61
       }
     ]
   },
@@ -2562,6 +2596,13 @@
         "target": "gate1",
         "yaw": 193.64,
         "pitch": 1.29
+      },
+      {
+        "type": "popup",
+        "class": "court",
+        "target": "field",
+        "yaw": 88.5,
+        "pitch": 1.84
       }
     ]
   },
@@ -8482,6 +8523,13 @@
         "pitch": -25.93
       },
       {
+        "type": "popup",
+        "class": "washarea",
+        "target": "washareaCAFENR",
+        "yaw": 151.08,
+        "pitch": -3.31
+      },
+      {
         "type": "bldg",
         "class": "bldg",
         "target": "cafenr",
@@ -9224,6 +9272,20 @@
       },
       {
         "type": "popup",
+        "class": "washarea",
+        "target": "washareaDEE",
+        "yaw": 161.17,
+        "pitch": 0.63
+      },
+      {
+        "type": "popup",
+        "class": "batibot",
+        "target": "kioskDEE",
+        "yaw": 213.42,
+        "pitch": 0.02
+      },
+      {
+        "type": "popup",
         "class": "parking",
         "target": "parkingDEE",
         "yaw": 30.04,
@@ -9537,6 +9599,13 @@
         "pitch": -1.63
       },
       {
+        "type": "popup",
+        "class": "batibot",
+        "target": "batibotcas",
+        "yaw": 300.64,
+        "pitch": 0
+      },
+      {
         "type": "bldg",
         "class": "bldg",
         "target": "ogs",
@@ -9580,6 +9649,13 @@
         "target": "node320",
         "yaw": 266.01,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "batibot",
+        "target": "batibotcas",
+        "yaw": 341.56,
+        "pitch": 2.6
       },
       {
         "type": "popup",
@@ -9938,6 +10014,13 @@
         "target": "node331",
         "yaw": 111.18,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "washarea",
+        "target": "washareaCAFENR",
+        "yaw": 269.08,
+        "pitch": -7.57
       }
     ]
   },
@@ -10017,6 +10100,13 @@
         "target": "node338",
         "yaw": 107.14,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "batibot",
+        "target": "washareaOldCemds",
+        "yaw": 90.58,
+        "pitch": 7.93
       },
       {
         "type": "bldg",
@@ -10172,6 +10262,20 @@
         "target": "node333",
         "yaw": 289.29,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "batibot",
+        "target": "washareaOldCemds",
+        "yaw": 304.26,
+        "pitch": 4.54
+      },
+      {
+        "type": "popup",
+        "class": "restroom",
+        "target": "restroomDAFE",
+        "yaw": 124.63,
+        "pitch": 5.19
       }
     ]
   },
@@ -10703,7 +10807,7 @@
       },
       {
         "type": "popup",
-        "class": "attractions",
+        "class": "cafeteria",
         "target": "canteen",
         "yaw": 106.59,
         "pitch": 11.33
@@ -11985,8 +12089,8 @@
     "scene": "node405",
     "image": "/assets/Database Images/unrestricted nodes/405.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.383,
+      "y": 1.292
     },
     "hotspot": [
       {
@@ -12009,6 +12113,13 @@
         "target": "node401",
         "yaw": 203.86,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "info",
+        "target": "gate1",
+        "yaw": 296.45,
+        "pitch": 6.64
       }
     ]
   },
@@ -12253,8 +12364,8 @@
     "scene": "node416",
     "image": "/assets/Database Images/unrestricted nodes/416.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.363,
+      "y": 1.243
     },
     "hotspot": [
       {
@@ -12308,8 +12419,8 @@
     "scene": "node418",
     "image": "/assets/Database Images/unrestricted nodes/418.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.701,
+      "y": 1.176
     },
     "hotspot": [
       {
@@ -12332,8 +12443,8 @@
     "scene": "node419",
     "image": "/assets/Database Images/unrestricted nodes/419.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.732,
+      "y": 1.162
     },
     "hotspot": [
       {

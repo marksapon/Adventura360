@@ -208,7 +208,7 @@
     "coords": {
       "x": 0.235,
       "y": 1.016,
-      "type": "school_facilities"
+      "type": "cafeteria"
     },
     "image": "/assets/Building Module/Extras/recreational.webp"
   },
@@ -263,7 +263,7 @@
     "coords": {
       "x": 0.63,
       "y": 1.038,
-      "type": "attractions"
+      "type": "school_facilities"
     },
     "image": "/assets/Building Module/Extras/water testing laboratory.webp"
   },
@@ -274,13 +274,13 @@
     "coords": {
       "x": 0.408,
       "y": 1.279,
-      "type": "attractions"
+      "type": "school_facilities"
     },
     "image": "/assets/Building Module/Extras/gate1.webp"
   },
   {
     "scene": "washareaDEE",
-    "location": "Wash area near Department of Electrical Engineering",
+    "location": "Wash area near DEE",
     "desc": "This is the wash area near Department of Electrical Engineering",
     "coords": {
       "x": 0.301,
@@ -291,18 +291,18 @@
   },
   {
     "scene": "kioskDEE",
-    "location": "Kiosk near Department of Electrical Engineering",
+    "location": "Kiosk near DEE",
     "desc": "This is the kiosk near Department of Electrical Engineering",
     "coords": {
-      "x": 0.29,
-      "y": 0.88,
+      "x": 0.304,
+      "y": 0.868,
       "type": "batibot"
     },
     "image": "/assets/Building Module/Extras/DEE kiosk.webp"
   },
   {
     "scene": "parkingDEE",
-    "location": "Parking lot near Department of Electrical Engineering",
+    "location": "Parking lot near DEE",
     "desc": "This is the parking area near Department of Electrical Engineering",
     "coords": {
       "x": 0.283,
@@ -313,7 +313,7 @@
   },
   {
     "scene": "underconstructionDEE",
-    "location": "Extension building of Department of Electrical Engineering",
+    "location": "Extension building of DEE",
     "desc": "This is the under construction extension Department of Electrical Engineering",
     "coords": {
       "x": 0.251,
@@ -412,7 +412,7 @@
   },
   {
     "scene": "washareaCVMBS",
-    "location": "Wash area near College of Veterinary Medicine and Biomedical Sciences",
+    "location": "Wash area near CVMBS",
     "desc": "This is the wash area near College of Veterinary Medicine and Biomedical Sciences",
     "coords": {
       "x": 0.471,
@@ -423,8 +423,8 @@
   },
   {
     "scene": "restroomDAFE",
-    "location": "Restroom near Department of Agriculture and Food Engineering",
-    "desc": "This is the restroom near Department of Agriculture and Food Engineering",
+    "location": "Restroom near DAFE",
+    "desc": "This is the restroom near DAFE",
     "coords": {
       "x": 0.418,
       "y": 0.945,
@@ -434,11 +434,11 @@
   },
   {
     "scene": "washareaDAFE",
-    "location": "Wash area near Department of Agriculture and Food Engineering",
-    "desc": "This is the wash area near Department of Agriculture and Food Engineering",
+    "location": "Wash area near DAFE",
+    "desc": "This is the wash area near DAFE",
     "coords": {
-      "x": 0.435,
-      "y": 0.934,
+      "x": 0.335,
+      "y": 0.919,
       "type": "washarea"
     },
     "image": "/assets/Building Module/Extras/DAFE wash area.webp"
@@ -489,11 +489,11 @@
   },
   {
     "scene": "washareaOldCemds",
-    "location": "Wash area near Old College of Economics, Management and Development Studies",
+    "location": "Wash area near old CEMDS",
     "desc": "This is the wash area near Old College of Engineering and Design Studies",
     "coords": {
-      "x": 0.422,
-      "y": 0.938,
+      "x": 0.435,
+      "y": 0.933,
       "type": "washarea"
     },
     "image": "/assets/Building Module/Extras/old cemds wash area.webp"
@@ -646,9 +646,53 @@
     "location": "Ina ng Kalikasan",
     "desc": "This statue is called Ina ng Kalikasan",
     "coords": {
-      "x": 0.539,
-      "y": 0.754,
+      "x": 0.54,
+      "y": 0.756,
       "type": "attractions"
+    },
+    "image": ""
+  },
+  {
+    "scene": "field",
+    "location": "Softball field",
+    "desc": "This is the university's Softball Field",
+    "coords": {
+      "x": 0.364,
+      "y": 1.244,
+      "type": "court"
+    },
+    "image": "/assets/Building Module/Extras/field.webp"
+  },
+  {
+    "scene": "washareaCAFENR",
+    "location": "Wash area near CAFENR",
+    "desc": "This is the wash area near College of Agriculture, Food, Environment and Natural Resources",
+    "coords": {
+      "x": 0.554,
+      "y": 0.975,
+      "type": "washarea"
+    },
+    "image": ""
+  },
+  {
+    "scene": "parkingCRF",
+    "location": "Parking area near Coffee Research Facility",
+    "desc": "This is the parking area near Coffee Research Facility",
+    "coords": {
+      "x": 0.438,
+      "y": 0.818,
+      "type": "parking"
+    },
+    "image": ""
+  },
+  {
+    "scene": "parkingLIBRARY",
+    "location": "Parking area near University Library",
+    "desc": "This is the parking area near University Library",
+    "coords": {
+      "x": 0.559,
+      "y": 0.947,
+      "type": "parking"
     },
     "image": ""
   }

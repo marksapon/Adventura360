@@ -10,7 +10,7 @@ import {
 const developers = [
   {
     name: "Mark Dharel Sapon",
-    role: "Front & Backend Developer",
+    role: "Adventura 360°'s Front & Backend Developer",
     img: "../assets/Landing Page/developers/maki.webp",
     socials: {
       facebook: "https://www.facebook.com/mark.sapon.33",
@@ -21,7 +21,7 @@ const developers = [
   },
   {
     name: "John Joshua Sagpao",
-    role: "UI/UX Designer & Frontend Developer",
+    role: "Adventura 360°'s UI/UX Designer & Frontend Developer",
     img: "../assets/Landing Page/developers/josh.webp",
     socials: {
       facebook: "https://www.facebook.com/johnjoshua.solitesagpao",
@@ -32,7 +32,7 @@ const developers = [
   },
   {
     name: "Kevin Roi Nuesca",
-    role: "UI/UX Designer & Frontend Developer",
+    role: "Adventura 360°'s UI/UX Designer & Frontend Developer",
     img: "../assets/Landing Page/developers/kevin.webp",
     socials: {
       facebook: "https://facebook.com/username",
@@ -43,8 +43,8 @@ const developers = [
     },
   },
   {
-    name: "Alex Kal-el Buenviaje",
-    role: "Project Manager",
+    name: "Alex Kal-El Buenviaje",
+    role: "Adventura 360°'s Project Manager",
     img: "../assets/Landing Page/developers/lex.webp",
     socials: {
       facebook: "https://www.facebook.com/LexBuenviaje",
