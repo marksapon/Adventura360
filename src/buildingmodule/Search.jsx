@@ -168,7 +168,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
       const currentKey = keys[i];
       const contents = originalSuggestions[currentKey];
 
-      const newFilteredContents = contents.filter((content) => {
+      let newFilteredContents = contents.filter((content) => {
         // console.log("Content: ", content);
         const matchesSearchTerm =
           content.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -188,6 +188,8 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
 
         return shouldIncludeContent;
       });
+
+      newFilteredContents.sort((a, b) => a.name.localeCompare(b.name));
 
       if (newFilteredContents.length > 0) {
         newFilteredSuggestions[currentKey] = newFilteredContents;
