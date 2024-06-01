@@ -983,22 +983,27 @@ function Module360({
 
         {/* Minimap */}
         {/* Toggle Minimap */}
-        <div className="pointer-events-auto absolute bottom-0  right-0 flex items-center justify-center pb-20 pr-2 sm:pb-20 sm:pr-2 md:pb-2 md:pr-2 lg:pb-2 lg:pr-2">
-          <button
-            className="shadow-2xl-inner rounded-full bg-gray-100 p-2 text-white drop-shadow-md"
-            onClick={() => {
-              setMapButtonVisibility(!mapButtonVisible);
-            }}
-          >
-            {mapButtonVisible ? (
-              <TbMap className="md:h-9/12 h-6 w-6 text-gray-500 md:w-full lg:h-10 lg:w-10" /> // Icon for hiding the map button  h-6 w-6 md:h-10 md:w-10
-            ) : (
-              <TbMapOff
-                size={25}
-                className="md:h-9/12 h-6 w-6 text-gray-500 md:w-full lg:h-10 lg:w-10"
-              /> // Icon for showing the map button
-            )}
-          </button>
+        <div className="pointer-events-auto absolute bottom-0  right-0 flex items-center justify-center pb-32 pr-2 sm:pb-20 sm:pr-2 md:pb-2 md:pr-2 lg:pb-2 lg:pr-2">
+          <div className="group relative inline-block">
+            <div className="absolute right-full top-1/2 mr-2 w-32 -translate-y-1/2 transform rounded-lg bg-white px-3 py-2 text-center font-sans text-sm font-semibold text-gray-500 opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
+              Toggle Minimap
+            </div>
+            <button
+              className={`flex h-12 w-12 transform items-center justify-center rounded-full border-2 border-transparent ${mapButtonVisible ? "bg-green-500" : "bg-white"} p-2 transition-transform duration-500 ease-in-out hover:scale-110 ${mapButtonVisible ? "hover:border-white" : "hover:border-green-500"}`}
+              onClick={() => {
+                setMapButtonVisibility(!mapButtonVisible);
+              }}
+            >
+              {mapButtonVisible ? (
+                <TbMap className="md:h-9/12 h-6 w-6 text-white md:w-full lg:h-10 lg:w-10" /> // Icon for hiding the map button  h-6 w-6 md:h-10 md:w-10
+              ) : (
+                <TbMapOff
+                  size={25}
+                  className="md:h-9/12 h-6 w-6 text-gray-500 md:w-full lg:h-10 lg:w-10"
+                /> // Icon for showing the map button
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Toggle Minimap */}

@@ -966,7 +966,7 @@ const MapModule = ({
                     Filter Overlays
                   </div>
                   <button
-                    className={`${filterClicked ? "bg-green-500" : "bg-white"} pointer-events-auto mb-1 ml-1 flex items-center justify-center rounded-full p-2 drop-shadow-xl`}
+                    className={`${filterClicked ? "bg-green-500" : "bg-white"} pointer-events-auto mb-1 ml-1 flex transform items-center  justify-center rounded-full border-2 p-2 drop-shadow-xl transition-transform duration-500 ease-in-out hover:scale-110`}
                     onClick={() => {
                       if (filterClicked) {
                         removeOverlays(targetLocation);
@@ -1002,7 +1002,7 @@ const MapModule = ({
                     Current Location
                   </div>
                   <button
-                    className="pointer-events-auto rounded-full bg-white p-2 text-white drop-shadow-xl"
+                    className="pointer-events-auto transform rounded-full border-2 bg-white p-2 text-white drop-shadow-xl transition-transform duration-500 ease-in-out hover:scale-110 hover:border-green-500"
                     onClick={() => {
                       viewer.viewport.panTo(location);
                       setCheckCenter(true);
@@ -1024,7 +1024,7 @@ const MapModule = ({
                     Toggle Map Legend
                   </div>
                   <button
-                    className="pointer-events-auto rounded-full bg-white p-2 text-white drop-shadow-xl"
+                    className="pointer-events-auto transform rounded-full border-2 bg-white p-2 text-white drop-shadow-xl transition-transform duration-500 ease-in-out hover:scale-110 hover:border-green-500"
                     onClick={() => {
                       setMapLegendState(!mapLegendState);
                     }}
@@ -1043,7 +1043,7 @@ const MapModule = ({
                     Directions
                   </div>
                   <button
-                    className="pointer-events-auto rounded-full bg-white p-2 text-white drop-shadow-xl"
+                    className="pointer-events-auto transform rounded-full border-2 bg-white p-2 text-white drop-shadow-xl transition-transform duration-500 ease-in-out hover:scale-110 hover:border-green-500"
                     onClick={() => {
                       setPathFindingClicked(true);
                       if (minimized) {
