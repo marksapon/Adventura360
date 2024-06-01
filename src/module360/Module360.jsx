@@ -28,9 +28,16 @@ import { FaCircle } from "react-icons/fa6"; // Undefined Icon
 import { TbMap } from "react-icons/tb"; // Minimap On Icon
 import { TbMapOff } from "react-icons/tb"; // Minimap Off Icon
 
+import { TbMessageChatbot } from "react-icons/tb"; // Chatbot Icon
+
+import { FaPersonWalkingArrowLoopLeft } from "react-icons/fa6"; // Exit Building Icon
+import { TbDoorExit } from "react-icons/tb"; // Exit inside the building Icon
+import { GiBackwardTime } from "react-icons/gi"; // Previous Location
+
 /* Components */
 import Navigationbar from "./components/Navigationbar";
 import Minimap from "./components/Minimap";
+import VN from "../VNmodule/VN"; // VN Module
 
 function Module360({
   nodesDB,
@@ -39,7 +46,70 @@ function Module360({
   loginType,
   infosDB,
   internalDB,
+  eventsDB,
+  charactersDB,
 }) {
+  /* Event */
+  class Event {
+    constructor(scene, dialogue, character) {
+      this.scene = scene;
+      this.dialogue = dialogue;
+      this.character = character;
+    }
+  }
+
+  // Generate All Events Class
+  function generateEvents() {
+    const events = [];
+
+    eventsDB.forEach((event) => {
+      events.push(new Event(event.scene, event.dialogue, event.character));
+    });
+
+    return events;
+  }
+
+  const events = generateEvents(); // Generate Events Classes
+
+  const [events_available, setEventsAvailable] = useState(events); // Available Events
+
+  const [event_done, setEventDone] = useState([]); // Events Done
+
+  const [tourState, setTourState] = useState(false); // Tour State
+
+  const events_copy = events_available; // Copy of Events Available
+
+  function checkEvent(scene, tour = false) {
+    // console.log("Checking Event:", scene);
+
+    let result = false;
+
+    if (tour) {
+      // console.log("Checking Event TOUR STATE");
+      // console.log("Events Done:", event_done);
+      for (const event of event_done) {
+        if (event === scene) {
+          // console.log("EVENT FOUND:", scene);
+          result = true;
+        }
+      }
+    } else {
+      // console.log("Checking Event NORMAL STATE");
+      for (const event of events_available) {
+        if (event.scene === scene) {
+          // console.log("EVENT FOUND:", scene);
+          result = true;
+        }
+      }
+    }
+
+    return result;
+  }
+
+  // useEffect(() => {
+  //   console.log("Events Completed:", event_done);
+  // }, [event_done]);
+
   class Extras {
     constructor(
       index,
@@ -113,14 +183,13 @@ function Module360({
   const [initialPitch, setPitch] = useState(getParams("pitch"));
 
   // Previous Scene State
-  const [previous_Scene, setPrevious_Scene] = useState(nodesDB[0]);
+  const [previous_Scene, setPrevious_Scene] = useState(nodesDB[0]); // Remove the default previous scene
 
   // Autoplay State
   const [autoplay, setAutoplay] = useState(false);
 
   // Inside State
-  const [isInside, setIsInside] = useState(false);
-  const [isOutside, setIsOutside] = useState(false);
+  const [status, setStatus] = useState(""); // Status State
 
   // Select Curent Scene State
   const [select_Scene, setSelect_Scene] = useState(() => getScene());
@@ -138,6 +207,12 @@ function Module360({
   // Map State
   const [mapState, setMapState] = useState(false); // Map State
 
+  // VN State
+
+  const [firstTime, setFirstTime] = useState(isFirstTime()); // First Time State
+  const [eventList, setEventList] = useState([]); // Event List State
+  const [vnState, setVNState] = useState(false); // VN State
+
   // Function to get the current scene based on the URL queries
   function getScene() {
     let curr_scene;
@@ -154,7 +229,8 @@ function Module360({
         buildingsDB.filter((scene) => {
           if (scene.scene === target) {
             setBackButton(true);
-            setIsOutside(true);
+            setStatus("outside");
+
             setYaw(scene.hotspot[0].yaw);
             setPitch(scene.hotspot[0].pitch);
             curr_scene = scene;
@@ -236,6 +312,14 @@ function Module360({
     }
   }
 
+  function isFirstTime() {
+    if (sessionStorage.getItem("isFirst") === null) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   // Event listener for detecting device orientation
   useEffect(() => {
     function handleOrientationChange() {
@@ -243,6 +327,10 @@ function Module360({
     }
 
     window.addEventListener("resize", handleOrientationChange);
+
+    sessionStorage.setItem("isFirst", "false");
+
+    setFirstTime(false);
 
     return () => {
       window.removeEventListener("resize", handleOrientationChange);
@@ -370,9 +458,18 @@ function Module360({
   useEffect(() => {
     if (viewerRef.current) {
       viewerRef.current.hotspot.refresh();
+
       setCurr_Extras(generateExtras());
     }
   }, [select_Scene, curr_Internal]);
+
+  useEffect(() => {
+    if (firstTime) {
+      eventHandler(select_Scene.scene);
+    } else if (checkEvent(select_Scene.scene)) {
+      eventHandler(select_Scene.scene);
+    }
+  }, [select_Scene]);
 
   /* Hotspot Actions */
 
@@ -395,7 +492,7 @@ function Module360({
 
       setBackButton(true);
 
-      setIsOutside(true);
+      setStatus("outside"); // Can be merged into one
 
       changeScene(buildingsDB, target); // Change Scene
     } else if (type === "info") {
@@ -426,8 +523,6 @@ function Module360({
           }
         }
       });
-    } else {
-      // console.log("Undefined Type");
     }
   }
 
@@ -445,7 +540,7 @@ function Module360({
       temp.push(temp_internal);
     });
 
-    setIsInside(true);
+    setStatus("inside");
     setCurr_Internal(temp);
     setBackButton(true);
     changeScene(temp, temp[0].scene);
@@ -456,7 +551,8 @@ function Module360({
     // console.log("Changing Scene");
     // console.log("Type:", type, "Target:", target);
 
-    if (access !== "private" && isOutside === false) {
+    if (access !== "private" && status !== "outside") {
+      // Can be used to check only if the access is
       // console.log("Setting Previous Scene:", isOutside);
       setPrevious_Scene(select_Scene);
     }
@@ -465,11 +561,16 @@ function Module360({
 
     for (const data of type) {
       if (data.scene === target) {
-        console.log("Scene Match");
+        // console.log("Scene Match");
         setSelect_Scene(data);
       }
     }
   }
+
+  useEffect(() => {
+    console.log("Access Type:", access);
+    console.log("Status:", status);
+  }, [status, access]);
 
   /* Extras Hotspot */
 
@@ -482,7 +583,7 @@ function Module360({
     if (select_Scene && select_Scene.hotspot) {
       select_Scene.hotspot.forEach((hotspot, index) => {
         if (hotspot.type === "popup") {
-          if (isInside) {
+          if (status === "inside") {
             curr_InternalExtras.forEach((extras) => {
               if (extras.scene === hotspot.target) {
                 const extrasFormat = {
@@ -520,6 +621,8 @@ function Module360({
     // console.log("Setting Extras State");
     const newExtras = curr_Extras.map((extras) => {
       if (extras.id === index) {
+        eventHandler(extras.scene);
+
         return {
           ...extras,
           state: !extras.state,
@@ -541,6 +644,91 @@ function Module360({
     setTargetScene(target);
     setMode(mode);
     setBldgModalState(true);
+  }
+
+  /* Event List */
+  // useEffect(() => {
+  //   console.log("Event List:", eventList);
+  // }, [eventList]);
+
+  /* VN Component */
+  function eventHandler(scene, tour = false) {
+    // console.log("Event Handler");
+
+    function getEvent(scene) {
+      // console.log("Getting Event");
+
+      if (tour) {
+        console.log("Getting Event TOUR STATE");
+        console.log("Event Done:", event_done);
+        for (const event of event_done) {
+          if (event === scene) {
+            console.log("Event Found Completed:", scene);
+            setEventList((prev) => Array.from(new Set([...prev, scene])));
+          }
+        }
+      } else {
+        // console.log("Normal State");
+        for (const event of events_available) {
+          if (event.scene === scene) {
+            setEventList((prev) => Array.from(new Set([...prev, scene])));
+          }
+        }
+      }
+    }
+
+    if (firstTime) {
+      // console.log("First Time Event");
+      setEventList((prev) => [...prev, "intro"]);
+
+      if (checkEvent(scene, tour)) {
+        getEvent(scene);
+      }
+
+      // console.log("Displaying VN");
+
+      setVNState(true);
+    } else {
+      // console.log("Normal Event");
+      if (checkEvent(scene, tour)) {
+        getEvent(scene);
+      }
+
+      // console.log("Displaying VN");
+      setVNState(true);
+    }
+  }
+
+  function returnFunction() {
+    // console.log("Going Back");
+
+    if (status === "inside") {
+      // if inside the building set the access back to public and change the scene back to the scene of building.
+      setStatus("outside");
+
+      setAccess("public");
+      changeScene(buildingsDB, insideBuilding);
+    } else {
+      // console.log("Previous Scene:", previous_Scene);
+      // if outside the building set the outside value and change the scene back to the previous scene then remove the back button.
+      setStatus();
+
+      setSelect_Scene(previous_Scene);
+      setBackButton(false);
+    }
+  }
+
+  function exitFunction() {
+    // console.log("Current Scene:", select_Scene);
+    if (select_Scene.back) {
+      changeScene(nodesDB, select_Scene.back[0]);
+    } else {
+      setSelect_Scene(previous_Scene);
+    }
+
+    setStatus();
+    setAccess("public");
+    setBackButton(false);
   }
 
   /* Module360 Component */
@@ -698,57 +886,100 @@ function Module360({
           <div className=" relative z-0 flex items-center justify-center">
             <button
               type="button"
-              onClick={() => {
-                // console.log("Going Back");
-                if (isInside) {
-                  setIsInside(false);
-                  setAccess("public");
-                  changeScene(buildingsDB, insideBuilding);
-                } else {
-                  // console.log("Previous Scene:", previous_Scene);
-                  setIsOutside(false);
-                  setSelect_Scene(previous_Scene);
-                  setBackButton(false);
-                }
-              }}
-              className="absolute mb-48 flex w-auto items-center justify-center gap-x-2 rounded-lg border bg-white px-5 py-2 text-sm text-gray-700 transition-colors duration-200 hover:bg-gray-100 sm:mb-48 md:mb-20 lg:mb-16  dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:bg-gray-800 "
+              onClick={() => returnFunction()}
+              className={`absolute mb-48 flex w-auto items-center justify-center gap-x-2 rounded-lg border px-5 py-2 text-sm text-gray-700 transition-colors duration-200 sm:mb-48 md:mb-20 lg:mb-16 ${status === "outside" ? "dark:bg-green-500" : "dark:bg-orange-500"} dark:text-white ${status === "outside" ? "dark:hover:bg-green-400" : "dark:hover:bg-orange-400"} `}
             >
-              <svg
-                className="h-5 w-5 rotate-180 transform"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
-                />
-              </svg>
-              <span>Back</span>
+              {status === "inside" && (
+                <TbDoorExit className="flex h-5 w-5 items-center justify-center md:h-8 md:w-8" />
+              )}
+              {status === "outside" && (
+                <GiBackwardTime className="flex h-5 w-5 items-center justify-center md:h-8 md:w-8" />
+              )}
+              <div className="flex items-center justify-center">
+                <span className="flex items-center justify-center text-center font-sans text-base font-semibold md:text-xl">
+                  {status === "outside"
+                    ? "Return to Previous Location"
+                    : "Exit Building"}
+                </span>
+              </div>
             </button>
           </div>
         )}
 
         {/* Minimap */}
         <div className="pointer-events-auto absolute left-0 top-0 p-1 text-white">
-          <div className="relative flex flex-row justify-between">
-            <div className="mt-20 pb-2 pl-2">
+          <div className="relative mt-20 flex flex-col justify-between gap-2 pb-2 pl-2">
+            <div className="">
               {mapButtonVisible && (
                 <Minimap
                   onClick={() => setMapState(true)}
                   x={select_Scene.coords.x}
                   y={select_Scene.coords.y}
-                  previous_Scene={previous_Scene}
+                  previous_Scene={previous_Scene} // Make it appear only when there is a previous location
                   extrasDB={extrasDB}
                   buildingsDB={buildingsDB}
                 />
               )}
             </div>
+
+            <div className="flex items-center gap-2">
+              <div className="relative">
+                <div className="group">
+                  <button
+                    className="flex h-12 w-12 transform items-center justify-center rounded-full border-2 border-transparent bg-white p-2 transition-transform duration-500 ease-in-out hover:scale-110 hover:border-green-500"
+                    onClick={() => {
+                      setTourState(true);
+                      eventHandler(select_Scene.scene, true);
+                    }}
+                  >
+                    <TbMessageChatbot
+                      size={50}
+                      style={{ stroke: "green", fill: "white" }}
+                    />
+                  </button>
+                  <div className="absolute left-full top-1/2 ml-2 flex w-32 -translate-y-1/2 transform items-center justify-center rounded-lg bg-white p-2 text-center font-sans text-sm font-semibold text-gray-500 opacity-0 shadow-xl transition duration-200 ease-in-out group-hover:opacity-100">
+                    Tour Guide
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Exit Building */}
+            {status === "outside" && (
+              <div className="group pointer-events-auto relative flex h-12 w-12">
+                <button
+                  className="flex h-12 w-12 transform items-center justify-center rounded-full border-2 border-transparent bg-orange-400 p-2 transition-transform duration-500 ease-in-out hover:scale-110 hover:border-white"
+                  onClick={() => {
+                    console.log("Exit Building");
+                    exitFunction();
+                  }}
+                >
+                  <FaPersonWalkingArrowLoopLeft size={30} />
+                </button>
+                <div className=" absolute left-full top-1/2 ml-2 flex w-32 -translate-y-1/2 transform items-center justify-center rounded-lg bg-orange-400 p-2 text-center font-sans text-sm font-semibold text-white opacity-0 shadow-xl transition duration-200 ease-in-out group-hover:opacity-100">
+                  Exit
+                </div>
+              </div>
+            )}
           </div>
         </div>
+
+        {/* Visual Novel */}
+        {vnState && (
+          <VN
+            charactersDB={charactersDB}
+            eventsDB={eventsDB}
+            setVNState={setVNState}
+            eventList={eventList}
+            setEventList={setEventList}
+            setEventsAvailable={setEventsAvailable}
+            events_available={events_copy}
+            event_done={event_done}
+            setEventDone={setEventDone}
+            setTourState={setTourState}
+            tourState={tourState}
+          />
+        )}
 
         {/* <div className="absolute bottom-0 left-0 z-20 m-2 text-white">
           <div>Location: {select_Scene.scene}</div>
@@ -757,23 +988,29 @@ function Module360({
 
         {/* Minimap */}
         {/* Toggle Minimap */}
-        <div className="pointer-events-auto absolute bottom-0  right-0 flex items-center justify-center pb-20 pr-2 sm:pb-20 sm:pr-2 md:pb-2 md:pr-2 lg:pb-2 lg:pr-2">
-          <button
-            className="shadow-2xl-inner rounded-full bg-gray-100 p-2 text-white drop-shadow-md"
-            onClick={() => {
-              setMapButtonVisibility(!mapButtonVisible);
-            }}
-          >
-            {mapButtonVisible ? (
-              <TbMap className="md:h-9/12 h-6 w-6 text-gray-500 md:w-full lg:h-10 lg:w-10" /> // Icon for hiding the map button  h-6 w-6 md:h-10 md:w-10
-            ) : (
-              <TbMapOff
-                size={25}
-                className="md:h-9/12 h-6 w-6 text-gray-500 md:w-full lg:h-10 lg:w-10"
-              /> // Icon for showing the map button
-            )}
-          </button>
+        <div className="pointer-events-auto absolute bottom-0  right-0 flex items-center justify-center pb-32 pr-2 sm:pb-20 sm:pr-2 md:pb-2 md:pr-2 lg:pb-2 lg:pr-2">
+          <div className="group relative inline-block">
+            <div className="absolute right-full top-1/2 mr-2 w-32 -translate-y-1/2 transform rounded-lg bg-white px-3 py-2 text-center font-sans text-sm font-semibold text-gray-500 opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
+              Toggle Minimap
+            </div>
+            <button
+              className={`flex h-12 w-12 transform items-center justify-center rounded-full border-2 border-transparent ${mapButtonVisible ? "bg-green-500" : "bg-white"} p-2 transition-transform duration-500 ease-in-out hover:scale-110 ${mapButtonVisible ? "hover:border-white" : "hover:border-green-500"}`}
+              onClick={() => {
+                setMapButtonVisibility(!mapButtonVisible);
+              }}
+            >
+              {mapButtonVisible ? (
+                <TbMap className="md:h-9/12 h-6 w-6 text-white md:w-full lg:h-10 lg:w-10" /> // Icon for hiding the map button  h-6 w-6 md:h-10 md:w-10
+              ) : (
+                <TbMapOff
+                  size={25}
+                  className="md:h-9/12 h-6 w-6 text-gray-500 md:w-full lg:h-10 lg:w-10"
+                /> // Icon for showing the map button
+              )}
+            </button>
+          </div>
         </div>
+
         {/* Toggle Minimap */}
         {/* UI */}
       </View360>

@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Macky",
+    "sprites": [
+      {
+        "sprite": "normal",
+        "image": "/assets/VN Module/character/macky.png"
+      }
+    ]
+  }
+]

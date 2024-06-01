@@ -218,18 +218,18 @@ const BuildingModal = ({
                       {current_info ? (
                         current_info.tags.map((tag, index) => {
                           return (
-                            <p
+                            <div
                               key={index}
                               className="flex w-fit items-center justify-center rounded-full bg-orange-500 px-2 text-xs font-bold md:text-sm"
                             >
                               {tag.toUpperCase()}
-                            </p>
+                            </div>
                           );
                         })
                       ) : (
-                        <p className="flex w-fit items-center justify-center rounded-full bg-orange-500 px-2 text-xs font-bold md:text-sm">
+                        <div className="flex w-fit items-center justify-center rounded-full bg-orange-500 px-2 text-xs font-bold md:text-sm">
                           Tag
-                        </p>
+                        </div>
                       )}
                     </div>
 
@@ -265,13 +265,13 @@ const BuildingModal = ({
             {/* Description */}
             <div className="border-b pt-2">
               {current_info ? (
-                <p className="mb-2 max-h-[150px] overflow-auto px-6 py-2 text-justify text-xs md:text-base">
+                <div className="mb-2 max-h-[150px] overflow-auto px-6 py-2 text-justify text-xs md:text-base">
                   {purifyText(current_info.desc)}
-                </p>
+                </div>
               ) : (
-                <p className="mb-2 max-h-[150px] overflow-auto px-6 py-2 text-justify text-xs md:text-base">
+                <div className="mb-2 max-h-[150px] overflow-auto px-6 py-2 text-justify text-xs md:text-base">
                   Building's Description
-                </p>
+                </div>
               )}
             </div>
 
@@ -290,7 +290,7 @@ const BuildingModal = ({
                       className={`size-4 text-green-600 sm:size-6 ${activeButton === "facilities" ? "text-white" : "text-green-600"}`}
                     />
                   </button>
-                  <p className="pt-1 text-xs text-green-600">Facilities</p>
+                  <div className="pt-1 text-xs text-green-600">Facilities</div>
                 </div>
               )}
 
@@ -307,7 +307,7 @@ const BuildingModal = ({
                       className={`size-4 text-green-600 sm:size-6 ${activeButton === "history" ? "text-white" : "text-green-600"}`}
                     />
                   </button>
-                  <p className="pt-1 text-xs text-green-600">History</p>
+                  <div className="pt-1 text-xs text-green-600">History</div>
                 </div>
               )}
 
@@ -324,7 +324,7 @@ const BuildingModal = ({
                       className={`size-4 text-green-600 sm:size-6 ${activeButton === "services" ? "text-white" : "text-green-600"}`}
                     />
                   </button>
-                  <p className="pt-1 text-xs text-green-600">Services</p>
+                  <div className="pt-1 text-xs text-green-600">Services</div>
                 </div>
               )}
 
@@ -341,7 +341,7 @@ const BuildingModal = ({
                       className={`size-4 text-green-600 sm:size-6 ${activeButton === "departments" ? "text-white" : "text-green-600"}`}
                     />
                   </button>
-                  <p className="pt-1 text-xs text-green-600">Departments</p>
+                  <div className="pt-1 text-xs text-green-600">Departments</div>
                 </div>
               )}
 
@@ -358,7 +358,7 @@ const BuildingModal = ({
                       className={`size-4 text-green-600 sm:size-6 ${activeButton === "courses" ? "text-white" : "text-green-600"}`}
                     />
                   </button>
-                  <p className="pt-1 text-xs text-green-600">Courses</p>
+                  <div className="pt-1 text-xs text-green-600">Courses</div>
                 </div>
               )}
 
@@ -380,9 +380,9 @@ const BuildingModal = ({
                     </button>
                   </div>
                   <div>
-                    <p className="pt-1 text-center text-xs text-green-600">
+                    <div className="pt-1 text-center text-xs text-green-600">
                       Contacts
-                    </p>
+                    </div>
                   </div>
                 </div>
               )}
@@ -400,12 +400,12 @@ const BuildingModal = ({
                       className={`size-4 text-green-600 sm:size-6 ${shareModal ? "text-white" : "text-green-600"}`}
                     />
                   </button>
-                  <p className="pt-1 text-xs text-green-600">Share</p>
+                  <div className="pt-1 text-xs text-green-600">Share</div>
                 </div>
               )}
 
               {/* Go to Button */}
-              {current_info && current_info.hasScene && mode !== "360" && (
+              {current_info && mode !== "360" && (
                 <div className="flex h-20 w-auto flex-col items-center justify-start">
                   <button
                     className="flex items-center justify-center rounded-full bg-green-500 p-2"
@@ -419,7 +419,7 @@ const BuildingModal = ({
                   >
                     <MdDirections className="size-5 sm:size-7" />
                   </button>
-                  <p className="pt-1 text-xs text-green-600">Go to</p>
+                  <div className="pt-1 text-xs text-green-600">Go to</div>
                 </div>
               )}
               {/* Go to Button */}
@@ -435,7 +435,7 @@ const BuildingModal = ({
                   >
                     <FaInfo className={`size-4 text-white sm:size-6`} />
                   </button>
-                  <p className="pt-1 text-xs text-green-600">Learn more</p>
+                  <div className="pt-1 text-xs text-green-600">Learn more</div>
                 </div>
               )}
             </div>
@@ -459,9 +459,9 @@ const BuildingModal = ({
                 <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">
                   <ul className="justify-start text-balance">
                     <h1 className="pb-5 text-2xl">History</h1>
-                    <p className="text-justify text-xs sm:text-base">
+                    <div className="text-justify text-xs sm:text-base">
                       {purifyText(current_info.history)}
-                    </p>
+                    </div>
                   </ul>
                 </div>
               )}
@@ -600,11 +600,8 @@ const BuildingModal = ({
                       <div className="flex flex-col justify-center gap-4 rounded-md p-2">
                         {Object.keys(current_info.contacts).map(
                           (key, index) => (
-                            <>
-                              <li
-                                className="flex flex-row items-center gap-2 "
-                                key={index}
-                              >
+                            <div key={index}>
+                              <li className="flex flex-row items-center gap-2 ">
                                 {key === "Email" && (
                                   <MdEmail
                                     size={23}
@@ -632,7 +629,7 @@ const BuildingModal = ({
                                   </span>
                                 )}
                               </li>
-                            </>
+                            </div>
                           ),
                         )}
                       </div>

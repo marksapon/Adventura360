@@ -8,6 +8,8 @@ import buildingsLDB from "../database/Buildings.json";
 import extrasLDB from "../database/Extras.json";
 import infosLDB from "../database/Infos.json";
 import internalLDB from "../database/Internal_nodes.json";
+import charactersLDB from "../database/Characters.json";
+import eventsLDB from "../database/Events.json";
 
 function Adventura360({ BACKEND_URL, loginType }) {
   /* Fetch DB */
@@ -16,8 +18,11 @@ function Adventura360({ BACKEND_URL, loginType }) {
   const [buildingsDB, setBuildingsDB] = useState([]); // Buildings Database
   const [extrasDB, setExtrasDB] = useState([]); // Extras Database
   const [infosDB, setInfosDB] = useState([]); // Infos Database
-  const [isLoaded, setIsLoaded] = useState(false); // Data Loaded
   const [internalDB, setInternalDB] = useState([]); // Internal DB
+  const [eventsDB, setEventsDB] = useState([]); // Events Database
+  const [charactersDB, setCharactersDB] = useState([]); // Characters Database
+
+  const [isLoaded, setIsLoaded] = useState(false); // Data Loaded
 
   useEffect(() => {
     /* Backend Server (DO NOT DELETE)*/
@@ -27,29 +32,36 @@ function Adventura360({ BACKEND_URL, loginType }) {
     //   axios.get(`${BACKEND_URL}/getExtras`),
     //   axios.get(`${BACKEND_URL}/getInfos`),
     //   axios.get(`${BACKEND_URL}/getInternalNodes`),
+    //   axios.get(`${BACKEND_URL}/getCharacters`),
+    //   axios.get(`${BACKEND_URL}/getEvents`),
     // ])
-    //   .then(([nodes, buildings, extras, infos, internal_nodes]) => {
-    //     setNodesDB(nodes.data);
-    //     setBuildingsDB(buildings.data);
-    //     setExtrasDB(extras.data);
-    //     setInfosDB(infos.data);
-    //     setInternalDB(internal_nodes.data);
-    //     setTimeout(() => {
-    //       setIsLoaded(true);
-    //     }, 3000);
-    //   })
+    //   .then(
+    //     ([
+    //       nodes,
+    //       buildings,
+    //       extras,
+    //       infos,
+    //       internal_nodes,
+    //       events,
+    //       characters,
+    //     ]) => {
+    //       setNodesDB(nodes.data);
+    //       setBuildingsDB(buildings.data);
+    //       setExtrasDB(extras.data);
+    //       setInfosDB(infos.data);
+    //       setInternalDB(internal_nodes.data);
+    //       setCharactersDB(events.data);
+    //       setEventsDB(characters.data);
+    //       console.log("Data Fetched");
+    //       setTimeout(() => {
+    //         setIsLoaded(true);
+    //       }, 3000);
+    //     },
+    //   )
     //   .catch((err) => {
     //     console.log("ERROR OCCURED");
     //     console.log("Error:", err.message);
     //     alert("Error Occured. Loading Local Database...");
-    //     setNodesDB(nodesLDB);
-    //     setBuildingsDB(buildingsLDB);
-    //     setExtrasDB(extrasLDB);
-    //     setInfosDB(infosLDB);
-    //     setInternalDB(internalLDB);
-    //     setTimeout(() => {
-    //       setIsLoaded(true);
-    //     }, 3000);
     //   });
 
     /* Local Database */
@@ -58,6 +70,8 @@ function Adventura360({ BACKEND_URL, loginType }) {
     setExtrasDB(extrasLDB);
     setInfosDB(infosLDB);
     setInternalDB(internalLDB);
+    setCharactersDB(charactersLDB);
+    setEventsDB(eventsLDB);
     setTimeout(() => {
       setIsLoaded(true);
     }, 3000);
@@ -71,12 +85,14 @@ function Adventura360({ BACKEND_URL, loginType }) {
     >
       {isLoaded && (
         <Module360
+          loginType={loginType}
           nodesDB={nodesDB}
           buildingsDB={buildingsDB}
           extrasDB={extrasDB}
-          loginType={loginType}
           infosDB={infosDB}
           internalDB={internalDB}
+          eventsDB={eventsDB}
+          charactersDB={charactersDB}
         />
       )}
 

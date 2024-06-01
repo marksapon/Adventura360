@@ -1,0 +1,478 @@
+[
+  {
+    "scene": "intro",
+    "dialogue": [
+      {
+        "text": "Welcome to Adventura 360. A virtual tour inside the Cavite State University Indang Campus."
+      },
+      {
+        "text": "We are here today inside the campus and I will be your tour guide!"
+      },
+      {
+        "text": "Well..."
+      },
+      {
+        "text": "Our campus is quite big. So this tour will might take a while."
+      },
+      {
+        "text": "You can roam around as you please, but if you need me, just click on the Tour Guide button on the upper left below the minimap."
+      },
+      {
+        "text": "So shall we start the tour?"
+      }
+    ]
+  },
+  {
+    "scene": "ih2",
+    "dialogue": [
+      {
+        "text": "This is the International House 2 or IH2"
+      },
+      {
+        "text": "The first building we'll see near the Gate 1 of the campus."
+      },
+      {
+        "text": "This building serves as a dormitory for students who are far away from the campus."
+      },
+      {
+        "text": "This building also houses book store and other school services. If you're looking to buy books you can check out this building."
+      }
+    ]
+  },
+
+  {
+    "scene": "dit",
+    "dialogue": [
+      {
+        "text": "Welcome to Department of Information Technology or in short DIT.",
+        "character": "Macky",
+        "sprite": "normal"
+      },
+      {
+        "text": "As a Computer Science student, this is where our department is located.",
+        "character": "Macky",
+        "sprite": "normal"
+      }
+    ]
+  },
+
+  {
+    "scene": "cspear",
+    "dialogue": [
+      {
+        "text": "Welcome to the College of Sport and Physical Education and Recreation or in short CSPEAR."
+      },
+      {
+        "text": "This place also serves as the gymnasium of the university."
+      },
+      {
+        "text": "Fitness subject, are usually held here or in the oval."
+      }
+    ]
+  },
+  {
+    "scene": "osa",
+    "dialogue": [
+      {
+        "text": "This is the Offeice of Student Affairs and Services or in short OSAS."
+      },
+      {
+        "text": "This is where Registrar, Guidance, and other student services are located."
+      },
+      {
+        "text": "If you're incoming freshmen and is interested in applying to the university, this is where you should go."
+      }
+    ]
+  },
+  {
+    "scene": "bahayalumni",
+    "dialogue": [
+      {
+        "text": "This building is what we call Bahay ng Alumni."
+      },
+      {
+        "text": "This is where guests, visitors or alumni who want to stay at the university. Consider this as a university motel."
+      }
+    ]
+  },
+  {
+    "scene": "ncrdec",
+    "dialogue": [
+      {
+        "text": "This a research facility called National Coffee Research, Development and Extension Center"
+      },
+      {
+        "text": "The name suggest that this is where the university researches about coffee."
+      }
+    ]
+  },
+  {
+    "scene": "newcemds",
+    "dialogue": [
+      {
+        "text": "Welcome to the College of Economics, Management and Development Studies Building or CEMDS for short."
+      },
+      {
+        "text": "There are two main building of CEMDS in the campus. This is the new one."
+      },
+      {
+        "text": "The old one is near the Department of Physical Sciences Building"
+      }
+    ]
+  },
+  {
+    "scene": "cafenr",
+    "dialogue": [
+      {
+        "text": "Welcome to the College of Agriculture, Forestry, Environment and Natural Resources or CAFENR for short."
+      },
+      {
+        "text": "This is the main college building for CAFENR. Where it has a great Tamaraw statue in front of it."
+      }
+    ]
+  },
+  {
+    "scene": "rc",
+    "dialogue": [
+      {
+        "text": "This is the Research Center"
+      },
+      {
+        "text": "Considered as one of the School Facilities of the university."
+      },
+      {
+        "text": "This is where college students approach and ask for permision to use school's laboratories to conduct their research."
+      }
+    ]
+  },
+  {
+    "scene": "library",
+    "dialogue": [
+      {
+        "text": "This is the Ladislao N. Diwa Memorial Library or the university library."
+      },
+      {
+        "text": "The building is consist of 6 Floors. You can try to enter the library and explore the floors."
+      },
+      {
+        "text": "Fun fact: behind this building there is a Museum of the university and beside the library is the Coffee Shop called \"Science Cafe\""
+      }
+    ]
+  },
+  {
+    "scene": "ih1",
+    "dialogue": [
+      {
+        "text": "This is the International House 1 or the IH1."
+      },
+      {
+        "text": "This building provides services similar to IH2 but also houses school facilities"
+      },
+      {
+        "text": "This is where the residents of Hostel Tropicana temporarily resides and some facilities of College of Medicine can be located"
+      },
+      {
+        "text": "The Institutional Development Office or IDO is also located here."
+      }
+    ]
+  },
+  {
+    "scene": "biosci",
+    "dialogue": [
+      {
+        "text": "This is the Department of Biological Sciences or BioSci for short."
+      },
+      {
+        "text": "The department building under College of Arts and Sciences."
+      },
+      {
+        "text": "This building contains classrooms and facilities for students. Usually Micro Biology students resides here."
+      }
+    ]
+  },
+  {
+    "scene": "con",
+    "dialogue": [
+      {
+        "text": "Welcome to the College of Nursing or CON in short"
+      },
+      {
+        "text": "This is the main building of CON."
+      },
+      {
+        "text": "Do not be confused College of Nursing with the College of Medicine. They are different."
+      }
+    ]
+  },
+  {
+    "scene": "cpc",
+    "dialogue": [
+      {
+        "text": "This is the Coffee Processing Center."
+      },
+      {
+        "text": "I guess they process coffee here?"
+      }
+    ]
+  },
+  {
+    "scene": "diet",
+    "dialogue": [
+      {
+        "text": "Welcome to Department of Industrial Engineering and Technology or DIET in short."
+      },
+      {
+        "text": "The DIET building is under College of Engineering and Information Technology."
+      }
+    ]
+  },
+  {
+    "scene": "dcee",
+    "dialogue": [
+      {
+        "text": "Welcome to Department of Computer and Electronics Engineering or or DCEE in short."
+      },
+      {
+        "text": "The DCEE building is under College of Engineering and Information Technology."
+      }
+    ]
+  },
+  {
+    "scene": "ceit",
+    "dialogue": [
+      {
+        "text": "Welcome to the College of Engineering and Information Technologyor CEIT in short."
+      },
+      {
+        "text": "This is the main building of CEIT. This building is where offices related to CEIT are located."
+      }
+    ]
+  },
+
+  {
+    "scene": "admin",
+    "dialogue": [
+      {
+        "text": "This is the Administration Building."
+      },
+      {
+        "text": "This is the building where administration offices are located. This is also where Public Affairs Communication Office is located."
+      },
+      {
+        "text": "At the back of this building the University Cashier can be found."
+      }
+    ]
+  },
+
+  {
+    "scene": "cashier",
+    "dialogue": [
+      {
+        "text": "This is the University Cashier."
+      },
+      {
+        "text": "This is where students process their fees and payments."
+      }
+    ]
+  },
+
+  {
+    "scene": "cas",
+    "dialogue": [
+      {
+        "text": "Welcome to the College of Arts and Sciences or CAS in short."
+      },
+      {
+        "text": "This is the main building of the College of Arts and Sciences."
+      }
+    ]
+  },
+
+  {
+    "scene": "physci",
+    "dialogue": [
+      {
+        "text": "This is the Department of Physical Science or PhySci in short."
+      },
+      {
+        "text": "There is a debate whether it's pronounced \"Fee-Sci\" or is it \"Pie-Sci\" ."
+      }
+    ]
+  },
+
+  {
+    "scene": "oldcemds",
+    "dialogue": [
+      {
+        "text": "Welcome to College of Economics, Management and Development Studies Old Building or CEMDS Old Building."
+      },
+      {
+        "text": "This is the old building of CEMDS, but it's still being used by students and faculties as their classrooms."
+      }
+    ]
+  },
+
+  {
+    "scene": "rolle",
+    "dialogue": [
+      {
+        "text": "This venue is called Rolle Hall."
+      },
+      {
+        "text": "The Rolle Hall is a venue for events and activities of the university or can be rent by outside parties."
+      }
+    ]
+  },
+
+  {
+    "scene": "cvmbs",
+    "dialogue": [
+      {
+        "text": "Welcome to College of Veterinary Medicine and Biomedical Sciences or CVMBS in short."
+      },
+      {
+        "text": "This is the main building of CVMBS."
+      }
+    ]
+  },
+
+  {
+    "scene": "cvmbs_hosp",
+    "dialogue": [
+      {
+        "text": "This building is a Hospital but for animals."
+      },
+      {
+        "text": "This building is also a part of CVMBS where they practice and treat animals."
+      }
+    ]
+  },
+
+  {
+    "scene": "an_sci",
+    "dialogue": [
+      {
+        "text": "This building is the Department of Animal Science."
+      },
+      {
+        "text": "This building is under CVMBS."
+      }
+    ]
+  },
+
+  {
+    "scene": "infirmary",
+    "dialogue": [
+      {
+        "text": "This is building is the University Infirmary."
+      },
+      {
+        "text": "The students who are processing their application are required to undertake medical examination by the University and are usually sent perform their examination here."
+      }
+    ]
+  },
+
+  {
+    "scene": "icon",
+    "dialogue": [
+      {
+        "text": "This is the Internation Convention Center or ICON."
+      },
+      {
+        "text": "This is the main venue where the University held their events and activities such as Job Fairs, Graduation Ceremonies, and other events."
+      },
+      {
+        "text": "Entrance examination are usually held here."
+      }
+    ]
+  },
+
+  {
+    "scene": "ced",
+    "dialogue": [
+      {
+        "text": "Welcome to the College of Education"
+      },
+      {
+        "text": "This is the main building of College of Education"
+      }
+    ]
+  },
+
+  {
+    "scene": "hs",
+    "dialogue": [
+      {
+        "text": "This is the Cavite Science Highschool Building"
+      },
+      {
+        "text": "The university also offers highschool education and this is where the highschool students are located."
+      }
+    ]
+  },
+
+  {
+    "scene": "eco_tour",
+    "dialogue": [
+      {
+        "text": "Ahead is the section of Agri Eco Tourism Park."
+      },
+      {
+        "text": "The Agri Eco Tourism Park highlights the calming nature surrounding the university. It is a place where students can relax and enjoy the nature."
+      },
+      {
+        "text": "The place also serves as attraction for visitors and guests."
+      },
+      {
+        "text": "I highly recommend you to visit this place in person if you have the chance."
+      }
+    ]
+  },
+
+  {
+    "scene": "ccj",
+    "dialogue": [
+      {
+        "text": "Welcome to the College of Justice and Criminology or CCJ in short."
+      },
+      {
+        "text": "This is the main building of CCJ. A building where future law enforcers are trained."
+      }
+    ]
+  },
+
+  {
+    "scene": "hevted",
+    "dialogue": [
+      {
+        "text": "This building is Home Economic Vocational and Technical Education Department"
+      },
+      {
+        "text": "The building is under College of Education or CED."
+      }
+    ]
+  },
+
+  {
+    "scene": "museum",
+    "dialogue": [
+      {
+        "text": "Welcome to the Historical and Cultural Museum or University Museum."
+      },
+      {
+        "text": "This building is where cultural and historical artifacts of the university are displayed."
+      },
+      {
+        "text": "There are lots of historical artifacts can be found inside along with Paintings, Sculptures, and other artworks."
+      }
+    ]
+  },
+  {
+    "scene": "bd",
+    "dialogue": [
+      {
+        "text": "This is the blue dorm which is under construction."
+      }
+    ]
+  }
+]
