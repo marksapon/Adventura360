@@ -30,6 +30,10 @@ import { TbMapOff } from "react-icons/tb"; // Minimap Off Icon
 
 import { TbMessageChatbot } from "react-icons/tb"; // Chatbot Icon
 
+import { FaPersonWalkingArrowLoopLeft } from "react-icons/fa6"; // Exit Building Icon
+import { TbDoorExit } from "react-icons/tb"; // Exit inside the building Icon
+import { GiBackwardTime } from "react-icons/gi"; // Previous Location
+
 /* Components */
 import Navigationbar from "./components/Navigationbar";
 import Minimap from "./components/Minimap";
@@ -179,14 +183,13 @@ function Module360({
   const [initialPitch, setPitch] = useState(getParams("pitch"));
 
   // Previous Scene State
-  const [previous_Scene, setPrevious_Scene] = useState(nodesDB[0]);
+  const [previous_Scene, setPrevious_Scene] = useState(nodesDB[0]); // Remove the default previous scene
 
   // Autoplay State
   const [autoplay, setAutoplay] = useState(false);
 
   // Inside State
-  const [isInside, setIsInside] = useState(false);
-  const [isOutside, setIsOutside] = useState(false);
+  const [status, setStatus] = useState(""); // Status State
 
   // Select Curent Scene State
   const [select_Scene, setSelect_Scene] = useState(() => getScene());
@@ -226,7 +229,8 @@ function Module360({
         buildingsDB.filter((scene) => {
           if (scene.scene === target) {
             setBackButton(true);
-            setIsOutside(true);
+            setStatus("outside");
+
             setYaw(scene.hotspot[0].yaw);
             setPitch(scene.hotspot[0].pitch);
             curr_scene = scene;
@@ -488,7 +492,7 @@ function Module360({
 
       setBackButton(true);
 
-      setIsOutside(true);
+      setStatus("outside"); // Can be merged into one
 
       changeScene(buildingsDB, target); // Change Scene
     } else if (type === "info") {
@@ -519,8 +523,6 @@ function Module360({
           }
         }
       });
-    } else {
-      // console.log("Undefined Type");
     }
   }
 
@@ -538,7 +540,7 @@ function Module360({
       temp.push(temp_internal);
     });
 
-    setIsInside(true);
+    setStatus("inside");
     setCurr_Internal(temp);
     setBackButton(true);
     changeScene(temp, temp[0].scene);
@@ -546,10 +548,11 @@ function Module360({
 
   // Function that changes scene based on the hotspot target
   function changeScene(type, target) {
-    // console.log("Changing Scene");
-    // console.log("Type:", type, "Target:", target);
+    console.log("Changing Scene");
+    console.log("Type:", type, "Target:", target);
 
-    if (access !== "private" && isOutside === false) {
+    if (access !== "private" && status === "inside") {
+      // Can be used to check only if the access is
       // console.log("Setting Previous Scene:", isOutside);
       setPrevious_Scene(select_Scene);
     }
@@ -575,7 +578,7 @@ function Module360({
     if (select_Scene && select_Scene.hotspot) {
       select_Scene.hotspot.forEach((hotspot, index) => {
         if (hotspot.type === "popup") {
-          if (isInside) {
+          if (status === "inside") {
             curr_InternalExtras.forEach((extras) => {
               if (extras.scene === hotspot.target) {
                 const extrasFormat = {
@@ -689,6 +692,15 @@ function Module360({
       // console.log("Displaying VN");
       setVNState(true);
     }
+  }
+
+  function returnFunction() {}
+
+  function exitFunction() {
+    console.log("Current Scene:", select_Scene);
+    changeScene(nodesDB, select_Scene.back[0]);
+    setStatus();
+    setBackButton(false);
   }
 
   /* Module360 Component */
@@ -848,34 +860,37 @@ function Module360({
               type="button"
               onClick={() => {
                 // console.log("Going Back");
-                if (isInside) {
-                  setIsInside(false);
+
+                if (status === "inside") {
+                  // if inside the building set the access back to public and change the scene back to the scene of building.
+                  setStatus("outside");
+
                   setAccess("public");
                   changeScene(buildingsDB, insideBuilding);
                 } else {
                   // console.log("Previous Scene:", previous_Scene);
-                  setIsOutside(false);
+                  // if outside the building set the outside value and change the scene back to the previous scene then remove the back button.
+                  setStatus("inside");
+
                   setSelect_Scene(previous_Scene);
                   setBackButton(false);
                 }
               }}
-              className="absolute mb-48 flex w-auto items-center justify-center gap-x-2 rounded-lg border bg-white px-5 py-2 text-sm text-gray-700 transition-colors duration-200 hover:bg-gray-100 sm:mb-48 md:mb-20 lg:mb-16  dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:bg-gray-800 "
+              className={`absolute mb-48 flex w-auto items-center justify-center gap-x-2 rounded-lg border px-5 py-2 text-sm text-gray-700 transition-colors duration-200 sm:mb-48 md:mb-20 lg:mb-16 ${status === "outside" ? "dark:bg-green-500" : "dark:bg-orange-500"} dark:text-white ${status === "outside" ? "dark:hover:bg-green-400" : "dark:hover:bg-orange-400"} `}
             >
-              <svg
-                className="h-5 w-5 rotate-180 transform"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
-                />
-              </svg>
-              <span>Back</span>
+              {status === "inside" && (
+                <TbDoorExit className="flex h-5 w-5 items-center justify-center md:h-8 md:w-8" />
+              )}
+              {status === "outside" && (
+                <GiBackwardTime className="flex h-5 w-5 items-center justify-center md:h-8 md:w-8" />
+              )}
+              <div className="flex items-center justify-center">
+                <span className="flex items-center justify-center text-center font-sans text-base font-semibold md:text-xl">
+                  {status === "outside"
+                    ? "Return to Previous Location"
+                    : "Exit Building"}
+                </span>
+              </div>
             </button>
           </div>
         )}
@@ -889,7 +904,7 @@ function Module360({
                   onClick={() => setMapState(true)}
                   x={select_Scene.coords.x}
                   y={select_Scene.coords.y}
-                  previous_Scene={previous_Scene}
+                  previous_Scene={previous_Scene} // Make it appear only when there is a previous location
                   extrasDB={extrasDB}
                   buildingsDB={buildingsDB}
                 />
@@ -917,6 +932,24 @@ function Module360({
                 </div>
               </div>
             </div>
+
+            {/* Exit Building */}
+            {status === "outside" && (
+              <div className="group pointer-events-auto relative flex h-12 w-12">
+                <button
+                  className="flex h-12 w-12 transform items-center justify-center rounded-full border-2 border-transparent bg-orange-400 p-2 transition-transform duration-500 ease-in-out hover:scale-110 hover:border-white"
+                  onClick={() => {
+                    console.log("Exit Building");
+                    exitFunction();
+                  }}
+                >
+                  <FaPersonWalkingArrowLoopLeft size={30} />
+                </button>
+                <div className=" absolute left-full top-1/2 ml-2 flex w-32 -translate-y-1/2 transform items-center justify-center rounded-lg bg-orange-400 p-2 text-center font-sans text-sm font-semibold text-white opacity-0 shadow-xl transition duration-200 ease-in-out group-hover:opacity-100">
+                  Exit
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
