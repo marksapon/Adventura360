@@ -277,13 +277,18 @@ const MapModule = ({
         current_overlays.map((type) => {
           overlays[type].map((overlay) => {
             const div = document.getElementById(overlay.id);
-            viewer.addOverlay({
-              element: div,
-              location: new OpenSeadragon.Point(overlay.x, overlay.y),
-              placement: OpenSeadragon.Placement.BOTTOM,
-              rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
-            });
-            viewer.forceRedraw();
+            if (
+              currLoc.coords.x !== overlay.x &&
+              currLoc.coords.y !== overlay.y
+            ) {
+              viewer.addOverlay({
+                element: div,
+                location: new OpenSeadragon.Point(overlay.x, overlay.y),
+                placement: OpenSeadragon.Placement.BOTTOM,
+                rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
+              });
+              viewer.forceRedraw();
+            }
           });
         });
       }
@@ -871,11 +876,17 @@ const MapModule = ({
       {/* POI Overlays */}
 
       {/* Current Location CSS */}
-      <div id="current location">
+      <div
+        id="current location"
+        className="flex h-auto w-36 flex-col items-center justify-end space-y-2"
+      >
+        <div className="h-auto w-auto rounded-md bg-white p-2 text-center font-sans font-semibold text-green-500">
+          Your Here
+        </div>
         <img
           src="/assets/Login Module/adventura logo 2.webp"
           alt="Adventura 360 logo"
-          className="h-15 w-10"
+          className=" mx-auto block h-12 w-12 items-center justify-center object-contain"
         />
       </div>
 
