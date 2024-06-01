@@ -366,6 +366,7 @@ const MapModule = ({
 
                 // Check if the clicked point is inside the overlay bounds
                 if (overlayBounds.containsPoint(viewportPoint)) {
+                  console.log("Overlay Found:", overlay.scene);
                   let found = false;
 
                   buildingsDB.find((buildings) => {
