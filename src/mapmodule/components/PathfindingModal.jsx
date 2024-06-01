@@ -35,7 +35,11 @@ const PathfindingModal = ({
 
   /* Buildings Search */
   // Buildings List
-  const [buildingsList, setBuildingsList] = useState(poi); // Buildings List
+  const sortPOI = (poi) => {
+    return [...poi].sort((a, b) => a.name.localeCompare(b.name));
+  };
+
+  const [buildingsList, setBuildingsList] = useState(sortPOI(poi));
 
   // /* Search Function Event that triggers everytime the search value changes */
   const search = (event) => {
