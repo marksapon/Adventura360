@@ -3,7 +3,7 @@
     "scene": "intro",
     "dialogue": [
       {
-        "text": "Welcome to Adventura 360. A virtual tour inside the Cavite State University Indang Campus."
+        "text": "Welcome to Adventura 360°. This is a virtual campus tour inside the Cavite State University Indang Campus."
       },
       {
         "text": "We are here today inside the campus and I will be your tour guide!"
@@ -29,13 +29,13 @@
         "text": "This is the International House 2 or IH2"
       },
       {
-        "text": "The first building we'll see near the Gate 1 of the campus."
+        "text": "This is the first building we'll see near the Gate 1 of the campus."
       },
       {
         "text": "This building serves as a dormitory for students who are far away from the campus."
       },
       {
-        "text": "This building also houses book store and other school services. If you're looking to buy books you can check out this building."
+        "text": "This building also houses a book store and other school services. If you're looking on where to buy books, you can check out this building."
       }
     ]
   },
@@ -74,13 +74,13 @@
     "scene": "osa",
     "dialogue": [
       {
-        "text": "This is the Offeice of Student Affairs and Services or in short OSAS."
+        "text": "This is the Office of Student Affairs and Services or in short OSAS."
       },
       {
         "text": "This is where Registrar, Guidance, and other student services are located."
       },
       {
-        "text": "If you're incoming freshmen and is interested in applying to the university, this is where you should go."
+        "text": "If you're an incoming freshie and you're interested in applying to the university, this is where you should go."
       }
     ]
   },
@@ -91,7 +91,7 @@
         "text": "This building is what we call Bahay ng Alumni."
       },
       {
-        "text": "This is where guests, visitors or alumni who want to stay at the university. Consider this as a university motel."
+        "text": "This is where guests, visitors and alumni who wants to stay at the university. Consider this as a university motel."
       }
     ]
   },
@@ -127,7 +127,7 @@
         "text": "Welcome to the College of Agriculture, Forestry, Environment and Natural Resources or CAFENR for short."
       },
       {
-        "text": "This is the main college building for CAFENR. Where it has a great Tamaraw statue in front of it."
+        "text": "This is the main college building for CAFENR. Where it has the great Tamaraw statue in front of it."
       }
     ]
   },
@@ -155,7 +155,7 @@
         "text": "The building is consist of 6 Floors. You can try to enter the library and explore the floors."
       },
       {
-        "text": "Fun fact: behind this building there is a Museum of the university and beside the library is the Coffee Shop called \"Science Cafe\""
+        "text": "Fun fact: behind this building there is a Museum of the university and beside the library is the Coffee Shop called the \"Science Cafe\""
       }
     ]
   },
@@ -183,7 +183,7 @@
         "text": "This is the Department of Biological Sciences or BioSci for short."
       },
       {
-        "text": "The department building under College of Arts and Sciences."
+        "text": "This department building is under the College of Arts and Sciences (CAS)."
       },
       {
         "text": "This building contains classrooms and facilities for students. Usually Micro Biology students resides here."
@@ -241,10 +241,16 @@
     "scene": "ceit",
     "dialogue": [
       {
-        "text": "Welcome to the College of Engineering and Information Technologyor CEIT in short."
+        "text": "Welcome to the College of Engineering and Information Technology or CEIT in short."
       },
       {
         "text": "This is the main building of CEIT. This building is where offices related to CEIT are located."
+      },
+      {
+        "text": "You can find services here. There's the a registrar, the guidance councilor office, reading room"
+      },
+      {
+        "text": "the dean's office, the offices of different departments under CEIT, and many more!"
       }
     ]
   },
@@ -259,7 +265,7 @@
         "text": "This is the building where administration offices are located. This is also where Public Affairs Communication Office is located."
       },
       {
-        "text": "At the back of this building the University Cashier can be found."
+        "text": "At the back of this building, is where the University Cashier is located."
       }
     ]
   },
@@ -364,10 +370,13 @@
     "scene": "infirmary",
     "dialogue": [
       {
-        "text": "This is building is the University Infirmary."
+        "text": "This building is the University Infirmary."
       },
       {
-        "text": "The students who are processing their application are required to undertake medical examination by the University and are usually sent perform their examination here."
+        "text": "The students who are processing their application are required to take medical examination by the University and are usually sent perform their examination here."
+      },
+      {
+        "text": "Also, in case of minor medical emergencies, students can be taken care of in here."
       }
     ]
   },
