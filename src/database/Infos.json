@@ -13,7 +13,7 @@
       "Telephone": "(046) 481 1900",
       "Email": "dit@cvsu.edu.ph",
       "additional": {
-        "(Facebook) Computer Science Student Organization": "https://www.facebook.com/CSSO2016"
+        "(Facebook Page) Computer Science Student Organization": "https://www.facebook.com/CSSO2016"
       }
     },
     "facilities": {
@@ -36,19 +36,21 @@
     "image": "/assets/Building Module/Background/inosas.webp",
     "desc": "Welcome to the Office of Student Affairs and Services at Cavite State University — A cornerstone of student support and development. Established in 1980, our office has evolved to meet the diverse needs of our students. From counseling and testing to financial assistance and talent development, we're here to empower students to reach their full potential. Whether it's guidance, training, or placement services, we're committed to fostering an environment where every student can thrive intellectually, emotionally, and socially.",
 
-    "services": { "Service 1": null },
-
     "contacts": {
       "Telephone": "(046) 481 8722",
+      "Mobile": "Add Mobile Number",
       "Email": "cvsuosasmain@cvsu.edu.ph",
       "additional": {
-        "(Facebook) Cavite State University-Main OSAS": "https://www.facebook.com/CvSUOSAS/"
+        "Facebook Page": "https://www.facebook.com/CvSUOSAS/"
       }
     },
 
     "more_info": "https://cvsu.edu.ph/office-of-student-affairs-and-services/",
 
-    "gallery": []
+    "gallery": [
+      "/assets/Building Module/Gallery/osa/01.webp",
+      "/assets/Building Module/Gallery/osa/02.webp"
+    ]
   },
   {
     "scene": "ih2",
@@ -61,9 +63,30 @@
     "image": "/assets/Building Module/Background/IH2.webp",
     "desc": "International House 2 is a modern dorm near campus gate 1. It offers comfortable rooms, common areas, and a friendly atmosphere for students to live and socialize.",
 
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "Add Email Address",
+      "additional": {
+        "Add your website here": null
+      }
+    },
+
+    "services": {
+      "Book Store": "The book store is located at the ground floor in the right wing of the building. You can buy the text books and books in here.",
+      "School Uniform Store": "The School Uniform store is located at the ground floor in the right wing of the building. You can buy the student uniform here and try on different sizes for better fit."
+    },
+
     "more_info": "https://cvsu.edu.ph/university-dormitory/",
 
-    "gallery": []
+    "gallery": [
+      "/assets/Building Module/Gallery/IH2/01.webp",
+      "/assets/Building Module/Gallery/IH2/02.webp",
+      "/assets/Building Module/Gallery/IH2/03.webp",
+      "/assets/Building Module/Gallery/IH2/04.webp",
+      "/assets/Building Module/Gallery/IH2/05.webp",
+      "/assets/Building Module/Gallery/IH2/06.webp"
+    ]
   },
   {
     "scene": "cspear",
@@ -109,30 +132,42 @@
     "scene": "ncrdec",
     "name": "National Coffee Research, Development and Extension Center",
     "access": "account",
-    "acronym": "coffee research",
+    "acronym": "ncrdec",
     "type": "school_facilities",
     "tags": ["school", "laboratory"],
     "image": "/assets/Building Module/Background/ncrdec.webp",
     "desc": "Welcome to the National Coffee Research, Development, and Extension Center (NCRDEC) at Cavite State University (CvSU)—a pioneering force in Philippine coffee innovation since 2005. Our center, established under the Agriculture and Fisheries Modernization Act (AFMA) of 1997, conducts cutting-edge research, provides vital extension services, and produces top-quality planting materials. With a vision to be recognized locally and internationally for our coffee programs, we're dedicated to increasing productivity, sustainability, and global competitiveness in the Philippine coffee industry.",
 
     "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "(+63)975 420 5789",
       "Email": "ncrdec.cvsu@gmail.com",
-      "Mobile": "+639165047049"
+
+      "additional": {
+        "Facebook Page": "https://www.facebook.com/ncrdecphilippines/"
+      }
     },
 
     "more_info": "https://cvsu.edu.ph/ovpre-ncrdec/",
 
-    "gallery": []
+    "gallery": [
+      "/assets/Building Module/Gallery/ncrdec/01.webp",
+      "/assets/Building Module/Gallery/ncrdec/02.webp",
+      "/assets/Building Module/Gallery/ncrdec/03.webp",
+      "/assets/Building Module/Gallery/ncrdec/04.webp",
+      "/assets/Building Module/Gallery/ncrdec/05.webp",
+      "/assets/Building Module/Gallery/ncrdec/06.webp"
+    ]
   },
   {
-    "scene": "newcemds",
+    "scene": "newcemds2",
     "name": "College of Economics, Management and Development Studies New Building",
     "access": "account",
     "acronym": "new cemds",
     "type": "college_buildings",
     "tags": ["school", "cemds"],
     "image": "/assets/Building Module/Background/cemds.webp",
-    "desc": "Welcome to the College of Economics, Management, and Development Studies New Building—a modern marvel of academia and innovation! Situated at the heart of campus, this state-of-the-art facility embodies the spirit of forward-thinking education and research. With its sleek design and advanced technology, the building provides a dynamic environment for students and faculty to explore the complexities of economics, management, and development studies. From spacious lecture halls to collaborative workspaces, every corner is designed to inspire creativity and critical thinking. Whether studying economic theory, honing management skills, or researching sustainable development practices, the College of Economics, Management, and Development Studies New Building offers a vibrant setting for academic excellence and growth.",
+    "desc": "The College of Economics, Management, and Development Studies unveils its new building – a modern hub for academic exploration. This technologically advanced facility fosters collaboration and critical thinking with its spacious learning areas and innovative design. Here, students delve into economics, management, and development studies in a dynamic environment that fuels academic excellence.",
 
     "dept": [
       "Department of Management",
@@ -141,28 +176,22 @@
       "Department of Accountancy"
     ],
     "courses": {
-      "BS Office Administration": null,
-      "BS Accountancy": null,
-      "BS Business Administration": [
-        "Financial Management",
-        "Human Resource Development Management",
-        "Marketing Management",
-        "Operations Management",
-        "Service Management Program"
+      "BS OFFICE ADMINISTRATION": null,
+      "BS ACCOUNTANCY": null,
+      "BS BUSINESS ADMINISTRATION": [
+        "• Financial Management<br> • Human Resource Development Management<br> • Marketing Management<br> • Operations Management<br> • Service Management Program"
       ],
-      "BS Economics": null,
-      "BS Development Management": [
-        "Rural Development Management",
-        "Training Program Management "
+      "BS ECONOMICS": null,
+      "BS DEVELOPMENT MANAGEMENT": [
+        "• Rural Development Management<br> • Training Program Management"
       ],
-      "BS International Studies": ["Asian Studies", "European Studies"],
-      "Graduate Programs": [
-        "Master in Business Administration",
-        "Master in Management",
-        "Master in Public Administration"
+      "BS INTERNATIONAL STUDIES": ["•  Asian Studies<br>• European Studies"],
+      "GRADUATE PROGRAMS": [
+        "• Master in Business Administration<br> • Master in Management<br> • Master in Public Administration"
       ]
     },
     "contacts": {},
+    "more_info": "https://cvsu.edu.ph/cemds/",
     "gallery": []
   },
   {
@@ -192,7 +221,7 @@
     },
 
     "courses": {
-      "BS Agriculture": ["Animal Science", "Crop Science"],
+      "BS Agriculture": "<b>Course Majors:</b><br>• Animal Science <br>• Crop Science",
       "BS in Environmental Sciences": null,
       "BS in Food Technology": null,
       "BS in Land Use Design and Management": null,
@@ -218,14 +247,21 @@
       "Telephone": "(046) 423 1162",
       "Email": "cafenr@cvsu.edu.ph",
       "additional": {
-        "(Facebook) Araw ng Kalikasan sa CvSU": "https://www.facebook.com/cvsuarawngkalikasan/",
-        "(Facebook) CvSU Environmental Geo-Information and Remote Sensing": "https://www.facebook.com/Cvsu-Environmental-Geo-Information-and-Remote-Sensing-Laboratory-104676587621183/"
+        "(Facebook Page) Araw ng Kalikasan sa CvSU": "https://www.facebook.com/cvsuarawngkalikasan/",
+        "(Facebook Page) CvSU Environmental Geo-Information and Remote Sensing": "https://www.facebook.com/Cvsu-Environmental-Geo-Information-and-Remote-Sensing-Laboratory-104676587621183/"
       }
     },
 
     "more_info": "https://cvsu.edu.ph/2018/01/college-of-agriculture-forestry-environment-and-natural-resources/",
 
-    "gallery": []
+    "gallery": [
+      "/assets/Building Module/Gallery/cafenr/1.webp",
+      "/assets/Building Module/Gallery/cafenr/2.webp",
+      "/assets/Building Module/Gallery/cafenr/3.webp",
+      "/assets/Building Module/Gallery/cafenr/4.webp",
+      "/assets/Building Module/Gallery/cafenr/5.webp",
+      "/assets/Building Module/Gallery/cafenr/6.webp"
+    ]
   },
   {
     "scene": "rc",
@@ -240,7 +276,10 @@
     "contacts": {
       "Telephone": "(046) 862-1654",
       "Email": "researchcenter@cvsu.edu.ph",
-      "Mobile": "+639270110387"
+      "Mobile": "+639270110387",
+      "additional": {
+        "Add your website here": null
+      }
     },
 
     "more_info": "https://cvsu.edu.ph/ovpre-research-center/",
@@ -257,11 +296,41 @@
     "image": "/assets/Building Module/Background/library.webp",
     "desc": "Welcome to the Ladislao N. Diwa Memorial Library and Museum (LDMLM)—a symbol of knowledge and heritage since 1980. With a collection of over 106,000 volumes and 5,000 series titles, LDMLM honors Ladislao N. Diwa's contributions to academia. Operating under an open shelf system, our mission is to provide excellent, equitable, and relevant library services. We aim to support academic excellence, encourage maximum utilization of resources, and collaborate with all colleges and campuses to supplement research and instruction. Step inside and discover a world of knowledge and inspiration.",
 
-    "contacts": {},
+    "facilities": {
+      "Ground Floor: General Circulation Section": null,
+      "Second Floor: Thesis Section": null,
+      "Third Floor: Reserve Section": null,
+      "Fourth Floor: Collaboration Area": null,
+      "Fifth Floor: STAARDEC": "The office of Southern Tagalog Agriculture, Aquatic and Resources Research, Development and Extension Consortium (STAARRDEC) can be found in 5th floor."
+    },
+
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "cvsulibrary@cvsu.edu.ph",
+      "additional": {
+        "Facebook Page": "https://www.facebook.com/cvsulibrary",
+        "Integrated Library System": "http://library.cvsu.edu.ph/landing/",
+        "Library Web OPAC": "http://library.cvsu.edu.ph/cgi-bin/koha/opac-library.pl"
+      }
+    },
 
     "more_info": "https://cvsu.edu.ph/2018/01/13/library/",
 
-    "gallery": []
+    "gallery": [
+      "/assets/Building Module/Gallery/library/01.webp",
+      "/assets/Building Module/Gallery/library/02.webp",
+      "/assets/Building Module/Gallery/library/03.webp",
+      "/assets/Building Module/Gallery/library/04.webp",
+      "/assets/Building Module/Gallery/library/05.webp",
+      "/assets/Building Module/Gallery/library/06.webp",
+      "/assets/Building Module/Gallery/library/07.webp",
+      "/assets/Building Module/Gallery/library/08.webp",
+      "/assets/Building Module/Gallery/library/09.webp",
+      "/assets/Building Module/Gallery/library/10.webp",
+      "/assets/Building Module/Gallery/library/11.webp",
+      "/assets/Building Module/Gallery/library/12.webp"
+    ]
   },
   {
     "scene": "irb",
@@ -286,16 +355,22 @@
     "info_type": "info",
     "tags": ["school"],
     "image": "/assets/Building Module/Background/IH1.webp",
-    "desc": "Welcome to International House 1 —a bustling dormitory designed to be a home away from home for university students. Here, students from diverse backgrounds come together to form a vibrant community, fostering lifelong friendships and unforgettable experiences. With comfortable living spaces and modern amenities, International House 1 provides a supportive environment where students can thrive academically, socially, and personally. International House 1 is currently under College of Medicine.",
+    "desc": "International House 1 welcomes students with open arms, serving as a vibrant home away from home for the university community.  This bustling dormitory fosters a diverse and inclusive environment, where students from all walks of life connect and forge lasting friendships.  International House 1 which also houses the College of Medicine, offers comfortable living spaces, modern amenities, and a supportive atmosphere that empowers residents to excel academically, socially, and personally.  Here, students thrive within a community that fosters unforgettable experiences.",
 
-    "services": { "Service 1": "Description for Service 1" },
+    "services": {
+      "Hostel Tropicana": null
+    },
+
+    "offices": {
+      "Institutional Development Office": null
+    },
 
     "contacts": {
       "Telephone": "Add Telephone Number",
       "Mobile": "Add Mobile Number",
       "Email": "Add Email Address Here",
       "additional": {
-        "Website": "https://cvsu.edu.ph/university-dormitory/"
+        "Hostel Tropicana": "https://cvsu.edu.ph/university-facilities/hostel-tropicana-facilities/"
       }
     },
 
@@ -330,20 +405,23 @@
     "type": "college_buildings",
     "tags": ["ceit", "school"],
     "image": "/assets/Building Module/Background/dit.webp",
-    "desc": "Welcome to the College of Engineering and Information Technology at our University. Here, our vibrant community of scholars is dedicated to advancing infrastructure and urban development. From designing resilient structures to sustainable transportation systems, we're committed to pushing the boundaries of engineering innovation. Join us as we tackle global challenges and pave the way for a better tomorrow. Welcome to the forefront of engineering excellence.",
+    "desc": "The College of Engineering and Information Technology (CEIT) fosters a dynamic scholarly community dedicated to advancing the frontiers of engineering innovation. CEIT faculty address global challenges through research and curriculum focused on areas such as resilient infrastructure and sustainable transportation systems. By joining CEIT, you will contribute to shaping a brighter future.",
 
+    "offices": {
+      "Dean's Office": null,
+      "Guidance Facilitator's Office": null
+    },
+    "services": {
+      "College Reading Room": null
+    },
     "courses": {
       "Bachelor of Science in Computer Science": null,
       "Bachelor of Science in Information Technology": null,
-      "Bachelor OF Science in Civil Engineering": null,
+      "Bachelor of Science in Civil Engineering": null,
       "Bachelor of Science in Architecture": null,
       "Bachelor of Science in Agricultural and Biosystems Engineering": null,
       "Bachelor of Science in Electrical Engineering": null,
-      "Bachelor of Science IN Industrial Technology": [
-        "Automotive Technology",
-        "Electrical Technology",
-        "Electronics Technology"
-      ],
+      "Bachelor of Science in Industrial Technology": "<b>Courses Majors:</b><br> • Automotive Technology<br> • Electrical Technology<br> • Electronics Technology",
       "Bachelor of Science in Computer Engineering": null,
       "Bachelor of Science in Electronics Engineering": null
     },
@@ -387,21 +465,35 @@
     "acronym": "admin",
     "type": "school_facilities",
     "tags": ["school"],
-    "image": "/assets/Building Module/Background/dit.webp",
+    "image": "/assets/Building Module/Background/admin.webp",
     "desc": "Welcome to the Cavite State University Administration Building at our University.",
+
+    "offices": {
+      "Office of the President": null,
+      "Public Affairs and Communications Office": "A university resolution restructured the administration, moving the public information office under the president's control and renaming it the Public Affairs and Communications Office (PACO). PACO is responsible for maintaining the university's public profile, keeping activity records, creating promotional materials, compiling annual reports, and connecting with media outlets.<br><br><b>• E-mail:</b> paco@cvsu.edu.ph<br><b>• Contact Number:</b> 09163410750",
+      "Planning Office": null,
+      "Records Office": null,
+      "Office of the Vice President for Academic Affairs": null
+    },
 
     "contacts": {
       "Telephone": "Add Telephone Number",
       "Mobile": "Add Mobile Number",
-      "Email": "Add Email Address Here"
+      "Email": "Add Email Address Here",
+      "additional": {
+        "Add your website here": null
+      }
     },
 
-    "services": { "Service 1": null },
+    "facilities": {
+      "University Registrar": "<b>Contacts:</b> </br>• Telephone Number: (046) 862-0853 <br>• Email: registrarmain@cvsu.edu.ph"
+    },
 
-    "more_info": "https://cvsu.edu.ph/2018/01/administration-building/",
+    "more_info": "https://cvsu.edu.ph",
 
-    "gallery": []
+    "gallery": ["/assets/Building Module/Gallery/admin/01.webp"]
   },
+
   {
     "scene": "hs",
     "name": "Cavite State University Science High School",
@@ -410,14 +502,20 @@
     "type": "school_facilities",
     "tags": ["school"],
     "image": "/assets/Building Module/Background/shs.webp",
-    "desc": "Welcome to the Cavite State University Science High School at our University.",
+    "desc": "The CvSU Science High School boasts a rich heritage. The school inhabits the historic Gabaldon buildings, the oldest structures on campus, serving as a testament to CvSU's longstanding commitment to education. Inside these esteemed walls, a lively student community flourishes under the guidance of a dedicated faculty. The faculty fosters a love for science, mathematics, and research, preparing students to be the future leaders in scientific fields. Equipped with cutting-edge facilities and resources, the CvSU Science High School provides an ideal learning environment for students to embark on their scientific pursuits.",
 
-    "gallery": [
-      "/assets/Building Module/Gallery/dit/01.webp",
-      "/assets/Building Module/Gallery/dit/02.webp",
-      "/assets/Building Module/Gallery/dit/03.webp"
-    ]
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "creng.bukid@gmail.com",
+      "additional": {
+        "Facebook Page": "https://www.facebook.com/cvsu.lshs/about"
+      }
+    },
+
+    "gallery": ["/assets/Building Module/Gallery/shs/01.webp"]
   },
+
   {
     "scene": "nhs",
     "name": "Cavite State University Science High School 2",
@@ -426,13 +524,18 @@
     "type": "school_facilities",
     "tags": ["school"],
     "image": "/assets/Building Module/Background/shs.webp",
-    "desc": "Welcome to the Cavite State University Science High School at our University.",
+    "desc": "The CvSU Science High School boasts a rich heritage. The school inhabits the historic Gabaldon buildings, the oldest structures on campus, serving as a testament to CvSU's longstanding commitment to education. Inside these esteemed walls, a lively student community flourishes under the guidance of a dedicated faculty. The faculty fosters a love for science, mathematics, and research, preparing students to be the future leaders in scientific fields. Equipped with cutting-edge facilities and resources, the CvSU Science High School provides an ideal learning environment for students to embark on their scientific pursuits.",
 
-    "gallery": [
-      "/assets/Building Module/Gallery/dit/01.webp",
-      "/assets/Building Module/Gallery/dit/02.webp",
-      "/assets/Building Module/Gallery/dit/03.webp"
-    ]
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "creng.bukid@gmail.com",
+      "additional": {
+        "Facebook Page": "https://www.facebook.com/cvsu.lshs/about"
+      }
+    },
+
+    "gallery": ["/assets/Building Module/Gallery/shs/01.webp"]
   },
   {
     "scene": "physci",
@@ -454,9 +557,28 @@
     "type": "college_buildings",
     "tags": ["ced", " school"],
     "image": "/assets/Building Module/Background/dit.webp",
-    "desc": "Welcome to College of Education, where we believe in the transformative power of education. Our diverse and inclusive community, led by dedicated mentors, provides the tools and support for you to succeed in the dynamic field of education. From innovative research opportunities to hands-on experiences, we empower you to make a meaningful impact in classrooms and communities. Welcome to a place where learning knows no bounds and excellence is the standard. Welcome to College of Education.",
+    "desc": "The College of Education welcomes you! Committed to the transformative power of education, their diverse community offers the tools and support for success in a dynamic field.  Through innovative research and hands-on experiences, they empower you to make a lasting impact. Here, learning is limitless and excellence is expected.",
 
-    "gallery": []
+    "dept": [
+      "• Teacher Education Department (TED)<br>• Home Economics, Vocational and Technical Education Department (HEVTED)"
+    ],
+    "courses": {
+      "Bachelor of Secondary Education": "<b>Course Majors:</b><br> • English <br> • Biological Science<br> • Mathematics",
+      "Bachelor of Elementary Education": "<b>Course Majors:</b><br> • Special Education<br> • Early Childhood Education",
+      "Bachelor of Hotel and Restaurant Management": "<b> with TESDA Competency in:</b><br> • Housekeeping NC II<br> • Food and Beverage NC II<br> • Bartending NC II<br> • Cookery NC II <br> • Bread and Pastry Production NC II",
+      "Bachelor of Tourism Management": "<b> with TESDA Competency in:</b><br> • Front Office NC II",
+      "Diploma in Hotel and Restaurant Management": "<b> with TESDA Competency in:</b><br> • Housekeeping NC II<br> • Food and Beverage NC II<br> • Bartending NC II<br> • Cookery NC II <br>",
+      "Teacher Certificate Program": null,
+      "Masters of Arts in Education": "<b>Graduate Programs:</b><br>• Educational Management<br>• Guidance and Counseling<br>• Curriculum and Instruction<br>• Elementary Education<br>• Secondary Education<br>• Mathematics<br>• Biology<br>• Chemistry",
+      "Doctor of Philosophy in Education": "• Educational Management"
+    },
+    "contacts": {
+      "Email": "ced@cvsu.edu.ph",
+      "additional": {
+        "Facebook Page": "https://www.facebook.com/profile.php?id=100064262193359"
+      }
+    },
+    "more_info": "https://cvsu.edu.ph/2018/01/ced-history/"
   },
   {
     "scene": "cdc",
@@ -465,10 +587,24 @@
     "acronym": "cdc",
     "type": "school_facilities",
     "tags": ["school"],
-    "image": "/assets/Building Module/Background/dit.webp",
-    "desc": "Welcome to the Child Development Center, where we cherish the transformative potential of early childhood education. Our nurturing and inclusive community, guided by passionate mentors, equips you with the resources and encouragement to thrive in the dynamic realm of child development. From engaging in innovative research endeavors to immersing in hands-on experiences, we empower you to create a profound difference in the lives of children and families. Step into a world where learning is boundless, and excellence is the norm.",
+    "image": "/assets/Building Module/Background/elementary.webp",
+    "desc": "The Child Development Center fosters a belief in the transformative power of early childhood education. Within our supportive and welcoming environment, dedicated mentors provide you with the tools and inspiration to flourish in the ever-evolving field of child development. By participating in cutting-edge research and practical learning experiences, you'll gain the knowledge and skills to make a significant impact on the lives of children and their families. Here, at the Child Development Center, the pursuit of limitless learning and exceptional achievement is our standard.",
 
-    "gallery": []
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "Add Email Address",
+      "additional": {
+        "Facebook Page": "https://www.facebook.com/cdcians2017",
+        "LMS": "https://cavitestateuniversitylms.com"
+      }
+    },
+
+    "gallery": [
+      "/assets/Building Module/Gallery/cdc/01.webp",
+      "/assets/Building Module/Gallery/cdc/02.webp",
+      "/assets/Building Module/Gallery/cdc/03.webp"
+    ]
   },
   {
     "scene": "con",
@@ -502,60 +638,31 @@
     "type": "college_buildings",
     "tags": ["cas", "school"],
     "image": "/assets/Building Module/Background/cas.webp",
-    "desc": "Welcome to the College of Arts and Sciences at our University. Within our dynamic community, scholars delve into the depths of human expression and exploration. From unraveling the mysteries of the cosmos to dissecting the complexities of human behavior, we're dedicated to expanding the frontiers of knowledge and understanding. Join us as we embrace diverse perspectives and creative inquiry to address the complexities of our world. Welcome to the vanguard of intellectual exploration and artistic expression.",
+    "desc": "The College of Arts and Sciences at this university welcomes you to its energetic community. Here, scholars explore the vast spectrum of human creativity and knowledge. From the mysteries of the universe to the intricacies of human behavior, the college is dedicated to pushing the boundaries of understanding. By embracing diverse viewpoints and fostering creative exploration, they tackle the complexities of the world. The college invites you to join them at the forefront of intellectual discovery and artistic expression.",
     "courses": {
-      "BACHELOR OF SCIENCE IN BIOLOGY": null,
-      "BACHELOR OF ARTS IN JOURNALISM": null,
-      "BACHELOR OF SCIENCE IN BACHELOR OF SCIENCE IN CIVIL ENGINEERING": null,
-      "BACHELOR OF ARTS IN ENGLISH": null,
-      "BACHELOR OF SCIENCE IN PSYCHOLOGY ": null,
-      "BACHELOR OF SCIENCE IN ELECTRICAL ENGINEERING": null,
-      "BACHELOR OF ARTS IN POLITICAL SCIENCE": null,
-      "BACHELOR OF SCIENCE IN SOCIAL WORK": null,
-      "BACHELOR OF SCIENCE IN APPLIED MATHEMATICS (Major in Statistics)": null
+      "BACHELOR OF SCIENCE IN BIOLOGY": "The Biological Science Program equips BS Biology graduates with skills for the Philippines' agricultural sector. The program offers a structured curriculum and graduates can find jobs in research and corporations. The rise of bio-aligned industries creates more opportunities.<br>",
+      "BACHELOR OF ARTS IN JOURNALISM": "This program cultivates well-rounded media professionals by equipping graduates with the knowledge, skills, ethics, and values needed to succeed in the rapidly evolving media landscape. Graduates are prepared to anticipate and respond to industry changes and can pursue diverse careers, including broadcast journalism, public relations, and web development.<br>",
+      "BACHELOR OF ARTS IN ENGLISH": " Bachelor of Arts in English provides a comprehensive program of reading, writing, and critical thinking. Students read, discuss, analyze, and write about challenging works of recognized literary merit to develop honest, concise, and effective use of language and the ability to organize ideas in a clear, coherent, and persuasive way. Independent literary analysis and a total mastery of writing skills are goals of the course.<br>",
+      "BACHELOR OF SCIENCE IN PSYCHOLOGY ": "The psychology program gives students core knowledge, research methods, and critical thinking skills for success in psychology careers or further studies. It offers a broad foundation with electives, and specialized tracks for clinical, school, or industrial psychology.<br>",
+      "BACHELOR OF ARTS IN POLITICAL SCIENCE": " Political Science, as a discipline, delves into multifarious and intricate activities of man as well as political, economic, social and cultural processes. Students are trained for careers in politics, law, teaching, civil service, and foreign service. Furthermore, students are equipped with knowledge and skills in discharging their rights and obligations as members of a democratic community, to prepare them to be vigilant, dynamic, and civic-spirited citizens.<br>",
+      "BACHELOR OF SCIENCE IN SOCIAL WORK": "The curriculum of the program is geared towards developing competent social workers equipped with desirable social, cultural and moral values. Its aim is to produce globally competitive social workers needed to promote social growth and people empowerment through various social and community activities.<br>",
+      "BACHELOR OF SCIENCE IN APPLIED MATHEMATICS (Major in Statistics)": "The Bachelor of Science in Applied Mathematics with a major in Statistics is offered by the College of Arts and Sciences. This four-year program, also available in a three-year inter-modal format, combines a well-rounded general education curriculum with in-depth coursework in mathematics and statistics. Students take 63 units of general education and 78 units of math and statistics courses."
+    },
+    "dept": [
+      "Department of Biological Sciences",
+      "Department of Communication and Languages",
+      "Department of Humanities",
+      "Department of Physical Sciences",
+      "Department of Social Sciences"
+    ],
+    "contacts": {
+      "Email": "cas@cvsu.edu.ph",
+      "additional": {
+        "Facebook Page": "https://www.facebook.com/cvsumaincas/",
+        "CAS Student Council": "https://www.facebook.com/CvSUCAS/"
+      }
     },
     "more_info": "https://cvsu.edu.ph/2018/01/12/college-of-arts-and-sciences/",
-    "gallery": []
-  },
-  {
-    "scene": "newcemds2",
-    "name": "College of Economics, Management and Development Studies New Building",
-    "access": "account",
-    "acronym": "new cemds",
-    "type": "college_buildings",
-    "tags": ["school", "cemds"],
-    "image": "/assets/Building Module/Background/cemds.webp",
-    "desc": "Welcome to the College of Economics, Management, and Development Studies New Building—a modern marvel of academia and innovation! Situated at the heart of campus, this state-of-the-art facility embodies the spirit of forward-thinking education and research. With its sleek design and advanced technology, the building provides a dynamic environment for students and faculty to explore the complexities of economics, management, and development studies. From spacious lecture halls to collaborative workspaces, every corner is designed to inspire creativity and critical thinking. Whether studying economic theory, honing management skills, or researching sustainable development practices, the College of Economics, Management, and Development Studies New Building offers a vibrant setting for academic excellence and growth.",
-
-    "dept": [
-      "Department of Management",
-      "Department of Economics",
-      "Department of Development Studies",
-      "Department of Accountancy"
-    ],
-    "courses": {
-      "BS OFFICE ADMINISTRATION": null,
-      "BS ACCOUNTANCY": null,
-      "BS BUSINESS ADMINISTRATION": [
-        "Financial Management",
-        "Human Resource Development Management",
-        "Marketing Management",
-        "Operations Management",
-        "Service Management Program"
-      ],
-      "BS ECONOMICS": null,
-      "BS DEVELOPMENT MANAGEMENT": [
-        "Rural Development Management",
-        "Training Program Management "
-      ],
-      "BS INTERNATIONAL STUDIES": ["Asian Studies", "European Studies"],
-      "GRADUATE PROGRAMS": [
-        "Master in Business Administration",
-        "Master in Management",
-        "Master in Public Administration"
-      ]
-    },
-    "contacts": {},
     "gallery": []
   },
   {
@@ -564,10 +671,38 @@
     "access": "account",
     "acronym": "interdisciplinary",
     "type": "school_facilities",
-    "tags": ["school"],
+    "tags": ["school", "laboratory"],
     "image": "/assets/Building Module/Background/inter disciplinary research building.webp",
-    "desc": "Welcome to our Interdisciplinary Research Facility! Here, experts from different fields team up to solve big problems together. From combining new technologies to tackling real-world issues, we're all about working together to make a difference. Join us as we break down barriers and find creative solutions. Welcome to a place where collaboration leads to breakthroughs!",
+    "desc": "The Interdisciplinary Research Building (IDRB) houses the majority of the laboratories of various specialties such as engineering and electronics, microbiology, genetics and molecular biology, vaccinology, parasitology, chemistry, and other fields intended to be used for research by faculty members and students of the University. Experts (ideally Designated Faculty Researchers) in the particular discipline shall be assigned to head a specific laboratory and shall coordinate closely with the head of TSD.",
 
+    "facilities": {
+      "Intellectual Property Management Division": null,
+      "Higher Education Cooperation Towards Transitional Education Open Resource": "The HECTOR project is an attempt to develop an open resource system for higher education institutions in the Philippines providing transactional education (TNE) services in support of the TNE initiatives of CHED.",
+      "Research Project Monitoring and Evaluation Division": null,
+      "Social Sciences Research Units": null,
+      "Simulation Measurement and Modelling Laboratory": "Simulation, Modeling and Measurement Laboratory (SiMM) is designed to create an environment that can accelerate the productivity of engineers, scientists, and student researchers through simulation and modeling of the designed machines, devices, and equipment. A total of seven research conducted through internal and external funding and six ongoing research. The laboratory has Computers and Simulation and Modeling Software like MATLab, NI LabVIEW, COMSOL, GAMS0",
+      "Genetics Laboratory": null,
+      "Microbial Culture Collection and Services Facility": "The Microbial Culture Collection and Service Facility (MCCSF) is a laboratory intended for the collection and maintenance of various cultures from bacteria, molds, yeasts, and algae. Though this is still in its infancy stage, the laboratCory houses several microbial cultures and will soon accept samples for microbiological analysis, hopefully, for resource generation in addition to services to the community. This laboratory is also a facility for research activities currently focusing on street foods, actinobacteria, lactic and cacao fermentation and other related research.",
+      "Chemical Biology and Biotechnology Laboratory": "Chemical Biology and Biotechnology Laboratory (CBBL) is involved in the use of chemical tools to understand biology and utilize these towards making bio-based products.",
+      "Natural Products Laboratory ": "Natural Products Laboratory (NPL) is a shared facility for research and development of natural products. It focuses on natural product research, traditional medicine, and phytochemistry.",
+      "Genetic Engineering and Systems Biology Laboratory ": "Genetic Engineering and System Biology is involved in the application of modern biotechnology aided by a whole systems approach towards crop and animal improvement and microbial engineering.",
+      "Bio-Analytical Services Facility": "The Bio-analytical Service Facility or BASF is a support laboratory of the University that aims to provide quality analytical research and extension services to students, researchers, from government agencies, private institutions, and industries in the region. It also offers a new range of applications in environmental monitoring, food and fragrance analysis, forensic, biological analysis, pharmaceutical and medical applications. In addition, this laboratory does not only allow expansion of research and development programs but also an income-generating project of the University. The research currently implemented are the wet processing technology through microbial fermentation for high-quality chocolates, Development of biological-based termiticide, GC-MS profiling of aroma compounds and antioxidant capacity of liberica and excelsa coffee, and Pesticide Residue Analysis of Vegetable Production in Selected Town in Cavite.",
+      "Foodborne Pathogens Laboratory": null,
+      "Macapuno Research and Development, Innovation and Resource Center": null,
+      "Macapuno Tissue Culture Laboratory": null,
+      "Vector-borne Diseases Laboratory": null
+    },
+
+    "contacts": {
+      "Telephone": "(046) 862-1654",
+      "Email": "researchcenter@cvsu.edu.ph",
+      "Mobile": "+639270110387",
+      "additional": {
+        "Add your website here": null
+      }
+    },
+
+    "more_info": "https://cvsu.edu.ph/ovpre-research-center/",
     "gallery": []
   },
   {
@@ -580,8 +715,23 @@
     "image": "/assets/Building Module/Background/museum.webp",
     "desc": "Welcome to the Historical and Cultural Museum at our University. Our museum is a treasure trove of artifacts, stories, and memories that celebrate our rich heritage and diverse culture. From ancient relics to modern masterpieces, we showcase the beauty and complexity of our shared history. Step inside and embark on a journey through time and tradition. Welcome to a place where the past comes alive and the present is illuminated.",
 
-    "contacts": {},
-    "gallery": []
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "museum@cvsu.edu.ph",
+      "additional": {
+        "Facebook Page": "https://www.facebook.com/cvsumuseum"
+      }
+    },
+
+    "gallery": [
+      "/assets/Building Module/Gallery/museum/03.webp",
+      "/assets/Building Module/Gallery/museum/01.webp",
+      "/assets/Building Module/Gallery/museum/02.webp",
+      "/assets/Building Module/Gallery/museum/04.webp",
+      "/assets/Building Module/Gallery/museum/05.webp",
+      "/assets/Building Module/Gallery/museum/06.webp"
+    ]
   },
   {
     "scene": "cropsci",
@@ -603,9 +753,19 @@
     "type": "school_facilities",
     "tags": ["school", "ccj"],
     "image": "/assets/Building Module/Background/ccj.webp",
-    "desc": "Welcome to the College of Criminal Justice at our University. Our college is dedicated to the study and practice of law enforcement, criminal justice, and public safety. With a focus on ethics, professionalism, and community service, we prepare students for careers in law enforcement, corrections, and security. From hands-on training to cutting-edge research, we provide a comprehensive education that equips students with the skills and knowledge needed to make a positive impact in their communities. Join us as we work together to create a safer, more just society. Welcome to the College of Criminal Justice.",
-
-    "contacts": {},
+    "desc": "The College of Criminal Justice at the University fosters a deep understanding and practical application of law enforcement, criminal justice, and public safety principles.  Imbued with a commitment to ethical conduct, professional excellence, and community service, the college cultivates students for fulfilling careers in law enforcement, corrections, and security.  The curriculum offers a rich tapestry of experiences, from immersive hands-on training to pioneering research endeavors.  This comprehensive approach equips graduates with the necessary tools and knowledge to become instrumental agents of positive change within their communities.  By joining the College of Criminal Justice, students become part of a collaborative effort to forge a safer and more equitable society.",
+    "courses": {
+      "Bachelor of Science in Criminology": "• Criminology examines all aspects of crime, from the creation and violation of laws to the societal response. It delves into the work of justice agencies, equipping graduates to serve their communities in various capacities. These include crime prevention, investigation, law enforcement, rehabilitation, and research, all with a focus on professional ethics and effectiveness.<br>",
+      "Bachelor of Science in Industrial Security Administration": "• This security program equips graduates for leadership positions. It delves into interventions for various human challenges and explores methods to safeguard resources from harm."
+    },
+    "contacts": {
+      "Email": "ccj@cvsu.edu.ph",
+      "additional": {
+        "Facebook Page": "https://www.facebook.com/CCJGenerals/",
+        "CCJ Student Council": "https://www.facebook.com/ccjstudentcouncil"
+      }
+    },
+    "more_info": "https://cvsu.edu.ph/2018/01/12/college-of-criminal-justice/",
     "gallery": []
   },
   {
@@ -628,22 +788,52 @@
     "type": "school_facilities",
     "tags": ["school"],
     "image": "/assets/Building Module/Background/cashier.webp",
-    "desc": "Welcome to the University Cashier at our University. Our state-of-the-art facilities and passionate community of scholars are dedicated to exploring the wonders of life. From molecular biology to ecology, we're committed to advancing our understanding of the natural world and addressing global challenges. Join us on a journey of discovery and exploration. Welcome to the heart of scientific inquiry.",
+    "desc": "The University Cashier's Office, situated in located at the back of the Administration Building, acts as the central hub for students, faculty, and staff to manage all university-related finances.  Dedicated staff provide exceptional customer service in a transparent environment. Readily addresses any questions regarding university fees and payments. This ensures a smooth and hassle-free experience when navigating financial obligations at the university.",
 
-    "gallery": []
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "Add Email Address",
+      "additional": {
+        "Add your website here": null
+      }
+    },
+
+    "gallery": ["/assets/Building Module/Gallery/cashier/01.webp"]
   },
+
   {
     "scene": "icon",
     "name": "International Convention Center",
     "access": "account",
     "acronym": "cashier",
-    "type": "school_facilities",
+    "type": "venue",
     "tags": ["school"],
     "image": "/assets/Building Module/Background/ICON.webp",
-    "desc": "Welcome to the International Convention Center at our University.",
+    "desc": "The University International Convention Center serves as a multipurpose venue for significant university events and external collaborations. This impressive structure hosts formal university functions, from standardized exams and bustling job fairs to grand graduation ceremonies, with its adaptable space configurable to each event's needs.  Beyond university-organized gatherings, the center can be rented by external organizations for conferences, or even social events. The University International Convention Center embodies the university's pursuit of excellence, offering a platform to celebrate student achievements and foster collaboration within the broader community.",
 
-    "gallery": []
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "Add Email Address",
+      "additional": {
+        "Add your website here": null
+      }
+    },
+
+    "gallery": [
+      "/assets/Building Module/Gallery/icon/01.webp",
+      "/assets/Building Module/Gallery/icon/02.webp",
+      "/assets/Building Module/Gallery/icon/03.webp",
+      "/assets/Building Module/Gallery/icon/04.webp",
+      "/assets/Building Module/Gallery/icon/05.webp",
+      "/assets/Building Module/Gallery/icon/06.webp",
+      "/assets/Building Module/Gallery/icon/07.webp"
+    ],
+
+    "more_info": "https://cvsu.edu.ph/ovpeba-international-convention-center/"
   },
+
   {
     "scene": "pool",
     "name": "Saluysoy Resort",
@@ -651,10 +841,190 @@
     "acronym": "pool",
     "type": "school_facilities",
     "tags": ["school", "leisure"],
-    "image": "/assets/Building Module/Background/cwtlab.webp",
+    "image": "/assets/Building Module/Extras/university pool (14).webp",
     "desc": "Welcome to Saluysoy Resort, where every moment is a celebration of nature's beauty and the warmth of Filipino hospitality. Nestled amidst lush greenery and serene waters, our resort is a haven of relaxation and rejuvenation. Explore the wonders of our pristine surroundings, from tranquil lakes to vibrant flora and fauna. Whether you're seeking adventure or simply a peaceful retreat, Saluysoy offers an unforgettable experience for all. Step into a world where time slows down, and every breath is filled with the essence of tranquility. Welcome to Saluysoy Resort, where nature's embrace awaits.",
 
-    "contacts": {},
-    "gallery": []
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "Add Email Address",
+      "additional": {
+        "Add your website here": null
+      }
+    },
+
+    "gallery": [
+      "/assets/Building Module/Gallery/pool/01.webp",
+      "/assets/Building Module/Gallery/pool/02.webp",
+      "/assets/Building Module/Gallery/pool/03.webp",
+      "/assets/Building Module/Gallery/pool/04.webp",
+      "/assets/Building Module/Gallery/pool/05.webp",
+      "/assets/Building Module/Gallery/pool/06.webp",
+      "/assets/Building Module/Gallery/pool/07.webp"
+    ],
+
+    "more_info": "https://cvsu.edu.ph/sports-facilities/"
+  },
+
+  {
+    "scene": "cpc",
+    "name": "Coffee Processing Center",
+    "access": "account",
+    "acronym": "coffee processing",
+    "type": "school_facilities",
+    "tags": ["school", "laboratory"],
+    "image": "/assets/Building Module/Background/ssfcoffee.webp",
+    "desc": "The Coffee Processing Center is jointly managed by CvSU and Agricultural Competitiveness Enhancement Fund (ACEF). It produces good quality ground coffee loved by many who tasted its unique aroma.",
+
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "Add Email Address",
+      "additional": {
+        "Add your website here": null
+      }
+    },
+    "more_info": "https://cvsu.edu.ph/ovpeba-facilities/ovpeba-coffee-processing-center/",
+    "gallery": [
+      "/assets/Building Module/Gallery/cpc/01.webp",
+      "/assets/Building Module/Gallery/cpc/02.webp",
+      "/assets/Building Module/Gallery/cpc/03.webp",
+      "/assets/Building Module/Gallery/cpc/04.webp"
+    ]
+  },
+  {
+    "scene": "infirmary",
+    "name": "University Infirmary Building",
+    "access": "account",
+    "acronym": "infirmary",
+    "type": "school_facilities",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Background/infirmary.webp",
+    "desc": "<b>We are open! <br>Mondays - Thursdays </b><br><i>7:00 am - 6:00 pm</i> <br><br>The Cavite State University Health Services (CvSU Health Services). This central facility embodies the university's commitment to student well-being by offering a comprehensive range of health services.  True to its mission, CvSU Health Services prioritizes preventative, promotive, and curative care for its target clientele – students, faculty, and staff. The dedicated staff provides quality, affordable, and easily accessible healthcare, ensuring a healthy and supportive environment for the entire university community. ",
+
+    "facilities": {
+      "Medical Faciliies": null,
+      "Dental Facilities": null,
+      "Storage Facilities": null
+    },
+
+    "services": {
+      "General Medicine": "<b>Services offered under General Medicine includes:</b> <br>• Consultation and Treatment <br>• Minor Surgery <br>• First Aid Treatment <br>• Pre-enrollment Medical Examination <br>• Pre-employment Medical Examination <br>• Annual Physical Examination",
+      "Dental Medicine": "<b>Services offered under Dental Medicine:</b> <br>• Consultation <br>• Oral Prophylaxis (Cleaning) <br>• Simple Tooth Extractions <br>• Restorative Treatment (Tooth Filling)",
+      "Ancillary Services": "<b>Services offered under Ancillary Services:</b> <br>• Radiologic/X-ray Services <br>• Laboratory Examinations <br>• Electrocardiogram (ECG) <br>• Ambulances (For EMERGENCY cases only)"
+    },
+
+    "contacts": {
+      "Telephone": "(046) 423 1335",
+      "Mobile": "Add Mobile Number",
+      "Email": "infirmary.cvsu@gmail.com",
+      "additional": {
+        "Facebook Page": "https://www.facebook.com/cvsuhsu"
+      }
+    },
+
+    "gallery": [
+      "/assets/Building Module/Gallery/infirmary/01.webp",
+      "/assets/Building Module/Gallery/infirmary/02.webp",
+      "/assets/Building Module/Gallery/infirmary/03.webp",
+      "/assets/Building Module/Gallery/infirmary/04.webp"
+    ],
+
+    "more_info": "https://cvsu.edu.ph/health-facilities/"
+  },
+  {
+    "scene": "chapel",
+    "name": "University Chapel",
+    "access": "guest",
+    "acronym": "chapel",
+    "type": "venue",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Background/chapel.webp",
+    "desc": "The University Chapel serves as a central hub for religious life on campus, welcoming all faiths for observance and reflection.  This sacred space hosts regular services like Catholic masses and interfaith prayers, fostering a sense of community for those with shared beliefs.  Beyond celebrations, the Chapel provides a dignified space for funerals and memorials, offering solace during times of loss.  When not hosting services, the peaceful atmosphere invites individuals for quiet contemplation and personal reflection, regardless of their religious background.  The University Chapel embodies inclusivity, offering a haven for spiritual connection amidst the vibrant campus life.",
+
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "Add Email Address",
+      "additional": {
+        "Add your website here": null
+      }
+    },
+
+    "more_info": "https://cvsu.edu.ph/ovpeba-facilities/ovpeba-coffee-processing-center/",
+
+    "gallery": [
+      "/assets/Building Module/Gallery/chapel/01.webp",
+      "/assets/Building Module/Gallery/chapel/02.webp"
+    ]
+  },
+  {
+    "scene": "rolle",
+    "name": "Rolle Hall",
+    "access": "account",
+    "acronym": "rolle",
+    "type": "venue",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Background/rhall.webp",
+    "desc": "Cavite State University's Rolle Hall, named after the university's first president, Santiago M. Rolle, serves as a versatile event space for the CvSU community and beyond. This spacious hall can accommodate up to 250 guests and adapts to various functions, from weddings and birthdays to seminars, workshops, and even political events.  As a central venue, Rolle Hall not only offers functionality but also embodies CvSU's legacy, fostering a space for community gatherings, celebrations, and the creation of lasting memories.",
+
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "Add Email Address",
+      "additional": {
+        "Add your website here": null
+      }
+    },
+
+    "gallery": [
+      "/assets/Building Module/Gallery/rolle/01.webp",
+      "/assets/Building Module/Gallery/rolle/02.webp",
+      "/assets/Building Module/Gallery/rolle/03.webp"
+    ],
+
+    "more_info": "https://cvsu.edu.ph/ovpeba-facilities/ovpeba-rolle-hall/"
+  },
+  {
+    "scene": "scicafe",
+    "name": "Science Cafe",
+    "access": "account",
+    "acronym": "coffee shop",
+    "type": "cafeteria",
+    "tags": ["school", "leisure"],
+    "image": "/assets/Building Module/Background/scicafe.webp",
+    "desc": "Situated beside the library, the Science Cafe offers a unique blend of refreshments and intellectual engagement. Beyond serving coffee beverages and snacks, the cafe fosters a casual environment for scientific exploration. Events and talks hosted there spark curiosity and discussions about science, while the cafe itself serves as a natural gathering place for students, faculty, and staff with a shared passion for the subject. The Science Cafe acts as a gateway to exploration, offering a welcoming space to delve into new ideas, connect with fellow science enthusiasts, and enjoy a stimulating atmosphere that goes beyond the typical cafe experience.",
+
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "Add Email Address",
+      "additional": {
+        "Facebook Page": "https://www.facebook.com/ScienceCafebyCafeSeverino/"
+      }
+    },
+
+    "gallery": [
+      "/assets/Building Module/Gallery/scicafe/01.webp",
+      "/assets/Building Module/Gallery/scicafe/02.webp",
+      "/assets/Building Module/Gallery/scicafe/03.webp"
+    ]
+  },
+
+  {
+    "scene": "saluysoy",
+    "name": "Saluysoy Cafeteria",
+    "access": "account",
+    "acronym": "saluysoy",
+    "type": "cafeteria",
+    "tags": ["school", "leisure"],
+    "image": "/assets/Building Module/Background/saluysoy.webp",
+    "desc": "Saluysoy Cafeteria serves as the university's central hub for meals and beverages, catering to students, faculty, and staff.  This bustling space offers a diverse menu encompassing breakfast, lunch, snacks, and various drinks, ensuring everyone finds something to satisfy their hunger pangs throughout the day.  Prioritizing convenience, the cafeteria features a streamlined service system ideal for the fast-paced university environment.  Beyond sustenance, Saluysoy Cafeteria fosters a sense of community by creating a casual environment that encourages interaction and connection between students, faculty, and staff, solidifying its role as an integral part of the university experience.",
+
+    "gallery": [
+      "/assets/Building Module/Gallery/saluysoy/01.webp",
+      "/assets/Building Module/Gallery/saluysoy/02.webp",
+      "/assets/Building Module/Gallery/saluysoy/03.webp"
+    ]
   }
 ]

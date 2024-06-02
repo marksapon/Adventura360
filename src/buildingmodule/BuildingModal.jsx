@@ -19,6 +19,7 @@ import { FaPhone } from "react-icons/fa"; // Contact
 import { ImLab } from "react-icons/im"; // Facilities
 import { IoMdArrowRoundBack } from "react-icons/io"; //
 import { MdHomeRepairService } from "react-icons/md"; // Services
+import { MdLocalPostOffice } from "react-icons/md"; // Offices
 import { FaInfo } from "react-icons/fa"; // More Info
 
 import { MdExpandMore } from "react-icons/md"; // Expand More
@@ -86,6 +87,10 @@ const BuildingModal = ({
       }
     }
     return temp;
+  }
+
+  function has360Check(target) {
+    console.log(target.scene);
   }
 
   function setTargetInfo(scene) {
@@ -328,6 +333,23 @@ const BuildingModal = ({
                 </div>
               )}
 
+              {/* Offices  */}
+              {current_info && current_info.offices && (
+                <div className="flex h-20 w-auto flex-col items-center justify-start">
+                  <button
+                    className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${activeButton === "offices" ? "bg-green-600" : "bg-white"}`}
+                    onClick={() => {
+                      setActiveButton(resetActiveButton("offices"));
+                    }}
+                  >
+                    <MdLocalPostOffice
+                      className={`size-4 text-green-600 sm:size-6 ${activeButton === "offices" ? "text-white" : "text-green-600"}`}
+                    />
+                  </button>
+                  <div className="pt-1 text-xs text-green-600">Offices</div>
+                </div>
+              )}
+
               {/* Departments  */}
               {current_info && current_info.dept && (
                 <div className="flex h-20 w-auto flex-col items-center justify-start">
@@ -410,6 +432,7 @@ const BuildingModal = ({
                   <button
                     className="flex items-center justify-center rounded-full bg-green-500 p-2"
                     onClick={() => {
+                      has360Check(current_info);
                       setAccess("public");
                       setMapState(false);
                       changeScene("bldg", current_info.scene);
@@ -565,18 +588,9 @@ const BuildingModal = ({
                           </button>
                           {isOpen[key] && current_info.courses[key] && (
                             <div className="mb-2 flex w-full flex-auto rounded-md border-2 border-gray-500 border-opacity-60">
-                              <uv>
-                                {current_info.courses[key].map(
-                                  (subCourse, index) => (
-                                    <li
-                                      className="single-content-bullet p-2 text-sm"
-                                      key={index}
-                                    >
-                                      {subCourse}
-                                    </li>
-                                  ),
-                                )}
-                              </uv>
+                              <div className="p-2 text-sm ">
+                                {purifyText(current_info.courses[key])}
+                              </div>
                             </div>
                           )}
                         </div>
@@ -707,7 +721,46 @@ const BuildingModal = ({
                         {isOpen[key] && current_info.services[key] && (
                           <div className="mb-2 flex w-full flex-auto rounded-md border-2 border-gray-500 border-opacity-60">
                             <div className="p-2 text-sm ">
-                              {current_info.services[key]}
+                              {purifyText(current_info.services[key])}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Offices */}
+              {current_info && activeButton === "offices" && (
+                <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">
+                  <h1 className="flex flex-row items-center gap-3 pb-5 font-roboto text-2xl font-medium text-green-500">
+                    <MdHomeRepairService
+                      className={`size-4 text-green-600 sm:size-6`}
+                    />
+                    Offices
+                  </h1>
+
+                  <ul className="flex list-inside flex-col gap-1">
+                    {Object.keys(current_info.offices).map((key, index) => (
+                      <div className="flex flex-col gap-1">
+                        <button
+                          onClick={() => handleClick(key)}
+                          className="flex items-center justify-between rounded-lg border-2 border-green-600 bg-white p-2"
+                        >
+                          <div
+                            key={index}
+                            className="single-content-bullet font-roboto text-base font-medium"
+                          >
+                            {key}
+                          </div>
+                          {current_info.offices[key] &&
+                            (isOpen[key] ? <MdExpandLess /> : <MdExpandMore />)}
+                        </button>
+                        {isOpen[key] && current_info.offices[key] && (
+                          <div className="mb-2 flex w-full flex-auto rounded-md border-2 border-gray-500 border-opacity-60">
+                            <div className="p-2 text-sm ">
+                              {purifyText(current_info.offices[key])}
                             </div>
                           </div>
                         )}

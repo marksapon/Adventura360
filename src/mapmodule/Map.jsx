@@ -176,9 +176,10 @@ const MapModule = ({
     console.log("Removing Overlays:", target_loc);
     Object.keys(overlays).map((type) => {
       overlays[type].map((overlay) => {
-        if (target_loc && overlay.scene === target_loc.scene) {
+        if (target_loc && overlay.scene !== target_loc.scene) {
         } else {
           viewer.removeOverlay(overlay.id);
+          removeOverlaysName();
         }
       });
     });
@@ -881,7 +882,7 @@ const MapModule = ({
         className="flex h-auto w-36 flex-col items-center justify-end space-y-2"
       >
         <div className="h-auto w-auto rounded-md bg-white p-2 text-center font-sans font-semibold text-green-500">
-          Your Here
+          You are here
         </div>
         <img
           src="/assets/Login Module/adventura logo 2.webp"
@@ -945,7 +946,7 @@ const MapModule = ({
                             ? selected_extra.image
                             : "https://via.placeholder.com/150"
                         }
-                        className="h-full w-full border-2 object-cover shadow-md"
+                        className="h-60 w-96 border-2 object-contain shadow-md"
                       />
                     </div>
                     <div className="m-2 flex flex-col items-center justify-center gap-2">

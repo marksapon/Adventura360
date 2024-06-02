@@ -137,7 +137,7 @@ const PathfindingModal = ({
                         console.log("Path Modal Closed");
                         removePath();
                         removeOverlays();
-                        // setTargetLocation();
+                        setTargetLocation();
                       }}
                     >
                       <IoIosClose size={30} />

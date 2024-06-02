@@ -47,7 +47,7 @@
     "coords": {
       "x": 0.471,
       "y": 1.287,
-      "type": "school_facilities"
+      "type": "venue"
     },
     "hotspot": [
       {
@@ -542,8 +542,8 @@
   {
     "scene": "rolle",
     "location": "Rolle Hall",
-    "image": "",
-    "back": [""],
+    "image": "/assets/Database Images/unrestricted nodes/233.webp",
+    "back": ["node233"],
     "coords": {
       "x": 0.442,
       "y": 0.771,
@@ -554,8 +554,8 @@
         "type": "info",
         "class": "info",
         "target": "rolle",
-        "yaw": "",
-        "pitch": ""
+        "yaw": 97.56,
+        "pitch": 13.05
       }
     ]
   },
@@ -662,8 +662,8 @@
   {
     "scene": "infirmary",
     "location": "University Infirmary Building",
-    "image": "",
-    "back": [""],
+    "image": "/assets/Database Images/unrestricted nodes/417.webp",
+    "back": ["node417"],
     "coords": {
       "x": 0.289,
       "y": 1.161,
@@ -674,8 +674,8 @@
         "type": "info",
         "class": "info",
         "target": "infirmary",
-        "yaw": 112.8,
-        "pitch": 12.34
+        "yaw": 108.22,
+        "pitch": 1.54
       }
     ]
   },
@@ -683,7 +683,7 @@
     "scene": "icon",
     "location": "International Convention Center",
     "image": "",
-    "back": [""],
+    "back": ["node238"],
     "coords": {
       "x": 0.48,
       "y": 0.712,
@@ -759,46 +759,7 @@
       }
     ]
   },
-  {
-    "scene": "info_center",
-    "location": "Information Center Building",
-    "image": "",
-    "back": [""],
-    "coords": {
-      "x": 0.613,
-      "y": 0.808,
-      "type": "school_facilities"
-    },
-    "hotspot": [
-      {
-        "type": "info",
-        "class": "info",
-        "target": "info_center",
-        "yaw": 112.8,
-        "pitch": 12.34
-      }
-    ]
-  },
-  {
-    "scene": "bee",
-    "location": "CvSU Bee Program Facility",
-    "image": "",
-    "back": [""],
-    "coords": {
-      "x": 0.613,
-      "y": 0.808,
-      "type": "school_facilities"
-    },
-    "hotspot": [
-      {
-        "type": "info",
-        "class": "info",
-        "target": "bee",
-        "yaw": 112.8,
-        "pitch": 12.34
-      }
-    ]
-  },
+
   {
     "scene": "ccj",
     "location": "College of Criminology and Justice",
@@ -879,5 +840,35 @@
         "pitch": -4.89
       }
     ]
+  },
+  {
+    "scene": "chapel",
+    "location": "University Chapel",
+    "image": "/assets/Database Images/unrestricted nodes/358.webp",
+    "back": ["node358"],
+    "coords": {
+      "x": 0.241,
+      "y": 1.055,
+      "type": "venue"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "chapel",
+        "yaw": 118.89,
+        "pitch": 16.79
+      }
+    ]
+  },
+  {
+    "scene": "scicafe",
+    "location": "Science Cafe",
+    "coords": {
+      "x": 0.241,
+      "y": 1.055,
+      "type": "cafeteria"
+    }
   }
 ]

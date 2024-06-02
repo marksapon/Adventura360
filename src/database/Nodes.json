@@ -6591,11 +6591,11 @@
         "pitch": -20
       },
       {
-        "type": "popup",
+        "type": "info",
         "class": "cafeteria",
-        "target": "saaluysoy",
-        "yaw": 234.48,
-        "pitch": -2.73
+        "target": "saluysoy",
+        "yaw": 275.39,
+        "pitch": -2.62
       },
       {
         "type": "info",
@@ -6975,9 +6975,9 @@
         "pitch": -20
       },
       {
-        "type": "info",
-        "class": "venue",
-        "target": "rollehall",
+        "type": "bldg",
+        "class": "bldg",
+        "target": "rolle",
         "yaw": 97.56,
         "pitch": 13.05
       }
@@ -8573,6 +8573,13 @@
         "target": "library",
         "yaw": 120.8,
         "pitch": 6.93
+      },
+      {
+        "type": "popup",
+        "class": "cafeteria",
+        "target": "scicafe",
+        "yaw": 90.98,
+        "pitch": 5.62
       }
     ]
   },
@@ -8597,6 +8604,13 @@
         "target": "node285",
         "yaw": 216.55,
         "pitch": -25.93
+      },
+      {
+        "type": "info",
+        "class": "cafeteria",
+        "target": "scicafe",
+        "yaw": 155.71,
+        "pitch": 3.74
       }
     ]
   },
@@ -10906,8 +10920,8 @@
         "pitch": -20
       },
       {
-        "type": "popup",
-        "class": "attractions",
+        "type": "bldg",
+        "class": "bldg",
         "target": "chapel",
         "yaw": 118.89,
         "pitch": 16.79
@@ -12412,6 +12426,14 @@
         "target": "node411",
         "yaw": 193.12,
         "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "bldg",
+        "class": "bldg",
+        "target": "infirmary",
+        "yaw": 108.22,
+        "pitch": 1.54
       }
     ]
   },

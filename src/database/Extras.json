@@ -148,26 +148,7 @@
     },
     "image": "/assets/Building Module/Extras/osas_rr.webp"
   },
-  {
-    "scene": "brite",
-    "location": "CvSU Brite Center Demonstration Area",
-    "coords": {
-      "x": 0.67,
-      "y": 0.819,
-      "type": "farm"
-    },
-    "image": ""
-  },
-  {
-    "scene": "saluysoy",
-    "location": "Saluysoy",
-    "coords": {
-      "x": 0.554,
-      "y": 0.709,
-      "type": "cafeteria"
-    },
-    "image": "/assets/Building Module/Extras/saluysoy.webp"
-  },
+
   {
     "scene": "grandstand",
     "location": "Grandstand",
@@ -190,25 +171,15 @@
     },
     "image": "/assets/Building Module/Extras/kaong.webp"
   },
-  {
-    "scene": "eng_shop",
-    "location": "Engineer Shops",
-    "desc": "This is the university's Engineer Shops",
-    "coords": {
-      "x": 0.342,
-      "y": 0.889,
-      "type": "school_facilities"
-    },
-    "image": "/assets/Database Images/unrestricted nodes/108.webp"
-  },
+
   {
     "scene": "canteen",
     "location": "Canteen & Marketing Center",
-    "desc": "This is the university's Canteen & Marketing Center",
+    "desc": "This is the university's Canteen & Marketing Center which is currently under construction.",
     "coords": {
       "x": 0.235,
       "y": 1.016,
-      "type": "cafeteria"
+      "type": "construction"
     },
     "image": "/assets/Building Module/Extras/recreational.webp"
   },
@@ -263,7 +234,7 @@
     "coords": {
       "x": 0.63,
       "y": 1.038,
-      "type": "school_facilities"
+      "type": "construction"
     },
     "image": "/assets/Building Module/Extras/water testing laboratory.webp"
   },
@@ -314,7 +285,7 @@
   {
     "scene": "underconstructionDEE",
     "location": "Extension building of DEE",
-    "desc": "This is the under construction extension Department of Electrical Engineering",
+    "desc": "This is the extension of Department of Electrical Engineering which is currently under construction.",
     "coords": {
       "x": 0.251,
       "y": 0.895,
@@ -553,17 +524,7 @@
     },
     "image": "/assets/Building Module/Extras/umall_rr.webp"
   },
-  {
-    "scene": "UniversityPool",
-    "location": "University Pool",
-    "desc": "This is the university's pool",
-    "coords": {
-      "x": 0.633,
-      "y": 0.673,
-      "type": "school_facilities"
-    },
-    "image": "/assets/Building Module/Extras/university pool (14).webp"
-  },
+
   {
     "scene": "UniversityMall",
     "location": "University Mall",
@@ -624,22 +585,11 @@
     "location": "Gate 3",
     "desc": "This is the university's Gate 3",
     "coords": {
-      "x": 0.676,
-      "y": 1.2,
-      "type": "attractions"
+      "x": 0.524,
+      "y": 1.289,
+      "type": "school_facilities"
     },
     "image": "/assets/Building Module/Extras/gate 3.webp"
-  },
-  {
-    "scene": "chapel",
-    "location": "University Chapel",
-    "desc": "This is the university's Chapel",
-    "coords": {
-      "x": 0.241,
-      "y": 1.055,
-      "type": "attractions"
-    },
-    "image": "/assets/Building Module/Extras/chapel.webp"
   },
   {
     "scene": "inangkalikasan",
@@ -650,7 +600,7 @@
       "y": 0.756,
       "type": "attractions"
     },
-    "image": ""
+    "image": "/assets/Building Module/Extras/inang kalikasan.webp"
   },
   {
     "scene": "field",
