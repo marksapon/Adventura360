@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { IoIosClose } from "react-icons/io";
 import { PiCardsDuotone, PiGridNine, PiList } from "react-icons/pi";
-import { IoIosArrowUp } from "react-icons/io";
+import { IoMdArrowRoundBack } from "react-icons/io";
 import { GrCafeteria } from "react-icons/gr";
 import { LuSchool } from "react-icons/lu";
 import { PiBinocularsDuotone } from "react-icons/pi";
@@ -126,7 +126,6 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
       display: "Attractions",
     },
     venue: { icon: <FaHotel />, color: "bg-rose-400", display: "Venues" },
-    // add more keys as needed
   };
 
   // Tag Function
@@ -178,7 +177,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
         const matchesTag =
           selectedTag.length > 0 &&
           content.tags &&
-          selectedTag.some((tag) => content.tags.includes(tag));
+          selectedTag.every((tag) => content.tags.includes(tag));
 
         const shouldIncludeContent = searchTerm
           ? matchesSearchTerm || matchesTag
@@ -237,29 +236,66 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
 
                 {/* Filter Section */}
                 <div className="no-scrollbar h-full overflow-auto">
-                  <div className="flex flex-col border-b px-4">
+                  <div className="flex flex-col px-4">
                     {/* sort dropdown. */}
                     <div className="h-auto pb-2">
-                      <button
-                        onClick={() => {
-                          setIsOpen(!isOpen);
-                          setListDisplay(!listDisplay);
-                        }}
-                        className="flex items-center text-xl font-bold text-gray-700"
-                      >
-                        Filter by &nbsp;
-                        <IoIosArrowUp
-                          className={`transform ${isOpen ? "rotate-180" : ""}`}
-                        />
-                      </button>
+                      {listDisplay && (
+                        <button
+                          onClick={() => {
+                            setIsOpen(!isOpen);
+                            setListDisplay(!listDisplay);
+                          }}
+                          className="mb-4 mt-4 flex items-center text-xl font-bold text-gray-700"
+                        >
+                          <IoMdArrowRoundBack size={30} />
+                          Back
+                        </button>
+                      )}
+
+                      {/* Tags Selection */}
+                      {listDisplay && (
+                        <>
+                          <h1 className="pb-2 text-sm font-semibold text-gray-500">
+                            Select tags:
+                          </h1>
+                          <div className="mb-2 flex w-full flex-wrap gap-2 p-1">
+                            {/* container for the tag buttons. */}
+                            {tags.map((tag, index) => (
+                              <button
+                                key={index}
+                                // Call handleTagClick with the tag when the button is clicked
+                                onClick={() => handleTagClick(tag)}
+                                className={`text-grey-600 flex h-auto justify-center gap-1 rounded-xl px-2 py-1 text-center text-xs font-bold ring-2 ring-green-500 hover:opacity-80 `}
+                                style={{
+                                  ...(selectedTag.includes(tag)
+                                    ? {
+                                        backgroundColor: "#22c55e",
+                                        opacity: 0.8,
+                                      }
+                                    : {}),
+                                }}
+                              >
+                                {tag.toUpperCase()}
+                              </button>
+                            ))}
+                            {/* reset button. */}
+                            <button
+                              onClick={handleReset}
+                              className="h-fit rounded-xl bg-gray-500 px-2 py-1 text-xs text-white"
+                            >
+                              RESET
+                            </button>
+                          </div>
+                        </>
+                      )}
 
                       {/*FILTER DROPDOWN */}
                       <div
                         className={`origin-top transform overflow-hidden text-sm transition-all duration-300 ease-in-out sm:text-base ${listDisplay ? "max-h-0 scale-y-0 opacity-0" : "max-h-full scale-y-100 opacity-100"}`}
                       >
                         <div className="m-2">
-                          <div
-                            className={`flex items-center justify-center gap-2 rounded-lg p-1 text-center transition-all duration-300 ease-in-out sm:p-3 ${selectedKey === "All" ? "border border-gray-200 bg-slate-50 shadow-lg" : "border border-transparent hover:border"} hover:border-gray-200 hover:shadow-lg`}
+                          <button
+                            className={`flex w-full items-center justify-center gap-2 rounded-lg p-1 text-center font-sans font-semibold transition-all duration-300 ease-in-out sm:p-3 ${selectedKey === "All" ? "border border-gray-200 bg-slate-50 shadow-lg" : "border border-transparent hover:border"} hover:border-gray-200 hover:shadow-lg`}
                             onClick={() => {
                               setSelectedKey("All");
                               handleSortChange("All");
@@ -270,16 +306,17 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                               <FaHome />
                             </span>
                             All
-                          </div>
+                          </button>
+
                           <div className="mt-4 grid grid-cols-2 grid-rows-5 gap-2 sm:gap-4">
                             {/* Map over the keys of the contentMap object */}
                             {Object.keys(keyIcons).map((key, index) => (
                               <button
                                 key={index}
                                 className={`
-      flex items-center gap-2 rounded-lg p-1 text-center transition-all duration-300 ease-in-out sm:p-3 
-      ${selectedKey === key ? "border border-gray-200 bg-slate-50 shadow-lg" : "border border-transparent hover:border"} 
-      hover:border-gray-200 hover:shadow-lg
+      flex items-center gap-2 rounded-lg p-1 text-center transition-all duration-300 ease-in-out sm:p-3
+      ${selectedKey === key ? "border border-gray-200 bg-slate-50 shadow-lg" : "border border-transparent  hover:border"} 
+      font-sans font-semibold  hover:border-gray-200 hover:shadow-lg
     `}
                                 onClick={() => {
                                   setSelectedKey(key);
@@ -296,38 +333,6 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                               </button>
                             ))}
                           </div>
-                        </div>
-                        {/* Tags Selection */}
-                        <h1 className="pb-2 text-sm font-semibold text-gray-500">
-                          Select tags:
-                        </h1>
-                        <div className="mb-2 flex w-full flex-wrap gap-2 p-1">
-                          {/* container for the tag buttons. */}
-                          {tags.map((tag, index) => (
-                            <button
-                              key={index}
-                              // Call handleTagClick with the tag when the button is clicked
-                              onClick={() => handleTagClick(tag)}
-                              className={`text-grey-600 flex h-auto justify-center gap-1 rounded-xl px-2 py-1 text-center text-xs font-bold ring-2 ring-green-500 hover:opacity-80 `}
-                              style={{
-                                ...(selectedTag.includes(tag)
-                                  ? {
-                                      backgroundColor: "#22c55e",
-                                      opacity: 0.8,
-                                    }
-                                  : {}),
-                              }}
-                            >
-                              {tag.toUpperCase()}
-                            </button>
-                          ))}
-                          {/* reset button. */}
-                          <button
-                            onClick={handleReset}
-                            className="h-fit rounded-xl bg-gray-500 px-2 py-1 text-xs text-white"
-                          >
-                            RESET
-                          </button>
                         </div>
                       </div>
                     </div>
@@ -416,15 +421,15 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                                     }
                                     alt={item.text}
                                     className={
-                                      view === "cards"
-                                        ? "h-max w-full object-cover"
-                                        : "h-full w-full object-cover"
+                                      view === "grid"
+                                        ? "h-32 w-full object-cover"
+                                        : "h-64 w-full rounded-lg object-cover"
                                     }
                                   />
                                 </div>
                               )}
                               <div
-                                className={`${view === "list" ? "flex w-auto items-center px-2" : "flex h-1/2 flex-col items-center justify-center font-semibold"} gap-2 ${view === "cards" ? "absolute bottom-0 left-0 right-0" : ""}`}
+                                className={`${view === "list" ? "flex w-full items-center px-2" : "flex h-1/2 flex-col items-center justify-center font-semibold"} gap-2 ${view === "cards" ? "absolute bottom-0 left-0 right-0" : ""}`}
                               >
                                 <div
                                   className={
@@ -439,7 +444,10 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                                     {/* Display the icon associated with the key */}
                                     {keyIcons[item.type].icon}
                                   </div>
-                                  <div className="w-full overflow-auto rounded-full border-2 border-green-600 bg-white px-4 text-sm">
+
+                                  <div
+                                    className={`${view !== "list" && "w-44 justify-center border-2 border-green-600 text-center md:w-60"} flex h-16 items-center overflow-hidden rounded-full bg-white px-3 font-sans text-xs font-semibold text-green-800 md:text-sm`}
+                                  >
                                     {/* Display the text of the item */}
                                     {item.name}
                                   </div>

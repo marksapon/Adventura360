@@ -882,24 +882,17 @@ function Module360({
         {/* Navigation bar */}
 
         {/* Go Back Button */}
-        {backButton && (
+        {status === "inside" && (
           <div className=" relative z-0 flex items-center justify-center">
             <button
               type="button"
               onClick={() => returnFunction()}
-              className={`absolute mb-48 flex w-auto items-center justify-center gap-x-2 rounded-lg border px-5 py-2 text-sm text-gray-700 transition-colors duration-200 sm:mb-48 md:mb-20 lg:mb-16 ${status === "outside" ? "dark:bg-green-500" : "dark:bg-orange-500"} dark:text-white ${status === "outside" ? "dark:hover:bg-green-400" : "dark:hover:bg-orange-400"} `}
+              className={`dark:hover:bg-orange-400} absolute mb-48 flex w-auto items-center justify-center gap-x-2 rounded-lg border px-5 py-2 text-sm text-gray-700 transition-colors duration-200 sm:mb-48 md:mb-20 lg:mb-16 dark:bg-orange-500 dark:text-white `}
             >
-              {status === "inside" && (
-                <TbDoorExit className="flex h-5 w-5 items-center justify-center md:h-8 md:w-8" />
-              )}
-              {status === "outside" && (
-                <GiBackwardTime className="flex h-5 w-5 items-center justify-center md:h-8 md:w-8" />
-              )}
+              <TbDoorExit className="flex h-5 w-5 items-center justify-center md:h-8 md:w-8" />
               <div className="flex items-center justify-center">
                 <span className="flex items-center justify-center text-center font-sans text-base font-semibold md:text-xl">
-                  {status === "outside"
-                    ? "Return to Previous Location"
-                    : "Exit Building"}
+                  Exit Building
                 </span>
               </div>
             </button>
