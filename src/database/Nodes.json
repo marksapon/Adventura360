@@ -5990,7 +5990,8 @@
     "image": "/assets/Database Images/unrestricted nodes/198.webp",
     "coords": {
       "x": 0.657,
-      "y": 0.775    },
+      "y": 0.775
+    },
     "hotspot": [
       {
         "id": 1,
@@ -6012,8 +6013,8 @@
     "scene": "node199",
     "image": "/assets/Database Images/unrestricted nodes/199.webp",
     "coords": {
-      "x": 0.73,
-      "y": 1.278
+      "x": 0.666,
+      "y": 0.776
     },
     "hotspot": [
       {
@@ -6036,8 +6037,8 @@
     "scene": "node200",
     "image": "/assets/Database Images/unrestricted nodes/200.webp",
     "coords": {
-      "x": 0.73,
-      "y": 1.278
+      "x": 0.669,
+      "y": 0.778
     },
     "hotspot": [
       {
@@ -6060,8 +6061,8 @@
     "scene": "node201",
     "image": "/assets/Database Images/unrestricted nodes/201.webp",
     "coords": {
-      "x": 0.73,
-      "y": 1.278
+      "x": 0.671,
+      "y": 0.782
     },
     "hotspot": [
       {
@@ -6084,8 +6085,8 @@
     "scene": "node202",
     "image": "/assets/Database Images/unrestricted nodes/202.webp",
     "coords": {
-      "x": 0.73,
-      "y": 1.278
+      "x": 0.672,
+      "y": 0.787
     },
     "hotspot": [
       {
@@ -6108,8 +6109,8 @@
     "scene": "node203",
     "image": "/assets/Database Images/unrestricted nodes/203.webp",
     "coords": {
-      "x": 0.73,
-      "y": 1.278
+      "x": 0.672,
+      "y": 0.79
     },
     "hotspot": [
       {
@@ -6132,8 +6133,8 @@
     "scene": "node204",
     "image": "/assets/Database Images/unrestricted nodes/204.webp",
     "coords": {
-      "x": 0.73,
-      "y": 1.278
+      "x": 0.618,
+      "y": 0.781
     },
     "hotspot": [
       {
@@ -6163,17 +6164,10 @@
     "scene": "node205",
     "image": "/assets/Database Images/unrestricted nodes/205.webp",
     "coords": {
-      "x": 0.73,
-      "y": 1.278
+      "x": 0.589,
+      "y": 0.788
     },
     "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "",
-        "yaw": 105.38,
-        "pitch": -20
-      },
       {
         "id": 2,
         "type": "move",
@@ -6194,8 +6188,8 @@
     "scene": "node206",
     "image": "/assets/Database Images/unrestricted nodes/206.webp",
     "coords": {
-      "x": 0.73,
-      "y": 1.278
+      "x": 0.587,
+      "y": 0.782
     },
     "hotspot": [
       {
@@ -6218,8 +6212,8 @@
     "scene": "node207",
     "image": "/assets/Database Images/unrestricted nodes/207.webp",
     "coords": {
-      "x": 0.73,
-      "y": 1.278
+      "x": 0.572,
+      "y": 0.749
     },
     "hotspot": [
       {
@@ -6242,8 +6236,8 @@
     "scene": "node208",
     "image": "/assets/Database Images/unrestricted nodes/208.webp",
     "coords": {
-      "x": 0.73,
-      "y": 1.278
+      "x": 0.572,
+      "y": 0.749
     },
     "hotspot": [
       {
@@ -6273,8 +6267,8 @@
     "scene": "node209",
     "image": "/assets/Database Images/unrestricted nodes/209.webp",
     "coords": {
-      "x": 0.73,
-      "y": 1.278
+      "x": 0.572,
+      "y": 0.749
     },
     "hotspot": [
       {
@@ -6297,8 +6291,8 @@
     "scene": "node210",
     "image": "/assets/Database Images/unrestricted nodes/210.webp",
     "coords": {
-      "x": 0.73,
-      "y": 1.278
+      "x": 0.572,
+      "y": 0.749
     },
     "hotspot": [
       {
@@ -6321,8 +6315,8 @@
     "scene": "node211",
     "image": "/assets/Database Images/unrestricted nodes/211.webp",
     "coords": {
-      "x": 0.73,
-      "y": 1.278
+      "x": 0.627,
+      "y": 0.756
     },
     "hotspot": [
       {
@@ -6345,8 +6339,8 @@
     "scene": "node212",
     "image": "/assets/Database Images/unrestricted nodes/212.webp",
     "coords": {
-      "x": 0.73,
-      "y": 1.278
+      "x": 0.64,
+      "y": 0.764
     },
     "hotspot": [
       {
@@ -6369,8 +6363,8 @@
     "scene": "node213",
     "image": "/assets/Database Images/unrestricted nodes/213.webp",
     "coords": {
-      "x": 0.73,
-      "y": 1.278
+      "x": 0.572,
+      "y": 0.749
     },
     "hotspot": [
       {
@@ -6393,8 +6387,8 @@
     "scene": "node214",
     "image": "/assets/Database Images/unrestricted nodes/214.webp",
     "coords": {
-      "x": 0.73,
-      "y": 1.278
+      "x": 0.572,
+      "y": 0.749
     },
     "hotspot": [
       {
@@ -6417,8 +6411,8 @@
     "scene": "node215",
     "image": "/assets/Database Images/unrestricted nodes/215.webp",
     "coords": {
-      "x": 0.73,
-      "y": 1.278
+      "x": 0.572,
+      "y": 0.749
     },
     "hotspot": [
       {
@@ -6441,8 +6435,8 @@
     "scene": "node216",
     "image": "/assets/Database Images/unrestricted nodes/216.webp",
     "coords": {
-      "x": 0.73,
-      "y": 1.278
+      "x": 0.572,
+      "y": 0.749
     },
     "hotspot": [
       {
@@ -6465,8 +6459,8 @@
     "scene": "node217",
     "image": "/assets/Database Images/unrestricted nodes/217.webp",
     "coords": {
-      "x": 0.73,
-      "y": 1.278
+      "x": 0.572,
+      "y": 0.749
     },
     "hotspot": [
       {
@@ -6513,8 +6507,8 @@
     "scene": "node219",
     "image": "/assets/Database Images/unrestricted nodes/219.webp",
     "coords": {
-      "x": 0.73,
-      "y": 1.278
+      "x": 0.572,
+      "y": 0.749
     },
     "hotspot": [
       {
@@ -6537,8 +6531,8 @@
     "scene": "node220",
     "image": "/assets/Database Images/unrestricted nodes/220.webp",
     "coords": {
-      "x": 0.73,
-      "y": 1.278
+      "x": 0.572,
+      "y": 0.749
     },
     "hotspot": [
       {
@@ -10706,8 +10700,8 @@
     "scene": "node352",
     "image": "/assets/Database Images/unrestricted nodes/352.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.497,
+      "y": 1.306
     },
     "hotspot": [
       {
@@ -11230,8 +11224,8 @@
     "scene": "node370",
     "image": "/assets/Database Images/unrestricted nodes/370.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.462,
+      "y": 0.562
     },
     "hotspot": [
       {
@@ -11254,8 +11248,8 @@
     "scene": "node371",
     "image": "/assets/Database Images/unrestricted nodes/371.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.456,
+      "y": 0.546
     },
     "hotspot": [
       {
@@ -11278,8 +11272,8 @@
     "scene": "node372",
     "image": "/assets/Database Images/unrestricted nodes/372.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.435,
+      "y": 0.485
     },
     "hotspot": [
       {
@@ -11302,8 +11296,8 @@
     "scene": "node373",
     "image": "/assets/Database Images/unrestricted nodes/373.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.426,
+      "y": 0.462
     },
     "hotspot": [
       {
@@ -11326,8 +11320,8 @@
     "scene": "node374",
     "image": "/assets/Database Images/unrestricted nodes/374.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.422,
+      "y": 0.449
     },
     "hotspot": [
       {
@@ -11350,8 +11344,8 @@
     "scene": "node375",
     "image": "/assets/Database Images/unrestricted nodes/375.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.418,
+      "y": 0.436
     },
     "hotspot": [
       {
@@ -11374,8 +11368,8 @@
     "scene": "node376",
     "image": "/assets/Database Images/unrestricted nodes/376.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.41,
+      "y": 0.414
     },
     "hotspot": [
       {
@@ -11398,8 +11392,8 @@
     "scene": "node377",
     "image": "/assets/Database Images/unrestricted nodes/377.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.404,
+      "y": 0.399
     },
     "hotspot": [
       {
@@ -11422,8 +11416,8 @@
     "scene": "node378",
     "image": "/assets/Database Images/unrestricted nodes/378.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.397,
+      "y": 0.38
     },
     "hotspot": [
       {
@@ -11446,8 +11440,8 @@
     "scene": "node379",
     "image": "/assets/Database Images/unrestricted nodes/379.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.384,
+      "y": 0.344
     },
     "hotspot": [
       {
@@ -11470,8 +11464,8 @@
     "scene": "node380",
     "image": "/assets/Database Images/unrestricted nodes/380.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.375,
+      "y": 0.317
     },
     "hotspot": [
       {
@@ -11494,8 +11488,8 @@
     "scene": "node381",
     "image": "/assets/Database Images/unrestricted nodes/381.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.366,
+      "y": 0.292
     },
     "hotspot": [
       {
@@ -11518,8 +11512,8 @@
     "scene": "node382",
     "image": "/assets/Database Images/unrestricted nodes/382.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.359,
+      "y": 0.273
     },
     "hotspot": [
       {
@@ -11542,8 +11536,8 @@
     "scene": "node383",
     "image": "/assets/Database Images/unrestricted nodes/383.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.351,
+      "y": 0.249
     },
     "hotspot": [
       {
@@ -11583,8 +11577,8 @@
     "scene": "node385",
     "image": "/assets/Database Images/unrestricted nodes/385.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.434,
+      "y": 1.311
     },
     "hotspot": [
       {
@@ -11607,8 +11601,8 @@
     "scene": "node386",
     "image": "/assets/Database Images/unrestricted nodes/386.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.43,
+      "y": 1.311
     },
     "hotspot": [
       {
@@ -11638,8 +11632,8 @@
     "scene": "node387",
     "image": "/assets/Database Images/unrestricted nodes/387.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.433,
+      "y": 1.325
     },
     "hotspot": [
       {
@@ -11662,8 +11656,8 @@
     "scene": "node388",
     "image": "/assets/Database Images/unrestricted nodes/388.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.433,
+      "y": 1.337
     },
     "hotspot": [
       {
@@ -11686,8 +11680,8 @@
     "scene": "node389",
     "image": "/assets/Database Images/unrestricted nodes/389.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.417,
+      "y": 1.344
     },
     "hotspot": [
       {
@@ -11710,8 +11704,8 @@
     "scene": "node390",
     "image": "/assets/Database Images/unrestricted nodes/390.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.408,
+      "y": 1.348
     },
     "hotspot": [
       {
@@ -11741,8 +11735,8 @@
     "scene": "node391",
     "image": "/assets/Database Images/unrestricted nodes/391.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.401,
+      "y": 1.349
     },
     "hotspot": [
       {
@@ -11765,8 +11759,8 @@
     "scene": "node392",
     "image": "/assets/Database Images/unrestricted nodes/392.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.393,
+      "y": 1.349
     },
     "hotspot": [
       {
@@ -11796,8 +11790,8 @@
     "scene": "node393",
     "image": "/assets/Database Images/unrestricted nodes/393.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.377,
+      "y": 1.352
     },
     "hotspot": [
       {
@@ -11820,8 +11814,8 @@
     "scene": "node394",
     "image": "/assets/Database Images/unrestricted nodes/394.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.358,
+      "y": 1.313
     },
     "hotspot": [
       {
@@ -11851,8 +11845,8 @@
     "scene": "node395",
     "image": "/assets/Database Images/unrestricted nodes/395.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.378,
+      "y": 1.325
     },
     "hotspot": [
       {
@@ -11875,8 +11869,8 @@
     "scene": "node396",
     "image": "/assets/Database Images/unrestricted nodes/396.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.378,
+      "y": 1.332
     },
     "hotspot": [
       {
@@ -11906,8 +11900,8 @@
     "scene": "node397",
     "image": "/assets/Database Images/unrestricted nodes/397.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.384,
+      "y": 1.333
     },
     "hotspot": [
       {
@@ -11937,8 +11931,8 @@
     "scene": "node398",
     "image": "/assets/Database Images/unrestricted nodes/398.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.383,
+      "y": 1.324
     },
     "hotspot": [
       {
@@ -11968,8 +11962,8 @@
     "scene": "node399",
     "image": "/assets/Database Images/unrestricted nodes/399.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.39,
+      "y": 1.341
     },
     "hotspot": [
       {
@@ -11992,8 +11986,8 @@
     "scene": "node400",
     "image": "/assets/Database Images/unrestricted nodes/400.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.381,
+      "y": 1.307
     },
     "hotspot": [
       {
@@ -12023,8 +12017,8 @@
     "scene": "node401",
     "image": "/assets/Database Images/unrestricted nodes/401.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.395,
+      "y": 1.303
     },
     "hotspot": [
       {
@@ -12054,8 +12048,8 @@
     "scene": "node402",
     "image": "/assets/Database Images/unrestricted nodes/402.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.419,
+      "y": 1.288
     },
     "hotspot": [
       {
@@ -12085,8 +12079,8 @@
     "scene": "node403",
     "image": "/assets/Database Images/unrestricted nodes/403.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.419,
+      "y": 1.277
     },
     "hotspot": [
       {
@@ -12147,8 +12141,8 @@
     "scene": "node407",
     "image": "/assets/Database Images/unrestricted nodes/407.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.334,
+      "y": 1.272
     },
     "hotspot": [
       {
@@ -12178,8 +12172,8 @@
     "scene": "node408",
     "image": "/assets/Database Images/unrestricted nodes/408.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.323,
+      "y": 1.27
     },
     "hotspot": [
       {
@@ -12219,8 +12213,8 @@
     "scene": "node410",
     "image": "/assets/Database Images/unrestricted nodes/410.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.32,
+      "y": 1.211
     },
     "hotspot": [
       {
@@ -12250,8 +12244,8 @@
     "scene": "node411",
     "image": "/assets/Database Images/unrestricted nodes/411.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.314,
+      "y": 1.186
     },
     "hotspot": [
       {
@@ -12281,8 +12275,8 @@
     "scene": "node412",
     "image": "/assets/Database Images/unrestricted nodes/412.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.309,
+      "y": 1.186
     },
     "hotspot": [
       {
@@ -12305,8 +12299,8 @@
     "scene": "node413",
     "image": "/assets/Database Images/unrestricted nodes/413.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.3,
+      "y": 1.189
     },
     "hotspot": [
       {
@@ -12329,8 +12323,8 @@
     "scene": "node414",
     "image": "/assets/Database Images/unrestricted nodes/414.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.309,
+      "y": 1.214
     },
     "hotspot": [
       {
@@ -12360,8 +12354,8 @@
     "scene": "node415",
     "image": "/assets/Database Images/unrestricted nodes/415.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.314,
+      "y": 1.232
     },
     "hotspot": [
       {
@@ -12415,8 +12409,8 @@
     "scene": "node417",
     "image": "/assets/Database Images/unrestricted nodes/417.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.301,
+      "y": 1.159
     },
     "hotspot": [
       {

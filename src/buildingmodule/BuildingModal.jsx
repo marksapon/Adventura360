@@ -241,8 +241,7 @@ const BuildingModal = ({
                     {/* EXPLORE BUTTON */}
                     {current_info &&
                       (loginType === current_info.access ||
-                        loginType === "account" ||
-                        loginType === "guest") &&
+                        loginType === "account") &&
                       current_info.hasScene && (
                         <button
                           onClick={() => {
