@@ -409,7 +409,7 @@
     "desc": "This is the wash area near DAFE",
     "coords": {
       "x": 0.335,
-      "y": 0.919,
+      "y": 0.918,
       "type": "washarea"
     },
     "image": "/assets/Building Module/Extras/DAFE wash area.webp"
@@ -600,7 +600,7 @@
       "y": 0.756,
       "type": "attractions"
     },
-    "image": "/assets/Building Module/Extras/inang kalikasan.webp"
+    "image": "/assets/Building Module/Extras/ina ng kalikasan.webp"
   },
   {
     "scene": "field",
@@ -633,17 +633,83 @@
       "y": 0.818,
       "type": "parking"
     },
-    "image": ""
+    "image": "/assets/Building Module/Extras/coffee research parking lot.webp"
   },
   {
     "scene": "parkingLIBRARY",
     "location": "Parking area near University Library",
     "desc": "This is the parking area near University Library",
     "coords": {
-      "x": 0.559,
+      "x": 0.556,
       "y": 0.947,
       "type": "parking"
     },
-    "image": ""
+    "image": "/assets/Building Module/Extras/parking lib.webp"
+  },
+  {
+    "scene": "agriecoinfocenter",
+    "location": "Agri-Eco Tourism Park Information Center",
+    "desc": "This is the Agri-Eco Tourism Park Information Center",
+    "coords": {
+      "x": 0.614,
+      "y": 0.809,
+      "type": "attractions"
+    },
+    "image": "/assets/Building Module/Extras/agri eco info center.webp"
+  },
+  {
+    "scene": "brite",
+    "location": "Bee, Research, Innovation, Trade, and Extension Center",
+    "desc": "This is the Bee, Research, Innovation, Trade, and Extension Center",
+    "coords": {
+      "x": 0.687,
+      "y": 0.788,
+      "type": "school_facilities"
+    },
+    "image": "/assets/Building Module/Extras/brite center.webp"
+  },
+  {
+    "scene": "hernandos",
+    "location": "Hernando's Eatery",
+    "desc": "This is Hernando's Eatery",
+    "coords": {
+      "x": 0.711,
+      "y": 0.798,
+      "type": "cafeteria"
+    },
+    "image": "/assets/Building Module/Extras/hernandos.webp"
+  },
+  {
+    "scene": "kapihansakubo",
+    "location": "Kapihan sa Kubo",
+    "desc": "This is Kapihan sa Kubo",
+    "coords": {
+      "x": 0.708,
+      "y": 0.813,
+      "type": "cafeteria"
+    },
+    "image": "/assets/Building Module/Extras/kapihan sa kubo.webp"
+  },
+  {
+    "scene": "restroomAgri-Eco",
+    "location": "Restroom inside Agri-Eco Tourism Park",
+    "desc": "This is the restroom inside Agri-Eco Tourism Park",
+    "coords": {
+      "x": 0.704,
+      "y": 0.795,
+      "type": "restroom"
+    },
+    "image": "/assets/Building Module/Extras/restroom agri eco.webp"
+  },
+  {
+    "scene": "washareabiosci",
+    "location": "Wash area near Biological Science",
+    "desc": "This is the wash area near Biological Science Building",
+    "coords": {
+      "x": 0.53,
+      "y": 0.882,
+      "type": "washarea"
+    },
+    "image": "/assets/Building Module/Extras/restroom agri eco.webp"
   }
 ]

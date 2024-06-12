@@ -881,9 +881,6 @@ const MapModule = ({
         id="current location"
         className="flex h-auto w-36 flex-col items-center justify-end space-y-2"
       >
-        <div className="h-auto w-auto rounded-md bg-white p-2 text-center font-sans font-semibold text-green-500">
-          You are here
-        </div>
         <img
           src="/assets/Login Module/adventura logo 2.webp"
           alt="Adventura 360 logo"
@@ -946,7 +943,7 @@ const MapModule = ({
                             ? selected_extra.image
                             : "https://via.placeholder.com/150"
                         }
-                        className="h-60 w-96 border-2 object-contain shadow-md"
+                        className="border-2 object-contain shadow-md"
                       />
                     </div>
                     <div className="m-2 flex flex-col items-center justify-center gap-2">

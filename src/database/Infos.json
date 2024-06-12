@@ -1010,7 +1010,6 @@
       "/assets/Building Module/Gallery/scicafe/03.webp"
     ]
   },
-
   {
     "scene": "saluysoy",
     "name": "Saluysoy Cafeteria",
@@ -1026,5 +1025,30 @@
       "/assets/Building Module/Gallery/saluysoy/02.webp",
       "/assets/Building Module/Gallery/saluysoy/03.webp"
     ]
+  },
+  {
+    "scene": "eco_tour",
+    "name": "Agri-Eco Tourism Park",
+    "access": "account",
+    "acronym": "agri eco",
+    "type": "school_facilities",
+    "tags": ["school", "leisure"],
+    "image": "/assets/Building Module/Background/agri eco.webp",
+    "contacts": {
+      "Telephone": "(046) 482-4385",
+      "Email": "agri-ecopark@cvsu.edu.ph",
+      "additional": {
+        "Facebook Page (Agri-Eco Tourism Park)": "https://www.facebook.com/cvsuagriecopark"
+      }
+    },
+    "more_info": "https://cvsu.edu.ph/2021/07/19/cvsu-launches-agri-eco-tourism-park/",
+    "services": {
+      "Environmental Fee/Entrance Fee": "<b> Php 150.00/pax for a group of 15 pax </b> <br> • With free welcome drinks <br> • With tour guide <br> <b> 50% discount on environmental fee of the following: </b> <br> • CvSU Faculty and Employees <br> • CvSU Studdents <br> • CvSU Retirees <br> • CvSU Alumni <br> • Senior Citizens <br> • PWDs <br> <b> Php 100/pax for a group of 15 pax <br> </b> • Without welcome drinks <br> • Without tour guide",
+      "Pre-nup Photoshoot": "<b> Php 5,000.00/ halfday <br>Php 10,000.00/ day </b> <br> • With one room at Hostel Tropicana for make-up and change of attire <br> • 8:00 am - 5:00 pm for whole day",
+      "Fish feeding at lagoon": "<b>Php 10.00/pack</b>",
+      "Unlimited Samgyupsal": "<b>Php 500.00/pax</b> <br> • Maximum of 3 hours",
+      "CvSU Villas": "<b> Php 5,000.00/day </b> <br> • With plated breakfast <br> • Maximum of 4 pax"
+    },
+    "desc": "The Agri-Eco Tourism Park is a vibrant showcase of the university's commitment to sustainable agriculture and environmental conservation. This sprawling park offers a diverse range of attractions, from lush gardens and organic farms to serene lakes and nature trails. Visitors can explore the wonders of nature, learn about sustainable farming practices, and enjoy recreational activities in a tranquil setting. The park serves as a living laboratory for students, faculty, and visitors, fostering a deeper appreciation for the environment and the importance of sustainable living. <b><i>Experience the beauty of nature...</b></i>"
   }
 ]

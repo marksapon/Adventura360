@@ -17,7 +17,7 @@ function MapLegend({ setMapLegendState }) {
   return (
     <>
       <div className="absolute -top-20 h-screen w-screen bg-black bg-opacity-70 md:hidden" />
-      <div className="absolute left-0 top-0 z-10 h-full w-screen md:mx-4 md:my-2">
+      <div className="absolute left-0 top-0 z-10 h-full w-screen px-2 md:mx-4 md:my-2">
         <div className="pointer-events-auto z-10 h-full w-full rounded-lg border-2 border-gray-500 border-opacity-50 shadow-xl md:h-auto md:w-80">
           <div className="flex h-full w-full flex-col rounded-lg bg-slate-50 md:bg-opacity-80 md:hover:bg-opacity-100">
             <div
