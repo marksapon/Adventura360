@@ -8458,8 +8458,122 @@
         "hotspot": [
           {
             "type": "move",
-            "target": "cvmbshos2",
-            "yaw": 198.25,
+            "target": "cvmbshosp2",
+            "yaw": 249.2,
+            "pitch": -34.91
+          }
+        ]
+      },
+      {
+        "scene": "cvmbshosp2",
+        "image": "/assets/Building Module/Internal Nodes/cvmbshos/2.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cvmbshosp3",
+            "yaw": 336.61,
+            "pitch": -28.25
+          },
+          {
+            "type": "move",
+            "target": "cvmbshosp1",
+            "yaw": 110.19,
+            "pitch": -36.36
+          },
+          {
+            "type": "move",
+            "target": "cvmbshosp4",
+            "yaw": 55.66,
+            "pitch": -26.76
+          },
+           {
+            "type": "move",
+            "target": "cvmbshosp5",
+            "yaw": 298.39,
+            "pitch": -37
+          }
+        ]
+      },
+      {
+        "scene": "cvmbshosp3",
+        "image": "/assets/Building Module/Internal Nodes/cvmbshos/3.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cvmbshosp2",
+            "yaw": 188.94,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "cvmbshosp4",
+            "yaw": 101.69,
+            "pitch": -29.67
+          }
+        ]
+      },
+      {
+        "scene": "cvmbshosp4",
+        "image": "/assets/Building Module/Internal Nodes/cvmbshos/4.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cvmbshosp2",
+            "yaw": 193.57,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "cvmbshosp3",
+            "yaw": 284.3,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "cvmbshosp5",
+        "image": "/assets/Building Module/Internal Nodes/cvmbshos/5.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cvmbshosp6",
+            "yaw": 13.77,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "cvmbshosp2",
+            "yaw": 265.38,
+            "pitch": -26.59
+          }
+        ]
+      },
+      {
+        "scene": "cvmbshosp6",
+        "image": "/assets/Building Module/Internal Nodes/cvmbshos/6.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cvmbshosp7",
+            "yaw": 16.66,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "cvmbshosp5",
+            "yaw": 195.7,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "cvmbshosp7",
+        "image": "/assets/Building Module/Internal Nodes/cvmbshos/7.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cvmbshosp6",
+            "yaw": 196.95,
             "pitch": -20
           }
         ]
