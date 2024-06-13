@@ -94,7 +94,10 @@ const BuildingModal = ({
   function has360Check() {
     buildingsDB.map((building) => {
       if (building.scene === current_info.scene) {
-        return true;
+        if (building.image) {
+          console.log("Has Image");
+          return true;
+        }
       } else {
         return false;
       }
@@ -435,12 +438,11 @@ const BuildingModal = ({
               )}
 
               {/* Go to Button */}
-              {current_info && mode !== "360" && has360Check() && (
+              {current_info && mode !== "360" && has360Check && (
                 <div className="flex h-20 w-auto flex-col items-center justify-start">
                   <button
                     className="flex items-center justify-center rounded-full bg-green-500 p-2"
                     onClick={() => {
-                      has360Check(current_info);
                       setAccess("public");
                       setMapState(false);
                       changeScene("bldg", current_info.scene);
