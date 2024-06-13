@@ -9965,14 +9965,6 @@
         },
         "hotspot": [
           {
-            "id": 1,
-            "type": "move",
-            "target": "agri_eco74",
-            "yaw": 12.02,
-            "pitch": -20
-          },
-          {
-            "id": 2,
             "type": "move",
             "target": "agri_eco70",
             "yaw": 192.02,
