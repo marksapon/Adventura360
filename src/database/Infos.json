@@ -1050,5 +1050,54 @@
       "CvSU Villas": "<b> Php 5,000.00/day </b> <br> • With plated breakfast <br> • Maximum of 4 pax"
     },
     "desc": "The Agri-Eco Tourism Park is a vibrant showcase of the university's commitment to sustainable agriculture and environmental conservation. This sprawling park offers a diverse range of attractions, from lush gardens and organic farms to serene lakes and nature trails. Visitors can explore the wonders of nature, learn about sustainable farming practices, and enjoy recreational activities in a tranquil setting. The park serves as a living laboratory for students, faculty, and visitors, fostering a deeper appreciation for the environment and the importance of sustainable living. <b><i>Experience the beauty of nature...</b></i>"
+  },
+  {
+    "scene": "cvmbs",
+    "name": "College of Veterinary Medicine and Biomedical Sciences",
+    "access": "account",
+    "acronym": "cvmbs",
+    "type": "college_buildings",
+    "tags": ["school", "cvmbs"],
+    "image": "/assets/Building Module/Background/cvmbs.webp",
+    "desc": "The College of Veterinary Medicine and Biomedical Sciences at Cavite State University fosters expertise in veterinary medicine, biomedical sciences, and animal welfare. With a focus on ethical practice, professional excellence, and community service, we prepare students for impactful careers in veterinary medicine, research, and animal care. Our curriculum blends hands-on training with innovative research, empowering graduates to drive positive change in their communities. Join us in shaping a healthier, more compassionate society.",
+    "courses": {
+      "GRADUATE PROGRAMS": [
+        "Master in Veterinary Studies (open for non-vets)",
+        "Master in Veterinary Science"
+      ],
+      "UNDERGRADUATE PROGRAMS": [
+        "Doctor of Veterinary Medicine (6 years)",
+        "BS Veterinary Technology (4 years)",
+        "BS Animal Health and Management (4 years)",
+        "BS Biomedical Science (4 years)"
+      ],
+      "UNITS OF THE CVMBS": null,
+      "Basic Veterinary Sciences": [
+        "Veterinary Anatomy",
+        "Veterinary Physiology",
+        "Veterinary Pharmacology",
+        "Zootechnics (Prod’n, Nutrition and Breeding)"
+      ],
+      "Immunopathology and Microbiology": [
+        "Veterinary Microbiology",
+        "Veterinary Pathology",
+        "Veterinary Parasitology"
+      ],
+      "Clinical and Population Health": [
+        "Veterinary Medicine",
+        "Veterinary Surgery",
+        "Veterinary Public Health",
+        "Veterinary Clinics"
+      ],
+      "Biomedical Science and Biotechnology": null,
+      "Veterinary Medical Center": null
+    },
+    "contacts": {
+      "additional": {
+        "Facebook Page": "https://www.facebook.com/cvsuvetmed"
+      }
+    },
+    "more_info": "https://cvsu.edu.ph/cvmbs/",
+    "gallery": []
   }
 ]

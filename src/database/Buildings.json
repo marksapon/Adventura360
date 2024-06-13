@@ -562,8 +562,8 @@
   {
     "scene": "cvmbs",
     "location": "College of Veterinary Medicine and Biomedical Sciences",
-    "image": "",
-    "back": [""],
+    "image": "/assets/Database Images/unrestricted nodes/249.webp",
+    "back": ["node249"],
     "coords": {
       "x": 0.458,
       "y": 0.62,
@@ -574,8 +574,8 @@
         "type": "info",
         "class": "info",
         "target": "cvmbs",
-        "yaw": "",
-        "pitch": ""
+        "yaw": 203.39,
+        "pitch": 3.7
       }
     ]
   },
@@ -583,7 +583,7 @@
     "scene": "cvmbs_hosp",
     "location": "Veterinary Hospital",
     "image": "",
-    "back": [""],
+    "back": ["node249"],
     "coords": {
       "x": 0.443,
       "y": 0.582,

@@ -7435,6 +7435,13 @@
         "target": "node248",
         "yaw": 292.08,
         "pitch": -20
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "cvmbs",
+        "yaw": 203.39,
+        "pitch": 3.7
       }
     ]
   },

@@ -8271,5 +8271,183 @@
         ]
       }
     ]
+  },
+  {
+    "cvmbs": [
+      {
+        "scene": "cvmbs1",
+        "image": "/assets/Building Module/Internal Nodes/cvmbs/1.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cvmbs2",
+            "yaw": 198.25,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "cvmbs2",
+        "image": "/assets/Building Module/Internal Nodes/cvmbs/2.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cvmbs3",
+            "yaw": 204.42,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "cvmbs1",
+            "yaw": 25.96,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "cvmbs5",
+            "yaw": 319.02,
+            "pitch": -32.61
+          }
+        ]
+      },
+      {
+        "scene": "cvmbs3",
+        "image": "/assets/Building Module/Internal Nodes/cvmbs/3.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cvmbs4",
+            "yaw": 221.83,
+            "pitch": -24.39
+          },
+          {
+            "type": "move",
+            "target": "cvmbs2",
+            "yaw": 23.97,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "cvmbs4",
+        "image": "/assets/Building Module/Internal Nodes/cvmbs/4.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cvmbs5",
+            "yaw": 29.73,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "cvmbs3",
+            "yaw": 200.94,
+            "pitch": -40.0
+          },
+          {
+            "type": "move",
+            "target": "cvmbs7",
+            "yaw": 232.6,
+            "pitch": -30.77
+          }
+        ]
+      },
+      {
+        "scene": "cvmbs5",
+        "image": "/assets/Building Module/Internal Nodes/cvmbs/5.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cvmbs6",
+            "yaw": 19.34,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "cvmbs4",
+            "yaw": 191.0,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "cvmbs2",
+            "yaw": 265.03,
+            "pitch": -40.0
+          },
+          {
+            "type": "move",
+            "target": "cvmbs8",
+            "yaw": 302.28,
+            "pitch": -36.25
+          }
+        ]
+      },
+      {
+        "scene": "cvmbs6",
+        "image": "/assets/Building Module/Internal Nodes/cvmbs/6.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cvmbs5",
+            "yaw": 198.25,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "cvmbs7",
+        "image": "/assets/Building Module/Internal Nodes/cvmbs/7.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cvmbs8",
+            "yaw": 9.4,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "cvmbs6",
+            "yaw": 176.08,
+            "pitch": -37.65
+          }
+        ]
+      },
+      {
+        "scene": "cvmbs8",
+        "image": "/assets/Building Module/Internal Nodes/cvmbs/8.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cvmbs9",
+            "yaw": 22.23,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "cvmbs7",
+            "yaw": 196.92,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "cvmbs5",
+            "yaw": 282.82,
+            "pitch": -38
+          }
+        ]
+      },
+      {
+        "scene": "cvmbs9",
+        "image": "/assets/Building Module/Internal Nodes/cvmbs/9.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cvmbs8",
+            "yaw": 190.94,
+            "pitch": -20
+          }
+        ]
+      }
+    ]
   }
 ]
