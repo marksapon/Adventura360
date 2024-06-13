@@ -425,7 +425,7 @@ const MapModule = ({
 
   // Node Class
   class Node {
-    constructor(id, x, y, neighborsID = [], travelType = "both") {
+    constructor(id, x, y, neighborsID = [], travelType = "both", weight = 0) {
       // Should have the values of:
       this.id = id; // Name of Scene
       this.x = x; // X coordinate Img Pixel
@@ -433,6 +433,7 @@ const MapModule = ({
       this.neighborsID = neighborsID; // Initial Neighbor nodes
       this.neighbors = []; // Neighbor nodes
       this.travelType = travelType; // Type of path (walkable, vehicle, both)
+      this.weight = weight;
     }
 
     // Method to add a neighboring node to current node
@@ -482,6 +483,7 @@ const MapModule = ({
           building.coords.y,
           neighbors,
           building.travelType,
+          10,
         ),
       );
     });
@@ -642,7 +644,9 @@ const MapModule = ({
 
         current.neighbors.forEach((neighbor) => {
           const tentativeGScore =
-            gScore.get(current) + euclideanDistance(current, neighbor);
+            gScore.get(current) +
+            euclideanDistance(current, neighbor) +
+            neighbor.weight;
           if (tentativeGScore < gScore.get(neighbor)) {
             cameFrom.set(neighbor, current);
             gScore.set(neighbor, tentativeGScore);
