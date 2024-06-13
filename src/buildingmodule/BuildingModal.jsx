@@ -36,6 +36,7 @@ const BuildingModal = ({
   onClose,
   loginType,
   infosDB,
+  buildingsDB,
   scene,
   iconSet,
   openShareModal,
@@ -48,6 +49,7 @@ const BuildingModal = ({
   closeSearch,
   setSearchModal,
   searchModal,
+  status,
 }) => {
   // Icon Set
   const icons = iconSet;
@@ -89,8 +91,14 @@ const BuildingModal = ({
     return temp;
   }
 
-  function has360Check(target) {
-    console.log(target.scene);
+  function has360Check() {
+    buildingsDB.map((building) => {
+      if (building.scene === current_info.scene) {
+        return true;
+      } else {
+        return false;
+      }
+    });
   }
 
   function setTargetInfo(scene) {
@@ -410,7 +418,7 @@ const BuildingModal = ({
               )}
 
               {/* Share */}
-              {mode === "360" && (
+              {mode === "360" && status !== "inside" && (
                 <div className="flex h-20 w-auto flex-col items-center justify-start">
                   <button
                     className={`flex items-center justify-center rounded-full border border-green-600 p-2 ${shareModal ? "bg-green-600" : "bg-white"}`}
@@ -427,7 +435,7 @@ const BuildingModal = ({
               )}
 
               {/* Go to Button */}
-              {current_info && mode !== "360" && (
+              {current_info && mode !== "360" && has360Check() && (
                 <div className="flex h-20 w-auto flex-col items-center justify-start">
                   <button
                     className="flex items-center justify-center rounded-full bg-green-500 p-2"
@@ -465,13 +473,15 @@ const BuildingModal = ({
 
             {/* Gallery */}
 
-            <div className="h-auto w-full sm:h-auto">
-              {current_info ? (
-                <BuildingGallery imageSet={current_info.gallery} />
-              ) : (
-                <BuildingGallery />
-              )}
-            </div>
+            {current_info && current_info.gallery && (
+              <div className="h-auto w-full sm:h-auto">
+                {current_info ? (
+                  <BuildingGallery imageSet={current_info.gallery} />
+                ) : (
+                  <BuildingGallery />
+                )}
+              </div>
+            )}
 
             {/* Gallery */}
 

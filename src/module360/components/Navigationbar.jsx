@@ -47,6 +47,8 @@ const Navigationbar = ({
   internalDB,
   nodesDB,
   extrasDB,
+
+  status,
 }) => {
   /* States */
   const [isFullscreen, setIsFullscreen] = useState(false); // Fullscreen State
@@ -589,6 +591,8 @@ const Navigationbar = ({
           }}
           setSearchModal={setSearchModal}
           searchModal={searchModal}
+          status={status}
+          buildingsDB={buildingsDB}
         />
       )}
     </div>

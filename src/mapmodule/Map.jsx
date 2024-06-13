@@ -31,6 +31,7 @@ const MapModule = ({
   infosDB,
   iconsSet,
   openBldgModal,
+
 }) => {
   /* Device Check */
   // Check if User on Mobile

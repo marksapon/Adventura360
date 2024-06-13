@@ -877,6 +877,7 @@ function Module360({
             internalDB={internalDB}
             mapState={mapState}
             setMapState={setMapState}
+            status={status}
           />
         </div>
         {/* Navigation bar */}
