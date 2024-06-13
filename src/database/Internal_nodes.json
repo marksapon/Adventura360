@@ -8449,5 +8449,21 @@
         ]
       }
     ]
+  },
+  {
+    "cvmbs_hosp": [
+      {
+        "scene": "cvmbshosp1",
+        "image": "/assets/Building Module/Internal Nodes/cvmbshos/1.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "cvmbshos2",
+            "yaw": 198.25,
+            "pitch": -20
+          }
+        ]
+      }
+    ]
   }
 ]

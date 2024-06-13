@@ -826,7 +826,7 @@
         "pitch": 9.72
       },
       {
-        "type": "popup",
+        "type": "info",
         "class": "attractions",
         "target": "torigate",
         "yaw": 224.8,
@@ -1239,7 +1239,7 @@
         "pitch": 5.21
       },
       {
-        "type": "popup",
+        "type": "info",
         "class": "attractions",
         "target": "Vase",
         "yaw": 58.65,
@@ -1270,7 +1270,7 @@
         "pitch": -20
       },
       {
-        "type": "popup",
+        "type": "info",
         "class": "attractions",
         "target": "Vase",
         "yaw": 104.7,
@@ -1308,7 +1308,7 @@
         "pitch": -20
       },
       {
-        "type": "popup",
+        "type": "info",
         "class": "attractions",
         "target": "Vase",
         "yaw": 131.48,
@@ -1360,7 +1360,7 @@
         "pitch": -20
       },
       {
-        "type": "popup",
+        "type": "info",
         "class": "attractions",
         "target": "Vase",
         "yaw": 165.4,
@@ -1557,7 +1557,7 @@
         "pitch": -20
       },
       {
-        "type": "popup",
+        "type": "info",
         "class": "attractions",
         "target": "lagoon",
         "yaw": 8.07,
@@ -1588,7 +1588,7 @@
         "pitch": -20
       },
       {
-        "type": "popup",
+        "type": "info",
         "class": "attractions",
         "target": "lagoon",
         "yaw": 341.35,
@@ -2629,7 +2629,7 @@
         "pitch": -20
       },
       {
-        "type": "popup",
+        "type": "info",
         "class": "attractions",
         "target": "Vase",
         "yaw": 359.46,
@@ -2667,7 +2667,7 @@
         "pitch": 7.87
       },
       {
-        "type": "popup",
+        "type": "info",
         "class": "attractions",
         "target": "Vase",
         "yaw": 170.56,
@@ -2705,7 +2705,7 @@
         "pitch": -20
       },
       {
-        "type": "popup",
+        "type": "info",
         "class": "attractions",
         "target": "Vase",
         "yaw": 309.45,
@@ -2736,7 +2736,7 @@
         "pitch": -20
       },
       {
-        "type": "popup",
+        "type": "info",
         "class": "attractions",
         "target": "Vase",
         "yaw": 209.92,
@@ -2774,7 +2774,7 @@
         "pitch": -20
       },
       {
-        "type": "popup",
+        "type": "info",
         "class": "attractions",
         "target": "Vase",
         "yaw": 282.63,
@@ -6629,7 +6629,7 @@
         "pitch": -20
       },
       {
-        "type": "popup",
+        "type": "info",
         "class": "attractions",
         "target": "lagoon",
         "yaw": 105.95,
@@ -6716,7 +6716,7 @@
       },
 
       {
-        "type": "popup",
+        "type": "info",
         "class": "attractions",
         "target": "lagoon",
         "yaw": 134.13,
@@ -6861,7 +6861,7 @@
         "pitch": -20
       },
       {
-        "type": "popup",
+        "type": "info",
         "class": "attractions",
         "target": "lagoon",
         "yaw": 192.39,
@@ -7442,6 +7442,13 @@
         "target": "cvmbs",
         "yaw": 203.39,
         "pitch": 3.7
+      },
+      {
+        "type": "bldg",
+        "class": "bldg",
+        "target": "cvmbs_hosp",
+        "yaw": 39.73,
+        "pitch": 9.15
       }
     ]
   },
@@ -8575,7 +8582,7 @@
         "pitch": 6.93
       },
       {
-        "type": "popup",
+        "type": "info",
         "class": "cafeteria",
         "target": "scicafe",
         "yaw": 90.98,
@@ -10471,8 +10478,8 @@
         "pitch": 17.61
       },
       {
-        "type": "popup",
-        "class": "construction",
+        "type": "info",
+        "class": "attractions",
         "target": "torigate",
         "yaw": 21.46,
         "pitch": 28.33

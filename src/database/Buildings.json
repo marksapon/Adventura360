@@ -208,27 +208,6 @@
     ]
   },
   {
-    "scene": "irb",
-    "location": "Interdisciplinary Research Facility Building",
-    "image": "/assets/Database Images/unrestricted nodes/37.webp",
-    "back": ["node37"],
-    "coords": {
-      "x": 0.604,
-      "y": 0.923,
-      "type": "school_facilities"
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "info",
-        "class": "info",
-        "target": "irb",
-        "yaw": 268.43,
-        "pitch": 5.21
-      }
-    ]
-  },
-  {
     "scene": "ih1",
     "location": "International House 1 / College of Medicine",
     "image": "/assets/Database Images/unrestricted nodes/39.webp",
@@ -582,7 +561,7 @@
   {
     "scene": "cvmbs_hosp",
     "location": "Veterinary Hospital",
-    "image": "",
+    "image": "/assets/Database Images/unrestricted nodes/249.webp",
     "back": ["node249"],
     "coords": {
       "x": 0.443,
@@ -594,8 +573,8 @@
         "type": "info",
         "class": "info",
         "target": "cvmbs_hosp",
-        "yaw": "",
-        "pitch": ""
+       "yaw": 39.73,
+        "pitch": 9.15
       }
     ]
   },
@@ -865,9 +844,39 @@
     "scene": "scicafe",
     "location": "Science Cafe",
     "coords": {
-      "x": 0.241,
-      "y": 1.055,
+      "x": 0.533,
+      "y": 0.939,
       "type": "cafeteria"
+    }
+  },
+  {
+    "scene": "torigate",
+    "location": "Tori Gate",
+    "back": ["node24"],
+    "coords": {
+      "x": 0.676,
+      "y": 1.2,
+      "type": "attractions"
+    }
+  },
+  {
+    "scene": "Vase",
+    "location": "Centennial Jar",
+    "back": ["node38"],
+    "coords": {
+      "x": 0.545,
+      "y": 0.905,
+      "type": "attractions"
+    }
+  },
+  {
+    "scene": "lagoon",
+    "location": "Lagoon",
+    "back": ["node38"],
+    "coords": {
+      "x": 0.496,
+      "y": 0.791,
+      "type": "attractions"
     }
   }
 ]

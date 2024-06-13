@@ -333,20 +333,6 @@
     ]
   },
   {
-    "scene": "irb",
-    "name": "Interdisciplinary Research Building",
-    "access": "account",
-    "acronym": "interdisciplinary",
-    "type": "school_facilities",
-    "tags": ["school"],
-    "image": "",
-    "desc": "Welcome to the Interdisciplinary Research Building (IDRB) at the University. Here, cutting-edge research thrives in specialized laboratories spanning engineering, microbiology, genetics, and more. Led by expert faculty researchers, these labs are hubs of innovation, fostering collaboration and pushing the boundaries of knowledge. With state-of-the-art facilities and close coordination with the Technical Services Division, the IDRB is where breakthroughs happen. Welcome to a space where interdisciplinary exploration knows no bounds.",
-
-    "contacts": {},
-
-    "gallery": []
-  },
-  {
     "scene": "ih1",
     "name": "International House 1 / College of Medicine",
     "access": "account",
@@ -1097,6 +1083,48 @@
         "Facebook Page": "https://www.facebook.com/cvsuvetmed"
       }
     },
+    "more_info": "https://cvsu.edu.ph/cvmbs/",
+    "gallery": []
+  },
+  {
+    "scene": "torigate",
+    "name": "Tori Gate",
+    "access": "guest",
+    "acronym": "Tori",
+    "type": "school_facilities",
+    "tags": ["school", "leisure"],
+    "image": "/assets/Building Module/Extras/tori gate.webp",
+    "desc": "The Tori Gate, a traditional Japanese structure, symbolizes the entrance to the Japanese Garden at the university. This serene space offers a tranquil escape from the bustling campus, inviting visitors to relax and unwind amidst the beauty of nature. The Japanese Garden features a koi pond, stone lanterns, and meticulously pruned trees, creating a peaceful atmosphere that encourages contemplation and reflection. Whether you're seeking a quiet spot to read, meditate, or simply enjoy the beauty of the outdoors, the Japanese Garden and Torii Gate provide a serene retreat for all who visit."
+  },
+  {
+    "scene": "Vase",
+    "name": "Centennial Jar",
+    "access": "guest",
+    "acronym": "jar",
+    "type": "school_facilities",
+    "tags": ["school", "leisure"],
+    "image": "/assets/Building Module/Extras/big jar.webp",
+    "desc": "The Centennial Jar, a towering structure that stands as a symbol of the university's rich history and vibrant culture. This impressive jar, adorned with intricate designs and vibrant colors, serves as a focal point for the campus, attracting visitors and students alike. The Centennial Jar embodies the university's commitment to excellence, innovation, and community, serving as a reminder of the university's past achievements and future aspirations. Whether you're a student, faculty member, or visitor, the Centennial Jar welcomes you to experience the spirit of Cavite State University."
+  },
+  {
+    "scene": "lagoon",
+    "name": "Lagoon",
+    "access": "guest",
+    "acronym": "lagoon",
+    "type": "school_facilities",
+    "tags": ["school", "leisure"],
+    "image": "/assets/Building Module/Extras/lagoon.webp",
+    "desc": "The Lagoon, a serene body of water that serves as a central feature of the university's landscape. This tranquil oasis offers a peaceful retreat from the bustling campus, inviting visitors to relax and unwind amidst the beauty of nature. The Lagoon is home to a variety of aquatic plants and animals, creating a vibrant ecosystem that provides a habitat for local wildlife. Whether you're seeking a quiet spot to read, meditate, or simply enjoy the beauty of the outdoors, the Lagoon provides a serene escape for all who visit."
+  },
+  {
+    "scene": "cvmbs_hosp",
+    "name": "Veterinary biomedical research center and Veterinary teaching Hospital",
+    "access": "account",
+    "acronym": "cvmbs_hosp",
+    "type": "college_buildings",
+    "tags": ["school", "cvmbs"],
+    "image": "/assets/Building Module/Background/cvmbs.webp",
+    "desc": "This institution prioritizes research, medical care, and education. It offers essential resources for innovative research, comprehensive medical services, and the training of future veterinarians. Dedicated to advancing veterinary medicine and enhancing animal welfare, it plays a pivotal role in the global veterinary community.",
     "more_info": "https://cvsu.edu.ph/cvmbs/",
     "gallery": []
   }
