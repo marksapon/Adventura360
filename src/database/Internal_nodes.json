@@ -8486,7 +8486,7 @@
             "yaw": 55.66,
             "pitch": -26.76
           },
-           {
+          {
             "type": "move",
             "target": "cvmbshosp5",
             "yaw": 298.39,
@@ -8574,6 +8574,1285 @@
             "type": "move",
             "target": "cvmbshosp6",
             "yaw": 196.95,
+            "pitch": -20
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "agri_eco": [
+      {
+        "scene": "agri_eco05",
+        "image": "/assets/Building Module/Internal Nodes/agri_eco/205.webp",
+        "coords": {
+          "x": 0.589,
+          "y": 0.788
+        },
+        "hotspot": [
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco04",
+            "yaw": 272.85,
+            "pitch": -20
+          },
+          {
+            "id": 3,
+            "type": "move",
+            "target": "agri_eco06",
+            "yaw": 51.17,
+            "pitch": -29.36
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco20",
+        "image": "/assets/Database Images/unrestricted nodes/220.webp",
+        "coords": {
+          "x": 0.572,
+          "y": 0.749
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco19",
+            "yaw": 211.88,
+            "pitch": -25.99
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco19",
+        "image": "/assets/Database Images/unrestricted nodes/219.webp",
+        "coords": {
+          "x": 0.572,
+          "y": 0.749
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco20",
+            "yaw": 68.26,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco17",
+            "yaw": 209.14,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco18",
+        "image": "/assets/Database Images/unrestricted nodes/218.webp",
+        "coords": {
+          "x": 0.73,
+          "y": 1.278
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco17",
+            "yaw": 95.02,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco17",
+        "image": "/assets/Database Images/unrestricted nodes/217.webp",
+        "coords": {
+          "x": 0.572,
+          "y": 0.749
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco19",
+            "yaw": 4.42,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco16",
+            "yaw": 151.13,
+            "pitch": -27.25
+          },
+          {
+            "id": 3,
+            "type": "move",
+            "target": "agri_eco18",
+            "yaw": 271.42,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco16",
+        "image": "/assets/Database Images/unrestricted nodes/216.webp",
+        "coords": {
+          "x": 0.572,
+          "y": 0.749
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco17",
+            "yaw": 27.76,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco15",
+            "yaw": 235.21,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco15",
+        "image": "/assets/Database Images/unrestricted nodes/215.webp",
+        "coords": {
+          "x": 0.572,
+          "y": 0.749
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco16",
+            "yaw": 45.78,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco14",
+            "yaw": 258.55,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco14",
+        "image": "/assets/Database Images/unrestricted nodes/214.webp",
+        "coords": {
+          "x": 0.572,
+          "y": 0.749
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco15",
+            "yaw": 92.62,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco13",
+            "yaw": 275.37,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco13",
+        "image": "/assets/Database Images/unrestricted nodes/213.webp",
+        "coords": {
+          "x": 0.572,
+          "y": 0.749
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco14",
+            "yaw": 66.37,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco08",
+            "yaw": 197.12,
+            "pitch": -33.53
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco12",
+        "image": "/assets/Database Images/unrestricted nodes/212.webp",
+        "coords": {
+          "x": 0.64,
+          "y": 0.764
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco95",
+            "yaw": 191.46,
+            "pitch": -38.46
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco11",
+            "yaw": 92.79,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco11",
+        "image": "/assets/Database Images/unrestricted nodes/211.webp",
+        "coords": {
+          "x": 0.627,
+          "y": 0.756
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco12",
+            "yaw": 275.03,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco10",
+            "yaw": 66.03,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco10",
+        "image": "/assets/Database Images/unrestricted nodes/210.webp",
+        "coords": {
+          "x": 0.572,
+          "y": 0.749
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco11",
+            "yaw": 242.32,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco09",
+            "yaw": 99.72,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco09",
+        "image": "/assets/Database Images/unrestricted nodes/209.webp",
+        "coords": {
+          "x": 0.572,
+          "y": 0.749
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco10",
+            "yaw": 285.21,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco08",
+            "yaw": 90.28,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco08",
+        "image": "/assets/Database Images/unrestricted nodes/208.webp",
+        "coords": {
+          "x": 0.572,
+          "y": 0.749
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco09",
+            "yaw": 278.52,
+            "pitch": -28.22
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco07",
+            "yaw": 101.78,
+            "pitch": -20
+          },
+          {
+            "id": 3,
+            "type": "move",
+            "target": "agri_eco13",
+            "yaw": 18.84,
+            "pitch": -31.41
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco07",
+        "image": "/assets/Building Module/Internal Nodes/agri_eco/207.webp",
+        "coords": {
+          "x": 0.572,
+          "y": 0.749
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco08",
+            "yaw": 277.66,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco06",
+            "yaw": 211.43,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco21",
+        "image": "/assets/Building Module/Internal Nodes/agri_eco/207.webp",
+        "coords": {
+          "x": 0.572,
+          "y": 0.749
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco08",
+            "yaw": 277.66,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco06",
+            "yaw": 211.43,
+            "pitch": -20
+          }
+        ]
+      },
+
+
+
+      {
+        "scene": "agri_eco06",
+        "image": "/assets/Database Images/unrestricted nodes/206.webp",
+        "coords": {
+          "x": 0.587,
+          "y": 0.782
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco07",
+            "yaw": 57.33,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco05",
+            "yaw": 263.24,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco04",
+        "image": "/assets/Database Images/unrestricted nodes/204.webp",
+        "coords": {
+          "x": 0.618,
+          "y": 0.781
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco05",
+            "yaw": 77.41,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco93",
+            "yaw": 254.15,
+            "pitch": -20
+          },
+          {
+            "type": "info",
+            "class": "school_facilities",
+            "target": "",
+            "yaw": 185.17,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco03",
+        "image": "/assets/Database Images/unrestricted nodes/203.webp",
+        "coords": {
+          "x": 0.672,
+          "y": 0.79
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco86",
+            "yaw": 191.35,
+            "pitch": -28.22
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco02",
+            "yaw": 9.29,
+            "pitch": -33.73
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco02",
+        "image": "/assets/Database Images/unrestricted nodes/202.webp",
+        "coords": {
+          "x": 0.672,
+          "y": 0.787
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco03",
+            "yaw": 219.49,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco01",
+            "yaw": 50.3,
+            "pitch": -40.0
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco01",
+        "image": "/assets/Database Images/unrestricted nodes/201.webp",
+        "coords": {
+          "x": 0.671,
+          "y": 0.782
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco02",
+            "yaw": 265.13,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco00",
+            "yaw": 84.45,
+            "pitch": -39.81
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco00",
+        "image": "/assets/Database Images/unrestricted nodes/200.webp",
+        "coords": {
+          "x": 0.669,
+          "y": 0.778
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco01",
+            "yaw": 239.91,
+            "pitch": -36.14
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco99",
+            "yaw": 60.42,
+            "pitch": -39.81
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco99",
+        "image": "/assets/Database Images/unrestricted nodes/199.webp",
+        "coords": {
+          "x": 0.666,
+          "y": 0.776
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco00",
+            "yaw": 242.31,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco98",
+            "yaw": 68.32,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco98",
+        "image": "/assets/Database Images/unrestricted nodes/198.webp",
+        "coords": {
+          "x": 0.657,
+          "y": 0.775
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco99",
+            "yaw": 251.06,
+            "pitch": -42.0
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco97",
+            "yaw": 84.62,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco97",
+        "image": "/assets/Database Images/unrestricted nodes/197.webp",
+        "coords": {
+          "x": 0.653,
+          "y": 0.775
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco98",
+            "yaw": 268.73,
+            "pitch": -42.0
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco96",
+            "yaw": 82.21,
+            "pitch": -27.16
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco96",
+        "image": "/assets/Database Images/unrestricted nodes/196.webp",
+        "coords": {
+          "x": 0.649,
+          "y": 0.776
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco97",
+            "yaw": 266.5,
+            "pitch": -40.0
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco95",
+            "yaw": 95.94,
+            "pitch": -23.59
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco95",
+        "image": "/assets/Database Images/unrestricted nodes/195.webp",
+        "coords": {
+          "x": 0.646,
+          "y": 0.776
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco96",
+            "yaw": 296.23,
+            "pitch": -36.72
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco94",
+            "yaw": 121.38,
+            "pitch": -20
+          },
+          {
+            "id": 3,
+            "type": "move",
+            "target": "agri_eco12",
+            "yaw": 23.23,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco94",
+        "image": "/assets/Database Images/unrestricted nodes/194.webp",
+        "coords": {
+          "x": 0.633,
+          "y": 0.778
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco95",
+            "yaw": 290.4,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco92",
+            "yaw": 162.05,
+            "pitch": -33.61
+          },
+          {
+            "id": 3,
+            "type": "move",
+            "target": "agri_eco93",
+            "yaw": 71.45,
+            "pitch": -23.0
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco93",
+        "image": "/assets/Database Images/unrestricted nodes/193.webp",
+        "coords": {
+          "x": 0.629,
+          "y": 0.78
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco04",
+            "yaw": 84.32,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco92",
+            "yaw": 226.06,
+            "pitch": -20
+          },
+          {
+            "id": 3,
+            "type": "move",
+            "target": "agri_eco94",
+            "yaw": 292.8,
+            "pitch": -35.36
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco92",
+        "image": "/assets/Database Images/unrestricted nodes/192.webp",
+        "coords": {
+          "x": 0.634,
+          "y": 0.782
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco93",
+            "yaw": 71.11,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco91",
+            "yaw": 205.47,
+            "pitch": -20
+          },
+          {
+            "id": 3,
+            "type": "move",
+            "target": "agri_eco94",
+            "yaw": 353.38,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco91",
+        "image": "/assets/Database Images/unrestricted nodes/191.webp",
+        "coords": {
+          "x": 0.639,
+          "y": 0.786
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco92",
+            "yaw": 26.32,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco90",
+            "yaw": 259.0,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco90",
+        "image": "/assets/Database Images/unrestricted nodes/190.webp",
+        "coords": {
+          "x": 0.641,
+          "y": 0.787
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco91",
+            "yaw": 74.88,
+            "pitch": -31.22
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco89",
+            "yaw": 267.06,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco89",
+        "image": "/assets/Database Images/unrestricted nodes/189.webp",
+        "coords": {
+          "x": 0.654,
+          "y": 0.791
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco90",
+            "yaw": 88.43,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco88",
+            "yaw": 269.81,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco88",
+        "image": "/assets/Database Images/unrestricted nodes/188.webp",
+        "coords": {
+          "x": 0.668,
+          "y": 0.793
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco89",
+            "yaw": 95.65,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco86",
+            "yaw": 278.05,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco87",
+        "image": "/assets/Database Images/unrestricted nodes/187.webp",
+        "coords": {
+          "x": 0.67,
+          "y": 0.809
+        },
+        "hotspot": [
+          {
+            "type": "info",
+            "class": "info",
+            "yaw": 168.23,
+            "pitch": -5.4
+          },
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco86",
+            "yaw": 3.85,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco86",
+        "image": "/assets/Database Images/unrestricted nodes/186.webp",
+        "coords": {
+          "x": 0.672,
+          "y": 0.794
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco88",
+            "yaw": 66.06,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco85",
+            "yaw": 258.87,
+            "pitch": -20
+          },
+          {
+            "id": 3,
+            "type": "move",
+            "target": "agri_eco03",
+            "yaw": 21.06,
+            "pitch": -20
+          },
+          {
+            "id": 4,
+            "type": "move",
+            "target": "agri_eco87",
+            "yaw": 195.89,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco85",
+        "image": "/assets/Database Images/unrestricted nodes/185.webp",
+        "coords": {
+          "x": 0.683,
+          "y": 0.797
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco86",
+            "yaw": 98.91,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco84",
+            "yaw": 266.88,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco84",
+        "image": "/assets/Database Images/unrestricted nodes/184.webp",
+        "coords": {
+          "x": 0.694,
+          "y": 0.802
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco85",
+            "yaw": 65.8,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco83",
+            "yaw": 213.86,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco83",
+        "image": "/assets/Database Images/unrestricted nodes/183.webp",
+        "coords": {
+          "x": 0.714,
+          "y": 0.808
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco84",
+            "yaw": 25.98,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco82",
+            "yaw": 204.94,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco82",
+        "image": "/assets/Database Images/unrestricted nodes/182.webp",
+        "coords": {
+          "x": 0.735,
+          "y": 0.831
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco83",
+            "yaw": 23.52,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco81",
+            "yaw": 202.23,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco81",
+        "image": "/assets/Database Images/unrestricted nodes/181.webp",
+        "coords": {
+          "x": 0.756,
+          "y": 0.876
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco82",
+            "yaw": 34.64,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco80",
+            "yaw": 212.31,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco80",
+        "image": "/assets/Database Images/unrestricted nodes/180.webp",
+        "coords": {
+          "x": 0.766,
+          "y": 0.891
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco81",
+            "yaw": 13.69,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco79",
+            "yaw": 197.57,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco79",
+        "image": "/assets/Database Images/unrestricted nodes/179.webp",
+        "coords": {
+          "x": 0.777,
+          "y": 0.914
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco80",
+            "yaw": 31.02,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco78",
+            "yaw": 232.35,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco78",
+        "image": "/assets/Database Images/unrestricted nodes/178.webp",
+        "coords": {
+          "x": 0.786,
+          "y": 0.927
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco79",
+            "yaw": 54.68,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco77",
+            "yaw": 234.42,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco77",
+        "image": "/assets/Database Images/unrestricted nodes/177.webp",
+        "coords": {
+          "x": 0.811,
+          "y": 0.944
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco78",
+            "yaw": 51.45,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco76",
+            "yaw": 192.02,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco76",
+        "image": "/assets/Database Images/unrestricted nodes/176.webp",
+        "coords": {
+          "x": 0.834,
+          "y": 0.964
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco77",
+            "yaw": 12.02,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco75",
+            "yaw": 192.02,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco75",
+        "image": "/assets/Database Images/unrestricted nodes/175.webp",
+        "coords": {
+          "x": 0.83,
+          "y": 1.0
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco76",
+            "yaw": 12.02,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco74",
+            "yaw": 192.02,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco74",
+        "image": "/assets/Database Images/unrestricted nodes/174.webp",
+        "coords": {
+          "x": 0.835,
+          "y": 1.02
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco75",
+            "yaw": 12.02,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco73",
+            "yaw": 192.02,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "agri_eco73",
+        "image": "/assets/Database Images/unrestricted nodes/173.webp",
+        "coords": {
+          "x": 0.84,
+          "y": 1.044
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "agri_eco74",
+            "yaw": 12.02,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "agri_eco70",
+            "yaw": 192.02,
             "pitch": -20
           }
         ]

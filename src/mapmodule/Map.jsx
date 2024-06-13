@@ -175,10 +175,9 @@ const MapModule = ({
   const [filterClicked, setFilterClicked] = useState(true); // Filter Button State
 
   function removeOverlays(target_loc = null) {
-    console.log("Removing Overlays:", target_loc);
     Object.keys(overlays).map((type) => {
       overlays[type].map((overlay) => {
-        if (target_loc && overlay.scene !== target_loc.scene) {
+        if (target_loc && overlay.scene === target_loc.scene) {
         } else {
           viewer.removeOverlay(overlay.id);
           removeOverlaysName();

@@ -106,7 +106,7 @@
     "scene": "ncrdec",
     "location": "National Coffee Research, Development and Extension Center",
     "image": "/assets/Building Module/Internal Nodes/ncrdec/1.webp",
-    "back": ["node24"],
+    "back": ["node35"],
     "coords": {
       "x": 0.711,
       "y": 1.193,
@@ -127,7 +127,7 @@
     "scene": "newcemds",
     "location": "College of Economics, Management and Development Studies New Building",
     "image": "/assets/Database Images/unrestricted nodes/33.webp",
-    "back": ["node31", "node32", "node33"],
+    "back": ["node334"],
     "coords": {
       "x": 0.605,
       "y": 0.994,
@@ -190,7 +190,7 @@
     "scene": "library",
     "location": "Ladislao N. Diwa Memorial Library",
     "image": "/assets/Database Images/unrestricted nodes/285.webp",
-    "back": ["node34", "node35"],
+    "back": ["node285"],
     "coords": {
       "x": 0.541,
       "y": 0.956,
@@ -573,31 +573,12 @@
         "type": "info",
         "class": "info",
         "target": "cvmbs_hosp",
-       "yaw": 39.73,
+        "yaw": 39.73,
         "pitch": 9.15
       }
     ]
   },
-  {
-    "scene": "an_sci",
-    "location": "Animal Science Building",
-    "image": "",
-    "back": [""],
-    "coords": {
-      "x": 0.503,
-      "y": 0.596,
-      "type": "college_buildings"
-    },
-    "hotspot": [
-      {
-        "type": "info",
-        "class": "info",
-        "target": "an_sci",
-        "yaw": "",
-        "pitch": ""
-      }
-    ]
-  },
+
   {
     "scene": "mat_lab",
     "location": "Material Testing Laboratory",
@@ -622,7 +603,7 @@
     "scene": "ogs",
     "location": "Open Graduate School",
     "image": "/assets/Database Images/unrestricted nodes/319.webp",
-    "back": [""],
+    "back": ["node316"],
     "coords": {
       "x": 0.449,
       "y": 0.976,
@@ -681,8 +662,8 @@
   {
     "scene": "ced",
     "location": "College of Education",
-    "image": "/assets/Building Module/Background/CED.webp",
-    "back": [""],
+    "image": "/assets/Database Images/unrestricted nodes/302.webp",
+    "back": ["node302"],
     "coords": {
       "x": 0.331,
       "y": 1.02,
@@ -719,10 +700,10 @@
     ]
   },
   {
-    "scene": "eco_tour",
+    "scene": "agri_eco",
     "location": "Agri-Eco Tourism Park",
-    "image": "",
-    "back": [""],
+    "image": "/assets/Database Images/unrestricted nodes/421.webp",
+    "back": ["node421"],
     "coords": {
       "x": 0.587,
       "y": 0.788,
@@ -732,9 +713,9 @@
       {
         "type": "info",
         "class": "info",
-        "target": "eco_tour",
-        "yaw": 112.8,
-        "pitch": 12.34
+        "target": "agri_eco",
+        "yaw": 273.67,
+        "pitch": -1.56
       }
     ]
   },
@@ -742,7 +723,7 @@
     "scene": "ccj",
     "location": "College of Criminology and Justice",
     "image": "/assets/Database Images/unrestricted nodes/361.webp",
-    "back": [""],
+    "back": ["node361"],
     "coords": {
       "x": 0.269,
       "y": 1.108,
@@ -782,7 +763,7 @@
     "scene": "museum",
     "location": "Historical and Cultural Museum",
     "image": "/assets/Database Images/unrestricted nodes/321.webp",
-    "back": ["node34", "node35"],
+    "back": ["node320"],
     "coords": {
       "x": 0.508,
       "y": 0.971,
@@ -850,33 +831,24 @@
     }
   },
   {
-    "scene": "torigate",
-    "location": "Tori Gate",
-    "back": ["node24"],
+    "scene": "irb",
+    "location": "Interdisciplinary Research Facility Building",
+    "image": "/assets/Database Images/unrestricted nodes/37.webp",
+    "back": ["node37"],
     "coords": {
-      "x": 0.676,
-      "y": 1.2,
-      "type": "attractions"
-    }
-  },
-  {
-    "scene": "Vase",
-    "location": "Centennial Jar",
-    "back": ["node38"],
-    "coords": {
-      "x": 0.545,
-      "y": 0.905,
-      "type": "attractions"
-    }
-  },
-  {
-    "scene": "lagoon",
-    "location": "Lagoon",
-    "back": ["node38"],
-    "coords": {
-      "x": 0.496,
-      "y": 0.791,
-      "type": "attractions"
-    }
+      "x": 0.604,
+      "y": 0.923,
+      "type": "school_facilities"
+    },
+    "hotspot": [
+      {
+        "id": 1,
+        "type": "info",
+        "class": "info",
+        "target": "irb",
+        "yaw": 268.43,
+        "pitch": 5.21
+      }
+    ]
   }
 ]

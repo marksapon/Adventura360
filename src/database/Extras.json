@@ -426,17 +426,6 @@
     "image": "/assets/Building Module/Extras/icon parking lot.webp"
   },
   {
-    "scene": "layatDiwa",
-    "location": "Layat Diwa Statue",
-    "desc": "This is the Layat Diwa statue",
-    "coords": {
-      "x": 0.408,
-      "y": 1.326,
-      "type": "attractions"
-    },
-    "image": "/assets/Building Module/Extras/layat diwa (2).webp"
-  },
-  {
     "scene": "washareaOldCemds",
     "location": "Wash area near old CEMDS",
     "desc": "This is the wash area near Old College of Engineering and Design Studies",
@@ -678,5 +667,16 @@
       "type": "washarea"
     },
     "image": "/assets/Building Module/Extras/restroom agri eco.webp"
+  },
+  {
+    "scene": "an_sci",
+    "location": "Animal Science Building",
+    "desc": "The Animal Science Building is currently under renovation",
+    "coords": {
+      "x": 0.501,
+      "y": 0.592,
+      "type": "construction"
+    },
+    "image": "/assets/Building Module/Extras/an_sci.webp"
   }
 ]

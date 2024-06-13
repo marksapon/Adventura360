@@ -534,7 +534,7 @@ function Module360({
         data.scene,
         data.location,
         data.image,
-        select_Scene.coords,
+        data.coords ? data.coords : select_Scene.coords,
         data.hotspot,
       );
       temp.push(temp_internal);

@@ -16,14 +16,18 @@
         "(Facebook Page) Computer Science Student Organization": "https://www.facebook.com/CSSO2016"
       }
     },
+
     "facilities": {
       "Computer Laboratory": "The Computer Laboratory is equipped with the latest hardware and software to support students in their coursework and research. From programming to networking, students have access to the tools they need to succeed."
     },
+
     "courses": {
       "BS Computer Science": null,
       "BS Information Technology": null
     },
+
     "more_info": "https://cvsu.edu.ph/?s=ceit&swpmfe=652ea0d21b1427a1bfa685e40d9bc1de",
+
     "gallery": []
   },
   {
@@ -160,7 +164,7 @@
     ]
   },
   {
-    "scene": "newcemds2",
+    "scene": "newcemds",
     "name": "College of Economics, Management and Development Studies New Building",
     "access": "account",
     "acronym": "new cemds",
@@ -168,6 +172,41 @@
     "tags": ["school", "cemds"],
     "image": "/assets/Building Module/Background/cemds.webp",
     "desc": "The College of Economics, Management, and Development Studies unveils its new building – a modern hub for academic exploration. This technologically advanced facility fosters collaboration and critical thinking with its spacious learning areas and innovative design. Here, students delve into economics, management, and development studies in a dynamic environment that fuels academic excellence.",
+
+    "dept": [
+      "Department of Management",
+      "Department of Economics",
+      "Department of Development Studies",
+      "Department of Accountancy"
+    ],
+    "courses": {
+      "BS OFFICE ADMINISTRATION": null,
+      "BS ACCOUNTANCY": null,
+      "BS BUSINESS ADMINISTRATION": [
+        "• Financial Management<br> • Human Resource Development Management<br> • Marketing Management<br> • Operations Management<br> • Service Management Program"
+      ],
+      "BS ECONOMICS": null,
+      "BS DEVELOPMENT MANAGEMENT": [
+        "• Rural Development Management<br> • Training Program Management"
+      ],
+      "BS INTERNATIONAL STUDIES": ["•  Asian Studies<br>• European Studies"],
+      "GRADUATE PROGRAMS": [
+        "• Master in Business Administration<br> • Master in Management<br> • Master in Public Administration"
+      ]
+    },
+    "contacts": {},
+    "more_info": "https://cvsu.edu.ph/cemds/",
+    "gallery": []
+  },
+  {
+    "scene": "oldcemds",
+    "name": "College of Economics, Management and Development Studies New Building",
+    "access": "account",
+    "acronym": "Old cemds",
+    "type": "college_buildings",
+    "tags": ["school", "cemds"],
+    "image": "/assets/Building Module/Background/cemds.webp",
+    "desc": "The College of Economics, Management, and Development Studies unveils its old building – a modern hub for academic exploration. This technologically advanced facility fosters collaboration and critical thinking with its spacious learning areas and innovative design. Here, students delve into economics, management, and development studies in a dynamic environment that fuels academic excellence.",
 
     "dept": [
       "Department of Management",
@@ -613,7 +652,7 @@
     "tags": ["school"],
     "image": "/assets/Building Module/Background/grad school.webp",
     "desc": "Welcome to the Open Graduate School at our University. Our vibrant community of scholars is dedicated to advancing knowledge and fostering intellectual growth. From cutting-edge research to interdisciplinary collaboration, we're committed to pushing the boundaries of academic excellence. Join us as we explore new frontiers of learning and discovery. Welcome to a place where innovation thrives and curiosity reigns.",
-
+    "more_info": "https://cvsu.edu.ph/2018/01/13/office-of-the-graduate-studies-open-learning-college/",
     "gallery": []
   },
   {
@@ -1013,7 +1052,7 @@
     ]
   },
   {
-    "scene": "eco_tour",
+    "scene": "agri_eco",
     "name": "Agri-Eco Tourism Park",
     "access": "account",
     "acronym": "agri eco",
@@ -1048,32 +1087,20 @@
     "desc": "The College of Veterinary Medicine and Biomedical Sciences at Cavite State University fosters expertise in veterinary medicine, biomedical sciences, and animal welfare. With a focus on ethical practice, professional excellence, and community service, we prepare students for impactful careers in veterinary medicine, research, and animal care. Our curriculum blends hands-on training with innovative research, empowering graduates to drive positive change in their communities. Join us in shaping a healthier, more compassionate society.",
     "courses": {
       "GRADUATE PROGRAMS": [
-        "Master in Veterinary Studies (open for non-vets)",
-        "Master in Veterinary Science"
+        "• Master in Veterinary Studies (open for non-vets) <br> • Master in Veterinary Science"
       ],
       "UNDERGRADUATE PROGRAMS": [
-        "Doctor of Veterinary Medicine (6 years)",
-        "BS Veterinary Technology (4 years)",
-        "BS Animal Health and Management (4 years)",
-        "BS Biomedical Science (4 years)"
+        "• Doctor of Veterinary Medicine (6 years) <br> • BS Veterinary Technology (4 years) <br> • BS Animal Health and Management (4 years) <br> • BS Biomedical Science (4 years)"
       ],
-      "UNITS OF THE CVMBS": null,
-      "Basic Veterinary Sciences": [
-        "Veterinary Anatomy",
-        "Veterinary Physiology",
-        "Veterinary Pharmacology",
-        "Zootechnics (Prod’n, Nutrition and Breeding)"
+      "UNITS OF THE CVMBS": [
+        "Basic Veterinary Sciences :<br>• Veterinary Anatomy <br> • Veterinary Physiology <br> • Veterinary Pharmacology •  Zootechnics (Prod’n, Nutrition and Breeding)"
       ],
+
       "Immunopathology and Microbiology": [
-        "Veterinary Microbiology",
-        "Veterinary Pathology",
-        "Veterinary Parasitology"
+        "• Veterinary Microbiology <br> • Veterinary Pathology <br> • Veterinary Parasitology"
       ],
       "Clinical and Population Health": [
-        "Veterinary Medicine",
-        "Veterinary Surgery",
-        "Veterinary Public Health",
-        "Veterinary Clinics"
+        "• Veterinary Medicine <br> • Veterinary Surgery <br> • Veterinary Public Health <br> • Veterinary Clinics"
       ],
       "Biomedical Science and Biotechnology": null,
       "Veterinary Medical Center": null
@@ -1091,7 +1118,7 @@
     "name": "Tori Gate",
     "access": "guest",
     "acronym": "Tori",
-    "type": "school_facilities",
+    "type": "attraction",
     "tags": ["school", "leisure"],
     "image": "/assets/Building Module/Extras/tori gate.webp",
     "desc": "The Tori Gate, a traditional Japanese structure, symbolizes the entrance to the Japanese Garden at the university. This serene space offers a tranquil escape from the bustling campus, inviting visitors to relax and unwind amidst the beauty of nature. The Japanese Garden features a koi pond, stone lanterns, and meticulously pruned trees, creating a peaceful atmosphere that encourages contemplation and reflection. Whether you're seeking a quiet spot to read, meditate, or simply enjoy the beauty of the outdoors, the Japanese Garden and Torii Gate provide a serene retreat for all who visit."
@@ -1101,24 +1128,35 @@
     "name": "Centennial Jar",
     "access": "guest",
     "acronym": "jar",
-    "type": "school_facilities",
+    "type": "attraction",
     "tags": ["school", "leisure"],
     "image": "/assets/Building Module/Extras/big jar.webp",
-    "desc": "The Centennial Jar, a towering structure that stands as a symbol of the university's rich history and vibrant culture. This impressive jar, adorned with intricate designs and vibrant colors, serves as a focal point for the campus, attracting visitors and students alike. The Centennial Jar embodies the university's commitment to excellence, innovation, and community, serving as a reminder of the university's past achievements and future aspirations. Whether you're a student, faculty member, or visitor, the Centennial Jar welcomes you to experience the spirit of Cavite State University."
+    "desc": "A tightly-sealed vessel containing mementos and wishes for the next 100 years was installed here during the centennial celebration of the university in 2006."
   },
   {
     "scene": "lagoon",
     "name": "Lagoon",
     "access": "guest",
     "acronym": "lagoon",
-    "type": "school_facilities",
+    "type": "attraction",
     "tags": ["school", "leisure"],
     "image": "/assets/Building Module/Extras/lagoon.webp",
     "desc": "The Lagoon, a serene body of water that serves as a central feature of the university's landscape. This tranquil oasis offers a peaceful retreat from the bustling campus, inviting visitors to relax and unwind amidst the beauty of nature. The Lagoon is home to a variety of aquatic plants and animals, creating a vibrant ecosystem that provides a habitat for local wildlife. Whether you're seeking a quiet spot to read, meditate, or simply enjoy the beauty of the outdoors, the Lagoon provides a serene escape for all who visit."
   },
   {
+    "scene": "layatDiwa",
+    "name": "Layat Diwa Statue",
+    "access": "guest",
+    "acronym": "layatdiwa",
+    "type": "attraction",
+    "tags": ["school", "leisure"],
+    "image": "/assets/Building Module/Extras/layat diwa (2).webp",
+    "more_info": "https://cvsu.edu.ph/laya-at-diwa/",
+    "desc": "This brass artwork carries the University’s ideals of TRUTH, EXCELLENCE and SERVICE. There are five basic elements in the artwork together with the symbolic figures and meanings. The unchained female figure, holding a book, represents the empowered Filipino woman. She is beauty personified and is today’s contemporary woman – a mother, a nurturer, an educator, and a humble servant to humanity."
+  },
+  {
     "scene": "cvmbs_hosp",
-    "name": "Veterinary biomedical research center and Veterinary teaching Hospital",
+    "name": "Veterinary Biomedical Research Center and Veterinary Teaching Hospital",
     "access": "account",
     "acronym": "cvmbs_hosp",
     "type": "college_buildings",
