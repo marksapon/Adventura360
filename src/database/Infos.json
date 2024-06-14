@@ -1158,7 +1158,7 @@
     "acronym": "cvmbs_hosp",
     "type": "college_buildings",
     "tags": ["school", "cvmbs"],
-    "image": "/assets/Building Module/Background/cvmbs.webp",
+    "image": "/assets/Building Module/Background/vet hosp.webp",
     "desc": "This institution prioritizes research, medical care, and education. It offers essential resources for innovative research, comprehensive medical services, and the training of future veterinarians. Dedicated to advancing veterinary medicine and enhancing animal welfare, it plays a pivotal role in the global veterinary community.",
     "more_info": "https://cvsu.edu.ph/cvmbs/",
     "gallery": []
@@ -1186,5 +1186,55 @@
     "tags": ["school"],
     "image": "/assets/Building Module/Background/hevted.webp",
     "desc": "This the Home Economics Vocational and Technical Eduction Department"
+  },
+
+  {
+    "scene": "agri_eco_info",
+    "name": "Agri-Eco Tourism Park Information Center",
+    "access": "account",
+    "acronym": "agri info",
+    "type": "school_facilities",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Background/hevted.webp",
+    "desc": "This the information center for the Agri-Eco Tourism Park.",
+
+    "contacts": {
+      "Telephone": "(046) 482-4385",
+      "Email": "agri-ecopark@cvsu.edu.ph",
+      "additional": {
+        "Facebook Page (Agri-Eco Tourism Park)": "https://www.facebook.com/cvsuagriecopark"
+      }
+    },
+
+    "more_info": "https://cvsu.edu.ph/2021/07/19/cvsu-launches-agri-eco-tourism-park/"
+  },
+
+  {
+    "scene": "brite",
+    "name": "Bee Research, Innovation, Trade, and Extension (BRITE) Center",
+    "access": "account",
+    "acronym": "brite",
+    "type": "school_facilities",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Extras/brite center.webp",
+    "desc": "This the BRITE Center. Where bees are being studied and taken care of. The center also sells honey and other bee products.",
+
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "Add Email Address",
+      "additional": {
+        "Facebook Page": "https://www.facebook.com/CvSUBRITECenter"
+      }
+    },
+
+    "gallery": [
+      "/assets/Building Module/Gallery/brite/01.webp",
+      "/assets/Building Module/Gallery/brite/02.webp",
+      "/assets/Building Module/Gallery/brite/03.webp",
+      "/assets/Building Module/Gallery/brite/04.webp",
+      "/assets/Building Module/Gallery/brite/05.webp",
+      "/assets/Building Module/Gallery/brite/06.webp"
+    ]
   }
 ]

@@ -404,7 +404,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                           return (
                             <div
                               key={index}
-                              className={`flex flex-col overflow-hidden rounded-lg border-2 px-1 py-1 shadow-lg ${view === "list" ? "h-fit" : "h-auto"} relative border ${clicked ? "bg-slate-100" : "hover:bg-slate-50"}`}
+                              className={`mb-1 flex flex-col overflow-hidden rounded-lg border-2 px-1 pb-1 shadow-lg ${view === "list" ? "h-fit" : "h-56"} relative border ${clicked ? "bg-slate-100" : "hover:bg-slate-50"}`}
                               onClick={() => {
                                 // Log the item when clicked
                                 // console.log("Clicked Item:", item);
@@ -429,7 +429,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                                 </div>
                               )}
                               <div
-                                className={`${view === "list" ? "flex w-full items-center px-2" : "flex h-1/2 flex-col items-center justify-center font-semibold"} gap-2 ${view === "cards" ? "absolute bottom-0 left-0 right-0" : ""}`}
+                                className={`${view === "list" ? "flex w-full items-center" : "mb-1 flex h-1/2 flex-col items-center justify-center font-semibold"} gap-2 ${view === "cards" ? "absolute bottom-0 left-0 right-0" : ""}`}
                               >
                                 <div
                                   className={

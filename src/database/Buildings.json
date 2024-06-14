@@ -783,6 +783,7 @@
       }
     ]
   },
+
   {
     "scene": "pool",
     "location": "Saluysoy Resort",
@@ -804,6 +805,7 @@
       }
     ]
   },
+
   {
     "scene": "chapel",
     "location": "University Chapel",
@@ -825,6 +827,7 @@
       }
     ]
   },
+
   {
     "scene": "scicafe",
     "location": "Science Cafe",
@@ -855,6 +858,7 @@
       }
     ]
   },
+
   {
     "scene": "Vase",
     "location": "Centennial Jar",
@@ -864,6 +868,7 @@
       "type": "attractions"
     }
   },
+
   {
     "scene": "lagoon",
     "location": "Lagoon",
@@ -883,15 +888,9 @@
       }
     ]
   },
-  {
-    "scene": "agriecoinfocenter",
-    "location": "Agri-Eco Tourism Park Information Center",
-    "coords": {
-      "x": 0.614,
-      "y": 0.809,
-      "type": "school_facilities"
-    }
-  },
+
+
+
   {
     "scene": "torigate",
     "location": "Tori Gate",

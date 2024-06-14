@@ -611,11 +611,11 @@
 
   {
     "scene": "brite",
-    "location": "Bee, Research, Innovation, Trade, and Extension Center",
-    "desc": "This is the Bee, Research, Innovation, Trade, and Extension Center",
+    "location": "Bee Research, Innovation, Trade, and Extension (BRITE) Center",
+    "desc": "This the BRITE Center. Where bees are being studied and taken care of. The center also sells honey and other bee products.",
     "coords": {
-      "x": 0.687,
-      "y": 0.788,
+      "x": 0.685,
+      "y": 0.79,
       "type": "school_facilities"
     },
     "image": "/assets/Building Module/Extras/brite center.webp"
@@ -679,5 +679,16 @@
       "type": "construction"
     },
     "image": "/assets/Building Module/Extras/an_sci.webp"
+  },
+
+  {
+    "scene": "agri_eco_info",
+    "location": "Agri-Eco Tourism Park Information Center",
+    "coords": {
+      "x": 0.597,
+      "y": 0.795,
+      "type": "school_facilities"
+    },
+    "image": "/assets/Building Module/Background/agri_eco_info.webp"
   }
 ]

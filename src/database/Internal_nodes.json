@@ -9166,7 +9166,7 @@
           {
             "type": "info",
             "class": "school_facilities",
-            "target": "",
+            "target": "agri_eco_info",
             "yaw": 195.41,
             "pitch": 6.11
           },
@@ -9403,12 +9403,21 @@
             "yaw": 121.38,
             "pitch": -20
           },
+
           {
             "id": 3,
             "type": "move",
             "target": "agri_eco12",
             "yaw": 23.23,
             "pitch": -20
+          },
+
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "tulay",
+            "yaw": 288.95,
+            "pitch": -20.56
           }
         ]
       },
@@ -9454,25 +9463,29 @@
         },
         "hotspot": [
           {
-            "id": 1,
             "type": "move",
             "target": "agri_eco04",
             "yaw": 84.32,
             "pitch": -20
           },
           {
-            "id": 2,
             "type": "move",
             "target": "agri_eco92",
             "yaw": 226.06,
             "pitch": -20
           },
           {
-            "id": 3,
             "type": "move",
             "target": "agri_eco94",
             "yaw": 292.8,
             "pitch": -35.36
+          },
+          {
+            "type": "popup",
+            "class": "attractions",
+            "target": "carabaws",
+            "yaw": 254.17,
+            "pitch": -15.78
           }
         ]
       },
@@ -9518,18 +9531,24 @@
         },
         "hotspot": [
           {
-            "id": 1,
             "type": "move",
             "target": "agri_eco92",
             "yaw": 26.32,
             "pitch": -20
           },
           {
-            "id": 2,
             "type": "move",
             "target": "agri_eco90",
             "yaw": 259.0,
             "pitch": -20
+          },
+
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "tulay",
+            "yaw": 257.28,
+            "pitch": 2.55
           }
         ]
       },
@@ -9647,30 +9666,50 @@
             "yaw": 66.06,
             "pitch": -20
           },
+
           {
             "type": "move",
             "target": "agri_eco85",
             "yaw": 258.87,
             "pitch": -20
           },
+
           {
             "type": "move",
             "target": "agri_eco03",
             "yaw": 21.06,
             "pitch": -20
           },
+
           {
             "type": "move",
             "target": "agri_eco87",
             "yaw": 195.89,
             "pitch": -20
           },
+
           {
             "type": "info",
             "class": "school_facilities",
-            "target": "",
+            "target": "brite",
             "yaw": 280.09,
             "pitch": 2.09
+          },
+
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "tulay",
+            "yaw": 70.9,
+            "pitch": 2.19
+          },
+
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "hagdan",
+            "yaw": 14.19,
+            "pitch": -7.4
           }
         ]
       },
@@ -9684,18 +9723,25 @@
         },
         "hotspot": [
           {
-            "id": 1,
             "type": "move",
             "target": "agri_eco86",
             "yaw": 98.91,
             "pitch": -20
           },
+
           {
-            "id": 2,
             "type": "move",
             "target": "agri_eco84",
             "yaw": 266.88,
             "pitch": -20
+          },
+
+          {
+            "type": "info",
+            "class": "school_facilities",
+            "target": "brite",
+            "yaw": 357.59,
+            "pitch": 6.47
           }
         ]
       },
@@ -9709,18 +9755,32 @@
         },
         "hotspot": [
           {
-            "id": 1,
             "type": "move",
             "target": "agri_eco85",
             "yaw": 65.8,
             "pitch": -20
           },
           {
-            "id": 2,
             "type": "move",
             "target": "agri_eco83",
             "yaw": 213.86,
             "pitch": -20
+          },
+
+          {
+            "type": "popup",
+            "class": "cafeteria",
+            "target": "hernandos",
+            "yaw": 263.68,
+            "pitch": -2.49
+          },
+
+          {
+            "type": "popup",
+            "class": "restroom",
+            "target": "restroomAgri-Eco",
+            "yaw": 31.79,
+            "pitch": 3.63
           }
         ]
       },
@@ -9734,18 +9794,24 @@
         },
         "hotspot": [
           {
-            "id": 1,
             "type": "move",
             "target": "agri_eco84",
             "yaw": 25.98,
             "pitch": -20
           },
           {
-            "id": 2,
             "type": "move",
             "target": "agri_eco82",
             "yaw": 204.94,
             "pitch": -20
+          },
+
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "tulay",
+            "yaw": 1.8,
+            "pitch": 6.71
           }
         ]
       },
@@ -9771,6 +9837,13 @@
             "target": "agri_eco81",
             "yaw": 202.23,
             "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "kapihansakubo",
+            "yaw": 114.02,
+            "pitch": 4.19
           }
         ]
       },
@@ -9988,8 +10061,8 @@
         "hotspot": [
           {
             "type": "move",
-            "target": "agri_eco70",
-            "yaw": 192.02,
+            "target": "agri_eco74",
+            "yaw": 12.76,
             "pitch": -20
           }
         ]
@@ -10007,6 +10080,48 @@
         "location": "Wash area in Eco-Tourism",
         "desc": "This is the wash area near Eco-Tourism",
         "image": "/assets/Building Module/Extras/eco tourism wash area.webp"
+      },
+
+      {
+        "scene": "carabaws",
+        "location": "Rufa and Ralph",
+        "desc": "Rufa is the mother carabao and Ralph is the baby carabao.",
+        "image": "/assets/Building Module/Internal Nodes/agri_eco/extras/carabaws.webp"
+      },
+
+      {
+        "scene": "tulay",
+        "location": "Tulay ng Karunungan",
+        "desc": "This is the Tulay ng Karunungan.",
+        "image": "/assets/Building Module/Internal Nodes/agri_eco/extras/tulay.webp"
+      },
+
+      {
+        "scene": "hadan",
+        "location": "Hagdan ng Kasaysayan",
+        "desc": "This is the Hagdan ng Kasaysayan. The steps are engraved with a year pertaining to the history of the University",
+        "image": "/assets/Building Module/Internal Nodes/agri_eco/extras/hagdan.webp"
+      },
+
+      {
+        "scene": "hernandos",
+        "location": "Hernando's Eatery",
+        "desc": "This is Hernando's Eatery",
+        "image": "/assets/Building Module/Extras/hernandos.webp"
+      },
+
+      {
+        "scene": "restroomAgri-Eco",
+        "location": "Restroom inside Agri-Eco Tourism Park",
+        "desc": "This is the restroom inside Agri-Eco Tourism Park",
+        "image": "/assets/Building Module/Extras/restroom agri eco.webp"
+      },
+
+      {
+        "scene": "kapihansakubo",
+        "location": "Kapihan sa Kubo",
+        "desc": "This is Kapihan sa Kubo",
+        "image": "/assets/Building Module/Extras/kapihan sa kubo.webp"
       }
     ]
   },
