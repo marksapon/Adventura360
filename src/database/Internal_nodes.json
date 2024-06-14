@@ -9977,7 +9977,8 @@
       {
         "scene": "inang_story",
         "location": "Inang Kalikasan",
-        "desc": "Story of Inang Kalikasan can be found here."
+        "desc": "Story of Inang Kalikasan can be found here.",
+        "image": "/assets/Building Module/Internal Nodes/agri_eco/extras/06.webp"
       }
     ]
   }

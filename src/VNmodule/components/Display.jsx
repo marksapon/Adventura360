@@ -151,7 +151,7 @@ function Display({
         <div className="absolute bottom-0 flex h-2/6 w-full justify-center p-5">
           <div className=" relative flex h-full w-full items-center justify-center rounded-lg border-2 border-green-600 md:w-3/5">
             <button
-              className=" relative h-full w-full rounded-lg bg-white bg-opacity-100 p-5 md:bg-opacity-100"
+              className=" relative h-full w-full rounded-md bg-white bg-opacity-100 p-5 md:bg-opacity-100"
               onClick={() => {
                 nextDialogue();
               }}

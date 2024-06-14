@@ -1348,7 +1348,7 @@
         "id": 3,
         "type": "move",
         "target": "node80",
-        "yaw": 117.43,
+        "yaw": 136.13,
         "pitch": -20
       },
       {
@@ -1646,13 +1646,6 @@
         "type": "move",
         "target": "node48",
         "yaw": 284.49,
-        "pitch": -20
-      },
-      {
-        "id": 3,
-        "type": "move",
-        "target": "",
-        "yaw": 57.55,
         "pitch": -20
       }
     ]
@@ -6726,7 +6719,7 @@
       {
         "type": "bldg",
         "class": "bldg",
-        "target": "admin2",
+        "target": "cashier",
         "yaw": 108.49,
         "pitch": 6.12
       }
@@ -6765,7 +6758,7 @@
       {
         "type": "bldg",
         "class": "bldg",
-        "target": "admin2",
+        "target": "cashier",
         "yaw": 85.08,
         "pitch": 5.31
       }
@@ -6803,7 +6796,7 @@
       {
         "type": "bldg",
         "class": "bldg",
-        "target": "admin2",
+        "target": "cashier",
         "yaw": 57.67,
         "pitch": 9.58
       }
@@ -6834,7 +6827,7 @@
       {
         "type": "bldg",
         "class": "bldg",
-        "target": "admin2",
+        "target": "cashier",
         "yaw": 54.81,
         "pitch": 9.5
       }
@@ -6872,7 +6865,7 @@
       {
         "type": "bldg",
         "class": "bldg",
-        "target": "admin2",
+        "target": "cashier",
         "yaw": 54.81,
         "pitch": 9.5
       }
@@ -11128,6 +11121,13 @@
         "target": "node414",
         "yaw": 138.91,
         "pitch": -20
+      },
+      {
+        "id": 3,
+        "type": "move",
+        "target": "node411",
+        "yaw": 273.2,
+        "pitch": -40
       }
     ]
   },
@@ -11143,7 +11143,7 @@
         "id": 1,
         "type": "move",
         "target": "node412",
-        "yaw": 138.91,
+        "yaw": 254.84,
         "pitch": -20
       },
       {

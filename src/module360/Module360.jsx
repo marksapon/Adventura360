@@ -106,18 +106,8 @@ function Module360({
     return result;
   }
 
-  // useEffect(() => {
-  //   console.log("Events Completed:", event_done);
-  // }, [event_done]);
-
   class Extras {
-    constructor(
-      index,
-      scene,
-      image = "https://via.placeholder.com/150",
-      location,
-      desc,
-    ) {
+    constructor(index, scene, image, location, desc) {
       this.id = index;
       this.scene = scene;
       this.image = image;
@@ -590,6 +580,7 @@ function Module360({
                   id: index,
                   scene: extras.scene,
                   location: extras.location,
+                  image: extras.image ? extras.image : null,
                   desc: extras.desc,
                   state: false,
                 };

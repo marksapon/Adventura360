@@ -813,39 +813,17 @@
     "type": "school_facilities",
     "tags": ["school"],
     "image": "/assets/Building Module/Background/cashier.webp",
-    "desc": "The University Cashier's Office, situated in located at the back of the Administration Building, acts as the central hub for students, faculty, and staff to manage all university-related finances.  Dedicated staff provide exceptional customer service in a transparent environment. Readily addresses any questions regarding university fees and payments. This ensures a smooth and hassle-free experience when navigating financial obligations at the university.",
-
-    "contacts": {
-      "Telephone": "Add Telephone Number",
-      "Mobile": "Add Mobile Number",
-      "Email": "Add Email Address",
-      "additional": {
-        "Add your website here": null
-      }
-    },
-
-    "gallery": ["/assets/Building Module/Gallery/cashier/01.webp"]
+    "desc": "The University Cashier's Office, situated in located at the back of the Administration Building, acts as the central hub for students, faculty, and staff to manage all university-related finances.  Dedicated staff provide exceptional customer service in a transparent environment. Readily addresses any questions regarding university fees and payments. This ensures a smooth and hassle-free experience when navigating financial obligations at the university."
   },
-
   {
     "scene": "icon",
     "name": "International Convention Center",
     "access": "account",
-    "acronym": "cashier",
+    "acronym": "icon",
     "type": "venue",
     "tags": ["school"],
     "image": "/assets/Building Module/Background/ICON.webp",
     "desc": "The University International Convention Center serves as a multipurpose venue for significant university events and external collaborations. This impressive structure hosts formal university functions, from standardized exams and bustling job fairs to grand graduation ceremonies, with its adaptable space configurable to each event's needs.  Beyond university-organized gatherings, the center can be rented by external organizations for conferences, or even social events. The University International Convention Center embodies the university's pursuit of excellence, offering a platform to celebrate student achievements and foster collaboration within the broader community.",
-
-    "contacts": {
-      "Telephone": "Add Telephone Number",
-      "Mobile": "Add Mobile Number",
-      "Email": "Add Email Address",
-      "additional": {
-        "Add your website here": null
-      }
-    },
-
     "gallery": [
       "/assets/Building Module/Gallery/icon/01.webp",
       "/assets/Building Module/Gallery/icon/02.webp",
@@ -855,7 +833,6 @@
       "/assets/Building Module/Gallery/icon/06.webp",
       "/assets/Building Module/Gallery/icon/07.webp"
     ],
-
     "more_info": "https://cvsu.edu.ph/ovpeba-international-convention-center/"
   },
 
@@ -1178,7 +1155,6 @@
     "more_info": "https://cvsu.edu.ph/cvmbs/",
     "gallery": []
   },
-
   {
     "scene": "inang_kalikasan",
     "name": "Inang Kalikasan",
@@ -1190,5 +1166,15 @@
     "desc": "This the statue of \"Ina ng Kalikasan\"",
     "history": "Ayon sa isang kwentong bayan, may isang Diwata na nangangalaga sa isang bukal na matatagpuan sa kagubatang bahagi ng Cavite State University.<br><br>Ang nasabing Diwata ay madalas na makitang naliligo sa ilog kung saan ang bukal ay patuloy na dumadaloy sa lahat ng panahon.<br><br>Ayon din sa mga kwento, ang bukal na ito ang tanging pinagkukuhanan ng inuming tubig, panluto, panlaba, at pampaligo ng mga mag-aaral, guro, kawani at iba pang mga naunang nanirahan sa loob ng Pamantasan.<br><br>Ito rin ang bukal na syang dumadaloy sa pasilidad na paliguan ng Pamantasan na pinangalanang <i><b>Baño de Señora</b></i> upang bigyang halaga ang mga sinaunang kwento tungkol sa Diwata ng nasabing lugar.<br><br>Upang magpatuloy ang kwento, ang Pamantasan ay nagtayo ng isang imahe o eskultura na tatawaging \"Inang Kalikasan ng CvSU\".<br><br>Ito rin ang magpapaalala sa atin na dapat nating pangalagaan at ingatan ang ating kalikasan para sa mga susunod pang henerasyon.",
     "more_info": "https://www.facebook.com/cvsuagriecopark"
+  },
+  {
+    "scene": "hevted",
+    "name": "Home Economics Vocational and Technical Eduction Department",
+    "access": "account",
+    "acronym": "hevted",
+    "type": "school_facilities",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Background/HEVTED.webp",
+    "desc": "This the Home Economics Vocational and Technical Eduction Department"
   }
 ]
