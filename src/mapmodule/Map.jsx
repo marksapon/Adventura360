@@ -31,7 +31,7 @@ const MapModule = ({
   infosDB,
   iconsSet,
   openBldgModal,
-
+  status,
 }) => {
   /* Device Check */
   // Check if User on Mobile
@@ -470,6 +470,7 @@ const MapModule = ({
 
     buildingsDB.map((building) => {
       const neighbors = [];
+
       if (building.back) {
         building.back.map((nodes) => {
           neighbors.push(nodes);
@@ -919,7 +920,7 @@ const MapModule = ({
           {/* Content Space */}
           <div className=" relative w-full">
             {/* Pathfinding Modal */}
-            {pathFindingClicked ? (
+            {pathFindingClicked && (
               <PathfindingModal
                 setMinimized={setMinimized}
                 minimized={minimized}
@@ -930,7 +931,7 @@ const MapModule = ({
                 removeOverlays={removeOverlays}
                 setTargetLocation={setTargetLocation}
               />
-            ) : null}
+            )}
 
             {/* Extras Display Modal */}
             {selected_extra && extraCheck ? (
@@ -1065,19 +1066,26 @@ const MapModule = ({
                 {/* Pathfinding Button */}
                 <div className="group relative inline-block">
                   <div className="absolute right-full top-1/2 mr-2 w-32 -translate-y-1/2 transform rounded-lg bg-black px-3 py-2 text-center text-xs text-white opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
-                    Directions
+                    {status !== "inside"
+                      ? "Directions"
+                      : "Directions is disabled inside the building"}
                   </div>
                   <button
-                    className="pointer-events-auto transform rounded-full border-2 bg-white p-2 text-white drop-shadow-xl transition-transform duration-500 ease-in-out hover:scale-110 hover:border-green-500"
+                    className={`pointer-events-auto transform rounded-full border-2 ${status !== "inside" ? "bg-white transition-transform duration-500 ease-in-out hover:scale-110 hover:border-green-500" : "bg-gray-400"} p-2 text-white drop-shadow-xl `}
                     onClick={() => {
-                      setPathFindingClicked(true);
-                      if (minimized) {
-                        setMinimized(false);
+                      if (status !== "inside") {
+                        setPathFindingClicked(true);
+
+                        if (minimized) {
+                          setMinimized(false);
+                        }
+                      } else {
+                        null;
                       }
                     }}
                   >
                     <GiPathDistance
-                      className={`md:h-9/12 h-6 w-6 ${pathFindingClicked ? "text-green-600" : "text-gray-500"} group-hover:text-green-600 md:w-full lg:h-10 lg:w-10`}
+                      className={`md:h-9/12 h-6 w-6 ${pathFindingClicked ? "text-green-600" : "text-gray-500"} ${status !== "inside" && "group-hover:text-green-600"}  md:w-full lg:h-10 lg:w-10`}
                     />
                   </button>
                 </div>

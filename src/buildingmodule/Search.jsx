@@ -315,8 +315,8 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                                 key={index}
                                 className={`
       flex items-center gap-2 rounded-lg p-1 text-center transition-all duration-300 ease-in-out sm:p-3
-      ${selectedKey === key ? "border border-gray-200 bg-slate-50 shadow-lg" : "border border-transparent  hover:border"} 
-      font-sans font-semibold  hover:border-gray-200 hover:shadow-lg
+      ${selectedKey === key ? "border border-gray-200 bg-slate-50 shadow-lg" : "border border-transparent hover:border"} 
+      font-sans font-semibold hover:border-gray-200 hover:shadow-lg
     `}
                                 onClick={() => {
                                   setSelectedKey(key);

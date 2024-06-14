@@ -406,6 +406,7 @@
       "/assets/Building Module/Gallery/IH1/02.webp"
     ]
   },
+
   {
     "scene": "biosci",
     "name": "Department of Biological Sciences",
@@ -422,6 +423,7 @@
 
     "more_info": "https://www.facebook.com/CvSUDBS/"
   },
+
   {
     "scene": "ceit",
     "name": "College of Engineering and Information Technology",
@@ -457,6 +459,7 @@
 
     "gallery": []
   },
+
   {
     "scene": "diet",
     "name": "Department of Industrial Engineering and Technology",
@@ -471,6 +474,7 @@
 
     "gallery": []
   },
+
   {
     "scene": "dcee",
     "name": "Department of Computer, Electronics, and Electrical Engineering",
@@ -483,6 +487,7 @@
 
     "gallery": []
   },
+
   {
     "scene": "admin",
     "name": "Administration Building",
@@ -581,7 +586,7 @@
     "acronym": "ced",
     "type": "college_buildings",
     "tags": ["ced", " school"],
-    "image": "/assets/Building Module/Background/dit.webp",
+    "image": "/assets/Building Module/Background/CED.webp",
     "desc": "The College of Education welcomes you! Committed to the transformative power of education, their diverse community offers the tools and support for success in a dynamic field.  Through innovative research and hands-on experiences, they empower you to make a lasting impact. Here, learning is limitless and excellence is expected.",
 
     "dept": [
@@ -640,7 +645,12 @@
     "tags": ["con", "school"],
     "image": "/assets/Building Module/Background/con_.webp",
     "desc": "Welcome to the College of Nursing, where we embrace the profound impact of early nurturing and education on lifelong health and well-being. Within our supportive and inclusive community, dedicated mentors guide you to excel in the intricate field of nursing, equipping you with the knowledge and skills to make a tangible difference in the lives of individuals and families. Through innovative research and immersive practical experiences, we empower you to navigate the complexities of healthcare and emerge as compassionate, competent caregivers. Join us in a journey where learning knows no bounds, and excellence is the standard.",
-
+    "courses": {
+      "Degree Programs": [
+        "• Bachelor of Science in Nursing (4 years) <br> • Bachelor of Science in Medical Technology / Medical Laboratory Science (4 years) <br> • Bachelor of Science in Midwifery (Bridging program 2 years)"
+      ],
+      "Non-Degree Programs": ["• Diploma in Midwifery (2 years)"]
+    },
     "gallery": []
   },
   {
@@ -721,10 +731,7 @@
     "contacts": {
       "Telephone": "(046) 862-1654",
       "Email": "researchcenter@cvsu.edu.ph",
-      "Mobile": "+639270110387",
-      "additional": {
-        "Add your website here": null
-      }
+      "Mobile": "+639270110387"
     },
 
     "more_info": "https://cvsu.edu.ph/ovpre-research-center/",
@@ -971,11 +978,9 @@
     "desc": "Cavite State University's Rolle Hall, named after the university's first president, Santiago M. Rolle, serves as a versatile event space for the CvSU community and beyond. This spacious hall can accommodate up to 250 guests and adapts to various functions, from weddings and birthdays to seminars, workshops, and even political events.  As a central venue, Rolle Hall not only offers functionality but also embodies CvSU's legacy, fostering a space for community gatherings, celebrations, and the creation of lasting memories.",
 
     "contacts": {
-      "Telephone": "Add Telephone Number",
-      "Mobile": "Add Mobile Number",
       "Email": "Add Email Address",
       "additional": {
-        "Add your website here": null
+        "Facebook Page": "https://www.facebook.com/pages/Rolle-Hall-CvSU/219780548088175"
       }
     },
 
@@ -1028,12 +1033,13 @@
       "/assets/Building Module/Gallery/saluysoy/03.webp"
     ]
   },
+
   {
     "scene": "agri_eco",
     "name": "Agri-Eco Tourism Park",
     "access": "account",
     "acronym": "agri eco",
-    "type": "school_facilities",
+    "type": "attraction",
     "tags": ["school", "leisure"],
     "image": "/assets/Building Module/Background/agri eco.webp",
     "contacts": {
@@ -1065,6 +1071,7 @@
       "/assets/Building Module/Gallery/agri_eco/09.webp"
     ]
   },
+
   {
     "scene": "cvmbs",
     "name": "College of Veterinary Medicine and Biomedical Sciences",
@@ -1143,6 +1150,7 @@
     "more_info": "https://cvsu.edu.ph/laya-at-diwa/",
     "desc": "This brass artwork carries the University’s ideals of TRUTH, EXCELLENCE and SERVICE. There are five basic elements in the artwork together with the symbolic figures and meanings. The unchained female figure, holding a book, represents the empowered Filipino woman. She is beauty personified and is today’s contemporary woman – a mother, a nurturer, an educator, and a humble servant to humanity."
   },
+
   {
     "scene": "cvmbs_hosp",
     "name": "Veterinary Biomedical Research Center and Veterinary Teaching Hospital",
@@ -1155,6 +1163,7 @@
     "more_info": "https://cvsu.edu.ph/cvmbs/",
     "gallery": []
   },
+
   {
     "scene": "inang_kalikasan",
     "name": "Inang Kalikasan",
@@ -1167,6 +1176,7 @@
     "history": "Ayon sa isang kwentong bayan, may isang Diwata na nangangalaga sa isang bukal na matatagpuan sa kagubatang bahagi ng Cavite State University.<br><br>Ang nasabing Diwata ay madalas na makitang naliligo sa ilog kung saan ang bukal ay patuloy na dumadaloy sa lahat ng panahon.<br><br>Ayon din sa mga kwento, ang bukal na ito ang tanging pinagkukuhanan ng inuming tubig, panluto, panlaba, at pampaligo ng mga mag-aaral, guro, kawani at iba pang mga naunang nanirahan sa loob ng Pamantasan.<br><br>Ito rin ang bukal na syang dumadaloy sa pasilidad na paliguan ng Pamantasan na pinangalanang <i><b>Baño de Señora</b></i> upang bigyang halaga ang mga sinaunang kwento tungkol sa Diwata ng nasabing lugar.<br><br>Upang magpatuloy ang kwento, ang Pamantasan ay nagtayo ng isang imahe o eskultura na tatawaging \"Inang Kalikasan ng CvSU\".<br><br>Ito rin ang magpapaalala sa atin na dapat nating pangalagaan at ingatan ang ating kalikasan para sa mga susunod pang henerasyon.",
     "more_info": "https://www.facebook.com/cvsuagriecopark"
   },
+
   {
     "scene": "hevted",
     "name": "Home Economics Vocational and Technical Eduction Department",
@@ -1174,7 +1184,7 @@
     "acronym": "hevted",
     "type": "school_facilities",
     "tags": ["school"],
-    "image": "/assets/Building Module/Background/HEVTED.webp",
+    "image": "/assets/Building Module/Background/hevted.webp",
     "desc": "This the Home Economics Vocational and Technical Eduction Department"
   }
 ]

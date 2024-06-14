@@ -106,7 +106,7 @@
     "scene": "ncrdec",
     "location": "National Coffee Research, Development and Extension Center",
     "image": "/assets/Building Module/Internal Nodes/ncrdec/1.webp",
-    "back": ["node35"],
+    "back": ["node24"],
     "coords": {
       "x": 0.711,
       "y": 1.193,
@@ -127,7 +127,7 @@
     "scene": "newcemds",
     "location": "College of Economics, Management and Development Studies New Building",
     "image": "/assets/Database Images/unrestricted nodes/33.webp",
-    "back": ["node334"],
+    "back": ["node33"],
     "coords": {
       "x": 0.605,
       "y": 0.994,
@@ -181,8 +181,8 @@
         "type": "info",
         "class": "info",
         "target": "rc",
-        "yaw": 281.14,
-        "pitch": -1.49
+        "yaw": 281.43,
+        "pitch": -2.66
       }
     ]
   },
@@ -210,7 +210,7 @@
   {
     "scene": "ih1",
     "location": "International House 1 / College of Medicine",
-    "back": "node39",
+    "back": ["node39"],
     "image": "/assets/Database Images/unrestricted nodes/39.webp",
     "coords": {
       "x": 0.576,
@@ -252,7 +252,7 @@
   {
     "scene": "con",
     "location": "College of Nursing",
-    "back": "node48",
+    "back": ["node48"],
     "image": "/assets/Building Module/Internal Nodes/nursing/1.webp",
     "coords": {
       "x": 0.481,
@@ -357,7 +357,7 @@
   {
     "scene": "admin",
     "location": "Administration Building",
-    "image": "/assets/Building Module/Background/admin.webp",
+    "image": "/assets/Database Images/unrestricted nodes/258.webp",
     "back": ["node258"],
     "coords": {
       "x": 0.391,
@@ -483,7 +483,7 @@
     "scene": "oldcemds",
     "location": "College of Economics, Management and Development Studies Old Building",
     "image": "/assets/Database Images/unrestricted nodes/334.webp",
-    "back": ["node96", "node93"],
+    "back": ["node334"],
     "coords": {
       "x": 0.424,
       "y": 0.91,
@@ -701,6 +701,7 @@
       }
     ]
   },
+
   {
     "scene": "agri_eco",
     "location": "Agri-Eco Tourism Park",
@@ -785,6 +786,7 @@
   {
     "scene": "pool",
     "location": "Saluysoy Resort",
+    "back": ["node222"],
     "image": "/assets/Database Images/unrestricted nodes/222.webp",
     "coords": {
       "x": 0.633,
@@ -853,26 +855,59 @@
       }
     ]
   },
-
   {
-    "scene": "agri_eco_info",
-    "location": "Interdisciplinary Research Facility Building",
-    "image": "/assets/Database Images/unrestricted nodes/37.webp",
-    "back": ["node37"],
+    "scene": "Vase",
+    "location": "Centennial Jar",
     "coords": {
-      "x": 0.604,
-      "y": 0.923,
-      "type": "school_facilities"
+      "x": 0.544,
+      "y": 0.907,
+      "type": "attractions"
+    }
+  },
+  {
+    "scene": "lagoon",
+    "location": "Lagoon",
+    "image": "/assets/Database Images/unrestricted nodes/223.webp",
+    "coords": {
+      "x": 0.497,
+      "y": 0.792,
+      "type": "attractions"
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "info",
         "class": "info",
-        "target": "irb",
-        "yaw": 268.43,
-        "pitch": 5.21
+        "target": "lagoon",
+        "yaw": 105.95,
+        "pitch": -0.5
       }
     ]
+  },
+  {
+    "scene": "agriecoinfocenter",
+    "location": "Agri-Eco Tourism Park Information Center",
+    "coords": {
+      "x": 0.614,
+      "y": 0.809,
+      "type": "school_facilities"
+    }
+  },
+  {
+    "scene": "torigate",
+    "location": "Tori Gate",
+    "coords": {
+      "x": 0.677,
+      "y": 1.201,
+      "type": "attractions"
+    }
+  },
+  {
+    "scene": "layatDiwa",
+    "location": "Laya at Diwa",
+    "coords": {
+      "x": 0.408,
+      "y": 1.326,
+      "type": "attractions"
+    }
   }
 ]

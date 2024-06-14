@@ -5631,7 +5631,7 @@
     ]
   },
   {
-    "newcemds2": [
+    "newcemds": [
       {
         "scene": "cemds1",
         "image": "/assets/Building Module/Internal Nodes/cemds/1st Floor/1.webp",
@@ -8604,6 +8604,14 @@
             "target": "agri_eco06",
             "yaw": 51.17,
             "pitch": -29.36
+          },
+
+          {
+            "type": "popup",
+            "class": "washarea",
+            "target": "washareaEcoTourism",
+            "yaw": 342.9,
+            "pitch": -5.9
           }
         ]
       },
@@ -9137,30 +9145,38 @@
         "scene": "agri_eco04",
         "image": "/assets/Building Module/Internal Nodes/agri_eco/204.webp",
         "coords": {
-          "x": 0.618,
-          "y": 0.781
+          "x": 0.593,
+          "y": 0.788
         },
         "hotspot": [
           {
-            "id": 1,
             "type": "move",
             "target": "agri_eco05",
             "yaw": 77.41,
             "pitch": -20
           },
+
           {
-            "id": 2,
             "type": "move",
             "target": "agri_eco93",
             "yaw": 254.15,
             "pitch": -20
           },
+
           {
             "type": "info",
             "class": "school_facilities",
             "target": "",
-            "yaw": 185.17,
-            "pitch": -20
+            "yaw": 195.41,
+            "pitch": 6.11
+          },
+
+          {
+            "type": "popup",
+            "class": "washarea",
+            "target": "washareaEcoTourism",
+            "yaw": 47.44,
+            "pitch": 5.47
           }
         ]
       },
@@ -9626,32 +9642,35 @@
         },
         "hotspot": [
           {
-            "id": 1,
             "type": "move",
             "target": "agri_eco88",
             "yaw": 66.06,
             "pitch": -20
           },
           {
-            "id": 2,
             "type": "move",
             "target": "agri_eco85",
             "yaw": 258.87,
             "pitch": -20
           },
           {
-            "id": 3,
             "type": "move",
             "target": "agri_eco03",
             "yaw": 21.06,
             "pitch": -20
           },
           {
-            "id": 4,
             "type": "move",
             "target": "agri_eco87",
             "yaw": 195.89,
             "pitch": -20
+          },
+          {
+            "type": "info",
+            "class": "school_facilities",
+            "target": "",
+            "yaw": 280.09,
+            "pitch": 2.09
           }
         ]
       },
@@ -9858,11 +9877,14 @@
 
       {
         "scene": "agri_eco77",
+
         "image": "/assets/Building Module/Internal Nodes/agri_eco/177.webp",
+
         "coords": {
           "x": 0.811,
           "y": 0.944
         },
+
         "hotspot": [
           {
             "id": 1,
@@ -9978,6 +10000,13 @@
         "scene": "inang_story",
         "location": "Inang Kalikasan",
         "desc": "Story of Inang Kalikasan can be found here."
+      },
+
+      {
+        "scene": "washareaEcoTourism",
+        "location": "Wash area in Eco-Tourism",
+        "desc": "This is the wash area near Eco-Tourism",
+        "image": "/assets/Building Module/Extras/eco tourism wash area.webp"
       }
     ]
   },
@@ -10209,6 +10238,113 @@
         "scene": "restroom",
         "location": "1st Floor",
         "desc": "Restroom at 1st Floor"
+      }
+    ]
+  },
+  {
+    "lagoon": [
+      {
+        "scene": "lagoon1",
+        "image": "/assets/Building Module/Internal Nodes/lagoon/224.webp",
+        "coords": {
+          "x": 0.511,
+          "y": 0.789
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "lagoon2",
+            "yaw": 97.02,
+            "pitch": -20
+          },
+
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "pond",
+            "yaw": 141.36,
+            "pitch": -11.88
+          }
+        ]
+      },
+
+      {
+        "scene": "lagoon2",
+        "image": "/assets/Building Module/Internal Nodes/lagoon/225.webp",
+        "coords": {
+          "x": 0.497,
+          "y": 0.792
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "lagoon1",
+            "yaw": 279.59,
+            "pitch": -20
+          },
+
+          {
+            "type": "popup",
+            "class": "info",
+            "target": "pond",
+            "yaw": 156.89,
+            "pitch": -12.52
+          }
+        ]
+      }
+    ],
+    "lagoon_extras": [
+      {
+        "scene": "pond",
+        "location": "Pond",
+        "desc": "This is the pond, you can buy feeds for the fishes in Agri Eco Park, and feed the fishes here.",
+        "image": "/assets/Building Module/Internal Nodes/lagoon/extras/06.webp"
+      }
+    ]
+  },
+  {
+    "rolle": [
+      {
+        "scene": "rh1",
+        "image": "/assets/Building Module/Internal Nodes/rolle/1.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "rh2",
+            "yaw": 179.85,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "rh2",
+        "image": "/assets/Building Module/Internal Nodes/rolle/2.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "rh3",
+            "yaw": 190.57,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "rh1",
+            "yaw": 5.77,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "rh3",
+        "image": "/assets/Building Module/Internal Nodes/rolle/3.webp",
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "rh2",
+            "yaw": 358.19,
+            "pitch": -20
+          }
+        ]
       }
     ]
   }

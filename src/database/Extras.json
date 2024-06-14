@@ -403,10 +403,11 @@
     },
     "image": "/assets/Building Module/Extras/don severino statue.webp"
   },
+
   {
     "scene": "washareaEcoTourism",
     "location": "Wash area near Eco-Tourism",
-    "desc": "This is the wash area near Eco-Tourism",
+    "desc": "This is the wash area in Eco-Tourism",
     "coords": {
       "x": 0.589,
       "y": 0.776,
@@ -414,6 +415,7 @@
     },
     "image": "/assets/Building Module/Extras/eco tourism wash area.webp"
   },
+
   {
     "scene": "parkingICON",
     "location": "Parking area near International Convention Center",
@@ -469,6 +471,7 @@
     },
     "image": "/assets/Building Module/Extras/science hs wash area.webp"
   },
+
   {
     "scene": "universityHospital",
     "location": "University Hospital",
@@ -480,6 +483,7 @@
     },
     "image": "/assets/Building Module/Extras/univ hospital soon to rise.webp"
   },
+
   {
     "scene": "restroomUmall",
     "location": "Restroom near University mall",
@@ -580,6 +584,7 @@
     },
     "image": ""
   },
+
   {
     "scene": "parkingCRF",
     "location": "Parking area near Coffee Research Facility",
@@ -591,6 +596,7 @@
     },
     "image": "/assets/Building Module/Extras/coffee research parking lot.webp"
   },
+
   {
     "scene": "parkingLIBRARY",
     "location": "Parking area near University Library",
@@ -602,17 +608,7 @@
     },
     "image": "/assets/Building Module/Extras/parking lib.webp"
   },
-  {
-    "scene": "agriecoinfocenter",
-    "location": "Agri-Eco Tourism Park Information Center",
-    "desc": "This is the Agri-Eco Tourism Park Information Center",
-    "coords": {
-      "x": 0.614,
-      "y": 0.809,
-      "type": "attractions"
-    },
-    "image": "/assets/Building Module/Extras/agri eco info center.webp"
-  },
+
   {
     "scene": "brite",
     "location": "Bee, Research, Innovation, Trade, and Extension Center",
@@ -624,6 +620,7 @@
     },
     "image": "/assets/Building Module/Extras/brite center.webp"
   },
+
   {
     "scene": "hernandos",
     "location": "Hernando's Eatery",
@@ -635,6 +632,7 @@
     },
     "image": "/assets/Building Module/Extras/hernandos.webp"
   },
+
   {
     "scene": "kapihansakubo",
     "location": "Kapihan sa Kubo",
@@ -646,6 +644,7 @@
     },
     "image": "/assets/Building Module/Extras/kapihan sa kubo.webp"
   },
+
   {
     "scene": "restroomAgri-Eco",
     "location": "Restroom inside Agri-Eco Tourism Park",
@@ -657,6 +656,7 @@
     },
     "image": "/assets/Building Module/Extras/restroom agri eco.webp"
   },
+
   {
     "scene": "washareabiosci",
     "location": "Wash area near Biological Science",
@@ -668,6 +668,7 @@
     },
     "image": "/assets/Building Module/Extras/restroom agri eco.webp"
   },
+
   {
     "scene": "an_sci",
     "location": "Animal Science Building",
@@ -678,49 +679,5 @@
       "type": "construction"
     },
     "image": "/assets/Building Module/Extras/an_sci.webp"
-  },
-  {
-    "scene": "layatDiwa",
-    "location": "Laya at Diwa",
-    "desc": "This brass artwork carries the University’s ideals of TRUTH, EXCELLENCE and SERVICE. There are five basic elements in the artwork together with the symbolic figures and meanings. The unchained female figure, holding a book, represents the empowered Filipino woman. She is beauty personified and is today’s contemporary woman – a mother, a nurturer, an educator, and a humble servant to humanity.",
-    "coords": {
-      "x": 0.408,
-      "y": 1.326,
-      "type": "attractions"
-    },
-    "image": "/assets/Building Module/Extras/layat diwa (2).webp"
-  },
-  {
-    "scene": "torigate",
-    "location": "Tori Gate",
-    "desc": "This is Tori Gate",
-    "coords": {
-      "x": 0.677,
-      "y": 1.201,
-      "type": "attractions"
-    },
-    "image": "/assets/Building Module/Extras/tori gate.webp"
-  },
-  {
-    "scene": "lagoon",
-    "location": "Lagoon",
-    "desc": "This is the university's lagoon",
-    "coords": {
-      "x": 0.497,
-      "y": 0.792,
-      "type": "attractions"
-    },
-    "image": "/assets/Building Module/Extras/lagoon.webp"
-  },
-  {
-    "scene": "Vase",
-    "location": "Centennial Jar",
-    "desc": "A tightly-sealed vessel containing mementos and wishes for the next 100 years was installed here during the centennial celebration of the university in 2006.",
-    "coords": {
-      "x": 0.544,
-      "y": 0.907,
-      "type": "attractions"
-    },
-    "image": "/assets/Building Module/Extras/big jar.webp"
   }
 ]

@@ -198,7 +198,6 @@ function Module360({
   const [mapState, setMapState] = useState(false); // Map State
 
   // VN State
-
   const [firstTime, setFirstTime] = useState(isFirstTime()); // First Time State
   const [eventList, setEventList] = useState([]); // Event List State
   const [vnState, setVNState] = useState(false); // VN State
@@ -693,18 +692,25 @@ function Module360({
   function returnFunction() {
     // console.log("Going Back");
 
-    if (status === "inside") {
-      // if inside the building set the access back to public and change the scene back to the scene of building.
-      setStatus("outside");
+    // if inside the building set the access back to public and change the scene back to the scene of building.
+    setStatus("outside");
 
-      setAccess("public");
+    setAccess("public");
+
+    let temp = false;
+
+    for (const data of buildingsDB) {
+      if (data.scene === insideBuilding) {
+        temp = true;
+      }
+    }
+
+    if (temp) {
       changeScene(buildingsDB, insideBuilding);
     } else {
-      // console.log("Previous Scene:", previous_Scene);
-      // if outside the building set the outside value and change the scene back to the previous scene then remove the back button.
-      setStatus();
-
       setSelect_Scene(previous_Scene);
+      setStatus();
+      setAccess("public");
       setBackButton(false);
     }
   }
@@ -800,10 +806,10 @@ function Module360({
                             <div className="grid h-fit w-full grid-rows-2">
                               {/* IMAGE */}
                               {extras.image && (
-                                <div className="flex w-full flex-col items-center justify-center">
+                                <div className="flex  w-full flex-col items-center justify-center">
                                   <img
                                     src={extras.image}
-                                    className="flex h-auto w-full items-center justify-center rounded-t-md object-cover shadow-md"
+                                    className="flex h-32 w-full items-center justify-center rounded-t-md object-cover shadow-md"
                                   />
                                 </div>
                               )}
@@ -884,7 +890,7 @@ function Module360({
               <TbDoorExit className="flex h-5 w-5 items-center justify-center md:h-8 md:w-8" />
               <div className="flex items-center justify-center">
                 <span className="flex items-center justify-center text-center font-sans text-base font-semibold md:text-xl">
-                  Exit Building
+                  Exit Place
                 </span>
               </div>
             </button>

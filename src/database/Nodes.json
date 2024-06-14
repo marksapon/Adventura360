@@ -1196,8 +1196,8 @@
         "type": "bldg",
         "class": "bldg",
         "target": "rc",
-        "yaw": 266.82,
-        "pitch": 0.4
+        "yaw": 281.43,
+        "pitch": -2.66
       }
     ]
   },
@@ -1421,13 +1421,6 @@
         "pitch": -20
       },
       {
-        "id": 3,
-        "type": "move",
-        "target": "",
-        "yaw": 112.65,
-        "pitch": -20
-      },
-      {
         "type": "popup",
         "class": "restroom",
         "target": "restroomIH1",
@@ -1523,13 +1516,6 @@
         "target": "node421",
         "yaw": 274.8,
         "pitch": -20
-      },
-      {
-        "type": "popup",
-        "class": "construction",
-        "target": "hostel",
-        "yaw": 254.58,
-        "pitch": 0.48
       }
     ]
   },
@@ -1554,13 +1540,6 @@
         "target": "node45",
         "yaw": 281.39,
         "pitch": -20
-      },
-      {
-        "type": "info",
-        "class": "attractions",
-        "target": "lagoon",
-        "yaw": 8.07,
-        "pitch": 3.26
       }
     ]
   },
@@ -1585,13 +1564,6 @@
         "target": "node46",
         "yaw": 282.42,
         "pitch": -20
-      },
-      {
-        "type": "info",
-        "class": "attractions",
-        "target": "lagoon",
-        "yaw": 341.35,
-        "pitch": 4.81
       }
     ]
   },
@@ -2664,6 +2636,13 @@
         "target": "Vase",
         "yaw": 170.56,
         "pitch": 8.54
+      },
+      {
+        "type": "popup",
+        "class": "washarea",
+        "target": "washareabiosci",
+        "yaw": 30.66,
+        "pitch": 0.64
       }
     ]
   },
@@ -5401,28 +5380,20 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node226",
         "yaw": 16.39,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node45",
         "yaw": 195.87,
         "pitch": -20
       },
+
       {
-        "id": 3,
-        "type": "move",
-        "target": "node224",
-        "yaw": 105.51,
-        "pitch": -20
-      },
-      {
-        "type": "info",
+        "type": "bldg",
         "class": "attractions",
         "target": "lagoon",
         "yaw": 105.95,
@@ -5430,47 +5401,7 @@
       }
     ]
   },
-  {
-    "scene": "node224",
-    "image": "/assets/Database Images/unrestricted nodes/224.webp",
-    "coords": {
-      "x": 0.73,
-      "y": 1.278
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node225",
-        "yaw": 97.02,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node223",
-        "yaw": 278.17,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node225",
-    "image": "/assets/Database Images/unrestricted nodes/225.webp",
-    "coords": {
-      "x": 0.73,
-      "y": 1.278
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node224",
-        "yaw": 279.59,
-        "pitch": -20
-      }
-    ]
-  },
+
   {
     "scene": "node226",
     "image": "/assets/Database Images/unrestricted nodes/226.webp",
@@ -5506,14 +5437,6 @@
         "target": "node229",
         "yaw": 330.29,
         "pitch": -20
-      },
-
-      {
-        "type": "info",
-        "class": "attractions",
-        "target": "lagoon",
-        "yaw": 134.13,
-        "pitch": 6.23
       }
     ]
   },
@@ -5652,13 +5575,6 @@
         "target": "node227",
         "yaw": 281.14,
         "pitch": -20
-      },
-      {
-        "type": "info",
-        "class": "attractions",
-        "target": "lagoon",
-        "yaw": 192.39,
-        "pitch": 6.16
       }
     ]
   },
@@ -5692,9 +5608,9 @@
         "pitch": -20
       },
       {
-        "type": "info",
+        "type": "bldg",
         "class": "venue",
-        "target": "rollehall",
+        "target": "rolle",
         "yaw": 55.87,
         "pitch": 9.92
       }
@@ -5723,9 +5639,9 @@
         "pitch": -20
       },
       {
-        "type": "info",
+        "type": "bldg",
         "class": "venue",
-        "target": "rollehall",
+        "target": "rolle",
         "yaw": 97.56,
         "pitch": 13.05
       }
@@ -5762,7 +5678,7 @@
       },
       {
         "type": "bldg",
-        "class": "bldg",
+        "class": "venue",
         "target": "rolle",
         "yaw": 97.56,
         "pitch": 13.05

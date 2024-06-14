@@ -535,6 +535,7 @@ const Navigationbar = ({
           infosDB={infosDB}
           iconsSet={iconSet}
           openBldgModal={openModal}
+          status={status}
         />
       )}
 
