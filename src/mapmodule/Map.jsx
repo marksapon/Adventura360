@@ -892,11 +892,7 @@ const MapModule = ({
         id="current location"
         className="flex h-auto w-36 flex-col items-center justify-end space-y-2"
       >
-        {curr_locLabel && (
-          <div className="absolute -top-9 left-2 flex h-10 w-32 items-center justify-center rounded-md border-2 border-gray-300 bg-white text-center font-roboto text-sm text-green-700 shadow-lg">
-            You are Here
-          </div>
-        )}
+        
 
         <img
           src="/assets/Login Module/adventura logo 2.webp"

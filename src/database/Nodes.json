@@ -8,14 +8,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node405",
         "yaw": 283.89,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node407",
         "yaw": 74.37,
@@ -87,21 +85,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node3",
         "yaw": 268.98,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node1",
         "yaw": 88.51,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node403",
         "yaw": 135.71,
@@ -125,21 +120,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node4",
         "yaw": 268.03,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node2",
         "yaw": 87.79,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node343",
         "yaw": 193.8,
@@ -163,14 +155,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node5",
         "yaw": 267.55,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node3",
         "yaw": 87.91,
@@ -194,21 +184,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node6",
         "yaw": 278.79,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node4",
         "yaw": 98.31,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node342",
         "yaw": 188.44,
@@ -232,14 +219,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node7",
         "yaw": 283.69,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node5",
         "yaw": 103.93,
@@ -263,21 +248,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node8",
         "yaw": 276.52,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node6",
         "yaw": 99.99,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node341",
         "yaw": 188.25,
@@ -301,21 +283,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node9",
         "yaw": 281.42,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node7",
         "yaw": 100.92,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node349",
         "yaw": 213.91,
@@ -332,14 +311,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node10",
         "yaw": 276.52,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node8",
         "yaw": 98.19,
@@ -356,28 +333,24 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node16",
         "yaw": 270.9,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node9",
         "yaw": 93.29,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node11",
         "yaw": 359.52,
         "pitch": -20
       },
       {
-        "id": 4,
         "type": "move",
         "target": "node349",
         "yaw": 144.0,
@@ -401,14 +374,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node12",
         "yaw": 5.14,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node10",
         "yaw": 183.35,
@@ -432,14 +403,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node13",
         "yaw": 7.18,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node11",
         "yaw": 186.22,
@@ -463,14 +432,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node14",
         "yaw": 0.84,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node12",
         "yaw": 183.47,
@@ -484,7 +451,6 @@
         "pitch": 11.59
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node125",
         "yaw": 89.97,
@@ -501,14 +467,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node15",
         "yaw": 1.44,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node13",
         "yaw": 182.51,
@@ -516,7 +480,6 @@
       },
 
       {
-        "id": 3,
         "type": "move",
         "target": "node277",
         "yaw": 329.38,
@@ -540,7 +503,6 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node14",
         "yaw": 191.84,
@@ -571,14 +533,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node17",
         "yaw": 277.71,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node10",
         "yaw": 97.71,
@@ -602,14 +562,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node18",
         "yaw": 276.64,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node16",
         "yaw": 97.0,
@@ -633,14 +591,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node19",
         "yaw": 279.63,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node17",
         "yaw": 99.75,
@@ -664,14 +620,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node20",
         "yaw": 274.25,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node18",
         "yaw": 93.89,
@@ -702,14 +656,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node21",
         "yaw": 279.39,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node19",
         "yaw": 97.0,
@@ -726,14 +678,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node22",
         "yaw": 312.04,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node20",
         "yaw": 129.05,
@@ -750,14 +700,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node23",
         "yaw": 322.33,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node21",
         "yaw": 139.69,
@@ -774,14 +722,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node24",
         "yaw": 317.18,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node22",
         "yaw": 135.39,
@@ -798,24 +744,15 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node25",
         "yaw": 6.1,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node23",
         "yaw": 169.36,
-        "pitch": -20
-      },
-      {
-        "id": 3,
-        "type": "move",
-        "target": "node344",
-        "yaw": 236.57,
         "pitch": -20
       },
       {
@@ -831,13 +768,6 @@
         "target": "torigate",
         "yaw": 224.8,
         "pitch": 9.73
-      },
-      {
-        "id": 3,
-        "type": "move",
-        "target": "node418",
-        "yaw": 286.79,
-        "pitch": -20
       }
     ]
   },
@@ -850,26 +780,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node26",
         "yaw": 19.38,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node24",
         "yaw": 201.05,
         "pitch": -20
       },
-      {
-        "id": 3,
-        "type": "move",
-        "target": "node148",
-        "yaw": 289.91,
-        "pitch": -20
-      },
+
       {
         "type": "popup",
         "class": "farm",
@@ -888,14 +810,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node27",
         "yaw": 0.24,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node25",
         "yaw": 180.0,
@@ -919,25 +839,24 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node28",
         "yaw": 2.75,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node26",
         "yaw": 180.6,
         "pitch": -20
       },
+
       {
-        "id": 3,
-        "type": "move",
-        "target": "node131",
-        "yaw": 270.78,
-        "pitch": -20
+        "type": "bldg",
+        "class": "school_facilities",
+        "target": "tech_demo",
+        "yaw": 268.14,
+        "pitch": -2.28
       }
     ]
   },
@@ -950,14 +869,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node29",
         "yaw": 2.63,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node27",
         "yaw": 180.84,
@@ -974,14 +891,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node31",
         "yaw": 26.14,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node28",
         "yaw": 204.99,
@@ -1006,21 +921,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node32",
         "yaw": 13.99,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node29",
         "yaw": 194.59,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node281",
         "yaw": 45.33,
@@ -1044,14 +956,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node33",
         "yaw": 38.15,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node31",
         "yaw": 218.27,
@@ -1075,21 +985,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node34",
         "yaw": 25.83,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node32",
         "yaw": 207.15,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node283",
         "yaw": 111.53,
@@ -1120,21 +1027,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node35",
         "yaw": 23.92,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node33",
         "yaw": 205.24,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node284",
         "yaw": 113.0,
@@ -1165,28 +1069,24 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node37",
         "yaw": 21.29,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node34",
         "yaw": 203.08,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node285",
         "yaw": 95.92,
         "pitch": -20
       },
       {
-        "id": 4,
         "type": "move",
         "target": "",
         "yaw": 275.18,
@@ -1210,21 +1110,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node38",
         "yaw": 13.87,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node35",
         "yaw": 195.55,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node79",
         "yaw": 94.13,
@@ -1255,14 +1152,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node39",
         "yaw": 18.63,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node37",
         "yaw": 196.95,
@@ -1293,14 +1188,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node40",
         "yaw": 353.03,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node38",
         "yaw": 177.17,
@@ -1331,28 +1224,24 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node42",
         "yaw": 13.46,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node39",
         "yaw": 192.43,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node80",
         "yaw": 136.13,
         "pitch": -20
       },
       {
-        "id": 4,
         "type": "move",
         "target": "",
         "yaw": 255.71,
@@ -1383,14 +1272,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node43",
         "yaw": 7.91,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node40",
         "yaw": 189.2,
@@ -1407,14 +1294,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node44",
         "yaw": 6.23,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node42",
         "yaw": 184.81,
@@ -1445,28 +1330,24 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node45",
         "yaw": 357.57,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node43",
         "yaw": 178.21,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "",
         "yaw": 251.27,
         "pitch": -20
       },
       {
-        "id": 4,
         "type": "move",
         "target": "",
         "yaw": 82.26,
@@ -1490,28 +1371,24 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node223",
         "yaw": 5.71,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node44",
         "yaw": 185.06,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node46",
         "yaw": 94.16,
         "pitch": -20
       },
       {
-        "id": 4,
         "type": "move",
         "target": "node421",
         "yaw": 274.8,
@@ -1528,14 +1405,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node47",
         "yaw": 100.62,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node45",
         "yaw": 281.39,
@@ -1552,14 +1427,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node48",
         "yaw": 101.91,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node46",
         "yaw": 282.42,
@@ -1576,14 +1449,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node49",
         "yaw": 108.11,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node47",
         "yaw": 288.5,
@@ -1607,14 +1478,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node50",
         "yaw": 102.94,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node48",
         "yaw": 284.49,
@@ -1631,14 +1500,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node51",
         "yaw": 103.12,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node49",
         "yaw": 283.12,
@@ -1662,21 +1529,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node52",
         "yaw": 104.53,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node50",
         "yaw": 285.7,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node99",
         "yaw": 192.21,
@@ -1693,14 +1557,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node53",
         "yaw": 95.84,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node51",
         "yaw": 276.3,
@@ -1717,14 +1579,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node54",
         "yaw": 107.97,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node52",
         "yaw": 285.97,
@@ -1741,14 +1601,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node55",
         "yaw": 109.35,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node53",
         "yaw": 289.35,
@@ -1765,14 +1623,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node56",
         "yaw": 110.58,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node54",
         "yaw": 290.43,
@@ -1789,21 +1645,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node57",
         "yaw": 107.29,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node55",
         "yaw": 287.34,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node251",
         "yaw": 193.98,
@@ -1820,21 +1673,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node58",
         "yaw": 195.79,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node56",
         "yaw": 283.72,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node315",
         "yaw": 17.47,
@@ -1858,21 +1708,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node59",
         "yaw": 192.04,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node57",
         "yaw": 12.56,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node306",
         "yaw": 103.27,
@@ -1910,14 +1757,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node60",
         "yaw": 189.71,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node58",
         "yaw": 10.35,
@@ -1934,21 +1779,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node61",
         "yaw": 199.92,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node59",
         "yaw": 20.7,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node369",
         "yaw": 276.86,
@@ -1965,14 +1807,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node62",
         "yaw": 202.77,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node60",
         "yaw": 23.29,
@@ -2010,14 +1850,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node63",
         "yaw": 200.95,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node61",
         "yaw": 21.86,
@@ -2048,14 +1886,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node64",
         "yaw": 196.29,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node62",
         "yaw": 17.2,
@@ -2072,35 +1908,30 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node65",
         "yaw": 195.13,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node63",
         "yaw": 14.87,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node92",
         "yaw": 286.04,
         "pitch": -20
       },
       {
-        "id": 4,
         "type": "move",
         "target": "node100",
         "yaw": 105.13,
         "pitch": -20
       },
       {
-        "id": 5,
         "type": "move",
         "target": "node278",
         "yaw": 323.53,
@@ -2124,21 +1955,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node66",
         "yaw": 186.98,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node64",
         "yaw": 7.24,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node257",
         "yaw": 305.43,
@@ -2155,28 +1983,24 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node67",
         "yaw": 193.71,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node65",
         "yaw": 13.96,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
-        "target": "",
+        "target": "node303",
         "yaw": 143.8,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node256",
         "yaw": 232.69,
@@ -2193,21 +2017,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node68",
         "yaw": 191.93,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node66",
         "yaw": 11.0,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node252",
         "yaw": 278.3,
@@ -2224,21 +2045,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node69",
         "yaw": 193.12,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node67",
         "yaw": 13.89,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node300",
         "yaw": 103.12,
@@ -2262,14 +2080,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node70",
         "yaw": 193.51,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node68",
         "yaw": 13.38,
@@ -2286,21 +2102,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node71",
         "yaw": 188.6,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node69",
         "yaw": 9.5,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "",
         "yaw": 279.63,
@@ -2317,14 +2130,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node72",
         "yaw": 201.15,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node70",
         "yaw": 20.76,
@@ -2348,14 +2159,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node73",
         "yaw": 197.92,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node71",
         "yaw": 18.05,
@@ -2372,14 +2181,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node74",
         "yaw": 196.76,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node72",
         "yaw": 17.92,
@@ -2410,14 +2217,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node75",
         "yaw": 193.91,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node73",
         "yaw": 14.18,
@@ -2434,14 +2239,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node76",
         "yaw": 198.29,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node74",
         "yaw": 19.45,
@@ -2458,21 +2261,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node77",
         "yaw": 195.01,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node75",
         "yaw": 15.66,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node416",
         "yaw": 150.68,
@@ -2496,21 +2296,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node78",
         "yaw": 198.24,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node76",
         "yaw": 19.02,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node416",
         "yaw": 133.56,
@@ -2534,21 +2331,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node1",
         "yaw": 200.1,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node77",
         "yaw": 20.7,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node416",
         "yaw": 87.17,
@@ -2579,14 +2373,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node81",
         "yaw": 93.11,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node37",
         "yaw": 266.13,
@@ -2610,14 +2402,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node82",
         "yaw": 145.61,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node40",
         "yaw": 316.43,
@@ -2655,21 +2445,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node84",
         "yaw": 87.04,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node79",
         "yaw": 270.53,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node287",
         "yaw": 173.83,
@@ -2693,14 +2480,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node83",
         "yaw": 131.77,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node80",
         "yaw": 314.75,
@@ -2724,21 +2509,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node84",
         "yaw": 143.15,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node82",
         "yaw": 312.42,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "",
         "yaw": 278.15,
@@ -2762,21 +2544,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node85",
         "yaw": 113.03,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node81",
         "yaw": 277.51,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node83",
         "yaw": 324.84,
@@ -2793,28 +2572,24 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node86",
         "yaw": 111.22,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node84",
         "yaw": 291.61,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node288",
         "yaw": 266.39,
         "pitch": -20
       },
       {
-        "id": 4,
         "type": "move",
         "target": "node344",
         "yaw": 15.23,
@@ -2838,14 +2613,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node87",
         "yaw": 113.42,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node85",
         "yaw": 293.68,
@@ -2869,35 +2642,30 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node88",
         "yaw": 103.33,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node86",
         "yaw": 284.11,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node316",
         "yaw": 192.3,
         "pitch": -20
       },
       {
-        "id": 4,
         "type": "move",
         "target": "node93",
         "yaw": 11.91,
         "pitch": -20
       },
       {
-        "id": 5,
         "type": "move",
         "target": "node333",
         "yaw": 31.16,
@@ -2921,14 +2689,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node89",
         "yaw": 107.59,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node87",
         "yaw": 287.21,
@@ -2945,14 +2711,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node90",
         "yaw": 118.06,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node88",
         "yaw": 298.71,
@@ -2969,21 +2733,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node91",
         "yaw": 101.64,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node89",
         "yaw": 282.03,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node260",
         "yaw": 160.47,
@@ -3000,21 +2761,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node92",
         "yaw": 102.8,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node90",
         "yaw": 282.67,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node280",
         "yaw": 340.99,
@@ -3038,14 +2796,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node64",
         "yaw": 105.77,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node91",
         "yaw": 286.16,
@@ -3069,21 +2825,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node94",
         "yaw": 1.67,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node87",
         "yaw": 180.38,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node333",
         "yaw": 98.27,
@@ -3100,14 +2853,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node95",
         "yaw": 3.1,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node93",
         "yaw": 182.06,
@@ -3124,14 +2875,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node96",
         "yaw": 3.88,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node94",
         "yaw": 182.2,
@@ -3148,21 +2897,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node97",
         "yaw": 7.37,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node95",
         "yaw": 186.08,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node339",
         "yaw": 249.31,
@@ -3200,21 +2946,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node98",
         "yaw": 11.38,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node96",
         "yaw": 190.61,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node340",
         "yaw": 273.11,
@@ -3226,6 +2969,14 @@
         "target": "physci",
         "yaw": 246.0,
         "pitch": 7.08
+      },
+
+      {
+        "type": "popup",
+        "class": "construction",
+        "target": "com",
+        "yaw": 24.57,
+        "pitch": 4.76
       }
     ]
   },
@@ -3238,14 +2989,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node99",
         "yaw": 6.86,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node97",
         "yaw": 186.86,
@@ -3257,6 +3006,13 @@
         "target": "con",
         "yaw": 284.73,
         "pitch": 18.4
+      },
+      {
+        "type": "popup",
+        "class": "construction",
+        "target": "com",
+        "yaw": 82.96,
+        "pitch": 0.64
       }
     ]
   },
@@ -3269,18 +3025,23 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node51",
         "yaw": 6.09,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node98",
         "yaw": 181.56,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "construction",
+        "target": "com",
+        "yaw": 131.13,
+        "pitch": 0.57
       }
     ]
   },
@@ -3293,14 +3054,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node101",
         "yaw": 110.08,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node64",
         "yaw": 289.69,
@@ -3317,21 +3076,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node102",
         "yaw": 101.42,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node100",
         "yaw": 281.52,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node290",
         "yaw": 204.38,
@@ -3343,6 +3099,13 @@
         "target": "cdc",
         "yaw": 51.0,
         "pitch": -0.93
+      },
+      {
+        "type": "popup",
+        "class": "info",
+        "target": "gate2",
+        "yaw": 92.17,
+        "pitch": 3.88
       }
     ]
   },
@@ -3355,14 +3118,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node355",
         "yaw": 104.94,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node101",
         "yaw": 287.27,
@@ -3374,6 +3135,13 @@
         "target": "canteen",
         "yaw": 106.4,
         "pitch": 4.08
+      },
+      {
+        "type": "popup",
+        "class": "info",
+        "target": "gate2",
+        "yaw": 334.94,
+        "pitch": 8.76
       }
     ]
   },
@@ -3386,14 +3154,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node1",
         "yaw": 151.81,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node104",
         "yaw": 334.67,
@@ -3410,28 +3176,24 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node103",
         "yaw": 148.05,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node105",
         "yaw": 15.69,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node109",
         "yaw": 284.57,
         "pitch": -20
       },
       {
-        "id": 4,
         "type": "move",
         "target": "node115",
         "yaw": 332.88,
@@ -3454,21 +3216,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node104",
         "yaw": 196.07,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node106",
         "yaw": 25.22,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node115",
         "yaw": 311.43,
@@ -3485,14 +3244,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node105",
         "yaw": 199.2,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node107",
         "yaw": 21.96,
@@ -3509,14 +3266,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node106",
         "yaw": 203.09,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node108",
         "yaw": 25.72,
@@ -3533,7 +3288,6 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node107",
         "yaw": 191.12,
@@ -3557,21 +3311,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node104",
         "yaw": 111.47,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node110",
         "yaw": 285.83,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node115",
         "yaw": 354.96,
@@ -3588,21 +3339,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node109",
         "yaw": 100.6,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node111",
         "yaw": 280.1,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node115",
         "yaw": 20.05,
@@ -3619,21 +3367,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node110",
         "yaw": 100.6,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node112",
         "yaw": 280.1,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node115",
         "yaw": 53.17,
@@ -3650,28 +3395,24 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node111",
         "yaw": 108.76,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node113",
         "yaw": 18.63,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node115",
         "yaw": 66.84,
         "pitch": -20
       },
       {
-        "id": 4,
         "type": "move",
         "target": "node127",
         "yaw": 237.43,
@@ -3688,21 +3429,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node112",
         "yaw": 196.74,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node114",
         "yaw": 17.12,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node115",
         "yaw": 80.39,
@@ -3719,14 +3457,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node113",
         "yaw": 193.61,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node115",
         "yaw": 103.43,
@@ -3743,35 +3479,30 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node114",
         "yaw": 280.0,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node289",
         "yaw": 12.81,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node105",
         "yaw": 122.52,
         "pitch": -20
       },
       {
-        "id": 4,
         "type": "move",
         "target": "node104",
         "yaw": 149.25,
         "pitch": -20
       },
       {
-        "id": 5,
         "type": "move",
         "target": "node112",
         "yaw": 238.94,
@@ -3788,21 +3519,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node289",
         "yaw": 221.63,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node117",
         "yaw": 12.06,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node126",
         "yaw": 255.37,
@@ -3819,21 +3547,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node116",
         "yaw": 192.81,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node118",
         "yaw": 17.12,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node123",
         "yaw": 283.47,
@@ -3857,21 +3582,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node117",
         "yaw": 192.81,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node119",
         "yaw": 39.78,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node120",
         "yaw": 339.81,
@@ -3888,14 +3610,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node118",
         "yaw": 210.12,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node253",
         "yaw": 102.62,
@@ -3912,21 +3632,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node118",
         "yaw": 131.21,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node121",
         "yaw": 268.78,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node123",
         "yaw": 199.81,
@@ -3943,14 +3660,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node120",
         "yaw": 48.05,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node122",
         "yaw": 192.55,
@@ -3967,21 +3682,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node121",
         "yaw": 13.68,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node123",
         "yaw": 104.74,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node124",
         "yaw": 192.55,
@@ -3998,28 +3710,24 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node122",
         "yaw": 285.62,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node117",
         "yaw": 107.74,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node126",
         "yaw": 199.56,
         "pitch": -20
       },
       {
-        "id": 4,
         "type": "move",
         "target": "node120",
         "yaw": 13.29,
@@ -4036,14 +3744,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node122",
         "yaw": 13.68,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node125",
         "yaw": 192.55,
@@ -4060,21 +3766,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node124",
         "yaw": 6.5,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node126",
         "yaw": 115.13,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node13",
         "yaw": 288.61,
@@ -4091,35 +3794,30 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node125",
         "yaw": 297.02,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node116",
         "yaw": 91.42,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node289",
         "yaw": 120.35,
         "pitch": -20
       },
       {
-        "id": 4,
         "type": "move",
         "target": "node123",
         "yaw": 20.31,
         "pitch": -20
       },
       {
-        "id": 5,
         "type": "move",
         "target": "node130",
         "yaw": 266.89,
@@ -4136,21 +3834,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node128",
         "yaw": 280.74,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node130",
         "yaw": 29.1,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node112",
         "yaw": 195.64,
@@ -4167,21 +3862,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node127",
         "yaw": 103.19,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node129",
         "yaw": 10.09,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node130",
         "yaw": 57.54,
@@ -4198,21 +3890,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node130",
         "yaw": 101.89,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node128",
         "yaw": 191.12,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node127",
         "yaw": 146.64,
@@ -4229,1088 +3918,27 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node128",
         "yaw": 223.57,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node127",
         "yaw": 179.86,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node129",
         "yaw": 285.9,
         "pitch": -20
       },
       {
-        "id": 4,
         "type": "move",
         "target": "node126",
         "yaw": 60.12,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node131",
-    "image": "/assets/Database Images/unrestricted nodes/131.webp",
-    "coords": {
-      "x": 0.647,
-      "y": 1.098
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node132",
-        "yaw": 283.3,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node27",
-        "yaw": 106.8,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node132",
-    "image": "/assets/Database Images/unrestricted nodes/132.webp",
-    "coords": {
-      "x": 0.681,
-      "y": 1.086
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node133",
-        "yaw": 292.81,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node131",
-        "yaw": 110.02,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node133",
-    "image": "/assets/Database Images/unrestricted nodes/133.webp",
-    "coords": {
-      "x": 0.716,
-      "y": 1.075
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node134",
-        "yaw": 290.89,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node132",
-        "yaw": 112.29,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node134",
-    "image": "/assets/Database Images/unrestricted nodes/134.webp",
-    "coords": {
-      "x": 0.743,
-      "y": 1.068
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node138",
-        "yaw": 288.1,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node133",
-        "yaw": 102.0,
-        "pitch": -20
-      },
-      {
-        "id": 3,
-        "type": "move",
-        "target": "node135",
-        "yaw": 14.26,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node135",
-    "image": "/assets/Database Images/unrestricted nodes/135.webp",
-    "coords": {
-      "x": 0.741,
-      "y": 1.049
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node136",
-        "yaw": 9.2,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node134",
-        "yaw": 187.28,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node136",
-    "image": "/assets/Database Images/unrestricted nodes/136.webp",
-    "coords": {
-      "x": 0.736,
-      "y": 1.034
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node137",
-        "yaw": 6.41,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node135",
-        "yaw": 193.04,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node137",
-    "image": "/assets/Database Images/unrestricted nodes/137.webp",
-    "coords": {
-      "x": 0.731,
-      "y": 1.024
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node136",
-        "yaw": 193.73,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node138",
-    "image": "/assets/Database Images/unrestricted nodes/138.webp",
-    "coords": {
-      "x": 0.773,
-      "y": 1.063
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node139",
-        "yaw": 280.76,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node134",
-        "yaw": 100.07,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node139",
-    "image": "/assets/Database Images/unrestricted nodes/139.webp",
-    "coords": {
-      "x": 0.795,
-      "y": 1.061
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node172",
-        "yaw": 284.95,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node138",
-        "yaw": 94.66,
-        "pitch": -20
-      },
-      {
-        "id": 3,
-        "type": "move",
-        "target": "node140",
-        "yaw": 197.74,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node140",
-    "image": "/assets/Database Images/unrestricted nodes/140.webp",
-    "coords": {
-      "x": 0.801,
-      "y": 1.082
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node141",
-        "yaw": 192.34,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node139",
-        "yaw": 7.97,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node141",
-    "image": "/assets/Database Images/unrestricted nodes/141.webp",
-    "coords": {
-      "x": 0.805,
-      "y": 1.1
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node142",
-        "yaw": 194.25,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node140",
-        "yaw": 7.97,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node142",
-    "image": "/assets/Database Images/unrestricted nodes/142.webp",
-    "coords": {
-      "x": 0.809,
-      "y": 1.112
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node143",
-        "yaw": 101.11,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node141",
-        "yaw": 7.97,
-        "pitch": -20
-      },
-      {
-        "id": 3,
-        "type": "move",
-        "target": "node159",
-        "yaw": 281.65,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node143",
-    "image": "/assets/Database Images/unrestricted nodes/143.webp",
-    "coords": {
-      "x": 0.784,
-      "y": 1.14
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node144",
-        "yaw": 218.14,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node142",
-        "yaw": 300.47,
-        "pitch": -20
-      },
-      {
-        "id": 3,
-        "type": "move",
-        "target": "node147",
-        "yaw": 107.21,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node144",
-    "image": "/assets/Database Images/unrestricted nodes/144.webp",
-    "coords": {
-      "x": 0.804,
-      "y": 1.182
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node145",
-        "yaw": 116.11,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node143",
-        "yaw": 21.4,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node145",
-    "image": "/assets/Database Images/unrestricted nodes/145.webp",
-    "coords": {
-      "x": 0.773,
-      "y": 1.198
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node146",
-        "yaw": 116.11,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node144",
-        "yaw": 298.9,
-        "pitch": -20
-      },
-      {
-        "id": 3,
-        "type": "move",
-        "target": "node150",
-        "yaw": 213.14,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node146",
-    "image": "/assets/Database Images/unrestricted nodes/146.webp",
-    "coords": {
-      "x": 0.753,
-      "y": 1.205
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node147",
-        "yaw": 25.06,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node145",
-        "yaw": 282.33,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node147",
-    "image": "/assets/Database Images/unrestricted nodes/147.webp",
-    "coords": {
-      "x": 0.733,
-      "y": 1.162
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node143",
-        "yaw": 297.85,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node146",
-        "yaw": 204.01,
-        "pitch": -20
-      },
-      {
-        "id": 3,
-        "type": "move",
-        "target": "node419",
-        "yaw": 124.67,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node148",
-    "image": "/assets/Database Images/unrestricted nodes/148.webp",
-    "coords": {
-      "x": 0.673,
-      "y": 1.133
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node149",
-        "yaw": 283.54,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node25",
-        "yaw": 104.07,
-        "pitch": -20
-      },
-      {
-        "type": "popup",
-        "class": "farm",
-        "target": "AnthuriumHouse",
-        "yaw": 251.14,
-        "pitch": -4.59
-      }
-    ]
-  },
-  {
-    "scene": "node149",
-    "image": "/assets/Database Images/unrestricted nodes/149.webp",
-    "coords": {
-      "x": 0.712,
-      "y": 1.117
-    },
-    "hotspot": [
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node148",
-        "yaw": 110.34,
-        "pitch": -20
-      },
-      {
-        "id": 3,
-        "type": "move",
-        "target": "node419",
-        "yaw": 170.69,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node150",
-    "image": "/assets/Database Images/unrestricted nodes/150.webp",
-    "coords": {
-      "x": 0.782,
-      "y": 1.216
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node151",
-        "yaw": 210.35,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node145",
-        "yaw": 30.35,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node151",
-    "image": "/assets/Database Images/unrestricted nodes/151.webp",
-    "coords": {
-      "x": 0.794,
-      "y": 1.238
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node152",
-        "yaw": 197.27,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node150",
-        "yaw": 21.11,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node152",
-    "image": "/assets/Database Images/unrestricted nodes/152.webp",
-    "coords": {
-      "x": 0.797,
-      "y": 1.245
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node153",
-        "yaw": 197.27,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node151",
-        "yaw": 21.11,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node153",
-    "image": "/assets/Database Images/unrestricted nodes/153.webp",
-    "coords": {
-      "x": 0.806,
-      "y": 1.261
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node154",
-        "yaw": 190.82,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node152",
-        "yaw": 15.18,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node154",
-    "image": "/assets/Database Images/unrestricted nodes/154.webp",
-    "coords": {
-      "x": 0.821,
-      "y": 1.29
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node155",
-        "yaw": 120.53,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node153",
-        "yaw": 21.11,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node155",
-    "image": "/assets/Database Images/unrestricted nodes/155.webp",
-    "coords": {
-      "x": 0.747,
-      "y": 1.33
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node156",
-        "yaw": 54.49,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node154",
-        "yaw": 283.67,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node156",
-    "image": "/assets/Database Images/unrestricted nodes/156.webp",
-    "coords": {
-      "x": 0.735,
-      "y": 1.308
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node157",
-        "yaw": 19.6,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node155",
-        "yaw": 219.83,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node157",
-    "image": "/assets/Database Images/unrestricted nodes/157.webp",
-    "coords": {
-      "x": 0.724,
-      "y": 1.285
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node158",
-        "yaw": 11.23,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node156",
-        "yaw": 188.61,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node158",
-    "image": "/assets/Database Images/unrestricted nodes/158.webp",
-    "coords": {
-      "x": 0.713,
-      "y": 1.263
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node344",
-        "yaw": 28.85,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node157",
-        "yaw": 213.91,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node159",
-    "image": "/assets/Database Images/unrestricted nodes/159.webp",
-    "coords": {
-      "x": 0.826,
-      "y": 1.119
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node160",
-        "yaw": 287.76,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node142",
-        "yaw": 105.72,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node160",
-    "image": "/assets/Database Images/unrestricted nodes/160.webp",
-    "coords": {
-      "x": 0.842,
-      "y": 1.113
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node161",
-        "yaw": 267.18,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node159",
-        "yaw": 88.08,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node161",
-    "image": "/assets/Database Images/unrestricted nodes/161.webp",
-    "coords": {
-      "x": 0.849,
-      "y": 1.111
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node162",
-        "yaw": 193.24,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node160",
-        "yaw": 75.87,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node162",
-    "image": "/assets/Database Images/unrestricted nodes/162.webp",
-    "coords": {
-      "x": 0.869,
-      "y": 1.159
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node163",
-        "yaw": 290.24,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node161",
-        "yaw": 21.6,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node163",
-    "image": "/assets/Database Images/unrestricted nodes/163.webp",
-    "coords": {
-      "x": 0.904,
-      "y": 1.144
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node164",
-        "yaw": 8.49,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node162",
-        "yaw": 106.17,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node164",
-    "image": "/assets/Database Images/unrestricted nodes/164.webp",
-    "coords": {
-      "x": 0.894,
-      "y": 1.115
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node165",
-        "yaw": 281.65,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node163",
-        "yaw": 185.09,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node165",
-    "image": "/assets/Database Images/unrestricted nodes/165.webp",
-    "coords": {
-      "x": 0.909,
-      "y": 1.109
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node166",
-        "yaw": 3.06,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node164",
-        "yaw": 98.48,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node166",
-    "image": "/assets/Database Images/unrestricted nodes/166.webp",
-    "coords": {
-      "x": 0.896,
-      "y": 1.073
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node167",
-        "yaw": 308.11,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node165",
-        "yaw": 185.77,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node167",
-    "image": "/assets/Database Images/unrestricted nodes/167.webp",
-    "coords": {
-      "x": 0.902,
-      "y": 1.071
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node168",
-        "yaw": 10.13,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node166",
-        "yaw": 138.11,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node168",
-    "image": "/assets/Database Images/unrestricted nodes/168.webp",
-    "coords": {
-      "x": 0.895,
-      "y": 1.044
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node169",
-        "yaw": 103.92,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node167",
-        "yaw": 193.47,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node169",
-    "image": "/assets/Database Images/unrestricted nodes/169.webp",
-    "coords": {
-      "x": 0.865,
-      "y": 1.051
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node170",
-        "yaw": 99.85,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node168",
-        "yaw": 283.47,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node170",
-    "image": "/assets/Database Images/unrestricted nodes/170.webp",
-    "coords": {
-      "x": 0.843,
-      "y": 1.055
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node171",
-        "yaw": 98.89,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node169",
-        "yaw": 280.81,
-        "pitch": -20
-      },
-      {
-        "id": 3,
-        "type": "move",
-        "target": "node173",
-        "yaw": 6.85,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node171",
-    "image": "/assets/Database Images/unrestricted nodes/171.webp",
-    "coords": {
-      "x": 0.837,
-      "y": 1.056
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node172",
-        "yaw": 93.38,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node170",
-        "yaw": 273.21,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node172",
-    "image": "/assets/Database Images/unrestricted nodes/172.webp",
-    "coords": {
-      "x": 0.827,
-      "y": 1.058
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node139",
-        "yaw": 97.7,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node171",
-        "yaw": 280.95,
         "pitch": -20
       }
     ]
@@ -5325,14 +3953,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node222",
         "yaw": 319.42,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node240",
         "yaw": 137.71,
@@ -5349,7 +3975,6 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node221",
         "yaw": 135.3,
@@ -5411,28 +4036,24 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node228",
         "yaw": 9.66,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node223",
         "yaw": 190.56,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node227",
         "yaw": 55.21,
         "pitch": -20
       },
       {
-        "id": 4,
         "type": "move",
         "target": "node229",
         "yaw": 330.29,
@@ -5449,28 +4070,24 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node230",
         "yaw": 104.1,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node226",
         "yaw": 224.4,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node228",
         "yaw": 344.7,
         "pitch": -20
       },
       {
-        "id": 4,
         "type": "move",
         "target": "node229",
         "yaw": 302.11,
@@ -5487,28 +4104,24 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node229",
         "yaw": 303.38,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node227",
         "yaw": 153.1,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node226",
         "yaw": 203.79,
         "pitch": -20
       },
       {
-        "id": 4,
         "type": "move",
         "target": "node235",
         "yaw": 23.92,
@@ -5525,28 +4138,24 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node240",
         "yaw": 347.14,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node226",
         "yaw": 167.27,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node227",
         "yaw": 130.73,
         "pitch": -20
       },
       {
-        "id": 4,
         "type": "move",
         "target": "node228",
         "yaw": 89.56,
@@ -5563,14 +4172,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node231",
         "yaw": 98.31,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node227",
         "yaw": 281.14,
@@ -5587,24 +4194,15 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node232",
         "yaw": 11.09,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node230",
         "yaw": 278.59,
-        "pitch": -20
-      },
-      {
-        "id": 3,
-        "type": "move",
-        "target": "",
-        "yaw": 186.58,
         "pitch": -20
       },
       {
@@ -5625,14 +4223,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node233",
         "yaw": 15.85,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node231",
         "yaw": 196.24,
@@ -5656,21 +4252,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node234",
         "yaw": 277.13,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node232",
         "yaw": 188.1,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node239",
         "yaw": 7.84,
@@ -5694,21 +4287,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node235",
         "yaw": 292.57,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node233",
         "yaw": 111.93,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node238",
         "yaw": 26.5,
@@ -5725,28 +4315,24 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node240",
         "yaw": 279.57,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node234",
         "yaw": 98.42,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node228",
         "yaw": 195.56,
         "pitch": -20
       },
       {
-        "id": 4,
         "type": "move",
         "target": "node236",
         "yaw": 7.44,
@@ -5763,21 +4349,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node237",
         "yaw": 3.32,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node235",
         "yaw": 172.26,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node238",
         "yaw": 92.62,
@@ -5801,14 +4384,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node242",
         "yaw": 279.57,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node236",
         "yaw": 195.03,
@@ -5825,21 +4406,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node236",
         "yaw": 283.81,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node234",
         "yaw": 196.96,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node239",
         "yaw": 112.82,
@@ -5863,14 +4441,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node233",
         "yaw": 195.81,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node238",
         "yaw": 289.09,
@@ -5894,28 +4470,24 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node241",
         "yaw": 3.32,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node235",
         "yaw": 119.73,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node229",
         "yaw": 174.28,
         "pitch": -20
       },
       {
-        "id": 4,
         "type": "move",
         "target": "node221",
         "yaw": 293.81,
@@ -5932,14 +4504,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node242",
         "yaw": 21.69,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node240",
         "yaw": 199.04,
@@ -5956,21 +4526,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node243",
         "yaw": 30.07,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node241",
         "yaw": 209.22,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node237",
         "yaw": 117.12,
@@ -5988,14 +4555,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node244",
         "yaw": 33.77,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node242",
         "yaw": 211.66,
@@ -6012,14 +4577,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node245",
         "yaw": 31.8,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node243",
         "yaw": 212.38,
@@ -6036,14 +4599,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node246",
         "yaw": 15.81,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node244",
         "yaw": 195.33,
@@ -6060,14 +4621,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node247",
         "yaw": 18.2,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node245",
         "yaw": 198.01,
@@ -6084,21 +4643,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node248",
         "yaw": 24.43,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node246",
         "yaw": 204.62,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "popup",
         "class": "construction",
         "target": "an_sci",
@@ -6116,21 +4672,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node250",
         "yaw": 28.16,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node247",
         "yaw": 208.36,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node249",
         "yaw": 103.36,
@@ -6154,7 +4707,6 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node248",
         "yaw": 292.08,
@@ -6185,14 +4737,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node370",
         "yaw": 18.89,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node248",
         "yaw": 200.27,
@@ -6211,19 +4761,17 @@
     "scene": "node251",
     "image": "/assets/Database Images/unrestricted nodes/251.webp",
     "coords": {
-      "x": 0.34,
-      "y": 0.886
+      "x": 0.336,
+      "y": 0.866
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node365",
         "yaw": 198.2,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node56",
         "yaw": 19.06,
@@ -6240,28 +4788,24 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node270",
         "yaw": 285.38,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node67",
         "yaw": 105.09,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node253",
         "yaw": 220.23,
         "pitch": -32.51
       },
       {
-        "id": 4,
         "type": "move",
         "target": "node256",
         "yaw": 19.54,
@@ -6278,21 +4822,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node254",
         "yaw": 201.08,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node252",
         "yaw": 55.66,
         "pitch": -32.51
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node119",
         "yaw": 294.26,
@@ -6309,14 +4850,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node255",
         "yaw": 194.18,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node253",
         "yaw": 15.23,
@@ -6333,7 +4872,6 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node254",
         "yaw": 15.23,
@@ -6350,21 +4888,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node257",
         "yaw": 12.07,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node252",
         "yaw": 199.54,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node66",
         "yaw": 100.01,
@@ -6381,21 +4916,18 @@
     },
     "hotspot": [
       {
-        "id": 2,
         "type": "move",
         "target": "node256",
         "yaw": 199.54,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node65",
         "yaw": 102.08,
         "pitch": -20
       },
       {
-        "id": 4,
         "type": "move",
         "target": "node258",
         "yaw": 258.07,
@@ -6407,6 +4939,13 @@
         "target": "admin",
         "yaw": 253.05,
         "pitch": 2.27
+      },
+      {
+        "type": "popup",
+        "class": "parking",
+        "target": "parkingAdmin",
+        "yaw": 313.00,
+        "pitch": -0.88
       }
     ]
   },
@@ -6414,19 +4953,17 @@
     "scene": "node258",
     "image": "/assets/Database Images/unrestricted nodes/258.webp",
     "coords": {
-      "x": 0.374,
-      "y": 1.012
+      "x": 0.359,
+      "y": 0.998
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node259",
         "yaw": 313.25,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node257",
         "yaw": 110.64,
@@ -6438,6 +4975,13 @@
         "target": "admin",
         "yaw": 246.77,
         "pitch": 0.28
+      },
+      {
+        "type": "popup",
+        "class": "parking",
+        "target": "parkingAdmin",
+        "yaw": 2.85,
+        "pitch": 0.54
       }
     ]
   },
@@ -6450,14 +4994,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node260",
         "yaw": 268.04,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node258",
         "yaw": 113.81,
@@ -6481,21 +5023,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node90",
         "yaw": 339.21,
         "pitch": -28.82
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node259",
         "yaw": 97.23,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node261",
         "yaw": 191.88,
@@ -6512,14 +5051,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node262",
         "yaw": 207.26,
         "pitch": -28.82
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node260",
         "yaw": 27.69,
@@ -6543,14 +5080,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node263",
         "yaw": 265.22,
         "pitch": -28.82
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node261",
         "yaw": 34.97,
@@ -6581,14 +5116,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node264",
         "yaw": 201.27,
         "pitch": -28.82
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node262",
         "yaw": 13.28,
@@ -6619,14 +5152,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node265",
         "yaw": 211.69,
         "pitch": -28.82
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node263",
         "yaw": 34.97,
@@ -6650,14 +5181,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node266",
         "yaw": 99.21,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node264",
         "yaw": 37.68,
@@ -6665,7 +5194,6 @@
       },
 
       {
-        "id": 3,
         "type": "move",
         "target": "node271",
         "yaw": 282.63,
@@ -6689,21 +5217,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node267",
         "yaw": 57.95,
         "pitch": -28.82
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node265",
         "yaw": 284.92,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node268",
         "yaw": 113.72,
@@ -6727,14 +5252,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node268",
         "yaw": 139.89,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node266",
         "yaw": 252.37,
@@ -6758,21 +5281,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node269",
         "yaw": 111.34,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node267",
         "yaw": 348.44,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node266",
         "yaw": 311.05,
@@ -6796,14 +5316,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node270",
         "yaw": 111.34,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node268",
         "yaw": 290.63,
@@ -6820,14 +5338,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node252",
         "yaw": 101.49,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node269",
         "yaw": 282.35,
@@ -6844,14 +5360,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node272",
         "yaw": 259.63,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node265",
         "yaw": 89.79,
@@ -6868,14 +5382,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node273",
         "yaw": 237.8,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node271",
         "yaw": 61.1,
@@ -6892,14 +5404,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node274",
         "yaw": 216.52,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node272",
         "yaw": 44.35,
@@ -6916,14 +5426,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node275",
         "yaw": 202.79,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node273",
         "yaw": 31.44,
@@ -6940,14 +5448,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node276",
         "yaw": 193.46,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node274",
         "yaw": 12.22,
@@ -6971,14 +5477,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node277",
         "yaw": 188.38,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node275",
         "yaw": 9.06,
@@ -7002,14 +5506,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node14",
         "yaw": 191.95,
         "pitch": -34.8
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node276",
         "yaw": 7.14,
@@ -7040,14 +5542,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node279",
         "yaw": 337.43,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node64",
         "yaw": 170.61,
@@ -7071,14 +5571,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node278",
         "yaw": 123.31,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node280",
         "yaw": 274.24,
@@ -7102,14 +5600,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node91",
         "yaw": 248.97,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node279",
         "yaw": 81.79,
@@ -7133,21 +5629,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node282",
         "yaw": 57.76,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node31",
         "yaw": 279.77,
         "pitch": -25.93
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node345",
         "yaw": 115.31,
@@ -7164,14 +5657,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node283",
         "yaw": 26.25,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node281",
         "yaw": 231.88,
@@ -7195,21 +5686,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node284",
         "yaw": 39.07,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node282",
         "yaw": 216.55,
         "pitch": -25.93
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node33",
         "yaw": 274.31,
@@ -7233,28 +5721,24 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node285",
         "yaw": 39.07,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node283",
         "yaw": 216.55,
         "pitch": -25.93
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node330",
         "yaw": 127.07,
         "pitch": -25.93
       },
       {
-        "id": 4,
         "type": "move",
         "target": "node34",
         "yaw": 307.28,
@@ -7292,14 +5776,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node286",
         "yaw": 30.24,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node284",
         "yaw": 216.55,
@@ -7330,14 +5812,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node287",
         "yaw": 52.09,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node285",
         "yaw": 216.55,
@@ -7361,21 +5841,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node81",
         "yaw": 5.46,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node288",
         "yaw": 112.79,
         "pitch": -25.93
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node286",
         "yaw": 240.7,
@@ -7392,14 +5869,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node85",
         "yaw": 88.64,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node287",
         "yaw": 304.97,
@@ -7416,21 +5891,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node115",
         "yaw": 205.41,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node116",
         "yaw": 63.43,
         "pitch": -25.93
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node126",
         "yaw": 292.79,
@@ -7447,14 +5919,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node291",
         "yaw": 205.41,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node101",
         "yaw": 21.0,
@@ -7471,28 +5941,24 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node292",
         "yaw": 199.74,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node101",
         "yaw": 21.0,
         "pitch": -25.93
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node301",
         "yaw": 280.61,
         "pitch": -25.93
       },
       {
-        "id": 4,
         "type": "move",
         "target": "node364",
         "yaw": 135.53,
@@ -7523,28 +5989,24 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node293",
         "yaw": 199.74,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node291",
         "yaw": 21.0,
         "pitch": -25.93
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node303",
         "yaw": 280.61,
         "pitch": -25.93
       },
       {
-        "id": 4,
         "type": "move",
         "target": "node363",
         "yaw": 85.0,
@@ -7575,14 +6037,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node294",
         "yaw": 205.41,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node292",
         "yaw": 21.0,
@@ -7606,21 +6066,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node295",
         "yaw": 205.41,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node293",
         "yaw": 21.0,
         "pitch": -25.93
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node300",
         "yaw": 244.98,
@@ -7644,28 +6101,24 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "",
         "yaw": 205.41,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node294",
         "yaw": 21.0,
         "pitch": -25.93
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node296",
         "yaw": 111.6,
         "pitch": -25.93
       },
       {
-        "id": 4,
         "type": "move",
         "target": "node300",
         "yaw": 290.78,
@@ -7689,21 +6142,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node297",
         "yaw": 184.12,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node295",
         "yaw": 256.4,
         "pitch": -25.93
       },
       {
-        "id": 3,
         "type": "move",
         "target": "",
         "yaw": 4.59,
@@ -7720,14 +6170,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "",
         "yaw": 192.6,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node296",
         "yaw": 14.6,
@@ -7744,14 +6192,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node299",
         "yaw": 192.6,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node300",
         "yaw": 3.65,
@@ -7768,7 +6214,6 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node298",
         "yaw": 3.65,
@@ -7785,21 +6230,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node68",
         "yaw": 297.02,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node295",
         "yaw": 115.02,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node298",
         "yaw": 229.91,
@@ -7816,14 +6258,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node302",
         "yaw": 241.1,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node291",
         "yaw": 85.23,
@@ -7847,14 +6287,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node303",
         "yaw": 180.82,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node301",
         "yaw": 26.96,
@@ -7878,14 +6316,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node292",
         "yaw": 120.9,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node302",
         "yaw": 334.45,
@@ -7909,7 +6345,6 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node305",
         "yaw": 5.73,
@@ -7926,21 +6361,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node306",
         "yaw": 16.38,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node58",
         "yaw": 334.45,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node304",
         "yaw": 173.65,
@@ -7957,21 +6389,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node305",
         "yaw": 198.23,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node58",
         "yaw": 277.88,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node307",
         "yaw": 23.92,
@@ -8002,21 +6431,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node306",
         "yaw": 180.0,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node308",
         "yaw": 93.99,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node310",
         "yaw": 2.46,
@@ -8054,14 +6480,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node309",
         "yaw": 104.44,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node307",
         "yaw": 279.52,
@@ -8092,7 +6516,6 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node308",
         "yaw": 286.07,
@@ -8123,21 +6546,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node307",
         "yaw": 199.45,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node311",
         "yaw": 107.92,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node313",
         "yaw": 19.86,
@@ -8161,14 +6581,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node310",
         "yaw": 286.28,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node312",
         "yaw": 18.02,
@@ -8192,14 +6610,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node311",
         "yaw": 199.45,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node313",
         "yaw": 288.33,
@@ -8223,21 +6639,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node310",
         "yaw": 187.78,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node312",
         "yaw": 95.02,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node314",
         "yaw": 275.02,
@@ -8261,14 +6674,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node313",
         "yaw": 92.15,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node315",
         "yaw": 183.07,
@@ -8292,14 +6703,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node57",
         "yaw": 191.26,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node314",
         "yaw": 10.85,
@@ -8323,21 +6732,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node317",
         "yaw": 209.9,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node87",
         "yaw": 25.8,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node319",
         "yaw": 116.52,
@@ -8375,28 +6781,24 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node318",
         "yaw": 107.92,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node316",
         "yaw": 19.25,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node324",
         "yaw": 215.02,
         "pitch": -20
       },
       {
-        "id": 4,
         "type": "move",
         "target": "node320",
         "yaw": 266.01,
@@ -8434,14 +6836,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node317",
         "yaw": 300.82,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node319",
         "yaw": 34.61,
@@ -8465,14 +6865,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node318",
         "yaw": 218.29,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node316",
         "yaw": 308.4,
@@ -8496,14 +6894,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node321",
         "yaw": 289.65,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node317",
         "yaw": 88.14,
@@ -8527,14 +6923,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node320",
         "yaw": 308.4,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node322",
         "yaw": 36.86,
@@ -8558,21 +6952,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node321",
         "yaw": 197.61,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node323",
         "yaw": 291.59,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node332",
         "yaw": 112.63,
@@ -8589,21 +6980,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node324",
         "yaw": 19.66,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node322",
         "yaw": 289.76,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node325",
         "yaw": 206.21,
@@ -8627,14 +7015,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node317",
         "yaw": 37.88,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node323",
         "yaw": 199.86,
@@ -8658,14 +7044,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node323",
         "yaw": 37.88,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node326",
         "yaw": 216.86,
@@ -8682,14 +7066,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node325",
         "yaw": 37.88,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node327",
         "yaw": 209.28,
@@ -8706,14 +7088,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node326",
         "yaw": 47.1,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node328",
         "yaw": 291.4,
@@ -8730,14 +7110,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node346",
         "yaw": 282.59,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node346",
         "yaw": 103.0,
@@ -8754,14 +7132,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node284",
         "yaw": 285.53,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node331",
         "yaw": 111.18,
@@ -8785,14 +7161,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node330",
         "yaw": 298.45,
         "pitch": -22
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node332",
         "yaw": 115.57,
@@ -8809,14 +7183,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node331",
         "yaw": 290.21,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node322",
         "yaw": 111.59,
@@ -8833,21 +7205,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node334",
         "yaw": 15.94,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node87",
         "yaw": 223.79,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node338",
         "yaw": 107.14,
@@ -8878,21 +7247,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node335",
         "yaw": 9.64,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node333",
         "yaw": 187.77,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node96",
         "yaw": 280.58,
@@ -8916,14 +7282,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node336",
         "yaw": 109.28,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node334",
         "yaw": 199.55,
@@ -8947,14 +7311,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node337",
         "yaw": 213.48,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node335",
         "yaw": 301.61,
@@ -8971,14 +7333,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node338",
         "yaw": 205.58,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node336",
         "yaw": 26.38,
@@ -9002,14 +7362,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node337",
         "yaw": 26.38,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node333",
         "yaw": 289.29,
@@ -9040,14 +7398,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node96",
         "yaw": 148.53,
         "pitch": -30
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node340",
         "yaw": 17.41,
@@ -9064,14 +7420,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node339",
         "yaw": 217.23,
         "pitch": -30
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node97",
         "yaw": 75.27,
@@ -9088,14 +7442,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node7",
         "yaw": 348.88,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node342",
         "yaw": 100.18,
@@ -9119,21 +7471,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node343",
         "yaw": 110.62,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node341",
         "yaw": 263.57,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node5",
         "yaw": 8.97,
@@ -9157,14 +7506,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node342",
         "yaw": 271.21,
         "pitch": -30
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node3",
         "yaw": 39.11,
@@ -9179,44 +7526,7 @@
       }
     ]
   },
-  {
-    "scene": "node344",
-    "image": "/assets/Database Images/unrestricted nodes/344.webp",
-    "coords": {
-      "x": 0.704,
-      "y": 1.244
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node24",
-        "yaw": 22.23,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node158",
-        "yaw": 200.97,
-        "pitch": -20
-      },
-      {
-        "type": "popup",
-        "class": "construction",
-        "target": "ncrdecMain",
-        "yaw": 230.23,
-        "pitch": 17.61
-      },
-      {
-        "type": "info",
-        "class": "attractions",
-        "target": "torigate",
-        "yaw": 21.46,
-        "pitch": 28.33
-      }
-    ]
-  },
+
   {
     "scene": "node345",
     "image": "/assets/Database Images/unrestricted nodes/345.webp",
@@ -9226,21 +7536,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node281",
         "yaw": 301.26,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node346",
         "yaw": 121.4,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node347",
         "yaw": 86.87,
@@ -9257,21 +7564,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node345",
         "yaw": 288.97,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node328",
         "yaw": 105.7,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node347",
         "yaw": 20.02,
@@ -9288,14 +7592,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node345",
         "yaw": 221.08,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node348",
         "yaw": 31.79,
@@ -9312,7 +7614,6 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node347",
         "yaw": 216.63,
@@ -9336,21 +7637,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node8",
         "yaw": 51.93,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node10",
         "yaw": 325.96,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node350",
         "yaw": 193.04,
@@ -9374,21 +7672,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node349",
         "yaw": 5.46,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node352",
         "yaw": 95.03,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node351",
         "yaw": 273.17,
@@ -9419,7 +7714,6 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node350",
         "yaw": 86.33,
@@ -9450,21 +7744,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node350",
         "yaw": 262.23,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node353",
         "yaw": 169.31,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node384",
         "yaw": 80.25,
@@ -9489,14 +7780,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node352",
         "yaw": 316.02,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node354",
         "yaw": 278.63,
@@ -9520,7 +7809,6 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node353",
         "yaw": 106.58,
@@ -9551,14 +7839,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node102",
         "yaw": 281.24,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node356",
         "yaw": 195.78,
@@ -9582,21 +7868,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node355",
         "yaw": 7.06,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node357",
         "yaw": 185.93,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node358",
         "yaw": 142.63,
@@ -9613,21 +7896,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node356",
         "yaw": 359.53,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node359",
         "yaw": 179.25,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node358",
         "yaw": 89.81,
@@ -9644,21 +7924,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node357",
         "yaw": 285.25,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node356",
         "yaw": 335.62,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node359",
         "yaw": 225.08,
@@ -9682,21 +7959,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node357",
         "yaw": 324.73,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node360",
         "yaw": 173.77,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node358",
         "yaw": 7.23,
@@ -9713,14 +7987,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node359",
         "yaw": 18.43,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node361",
         "yaw": 202.67,
@@ -9737,14 +8009,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node360",
         "yaw": 8.45,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node362",
         "yaw": 190.8,
@@ -9768,14 +8038,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node361",
         "yaw": 65.68,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node420",
         "yaw": 335.93,
@@ -9792,7 +8060,6 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node292",
         "yaw": 280.5,
@@ -9816,7 +8083,6 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node291",
         "yaw": 293.67,
@@ -9828,19 +8094,17 @@
     "scene": "node365",
     "image": "/assets/Database Images/unrestricted nodes/365.webp",
     "coords": {
-      "x": 0.346,
-      "y": 0.91
+      "x": 0.343,
+      "y": 0.896
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node251",
         "yaw": 18.83,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node366",
         "yaw": 199.57,
@@ -9852,19 +8116,17 @@
     "scene": "node366",
     "image": "/assets/Database Images/unrestricted nodes/366.webp",
     "coords": {
-      "x": 0.347,
-      "y": 0.916
+      "x": 0.346,
+      "y": 0.912
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node365",
         "yaw": 25.07,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node368",
         "yaw": 206.95,
@@ -9881,7 +8143,6 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node368",
         "yaw": 97.3,
@@ -9905,21 +8166,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node367",
         "yaw": 280.17,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node366",
         "yaw": 10.48,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node369",
         "yaw": 101.79,
@@ -9943,14 +8201,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node368",
         "yaw": 278.8,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node60",
         "yaw": 49.77,
@@ -9974,14 +8230,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node371",
         "yaw": 25.33,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node250",
         "yaw": 205.08,
@@ -9998,14 +8252,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node370",
         "yaw": 192.73,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node372",
         "yaw": 14.1,
@@ -10022,14 +8274,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node371",
         "yaw": 198.59,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node373",
         "yaw": 19.46,
@@ -10046,14 +8296,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node372",
         "yaw": 195.1,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node374",
         "yaw": 16.22,
@@ -10070,14 +8318,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node375",
         "yaw": 14.35,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node373",
         "yaw": 193.35,
@@ -10094,14 +8340,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node374",
         "yaw": 201.21,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node376",
         "yaw": 24.45,
@@ -10118,14 +8362,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node375",
         "yaw": 204.33,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node377",
         "yaw": 23.83,
@@ -10142,14 +8384,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node376",
         "yaw": 206.2,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node378",
         "yaw": 25.7,
@@ -10166,14 +8406,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node377",
         "yaw": 209.07,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node379",
         "yaw": 21.96,
@@ -10190,14 +8428,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node378",
         "yaw": 201.21,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node380",
         "yaw": 22.08,
@@ -10214,14 +8450,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node379",
         "yaw": 197.22,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node381",
         "yaw": 342.29,
@@ -10238,14 +8472,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node380",
         "yaw": 159.17,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node382",
         "yaw": 0.75,
@@ -10262,14 +8494,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node381",
         "yaw": 190.73,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node383",
         "yaw": 32.55,
@@ -10286,7 +8516,6 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node382",
         "yaw": 214.55,
@@ -10303,14 +8532,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node352",
         "yaw": 285.51,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node385",
         "yaw": 96.45,
@@ -10327,14 +8554,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node384",
         "yaw": 286.13,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node386",
         "yaw": 112.08,
@@ -10351,21 +8576,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node385",
         "yaw": 278.41,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node387",
         "yaw": 196.3,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node403",
         "yaw": 36.95,
@@ -10382,14 +8604,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node386",
         "yaw": 25.07,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node388",
         "yaw": 206.95,
@@ -10406,14 +8626,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node387",
         "yaw": 21.01,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node389",
         "yaw": 122.2,
@@ -10430,14 +8648,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node388",
         "yaw": 318.12,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node390",
         "yaw": 173.25,
@@ -10454,21 +8670,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node389",
         "yaw": 274.71,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node391",
         "yaw": 97.26,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node399",
         "yaw": 15.03,
@@ -10485,14 +8698,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node390",
         "yaw": 260.48,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node392",
         "yaw": 49.47,
@@ -10509,21 +8720,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node391",
         "yaw": 245.26,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node393",
         "yaw": 65.82,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node396",
         "yaw": 335.85,
@@ -10540,14 +8748,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node392",
         "yaw": 235.28,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node394",
         "yaw": 9.42,
@@ -10564,21 +8770,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node393",
         "yaw": 197.85,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node395",
         "yaw": 241.77,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node400",
         "yaw": 291.68,
@@ -10595,14 +8798,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node394",
         "yaw": 69.82,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node396",
         "yaw": 206.95,
@@ -10619,21 +8820,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node395",
         "yaw": 0.35,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node397",
         "yaw": 266.0,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node392",
         "yaw": 135.0,
@@ -10650,21 +8848,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node396",
         "yaw": 108.53,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node398",
         "yaw": 18.57,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node399",
         "yaw": 238.94,
@@ -10681,21 +8876,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node395",
         "yaw": 111.16,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node397",
         "yaw": 210.73,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node400",
         "yaw": 11.99,
@@ -10712,14 +8904,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node390",
         "yaw": 189.28,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node397",
         "yaw": 51.15,
@@ -10736,21 +8926,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node398",
         "yaw": 189.56,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node394",
         "yaw": 104.21,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node401",
         "yaw": 285.9,
@@ -10767,21 +8954,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node400",
         "yaw": 109.59,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node405",
         "yaw": 9.26,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node402",
         "yaw": 263.32,
@@ -10798,21 +8982,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node401",
         "yaw": 110.34,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node403",
         "yaw": 341.97,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node386",
         "yaw": 226.76,
@@ -10829,14 +9010,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node402",
         "yaw": 159.02,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node2",
         "yaw": 346.85,
@@ -10853,21 +9032,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node1",
         "yaw": 287.59,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node406",
         "yaw": 109.14,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node401",
         "yaw": 203.86,
@@ -10891,21 +9067,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node406",
         "yaw": 184.33,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node408",
         "yaw": 98.22,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node410",
         "yaw": 11.26,
@@ -10922,14 +9095,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node407",
         "yaw": 285.28,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node409",
         "yaw": 15.74,
@@ -10946,7 +9117,6 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node408",
         "yaw": 201.92,
@@ -10963,21 +9133,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node407",
         "yaw": 189.61,
         "pitch": -17.29
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node411",
         "yaw": 13.76,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node414",
         "yaw": 110.46,
@@ -10994,21 +9161,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node417",
         "yaw": 25.07,
         "pitch": -25
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node412",
         "yaw": 106.7,
         "pitch": -19
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node410",
         "yaw": 187.93,
@@ -11025,21 +9189,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node413",
         "yaw": 79.89,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node414",
         "yaw": 138.91,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node411",
         "yaw": 273.2,
@@ -11056,14 +9217,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node412",
         "yaw": 254.84,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node414",
         "yaw": 192.33,
@@ -11080,25 +9239,29 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node413",
         "yaw": 35.48,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node410",
         "yaw": 299.65,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node415",
         "yaw": 213.05,
         "pitch": -20
+      },
+      {
+        "type": "popup",
+        "class": "construction",
+        "target": "universityHospital",
+        "yaw": 129.39,
+        "pitch": 1.91
       }
     ]
   },
@@ -11111,14 +9274,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node414",
         "yaw": 34.86,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node410",
         "yaw": 339.72,
@@ -11135,21 +9296,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node1",
         "yaw": 238.04,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node77",
         "yaw": 286.17,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "move",
         "target": "node76",
         "yaw": 335.21,
@@ -11166,21 +9324,18 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node420",
         "yaw": 13.67,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node411",
         "yaw": 193.12,
         "pitch": -20
       },
       {
-        "id": 3,
         "type": "bldg",
         "class": "bldg",
         "target": "infirmary",
@@ -11189,61 +9344,7 @@
       }
     ]
   },
-  {
-    "scene": "node418",
-    "image": "/assets/Database Images/unrestricted nodes/418.webp",
-    "coords": {
-      "x": 0.701,
-      "y": 1.176
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node419",
-        "yaw": 283.31,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node24",
-        "yaw": 103.31,
-        "pitch": -20
-      }
-    ]
-  },
-  {
-    "scene": "node419",
-    "image": "/assets/Database Images/unrestricted nodes/419.webp",
-    "coords": {
-      "x": 0.732,
-      "y": 1.162
-    },
-    "hotspot": [
-      {
-        "id": 1,
-        "type": "move",
-        "target": "node147",
-        "yaw": 332.46,
-        "pitch": -20
-      },
-      {
-        "id": 2,
-        "type": "move",
-        "target": "node418",
-        "yaw": 149.11,
-        "pitch": -20
-      },
-      {
-        "id": 3,
-        "type": "move",
-        "target": "node149",
-        "yaw": 69.99,
-        "pitch": -20
-      }
-    ]
-  },
+
   {
     "scene": "node420",
     "image": "/assets/Database Images/unrestricted nodes/420.webp",
@@ -11253,14 +9354,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node362",
         "yaw": 45.57,
         "pitch": -40
       },
       {
-        "id": 2,
         "type": "move",
         "target": "node417",
         "yaw": 177.84,
@@ -11277,14 +9376,12 @@
     },
     "hotspot": [
       {
-        "id": 1,
         "type": "move",
         "target": "node45",
         "yaw": 89.94,
         "pitch": -20
       },
       {
-        "id": 2,
         "type": "bldg",
         "class": "attractions",
         "target": "agri_eco",

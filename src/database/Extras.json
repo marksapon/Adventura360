@@ -690,5 +690,29 @@
       "type": "school_facilities"
     },
     "image": "/assets/Building Module/Background/agri_eco_info.webp"
+  },
+
+  {
+    "scene": "gate2",
+    "back": ["node102"],
+    "location": "Gate 2",
+    "desc": "This is the university's Gate 2",
+    "coords": {
+      "x": 0.277,
+      "y": 1.007,
+      "type": "school_facilities"
+    }
+  },
+
+  {
+    "scene": "com",
+    "location": "College of Medicine",
+    "desc": "This is the College of Medicine. Currently under construction",
+    "image": "/assets/Building Module/Background/com.webp",
+    "coords": {
+      "x": 0.419,
+      "y": 0.856,
+      "type": "construction"
+    }
   }
 ]

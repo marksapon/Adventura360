@@ -43,6 +43,7 @@
   {
     "scene": "ih2",
     "location": "International House 2",
+    "back": ["node343", "node342", "node341"],
     "image": "/assets/Database Images/unrestricted nodes/342.webp",
     "coords": {
       "x": 0.471,
@@ -504,7 +505,7 @@
     "scene": "cropsci",
     "location": "Crop Science Building",
     "image": "/assets/Database Images/unrestricted nodes/348.webp",
-    "back": [""],
+    "back": ["node348"],
     "coords": {
       "x": 0.539,
       "y": 1.005,
@@ -889,8 +890,6 @@
     ]
   },
 
-
-
   {
     "scene": "torigate",
     "location": "Tori Gate",
@@ -900,6 +899,7 @@
       "type": "attractions"
     }
   },
+
   {
     "scene": "layatDiwa",
     "location": "Laya at Diwa",
@@ -908,5 +908,26 @@
       "y": 1.326,
       "type": "attractions"
     }
+  },
+
+  {
+    "scene": "tech_demo",
+    "back": ["node27"],
+    "location": "Technology Demonstration Farm",
+    "coords": {
+      "x": 0.711,
+      "y": 1.201,
+      "type": "attractions"
+    },
+    "image": "/assets/Database Images/unrestricted nodes/27.webp",
+    "hotspot": [
+      {
+        "type": "info",
+        "class": "info",
+        "target": "tech_demo",
+        "yaw": 267.66,
+        "pitch": -1.85
+      }
+    ]
   }
 ]

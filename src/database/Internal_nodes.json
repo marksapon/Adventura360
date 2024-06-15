@@ -10431,6 +10431,7 @@
           }
         ]
       },
+
       {
         "scene": "rh2",
         "image": "/assets/Building Module/Internal Nodes/rolle/2.webp",
@@ -10460,6 +10461,1107 @@
             "pitch": -20
           }
         ]
+      }
+    ]
+  },
+
+  {
+    "tech_demo": [
+      {
+        "scene": "tech_demo31",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/131.webp",
+        "coords": {
+          "x": 0.647,
+          "y": 1.098
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo32",
+            "yaw": 283.3,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "node27",
+            "yaw": 106.8,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo32",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/132.webp",
+        "coords": {
+          "x": 0.681,
+          "y": 1.086
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo33",
+            "yaw": 292.81,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo31",
+            "yaw": 110.02,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo33",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/133.webp",
+        "coords": {
+          "x": 0.716,
+          "y": 1.075
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo34",
+            "yaw": 290.89,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo32",
+            "yaw": 112.29,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo34",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/134.webp",
+        "coords": {
+          "x": 0.743,
+          "y": 1.068
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo38",
+            "yaw": 288.1,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo33",
+            "yaw": 102.0,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo35",
+            "yaw": 14.26,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo35",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/135.webp",
+        "coords": {
+          "x": 0.741,
+          "y": 1.049
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo36",
+            "yaw": 9.2,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo34",
+            "yaw": 187.28,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo36",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/136.webp",
+        "coords": {
+          "x": 0.736,
+          "y": 1.034
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo37",
+            "yaw": 6.41,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo35",
+            "yaw": 193.04,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo37",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/137.webp",
+        "coords": {
+          "x": 0.731,
+          "y": 1.024
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo36",
+            "yaw": 193.73,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo38",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/138.webp",
+        "coords": {
+          "x": 0.773,
+          "y": 1.063
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo39",
+            "yaw": 280.76,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo34",
+            "yaw": 100.07,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo39",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/139.webp",
+        "coords": {
+          "x": 0.795,
+          "y": 1.061
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo72",
+            "yaw": 284.95,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo38",
+            "yaw": 94.66,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo40",
+            "yaw": 197.74,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo40",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/140.webp",
+        "coords": {
+          "x": 0.801,
+          "y": 1.082
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo41",
+            "yaw": 192.34,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo39",
+            "yaw": 7.97,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo41",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/141.webp",
+        "coords": {
+          "x": 0.805,
+          "y": 1.1
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo42",
+            "yaw": 194.25,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo40",
+            "yaw": 7.97,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo42",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/142.webp",
+        "coords": {
+          "x": 0.809,
+          "y": 1.112
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo43",
+            "yaw": 101.11,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo41",
+            "yaw": 7.97,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo59",
+            "yaw": 281.65,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo43",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/143.webp",
+        "coords": {
+          "x": 0.784,
+          "y": 1.14
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo44",
+            "yaw": 218.14,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo42",
+            "yaw": 300.47,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo47",
+            "yaw": 107.21,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo44",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/144.webp",
+        "coords": {
+          "x": 0.804,
+          "y": 1.182
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo45",
+            "yaw": 116.11,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo43",
+            "yaw": 21.4,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo45",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/145.webp",
+        "coords": {
+          "x": 0.773,
+          "y": 1.198
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo46",
+            "yaw": 116.11,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo44",
+            "yaw": 298.9,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo50",
+            "yaw": 213.14,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo46",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/146.webp",
+        "coords": {
+          "x": 0.753,
+          "y": 1.205
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo47",
+            "yaw": 25.06,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo45",
+            "yaw": 282.33,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo47",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/147.webp",
+        "coords": {
+          "x": 0.733,
+          "y": 1.162
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo43",
+            "yaw": 297.85,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo46",
+            "yaw": 204.01,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo19",
+            "yaw": 124.67,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo48",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/148.webp",
+        "coords": {
+          "x": 0.673,
+          "y": 1.133
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo49",
+            "yaw": 283.54,
+            "pitch": -20
+          },
+
+          {
+            "type": "popup",
+            "class": "farm",
+            "target": "AnthuriumHouse",
+            "yaw": 251.14,
+            "pitch": -4.59
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo49",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/149.webp",
+        "coords": {
+          "x": 0.712,
+          "y": 1.117
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo48",
+            "yaw": 110.34,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo19",
+            "yaw": 170.69,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "farm",
+            "target": "nethouse",
+            "yaw": 343.75,
+            "pitch": -14.15
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo50",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/150.webp",
+        "coords": {
+          "x": 0.782,
+          "y": 1.216
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo51",
+            "yaw": 210.35,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo45",
+            "yaw": 30.35,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo51",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/151.webp",
+        "coords": {
+          "x": 0.794,
+          "y": 1.238
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo52",
+            "yaw": 197.27,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo50",
+            "yaw": 21.11,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo52",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/152.webp",
+        "coords": {
+          "x": 0.797,
+          "y": 1.245
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo53",
+            "yaw": 197.27,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo51",
+            "yaw": 21.11,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo53",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/153.webp",
+        "coords": {
+          "x": 0.806,
+          "y": 1.261
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo54",
+            "yaw": 190.82,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo52",
+            "yaw": 15.18,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo54",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/154.webp",
+        "coords": {
+          "x": 0.821,
+          "y": 1.29
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo55",
+            "yaw": 120.53,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo53",
+            "yaw": 21.11,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo55",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/155.webp",
+        "coords": {
+          "x": 0.747,
+          "y": 1.33
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo56",
+            "yaw": 54.49,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo54",
+            "yaw": 283.67,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo56",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/156.webp",
+        "coords": {
+          "x": 0.735,
+          "y": 1.308
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo57",
+            "yaw": 19.6,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo55",
+            "yaw": 219.83,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo57",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/157.webp",
+        "coords": {
+          "x": 0.724,
+          "y": 1.285
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo58",
+            "yaw": 11.23,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo56",
+            "yaw": 188.61,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo58",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/158.webp",
+        "coords": {
+          "x": 0.713,
+          "y": 1.263
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "node344",
+            "yaw": 28.85,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo57",
+            "yaw": 213.91,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo59",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/159.webp",
+        "coords": {
+          "x": 0.826,
+          "y": 1.119
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo60",
+            "yaw": 287.76,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo42",
+            "yaw": 105.72,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo60",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/160.webp",
+        "coords": {
+          "x": 0.842,
+          "y": 1.113
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo61",
+            "yaw": 267.18,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo59",
+            "yaw": 88.08,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo61",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/161.webp",
+        "coords": {
+          "x": 0.849,
+          "y": 1.111
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo62",
+            "yaw": 193.24,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo60",
+            "yaw": 75.87,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo62",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/162.webp",
+        "coords": {
+          "x": 0.869,
+          "y": 1.159
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo63",
+            "yaw": 290.24,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo61",
+            "yaw": 21.6,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo63",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/163.webp",
+        "coords": {
+          "x": 0.904,
+          "y": 1.144
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo64",
+            "yaw": 8.49,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo62",
+            "yaw": 106.17,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo64",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/164.webp",
+        "coords": {
+          "x": 0.894,
+          "y": 1.115
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo65",
+            "yaw": 281.65,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo63",
+            "yaw": 185.09,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo65",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/165.webp",
+        "coords": {
+          "x": 0.909,
+          "y": 1.109
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo66",
+            "yaw": 3.06,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo64",
+            "yaw": 98.48,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo66",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/166.webp",
+        "coords": {
+          "x": 0.896,
+          "y": 1.073
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo67",
+            "yaw": 308.11,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo65",
+            "yaw": 185.77,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo67",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/167.webp",
+        "coords": {
+          "x": 0.902,
+          "y": 1.071
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo68",
+            "yaw": 10.13,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo66",
+            "yaw": 138.11,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo68",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/168.webp",
+        "coords": {
+          "x": 0.895,
+          "y": 1.044
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo69",
+            "yaw": 103.92,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo67",
+            "yaw": 193.47,
+            "pitch": -20
+          },
+
+          {
+            "type": "popup",
+            "class": "venue",
+            "target": "sakaHall",
+            "yaw": 287.28,
+            "pitch": 1.99
+          },
+
+          {
+            "type": "popup",
+            "class": "venue",
+            "target": "sakaCottage",
+            "yaw": 46.36,
+            "pitch": 1.14
+          }
+        ]
+      },
+
+      {
+        "scene": "tech_demo69",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/169.webp",
+        "coords": {
+          "x": 0.865,
+          "y": 1.051
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo70",
+            "yaw": 99.85,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo68",
+            "yaw": 283.47,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo70",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/170.webp",
+        "coords": {
+          "x": 0.843,
+          "y": 1.055
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo71",
+            "yaw": 98.89,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo69",
+            "yaw": 280.81,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo71",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/171.webp",
+        "coords": {
+          "x": 0.837,
+          "y": 1.056
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo72",
+            "yaw": 93.38,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo70",
+            "yaw": 273.21,
+            "pitch": -20
+          }
+        ]
+      },
+      {
+        "scene": "tech_demo72",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/172.webp",
+        "coords": {
+          "x": 0.827,
+          "y": 1.058
+        },
+        "hotspot": [
+          {
+            "type": "move",
+            "target": "tech_demo39",
+            "yaw": 97.7,
+            "pitch": -20
+          },
+          {
+            "type": "move",
+            "target": "tech_demo71",
+            "yaw": 280.95,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "node344",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/344.webp",
+        "coords": {
+          "x": 0.704,
+          "y": 1.244
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "node24",
+            "yaw": 22.23,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "tech_demo58",
+            "yaw": 200.97,
+            "pitch": -20
+          },
+          {
+            "type": "popup",
+            "class": "construction",
+            "target": "ncrdecMain",
+            "yaw": 230.23,
+            "pitch": 17.61
+          },
+          {
+            "type": "info",
+            "class": "attractions",
+            "target": "torigate",
+            "yaw": 21.46,
+            "pitch": 28.33
+          }
+        ]
+      },
+
+      {
+        "scene": "tech_demo18",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/418.webp",
+        "coords": {
+          "x": 0.701,
+          "y": 1.176
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "tech_demo19",
+            "yaw": 283.31,
+            "pitch": -20
+          }
+        ]
+      },
+
+      {
+        "scene": "tech_demo19",
+        "image": "/assets/Building Module/Internal Nodes/tech_demo/419.webp",
+        "coords": {
+          "x": 0.732,
+          "y": 1.162
+        },
+        "hotspot": [
+          {
+            "id": 1,
+            "type": "move",
+            "target": "tech_demo47",
+            "yaw": 332.46,
+            "pitch": -20
+          },
+          {
+            "id": 2,
+            "type": "move",
+            "target": "tech_demo18",
+            "yaw": 149.11,
+            "pitch": -20
+          },
+          {
+            "id": 3,
+            "type": "move",
+            "target": "tech_demo49",
+            "yaw": 69.99,
+            "pitch": -20
+          }
+        ]
+      }
+    ],
+
+    "tech_demo_extras": [
+      {
+        "scene": "sakaHall",
+        "location": "Sanayan sa Kakayahang Agrikultura (SAKA) Conference Hall",
+        "desc": "This is the SAKA Conference Hall, commonly used for seminars, conferences, and other events related to NCRDEC."
+      },
+
+      {
+        "scene": "sakaCottage",
+        "location": "SAKA Cottages",
+        "desc": "This is the SAKA Cottages, a place where you can relax and enjoy deep inside the Technology Demonstration Farm."
+      },
+
+      {
+        "scene": "AnthuriumHouse",
+        "location": "Anthurium House",
+        "desc": "This is the Anthurium House",
+        "image": "/assets/Building Module/Extras/anthurium house (1).webp"
+      },
+
+      {
+        "scene": "nethouse",
+        "location": "Net House (NCRDEC Farm)",
+        "desc": "This is the Net House, a structure used for growing plants in a controlled environment."
       }
     ]
   }

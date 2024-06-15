@@ -26,9 +26,7 @@
       "BS Information Technology": null
     },
 
-    "more_info": "https://cvsu.edu.ph/?s=ceit&swpmfe=652ea0d21b1427a1bfa685e40d9bc1de",
-
-    "gallery": []
+    "more_info": "https://cvsu.edu.ph/?s=ceit&swpmfe=652ea0d21b1427a1bfa685e40d9bc1de"
   },
   {
     "scene": "osa",
@@ -112,11 +110,16 @@
       "Bachelor in Sports and Recreational Management": null
     },
 
-    "contacts": {},
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "Add Email Address",
+      "additional": {
+        "CSPEAR Student Council": "https://www.facebook.com/CspearSC"
+      }
+    },
 
-    "more_info": "https://cvsu.edu.ph/2018/01/college-of-sports-and-physical-education-and-recreation/",
-
-    "gallery": []
+    "more_info": "https://cvsu.edu.ph/2018/01/college-of-sports-and-physical-education-and-recreation/"
   },
   {
     "scene": "bahayalumni",
@@ -128,9 +131,14 @@
     "image": "/assets/Building Module/Background/bahay ng alumni.webp",
     "desc": "Welcome to Bahay ng Alumni—a cozy retreat found near the Gymnasium of the University. Our inviting rooms offer a blend of comfort and nostalgia, providing guests with a home-away-from-home experience. Whether you're here for a trip down memory lane or attending an event, we promise a memorable stay filled with warmth and hospitality.",
 
-    "contacts": {},
-
-    "gallery": []
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "Add Email Address",
+      "additional": {
+        "Add your website here": null
+      }
+    }
   },
   {
     "scene": "ncrdec",
@@ -194,9 +202,16 @@
         "• Master in Business Administration<br> • Master in Management<br> • Master in Public Administration"
       ]
     },
-    "contacts": {},
-    "more_info": "https://cvsu.edu.ph/cemds/",
-    "gallery": []
+
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "Add Email Address",
+      "additional": {
+        "CEMDS Student Council": "https://www.facebook.com/CEMDSKnights"
+      }
+    },
+    "more_info": "https://cvsu.edu.ph/cemds/"
   },
   {
     "scene": "oldcemds",
@@ -229,9 +244,15 @@
         "• Master in Business Administration<br> • Master in Management<br> • Master in Public Administration"
       ]
     },
-    "contacts": {},
-    "more_info": "https://cvsu.edu.ph/cemds/",
-    "gallery": []
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "Add Email Address",
+      "additional": {
+        "Add your website here": null
+      }
+    },
+    "more_info": "https://cvsu.edu.ph/cemds/"
   },
   {
     "scene": "cafenr",
@@ -291,16 +312,7 @@
       }
     },
 
-    "more_info": "https://cvsu.edu.ph/2018/01/college-of-agriculture-forestry-environment-and-natural-resources/",
-
-    "gallery": [
-      "/assets/Building Module/Gallery/cafenr/1.webp",
-      "/assets/Building Module/Gallery/cafenr/2.webp",
-      "/assets/Building Module/Gallery/cafenr/3.webp",
-      "/assets/Building Module/Gallery/cafenr/4.webp",
-      "/assets/Building Module/Gallery/cafenr/5.webp",
-      "/assets/Building Module/Gallery/cafenr/6.webp"
-    ]
+    "more_info": "https://cvsu.edu.ph/2018/01/college-of-agriculture-forestry-environment-and-natural-resources/"
   },
   {
     "scene": "rc",
@@ -321,9 +333,7 @@
       }
     },
 
-    "more_info": "https://cvsu.edu.ph/ovpre-research-center/",
-
-    "gallery": []
+    "more_info": "https://cvsu.edu.ph/ovpre-research-center/"
   },
   {
     "scene": "library",
@@ -417,9 +427,14 @@
     "image": "/assets/Building Module/Background/bio_sci.webp",
     "desc": "Welcome to the Department of Biological Sciences at the University. Our state-of-the-art facilities and passionate community of scholars are dedicated to exploring the wonders of life. From molecular biology to ecology, we're committed to advancing our understanding of the natural world and addressing global challenges. Join us on a journey of discovery and exploration. Welcome to the heart of scientific inquiry.",
 
-    "gallery": [],
-
-    "contacts": {},
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "Add Email Address",
+      "additional": {
+        "Add your website here": null
+      }
+    },
 
     "more_info": "https://www.facebook.com/CvSUDBS/"
   },
@@ -431,9 +446,16 @@
     "acronym": "ceit",
     "type": "college_buildings",
     "tags": ["ceit", "school"],
-    "image": "/assets/Building Module/Background/dit.webp",
+    "image": "/assets/Building Module/Background/ce.webp",
     "desc": "The College of Engineering and Information Technology (CEIT) fosters a dynamic scholarly community dedicated to advancing the frontiers of engineering innovation. CEIT faculty address global challenges through research and curriculum focused on areas such as resilient infrastructure and sustainable transportation systems. By joining CEIT, you will contribute to shaping a brighter future.",
 
+    "dept": [
+      "Department of Computer, Electronics, and Electrical Engineering",
+      "Department of Industrial Engineering and Technology",
+      "Department of Information Technology",
+      "Department of Agriculture and Food Engineering",
+      "Department of Civil Engineering"
+    ],
     "offices": {
       "Dean's Office": null,
       "Guidance Facilitator's Office": null
@@ -453,11 +475,16 @@
       "Bachelor of Science in Electronics Engineering": null
     },
 
-    "contacts": {},
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "ceit@cvsu.edu.ph",
+      "additional": {
+        "CEIT Student Council": "https://www.facebook.com/ceitsc.cvsumain"
+      }
+    },
 
-    "more_info": "https://cvsu.edu.ph/2018/01/13/ceit-academic-programs/",
-
-    "gallery": []
+    "more_info": "https://cvsu.edu.ph/2018/01/13/ceit-academic-programs/"
   },
 
   {
@@ -467,12 +494,17 @@
     "acronym": "diet",
     "type": "college_buildings",
     "tags": ["ceit", "school"],
-    "image": "/assets/Building Module/Background/dit.webp",
+    "image": "/assets/Building Module/Background/diet.webp",
     "desc": "Welcome to the Department of Industrial Engineering and Technology at our University. Within our dedicated community, we explore the forefront of technology and innovation. From optimizing manufacturing processes to enhancing supply chain efficiency, we're committed to solving real-world challenges and driving industry forward. Join us as we embark on a journey of discovery and innovation. Welcome to the heart of industrial engineering excellence.",
 
-    "contacts": {},
-
-    "gallery": []
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "Add Email Address",
+      "additional": {
+        "Add your website here": "null"
+      }
+    }
   },
 
   {
@@ -482,10 +514,16 @@
     "acronym": "dceee",
     "type": "college_buildings",
     "tags": ["ceit", "school"],
-    "image": "/assets/Building Module/Background/dit.webp",
+    "image": "/assets/Building Module/Background/dee.webp",
     "desc": "Welcome to the Department of Computer, Electronics, and Electrical Engineering at our University. Within our dedicated community, we delve into the forefront of technology and innovation. From developing cutting-edge software solutions to designing efficient electronic systems, we're committed to tackling real-world challenges and propelling industries forward. Join us as we embark on a journey of discovery and innovation. Welcome to the heart of engineering excellence.",
-
-    "gallery": []
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "Add Email Address",
+      "additional": {
+        "Add your website here": null
+      }
+    }
   },
 
   {
@@ -521,7 +559,11 @@
 
     "more_info": "https://cvsu.edu.ph",
 
-    "gallery": ["/assets/Building Module/Gallery/admin/01.webp"]
+    "gallery": [
+      "/assets/Building Module/Gallery/admin/01.webp",
+      "/assets/Building Module/Gallery/admin/2.webp",
+      "/assets/Building Module/Gallery/admin/3.webp"
+    ]
   },
 
   {
@@ -575,9 +617,7 @@
     "type": "school_facilities",
     "tags": ["school"],
     "image": "/assets/Building Module/Background/shs.webp",
-    "desc": "This is the Physical Science Building at our University.",
-
-    "gallery": []
+    "desc": "This is the Physical Science Building at our University."
   },
   {
     "scene": "ced",
@@ -590,7 +630,8 @@
     "desc": "The College of Education welcomes you! Committed to the transformative power of education, their diverse community offers the tools and support for success in a dynamic field.  Through innovative research and hands-on experiences, they empower you to make a lasting impact. Here, learning is limitless and excellence is expected.",
 
     "dept": [
-      "• Teacher Education Department (TED)<br>• Home Economics, Vocational and Technical Education Department (HEVTED)"
+      "Teacher Education Department (TED)",
+      "Home Economics, Vocational and Technical Education Department (HEVTED)"
     ],
     "courses": {
       "Bachelor of Secondary Education": "<b>Course Majors:</b><br> • English <br> • Biological Science<br> • Mathematics",
@@ -602,12 +643,16 @@
       "Masters of Arts in Education": "<b>Graduate Programs:</b><br>• Educational Management<br>• Guidance and Counseling<br>• Curriculum and Instruction<br>• Elementary Education<br>• Secondary Education<br>• Mathematics<br>• Biology<br>• Chemistry",
       "Doctor of Philosophy in Education": "• Educational Management"
     },
+
     "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
       "Email": "ced@cvsu.edu.ph",
       "additional": {
         "Facebook Page": "https://www.facebook.com/profile.php?id=100064262193359"
       }
     },
+
     "more_info": "https://cvsu.edu.ph/2018/01/ced-history/"
   },
   {
@@ -651,7 +696,19 @@
       ],
       "Non-Degree Programs": ["• Diploma in Midwifery (2 years)"]
     },
-    "gallery": []
+    "dept": [
+      "Nursing/Over-all Clinical Coordinator",
+      "Medical Technology Department/Program Coordinator",
+      "Midwifery Department"
+    ],
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "con@cvsu.edu.ph",
+      "additional": {
+        "Facebook Page": "https://www.facebook.com/CON.CvSU"
+      }
+    }
   },
   {
     "scene": "ogs",
@@ -662,8 +719,7 @@
     "tags": ["school"],
     "image": "/assets/Building Module/Background/grad school.webp",
     "desc": "Welcome to the Open Graduate School at our University. Our vibrant community of scholars is dedicated to advancing knowledge and fostering intellectual growth. From cutting-edge research to interdisciplinary collaboration, we're committed to pushing the boundaries of academic excellence. Join us as we explore new frontiers of learning and discovery. Welcome to a place where innovation thrives and curiosity reigns.",
-    "more_info": "https://cvsu.edu.ph/2018/01/13/office-of-the-graduate-studies-open-learning-college/",
-    "gallery": []
+    "more_info": "https://cvsu.edu.ph/2018/01/13/office-of-the-graduate-studies-open-learning-college/"
   },
   {
     "scene": "cas",
@@ -690,15 +746,18 @@
       "Department of Physical Sciences",
       "Department of Social Sciences"
     ],
+
     "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
       "Email": "cas@cvsu.edu.ph",
       "additional": {
         "Facebook Page": "https://www.facebook.com/cvsumaincas/",
         "CAS Student Council": "https://www.facebook.com/CvSUCAS/"
       }
     },
-    "more_info": "https://cvsu.edu.ph/2018/01/12/college-of-arts-and-sciences/",
-    "gallery": []
+
+    "more_info": "https://cvsu.edu.ph/2018/01/12/college-of-arts-and-sciences/"
   },
   {
     "scene": "irb",
@@ -734,8 +793,7 @@
       "Mobile": "+639270110387"
     },
 
-    "more_info": "https://cvsu.edu.ph/ovpre-research-center/",
-    "gallery": []
+    "more_info": "https://cvsu.edu.ph/ovpre-research-center/"
   },
   {
     "scene": "museum",
@@ -746,7 +804,6 @@
     "tags": ["school", "historical"],
     "image": "/assets/Building Module/Background/museum.webp",
     "desc": "Welcome to the Historical and Cultural Museum at our University. Our museum is a treasure trove of artifacts, stories, and memories that celebrate our rich heritage and diverse culture. From ancient relics to modern masterpieces, we showcase the beauty and complexity of our shared history. Step inside and embark on a journey through time and tradition. Welcome to a place where the past comes alive and the present is illuminated.",
-
     "contacts": {
       "Telephone": "Add Telephone Number",
       "Mobile": "Add Mobile Number",
@@ -773,9 +830,7 @@
     "type": "school_facilities",
     "tags": ["cafenr", "school"],
     "image": "/assets/Building Module/Background/crop science.webp",
-    "desc": "Welcome to the Department of Crop Science at the University. Our state-of-the-art facilities and passionate community of scholars are dedicated to exploring the wonders of life. From molecular biology to ecology, we're committed to advancing our understanding of the natural world and addressing global challenges. Join us on a journey of discovery and exploration. Welcome to the heart of scientific inquiry.",
-
-    "gallery": []
+    "desc": "Welcome to the Department of Crop Science at the University. Our state-of-the-art facilities and passionate community of scholars are dedicated to exploring the wonders of life. From molecular biology to ecology, we're committed to advancing our understanding of the natural world and addressing global challenges. Join us on a journey of discovery and exploration. Welcome to the heart of scientific inquiry."
   },
   {
     "scene": "ccj",
@@ -797,8 +852,7 @@
         "CCJ Student Council": "https://www.facebook.com/ccjstudentcouncil"
       }
     },
-    "more_info": "https://cvsu.edu.ph/2018/01/12/college-of-criminal-justice/",
-    "gallery": []
+    "more_info": "https://cvsu.edu.ph/2018/01/12/college-of-criminal-justice/"
   },
   {
     "scene": "cropsci",
@@ -808,9 +862,7 @@
     "type": "school_facilities",
     "tags": ["cafenr", "school"],
     "image": "/assets/Building Module/Background/crop science.webp",
-    "desc": "Welcome to the Department of Crop Science at the University. Our state-of-the-art facilities and passionate community of scholars are dedicated to exploring the wonders of life. From molecular biology to ecology, we're committed to advancing our understanding of the natural world and addressing global challenges. Join us on a journey of discovery and exploration. Welcome to the heart of scientific inquiry.",
-
-    "gallery": []
+    "desc": "Welcome to the Department of Crop Science at the University. Our state-of-the-art facilities and passionate community of scholars are dedicated to exploring the wonders of life. From molecular biology to ecology, we're committed to advancing our understanding of the natural world and addressing global challenges. Join us on a journey of discovery and exploration. Welcome to the heart of scientific inquiry."
   },
   {
     "scene": "cashier",
@@ -1101,13 +1153,16 @@
       "Biomedical Science and Biotechnology": null,
       "Veterinary Medical Center": null
     },
+
     "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "Add Email Address",
       "additional": {
         "Facebook Page": "https://www.facebook.com/cvsuvetmed"
       }
     },
-    "more_info": "https://cvsu.edu.ph/cvmbs/",
-    "gallery": []
+    "more_info": "https://cvsu.edu.ph/cvmbs/"
   },
   {
     "scene": "torigate",
@@ -1139,6 +1194,7 @@
     "image": "/assets/Building Module/Extras/lagoon.webp",
     "desc": "The Lagoon, a serene body of water that serves as a central feature of the university's landscape. This tranquil oasis offers a peaceful retreat from the bustling campus, inviting visitors to relax and unwind amidst the beauty of nature. The Lagoon is home to a variety of aquatic plants and animals, creating a vibrant ecosystem that provides a habitat for local wildlife. Whether you're seeking a quiet spot to read, meditate, or simply enjoy the beauty of the outdoors, the Lagoon provides a serene escape for all who visit."
   },
+
   {
     "scene": "layatDiwa",
     "name": "Layat Diwa Statue",
@@ -1160,8 +1216,7 @@
     "tags": ["school", "cvmbs"],
     "image": "/assets/Building Module/Background/vet hosp.webp",
     "desc": "This institution prioritizes research, medical care, and education. It offers essential resources for innovative research, comprehensive medical services, and the training of future veterinarians. Dedicated to advancing veterinary medicine and enhancing animal welfare, it plays a pivotal role in the global veterinary community.",
-    "more_info": "https://cvsu.edu.ph/cvmbs/",
-    "gallery": []
+    "more_info": "https://cvsu.edu.ph/cvmbs/"
   },
 
   {
@@ -1185,7 +1240,16 @@
     "type": "school_facilities",
     "tags": ["school"],
     "image": "/assets/Building Module/Background/hevted.webp",
-    "desc": "This the Home Economics Vocational and Technical Eduction Department"
+    "desc": "This the Home Economics Vocational and Technical Eduction Department",
+
+    "contacts": {
+      "Telephone": "Add Telephone Number",
+      "Mobile": "Add Mobile Number",
+      "Email": "Add Email Address",
+      "additional": {
+        "Facebook Page": "https://www.facebook.com/cvsucedhevted"
+      }
+    }
   },
 
   {
@@ -1195,7 +1259,7 @@
     "acronym": "agri info",
     "type": "school_facilities",
     "tags": ["school"],
-    "image": "/assets/Building Module/Background/hevted.webp",
+    "image": "/assets/Building Module/Background/agri_eco_info.webp",
     "desc": "This the information center for the Agri-Eco Tourism Park.",
 
     "contacts": {
@@ -1236,5 +1300,16 @@
       "/assets/Building Module/Gallery/brite/05.webp",
       "/assets/Building Module/Gallery/brite/06.webp"
     ]
+  },
+
+  {
+    "scene": "tech_demo",
+    "name": "Technology Demonstration Farm and NCRDEC Area",
+    "access": "account",
+    "acronym": "tech demo",
+    "type": "school_facilities",
+    "tags": ["school"],
+    "image": "/assets/Building Module/Background/tdfarm.webp",
+    "desc": "This the Technology Demonstration Farm. An area where it houses different agricultural plants and serves as area of cultivation for agriculture."
   }
 ]
