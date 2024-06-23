@@ -2007,7 +2007,7 @@
       "x": 0.339,
       "y": 1.013
     },
-    "oneway_directions": ["node66"],
+    "oneway_directions": ["node66", "node257"],
     "hotspot": [
       {
         "type": "move",
@@ -2754,6 +2754,7 @@
       "x": 0.444,
       "y": 0.959
     },
+    "oneway_directions": ["node89"],
     "hotspot": [
       {
         "type": "move",
@@ -2771,6 +2772,7 @@
   },
   {
     "scene": "node89",
+    "oneway_directions": ["node90"],
     "image": "/assets/Database Images/unrestricted nodes/89.webp",
     "coords": {
       "x": 0.438,
@@ -2793,6 +2795,7 @@
   },
   {
     "scene": "node90",
+    "oneway_directions": ["node91"],
     "image": "/assets/Database Images/unrestricted nodes/90.webp",
     "coords": {
       "x": 0.412,
@@ -2826,6 +2829,7 @@
       "x": 0.387,
       "y": 0.979
     },
+    "oneway_directions": ["node64"],
     "hotspot": [
       {
         "type": "move",
@@ -9489,8 +9493,8 @@
     "scene": "node420",
     "image": "/assets/Database Images/unrestricted nodes/420.webp",
     "coords": {
-      "x": 0.732,
-      "y": 1.162
+      "x": 0.301,
+      "y": 1.125
     },
     "hotspot": [
       {
