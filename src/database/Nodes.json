@@ -339,6 +339,7 @@
       "x": 0.529,
       "y": 1.241
     },
+    "oneway_directions": ["node11", "node16"],
     "hotspot": [
       {
         "type": "move",
@@ -539,6 +540,7 @@
       "x": 0.556,
       "y": 1.234
     },
+    "oneway_directions": ["node17"],
     "hotspot": [
       {
         "type": "move",
@@ -568,6 +570,7 @@
       "x": 0.574,
       "y": 1.23
     },
+    "oneway_directions": ["node18"],
     "hotspot": [
       {
         "type": "move",
@@ -597,6 +600,7 @@
       "x": 0.59,
       "y": 1.226
     },
+    "oneway_directions": ["node19"],
     "hotspot": [
       {
         "type": "move",
@@ -626,6 +630,7 @@
       "x": 0.599,
       "y": 1.224
     },
+    "oneway_directions": ["node20"],
     "hotspot": [
       {
         "type": "move",
@@ -662,6 +667,7 @@
       "x": 0.615,
       "y": 1.22
     },
+    "oneway_directions": ["node21"],
     "hotspot": [
       {
         "type": "move",
@@ -684,6 +690,7 @@
       "x": 0.632,
       "y": 1.216
     },
+    "oneway_directions": ["node22"],
     "hotspot": [
       {
         "type": "move",
@@ -706,6 +713,7 @@
       "x": 0.645,
       "y": 1.212
     },
+    "oneway_directions": ["node23"],
     "hotspot": [
       {
         "type": "move",
@@ -750,6 +758,7 @@
       "x": 0.671,
       "y": 1.19
     },
+    "oneway_directions": ["node25"],
     "hotspot": [
       {
         "type": "move",
@@ -786,6 +795,7 @@
       "x": 0.652,
       "y": 1.143
     },
+    "oneway_directions": ["node26"],
     "hotspot": [
       {
         "type": "move",
@@ -816,6 +826,7 @@
       "x": 0.642,
       "y": 1.121
     },
+    "oneway_directions": ["node27"],
     "hotspot": [
       {
         "type": "move",
@@ -845,6 +856,7 @@
       "x": 0.634,
       "y": 1.103
     },
+    "oneway_directions": ["node28"],
     "hotspot": [
       {
         "type": "move",
@@ -875,6 +887,7 @@
       "x": 0.626,
       "y": 1.085
     },
+    "oneway_directions": ["node29"],
     "hotspot": [
       {
         "type": "move",
@@ -897,6 +910,7 @@
       "x": 0.618,
       "y": 1.066
     },
+    "oneway_directions": ["node31"],
     "hotspot": [
       {
         "type": "move",
@@ -927,6 +941,7 @@
       "x": 0.602,
       "y": 1.025
     },
+    "oneway_directions": ["node32"],
     "hotspot": [
       {
         "type": "move",
@@ -962,6 +977,7 @@
       "x": 0.594,
       "y": 1.005
     },
+    "oneway_directions": ["node33"],
     "hotspot": [
       {
         "type": "move",
@@ -991,6 +1007,7 @@
       "x": 0.585,
       "y": 0.986
     },
+    "oneway_directions": ["node34"],
     "hotspot": [
       {
         "type": "move",
@@ -1033,6 +1050,7 @@
       "x": 0.577,
       "y": 0.967
     },
+    "oneway_directions": ["node35"],
     "hotspot": [
       {
         "type": "move",
@@ -1075,6 +1093,7 @@
       "x": 0.562,
       "y": 0.931
     },
+    "oneway_directions": ["node37"],
     "hotspot": [
       {
         "type": "move",
@@ -1116,6 +1135,7 @@
       "x": 0.555,
       "y": 0.912
     },
+    "oneway_directions": ["node38", "node79"],
     "hotspot": [
       {
         "type": "move",
@@ -1158,6 +1178,7 @@
       "x": 0.552,
       "y": 0.9
     },
+    "oneway_directions": ["node39"],
     "hotspot": [
       {
         "type": "move",
@@ -1194,6 +1215,7 @@
       "x": 0.551,
       "y": 0.891
     },
+    "oneway_directions": ["node40"],
     "hotspot": [
       {
         "type": "move",
@@ -1230,6 +1252,7 @@
       "x": 0.549,
       "y": 0.88
     },
+    "oneway_directions": ["node42", "node80"],
     "hotspot": [
       {
         "type": "move",
@@ -1278,6 +1301,7 @@
       "x": 0.544,
       "y": 0.86
     },
+    "oneway_directions": ["node43"],
     "hotspot": [
       {
         "type": "move",
@@ -1300,6 +1324,7 @@
       "x": 0.542,
       "y": 0.851
     },
+    "oneway_directions": ["node44"],
     "hotspot": [
       {
         "type": "move",
@@ -1336,6 +1361,7 @@
       "x": 0.53,
       "y": 0.82
     },
+    "oneway_directions": ["node45"],
     "hotspot": [
       {
         "type": "move",
@@ -1377,6 +1403,7 @@
       "x": 0.524,
       "y": 0.806
     },
+    "oneway_directions": ["node46", "node223"],
     "hotspot": [
       {
         "type": "move",
@@ -1411,6 +1438,7 @@
       "x": 0.503,
       "y": 0.811
     },
+    "oneway_directions": ["node47"],
     "hotspot": [
       {
         "type": "move",
@@ -1433,6 +1461,7 @@
       "x": 0.485,
       "y": 0.816
     },
+    "oneway_directions": ["node48"],
     "hotspot": [
       {
         "type": "move",
@@ -1455,6 +1484,7 @@
       "x": 0.475,
       "y": 0.819
     },
+    "oneway_directions": ["node49"],
     "hotspot": [
       {
         "type": "move",
@@ -1484,6 +1514,7 @@
       "x": 0.459,
       "y": 0.822
     },
+    "oneway_directions": ["node50"],
     "hotspot": [
       {
         "type": "move",
@@ -1506,6 +1537,7 @@
       "x": 0.443,
       "y": 0.827
     },
+    "oneway_directions": ["node51"],
     "hotspot": [
       {
         "type": "move",
@@ -1535,6 +1567,7 @@
       "x": 0.422,
       "y": 0.832
     },
+    "oneway_directions": ["node52"],
     "hotspot": [
       {
         "type": "move",
@@ -1563,6 +1596,7 @@
       "x": 0.401,
       "y": 0.837
     },
+    "oneway_directions": ["node53"],
     "hotspot": [
       {
         "type": "move",
@@ -1585,6 +1619,7 @@
       "x": 0.393,
       "y": 0.839
     },
+    "oneway_directions": ["node54"],
     "hotspot": [
       {
         "type": "move",
@@ -1607,6 +1642,7 @@
       "x": 0.374,
       "y": 0.844
     },
+    "oneway_directions": ["node55"],
     "hotspot": [
       {
         "type": "move",
@@ -1629,6 +1665,7 @@
       "x": 0.356,
       "y": 0.849
     },
+    "oneway_directions": ["node56"],
     "hotspot": [
       {
         "type": "move",
@@ -1651,6 +1688,7 @@
       "x": 0.334,
       "y": 0.854
     },
+    "oneway_directions": ["node57"],
     "hotspot": [
       {
         "type": "move",
@@ -1679,6 +1717,7 @@
       "x": 0.309,
       "y": 0.86
     },
+    "oneway_directions": ["node58", "node315"],
     "hotspot": [
       {
         "type": "move",
@@ -1714,6 +1753,7 @@
       "x": 0.312,
       "y": 0.876
     },
+    "oneway_directions": ["node59"],
     "hotspot": [
       {
         "type": "move",
@@ -1763,6 +1803,7 @@
       "x": 0.315,
       "y": 0.886
     },
+    "oneway_directions": ["node60"],
     "hotspot": [
       {
         "type": "move",
@@ -1785,6 +1826,7 @@
       "x": 0.321,
       "y": 0.917
     },
+    "oneway_directions": ["node61"],
     "hotspot": [
       {
         "type": "move",
@@ -1813,6 +1855,7 @@
       "x": 0.323,
       "y": 0.93
     },
+    "oneway_directions": ["node62"],
     "hotspot": [
       {
         "type": "move",
@@ -1856,6 +1899,7 @@
       "x": 0.326,
       "y": 0.948
     },
+    "oneway_directions": ["node63"],
     "hotspot": [
       {
         "type": "move",
@@ -1892,6 +1936,7 @@
       "x": 0.329,
       "y": 0.968
     },
+    "oneway_directions": ["node64"],
     "hotspot": [
       {
         "type": "move",
@@ -1914,6 +1959,7 @@
       "x": 0.334,
       "y": 0.994
     },
+    "oneway_directions": ["node65", "node100"],
     "hotspot": [
       {
         "type": "move",
@@ -1961,6 +2007,7 @@
       "x": 0.339,
       "y": 1.013
     },
+    "oneway_directions": ["node66"],
     "hotspot": [
       {
         "type": "move",
@@ -1989,6 +2036,7 @@
       "x": 0.343,
       "y": 1.03
     },
+    "oneway_directions": ["node67"],
     "hotspot": [
       {
         "type": "move",
@@ -2000,12 +2048,6 @@
         "type": "move",
         "target": "node65",
         "yaw": 13.96,
-        "pitch": -20
-      },
-      {
-        "type": "move",
-        "target": "node303",
-        "yaw": 143.8,
         "pitch": -20
       },
       {
@@ -2051,6 +2093,7 @@
       "x": 0.353,
       "y": 1.067
     },
+    "oneway_directions": ["node69"],
     "hotspot": [
       {
         "type": "move",
@@ -2086,6 +2129,7 @@
       "x": 0.356,
       "y": 1.078
     },
+    "oneway_directions": ["node70"],
     "hotspot": [
       {
         "type": "move",
@@ -2108,6 +2152,7 @@
       "x": 0.367,
       "y": 1.118
     },
+    "oneway_directions": ["node71"],
     "hotspot": [
       {
         "type": "move",
@@ -2136,6 +2181,7 @@
       "x": 0.369,
       "y": 1.125
     },
+    "oneway_directions": ["node72"],
     "hotspot": [
       {
         "type": "move",
@@ -2165,6 +2211,7 @@
       "x": 0.374,
       "y": 1.143
     },
+    "oneway_directions": ["node73"],
     "hotspot": [
       {
         "type": "move",
@@ -2187,6 +2234,7 @@
       "x": 0.378,
       "y": 1.159
     },
+    "oneway_directions": ["node74"],
     "hotspot": [
       {
         "type": "move",
@@ -2223,6 +2271,7 @@
       "x": 0.382,
       "y": 1.172
     },
+    "oneway_directions": ["node75"],
     "hotspot": [
       {
         "type": "move",
@@ -2245,6 +2294,7 @@
       "x": 0.387,
       "y": 1.192
     },
+    "oneway_directions": ["node76"],
     "hotspot": [
       {
         "type": "move",
@@ -2267,6 +2317,7 @@
       "x": 0.39,
       "y": 1.204
     },
+    "oneway_directions": ["node77"],
     "hotspot": [
       {
         "type": "move",
@@ -2381,6 +2432,7 @@
       "x": 0.55,
       "y": 0.914
     },
+    "oneway_directions": ["node81"],
     "hotspot": [
       {
         "type": "move",
@@ -2453,6 +2505,7 @@
       "x": 0.539,
       "y": 0.919
     },
+    "oneway_directions": ["node84"],
     "hotspot": [
       {
         "type": "move",
@@ -2552,6 +2605,7 @@
       "x": 0.527,
       "y": 0.923
     },
+    "oneway_directions": ["node85"],
     "hotspot": [
       {
         "type": "move",
@@ -2580,6 +2634,7 @@
       "x": 0.519,
       "y": 0.927
     },
+    "oneway_directions": ["node86"],
     "hotspot": [
       {
         "type": "move",
@@ -2621,6 +2676,7 @@
       "x": 0.494,
       "y": 0.938
     },
+    "oneway_directions": ["node87"],
     "hotspot": [
       {
         "type": "move",
@@ -2650,6 +2706,7 @@
       "x": 0.456,
       "y": 0.953
     },
+    "oneway_directions": ["node88", "node316", "node93", "node333"],
     "hotspot": [
       {
         "type": "move",
@@ -2833,6 +2890,7 @@
       "x": 0.453,
       "y": 0.938
     },
+    "oneway_directions": ["node94"],
     "hotspot": [
       {
         "type": "move",
@@ -2861,6 +2919,7 @@
       "x": 0.45,
       "y": 0.922
     },
+    "oneway_directions": ["node95"],
     "hotspot": [
       {
         "type": "move",
@@ -2883,6 +2942,7 @@
       "x": 0.449,
       "y": 0.918
     },
+    "oneway_directions": ["node96"],
     "hotspot": [
       {
         "type": "move",
@@ -2905,6 +2965,7 @@
       "x": 0.446,
       "y": 0.905
     },
+    "oneway_directions": ["node97", "node339"],
     "hotspot": [
       {
         "type": "move",
@@ -2954,6 +3015,7 @@
       "x": 0.438,
       "y": 0.876
     },
+    "oneway_directions": ["node98"],
     "hotspot": [
       {
         "type": "move",
@@ -2997,6 +3059,7 @@
       "x": 0.43,
       "y": 0.853
     },
+    "oneway_directions": ["node99"],
     "hotspot": [
       {
         "type": "move",
@@ -3033,6 +3096,7 @@
       "x": 0.427,
       "y": 0.844
     },
+    "oneway_directions": ["node51"],
     "hotspot": [
       {
         "type": "move",
@@ -3062,6 +3126,7 @@
       "x": 0.319,
       "y": 0.997
     },
+    "oneway_directions": ["node101"],
     "hotspot": [
       {
         "type": "move",
@@ -3084,6 +3149,7 @@
       "x": 0.306,
       "y": 1.001
     },
+    "oneway_directions": ["node102"],
     "hotspot": [
       {
         "type": "move",
@@ -3162,6 +3228,7 @@
       "x": 0.418,
       "y": 1.262
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3184,6 +3251,7 @@
       "x": 0.428,
       "y": 1.245
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3224,6 +3292,7 @@
       "x": 0.423,
       "y": 1.232
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3252,6 +3321,7 @@
       "x": 0.417,
       "y": 1.208
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3274,6 +3344,7 @@
       "x": 0.413,
       "y": 1.191
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3296,6 +3367,7 @@
       "x": 0.406,
       "y": 1.165
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3319,6 +3391,7 @@
       "x": 0.409,
       "y": 1.073
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3347,6 +3420,7 @@
       "x": 0.459,
       "y": 1.238
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3375,6 +3449,7 @@
       "x": 0.474,
       "y": 1.233
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3403,6 +3478,7 @@
       "x": 0.486,
       "y": 1.231
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3437,6 +3513,7 @@
       "x": 0.483,
       "y": 1.216
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3465,6 +3542,7 @@
       "x": 0.479,
       "y": 1.204
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3487,6 +3565,7 @@
       "x": 0.445,
       "y": 1.21
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3527,6 +3606,7 @@
       "x": 0.42,
       "y": 1.186
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3555,6 +3635,7 @@
       "x": 0.411,
       "y": 1.138
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3590,6 +3671,7 @@
       "x": 0.397,
       "y": 1.078
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3618,6 +3700,7 @@
       "x": 0.384,
       "y": 1.05
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3640,6 +3723,7 @@
       "x": 0.811,
       "y": 1.125
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3668,6 +3752,7 @@
       "x": 0.472,
       "y": 1.06
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3690,6 +3775,7 @@
       "x": 0.483,
       "y": 1.109
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3718,6 +3804,7 @@
       "x": 0.409,
       "y": 1.073
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3752,6 +3839,7 @@
       "x": 0.496,
       "y": 1.159
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3774,6 +3862,7 @@
       "x": 0.503,
       "y": 1.181
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3802,6 +3891,7 @@
       "x": 0.467,
       "y": 1.197
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3842,6 +3932,7 @@
       "x": 0.489,
       "y": 1.227
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3870,6 +3961,7 @@
       "x": 0.515,
       "y": 1.22
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3898,6 +3990,7 @@
       "x": 0.51,
       "y": 1.198
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -3926,6 +4019,7 @@
       "x": 0.483,
       "y": 1.204
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -4796,6 +4890,7 @@
       "x": 0.356,
       "y": 1.052
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -4858,6 +4953,7 @@
       "x": 0.383,
       "y": 1.078
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -4880,6 +4976,7 @@
       "x": 0.387,
       "y": 1.095
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -5031,6 +5128,7 @@
       "x": 0.407,
       "y": 0.978
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -5059,6 +5157,7 @@
       "x": 0.417,
       "y": 1.009
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -5088,6 +5187,7 @@
       "x": 0.419,
       "y": 1.015
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -5124,6 +5224,7 @@
       "x": 0.421,
       "y": 1.023
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -5160,6 +5261,7 @@
       "x": 0.423,
       "y": 1.028
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -5189,6 +5291,7 @@
       "x": 0.423,
       "y": 1.031
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -5225,6 +5328,7 @@
       "x": 0.417,
       "y": 1.033
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -5260,6 +5364,7 @@
       "x": 0.41,
       "y": 1.027
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -5289,6 +5394,7 @@
       "x": 0.404,
       "y": 1.037
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -5324,6 +5430,7 @@
       "x": 0.388,
       "y": 1.042
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -5346,6 +5453,7 @@
       "x": 0.361,
       "y": 1.051
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -5368,6 +5476,7 @@
       "x": 0.433,
       "y": 1.028
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -5390,6 +5499,7 @@
       "x": 0.444,
       "y": 1.029
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -5412,6 +5522,7 @@
       "x": 0.473,
       "y": 1.044
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -5434,6 +5545,7 @@
       "x": 0.481,
       "y": 1.054
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -5456,6 +5568,7 @@
       "x": 0.494,
       "y": 1.079
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -5485,6 +5598,7 @@
       "x": 0.502,
       "y": 1.109
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -5551,6 +5665,7 @@
       "x": 0.351,
       "y": 0.977
     },
+    "oneway_directions": ["node64"],
     "hotspot": [
       {
         "type": "move",
@@ -5580,6 +5695,7 @@
       "x": 0.366,
       "y": 0.963
     },
+    "oneway_directions": ["node278"],
     "hotspot": [
       {
         "type": "move",
@@ -5609,6 +5725,7 @@
       "x": 0.385,
       "y": 0.968
     },
+    "oneway_directions": ["node279"],
     "hotspot": [
       {
         "type": "move",
@@ -5666,6 +5783,7 @@
       "x": 0.586,
       "y": 1.014
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -5695,6 +5813,7 @@
       "x": 0.573,
       "y": 0.991
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -5730,6 +5849,7 @@
       "x": 0.563,
       "y": 0.97
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -5900,6 +6020,7 @@
       "x": 0.446,
       "y": 1.205
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -6903,6 +7024,7 @@
       "x": 0.498,
       "y": 0.976
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -6932,6 +7054,7 @@
       "x": 0.504,
       "y": 0.973
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -6961,6 +7084,7 @@
       "x": 0.513,
       "y": 0.991
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -7141,6 +7265,7 @@
       "x": 0.55,
       "y": 0.974
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -7170,6 +7295,7 @@
       "x": 0.545,
       "y": 0.976
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
@@ -7192,6 +7318,7 @@
       "x": 0.535,
       "y": 0.981
     },
+    "travelType": "walk",
     "hotspot": [
       {
         "type": "move",
