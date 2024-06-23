@@ -561,6 +561,10 @@ function Module360({
     console.log("Status:", status);
   }, [status, access]);
 
+  // useEffect(() => {
+  //   console.log("Previous Scene:", previous_Scene);
+  // }, [previous_Scene]);
+
   /* Extras Hotspot */
 
   // Function to generate Extras
@@ -717,10 +721,10 @@ function Module360({
 
   function exitFunction() {
     // console.log("Current Scene:", select_Scene);
-    if (select_Scene.back) {
-      changeScene(nodesDB, select_Scene.back[0]);
-    } else {
+    if (previous_Scene) {
       setSelect_Scene(previous_Scene);
+    } else {
+      changeScene(nodesDB, select_Scene.back[0]);
     }
 
     setStatus();
@@ -875,6 +879,7 @@ function Module360({
             mapState={mapState}
             setMapState={setMapState}
             status={status}
+            setPrevious_Scene={setPrevious_Scene}
           />
         </div>
         {/* Navigation bar */}
@@ -900,7 +905,7 @@ function Module360({
         {/* Minimap */}
         <div className="pointer-events-auto absolute left-0 top-0 p-1 text-white">
           <div className="relative mt-20 flex flex-col justify-between gap-2 pb-2 pl-2">
-            <div className="">
+            {/* <div className="">
               {mapButtonVisible && (
                 <Minimap
                   onClick={() => setMapState(true)}
@@ -911,7 +916,7 @@ function Module360({
                   buildingsDB={buildingsDB}
                 />
               )}
-            </div>
+            </div> */}
 
             <div className="flex items-center gap-2">
               <div className="relative">

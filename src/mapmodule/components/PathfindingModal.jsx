@@ -204,17 +204,17 @@ const PathfindingModal = ({
                           />
                         </div>
                       </div>
-                      {/* Walk Button */}
+                      {/* Vehicle Button */}
                       <div className="flex items-end justify-center  ">
                         <div className="flex h-10 w-10 items-center justify-center">
-                          {/* <button
-                          className={`flex h-9 rounded-full border-2 p-1 ${travelType === "walk" ? "bg-blue-500 text-white" : "text-blue-500"} border-blue-500`}
-                          onClick={() => {
-                            setTravelType("walk");
-                          }}
-                        >
-                          <FaWalking size={25} />
-                        </button> */}
+                          <button
+                            className={`flex h-9 rounded-full border-2 p-1 ${travelType === "vehicle" ? "bg-blue-500 text-white" : "text-blue-500"} border-blue-500`}
+                            onClick={() => {
+                              setTravelType("vehicle");
+                            }}
+                          >
+                            <FaCarAlt size={25} />
+                          </button>
                         </div>
                       </div>
                     </div>

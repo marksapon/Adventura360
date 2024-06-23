@@ -50,6 +50,7 @@ const BuildingModal = ({
   setSearchModal,
   searchModal,
   status,
+  setPrevious_Scene,
 }) => {
   // Icon Set
   const icons = iconSet;
@@ -252,8 +253,7 @@ const BuildingModal = ({
                     {/* EXPLORE BUTTON */}
                     {current_info &&
                       (loginType === current_info.access ||
-                        loginType === "account" ||
-                        loginType === "guest") &&
+                        loginType === "account") &&
                       current_info.hasScene && (
                         <button
                           onClick={() => {
@@ -448,6 +448,7 @@ const BuildingModal = ({
                       changeScene("bldg", current_info.scene);
                       closeSearch();
                       handleCloseAndReset();
+                      setPrevious_Scene();
                     }}
                   >
                     <MdDirections className="size-5 sm:size-7" />

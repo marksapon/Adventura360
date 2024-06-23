@@ -442,30 +442,64 @@ const MapModule = ({
     }
   }
 
-  function generateNodes() {
+  function generateNodes(travelType = "both") {
     const temp = [];
-    // buildings.buildings.map((building) => {
+
     nodesDB.map((nodes) => {
-      const neighbors = [];
-      nodes.hotspot.map((hotspot) => {
-        if (
-          hotspot.type === "move" ||
-          hotspot.type === "bldg" ||
-          hotspot.type === "popup" ||
-          hotspot.type === "info"
-        ) {
-          neighbors.push(hotspot.target);
+      let neighbors = [];
+
+      if (travelType === "vehicle") {
+        if (nodes.oneway_directions) {
+          neighbors = nodes.oneway_directions;
+
+          nodes.hotspot.map((hotspot) => {
+            if (
+              hotspot.type === "bldg" ||
+              hotspot.type === "popup" ||
+              hotspot.type === "info"
+            ) {
+              neighbors.push(hotspot.target);
+            }
+          });
+        } else {
+          nodes.hotspot.map((hotspot) => {
+            if (
+              hotspot.type === "move" ||
+              hotspot.type === "bldg" ||
+              hotspot.type === "popup" ||
+              hotspot.type === "info"
+            ) {
+              neighbors.push(hotspot.target);
+            }
+          });
         }
-      });
+      } else {
+        nodes.hotspot.map((hotspot) => {
+          if (
+            hotspot.type === "move" ||
+            hotspot.type === "bldg" ||
+            hotspot.type === "popup" ||
+            hotspot.type === "info"
+          ) {
+            neighbors.push(hotspot.target);
+          }
+        });
+      }
+
+      const neighborsSet = new Set(neighbors);
+      const uniqueNeighbors = Array.from(neighborsSet);
+
       temp.push(
         new Node(
           nodes.scene,
           nodes.coords.x,
           nodes.coords.y,
-          neighbors,
+          uniqueNeighbors,
           nodes.travelType,
         ),
       );
+
+      console.log(temp);
     });
 
     buildingsDB.map((building) => {
@@ -533,7 +567,7 @@ const MapModule = ({
     // Points Generated in A Star Algorithm
 
     // console.log("Travel Type:", travelType);
-    const graph = generateNodes();
+    const graph = generateNodes(travelType);
     // console.log("Test: ", graph);
 
     const current_location = () => {
@@ -575,7 +609,7 @@ const MapModule = ({
         return pixelPoint;
       });
 
-      displayPath(pixelPaths, targetLocation);
+      displayPath(pixelPaths, targetLocation, travelType);
     }
   }
 
@@ -643,20 +677,42 @@ const MapModule = ({
 
         openSet.delete(current);
 
+        function roadAccess(neighbor_travelType, travelType) {
+          console.log("Neighbor Travel Type:", neighbor_travelType);
+          console.log("Travel Type:", travelType);
+          if (
+            travelType === "walk" &&
+            (neighbor_travelType === "walk" || neighbor_travelType === "both")
+          ) {
+            return true;
+          } else if (
+            travelType === "vehicle" &&
+            (neighbor_travelType === "vehicle" ||
+              neighbor_travelType === "both")
+          ) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+
         current.neighbors.forEach((neighbor) => {
-          const tentativeGScore =
-            gScore.get(current) +
-            euclideanDistance(current, neighbor) +
-            neighbor.weight;
-          if (tentativeGScore < gScore.get(neighbor)) {
-            cameFrom.set(neighbor, current);
-            gScore.set(neighbor, tentativeGScore);
-            fScore.set(
-              neighbor,
-              gScore.get(neighbor) + euclideanDistance(neighbor, goal),
-            );
-            if (!openSet.has(neighbor)) {
-              openSet.add(neighbor);
+          console.log("Neighbor: ", neighbor);
+          if (roadAccess(neighbor.travelType, travelType)) {
+            const tentativeGScore =
+              gScore.get(current) +
+              euclideanDistance(current, neighbor) +
+              neighbor.weight;
+            if (tentativeGScore < gScore.get(neighbor)) {
+              cameFrom.set(neighbor, current);
+              gScore.set(neighbor, tentativeGScore);
+              fScore.set(
+                neighbor,
+                gScore.get(neighbor) + euclideanDistance(neighbor, goal),
+              );
+              if (!openSet.has(neighbor)) {
+                openSet.add(neighbor);
+              }
             }
           }
         });
@@ -671,7 +727,7 @@ const MapModule = ({
     return generatedPath; // Set the generated path to the state
   }
 
-  function displayPath(points, target_location) {
+  function displayPath(points, target_location, travelType) {
     // Remove the old canvas if it exists
     const oldCanvas = document.getElementById("myCanvas");
     if (oldCanvas) {
@@ -701,13 +757,28 @@ const MapModule = ({
 
     const space = isMobile() ? [1, 15] : [1, 30];
 
-    const path = new Path({
-      segments: pathData,
-      strokeColor: "#dc2626", //70e000 for green
-      strokeWidth: strokeWidth,
-      strokeCap: "round",
-      dashArray: space, // This will create a dashed line with dashes 10 units long and gaps 12 units long
-    });
+    const pathType = () => {
+      let path;
+
+      if (travelType === "walk") {
+        path = new Path({
+          segments: pathData,
+          strokeColor: "#49f770", //70e000 for green #66ff00 #dc2626 #49f770 #ff3155
+          strokeWidth: strokeWidth,
+          strokeCap: "round",
+          dashArray: space, // This will create a dashed line with dashes 10 units long and gaps 12 units long
+        });
+      } else {
+        path = new Path({
+          segments: pathData,
+          strokeColor: "#ffa500", //70e000 for green
+          strokeWidth: strokeWidth,
+          strokeCap: "round",
+        });
+      }
+    };
+
+    const path = pathType();
 
     viewer.addOverlay({
       element: paperJS,
@@ -892,8 +963,6 @@ const MapModule = ({
         id="current location"
         className="flex h-auto w-36 flex-col items-center justify-end space-y-2"
       >
-        
-
         <img
           src="/assets/Login Module/adventura logo 2.webp"
           alt="Adventura 360 logo"

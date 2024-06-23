@@ -49,6 +49,8 @@ const Navigationbar = ({
   extrasDB,
 
   status,
+
+  setPrevious_Scene,
 }) => {
   /* States */
   const [isFullscreen, setIsFullscreen] = useState(false); // Fullscreen State
@@ -594,6 +596,7 @@ const Navigationbar = ({
           searchModal={searchModal}
           status={status}
           buildingsDB={buildingsDB}
+          setPrevious_Scene={setPrevious_Scene}
         />
       )}
     </div>
