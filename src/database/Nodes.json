@@ -3724,8 +3724,8 @@
     "scene": "node120",
     "image": "/assets/Database Images/unrestricted nodes/120.webp",
     "coords": {
-      "x": 0.811,
-      "y": 1.125
+      "x": 0.429,
+      "y": 1.043
     },
     "travelType": "walk",
     "hotspot": [
@@ -3805,8 +3805,8 @@
     "scene": "node123",
     "image": "/assets/Database Images/unrestricted nodes/123.webp",
     "coords": {
-      "x": 0.409,
-      "y": 1.073
+      "x": 0.446,
+      "y": 1.12
     },
     "travelType": "walk",
     "hotspot": [
@@ -4891,7 +4891,7 @@
     "scene": "node252",
     "image": "/assets/Database Images/unrestricted nodes/252.webp",
     "coords": {
-      "x": 0.356,
+      "x": 0.355,
       "y": 1.052
     },
     "travelType": "walk",
@@ -9255,8 +9255,8 @@
     "scene": "node409",
     "image": "/assets/Database Images/unrestricted nodes/409.webp",
     "coords": {
-      "x": 0.55,
-      "y": 0.997
+      "x": 0.321,
+      "y": 1.26
     },
     "hotspot": [
       {
