@@ -62,7 +62,7 @@ const Minimap = ({ x, y, onClick, previous_Scene, buildingsDB, extrasDB }) => {
   }, [x, y, previous_Scene.coords.x, previous_Scene.coords.y]);
 
   return (
-    <div className="opacity-0.5 opacity-0.9 flex h-auto w-auto overflow-hidden rounded-2xl border-black">
+    <div className="opacity-0.5 opacity-0.9 flex h-20 w-36 md:h-20 md:w-40 lg:h-40 lg:w-80 overflow-hidden rounded-2xl border-black">
       <button
         className="h-20 w-36 md:h-20 md:w-40 lg:h-40 lg:w-80"
         id="viewer"

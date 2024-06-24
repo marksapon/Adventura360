@@ -22,6 +22,10 @@ import { Tb360View } from "react-icons/tb"; // 360 Icon
 import { TbLink } from "react-icons/tb"; // Share Link Icon
 import { TbLinkOff } from "react-icons/tb"; // Share Link Icon OFF
 
+import { TbMessageChatbot } from "react-icons/tb"; // Chatbot Icon
+
+import { FaPersonWalkingArrowLoopLeft } from "react-icons/fa6"; // Exit Building Icon
+
 const Navigationbar = ({
   toggleAutoplay,
   autoplay,
@@ -51,6 +55,12 @@ const Navigationbar = ({
   status,
 
   setPrevious_Scene,
+
+  eventHandler,
+  setTourState,
+  select_Scene,
+
+  exitFunction,
 }) => {
   /* States */
   const [isFullscreen, setIsFullscreen] = useState(false); // Fullscreen State
@@ -144,7 +154,7 @@ const Navigationbar = ({
 
   return (
     <div className="flex h-dvh w-full flex-col justify-between">
-      <div className=" sticky top-0 z-10 p-4 ">
+      <div className=" sticky top-0 z-10  p-4">
         <div className=" h-max w-full rounded-xl border-b border-gray-200 bg-white dark:border-gray-600">
           <div className="flex h-full items-center justify-between text-base">
             <div className="flex h-full w-auto items-center justify-between px-1 md:w-full lg:px-4">
@@ -528,18 +538,82 @@ const Navigationbar = ({
       </div>
 
       {/*MAP MODULE*/}
-      {mapState && (
-        <MapModule
-          currLoc={location}
-          nodesDB={nodesDB}
-          buildingsDB={buildingsDB}
-          extrasDB={extrasDB}
-          infosDB={infosDB}
-          iconsSet={iconSet}
-          openBldgModal={openModal}
-          status={status}
-        />
-      )}
+
+      <div
+        className={`${mapState ? "absolute h-dvh w-full flex-col justify-between" : "pointer-events-auto absolute left-0 top-20 text-white"}`}
+      >
+        <div
+          className={`${mapState ? "" : "relative flex flex-col justify-between pl-5"}`}
+        >
+          <div className={`${mapState ? "" : "flex items-center gap-10"}`}>
+            <div className={`${mapState ? "" : "relative"}`}>
+              {mapState !== "hide" ? (
+                <MapModule
+                  currLoc={location}
+                  nodesDB={nodesDB}
+                  buildingsDB={buildingsDB}
+                  extrasDB={extrasDB}
+                  infosDB={infosDB}
+                  iconsSet={iconSet}
+                  openBldgModal={openModal}
+                  status={status}
+                  mapState={mapState}
+                />
+              ) : (
+                <div className={`hidden`}>
+                  <MapModule
+                    currLoc={location}
+                    nodesDB={nodesDB}
+                    buildingsDB={buildingsDB}
+                    extrasDB={extrasDB}
+                    infosDB={infosDB}
+                    iconsSet={iconSet}
+                    openBldgModal={openModal}
+                    status={status}
+                    mapState={mapState}
+                  />
+                </div>
+              )}
+
+              <div className="group inline-block">
+                {/* Adjusted for inline positioning */}
+                <button
+                  className="relative flex h-12 w-12 transform flex-row items-center  justify-center rounded-full border-2 border-transparent bg-white p-2 transition-transform duration-500 ease-in-out hover:scale-110 hover:border-green-500"
+                  onClick={() => {
+                    setTourState(true);
+                    eventHandler(select_Scene.scene, true);
+                  }}
+                >
+                  <TbMessageChatbot
+                    size={50}
+                    style={{ stroke: "green", fill: "white" }}
+                  />
+                  <div className="pointer-events-none absolute left-12 z-10 w-32 transform items-center justify-center rounded-lg bg-white p-2 text-center font-sans text-sm font-semibold text-gray-500 opacity-0 shadow-xl transition duration-200 ease-in-out group-hover:opacity-100">
+                    Tour Guide
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Exit Building */}
+          {status === "outside" && (
+            <div className="group pointer-events-auto relative flex h-12 w-12">
+              <button
+                className="flex h-12 w-12 transform items-center justify-center rounded-full border-2 border-transparent bg-orange-400 p-2 transition-transform duration-500 ease-in-out hover:scale-110 hover:border-white"
+                onClick={() => {
+                  exitFunction();
+                }}
+              >
+                <FaPersonWalkingArrowLoopLeft size={30} />
+              </button>
+              <div className=" absolute left-full top-1/2 ml-2 flex w-32 -translate-y-1/2 transform items-center justify-center rounded-lg bg-orange-400 p-2 text-center font-sans text-sm font-semibold text-white opacity-0 shadow-xl transition duration-200 ease-in-out group-hover:opacity-100">
+                Exit
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
 
       {Showmodal && (
         <Helpmodal

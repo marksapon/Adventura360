@@ -32,6 +32,7 @@ const MapModule = ({
   iconsSet,
   openBldgModal,
   status,
+  mapState,
 }) => {
   /* Device Check */
   // Check if User on Mobile
@@ -57,15 +58,13 @@ const MapModule = ({
     isMobile() ? false : true,
   );
 
-  const [curr_locLabel, setcurr_locLabel] = useState(true);
-
   /* Zoom Level */
   // Max Zoom Level based on Device
   const maxZoom = () => {
     if (checkOrientation() === "landscape") {
-      return 4;
+      return 10;
     } else {
-      return isMobile() ? 7 : 4; // 28 for mobile
+      return isMobile() ? 10 : 4; // 28 for mobile
     }
   };
   const [zoomLevel, setZoomLevel] = useState(maxZoom());
@@ -89,6 +88,8 @@ const MapModule = ({
   const [minimized, setMinimized] = useState(false); // Pathfinding Modal Minimized State
 
   const [targetLocation, setTargetLocation] = useState(); // Target Location for Pathfinding
+  const [travelMode, setTravelMode] = useState("walk"); // Travel Mode for Pathfinding
+  const [pathGraph, setPathGraph] = useState();
 
   useEffect(() => {
     console.log("TargetLocation:", targetLocation);
@@ -261,22 +262,25 @@ const MapModule = ({
     });
 
     return () => {
-      // Clean up OpenSeadragon viewer when unmounts prevents multiple OSD instances
-      removePath();
       viewerInstance.destroy();
     };
   }, []);
 
   useEffect(() => {
-    // console.log("Overlay Changed");
+    if (osdLoaded) {
+      if (!mapState) {
+        viewer.viewport.zoomTo(10, currLoc.coords);
+        viewer.forceRedraw();
+      }
+    }
+  }, [mapState]);
 
+  useEffect(() => {
     if (osdLoaded) {
       if (current_overlays.length === 0) {
-        setcurr_locLabel(true);
         viewer.forceRedraw();
         removeOverlays(targetLocation);
       } else if (current_overlays.length > 0) {
-        setcurr_locLabel(false);
         viewer.forceRedraw();
         removeOverlays(targetLocation);
 
@@ -301,6 +305,26 @@ const MapModule = ({
       }
     }
   }, [current_overlays, osdLoaded]);
+
+  useEffect(() => {
+    if (osdLoaded) {
+      viewer.forceRedraw();
+      viewer.removeOverlay("current location");
+      viewer.addOverlay({
+        id: "current location",
+        x: currLoc.coords.x,
+        y: currLoc.coords.y,
+        placement: OpenSeadragon.Placement.BOTTOM,
+        rotationMode: OpenSeadragon.OverlayRotationMode.NO_ROTATION,
+      });
+      // Pan to the new location
+      viewer.viewport.panTo(
+        new OpenSeadragon.Point(currLoc.coords.x, currLoc.coords.y),
+        false,
+      );
+      viewer.forceRedraw();
+    }
+  }, [currLoc, osdLoaded]); // Add osdLoaded to the dependency array if its changes should also trigger the effect
 
   function removeOverlaysName() {
     Object.keys(overlays).map((type) => {
@@ -355,13 +379,10 @@ const MapModule = ({
 
   // OSD Click Event Handler
   useEffect(() => {
-    // console.log("Event Handler");
     currentOverlaysRef.current = current_overlays;
-    // When OSD Canvas is clicked
+
     if (osdLoaded) {
       viewer.addHandler("canvas-click", function (event) {
-        // console.log("CLICK EVENT");
-
         const viewportPoint = viewer.viewport.pointFromPixel(event.position);
 
         Object.keys(overlays).map((overlayType) => {
@@ -498,8 +519,6 @@ const MapModule = ({
           nodes.travelType,
         ),
       );
-
-      console.log(temp);
     });
 
     buildingsDB.map((building) => {
@@ -558,12 +577,12 @@ const MapModule = ({
         size[key] = size[key] / scale;
       }
     }
-    console.log("Size: ", scale);
     return size;
   }
 
   // /* Main Pathfinding Function */
   function pathFinding(targetLocation, travelType = "both") {
+    setTravelMode(travelType);
     // Points Generated in A Star Algorithm
 
     // console.log("Travel Type:", travelType);
@@ -598,6 +617,7 @@ const MapModule = ({
     if (typeof generatedPath === "string") {
       if (Paper.project) {
         Paper.project.clear(); // Clear the written paths in PaperJS
+        setTargetLocation(); // Clear the target location
         alert("No existing paths"); // No path found
       }
     } else {
@@ -635,6 +655,7 @@ const MapModule = ({
 
         path.push(current); // push goal node to path
       }
+      setPathGraph(path); // Set the path to the state
       return path.reverse();
     }
 
@@ -678,8 +699,6 @@ const MapModule = ({
         openSet.delete(current);
 
         function roadAccess(neighbor_travelType, travelType) {
-          console.log("Neighbor Travel Type:", neighbor_travelType);
-          console.log("Travel Type:", travelType);
           if (
             travelType === "walk" &&
             (neighbor_travelType === "walk" || neighbor_travelType === "both")
@@ -697,7 +716,6 @@ const MapModule = ({
         }
 
         current.neighbors.forEach((neighbor) => {
-          console.log("Neighbor: ", neighbor);
           if (roadAccess(neighbor.travelType, travelType)) {
             const tentativeGScore =
               gScore.get(current) +
@@ -841,22 +859,74 @@ const MapModule = ({
     }
   }
 
+  useEffect(() => {
+    if (targetLocation) {
+      // console.log("Calculating new path");
+
+      let continuePath;
+
+      if (
+        targetLocation.x === currLoc.coords.x &&
+        targetLocation.y === currLoc.coords.y
+      ) {
+        continuePath = false;
+      } else if (
+        pathGraph[pathGraph.length - 2].x === currLoc.coords.x &&
+        pathGraph[pathGraph.length - 2].y === currLoc.coords.y
+      ) {
+        continuePath = false;
+      } else {
+        continuePath = true;
+      }
+
+      if (pathGraph) {
+        // console.log("Path Graph:", pathGraph);
+        // console.log("Coord Match:", continuePath);
+        if (continuePath) {
+          pathFinding(targetLocation, travelMode);
+        } else {
+          removePath();
+          setTargetLocation();
+          alert("You have reached your destination");
+        }
+      }
+    }
+  }, [targetLocation, currLoc]);
+
   return (
     <div
-      style={{
-        position: "absolute",
-        zIndex: 2,
-        backgroundColor: "#f5f5f5",
-        width: "100%",
-        height: "100vh",
-      }}
+      className={` ${mapState ? "absolute h-full w-screen bg-green-500" : "opacity-0.5 opacity-0.9 z-20 mb-2 flex h-20 w-36 overflow-hidden rounded-2xl border-black md:h-20 md:w-40 lg:h-40 lg:w-80"} `}
     >
+      {!mapState && (
+        <div className="pointer-events-none absolute z-10 flex h-full w-full items-end justify-end pb-10">
+          {/* Current Location Button */}
+          <div className="group relative inline-block">
+            <div className="absolute right-full top-1/2 mr-2 w-32 -translate-y-1/2 transform rounded-lg bg-black px-3 py-2 text-center text-xs text-white opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
+              Current Location
+            </div>
+            <button
+              className="pointer-events-auto transform rounded-full border-2 bg-white p-2 text-white drop-shadow-xl transition-transform duration-500 ease-in-out hover:scale-110 hover:border-green-500"
+              onClick={() => {
+                viewer.viewport.panTo(location);
+                setCheckCenter(true);
+              }}
+            >
+              {checkCenter ? (
+                <ImLocation2 className="h-6 w-6 text-green-600 group-hover:text-green-600 md:w-full lg:h-7 lg:w-7" />
+              ) : (
+                <ImLocation className="h-6 w-6 text-gray-500 group-hover:text-green-600 md:w-full lg:h-7 lg:w-7" />
+              )}
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* OSD */}
       <div
         ref={osdRef}
         style={{
           width: "100%",
-          height: "100vh",
+          height: "100%",
           zIndex: 3,
           backgroundColor: "#fefefe",
         }}
@@ -876,59 +946,62 @@ const MapModule = ({
             ? icons[overlay.type].color
             : "gray";
           divs.push(
-            <button
-              key={overlay.id}
-              id={overlay.id}
-              style={{
-                pointerEvents: "auto",
-                zIndex: 5,
-              }}
-              tabIndex="-1"
-            >
-              <div
+            <div className="display-hidden">
+              <button
+                key={overlay.id}
+                id={overlay.id}
                 style={{
-                  position: "relative",
-                  width: "20px",
-                  height: "40px",
+                  pointerEvents: "auto",
+                  zIndex: 5,
+                  display: "none",
                 }}
+                tabIndex="-1"
               >
-                <div>
-                  <div
-                    style={{
-                      position: "absolute",
-                      left: "50%",
-                      bottom: "2%",
-                      transform: "translateX(-50%)",
-                      borderTop: `18px solid ${color}`,
-                      borderLeft: "13px solid transparent",
-                      borderRight: "13px solid transparent",
-                    }}
-                  />
+                <div
+                  style={{
+                    position: "relative",
+                    width: "20px",
+                    height: "40px",
+                  }}
+                >
+                  <div>
+                    <div
+                      style={{
+                        position: "absolute",
+                        left: "50%",
+                        bottom: "2%",
+                        transform: "translateX(-50%)",
+                        borderTop: `18px solid ${color}`,
+                        borderLeft: "13px solid transparent",
+                        borderRight: "13px solid transparent",
+                      }}
+                    />
 
-                  <div
-                    className="rounded-full"
-                    style={{
-                      position: "absolute",
-                      display: "flex",
-                      bottom: "12px",
-                      left: "50%",
-                      transform: "translateX(-50%)",
-                      width: "30px",
-                      height: "30px",
-                      borderRadius: "50%",
-                      backgroundColor: "#fcfcfc",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      color: color,
-                      pointerEvents: "auto",
-                      border: `4px solid ${color}`,
-                    }}
-                  >
-                    {icon()}
+                    <div
+                      className="rounded-full"
+                      style={{
+                        position: "absolute",
+                        display: "flex",
+                        bottom: "12px",
+                        left: "50%",
+                        transform: "translateX(-50%)",
+                        width: "30px",
+                        height: "30px",
+                        borderRadius: "50%",
+                        backgroundColor: "#fcfcfc",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        color: color,
+                        pointerEvents: "auto",
+                        border: `4px solid ${color}`,
+                      }}
+                    >
+                      {icon()}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </button>,
+              </button>
+            </div>,
           );
         }
         return divs;
@@ -940,17 +1013,20 @@ const MapModule = ({
             ? icons[overlay.type].color
             : "gray";
           return (
-            <div
-              className="flex h-auto w-60 items-center justify-center rounded-md border-2 border-gray-300 bg-white text-center text-sm shadow-lg"
-              style={{
-                color: color,
-                fontWeight: "bold",
-              }}
-              key={overlay.id + "name"}
-              id={overlay.id + "name"}
-              tabIndex="-1"
-            >
-              {overlay.name}
+            <div className="display-hidden">
+              <div
+                className={`flex h-auto w-60 items-center justify-center rounded-md border-2 border-gray-300 bg-white text-center text-sm shadow-lg`}
+                style={{
+                  color: color,
+                  fontWeight: "bold",
+                  display: "none",
+                }}
+                key={overlay.id + "name"}
+                id={overlay.id + "name"}
+                tabIndex="-1"
+              >
+                {overlay.name}
+              </div>
             </div>
           );
         });
@@ -959,6 +1035,8 @@ const MapModule = ({
       {/* POI Overlays */}
 
       {/* Current Location CSS */}
+
+      <div className="hidden"></div>
       <div
         id="current location"
         className="flex h-auto w-36 flex-col items-center justify-end space-y-2"
@@ -969,6 +1047,7 @@ const MapModule = ({
           className=" mx-auto block h-12 w-12 items-center justify-center object-contain"
         />
       </div>
+
       {/* Current Location CSS */}
 
       {/* Overlays */}
@@ -983,23 +1062,25 @@ const MapModule = ({
 
           {/* Header Space */}
           {/* Content Space */}
-          <div className=" relative w-full">
+          <div className={`relative h-full w-full `}>
             {/* Pathfinding Modal */}
             {pathFindingClicked && (
-              <PathfindingModal
-                setMinimized={setMinimized}
-                minimized={minimized}
-                setPathModalState={setPathFindingClicked}
-                removePath={removePath}
-                pathfinding={pathFinding}
-                generatePOI={generatePOI}
-                removeOverlays={removeOverlays}
-                setTargetLocation={setTargetLocation}
-              />
+              <div className={`${!mapState && "hidden"}`}>
+                <PathfindingModal
+                  setMinimized={setMinimized}
+                  minimized={minimized}
+                  setPathModalState={setPathFindingClicked}
+                  removePath={removePath}
+                  pathfinding={pathFinding}
+                  generatePOI={generatePOI}
+                  removeOverlays={removeOverlays}
+                  setTargetLocation={setTargetLocation}
+                />
+              </div>
             )}
 
             {/* Extras Display Modal */}
-            {selected_extra && extraCheck ? (
+            {mapState && selected_extra && extraCheck ? (
               <>
                 <div className="absolute -top-20 z-20 h-screen w-screen bg-black bg-opacity-70" />
                 <div className="pointer-events-none relative z-20 flex h-full items-center justify-center p-4">
@@ -1045,12 +1126,12 @@ const MapModule = ({
               </>
             ) : null}
 
-            {mapLegendState && (
+            {mapState && mapLegendState && (
               <MapLegend setMapLegendState={setMapLegendState} />
             )}
 
             {/* Filter Button */}
-            <div className="group">
+            <div className={`${mapState ? "group" : "hidden"}`}>
               <div className="absolute right-0 top-0 m-2 flex flex-col items-center justify-center sm:flex-row-reverse lg:flex-col">
                 <div className="relative flex items-center justify-center ">
                   <div className=" absolute right-full top-1/2 mr-2 w-32 -translate-y-1/2 transform rounded-lg bg-black px-3 py-2 text-center text-xs text-white opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
@@ -1085,7 +1166,10 @@ const MapModule = ({
             </div>
 
             {/* Bottom Right Buttons */}
-            <div className="absolute bottom-0 right-0 p-2">
+
+            <div
+              className={`${mapState ? "absolute bottom-0 right-0 p-2" : "hidden"}`}
+            >
               <div className="flex flex-col-reverse space-y-2 space-y-reverse">
                 {/* Current Location Button */}
                 <div className="group relative inline-block">
@@ -1160,7 +1244,7 @@ const MapModule = ({
             </div>
             {/* Bottom Right Buttons */}
           </div>
-          {bldgModalState ? (
+          {mapState && bldgModalState ? (
             <BuildingModal
               visible={bldgModalState}
               onClose={() => setBldgModalState(false)}
@@ -1177,6 +1261,8 @@ const MapModule = ({
       )}
     </div>
   );
+
+  // }
 };
 
 export default MapModule;

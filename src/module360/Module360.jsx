@@ -28,15 +28,10 @@ import { FaCircle } from "react-icons/fa6"; // Undefined Icon
 import { TbMap } from "react-icons/tb"; // Minimap On Icon
 import { TbMapOff } from "react-icons/tb"; // Minimap Off Icon
 
-import { TbMessageChatbot } from "react-icons/tb"; // Chatbot Icon
-
-import { FaPersonWalkingArrowLoopLeft } from "react-icons/fa6"; // Exit Building Icon
 import { TbDoorExit } from "react-icons/tb"; // Exit inside the building Icon
-import { GiBackwardTime } from "react-icons/gi"; // Previous Location
 
 /* Components */
 import Navigationbar from "./components/Navigationbar";
-import Minimap from "./components/Minimap";
 import VN from "../VNmodule/VN"; // VN Module
 
 function Module360({
@@ -201,6 +196,10 @@ function Module360({
   const [firstTime, setFirstTime] = useState(isFirstTime()); // First Time State
   const [eventList, setEventList] = useState([]); // Event List State
   const [vnState, setVNState] = useState(false); // VN State
+
+  useEffect(() => {
+    console.log("Map State:", mapState);
+  }, [mapState]);
 
   // Function to get the current scene based on the URL queries
   function getScene() {
@@ -854,8 +853,8 @@ function Module360({
           })}
         </div>
         {/* Hotspots */}
+
         {/* UI */}
-        {/* Navigation bar */}
         <div className="flex h-full w-full">
           <Navigationbar
             toggleAutoplay={() => setAutoplay(!autoplay)}
@@ -880,9 +879,12 @@ function Module360({
             setMapState={setMapState}
             status={status}
             setPrevious_Scene={setPrevious_Scene}
+            eventHandler={eventHandler}
+            setTourState={setTourState}
+            select_Scene={select_Scene}
+            exitFunction={exitFunction}
           />
         </div>
-        {/* Navigation bar */}
 
         {/* Go Back Button */}
         {status === "inside" && (
@@ -901,64 +903,6 @@ function Module360({
             </button>
           </div>
         )}
-
-        {/* Minimap */}
-        <div className="pointer-events-auto absolute left-0 top-0 p-1 text-white">
-          <div className="relative mt-20 flex flex-col justify-between gap-2 pb-2 pl-2">
-            {/* <div className="">
-              {mapButtonVisible && (
-                <Minimap
-                  onClick={() => setMapState(true)}
-                  x={select_Scene.coords.x}
-                  y={select_Scene.coords.y}
-                  previous_Scene={previous_Scene} // Make it appear only when there is a previous location
-                  extrasDB={extrasDB}
-                  buildingsDB={buildingsDB}
-                />
-              )}
-            </div> */}
-
-            <div className="flex items-center gap-2">
-              <div className="relative">
-                <div className="group">
-                  <button
-                    className="flex h-12 w-12 transform items-center justify-center rounded-full border-2 border-transparent bg-white p-2 transition-transform duration-500 ease-in-out hover:scale-110 hover:border-green-500"
-                    onClick={() => {
-                      setTourState(true);
-                      eventHandler(select_Scene.scene, true);
-                    }}
-                  >
-                    <TbMessageChatbot
-                      size={50}
-                      style={{ stroke: "green", fill: "white" }}
-                    />
-                  </button>
-                  <div className="absolute left-full top-1/2 ml-2 flex w-32 -translate-y-1/2 transform items-center justify-center rounded-lg bg-white p-2 text-center font-sans text-sm font-semibold text-gray-500 opacity-0 shadow-xl transition duration-200 ease-in-out group-hover:opacity-100">
-                    Tour Guide
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Exit Building */}
-            {status === "outside" && (
-              <div className="group pointer-events-auto relative flex h-12 w-12">
-                <button
-                  className="flex h-12 w-12 transform items-center justify-center rounded-full border-2 border-transparent bg-orange-400 p-2 transition-transform duration-500 ease-in-out hover:scale-110 hover:border-white"
-                  onClick={() => {
-                    console.log("Exit Building");
-                    exitFunction();
-                  }}
-                >
-                  <FaPersonWalkingArrowLoopLeft size={30} />
-                </button>
-                <div className=" absolute left-full top-1/2 ml-2 flex w-32 -translate-y-1/2 transform items-center justify-center rounded-lg bg-orange-400 p-2 text-center font-sans text-sm font-semibold text-white opacity-0 shadow-xl transition duration-200 ease-in-out group-hover:opacity-100">
-                  Exit
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
 
         {/* Visual Novel */}
         {vnState && (

@@ -121,14 +121,3 @@ function Adventura360({ BACKEND_URL, loginType }) {
 }
 
 export default Adventura360;
-
-/*
-setNodesDB(nodesLDB);
-        setBuildingsDB(buildingsLDB);
-        setExtrasDB(extrasLDB);
-        setInfosDB(infosLDB);
-        setInternalDB(internalLDB);
-        setTimeout(() => {
-          setIsLoaded(true);
-        }, 3000);
-*/
