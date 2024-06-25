@@ -1396,7 +1396,7 @@
       "x": 0.524,
       "y": 0.806
     },
-    "oneway_directions": ["node46", "node223"],
+    "oneway_directions": ["node46", "node223", "node421"],
     "hotspot": [
       {
         "type": "move",
