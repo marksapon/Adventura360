@@ -91,9 +91,9 @@ const MapModule = ({
   const [travelMode, setTravelMode] = useState("walk"); // Travel Mode for Pathfinding
   const [pathGraph, setPathGraph] = useState();
 
-  // useEffect(() => {
-  //   console.log("TargetLocation:", targetLocation);
-  // }, [targetLocation]);
+  useEffect(() => {
+    console.log("TargetLocation:", targetLocation);
+  }, [targetLocation]);
 
   /* Overlays */
 
@@ -936,7 +936,7 @@ const MapModule = ({
       {/* Overlays */}
 
       {/* POI Overlays */}
-      {Object.keys(overlays).map((overlayType, index) => {
+      {Object.keys(overlays).map((overlayType) => {
         let divs = [];
         for (const overlay of overlays[overlayType]) {
           const icon = icons[overlay.type].icon
@@ -946,8 +946,10 @@ const MapModule = ({
             ? icons[overlay.type].color
             : "gray";
           divs.push(
-            <div className="display-hidden" key={overlay.id} id={overlay.id}>
+            <div className="display-hidden">
               <button
+                key={overlay.id}
+                id={overlay.id}
                 style={{
                   pointerEvents: "auto",
                   zIndex: 5,
@@ -1011,11 +1013,7 @@ const MapModule = ({
             ? icons[overlay.type].color
             : "gray";
           return (
-            <div
-              className="display-hidden"
-              key={overlay.id + "name"}
-              id={overlay.id + "name"}
-            >
+            <div className="display-hidden">
               <div
                 className={`flex h-auto w-60 items-center justify-center rounded-md border-2 border-gray-300 bg-white text-center text-sm shadow-lg`}
                 style={{
@@ -1023,6 +1021,8 @@ const MapModule = ({
                   fontWeight: "bold",
                   display: "none",
                 }}
+                key={overlay.id + "name"}
+                id={overlay.id + "name"}
                 tabIndex="-1"
               >
                 {overlay.name}
