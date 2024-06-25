@@ -166,7 +166,7 @@ const Navigationbar = ({
               >
                 {showTooltip["button1"] && (
                   <div className="tooltip absolute top-full mt-2 w-fit rounded-full border-2 border-green-600 bg-slate-50 px-2 py-1 text-center text-xs font-semibold">
-                    Sign Out
+                    Go to homepage
                   </div>
                 )}
                 <span className="sr-only">Adventura Logo</span>
