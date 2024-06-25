@@ -197,9 +197,9 @@ function Module360({
   const [eventList, setEventList] = useState([]); // Event List State
   const [vnState, setVNState] = useState(false); // VN State
 
-  useEffect(() => {
-    console.log("Map State:", mapState);
-  }, [mapState]);
+  // useEffect(() => {
+  //   console.log("Map State:", mapState);
+  // }, [mapState]);
 
   // Function to get the current scene based on the URL queries
   function getScene() {
@@ -452,9 +452,11 @@ function Module360({
   }, [select_Scene, curr_Internal]);
 
   useEffect(() => {
+    // Event Trigger when Change Scene
     if (firstTime) {
       eventHandler(select_Scene.scene);
     } else if (checkEvent(select_Scene.scene)) {
+      console.log("Select Scene:", select_Scene.scene);
       eventHandler(select_Scene.scene);
     }
   }, [select_Scene]);
@@ -555,10 +557,10 @@ function Module360({
     }
   }
 
-  useEffect(() => {
-    console.log("Access Type:", access);
-    console.log("Status:", status);
-  }, [status, access]);
+  // useEffect(() => {
+  //   console.log("Access Type:", access);
+  //   console.log("Status:", status);
+  // }, [status, access]);
 
   // useEffect(() => {
   //   console.log("Previous Scene:", previous_Scene);
@@ -652,6 +654,7 @@ function Module360({
       // console.log("Getting Event");
 
       if (tour) {
+        console.log("Tour Guide Button Triggered");
         console.log("Getting Event TOUR STATE");
         console.log("Event Done:", event_done);
         for (const event of event_done) {
@@ -661,7 +664,7 @@ function Module360({
           }
         }
       } else {
-        // console.log("Normal State");
+        console.log("Event Triggered");
         for (const event of events_available) {
           if (event.scene === scene) {
             setEventList((prev) => Array.from(new Set([...prev, scene])));

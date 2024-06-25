@@ -78,7 +78,7 @@ function VN({
 
   useEffect(() => {
     // console.log("VN Event List:", events);
-    // console.log("Event List:", eventList);
+    console.log("Event List:", eventList);
     // console.log("Event Load:", eventLoad);
     // console.log("Events Available:", events_available);
     // getEvents();
@@ -99,20 +99,17 @@ function VN({
 
   return (
     <>
-      {eventLoad &&
-        eventLoad.length > 0 &&
-        characters &&
-        characters.length !== 0 && (
-          <Display
-            eventLoad={eventLoad}
-            setVNState={setVNState}
-            characters={characters}
-            setEventList={setEventList}
-            setEventsAvailable={setEventsAvailable}
-            setTourState={setTourState}
-            setEventDone={setEventDone}
-          />
-        )}
+      {eventLoad.length > 0 && characters && characters.length !== 0 && (
+        <Display
+          eventLoad={eventLoad}
+          setVNState={setVNState}
+          characters={characters}
+          setEventList={setEventList}
+          setEventsAvailable={setEventsAvailable}
+          setTourState={setTourState}
+          setEventDone={setEventDone}
+        />
+      )}
     </>
   );
 }

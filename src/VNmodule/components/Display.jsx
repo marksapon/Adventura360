@@ -171,6 +171,7 @@ function Display({
                   setEventList([]);
                   finishedEvents(true);
                   setVNState(false);
+                  setTourState(false);
                 }}
               >
                 <FaWindowClose size={50} className="text-green-500" />
