@@ -259,12 +259,6 @@
             "target": "dit11",
             "yaw": 90.53,
             "pitch": -20
-          },
-          {
-            "type": "move",
-            "target": "dit15",
-            "yaw": 36.59,
-            "pitch": -20
           }
         ]
       },
@@ -1591,7 +1585,7 @@
           },
           {
             "type": "move",
-            "target": "lib05",
+            "target": "lib04",
             "yaw": 63.61,
             "pitch": -37.24
           },

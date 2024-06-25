@@ -1386,13 +1386,6 @@
         "target": "",
         "yaw": 82.26,
         "pitch": -20
-      },
-      {
-        "type": "bldg",
-        "class": "bldg",
-        "target": "con",
-        "yaw": 88.83,
-        "pitch": 10.16
       }
     ]
   },
@@ -2655,12 +2648,6 @@
         "pitch": -20
       },
       {
-        "type": "move",
-        "target": "node344",
-        "yaw": 15.23,
-        "pitch": -20
-      },
-      {
         "type": "bldg",
         "class": "bldg",
         "target": "cas",
@@ -3076,13 +3063,6 @@
         "target": "node97",
         "yaw": 186.86,
         "pitch": -20
-      },
-      {
-        "type": "bldg",
-        "class": "bldg",
-        "target": "con",
-        "yaw": 284.73,
-        "pitch": 18.4
       },
       {
         "type": "popup",
