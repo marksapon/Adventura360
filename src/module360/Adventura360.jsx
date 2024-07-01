@@ -2,15 +2,6 @@ import React, { useEffect, useState } from "react"; // React Hooks
 import axios from "axios"; // Axios for API requests
 import Module360 from "./Module360";
 
-/* Local DB */
-import nodesLDB from "../database/Nodes.json";
-import buildingsLDB from "../database/Buildings.json";
-import extrasLDB from "../database/Extras.json";
-import infosLDB from "../database/Infos.json";
-import internalLDB from "../database/Internal_nodes.json";
-import charactersLDB from "../database/Characters.json";
-import eventsLDB from "../database/Events.json";
-
 function Adventura360({ BACKEND_URL, loginType }) {
   /* Fetch DB */
 
@@ -63,18 +54,6 @@ function Adventura360({ BACKEND_URL, loginType }) {
         console.log("Error:", err.message);
         alert("Error Occured. Loading Local Database...");
       });
-
-    /* Local Database */
-    // setNodesDB(nodesLDB);
-    // setBuildingsDB(buildingsLDB);
-    // setExtrasDB(extrasLDB);
-    // setInfosDB(infosLDB);
-    // setInternalDB(internalLDB);
-    // setCharactersDB(charactersLDB);
-    // setEventsDB(eventsLDB);
-    // setTimeout(() => {
-    //   setIsLoaded(true);
-    // }, 3000);
   }, []);
 
   return (
