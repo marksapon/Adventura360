@@ -905,16 +905,16 @@ const MapModule = ({
               Current Location
             </div>
             <button
-              className="pointer-events-auto transform rounded-full border-2 bg-white p-2 text-white drop-shadow-xl transition-transform duration-500 ease-in-out hover:scale-110 hover:border-green-500"
+              className="pointer-events-auto transform rounded-full border-2 bg-green-600 p-2 text-white drop-shadow-xl transition-transform duration-500 ease-in-out hover:scale-110 hover:border-orange-300"
               onClick={() => {
                 viewer.viewport.panTo(location);
                 setCheckCenter(true);
               }}
             >
               {checkCenter ? (
-                <ImLocation2 className="h-6 w-6 text-green-600 group-hover:text-green-600 md:w-full lg:h-7 lg:w-7" />
+                <ImLocation2 className="h-6 w-6 text-orange-400 group-hover:text-orange-400 md:w-full lg:h-7 lg:w-7" />
               ) : (
-                <ImLocation className="h-6 w-6 text-gray-500 group-hover:text-green-600 md:w-full lg:h-7 lg:w-7" />
+                <ImLocation className="h-6 w-6 text-white group-hover:text-orange-300 md:w-full lg:h-7 lg:w-7" />
               )}
             </button>
           </div>
