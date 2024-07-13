@@ -547,33 +547,17 @@ const Navigationbar = ({
         >
           <div className={`${mapState ? "" : "flex items-center gap-10"}`}>
             <div className={`${mapState ? "" : "relative"}`}>
-              {mapState !== "hide" ? (
-                <MapModule
-                  currLoc={location}
-                  nodesDB={nodesDB}
-                  buildingsDB={buildingsDB}
-                  extrasDB={extrasDB}
-                  infosDB={infosDB}
-                  iconsSet={iconSet}
-                  openBldgModal={openModal}
-                  status={status}
-                  mapState={mapState}
-                />
-              ) : (
-                <div className={`hidden`}>
-                  <MapModule
-                    currLoc={location}
-                    nodesDB={nodesDB}
-                    buildingsDB={buildingsDB}
-                    extrasDB={extrasDB}
-                    infosDB={infosDB}
-                    iconsSet={iconSet}
-                    openBldgModal={openModal}
-                    status={status}
-                    mapState={mapState}
-                  />
-                </div>
-              )}
+              <MapModule
+                currLoc={location}
+                nodesDB={nodesDB}
+                buildingsDB={buildingsDB}
+                extrasDB={extrasDB}
+                infosDB={infosDB}
+                iconsSet={iconSet}
+                openBldgModal={openModal}
+                status={status}
+                mapState={mapState}
+              />
 
               <div className="group inline-block">
                 {/* Adjusted for inline positioning */}

@@ -781,7 +781,7 @@ const MapModule = ({
       if (travelType === "walk") {
         path = new Path({
           segments: pathData,
-          strokeColor: "#49f770", //70e000 for green #66ff00 #dc2626 #49f770 #ff3155
+          strokeColor: "#dc2626", //70e000 for green #66ff00 #dc2626 #49f770 #ff3155
           strokeWidth: strokeWidth,
           strokeCap: "round",
           dashArray: space, // This will create a dashed line with dashes 10 units long and gaps 12 units long

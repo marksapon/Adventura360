@@ -4,7 +4,6 @@ import { decrypt } from "./aes.mjs";
 import Cookies from "js-cookie";
 import axios from "axios";
 import { CiUser, CiLock } from "react-icons/ci";
-import usersldb from "../database/Adventura360.users.json";
 
 function Login({ BACKEND_URL, setLoginType }) {
   const [users, setUsers] = useState([]); // Registered Users
@@ -25,18 +24,15 @@ function Login({ BACKEND_URL, setLoginType }) {
       setLoginType(loginType);
     } else {
       /* MongoDB (DO NOT DELETE) */
-      // axios
-      //   .get(`${BACKEND_URL}/getUsers`)
-      //   .then((users) => {
-      //     setUsers(users.data);
-      //   })
-      //   .catch((err) => {
-      //     alert("Error Occured. Loading Local Database...");
-      //     setUsers(usersldb);
-      //   });
-
-      /* Local Database */
-      setUsers(usersldb);
+      axios
+        .get(`${BACKEND_URL}/getUsers`)
+        .then((users) => {
+          setUsers(users.data);
+        })
+        .catch((err) => {
+          alert("Error Occured. Loading Local Database...");
+          setUsers(usersldb);
+        });
     }
     // window.onbeforeunload = () => {
     //   Cookies.remove("loginType");

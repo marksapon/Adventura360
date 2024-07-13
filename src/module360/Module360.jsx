@@ -160,9 +160,6 @@ function Module360({
   // Back Button State
   const [backButton, setBackButton] = useState(false);
 
-  // Minimap State
-  const [mapButtonVisible, setMapButtonVisibility] = useState(true);
-
   // Yaw and Pitch States
   const [initialYaw, setYaw] = useState(getParams("yaw"));
   const [initialPitch, setPitch] = useState(getParams("pitch"));
@@ -560,9 +557,9 @@ function Module360({
     console.log("Status:", status);
   }, [status, access]);
 
-  // useEffect(() => {
-  //   console.log("Previous Scene:", previous_Scene);
-  // }, [previous_Scene]);
+  useEffect(() => {
+    console.log("Previous Scene:", previous_Scene);
+  }, [previous_Scene]);
 
   /* Extras Hotspot */
 
@@ -640,6 +637,11 @@ function Module360({
   }
 
   /* Event List */
+
+  useEffect(() => {
+    console.log("Map State:", mapState);
+  }, [mapState]);
+
   // useEffect(() => {
   //   console.log("Event List:", eventList);
   // }, [eventList]);
@@ -934,12 +936,12 @@ function Module360({
               Toggle Minimap
             </div>
             <button
-              className={`flex h-12 w-12 transform items-center justify-center rounded-full border-2 border-transparent ${mapButtonVisible ? "bg-green-500" : "bg-white"} p-2 transition-transform duration-500 ease-in-out hover:scale-110 ${mapButtonVisible ? "hover:border-white" : "hover:border-green-500"}`}
+              className={`flex h-12 w-12 transform items-center justify-center rounded-full border-2 border-transparent ${mapState === "mini" ? "bg-green-500" : "bg-white"} p-2 transition-transform duration-500 ease-in-out hover:scale-110 ${mapState === "mini" ? "hover:border-white" : "hover:border-green-500"}`}
               onClick={() => {
-                setMapButtonVisibility(!mapButtonVisible);
+                mapState === "mini" ? setMapState("hide") : setMapState("mini");
               }}
             >
-              {mapButtonVisible ? (
+              {mapState !== "mini" ? (
                 <TbMap className="md:h-9/12 h-6 w-6 text-white md:w-full lg:h-10 lg:w-10" /> // Icon for hiding the map button  h-6 w-6 md:h-10 md:w-10
               ) : (
                 <TbMapOff
