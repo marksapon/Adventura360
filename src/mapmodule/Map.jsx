@@ -895,9 +895,9 @@ const MapModule = ({
 
   return (
     <div
-      className={` ${mapState ? "absolute h-full w-screen bg-green-500" : "opacity-0.5 opacity-0.9 z-20 mb-2 flex h-20 w-36 overflow-hidden rounded-2xl border-black md:h-20 md:w-40 lg:h-40 lg:w-80"} `}
+      className={` ${mapState === "full" ? "absolute h-full w-screen bg-green-500" : mapState === "mini" ? "opacity-0.5 opacity-0.9 mb-2 flex h-20 w-36 overflow-hidden rounded-2xl border-black md:h-20 md:w-40 lg:h-40 lg:w-80" : "hidden"} `}
     >
-      {!mapState && (
+      {mapState === "mini" && (
         <div className="pointer-events-none absolute z-10 flex h-full w-full items-end justify-end pb-10">
           {/* Current Location Button */}
           <div className="group relative inline-block">
@@ -1035,8 +1035,6 @@ const MapModule = ({
       {/* POI Overlays */}
 
       {/* Current Location CSS */}
-
-      <div className="hidden"></div>
       <div
         id="current location"
         className="flex h-auto w-36 flex-col items-center justify-end space-y-2"
@@ -1065,7 +1063,7 @@ const MapModule = ({
           <div className={`relative h-full w-full `}>
             {/* Pathfinding Modal */}
             {pathFindingClicked && (
-              <div className={`${!mapState && "hidden"}`}>
+              <div className={`${mapState !== "full" && "hidden"}`}>
                 <PathfindingModal
                   setMinimized={setMinimized}
                   minimized={minimized}
@@ -1080,7 +1078,7 @@ const MapModule = ({
             )}
 
             {/* Extras Display Modal */}
-            {mapState && selected_extra && extraCheck ? (
+            {mapState === "full" && selected_extra && extraCheck ? (
               <>
                 <div className="absolute -top-20 z-20 h-screen w-screen bg-black bg-opacity-70" />
                 <div className="pointer-events-none relative z-20 flex h-full items-center justify-center p-4">
@@ -1126,12 +1124,12 @@ const MapModule = ({
               </>
             ) : null}
 
-            {mapState && mapLegendState && (
+            {mapState === "full" && mapLegendState && (
               <MapLegend setMapLegendState={setMapLegendState} />
             )}
 
             {/* Filter Button */}
-            <div className={`${mapState ? "group" : "hidden"}`}>
+            <div className={`${mapState === "full" ? "group" : "hidden"}`}>
               <div className="absolute right-0 top-0 m-2 flex flex-col items-center justify-center sm:flex-row-reverse lg:flex-col">
                 <div className="relative flex items-center justify-center ">
                   <div className=" absolute right-full top-1/2 mr-2 w-32 -translate-y-1/2 transform rounded-lg bg-black px-3 py-2 text-center text-xs text-white opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
@@ -1168,7 +1166,7 @@ const MapModule = ({
             {/* Bottom Right Buttons */}
 
             <div
-              className={`${mapState ? "absolute bottom-0 right-0 p-2" : "hidden"}`}
+              className={`${mapState === "full" ? "absolute bottom-0 right-0 p-2" : "hidden"}`}
             >
               <div className="flex flex-col-reverse space-y-2 space-y-reverse">
                 {/* Current Location Button */}
@@ -1244,7 +1242,7 @@ const MapModule = ({
             </div>
             {/* Bottom Right Buttons */}
           </div>
-          {mapState && bldgModalState ? (
+          {mapState === "full" && bldgModalState ? (
             <BuildingModal
               visible={bldgModalState}
               onClose={() => setBldgModalState(false)}

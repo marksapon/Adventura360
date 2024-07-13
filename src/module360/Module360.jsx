@@ -187,7 +187,7 @@ function Module360({
   const [curr_Extras, setCurr_Extras] = useState(generateExtras);
 
   // Map State
-  const [mapState, setMapState] = useState(false); // Map State
+  const [mapState, setMapState] = useState("mini"); // Map State
 
   // VN State
   const [firstTime, setFirstTime] = useState(isFirstTime()); // First Time State
@@ -941,7 +941,7 @@ function Module360({
                 mapState === "mini" ? setMapState("hide") : setMapState("mini");
               }}
             >
-              {mapState !== "mini" ? (
+              {mapState === "mini" ? (
                 <TbMap className="md:h-9/12 h-6 w-6 text-white md:w-full lg:h-10 lg:w-10" /> // Icon for hiding the map button  h-6 w-6 md:h-10 md:w-10
               ) : (
                 <TbMapOff

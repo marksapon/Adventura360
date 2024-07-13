@@ -180,7 +180,7 @@ const Navigationbar = ({
               <div className="hidden md:flex">
                 <button
                   type="button"
-                  onClick={() => setMapState(false)}
+                  onClick={() => setMapState("mini")}
                   className="inline-flex h-14 w-14 items-center justify-center"
                   onMouseEnter={() => handleMouseEnter("button2")}
                   onMouseLeave={() => handleMouseLeave("button2")}
@@ -193,7 +193,10 @@ const Navigationbar = ({
                   <span className="sr-only">360</span>
                   <Tb360View
                     className={`h-12 w-12 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${
-                      !mapState && !Showmodal && !Bugmdl && !Sharemodal
+                      mapState !== "full" &&
+                      !Showmodal &&
+                      !Bugmdl &&
+                      !Sharemodal
                         ? "h-14 w-14 rounded-lg ring-2 ring-gray-600"
                         : ""
                     }`}
@@ -204,7 +207,7 @@ const Navigationbar = ({
               <div className="hidden md:flex">
                 <button
                   type="button"
-                  onClick={() => setMapState(true)}
+                  onClick={() => setMapState("full")}
                   className="inline-flex h-14 w-14 items-center justify-center"
                   onMouseEnter={() => handleMouseEnter("button3")}
                   onMouseLeave={() => handleMouseLeave("button3")}
@@ -216,7 +219,7 @@ const Navigationbar = ({
                   )}
                   <span className="sr-only">Map</span>
                   <GrMap
-                    className={`h-12 w-12 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${mapState ? "h-14 w-14 rounded-lg ring-2 ring-gray-600" : ""}`}
+                    className={`h-12 w-12 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${mapState === "full" && "h-14 w-14 rounded-lg ring-2 ring-gray-600"}`}
                   />
                 </button>
               </div>
@@ -404,15 +407,17 @@ const Navigationbar = ({
             <div className="flex md:hidden">
               <button
                 type="button"
-                onClick={() => setMapState(false)}
+                onClick={() => setMapState("mini")}
                 className="inline-flex h-10 w-10 items-center justify-center"
               >
                 <span className="sr-only">360</span>
                 <Tb360View
                   className={`h-8 w-8 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${
-                    !mapState && !Showmodal && !Bugmdl && !Sharemodal
-                      ? "h-10 w-10 rounded-lg ring-2 ring-gray-600"
-                      : ""
+                    mapState !== "full" &&
+                    !Showmodal &&
+                    !Bugmdl &&
+                    !Sharemodal &&
+                    "h-10 w-10 rounded-lg ring-2 ring-gray-600"
                   }`}
                 />
               </button>
@@ -421,12 +426,12 @@ const Navigationbar = ({
             <div className="flex md:hidden">
               <button
                 type="button"
-                onClick={() => setMapState(true)}
+                onClick={() => setMapState("full")}
                 className="inline-flex h-10 w-10 items-center justify-center"
               >
                 <span className="sr-only">Map</span>
                 <GrMap
-                  className={`h-8 w-8 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${mapState ? "h-14 w-14 rounded-lg ring-2 ring-gray-600" : ""}`}
+                  className={`h-8 w-8 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${mapState === "full" && "h-14 w-14 rounded-lg ring-2 ring-gray-600"}`}
                 />
               </button>
             </div>
@@ -540,13 +545,15 @@ const Navigationbar = ({
       {/*MAP MODULE*/}
 
       <div
-        className={`${mapState ? "absolute h-dvh w-full flex-col justify-between" : "pointer-events-auto absolute left-0 top-20 text-white"}`}
+        className={`${mapState === "full" ? "absolute h-dvh w-full flex-col justify-between" : "pointer-events-auto absolute left-0 top-20 text-white"}`}
       >
         <div
-          className={`${mapState ? "" : "relative flex flex-col justify-between pl-5"}`}
+          className={`${mapState !== "full" && "relative flex flex-col justify-between pl-5"}`}
         >
-          <div className={`${mapState ? "" : "flex items-center gap-10"}`}>
-            <div className={`${mapState ? "" : "relative"}`}>
+          <div
+            className={`${mapState === "full" && "flex items-center gap-10"}`}
+          >
+            <div className={`${mapState === "fulll" && "relative"}`}>
               <MapModule
                 currLoc={location}
                 nodesDB={nodesDB}
