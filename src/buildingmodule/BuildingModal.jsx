@@ -476,7 +476,7 @@ const BuildingModal = ({
 
             {/* Gallery */}
 
-            {current_info && current_info.gallery && (
+            {current_info && current_info.gallery.length !== 0 && (
               <div className="h-auto w-full sm:h-auto">
                 {current_info ? (
                   <BuildingGallery imageSet={current_info.gallery} />
