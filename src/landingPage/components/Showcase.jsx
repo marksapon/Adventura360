@@ -1,15 +1,12 @@
 import React from "react";
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext,
-} from "pure-react-carousel";
+import { useNavigate } from "react-router-dom";
+import { CarouselProvider, Slider, Slide } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import { useMediaQuery } from "react-responsive";
+import Adventuravn from "../adventuravn";
 
 const Showcase = () => {
+  const navigate = useNavigate();
   const sm = useMediaQuery({ query: "(max-width: 640px)" });
   const lg = useMediaQuery({ query: "(max-width: 1024px)" });
 
@@ -149,15 +146,6 @@ const Showcase = () => {
           </Slider>
         </CarouselProvider>
       </div>
-      <div className="flex w-full flex-col items-center">
-        <h1 className="mb-2 flex w-full items-center justify-center text-center text-4xl font-semibold">
-          Adventura VN
-        </h1>
-        <p className="w-full items-center justify-center px-4 pb-8 text-center [text-wrap:balance] md:w-1/2">
-          Adventura VN is a Visual Novel game that allows the users to navigate
-          inside the actual place of Cavite State University Indang Campus.
-        </p>
-      </div>
       <div className="z-40 flex w-full flex-col items-center justify-start">
         <div className="relative aspect-video w-80">
           <img
@@ -167,14 +155,16 @@ const Showcase = () => {
             alt="Adventura VN"
           />
         </div>
-        <a
-          href="https://placide.itch.io/adventura"
-          target="_blank"
-          rel="noopener noreferrer"
+        <p className="mb-px4 w-full items-center justify-center px-4 pb-4 text-center [text-wrap:balance] md:w-1/2">
+          Adventura VN is a Visual Novel game that allows the users to navigate
+          inside the actual place of Cavite State University Indang Campus.
+        </p>
+        <button
           className="inline-flex h-10 items-center justify-center rounded-md bg-green-600 px-4 py-2 text-sm font-semibold text-white hover:bg-green-500"
+          onClick={() => navigate("/adventuravn")}
         >
           Play Adventura
-        </a>
+        </button>
       </div>
     </div>
   );

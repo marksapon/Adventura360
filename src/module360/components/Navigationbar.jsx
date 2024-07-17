@@ -401,7 +401,7 @@ const Navigationbar = ({
       </div>
 
       {/*FOOTER*/}
-      <div className="sticky bottom-0 start-0 z-20 mb-4 flex h-14 w-full items-center justify-center  p-4 md:hidden">
+      <div className="sticky bottom-0 start-0 z-10 mb-4 flex h-14 w-full items-center justify-center  p-4 md:hidden">
         <div className="w-full rounded-xl border-b bg-white p-2 ">
           <div className="flex h-full items-center justify-between text-base">
             <div className="flex md:hidden">

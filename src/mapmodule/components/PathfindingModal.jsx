@@ -124,7 +124,7 @@ const PathfindingModal = ({
       ) : (
         <>
           <div className="pointer-events-auto absolute -top-20 left-0 z-10 h-screen w-screen bg-black bg-opacity-70" />
-          <div className="pointer-events-auto absolute -left-2 z-50 flex h-full w-5/6 flex-col gap-2 rounded-lg shadow-md sm:w-7/12 lg:w-2/6">
+          <div className="pointer-events-auto absolute -left-2 -top-20 z-50 flex h-screen w-5/6 flex-col gap-2 rounded-lg shadow-md sm:w-7/12 lg:w-2/6">
             {/* Current location */}
             <div className="flex h-full w-full">
               <div className="flex w-full flex-col gap-2 rounded-br-lg rounded-tr-lg bg-slate-50 px-2 pb-2">
@@ -235,6 +235,17 @@ const PathfindingModal = ({
                         </button>
                       </div>
                     )}
+                    <div className="flex w-full gap-2 overflow-auto text-nowrap p-4">
+                      <button className="text-grey-600 flex h-auto justify-center gap-1 rounded-xl px-2 py-1 text-center text-xs font-bold ring-2 ring-green-500 hover:opacity-80">
+                        Restroom
+                      </button>
+                      <button className="text-grey-600 flex h-auto justify-center gap-1 rounded-xl px-2 py-1 text-center text-xs font-bold ring-2 ring-green-500 hover:opacity-80">
+                        Wash area
+                      </button>
+                      <button className="text-grey-600 flex h-auto justify-center gap-1 rounded-xl px-2 py-1 text-center text-xs font-bold ring-2 ring-green-500 hover:opacity-80">
+                        Parking lot
+                      </button>
+                    </div>
                   </div>
                 </div>
 
