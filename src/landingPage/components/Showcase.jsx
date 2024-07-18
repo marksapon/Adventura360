@@ -146,7 +146,7 @@ const Showcase = () => {
           </Slider>
         </CarouselProvider>
       </div>
-      <div className="z-40 flex w-full flex-col items-center justify-start">
+      <div className="z-40 flex w-full flex-col items-center justify-start pb-12">
         <div className="relative aspect-video w-80">
           <img
             sizes="10"

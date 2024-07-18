@@ -7,6 +7,7 @@ import TechStack from "./components/TechStack";
 import Showcase from "./components/Showcase";
 import Introduction from "./components/Introduction";
 import Developers from "./components/Developers";
+import Devs from "./components/devs";
 
 function LandingPage() {
   useEffect(() => {
@@ -19,9 +20,10 @@ function LandingPage() {
       <NavBar />
       <OurTech />
       <Introduction />
-      <TechStack />
+      {/* <TechStack /> */}
       <Showcase />
-      <Developers />
+      {/* <Developers /> */}
+      <Devs />
     </>
   );
 }

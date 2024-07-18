@@ -43,7 +43,7 @@ const Introduction = () => {
 
       {/* Motto? */}
 
-      <div className="mx-auto max-w-screen-2xl bg-slate-200 px-4 py-12 sm:py-16 lg:px-14">
+      <div className="mx-auto max-w-screen-2xl bg-gray-200 px-4 py-12 sm:py-16 lg:px-14">
         <div className="flex flex-col items-center justify-between lg:flex-row ">
           <div className="md:w-1/2">
             <h2 className="mb-4 text-3xl font-semibold text-gray-700 md:text-4xl">
