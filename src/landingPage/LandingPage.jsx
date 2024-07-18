@@ -7,6 +7,7 @@ import TechStack from "./components/TechStack";
 import Showcase from "./components/Showcase";
 import Introduction from "./components/Introduction";
 import Developers from "./components/Developers";
+import Gallery from "./components/Gallery";
 
 function LandingPage() {
   useEffect(() => {
@@ -20,6 +21,7 @@ function LandingPage() {
       <OurTech />
       <Introduction />
       <TechStack />
+      {/* <Gallery /> */}
       <Showcase />
       <Developers />
     </>

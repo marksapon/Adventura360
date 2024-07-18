@@ -20,11 +20,15 @@ const OurTech = () => {
           <h1 className="relative w-full px-2 text-center text-3xl font-bold leading-snug tracking-tight duration-300 md:pl-8 md:text-left md:text-4xl lg:text-5xl xl:text-6xl">
             Explore the University in a <s />
             <span className="font-bold leading-snug tracking-tight text-orange-500 duration-300">
-              360 degree <s />
+              360 degree
+              <s />
             </span>
             view with <s />
             <span className="font-black leading-snug tracking-tight text-green-600 duration-300">
-              Adventura 360°
+              Adventura{" "}
+              <span className="font-bold leading-snug tracking-tight text-orange-500 duration-300">
+                360°
+              </span>
             </span>
             .
           </h1>

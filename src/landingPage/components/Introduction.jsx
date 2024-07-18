@@ -17,7 +17,8 @@ const Introduction = () => {
           <div className="mx-auto w-full text-center md:text-left xl:w-4/5">
             <h2 className="mb-4 text-base md:text-lg lg:w-4/5">
               <span className="font-bold text-green-600">
-                Adventura 360°&nbsp;
+                Adventura{" "}
+                <span className="font-bold text-orange-500">360°&nbsp;</span>
               </span>
               is an interactive campus map of{" "}
               <span className="font-semibold text-orange-500">
@@ -43,7 +44,7 @@ const Introduction = () => {
 
       {/* Motto? */}
 
-      <div className="mx-auto max-w-screen-2xl bg-slate-200 px-4 py-12 sm:py-16 lg:px-14">
+      <div className="mx-auto max-w-screen-2xl bg-white px-4 py-12 sm:py-16 lg:px-14">
         <div className="flex flex-col items-center justify-between lg:flex-row ">
           <div className="md:w-1/2">
             <h2 className="mb-4 text-3xl font-semibold text-gray-700 md:text-4xl">
