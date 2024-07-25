@@ -8,10 +8,6 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-// const containerVariants = {
-//   hidden: { opacity: 0 },
-//   visible: { opacity: 1, transition: { delay: 0.65, duration: 0.5 } },
-// };
 const containerVariants = {
   hidden: { scale: 0.8, opacity: 0 },
   visible: {
@@ -19,18 +15,65 @@ const containerVariants = {
     opacity: 1,
     transition: {
       delay: 0.65,
-      duration: 0.8, // Slightly longer duration for the bounce effect
-      type: "spring", // Use spring physics for bounce
-      stiffness: 70, // Control the stiffness of the spring
-      damping: 10, // Control the damping (less damping = more bounce)
+      duration: 0.8,
+      type: "spring",
+      stiffness: 70,
+      damping: 10,
     },
   },
 };
 
-// Define a simple Footer component
+const developers = [
+  {
+    name: "John Joshua Sagpao",
+    role: "Adventura 360°'s UI/UX Designer & Frontend Developer",
+    imgSrc: "../assets/Landing Page/developers/josh.webp",
+    socialLinks: {
+      facebook: "https://www.facebook.com/johnjoshua.solitesagpao",
+      instagram: "https://www.instagram.com/joshuasagpao/",
+      email: "mailto:johnjoshua.sagpao@cvsu.edu.ph",
+      github: "https://github.com/JoshuaSagpao",
+    },
+  },
+  {
+    name: "Kevin Roi Nuesca",
+    role: "Adventura 360°'s UI/UX Designer & Frontend Developer",
+    imgSrc: "../assets/Landing Page/developers/kevin.webp",
+    socialLinks: {
+      facebook: "https://facebook.com/username",
+      instagram: "https://instagram.com/username",
+      email: "mailto:kevinroi.nuesca@cvsu.edu.ph",
+      github: "https://github.com/username",
+      linkedin: "https://www.linkedin.com/in/kevin-roi-nuesca-07b756281/",
+    },
+  },
+  {
+    name: "Mark Dharel Sapon",
+    role: "Adventura 360°'s Front & Backend Developer",
+    imgSrc: "../assets/Landing Page/developers/maki.webp",
+    socialLinks: {
+      facebook: "https://www.facebook.com/mark.sapon.33",
+      instagram: "https://www.instagram.com/dharelo_/",
+      email: "mailto:markdharel.sapon@cvsu.edu.ph",
+      github: "https://github.com/marksapon",
+      linkedin: "https://www.linkedin.com/in/marksapon23/",
+    },
+  },
+  {
+    name: "Alex Kal-El Buenviaje",
+    role: "Adventura 360°'s Project Manager",
+    imgSrc: "../assets/Landing Page/developers/lex.webp",
+    socialLinks: {
+      facebook: "https://www.facebook.com/LexBuenviaje",
+      instagram: "https://www.instagram.com/lxbnvj/",
+      email: "mailto:alexkalel.buenviaje@cvsu.edu.ph",
+    },
+  },
+];
+
 const Footer = () => (
-  <footer className=" mt-8 py-4 text-center">
-    <p className="text-muted-foreground text-center text-sm text-gray-500">
+  <footer className="mt-8 py-4 text-center">
+    <p className="text-center text-sm text-gray-500 text-muted-foreground">
       © {new Date().getFullYear()} Adventura 360° is a project by Sen'Py. All
       rights reserved.
     </p>
@@ -57,152 +100,54 @@ const Devs = () => {
             State University - Indang Campus, known as Sen'Py.
           </h2>
         </motion.div>
-        <div class="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
-          <motion.div
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="rounded-3xl border p-8 shadow-xl"
-          >
-            <img
-              src="../assets/Landing Page/developers/josh.webp"
-              alt="Josh picture"
-              className="h-30 mx-auto mb-4 w-36 rounded-full"
-            />
-            <h3 className="mb-1 text-xl font-bold lg:text-2xl">
-              <p>John Joshua Sagpao</p>
-            </h3>
-            <p className="text-gray-500">
-              Adventura 360°'s UI/UX Designer & Frontend Developer
-            </p>
-            <div className="m-2 flex justify-center gap-4 ">
-              <a
-                href="https://www.facebook.com/johnjoshua.solitesagpao"
-                target="_blank"
-              >
-                <FaFacebook className="text-black hover:text-green-500" />
-              </a>
-              <a href="https://www.instagram.com/joshuasagpao/" target="_blank">
-                <FaInstagram className="text-black hover:text-green-500" />
-              </a>
-              <a href="mailto:johnjoshua.sagpao@cvsu.edu.ph">
-                <FaEnvelope className="text-black hover:text-green-500" />
-              </a>
-              <a href="https://github.com/JoshuaSagpao" target="_blank">
-                <FaGithub className="text-black hover:text-green-500" />
-              </a>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.25 }}
-            className="rounded-3xl border p-8 shadow-xl"
-          >
-            <img
-              src="../assets/Landing Page/developers/kevin.webp"
-              alt="Kebs picture"
-              className="h-30 mx-auto mb-4 w-36 rounded-full"
-            />
-            <h3 className="mb-1 text-xl font-bold lg:text-2xl">
-              <p>Kevin Roi Nuesca</p>
-            </h3>
-            <p className="text-gray-500">
-              Adventura 360°'s UI/UX Designer & Frontend Developer
-            </p>
-            <div className="m-2 flex justify-center gap-4 ">
-              <a href="https://facebook.com/username" target="_blank">
-                <FaFacebook className="text-black hover:text-green-500" />
-              </a>
-              <a href="https://instagram.com/username" target="_blank">
-                <FaInstagram className="text-black hover:text-green-500" />
-              </a>
-              <a href="mailto:kevinroi.nuesca@cvsu.edu.ph" target="_blank">
-                <FaEnvelope className="text-black hover:text-green-500" />
-              </a>
-              <a href="https://github.com/username" target="_blank">
-                <FaGithub className="text-black hover:text-green-500" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/kevin-roi-nuesca-07b756281/"
-                target="_blank"
-              >
-                <FaLinkedin className="text-black hover:text-green-500" />
-              </a>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.35 }}
-            className="rounded-3xl border p-8 shadow-xl"
-          >
-            <img
-              src="../assets/Landing Page/developers/maki.webp"
-              alt="Mark picture"
-              className="h-30 mx-auto mb-4 w-36 rounded-full"
-            />
-            <h3 className="mb-1 text-xl font-bold lg:text-2xl">
-              <p>Mark Dharel Sapon</p>
-            </h3>
-            <p className="text-gray-500">
-              Adventura 360°'s Front & Backend Developer
-            </p>
-            <div className="m-2 flex justify-center gap-4 ">
-              <a href="https://www.facebook.com/mark.sapon.33" target="_blank">
-                <FaFacebook className="text-black hover:text-green-500" />
-              </a>
-              <a href="https://www.instagram.com/dharelo_/" target="_blank">
-                <FaInstagram className="text-black hover:text-green-500" />
-              </a>
-              <a href="mailto:markdharel.sapon@cvsu.edu.ph" target="_blank">
-                <FaEnvelope className="text-black hover:text-green-500" />
-              </a>
-              <a href="https://github.com/marksapon" target="_blank">
-                <FaGithub className="text-black hover:text-green-500" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/marksapon23/"
-                target="_blank"
-              >
-                <FaLinkedin className="text-black hover:text-green-500" />
-              </a>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.45 }}
-            className="rounded-3xl border p-8 shadow-xl"
-          >
-            <img
-              src="../assets/Landing Page/developers/lex.webp"
-              alt="Lex picture"
-              className="h-30 mx-auto mb-4 flex w-36 rounded-full"
-            />
-            <h3 className="mb-1 text-xl font-bold lg:text-2xl">
-              <p>Alex Kal-El Buenviaje</p>
-            </h3>
-            <p className="text-gray-500">Adventura 360°'s Project Manager</p>
-            <div className="m-2 flex justify-center gap-4 ">
-              <a href="https://www.facebook.com/LexBuenviaje" target="_blank">
-                <FaFacebook className="text-black hover:text-green-500" />
-              </a>
-              <a href="https://www.instagram.com/lxbnvj/" target="_blank">
-                <FaInstagram className="text-black hover:text-green-500" />
-              </a>
-              <a href="mailto:alexkalel.buenviaje@cvsu.edu.ph" target="_blank">
-                <FaEnvelope className="text-black hover:text-green-500" />
-              </a>
-            </div>
-          </motion.div>
+        <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
+          {developers.map((dev, index) => (
+            <motion.div
+              key={dev.name}
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.2 * (index + 1) }}
+              className="flex flex-col justify-between rounded-3xl border p-8 shadow-xl"
+            >
+              <img
+                src={dev.imgSrc}
+                alt={`${dev.name} picture`}
+                className="h-30 mx-auto mb-4 w-36 rounded-full"
+              />
+              <h3 className="mb-1 text-nowrap text-xl font-bold lg:text-2xl">
+                <p>{dev.name}</p>
+              </h3>
+              <p className="text-gray-500">{dev.role}</p>
+              <div className="m-2 flex justify-center gap-4 ">
+                {dev.socialLinks.facebook && (
+                  <a href={dev.socialLinks.facebook} target="_blank">
+                    <FaFacebook className="text-black hover:text-green-500" />
+                  </a>
+                )}
+                {dev.socialLinks.instagram && (
+                  <a href={dev.socialLinks.instagram} target="_blank">
+                    <FaInstagram className="text-black hover:text-green-500" />
+                  </a>
+                )}
+                {dev.socialLinks.email && (
+                  <a href={dev.socialLinks.email} target="_blank">
+                    <FaEnvelope className="text-black hover:text-green-500" />
+                  </a>
+                )}
+                {dev.socialLinks.github && (
+                  <a href={dev.socialLinks.github} target="_blank">
+                    <FaGithub className="text-black hover:text-green-500" />
+                  </a>
+                )}
+                {dev.socialLinks.linkedin && (
+                  <a href={dev.socialLinks.linkedin} target="_blank">
+                    <FaLinkedin className="text-black hover:text-green-500" />
+                  </a>
+                )}
+              </div>
+            </motion.div>
+          ))}
         </div>
         <Footer />
       </div>

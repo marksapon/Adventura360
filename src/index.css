@@ -78,3 +78,7 @@ code {
   border-right: 5px solid transparent;
   border-bottom: 5px solid white;
 }
+
+.text-shadow-lg {
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+}

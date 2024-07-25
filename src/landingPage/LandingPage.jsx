@@ -20,9 +20,7 @@ function LandingPage() {
       <NavBar />
       <OurTech />
       <Introduction />
-      {/* <TechStack /> */}
       <Showcase />
-      {/* <Developers /> */}
       <Devs />
     </>
   );
