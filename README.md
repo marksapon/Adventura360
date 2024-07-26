@@ -30,5 +30,4 @@ Explore **Cavite State University Main Campus** through an interactive tour that
 - [**Mark Sapon**](https://github.com/marksapon) - Fullstack Developer
 - [**Joshua Sagpao**](https://github.com/JoshuaSagpao) - UI/UX Frontend Developer
 - [**Kevin Roi Nuesca**](https://github.com/tfudoinkebs) - UI/UX Frontend Developer
-- [**Alex Buenviaje**] 
-- 
+- [**Lexstrike**](https://github.com/Lexstrike)
