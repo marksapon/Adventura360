@@ -40,12 +40,12 @@ const Showcase = () => {
   return (
     <div
       id="Showcase"
-      className="flex h-full w-full flex-col items-center justify-center"
+      className="flex h-full w-full flex-col items-center justify-center pb-8"
     >
       <h1 className="mb-16 text-center text-2xl ">ABOUT</h1>
 
       <BlurFade delay={0.25 * 3} inView>
-        <h2 className="text-cvsu font-bitter mb-16 px-2 text-center text-3xl font-bold md:text-5xl">
+        <h2 className="mb-16 px-2 text-center font-bitter text-3xl font-bold text-cvsu md:text-5xl">
           CAVITE STATE UNIVERSITY
         </h2>
       </BlurFade>
@@ -62,11 +62,15 @@ const Showcase = () => {
                 />
               </div>
               <h1 className="col-span-1 text-center text-lg leading-relaxed  md:col-span-3 md:text-start">
-                <b className=" text-customgreen">Cavite State University</b>, is
-                simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type.
+                <b className=" text-customgreen">Cavite State University</b>,
+                Cavite State University (CvSU) began in 1906 as Indang
+                Intermediate School and underwent several name changes before
+                becoming Don Severino Agricultural College in 1964. It was
+                renamed Cavite State University in 1998. The university now has
+                11 campuses and offers nearly 100 programs to over 25,000
+                students. CvSU is recognized for its research and development
+                roles and is committed to excellence in education, aiming to
+                produce globally competitive and morally upright professionals.
               </h1>
             </div>
           </div>
@@ -78,7 +82,7 @@ const Showcase = () => {
           <h1 className="mb-4 text-xl  font-medium tracking-widest lg:mb-8 lg:text-2xl">
             FEATURES
           </h1>
-          <h2 className="text-customgreen font-meduim font-bitter mb-8 px-2 text-center text-2xl leading-snug md:text-4xl lg:mb-16 lg:text-6xl">
+          <h2 className="font-meduim mb-8 px-2 text-center font-bitter text-2xl leading-snug text-customgreen md:text-4xl lg:mb-16 lg:text-6xl">
             Experience a <br />
             feature-rich interactive tour
           </h2>
@@ -95,7 +99,7 @@ const Showcase = () => {
                     <h1 className="w-fit rounded-full border border-black px-10 py-1 text-sm">
                       {div.title}
                     </h1>
-                    <h2 className="text-customgreen font-bitter text-2xl leading-snug md:text-3xl">
+                    <h2 className="font-bitter text-2xl leading-snug text-customgreen md:text-3xl">
                       {div.heading}
                     </h2>
                     <p className="text-base md:text-xl">{div.description}</p>

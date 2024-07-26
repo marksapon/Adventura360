@@ -62,24 +62,24 @@ const NavBar = () => {
             </ScrollLink>
           </div>
         </DockIcon>
-        <DockIcon className={"text-nowrap"}>
+        <DockIcon>
           <ScrollLink
-            to="Showcase"
+            to="Explore"
             smooth={true}
             duration={500}
             className="dock-icon"
           >
-            Contact us
+            Explore
           </ScrollLink>
         </DockIcon>
-        <DockIcon>
+        <DockIcon className={"text-nowrap"}>
           <ScrollLink
             to="Developers"
             smooth={true}
             duration={500}
             className="dock-icon"
           >
-            Explore
+            Contact us
           </ScrollLink>
         </DockIcon>
       </Dock>
