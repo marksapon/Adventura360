@@ -92,12 +92,8 @@ const Devs = () => {
           animate="visible"
           variants={containerVariants}
         >
-          <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-black">
-            Meet the <span className="text-green-600">developers</span>
-          </h2>
-          <h2 className="mt-4 text-center text-base text-gray-500">
-            Meet the passionate team of Computer Science students at Cavite
-            State University - Indang Campus, known as Sen'Py.
+          <h2 className="my-8 text-4xl font-extrabold tracking-tight text-green-700">
+            TEAM BEHIND ADVENTURA
           </h2>
         </motion.div>
         <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-2">

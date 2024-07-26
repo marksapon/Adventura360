@@ -1,12 +1,31 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { GrLinkNext } from "react-icons/gr";
 
 const OurTech = () => {
+  const imgRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (imgRef.current) {
+        const scrollPosition = window.scrollY;
+        imgRef.current.style.transform = `translateY(${scrollPosition * -0.5}px)`;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const navigate = useNavigate();
+
   return (
     <div id="OurTech" className="relative h-auto w-full">
       <img
+        ref={imgRef}
         src="/assets/Landing Page/bg.png"
         alt="bg"
         className="h-screen w-full object-cover md:h-full md:object-contain"

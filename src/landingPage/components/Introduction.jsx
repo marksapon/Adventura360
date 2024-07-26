@@ -1,17 +1,22 @@
 import React from "react";
+import BlurFade from "@/components/magicui/blur-fade";
 
 const Introduction = () => {
-  const AboutImg = "/assets/Landing Page/introduction/phone girl.png";
-
   return (
     <div
-      className="mx-auto my-8 max-w-screen-2xl px-4 lg:px-14"
+      className="mx-auto mb-8 max-w-screen-2xl px-4 lg:px-14"
       id="Introduction"
     >
-      <h1 className="flex flex-col items-center justify-center py-48 text-2xl text-green-600">
-        "Exploring places, so we can highlight them to you." <br />{" "}
-        <b>- Adventura Team</b>
-      </h1>
+      <BlurFade delay={0.25} inView>
+        <h1 className="font-bitter text-cvsu flex flex-col items-center justify-center text-2xl">
+          "Exploring places, so we can highlight them to you."
+        </h1>
+      </BlurFade>
+      <BlurFade delay={0.25 * 2} inView>
+        <h1 className="font-bitter text-cvsu flex flex-col items-center justify-center pb-48 text-2xl font-bold">
+          - Adventura Team
+        </h1>
+      </BlurFade>
     </div>
   );
 };
