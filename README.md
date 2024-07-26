@@ -25,3 +25,10 @@ Explore **Cavite State University Main Campus** through an interactive tour that
 - **Shareable View and Location**: Ability to share what you see with other people.
 - **Login System**: Security purposes to control and limit what places are only for the public eye.
 - **Building List**: List of all the buildings currently existing in the location.
+
+# The team behind Adventura (Also check out their works)
+- [**Mark Sapon**](https://github.com/marksapon) - Fullstack Developer
+- [**Joshua Sagpao**](https://github.com/JoshuaSagpao) - UI/UX Frontend Developer
+- [**Kevin Roi Nuesca**](https://github.com/tfudoinkebs) - UI/UX Frontend Developer
+- [**Alex Buenviaje**] 
+- 
