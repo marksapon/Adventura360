@@ -4,15 +4,11 @@ import { Dock, DockIcon } from "@/components/magicui/dock";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-
   const [rotationValue, setRotationValue] = useState(0);
-  const [rotation, setRotation] = useState("rotate-180");
 
   useEffect(() => {
     const handleScroll = (event) => {
-      // console.log("Scrolling:", window.scrollY);
       if (window.scrollY > 0) {
-        // console.log("Scrolling Values:", window.scrollY % 359);
         setRotationValue(window.scrollY % 359);
         setIsScrolled(true);
       } else {
@@ -25,15 +21,6 @@ const NavBar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  useEffect(() => {
-    console.log("Rotating");
-    const temp_val = Math.round(rotationValue);
-    let rotation_string = temp_val.toString();
-    rotation_string = "rotate-".concat(rotation_string);
-    console.log("Rotation Value:", rotation_string);
-    setRotation(rotation_string);
-  }, [rotationValue]);
 
   return (
     <div className="fixed z-10 -mt-4 flex h-20 w-full items-center justify-center md:text-xs">
