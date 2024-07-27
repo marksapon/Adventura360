@@ -79,6 +79,7 @@ module.exports = {
       fontFamily: {
         bebas: ['"Bebas Neue"', "sans-serif"],
         bitter: ['"Bitter"', "serif"],
+        quicksand: ['"Quicksand"', ""]
       },
     },
   },

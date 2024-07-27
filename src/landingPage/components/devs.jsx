@@ -26,7 +26,7 @@ const containerVariants = {
 const developers = [
   {
     name: "John Joshua Sagpao",
-    role: "Adventura 360°'s UI/UX Designer & Frontend Developer",
+    role: "UI/UX Designer & Frontend Developer",
     imgSrc: "../assets/Landing Page/developers/josh.webp",
     socialLinks: {
       facebook: "https://www.facebook.com/johnjoshua.solitesagpao",
@@ -37,7 +37,7 @@ const developers = [
   },
   {
     name: "Kevin Roi Nuesca",
-    role: "Adventura 360°'s UI/UX Designer & Frontend Developer",
+    role: "UI/UX Designer & Frontend Developer",
     imgSrc: "../assets/Landing Page/developers/kevin.webp",
     socialLinks: {
       facebook: "https://facebook.com/username",
@@ -49,19 +49,19 @@ const developers = [
   },
   {
     name: "Mark Dharel Sapon",
-    role: "Adventura 360°'s Front & Backend Developer",
+    role: "Fullstack Developer",
     imgSrc: "../assets/Landing Page/developers/maki.webp",
     socialLinks: {
       facebook: "https://www.facebook.com/mark.sapon.33",
       instagram: "https://www.instagram.com/dharelo_/",
-      email: "mailto:markdharel.sapon@cvsu.edu.ph",
+      email: "mailto:marksapon23@gmail.com.ph",
       github: "https://github.com/marksapon",
       linkedin: "https://www.linkedin.com/in/marksapon23/",
     },
   },
   {
     name: "Alex Kal-El Buenviaje",
-    role: "Adventura 360°'s Project Manager",
+    role: "Project Manager",
     imgSrc: "../assets/Landing Page/developers/lex.webp",
     socialLinks: {
       facebook: "https://www.facebook.com/LexBuenviaje",
@@ -73,7 +73,7 @@ const developers = [
 
 const Footer = () => (
   <footer className="mt-8 py-4 text-center">
-    <p className="text-center text-sm text-gray-500 text-muted-foreground">
+    <p className="text-muted-foreground text-center text-sm text-gray-500">
       © {new Date().getFullYear()} Adventura 360° is a project by Sen'Py. All
       rights reserved.
     </p>
@@ -82,18 +82,15 @@ const Footer = () => (
 
 const Devs = () => {
   return (
-    <div
-      className="mx-auto flex h-screen max-w-screen-xl px-4 pb-8 lg:px-6 lg:pb-12"
-      id="Developers"
-    >
+    <div className="mx-auto flex h-screen max-w-screen-xl px-4 pb-8 lg:px-6 lg:pb-12">
       <div className="mx-auto mb-8 max-w-screen-sm text-center lg:mb-16">
         <motion.div
           initial="hidden"
           animate="visible"
           variants={containerVariants}
         >
-          <h2 className="my-8 text-4xl font-extrabold tracking-tight text-green-700">
-            TEAM BEHIND ADVENTURA
+          <h2 className="my-8 font-bebas text-6xl font-extrabold tracking-wider text-green-600 drop-shadow-[0_3px_1px_rgba(0,0,0,0.4)]">
+            THE TEAM BEHIND ADVENTURA
           </h2>
         </motion.div>
         <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-2">

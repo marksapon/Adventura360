@@ -38,11 +38,9 @@ const Showcase = () => {
   ];
 
   return (
-    <div
-      id="Showcase"
-      className="flex h-full w-full flex-col items-center justify-center pb-8"
-    >
-      <h1 className="mb-16 text-center text-2xl ">ABOUT</h1>
+    <div className="flex h-full w-full flex-col items-center justify-center pb-8">
+      <div id="Showcase" />
+      <h1 className="mb-16 mt-32 text-center text-2xl ">ABOUT</h1>
 
       <BlurFade delay={0.25 * 3} inView>
         <h2 className="mb-16 px-2 text-center font-bitter text-3xl font-bold text-cvsu md:text-5xl">
@@ -50,7 +48,7 @@ const Showcase = () => {
         </h2>
       </BlurFade>
 
-      <div className="flex w-3/4 lg:w-2/3 ">
+      <div className="mb-20 flex w-3/4 lg:w-2/3 ">
         <BlurFade delay={0.25 * 4} inView>
           <div className="flex rounded-3xl bg-card p-6 shadow-md shadow-black/30 md:p-8 lg:p-12">
             <div className="grid grid-cols-1 items-center gap-4 md:grid-cols-4">
@@ -77,7 +75,9 @@ const Showcase = () => {
         </BlurFade>
       </div>
 
-      <div className="my-8 flex w-full px-4 md:w-3/4  md:px-0">
+      <div id="Introduction" />
+
+      <div className="mt-24 my-8 flex w-full px-4 md:w-3/4  md:px-0">
         <div className="flex w-full flex-col items-center justify-center rounded-3xl  bg-card py-8 shadow-md shadow-black/30">
           <h1 className="mb-4 text-xl  font-medium tracking-widest lg:mb-8 lg:text-2xl">
             FEATURES

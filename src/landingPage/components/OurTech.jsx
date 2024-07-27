@@ -30,24 +30,32 @@ const OurTech = () => {
         alt="bg"
         className="h-screen w-full object-cover md:h-full md:object-contain"
       />
-      <div className="absolute inset-0 flex items-center justify-center p-4 md:items-start md:justify-start md:p-16">
-        <div className="flex flex-col items-center justify-center text-center md:items-start md:text-left">
-          <h1 className="text-shadow-lg text-4xl font-black md:mt-24 md:text-5xl lg:text-6xl">
-            Explore
-            <span className="block text-green-500">
+      <div className=" absolute inset-0 flex h-auto w-auto items-center justify-center p-4 md:items-start md:justify-start md:p-16">
+        <div className="flex h-auto w-auto flex-col items-center justify-center px-10  text-center md:items-start  md:text-left">
+          <h1 className="space-y-1 font-bebas tracking-normal text-white drop-shadow-[0_3px_3px_rgba(0,0,0,0.4)] md:mt-24 md:text-5xl lg:text-[4.7rem]">
+            <span>Explore</span>
+            <span className="block text-[#4FE137]">
               Cavite State University
             </span>
-            <span className="block text-orange-400">Indang Campus</span>
+            <span className="block text-[#F7B73C]">Indang Campus</span>
           </h1>
-          <h2 className="mt-8 text-base text-white md:mt-16 md:text-xl">
-            <b>A unique take of touring</b> in today's generation. <br />
-            An interactive virtual tour using <b>Adventura 360°.</b>
+
+          <h2 className="mt-8 font-bitter text-base text-white md:mt-16 md:text-xl">
+            <b>A unique take of touring</b>{" "}
+            <span className="font-light">in today's generation.</span> <br />
+            <span className="font-light">
+              An interactive virtual tour using
+            </span>
+            <b> Adventura 360°.</b>
           </h2>
           <button
             onClick={() => navigate("/login")}
-            className="mt-4 flex gap-4 rounded-xl bg-orange-300 px-6 py-4 text-xl font-bold text-white shadow-md hover:bg-opacity-80 md:text-4xl"
+            className="mt-4 flex w-96 items-center justify-center gap-4 rounded-xl bg-[#FFB155] px-6 py-4 font-bebas text-xl tracking-wide text-white shadow-md hover:bg-orange-300 md:text-4xl"
           >
-            EXPLORE NOW <GrLinkNext />
+            <span className="absolute">EXPLORE NOW</span>
+            <span className="flex w-full justify-end ">
+              <GrLinkNext />
+            </span>
           </button>
         </div>
       </div>

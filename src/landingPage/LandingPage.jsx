@@ -3,10 +3,11 @@ import Cookies from "js-cookie";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import OurTech from "./components/OurTech";
-import Showcase from "./components/Showcase";
+import Feature from "./components/Feature";
 import Introduction from "./components/Introduction";
 import Devs from "./components/devs";
 import Explore from "./components/Explore";
+
 function LandingPage() {
   useEffect(() => {
     // Remove the cookie when the component is mounted
@@ -18,7 +19,7 @@ function LandingPage() {
       <NavBar />
       <OurTech />
       <Introduction />
-      <Showcase />
+      <Feature />
       <Explore />
       <Devs />
     </>
