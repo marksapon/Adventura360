@@ -75,11 +75,13 @@ module.exports = {
         card: "#FFF9F4",
         customgreen: "#1A8000",
         cvsu: "#5D8552",
+        gray_black: "#535353",
       },
       fontFamily: {
         bebas: ['"Bebas Neue"', "sans-serif"],
         bitter: ['"Bitter"', "serif"],
-        quicksand: ['"Quicksand"', ""]
+        quicksand: ['"Quicksand"'],
+        montserrat: ['"Montserrat"'],
       },
     },
   },

@@ -4,12 +4,13 @@ import { IoArrowForwardCircleOutline } from "react-icons/io5";
 const Explore = () => {
   return (
     <>
-      <div id="Developers" />
+      <div id="Adventura" />
       <div className="mb-20 mt-36 h-full w-full">
-        <div id="Developers" />
         <div className="flex flex-col items-center">
           <div className="grid w-full grid-cols-4 justify-center text-center">
-            <h1 className="col-span-3 text-2xl text-black">CREATED USING</h1>
+            <h1 className="col-span-3 font-quicksand text-xl font-medium text-black">
+              CREATED USING
+            </h1>
           </div>
           <img
             src="/assets/Landing Page/Landlogo.png"
@@ -27,12 +28,11 @@ const Explore = () => {
           </div>
           <div className="relative flex items-center justify-center text-center">
             <div className="absolute inset-1 flex flex-col items-center justify-center space-y-2 px-12 pt-10">
-              <p className="px-4 text-justify text-sm font-normal italic text-white lg:text-base">
-                <b>Adventura360°</b> is an interactive map and tour made by
-                student researchers of BS Computer Science.{" "}
-                <b>Adventura360° </b>
-                is designed to guide and highlight the locations to entice the
-                target audiences.
+              <p className="mb-5 px-4 text-justify font-quicksand text-sm font-normal italic text-white lg:text-base ">
+                <b className="font-bitter">Adventura 360°</b> is an interactive
+                map and tour made by student researchers of BS Computer Science.{" "}
+                Adventura360° is designed to guide and highlight the locations
+                to entice the target audiences.
               </p>
               <h1 className="flex text-nowrap font-bitter text-xl font-bold italic text-white ">
                 Learn more about Adventura360°

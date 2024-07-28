@@ -73,7 +73,7 @@ const developers = [
 
 const Footer = () => (
   <footer className="mt-8 py-4 text-center">
-    <p className="text-muted-foreground text-center text-sm text-gray-500">
+    <p className="text-muted-foreground text-center font-bitter  text-sm text-gray-500">
       © {new Date().getFullYear()} Adventura 360° is a project by Sen'Py. All
       rights reserved.
     </p>
@@ -82,69 +82,73 @@ const Footer = () => (
 
 const Devs = () => {
   return (
-    <div className="mx-auto flex h-screen max-w-screen-xl px-4 pb-8 lg:px-6 lg:pb-12">
-      <div className="mx-auto mb-8 max-w-screen-sm text-center lg:mb-16">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
-        >
-          <h2 className="my-8 font-bebas text-6xl font-extrabold tracking-wider text-green-600 drop-shadow-[0_3px_1px_rgba(0,0,0,0.4)]">
-            THE TEAM BEHIND ADVENTURA
-          </h2>
-        </motion.div>
-        <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
-          {developers.map((dev, index) => (
-            <motion.div
-              key={dev.name}
-              initial={{ y: 100, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, delay: 0.2 * (index + 1) }}
-              className="flex flex-col justify-between rounded-3xl border p-8 shadow-xl"
-            >
-              <img
-                src={dev.imgSrc}
-                alt={`${dev.name} picture`}
-                className="h-30 mx-auto mb-4 w-36 rounded-full"
-              />
-              <h3 className="mb-1 text-nowrap text-xl font-bold lg:text-2xl">
-                <p>{dev.name}</p>
-              </h3>
-              <p className="text-gray-500">{dev.role}</p>
-              <div className="m-2 flex justify-center gap-4 ">
-                {dev.socialLinks.facebook && (
-                  <a href={dev.socialLinks.facebook} target="_blank">
-                    <FaFacebook className="text-black hover:text-green-500" />
-                  </a>
-                )}
-                {dev.socialLinks.instagram && (
-                  <a href={dev.socialLinks.instagram} target="_blank">
-                    <FaInstagram className="text-black hover:text-green-500" />
-                  </a>
-                )}
-                {dev.socialLinks.email && (
-                  <a href={dev.socialLinks.email} target="_blank">
-                    <FaEnvelope className="text-black hover:text-green-500" />
-                  </a>
-                )}
-                {dev.socialLinks.github && (
-                  <a href={dev.socialLinks.github} target="_blank">
-                    <FaGithub className="text-black hover:text-green-500" />
-                  </a>
-                )}
-                {dev.socialLinks.linkedin && (
-                  <a href={dev.socialLinks.linkedin} target="_blank">
-                    <FaLinkedin className="text-black hover:text-green-500" />
-                  </a>
-                )}
-              </div>
-            </motion.div>
-          ))}
+    <>
+      <div id="Developers" />
+      <div className="mx-auto mt-44 flex h-auto max-w-screen-xl items-center  justify-center px-4 lg:px-6">
+        <div className="mb-8 flex max-w-screen-sm flex-col items-center justify-center text-center lg:mb-16">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+          >
+            <h2 className="my-8 font-bitter text-5xl font-medium tracking-wide text-cvsu drop-shadow-[0_3px_1px_rgba(0,0,0,0.4)]">
+              THE TEAM BEHIND ADVENTURA
+            </h2>
+          </motion.div>
+          {/* lg:grid-cols-2 */}
+          <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:flex">
+            {developers.map((dev, index) => (
+              <motion.div
+                key={dev.name}
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.2 * (index + 1) }}
+                className="flex flex-col justify-between rounded-3xl border p-8 shadow-xl"
+              >
+                <img
+                  src={dev.imgSrc}
+                  alt={`${dev.name} picture`}
+                  className="h-30 mx-auto mb-4 w-36 rounded-full"
+                />
+                <h3 className="mb-1 text-nowrap text-xl font-bold lg:text-2xl">
+                  <p>{dev.name}</p>
+                </h3>
+                <p className="text-gray-500">{dev.role}</p>
+                <div className="m-2 flex justify-center gap-4 ">
+                  {dev.socialLinks.facebook && (
+                    <a href={dev.socialLinks.facebook} target="_blank">
+                      <FaFacebook className="text-black hover:text-green-500" />
+                    </a>
+                  )}
+                  {dev.socialLinks.instagram && (
+                    <a href={dev.socialLinks.instagram} target="_blank">
+                      <FaInstagram className="text-black hover:text-green-500" />
+                    </a>
+                  )}
+                  {dev.socialLinks.email && (
+                    <a href={dev.socialLinks.email} target="_blank">
+                      <FaEnvelope className="text-black hover:text-green-500" />
+                    </a>
+                  )}
+                  {dev.socialLinks.github && (
+                    <a href={dev.socialLinks.github} target="_blank">
+                      <FaGithub className="text-black hover:text-green-500" />
+                    </a>
+                  )}
+                  {dev.socialLinks.linkedin && (
+                    <a href={dev.socialLinks.linkedin} target="_blank">
+                      <FaLinkedin className="text-black hover:text-green-500" />
+                    </a>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <Footer />
         </div>
-        <Footer />
       </div>
-    </div>
+    </>
   );
 };
 

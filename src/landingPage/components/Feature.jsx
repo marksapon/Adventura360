@@ -40,7 +40,9 @@ const Showcase = () => {
   return (
     <div className="flex h-full w-full flex-col items-center justify-center pb-8">
       <div id="Showcase" />
-      <h1 className="mb-16 mt-32 text-center text-2xl ">ABOUT</h1>
+      <h1 className="mb-16 mt-32 text-center font-quicksand text-xl font-medium tracking-widest ">
+        ABOUT
+      </h1>
 
       <BlurFade delay={0.25 * 3} inView>
         <h2 className="mb-16 px-2 text-center font-bitter text-3xl font-bold text-cvsu md:text-5xl">
@@ -59,16 +61,18 @@ const Showcase = () => {
                   className="object-fill"
                 />
               </div>
-              <h1 className="col-span-1 text-center text-lg leading-relaxed  md:col-span-3 md:text-start">
-                <b className=" text-customgreen">Cavite State University</b>,
-                Cavite State University (CvSU) began in 1906 as Indang
-                Intermediate School and underwent several name changes before
-                becoming Don Severino Agricultural College in 1964. It was
-                renamed Cavite State University in 1998. The university now has
-                11 campuses and offers nearly 100 programs to over 25,000
-                students. CvSU is recognized for its research and development
-                roles and is committed to excellence in education, aiming to
-                produce globally competitive and morally upright professionals.
+              <h1 className="col-span-1 text-center font-quicksand text-base leading-relaxed  md:col-span-3 md:text-start">
+                <b className=" font-bitter text-cvsu">
+                  Cavite State University
+                </b>
+                , began in 1906 as Indang Intermediate School and underwent
+                several name changes before becoming Don Severino Agricultural
+                College in 1964. It was renamed Cavite State University in 1998.
+                The university now has 11 campuses and offers nearly 100
+                programs to over 25,000 students. CvSU is recognized for its
+                research and development roles and is committed to excellence in
+                education, aiming to produce globally competitive and morally
+                upright professionals.
               </h1>
             </div>
           </div>
@@ -77,12 +81,12 @@ const Showcase = () => {
 
       <div id="Introduction" />
 
-      <div className="mt-24 my-8 flex w-full px-4 md:w-3/4  md:px-0">
+      <div className="my-8 mt-24 flex w-full px-4 md:w-3/4  md:px-0">
         <div className="flex w-full flex-col items-center justify-center rounded-3xl  bg-card py-8 shadow-md shadow-black/30">
-          <h1 className="mb-4 text-xl  font-medium tracking-widest lg:mb-8 lg:text-2xl">
+          <h1 className="mb-4 font-quicksand text-xl font-medium tracking-widest lg:mb-8 lg:text-xl">
             FEATURES
           </h1>
-          <h2 className="font-meduim mb-8 px-2 text-center font-bitter text-2xl leading-snug text-customgreen md:text-4xl lg:mb-16 lg:text-6xl">
+          <h2 className="mb-8 px-2 text-center font-bitter text-2xl font-medium leading-snug text-customgreen md:text-4xl lg:mb-16 lg:text-6xl">
             Experience a <br />
             feature-rich interactive tour
           </h2>
@@ -96,13 +100,15 @@ const Showcase = () => {
                   } md:gap-2 md:px-24 lg:justify-between lg:px-44`}
                 >
                   <div className="flex w-full flex-col items-center gap-2 text-center md:w-4/6  md:items-start md:gap-8 md:text-start ">
-                    <h1 className="w-fit rounded-full border border-black px-10 py-1 text-sm">
+                    <h1 className="text-quicksand text-gray_black w-fit rounded-full border border-black px-10 py-1 text-sm font-bold">
                       {div.title}
                     </h1>
-                    <h2 className="font-bitter text-2xl leading-snug text-customgreen md:text-3xl">
+                    <h2 className="font-bitter text-2xl font-medium leading-snug text-customgreen md:text-3xl">
                       {div.heading}
                     </h2>
-                    <p className="text-base md:text-xl">{div.description}</p>
+                    <p className="text-justify text-gray_black font-quicksand text-base md:text-xl">
+                      {div.description}
+                    </p>
                   </div>
 
                   <div className="flex h-96">

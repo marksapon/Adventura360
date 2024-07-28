@@ -28,8 +28,8 @@ const NavBar = () => {
         direction="middle"
         className={`duration-250 transition-all ${
           isScrolled
-            ? "flex h-full w-full items-center justify-center"
-            : "flex w-full items-center justify-center md:w-[488px] md:rounded-2xl"
+            ? "text-gray_black flex h-full w-full items-center justify-center font-quicksand text-base font-semibold"
+            : "text-gray_black flex w-full items-center justify-center font-quicksand text-base font-semibold md:w-[488px] md:rounded-2xl"
         }`}
       >
         <DockIcon>
@@ -53,7 +53,7 @@ const NavBar = () => {
           </ScrollLink>
         </DockIcon>
 
-        <DockIcon className="rounded-full bg-white px-9 font-black text-green-800 shadow-lg">
+        <DockIcon className="rounded-full bg-white px-9 font-black text-[#5D8552] shadow-lg">
           <ScrollLink
             to="OurTech"
             smooth={true}
@@ -61,12 +61,23 @@ const NavBar = () => {
             className=" relative text-lg"
           >
             <div className="flex h-full w-full items-center justify-center">
-              <span>360°</span>
+              <span className="font-montserrat font-bold">360°</span>
               <span
                 className={`absolute h-16 w-16 rounded-full border-l-2 border-t-2 border-orange-400 px-[9px] py-[17px]`}
                 style={{ transform: `rotate(${rotationValue}deg)` }}
               />
             </div>
+          </ScrollLink>
+        </DockIcon>
+
+        <DockIcon>
+          <ScrollLink
+            to="Adventura"
+            smooth={true}
+            duration={500}
+            className="dock-icon"
+          >
+            <div className="bgorange rounded-lg">Adventura</div>
           </ScrollLink>
         </DockIcon>
 
@@ -78,17 +89,6 @@ const NavBar = () => {
             className="dock-icon"
           >
             Contact us
-          </ScrollLink>
-        </DockIcon>
-
-        <DockIcon>
-          <ScrollLink
-            to="Explore"
-            smooth={true}
-            duration={500}
-            className="dock-icon"
-          >
-            <div className="bgorange rounded-lg px-2">Explore</div>
           </ScrollLink>
         </DockIcon>
       </Dock>
