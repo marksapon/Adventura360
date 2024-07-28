@@ -61,19 +61,21 @@ const Showcase = () => {
                   className="object-fill"
                 />
               </div>
-              <h1 className="col-span-1 text-center font-quicksand text-base leading-relaxed  md:col-span-3 md:text-start">
-                <b className=" font-bitter text-cvsu">
-                  Cavite State University
-                </b>
-                , began in 1906 as Indang Intermediate School and underwent
-                several name changes before becoming Don Severino Agricultural
-                College in 1964. It was renamed Cavite State University in 1998.
-                The university now has 11 campuses and offers nearly 100
-                programs to over 25,000 students. CvSU is recognized for its
-                research and development roles and is committed to excellence in
-                education, aiming to produce globally competitive and morally
-                upright professionals.
-              </h1>
+              {
+                <h1 className="col-span-1 text-center font-quicksand text-base leading-relaxed  md:col-span-3 md:text-start">
+                  <b className=" font-bitter text-cvsu">
+                    Cavite State University
+                  </b>
+                  &nbsp; began in 1906 as Indang Intermediate School and
+                  underwent several name changes before becoming Don Severino
+                  Agricultural College in 1964. It was renamed Cavite State
+                  University in 1998. The university now has 11 campuses and
+                  offers nearly 100 programs to over 25,000 students. CvSU is
+                  recognized for its research and development roles and is
+                  committed to excellence in education, aiming to produce
+                  globally competitive and morally upright professionals.
+                </h1>
+              }
             </div>
           </div>
         </BlurFade>
@@ -100,13 +102,13 @@ const Showcase = () => {
                   } md:gap-2 md:px-24 lg:justify-between lg:px-44`}
                 >
                   <div className="flex w-full flex-col items-center gap-2 text-center md:w-4/6  md:items-start md:gap-8 md:text-start ">
-                    <h1 className="text-quicksand text-gray_black w-fit rounded-full border border-black px-10 py-1 text-sm font-bold">
+                    <h1 className="text-quicksand w-fit rounded-full border border-black px-10 py-1 text-sm font-bold text-gray_black">
                       {div.title}
                     </h1>
                     <h2 className="font-bitter text-2xl font-medium leading-snug text-customgreen md:text-3xl">
                       {div.heading}
                     </h2>
-                    <p className="text-justify text-gray_black font-quicksand text-base md:text-xl">
+                    <p className="text-justify font-quicksand text-base text-gray_black md:text-xl">
                       {div.description}
                     </p>
                   </div>

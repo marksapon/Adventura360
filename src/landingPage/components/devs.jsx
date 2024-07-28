@@ -25,6 +25,18 @@ const containerVariants = {
 
 const developers = [
   {
+    name: "Mark Dharel Sapon",
+    role: "Fullstack Developer",
+    imgSrc: "../assets/Landing Page/developers/macky.png",
+    socialLinks: {
+      facebook: "https://www.facebook.com/mark.sapon.33",
+      instagram: "https://www.instagram.com/dharelo_/",
+      email: "mailto:marksapon23@gmail.com.ph",
+      github: "https://github.com/marksapon",
+      linkedin: "https://www.linkedin.com/in/marksapon23/",
+    },
+  },
+  {
     name: "John Joshua Sagpao",
     role: "UI/UX Designer & Frontend Developer",
     imgSrc: "../assets/Landing Page/developers/josh.webp",
@@ -45,18 +57,6 @@ const developers = [
       email: "mailto:kevinroi.nuesca@cvsu.edu.ph",
       github: "https://github.com/username",
       linkedin: "https://www.linkedin.com/in/kevin-roi-nuesca-07b756281/",
-    },
-  },
-  {
-    name: "Mark Dharel Sapon",
-    role: "Fullstack Developer",
-    imgSrc: "../assets/Landing Page/developers/maki.webp",
-    socialLinks: {
-      facebook: "https://www.facebook.com/mark.sapon.33",
-      instagram: "https://www.instagram.com/dharelo_/",
-      email: "mailto:marksapon23@gmail.com.ph",
-      github: "https://github.com/marksapon",
-      linkedin: "https://www.linkedin.com/in/marksapon23/",
     },
   },
   {
@@ -85,7 +85,7 @@ const Devs = () => {
     <>
       <div id="Developers" />
       <div className="mx-auto mt-44 flex h-auto max-w-screen-xl items-center  justify-center px-4 lg:px-6">
-        <div className="mb-8 flex max-w-screen-sm flex-col items-center justify-center text-center lg:mb-16">
+        <div className="mb-8 flex max-w-screen-sm flex-col items-center justify-center gap-10 text-center lg:mb-16">
           <motion.div
             initial="hidden"
             animate="visible"
