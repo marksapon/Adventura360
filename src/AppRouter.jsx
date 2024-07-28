@@ -4,7 +4,6 @@ import Cookies from "js-cookie";
 import LandingPage from "./landingPage/LandingPage";
 import Login from "./loginPage/login";
 import Adventura360 from "./module360/Adventura360";
-import Adventuravn from "./landingPage/adventuravn";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const PrivateRoute = ({ children }) => {
@@ -37,7 +36,7 @@ const AppRouter = () => {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/adventuraVN" element={<Adventuravn />} />
+        
         <Route
           path="/app/*" 
           element={

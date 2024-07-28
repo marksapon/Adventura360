@@ -1,45 +1,62 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { GrLinkNext } from "react-icons/gr";
 
 const OurTech = () => {
+  const imgRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (imgRef.current) {
+        const scrollPosition = window.scrollY;
+        imgRef.current.style.transform = `translateY(${scrollPosition * -0.5}px)`;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const navigate = useNavigate();
+
   return (
-    <div
-      className="h-full w-full"
-      id="OurTech"
-      style={{
-        backgroundImage: `linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 30%), url('/assets/Landing Page/our tech/ourtech-bg.webp')`,
-        backgroundSize: "580px",
-        backgroundPosition: "right",
-        backgroundRepeat: "no-repeat",
-        userSelect: "none",
-      }}
-    >
-      <div className="z-40 mx-auto h-screen min-h-screen max-w-screen-2xl">
-        <div className="flex h-full w-full flex-col items-center justify-center gap-6 md:px-16 lg:w-2/3">
-          <h1 className="relative w-full px-2 text-center text-3xl font-bold leading-snug tracking-tight duration-300 md:pl-8 md:text-left md:text-4xl lg:text-5xl xl:text-6xl">
-            Explore the University in a <s />
-            <span className="font-bold leading-snug tracking-tight text-orange-500 duration-300">
-              360 degree
-              <s />
+    <div id="OurTech" className="relative h-auto w-full">
+      <img
+        ref={imgRef}
+        src="/assets/Landing Page/bg.png"
+        alt="bg"
+        className="h-screen w-full object-cover md:h-full md:object-contain"
+      />
+      <div className=" absolute inset-0 flex h-auto w-auto items-center justify-center p-4 md:items-start md:justify-start md:p-16">
+        <div className="flex h-auto w-auto flex-col items-center justify-center px-10  text-center md:items-start  md:text-left">
+          <h1 className="space-y-1 font-bebas tracking-normal text-white drop-shadow-[0_3px_3px_rgba(0,0,0,0.4)] md:mt-24 md:text-5xl lg:text-[4.7rem]">
+            <span>Explore</span>
+            <span className="block text-[#4FE137]">
+              Cavite State University
             </span>
-            view with <s />
-            <span className="font-black leading-snug tracking-tight text-green-600 duration-300">
-              Adventura{" "}
-              <span className="font-bold leading-snug tracking-tight text-orange-500 duration-300">
-                360°
-              </span>
-            </span>
-            .
+            <span className="block text-[#F7B73C]">Indang Campus</span>
           </h1>
-          <div className="flex w-full justify-center md:justify-start md:pl-8">
-            <button
-              className="hover:bg-green-00 rounded-lg border-2 bg-green-600 p-2 font-semibold text-white duration-300 hover:bg-green-500 md:px-6"
-              onClick={() => navigate("/login")}
-            >
-              Explore Adventura 360°
-            </button>
-          </div>
+
+          <h2 className="mt-8 font-bitter text-base text-white md:mt-16 md:text-xl">
+            <b>A unique take of touring</b>{" "}
+            <span className="font-light">in today's generation.</span> <br />
+            <span className="font-light">
+              An interactive virtual tour using
+            </span>
+            <b> Adventura 360°.</b>
+          </h2>
+          <button
+            onClick={() => navigate("/login")}
+            className="mt-4 flex w-96 items-center justify-center gap-4 rounded-xl bg-[#FFB155] px-6 py-4 font-bebas text-xl tracking-wide text-white shadow-md hover:bg-orange-300 md:text-4xl"
+          >
+            <span className="absolute">EXPLORE NOW</span>
+            <span className="flex w-full justify-end ">
+              <GrLinkNext />
+            </span>
+          </button>
         </div>
       </div>
     </div>

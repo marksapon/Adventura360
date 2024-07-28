@@ -3,11 +3,10 @@ import Cookies from "js-cookie";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import OurTech from "./components/OurTech";
-import TechStack from "./components/TechStack";
-import Showcase from "./components/Showcase";
+import Feature from "./components/Feature";
 import Introduction from "./components/Introduction";
-import Developers from "./components/Developers";
-import Gallery from "./components/Gallery";
+import Devs from "./components/devs";
+import Explore from "./components/Explore";
 
 function LandingPage() {
   useEffect(() => {
@@ -20,10 +19,9 @@ function LandingPage() {
       <NavBar />
       <OurTech />
       <Introduction />
-      <TechStack />
-      {/* <Gallery /> */}
-      <Showcase />
-      <Developers />
+      <Feature />
+      <Explore />
+      <Devs />
     </>
   );
 }
