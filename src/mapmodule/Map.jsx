@@ -1031,7 +1031,7 @@ const MapModule = ({
         <div className="pointer-events-none absolute z-10 flex h-full w-full justify-end pb-10">
           {/* Current Location Button */}
           <div className="group relative inline-block">
-            <div className="absolute right-full top-1/2 mr-2 w-32 -translate-y-1/2 transform rounded-lg bg-black px-3 py-2 text-center text-xs text-white opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
+            <div className="absolute right-full top-5 flex w-32 -translate-y-1/2 transform justify-center rounded-xl bg-black px-3 py-2 text-center font-quicksand text-xs text-white opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
               Current Location
             </div>
             <button
@@ -1264,9 +1264,16 @@ const MapModule = ({
             <div className={`${mapState === "full" ? "group" : "hidden"}`}>
               <div className="absolute right-0 top-0 m-2 flex flex-col items-center justify-center sm:flex-row-reverse lg:flex-col">
                 <div className="relative flex items-center justify-center ">
-                  <div className=" absolute right-full top-1/2 mr-2 w-32 -translate-y-1/2 transform rounded-lg bg-black px-3 py-2 text-center text-xs text-white opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
-                    Filter Overlays
-                  </div>
+                  {!filterClicked ? (
+                    <div className=" absolute right-full top-1/2 mr-2 w-32 -translate-y-1/2 transform rounded-xl bg-black px-3 py-2 text-center font-quicksand text-xs text-white opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
+                      Filter Overlays
+                    </div>
+                  ) : (
+                    <div className=" absolute right-full top-1/2 mr-2 w-32 -translate-y-1/2 transform rounded-xl bg-black px-3 py-2 text-center font-quicksand text-xs text-white opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
+                      Clear Filter
+                    </div>
+                  )}
+
                   <button
                     className={`${filterClicked ? "bg-green-500" : "bg-white"} pointer-events-auto mb-1 ml-1 flex transform items-center  justify-center rounded-full border-2 p-2 drop-shadow-xl transition-transform duration-500 ease-in-out hover:scale-110`}
                     onClick={() => {
@@ -1303,7 +1310,7 @@ const MapModule = ({
               <div className="flex flex-col-reverse space-y-2 space-y-reverse">
                 {/* Current Location Button */}
                 <div className="group relative inline-block">
-                  <div className="absolute right-full top-1/2 mr-2 w-32 -translate-y-1/2 transform rounded-lg bg-black px-3 py-2 text-center text-xs text-white opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
+                  <div className="absolute right-full top-1/2 mr-2 w-32 -translate-y-1/2 transform rounded-xl bg-black px-3 py-2 text-center font-quicksand font-quicksand text-xs text-white opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
                     Current Location
                   </div>
                   <button
@@ -1325,7 +1332,7 @@ const MapModule = ({
 
                 {/* Map Legend Button */}
                 <div className="group relative inline-block">
-                  <div className="absolute right-full top-1/2 mr-2 w-32 -translate-y-1/2 transform rounded-lg bg-black px-3 py-2 text-center text-xs text-white opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
+                  <div className="absolute right-full top-1/2 mr-2 w-32 -translate-y-1/2 transform rounded-xl bg-black px-3 py-2 text-center font-quicksand text-xs text-white opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
                     Toggle Map Legend
                   </div>
                   <button
@@ -1344,7 +1351,7 @@ const MapModule = ({
 
                 {/* Pathfinding Button */}
                 <div className="group relative inline-block">
-                  <div className="absolute right-full top-1/2 mr-2 w-32 -translate-y-1/2 transform rounded-lg bg-black px-3 py-2 text-center text-xs text-white opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
+                  <div className="absolute right-full top-1/2 mr-2 w-32 -translate-y-1/2 transform rounded-xl bg-black px-3 py-2 text-center font-quicksand text-xs text-white opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
                     {status !== "inside"
                       ? "Directions"
                       : "Directions is disabled inside the building"}

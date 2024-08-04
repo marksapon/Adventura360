@@ -894,7 +894,7 @@ function Module360({
             <button
               type="button"
               onClick={() => returnFunction()}
-              className={`dark:hover:bg-orange-400} absolute mb-48 flex w-auto items-center justify-center gap-x-2 rounded-lg border px-5 py-2 text-sm text-gray-700 transition-colors duration-200 dark:bg-orange-500 dark:text-white sm:mb-48 md:mb-20 lg:mb-16 `}
+              className={`absolute mb-48 flex w-auto items-center justify-center gap-x-2 rounded-2xl bg-orange-400 px-5 py-2 text-sm text-white drop-shadow-md transition-colors duration-200 hover:bg-orange-300 sm:mb-48 md:mb-20 lg:mb-16 `}
             >
               <TbDoorExit className="flex h-5 w-5 items-center justify-center md:h-8 md:w-8" />
               <div className="flex items-center justify-center">

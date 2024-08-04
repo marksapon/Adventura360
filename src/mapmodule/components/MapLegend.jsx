@@ -18,29 +18,26 @@ function MapLegend({ setMapLegendState }) {
     <>
       <div className="absolute -top-20 h-screen w-screen bg-black bg-opacity-70 md:hidden" />
       <div className="absolute left-0 top-0 z-10 h-full w-screen px-2 md:mx-4 md:my-2">
-        <div className="pointer-events-auto z-10 h-full w-full rounded-lg border-2 border-gray-500 border-opacity-50 shadow-xl md:h-auto md:w-80">
-          <div className="flex h-full w-full flex-col rounded-lg bg-slate-50 md:bg-opacity-80 md:hover:bg-opacity-100">
-            <div
-              className="m-5 text-center font-serif text-2xl font-medium text-lime-600"
-              style={{ textShadow: "1px 1px black" }}
-            >
+        <div className="pointer-events-auto z-10 h-full w-full rounded-xl border-2 border-gray-500 border-opacity-50 shadow-xl md:h-auto md:w-80">
+          <div className="flex h-full w-full flex-col rounded-xl bg-slate-50 md:bg-opacity-80 md:hover:bg-opacity-100">
+            <div className="m-5 text-center font-bitter text-2xl font-semibold text-lime-600">
               Map Legend
             </div>
 
-            <div className="flex flex-wrap p-2 md:flex-row md:bg-opacity-50">
+            <div className="flex flex-wrap p-2 font-quicksand font-semibold md:flex-row md:bg-opacity-50">
               <div className="absolute right-0 top-0 flex h-12 w-12 items-center justify-center p-2 md:hidden">
                 <IoIosClose
                   className="h-10 w-10"
                   onClick={() => setMapLegendState(false)}
                 />
               </div>
-              <div className="flex w-1/2 flex-shrink flex-row items-center gap-2  p-2 text-left font-roboto text-sm  ">
+              <div className="font-roboto flex w-1/2 flex-shrink flex-row items-center  gap-2 p-2 text-left text-sm  ">
                 <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white shadow-md">
                   <LuSchool className="h-5 w-5" style={{ stroke: "#65a30d" }} />
                 </div>
                 School Buildings
               </div>
-              <div className="flex w-1/2 flex-shrink flex-row items-center gap-2  p-2 text-left font-roboto text-sm ">
+              <div className="font-roboto flex w-1/2 flex-shrink flex-row items-center  gap-2 p-2 text-left text-sm ">
                 <div
                   className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white shadow-md"
                   style={{ color: "#f97316" }}
@@ -49,7 +46,7 @@ function MapLegend({ setMapLegendState }) {
                 </div>
                 College Buildings
               </div>
-              <div className="flex w-1/2 flex-shrink flex-row items-center gap-2  p-2 text-left font-roboto text-sm ">
+              <div className="font-roboto flex w-1/2 flex-shrink flex-row items-center  gap-2 p-2 text-left text-sm ">
                 <div
                   className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white shadow-md"
                   style={{ color: "#fbbf24" }}
@@ -58,7 +55,7 @@ function MapLegend({ setMapLegendState }) {
                 </div>
                 Cafeteria
               </div>
-              <div className="flex w-1/2 flex-shrink flex-row items-center gap-2  p-2 text-left font-roboto text-sm ">
+              <div className="font-roboto flex w-1/2 flex-shrink flex-row items-center  gap-2 p-2 text-left text-sm ">
                 <div
                   className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white shadow-md"
                   style={{ color: "#fb7185" }}
@@ -67,7 +64,7 @@ function MapLegend({ setMapLegendState }) {
                 </div>
                 Venue
               </div>
-              <div className="flex w-1/2 flex-shrink flex-row items-center gap-2  p-2 text-left font-roboto text-sm ">
+              <div className="font-roboto flex w-1/2 flex-shrink flex-row items-center  gap-2 p-2 text-left text-sm ">
                 <div
                   className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white shadow-md"
                   style={{ color: "#a21caf" }}
@@ -76,7 +73,7 @@ function MapLegend({ setMapLegendState }) {
                 </div>
                 Attractions
               </div>
-              <div className="flex w-1/2 flex-shrink flex-row items-center gap-2  p-2 text-left font-roboto text-sm ">
+              <div className="font-roboto flex w-1/2 flex-shrink flex-row items-center  gap-2 p-2 text-left text-sm ">
                 <div
                   className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white shadow-md"
                   style={{ color: "#0e7490" }}
@@ -85,7 +82,7 @@ function MapLegend({ setMapLegendState }) {
                 </div>
                 Courts
               </div>
-              <div className="flex w-1/2 flex-shrink flex-row items-center gap-2  p-2 text-left font-roboto text-sm ">
+              <div className="font-roboto flex w-1/2 flex-shrink flex-row items-center  gap-2 p-2 text-left text-sm ">
                 <div
                   className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white shadow-md"
                   style={{ color: "#3b82f6" }}
@@ -94,7 +91,7 @@ function MapLegend({ setMapLegendState }) {
                 </div>
                 Restrooms
               </div>
-              <div className="flex w-1/2 flex-shrink flex-row items-center gap-2  p-2 text-left font-roboto text-sm ">
+              <div className="font-roboto flex w-1/2 flex-shrink flex-row items-center  gap-2 p-2 text-left text-sm ">
                 <div
                   className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white shadow-md"
                   style={{ color: "#3b82f6" }}
@@ -103,7 +100,7 @@ function MapLegend({ setMapLegendState }) {
                 </div>
                 Wash Area
               </div>
-              <div className="flex w-1/2 flex-shrink flex-row items-center gap-2  p-2 text-left font-roboto text-sm ">
+              <div className="font-roboto flex w-1/2 flex-shrink flex-row items-center  gap-2 p-2 text-left text-sm ">
                 <div
                   className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white shadow-md"
                   style={{ color: "#1e3a8a" }}
@@ -112,7 +109,7 @@ function MapLegend({ setMapLegendState }) {
                 </div>
                 Batibot
               </div>
-              <div className="flex w-1/2 flex-shrink flex-row items-center gap-2  p-2 text-left font-roboto text-sm ">
+              <div className="font-roboto flex w-1/2 flex-shrink flex-row items-center  gap-2 p-2 text-left text-sm ">
                 <div
                   className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white shadow-md"
                   style={{ color: "#15803d" }}
@@ -121,7 +118,7 @@ function MapLegend({ setMapLegendState }) {
                 </div>
                 Farm
               </div>
-              <div className="flex w-1/2 flex-shrink flex-row items-center gap-2  p-2 text-left font-roboto text-sm ">
+              <div className="font-roboto flex w-1/2 flex-shrink flex-row items-center  gap-2 p-2 text-left text-sm ">
                 <div
                   className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white shadow-md"
                   style={{ color: "#3b82f6" }}
@@ -130,7 +127,7 @@ function MapLegend({ setMapLegendState }) {
                 </div>
                 Parking Lot
               </div>
-              <div className="flex w-1/2 flex-shrink flex-row items-center gap-2  p-2 text-left font-roboto text-sm ">
+              <div className="font-roboto flex w-1/2 flex-shrink flex-row items-center  gap-2 p-2 text-left text-sm ">
                 <div
                   className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white shadow-md"
                   style={{ color: "#f97316" }}

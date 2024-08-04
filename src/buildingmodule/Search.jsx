@@ -255,7 +255,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                       {/* Tags Selection */}
                       {listDisplay && (
                         <>
-                          <h1 className="pb-2 text-sm font-semibold text-gray-500">
+                          <h1 className="pb-2 font-quicksand text-base font-semibold text-gray-500">
                             Select tags:
                           </h1>
                           <div className="mb-2 flex w-full flex-wrap gap-2 p-1">
@@ -265,12 +265,13 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                                 key={index}
                                 // Call handleTagClick with the tag when the button is clicked
                                 onClick={() => handleTagClick(tag)}
-                                className={`text-grey-600 flex h-auto justify-center gap-1 rounded-xl px-2 py-1 text-center text-xs font-bold ring-2 ring-green-500 hover:opacity-80 `}
+                                className={`text-grey-600 flex h-auto justify-center gap-1 rounded-xl border-2 px-2 py-1 text-center font-montserrat text-xs font-semibold drop-shadow-lg hover:opacity-80 `}
                                 style={{
                                   ...(selectedTag.includes(tag)
                                     ? {
                                         backgroundColor: "#22c55e",
                                         opacity: 0.8,
+                                        color: "#FFF",
                                       }
                                     : {}),
                                 }}
@@ -281,7 +282,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                             {/* reset button. */}
                             <button
                               onClick={handleReset}
-                              className="h-fit rounded-xl bg-gray-500 px-2 py-1 text-xs text-white"
+                              className="flex h-fit items-center rounded-xl bg-gray-500 px-2 py-1 text-center font-bebas text-sm tracking-widest text-white drop-shadow-md hover:bg-gray-400"
                             >
                               RESET
                             </button>
@@ -295,7 +296,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                       >
                         <div className="m-2">
                           <button
-                            className={`flex w-full items-center justify-center gap-2 rounded-lg p-1 text-center font-sans font-semibold transition-all duration-300 ease-in-out sm:p-3 ${selectedKey === "All" ? "border border-gray-200 bg-slate-50 shadow-lg" : "border border-transparent hover:border"} hover:border-gray-200 hover:shadow-lg`}
+                            className={`flex w-full items-center justify-center gap-2 rounded-xl p-1 text-center font-montserrat text-sm font-medium  transition-all duration-300 ease-in-out sm:p-3 ${selectedKey === "All" ? "border border-gray-200 bg-slate-50 text-lg font-semibold shadow-lg" : "border border-transparent hover:border"} hover:border-gray-200 hover:shadow-lg`}
                             onClick={() => {
                               setSelectedKey("All");
                               handleSortChange("All");
@@ -305,7 +306,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                             <span className="flex items-center rounded-2xl bg-cyan-500 p-2 text-center text-white">
                               <FaHome />
                             </span>
-                            All
+                            Show all
                           </button>
 
                           <div className="mt-4 grid grid-cols-2 grid-rows-3 gap-2 sm:gap-4">
@@ -314,9 +315,9 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                               <button
                                 key={index}
                                 className={`
-      flex items-center gap-2 rounded-lg p-1 text-center transition-all duration-300 ease-in-out sm:p-3
-      ${selectedKey === key ? "border border-gray-200 bg-slate-50 shadow-lg" : "border border-transparent hover:border"} 
-      font-sans font-semibold hover:border-gray-200 hover:shadow-lg
+      flex items-center gap-2 rounded-xl p-1 text-center transition-all duration-300 ease-in-out sm:p-3
+      ${selectedKey === key ? "border border-gray-200 bg-slate-50 text-lg font-semibold shadow-lg" : "border border-transparent hover:border"} 
+      font-montserrat text-sm font-medium hover:border-gray-200 hover:shadow-lg
     `}
                                 onClick={() => {
                                   setSelectedKey(key);
@@ -340,7 +341,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                     {/* Display Options Section */}
                     {listDisplay && (
                       <div className="flex w-full items-center justify-between py-2">
-                        <h1 className="text-sm font-semibold text-gray-500">
+                        <h1 className="font-quicksand text-base font-semibold text-gray-500">
                           Change view:
                         </h1>
                         {/* view options. */}
@@ -349,7 +350,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                             onClick={() => {
                               setView("list");
                             }}
-                            className={`flex w-auto items-center rounded-md border px-1 text-sm hover:bg-slate-200 ${view === "list" ? "bg-slate-200 text-black" : ""}`}
+                            className={`flex w-auto items-center rounded-md px-1 font-quicksand text-base font-medium hover:bg-slate-200 ${view === "list" ? "bg-slate-200 text-black" : ""}`}
                           >
                             List
                             <PiList className="size-6 pl-1" />
@@ -358,7 +359,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                             onClick={() => {
                               setView("cards");
                             }}
-                            className={`flex w-auto items-center rounded-md border px-1 text-sm hover:bg-slate-200 ${view === "cards" ? "bg-slate-200 text-black" : ""}`}
+                            className={`flex w-auto items-center rounded-md px-1 font-quicksand text-base font-medium hover:bg-slate-200 ${view === "cards" ? "bg-slate-200 text-black" : ""}`}
                           >
                             Cards
                             <PiCardsDuotone className="size-6 pl-1" />
@@ -367,7 +368,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                             onClick={() => {
                               setView("grid");
                             }}
-                            className={`flex w-auto items-center rounded-md border px-1 text-sm hover:bg-slate-200 ${view === "grid" ? "bg-slate-200 text-black" : ""}`}
+                            className={`flex w-auto items-center rounded-md border px-1 font-quicksand text-base font-medium hover:bg-slate-200 ${view === "grid" ? "bg-slate-200 text-black" : ""}`}
                           >
                             Grid
                             <PiGridNine className="size-6 pl-1" />
@@ -434,7 +435,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                                 <div
                                   className={
                                     view === "list"
-                                      ? "flex h-auto items-center justify-center gap-2 text-start text-base"
+                                      ? "flex h-auto items-center justify-center gap-2 px-2 py-1 text-start text-base"
                                       : "flex w-auto flex-col items-center justify-center gap-2 text-center text-sm"
                                   }
                                 >
@@ -446,7 +447,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                                   </div>
 
                                   <div
-                                    className={`${view !== "list" && "w-44 justify-center border-2 border-green-600 text-center md:w-60"} flex h-16 items-center overflow-hidden rounded-full bg-white px-3 font-sans text-xs font-semibold text-green-800 md:text-sm`}
+                                    className={`${view !== "list" && "w-44 justify-center border-2 border-green-700 border-opacity-50 text-center drop-shadow-lg md:w-60"} flex h-16 items-center overflow-hidden rounded-full bg-white px-3 font-montserrat text-xs font-semibold text-gray-700 md:text-xs`}
                                   >
                                     {/* Display the text of the item */}
                                     {item.name}
@@ -464,7 +465,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
 
               {/* close button. */}
               <button
-                className="absolute right-0 items-center justify-center"
+                className="absolute right-0 items-center justify-center drop-shadow-md"
                 onClick={() => handleCloseAndReset()}
               >
                 <IoIosClose className="h-12 w-12 text-black" />

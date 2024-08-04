@@ -148,31 +148,39 @@ function Display({
         {/* Character */}
 
         {/* Dialogue */}
-        <div className="absolute bottom-0 flex h-2/6 w-full justify-center p-5">
-          <button
-            className=" relative h-full w-full rounded-xl bg-white bg-opacity-100 p-5 md:w-1/2 md:bg-opacity-100"
-            onClick={() => {
-              nextDialogue();
-            }}
-          >
-            <div className="absolute  -top-16 flex">
-              <div className="text-bold font-montserrat text-5xl font-extrabold text-green-500">
-                {character.name}
+        <div className="absolute bottom-0 flex h-2/6 w-full justify-center p-2 md:p-0">
+          <div className="flex w-full items-start justify-center px-5 md:w-1/2">
+            <div className="absolute -top-12 z-10 flex h-auto w-full items-center px-8 md:-top-14 md:w-1/2 md:px-6">
+              <div className="flex w-auto items-start justify-start">
+                <div className="text-bold font-montserrat text-5xl font-extrabold text-green-500">
+                  {character.name}
+                </div>
+              </div>
+
+              <div className="flex h-auto w-full justify-end">
+                <div className="flex h-10 w-10 items-center justify-center rounded-md bg-white ">
+                  <button
+                    onClick={() => {
+                      setEventList([]);
+                      finishedEvents(true);
+                      setVNState(false);
+                    }}
+                  >
+                    <FaWindowClose size={50} className="text-green-500" />
+                  </button>
+                </div>
               </div>
             </div>
-            <div className="font-quicksand text-base font-semibold text-black md:text-xl">
-              {purifyText(dialogue.text)}
-            </div>
-          </button>
-          <div className="absolute -top-12 right-6 flex h-10 w-10 items-center justify-center rounded-md bg-white md:-top-9 md:right-96 ">
+
             <button
+              className=" relative h-full w-full rounded-xl bg-white bg-opacity-100 p-5 md:bg-opacity-100"
               onClick={() => {
-                setEventList([]);
-                finishedEvents(true);
-                setVNState(false);
+                nextDialogue();
               }}
             >
-              <FaWindowClose size={50} className="text-green-500" />
+              <div className="font-quicksand text-base font-semibold text-black md:text-xl">
+                {purifyText(dialogue.text)}
+              </div>
             </button>
           </div>
         </div>

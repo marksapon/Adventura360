@@ -89,6 +89,7 @@ const BuildingModal = ({
         temp = true;
       }
     }
+
     return temp;
   }
 
@@ -223,7 +224,7 @@ const BuildingModal = ({
                 <div className="flex w-full flex-col pb-2">
                   {/* Building Name */}
                   <h1
-                    className="overflow-y-auto pb-2 pr-2 text-lg font-bold text-white transition-all duration-500 ease-in-out md:text-2xl lg:text-3xl"
+                    className="overflow-y-auto pb-2 pr-2 font-bebas text-2xl font-bold tracking-wider text-white transition-all duration-500 ease-in-out md:text-3xl lg:text-4xl"
                     style={{ textShadow: "1px px #000" }}
                   >
                     {current_info ? current_info.name : "Building Name"}
@@ -281,11 +282,11 @@ const BuildingModal = ({
             {/* Description */}
             <div className="border-b pt-2">
               {current_info ? (
-                <div className="mb-2 max-h-[150px] overflow-auto px-6 py-2 text-justify text-xs md:text-base">
+                <div className="mb-2 max-h-[150px] overflow-auto px-6 py-2 text-justify font-quicksand text-xs font-normal md:text-base">
                   {purifyText(current_info.desc)}
                 </div>
               ) : (
-                <div className="mb-2 max-h-[150px] overflow-auto px-6 py-2 text-justify text-xs md:text-base">
+                <div className="mb-2 max-h-[150px] overflow-auto px-6 py-2 text-justify  text-xs md:text-base">
                   Building's Description
                 </div>
               )}
@@ -306,7 +307,9 @@ const BuildingModal = ({
                       className={`size-4 text-green-600 sm:size-6 ${activeButton === "facilities" ? "text-white" : "text-green-600"}`}
                     />
                   </button>
-                  <div className="pt-1 text-xs text-green-600">Facilities</div>
+                  <div className="pt-1 font-bebas text-xs text-green-600">
+                    Facilities
+                  </div>
                 </div>
               )}
 
@@ -323,7 +326,9 @@ const BuildingModal = ({
                       className={`size-4 text-green-600 sm:size-6 ${activeButton === "history" ? "text-white" : "text-green-600"}`}
                     />
                   </button>
-                  <div className="pt-1 text-xs text-green-600">History</div>
+                  <div className="pt-1 font-bebas text-xs text-green-600">
+                    History
+                  </div>
                 </div>
               )}
 
@@ -340,7 +345,9 @@ const BuildingModal = ({
                       className={`size-4 text-green-600 sm:size-6 ${activeButton === "services" ? "text-white" : "text-green-600"}`}
                     />
                   </button>
-                  <div className="pt-1 text-xs text-green-600">Services</div>
+                  <div className="pt-1 font-bebas text-xs text-green-600">
+                    Services
+                  </div>
                 </div>
               )}
 
@@ -357,7 +364,9 @@ const BuildingModal = ({
                       className={`size-4 text-green-600 sm:size-6 ${activeButton === "offices" ? "text-white" : "text-green-600"}`}
                     />
                   </button>
-                  <div className="pt-1 text-xs text-green-600">Offices</div>
+                  <div className="pt-1 font-bebas text-xs text-green-600">
+                    Offices
+                  </div>
                 </div>
               )}
 
@@ -374,7 +383,9 @@ const BuildingModal = ({
                       className={`size-4 text-green-600 sm:size-6 ${activeButton === "departments" ? "text-white" : "text-green-600"}`}
                     />
                   </button>
-                  <div className="pt-1 text-xs text-green-600">Departments</div>
+                  <div className="pt-1 font-bebas text-xs text-green-600">
+                    Departments
+                  </div>
                 </div>
               )}
 
@@ -391,7 +402,9 @@ const BuildingModal = ({
                       className={`size-4 text-green-600 sm:size-6 ${activeButton === "courses" ? "text-white" : "text-green-600"}`}
                     />
                   </button>
-                  <div className="pt-1 text-xs text-green-600">Courses</div>
+                  <div className="pt-1 font-bebas text-xs text-green-600">
+                    Courses
+                  </div>
                 </div>
               )}
 
@@ -413,7 +426,7 @@ const BuildingModal = ({
                     </button>
                   </div>
                   <div>
-                    <div className="pt-1 text-center text-xs text-green-600">
+                    <div className="pt-1 text-center font-bebas text-xs text-green-600">
                       Contacts
                     </div>
                   </div>
@@ -433,7 +446,9 @@ const BuildingModal = ({
                       className={`size-4 text-green-600 sm:size-6 ${shareModal ? "text-white" : "text-green-600"}`}
                     />
                   </button>
-                  <div className="pt-1 text-xs text-green-600">Share</div>
+                  <div className="pt-1 font-bebas text-xs text-green-600">
+                    Share
+                  </div>
                 </div>
               )}
 
@@ -451,9 +466,11 @@ const BuildingModal = ({
                       setPrevious_Scene();
                     }}
                   >
-                    <MdDirections className="size-5 sm:size-7" />
+                    <MdDirections className="size-4 sm:size-7" />
                   </button>
-                  <div className="pt-1 text-xs text-green-600">Go to</div>
+                  <div className="pt-1 font-bebas text-xs text-green-600">
+                    Go to
+                  </div>
                 </div>
               )}
               {/* Go to Button */}
@@ -469,7 +486,9 @@ const BuildingModal = ({
                   >
                     <FaInfo className={`size-4 text-white sm:size-6`} />
                   </button>
-                  <div className="pt-1 text-xs text-green-600">Learn more</div>
+                  <div className="pt-1 font-bebas text-xs text-green-600">
+                    Learn more
+                  </div>
                 </div>
               )}
             </div>
@@ -494,7 +513,9 @@ const BuildingModal = ({
               {current_info && activeButton === "history" && (
                 <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">
                   <ul className="justify-start text-balance">
-                    <h1 className="pb-5 text-2xl">History</h1>
+                    <h1 className="pb-5  font-montserrat text-2xl font-semibold">
+                      History
+                    </h1>
                     <div className="text-justify text-xs sm:text-base">
                       {purifyText(current_info.history)}
                     </div>
@@ -506,8 +527,8 @@ const BuildingModal = ({
               {current_info && activeButton === "facilities" && (
                 <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">
                   <div className="justify-start text-balance">
-                    <h1 className="flex flex-row items-center gap-3 pb-5 font-roboto text-2xl font-medium text-green-500">
-                      <ImLab className={`size-4 text-green-600 sm:size-6`} />{" "}
+                    <h1 className="flex flex-row items-center gap-3 pb-5 font-montserrat text-2xl font-semibold text-green-500">
+                      <ImLab className={`size-4 text-green-600 sm:size-6`} />
                       Facilities
                     </h1>
                     <ul className="flex list-inside flex-col gap-1">
@@ -516,9 +537,9 @@ const BuildingModal = ({
                           <div className="flex flex-col gap-1" key={index}>
                             <button
                               onClick={() => handleClick(key)}
-                              className="flex items-center justify-between rounded-lg border-2 border-green-600 bg-white p-2"
+                              className="flex items-center justify-between  rounded-xl border-2  bg-white p-2 drop-shadow-lg"
                             >
-                              <div className="single-content-bullet text-left font-roboto text-base font-medium">
+                              <div className="single-content-bullet text-left font-montserrat text-base font-medium">
                                 {key}
                               </div>
 
@@ -530,8 +551,8 @@ const BuildingModal = ({
                                 ))}
                             </button>
                             {isOpen[key] && current_info.facilities[key] && (
-                              <div className="mb-2 flex w-full flex-auto rounded-md border-2 border-gray-500 border-opacity-60">
-                                <div className="p-2 text-sm text-gray-800">
+                              <div className="mb-2 flex w-full flex-auto rounded-xl border-2 border-gray-500 border-opacity-60">
+                                <div className="p-2 font-quicksand text-base font-medium text-gray-900">
                                   {purifyText(current_info.facilities[key])}
                                 </div>
                               </div>
@@ -548,7 +569,7 @@ const BuildingModal = ({
               {current_info && activeButton === "departments" && (
                 <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">
                   <div className="justify-start text-balance">
-                    <h1 className="flex flex-row items-center gap-3 pb-5 font-roboto text-2xl font-medium text-green-500">
+                    <h1 className="flex flex-row items-center gap-3 pb-5 font-montserrat text-2xl font-semibold text-green-500">
                       <BiBuildings
                         className={`size-4 text-green-600 sm:size-6`}
                       />
@@ -556,10 +577,10 @@ const BuildingModal = ({
                     </h1>
                     <ul className="flex list-inside flex-col gap-1">
                       {current_info.dept.map((dept, index) => (
-                        <div className="flex rounded-lg border-2 border-green-600 bg-white p-2">
+                        <div className="flex rounded-xl border-2 bg-white p-2 drop-shadow-lg">
                           <li
                             key={index}
-                            className="single-content-bullet font-roboto text-base font-medium"
+                            className="single-content-bullet font-montserrat text-base font-medium"
                           >
                             {dept}
                           </li>
@@ -574,7 +595,7 @@ const BuildingModal = ({
               {current_info && activeButton === "courses" && (
                 <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">
                   <div className="justify-start text-balance">
-                    <h1 className="flex flex-row items-center gap-3 pb-5 font-roboto text-2xl font-medium text-green-500">
+                    <h1 className="font-roboto flex flex-row items-center gap-3 pb-5 font-montserrat text-2xl font-semibold text-green-500">
                       <GiBlackBook
                         className={`size-4 text-green-600 sm:size-6`}
                       />
@@ -586,9 +607,9 @@ const BuildingModal = ({
                         <div className="flex flex-col gap-1" key={index}>
                           <button
                             onClick={() => handleClick(key)}
-                            className="flex items-center justify-between rounded-lg border-2 border-green-600 bg-white p-2"
+                            className="flex items-center justify-between rounded-xl border-2 bg-white p-2 drop-shadow-lg"
                           >
-                            <div className="single-content-bullet text-left font-roboto text-base font-medium">
+                            <div className="single-content-bullet text-left font-montserrat text-base font-medium">
                               {key}
                             </div>
 
@@ -601,7 +622,7 @@ const BuildingModal = ({
                           </button>
                           {isOpen[key] && current_info.courses[key] && (
                             <div className="mb-2 flex w-full flex-auto rounded-md border-2 border-gray-500 border-opacity-60">
-                              <div className="p-2 text-sm ">
+                              <div className="p-2 font-quicksand text-sm font-medium">
                                 {purifyText(current_info.courses[key])}
                               </div>
                             </div>
@@ -618,13 +639,13 @@ const BuildingModal = ({
                 <div className="flex w-full flex-col gap-10 rounded-b-xl border-b-2 px-6 pb-8 pt-2">
                   <ul className="flex flex-col justify-start text-balance">
                     <div className="m-2 flex flex-col">
-                      <h1 className="flex flex-row items-center gap-3 pb-5 font-roboto text-2xl font-medium text-green-500">
+                      <h1 className="flex flex-row items-center gap-3 pb-5 font-montserrat text-2xl font-semibold text-green-500">
                         <FaPhone
                           className={`size-4 text-green-600 sm:size-6`}
                         />
                         Contacts
                       </h1>
-                      <div className="flex flex-col justify-center gap-4 rounded-md p-2">
+                      <div className="flex flex-col justify-center gap-4 rounded-md p-2 font-quicksand font-bold">
                         {Object.keys(current_info.contacts).map(
                           (key, index) => (
                             <div key={index}>
@@ -651,7 +672,7 @@ const BuildingModal = ({
                                 )}
 
                                 {key !== "additional" && (
-                                  <span className="font-roboto text-xs font-thin sm:text-base">
+                                  <span className="font-quicksand text-xs font-normal sm:text-base">
                                     {current_info.contacts[key]}
                                   </span>
                                 )}
@@ -663,7 +684,7 @@ const BuildingModal = ({
                     </div>
 
                     <div className="m-2 flex flex-col">
-                      <h2 className=" flex flex-row items-center gap-2 pb-2 font-roboto text-xl font-medium text-green-500">
+                      <h2 className="flex flex-row items-center gap-2 pb-2 font-montserrat text-xl font-semibold text-green-500">
                         <IoGlobeSharp
                           className={`size-4 text-green-600 sm:size-6`}
                         />
@@ -685,7 +706,7 @@ const BuildingModal = ({
                                     </div>
 
                                     <span
-                                      className="flex w-full text-left font-roboto text-xs font-thin hover:text-green-500 sm:text-base"
+                                      className="flex w-full text-left font-quicksand text-xs font-normal hover:text-green-500 sm:text-base"
                                       onClick={() =>
                                         window.open(
                                           current_info.contacts[key][subKey],
@@ -708,7 +729,7 @@ const BuildingModal = ({
               {/* Services */}
               {current_info && activeButton === "services" && (
                 <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">
-                  <h1 className="flex flex-row items-center gap-3 pb-5 font-roboto text-2xl font-medium text-green-500">
+                  <h1 className=" flex flex-row items-center gap-3 pb-5 font-montserrat text-2xl font-semibold text-green-500">
                     <MdHomeRepairService
                       className={`size-4 text-green-600 sm:size-6`}
                     />
@@ -720,11 +741,11 @@ const BuildingModal = ({
                       <div className="flex flex-col gap-1">
                         <button
                           onClick={() => handleClick(key)}
-                          className="flex items-center justify-between rounded-lg border-2 border-green-600 bg-white p-2"
+                          className="flex items-center justify-between rounded-xl bg-white p-2 drop-shadow-lg"
                         >
                           <div
                             key={index}
-                            className="single-content-bullet font-roboto text-base font-medium"
+                            className="single-content-bullet font-montserrat text-base font-medium"
                           >
                             {key}
                           </div>
@@ -733,7 +754,7 @@ const BuildingModal = ({
                         </button>
                         {isOpen[key] && current_info.services[key] && (
                           <div className="mb-2 flex w-full flex-auto rounded-md border-2 border-gray-500 border-opacity-60">
-                            <div className="p-2 text-sm ">
+                            <div className="p-2 font-quicksand text-sm font-medium">
                               {purifyText(current_info.services[key])}
                             </div>
                           </div>
@@ -747,7 +768,7 @@ const BuildingModal = ({
               {/* Offices */}
               {current_info && activeButton === "offices" && (
                 <div className="w-full rounded-b-xl border-b-2 px-6 pb-8 pt-2">
-                  <h1 className="flex flex-row items-center gap-3 pb-5 font-roboto text-2xl font-medium text-green-500">
+                  <h1 className="font-roboto flex flex-row items-center gap-3 pb-5 font-montserrat text-2xl font-semibold text-green-500">
                     <MdHomeRepairService
                       className={`size-4 text-green-600 sm:size-6`}
                     />
@@ -759,7 +780,7 @@ const BuildingModal = ({
                       <div className="flex flex-col gap-1">
                         <button
                           onClick={() => handleClick(key)}
-                          className="flex items-center justify-between rounded-lg border-2 border-green-600 bg-white p-2"
+                          className="flex items-center justify-between rounded-xl border-2 bg-white p-2 drop-shadow-lg"
                         >
                           <div
                             key={index}

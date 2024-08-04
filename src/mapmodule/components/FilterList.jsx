@@ -33,7 +33,7 @@ const FilterList = ({
   return (
     <div className="flex flex-row">
       {hovering && (
-        <div className="absolute -left-52 flex w-48 items-center justify-center rounded-lg bg-black p-2 text-xs text-white">
+        <div className="absolute -left-52 flex w-48 items-center justify-center rounded-xl bg-black p-2 font-quicksand text-xs text-white">
           {hoverItem}
         </div>
       )}

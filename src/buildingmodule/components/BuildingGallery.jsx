@@ -36,7 +36,9 @@ const BuildingGallery = ({ imageSet }) => {
 
   return (
     <div className="relative mb-4 border-b-2 pb-2 pl-4">
-      <h1 className="p-4 pl-1 text-start text-2xl">Gallery</h1>
+      <h1 className="p-4 pl-1 text-start font-montserrat text-2xl font-semibold">
+        Gallery
+      </h1>
       <CarouselProvider
         naturalSlideWidth={50}
         naturalSlideHeight={50}

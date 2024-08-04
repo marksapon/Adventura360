@@ -150,7 +150,7 @@ const PathfindingModal = ({
                   <div className="flex gap-2">
                     {/* Current Location ICON */}
                     <div className="flex h-full">
-                      <div className="flex h-full w-10 items-center justify-center text-green-600">
+                      <div className="flex h-full w-10 items-center justify-center text-green-600 drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)]">
                         <ImLocation2 size={25} />
                       </div>
                     </div>
@@ -158,7 +158,7 @@ const PathfindingModal = ({
                     {/* Current Location Text Bar */}
                     <div className="flex h-full w-full flex-grow items-end ">
                       <div className="flex h-10 w-full items-center justify-center ">
-                        <div className="flex h-full w-full justify-center rounded-full border-2 bg-white py-2 text-sm hover:border-green-600 hover:bg-slate-50">
+                        <div className="flex h-full w-full items-center justify-center rounded-full border-2 bg-white py-2 text-center font-quicksand text-base drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)] hover:border-green-600 hover:bg-slate-50">
                           Current location
                         </div>
                       </div>
@@ -168,7 +168,7 @@ const PathfindingModal = ({
                     <div className="flex">
                       <div className="flex h-10 w-full items-center justify-center ">
                         <button
-                          className={`flex h-9 rounded-full border-2 p-1 ${travelType === "walk" ? "bg-blue-500 text-white" : "text-blue-500"} border-blue-500`}
+                          className={`flex h-9 rounded-full border-2 p-1 drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)] ${travelType === "walk" ? "bg-blue-500 text-white" : "text-blue-500"} border-blue-500`}
                           onClick={() => {
                             setTravelType("walk");
                           }}
@@ -187,7 +187,7 @@ const PathfindingModal = ({
                       {/* Direction ICON */}
                       <div className="flex h-full w-10 items-start">
                         <div className="flex h-10 w-10 items-center justify-center">
-                          <div className="flex h-full w-10 items-center justify-center text-orange-500">
+                          <div className="flex h-full w-10 items-center justify-center text-orange-500 drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)]">
                             <MdOutlineGpsFixed size={25} />
                           </div>
                         </div>
@@ -197,7 +197,7 @@ const PathfindingModal = ({
                       <div className="flex h-full w-full flex-grow items-center justify-center  ">
                         <div className="flex h-10 w-full items-center justify-center">
                           <input
-                            className="flex h-full w-full rounded-full border-2 px-1 text-center text-sm hover:border-green-600 hover:bg-slate-50"
+                            className="flex h-full w-full rounded-full border-2 bg-slate-50 px-1 text-center font-quicksand text-base drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)] hover:border-green-600"
                             placeholder="Destination"
                             type="text"
                             onChange={search}
@@ -212,7 +212,7 @@ const PathfindingModal = ({
                       <div className="flex items-end justify-center  ">
                         <div className="flex h-10 w-10 items-center justify-center">
                           <button
-                            className={`flex h-9 rounded-full border-2 p-1 ${travelType === "vehicle" ? "bg-blue-500 text-white" : "text-blue-500"} border-blue-500`}
+                            className={`flex h-9 rounded-full border-2 p-1 drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)] ${travelType === "vehicle" ? "bg-blue-500 text-white" : "text-blue-500"} border-blue-500`}
                             onClick={() => {
                               setTravelType("vehicle");
                             }}
@@ -226,7 +226,7 @@ const PathfindingModal = ({
                     {directionState && (
                       <div className="flex h-full w-full items-center justify-center p-1">
                         <button
-                          className="relative flex w-auto items-center justify-center rounded-full bg-green-500 px-2 text-white"
+                          className="relative flex w-auto items-center justify-center gap-2 rounded-full bg-green-500 px-5 py-1 text-center font-montserrat text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)]"
                           onClick={() => {
                             console.log("Directions Button Clicked");
                             setNearestMode(false);
@@ -244,9 +244,9 @@ const PathfindingModal = ({
                   </div>
                 </div>
 
-                <div className="flex w-full justify-center gap-5 text-nowrap p-4 ">
+                <div className="flex w-full justify-center gap-5 text-nowrap p-5">
                   <button
-                    className="text-grey-600 flex h-auto items-center justify-center gap-1 rounded-xl bg-slate-50 px-2 py-1 text-center text-xs font-bold drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)] hover:opacity-80"
+                    className="text-grey-600 flex h-auto items-center justify-center gap-1 rounded-xl bg-slate-50 px-2 py-1 text-center text-xs font-semibold drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)] hover:border-slate-50 hover:border-opacity-50 hover:bg-blue-500 hover:font-bold hover:text-white"
                     onClick={() => {
                       console.log("Near Restroom Clicked");
                       pathfinding("restroom", "walk", true);
@@ -256,7 +256,7 @@ const PathfindingModal = ({
                     Restroom
                   </button>
                   <button
-                    className="text-grey-600 flex h-auto items-center justify-center gap-1 rounded-xl bg-slate-50 px-2 py-1 text-center text-xs font-bold  drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)] hover:opacity-80"
+                    className="text-grey-600 flex h-auto items-center justify-center gap-1 rounded-xl bg-slate-50 px-2 py-1 text-center text-xs font-semibold  drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)] hover:border-slate-50 hover:border-opacity-50 hover:bg-blue-500 hover:font-bold hover:text-white"
                     onClick={() => {
                       console.log("Near Wash area Clicked");
                       pathfinding("washarea", "walk", true);
@@ -266,7 +266,7 @@ const PathfindingModal = ({
                     Wash area
                   </button>
                   <button
-                    className="text-grey-600 flex h-auto justify-center gap-1 rounded-xl bg-slate-50 px-3 py-3 text-center text-xs font-bold drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)] hover:bg-slate-100"
+                    className="text-grey-600 flex h-auto justify-center gap-1 rounded-xl bg-slate-50 px-3 py-3 text-center text-xs font-semibold drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)] hover:border-slate-50 hover:border-opacity-50 hover:bg-blue-500 hover:font-bold hover:text-white"
                     onClick={() => {
                       console.log("Near Parking Lot Clicked");
                       pathfinding("parking", "walk", true);
@@ -302,14 +302,15 @@ const PathfindingModal = ({
                     </div>
                   )
                 ) : (
-                  <div className="flex-grow overflow-auto pl-2">
+                  <div className="flex-grow overflow-auto pl-2 font-montserrat text-xl font-semibold">
+                    List of Buildings:
                     {buildingsListState && buildingsList.length > 0 && (
                       <div
-                        className={`no-scrollbar relative flex h-full flex-col gap-1 overflow-auto bg-slate-50 p-2 shadow-lg `}
+                        className={`no-scrollbar relative flex h-full flex-col gap-2 overflow-auto bg-slate-50 p-2  shadow-lg `}
                       >
                         {buildingsList.map((building, index) => (
                           <button
-                            className="flex justify-start border bg-white p-2 text-left text-sm hover:border-green-600 hover:bg-slate-100"
+                            className="flex justify-start rounded-xl border bg-white px-5 py-3 text-left font-quicksand text-sm font-medium drop-shadow-md hover:border-white hover:border-opacity-50 hover:bg-green-500 hover:font-bold hover:text-white"
                             onClick={() => {
                               setBuildingsListState(false);
                               setDestination(building.name);
