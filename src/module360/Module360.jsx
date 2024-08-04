@@ -824,11 +824,11 @@ function Module360({
                                 key={index2}
                               >
                                 {/* TEXT */}
-                                <div className="flex-shrink-1 flex h-auto w-full items-center justify-center px-4 text-center font-roboto text-xs font-semibold text-green-500 md:h-16 md:text-lg">
+                                <div className="flex-shrink-1 font-roboto flex h-auto w-full items-center justify-center px-4 text-center text-xs font-semibold text-green-500 md:h-16 md:text-lg">
                                   {extras.location}
                                 </div>
                                 <div
-                                  className={`flex-shrink-1 w-full flex-wrap items-start justify-center px-2 text-center font-roboto text-2xs font-thin md:text-xs`}
+                                  className={`flex-shrink-1 font-roboto text-2xs w-full flex-wrap items-start justify-center px-2 text-center font-thin md:text-xs`}
                                 >
                                   {extras.desc}
                                 </div>
@@ -894,7 +894,7 @@ function Module360({
             <button
               type="button"
               onClick={() => returnFunction()}
-              className={`dark:hover:bg-orange-400} absolute mb-48 flex w-auto items-center justify-center gap-x-2 rounded-lg border px-5 py-2 text-sm text-gray-700 transition-colors duration-200 sm:mb-48 md:mb-20 lg:mb-16 dark:bg-orange-500 dark:text-white `}
+              className={`dark:hover:bg-orange-400} absolute mb-48 flex w-auto items-center justify-center gap-x-2 rounded-lg border px-5 py-2 text-sm text-gray-700 transition-colors duration-200 dark:bg-orange-500 dark:text-white sm:mb-48 md:mb-20 lg:mb-16 `}
             >
               <TbDoorExit className="flex h-5 w-5 items-center justify-center md:h-8 md:w-8" />
               <div className="flex items-center justify-center">

@@ -265,7 +265,7 @@ const Navigationbar = ({
               </div>
             </div>
 
-            <div className="md:text-1xl flex h-full w-full items-center justify-center border-l-2 border-r-2 px-1 text-center font-roboto text-sm">
+            <div className="flex h-full w-full items-center justify-center border-l-2 border-r-2 px-1 text-center font-montserrat text-sm tracking-normal md:text-lg">
               {location.location !== undefined
                 ? location.location
                 : "Cavite State University Main Campus"}

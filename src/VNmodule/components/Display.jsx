@@ -130,10 +130,10 @@ function Display({
       <div className="absolute h-screen w-screen bg-black bg-opacity-80" />
 
       {/* Content */}
-      <div className="position-relative absolute flex h-full w-full animate-fade-in items-end justify-center ">
+      <div className="position-relative animate-fade-in absolute flex h-full w-full items-end justify-center ">
         {/* Character */}
         <div className="absolute flex h-5/6 w-full items-end  md:w-1/2">
-          <div className="relative flex h-full w-full animate-fade-in items-end justify-center overflow-hidden ">
+          <div className="animate-fade-in relative flex h-full w-full items-end justify-center overflow-hidden ">
             <img
               className="absolute left-1/2 top-0 h-full -translate-x-1/2 transform  object-contain md:object-contain"
               src={
@@ -149,33 +149,31 @@ function Display({
 
         {/* Dialogue */}
         <div className="absolute bottom-0 flex h-2/6 w-full justify-center p-5">
-          <div className=" relative flex h-full w-full items-center justify-center rounded-lg border-2 border-green-600 md:w-3/5">
+          <button
+            className=" relative h-full w-full rounded-xl bg-white bg-opacity-100 p-5 md:w-1/2 md:bg-opacity-100"
+            onClick={() => {
+              nextDialogue();
+            }}
+          >
+            <div className="absolute  -top-16 flex">
+              <div className="text-bold font-montserrat text-5xl font-extrabold text-green-500">
+                {character.name}
+              </div>
+            </div>
+            <div className="font-quicksand text-base font-semibold text-black md:text-xl">
+              {purifyText(dialogue.text)}
+            </div>
+          </button>
+          <div className="absolute -top-12 right-6 flex h-10 w-10 items-center justify-center rounded-md bg-white md:-top-9 md:right-96 ">
             <button
-              className=" relative h-full w-full rounded-md bg-white bg-opacity-100 p-5 md:bg-opacity-100"
               onClick={() => {
-                nextDialogue();
+                setEventList([]);
+                finishedEvents(true);
+                setVNState(false);
               }}
             >
-              <div className="absolute -top-12 flex">
-                <div className="text-bold font-sans text-5xl font-extrabold text-green-500">
-                  {character.name}
-                </div>
-              </div>
-              <div className="font-sans text-base font-semibold text-black md:text-xl">
-                {purifyText(dialogue.text)}
-              </div>
+              <FaWindowClose size={50} className="text-green-500" />
             </button>
-            <div className="absolute -top-12 right-0 flex h-10 w-10 items-center justify-center rounded-md bg-white md:-right-14 md:top-0 ">
-              <button
-                onClick={() => {
-                  setEventList([]);
-                  finishedEvents(true);
-                  setVNState(false);
-                }}
-              >
-                <FaWindowClose size={50} className="text-green-500" />
-              </button>
-            </div>
           </div>
         </div>
         {/* Dialogue */}

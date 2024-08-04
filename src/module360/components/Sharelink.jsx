@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { IoIosClose } from "react-icons/io";
 import { MdContentCopy } from "react-icons/md";
 
-const Sharelink = ({ visible, onClose }) => {
-  if (!visible) return null;
-
+const Sharelink = ({ onClose }) => {
   const currentUrl = window.location.href;
   const [isCopied, setIsCopied] = useState(false);
 
@@ -20,7 +18,7 @@ const Sharelink = ({ visible, onClose }) => {
   return (
     <div
       id="container"
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-25 px-4"
+      className="fixed inset-0 z-10 flex items-center justify-center bg-black bg-opacity-25 px-4"
     >
       <div className="relative z-50 flex  flex-col rounded-lg bg-white p-2">
         <div className="flex h-auto w-full flex-row items-center">

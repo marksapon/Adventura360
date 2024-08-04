@@ -21,6 +21,8 @@ const PathfindingModal = ({
   removeOverlays,
 
   setTargetLocation,
+  setNearestMode,
+  setLocationID,
 }) => {
   const poi = generatePOI(); // Generate Points of Interest
 
@@ -138,6 +140,8 @@ const PathfindingModal = ({
                         removePath();
                         removeOverlays();
                         setTargetLocation();
+                        setLocationID();
+                        setNearestMode(false);
                       }}
                     >
                       <IoIosClose size={30} />
@@ -225,8 +229,10 @@ const PathfindingModal = ({
                           className="relative flex w-auto items-center justify-center rounded-full bg-green-500 px-2 text-white"
                           onClick={() => {
                             console.log("Directions Button Clicked");
+                            setNearestMode(false);
                             setTargetLocation(finalDestination);
-                            pathfinding(finalDestination, travelType);
+                            pathfinding(finalDestination, travelType, false);
+                            setLocationID(finalDestination.scene);
                             setMinimized(true);
                           }}
                         >
@@ -235,18 +241,40 @@ const PathfindingModal = ({
                         </button>
                       </div>
                     )}
-                    <div className="flex w-full gap-2 overflow-auto text-nowrap p-4">
-                      <button className="text-grey-600 flex h-auto justify-center gap-1 rounded-xl px-2 py-1 text-center text-xs font-bold ring-2 ring-green-500 hover:opacity-80">
-                        Restroom
-                      </button>
-                      <button className="text-grey-600 flex h-auto justify-center gap-1 rounded-xl px-2 py-1 text-center text-xs font-bold ring-2 ring-green-500 hover:opacity-80">
-                        Wash area
-                      </button>
-                      <button className="text-grey-600 flex h-auto justify-center gap-1 rounded-xl px-2 py-1 text-center text-xs font-bold ring-2 ring-green-500 hover:opacity-80">
-                        Parking lot
-                      </button>
-                    </div>
                   </div>
+                </div>
+
+                <div className="flex w-full justify-center gap-5 text-nowrap p-4 ">
+                  <button
+                    className="text-grey-600 flex h-auto items-center justify-center gap-1 rounded-xl bg-slate-50 px-2 py-1 text-center text-xs font-bold drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)] hover:opacity-80"
+                    onClick={() => {
+                      console.log("Near Restroom Clicked");
+                      pathfinding("restroom", "walk", true);
+                      setMinimized(true);
+                    }}
+                  >
+                    Restroom
+                  </button>
+                  <button
+                    className="text-grey-600 flex h-auto items-center justify-center gap-1 rounded-xl bg-slate-50 px-2 py-1 text-center text-xs font-bold  drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)] hover:opacity-80"
+                    onClick={() => {
+                      console.log("Near Wash area Clicked");
+                      pathfinding("washarea", "walk", true);
+                      setMinimized(true);
+                    }}
+                  >
+                    Wash area
+                  </button>
+                  <button
+                    className="text-grey-600 flex h-auto justify-center gap-1 rounded-xl bg-slate-50 px-3 py-3 text-center text-xs font-bold drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)] hover:bg-slate-100"
+                    onClick={() => {
+                      console.log("Near Parking Lot Clicked");
+                      pathfinding("parking", "walk", true);
+                      setMinimized(true);
+                    }}
+                  >
+                    Parking lot
+                  </button>
                 </div>
 
                 {/* List */}

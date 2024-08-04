@@ -88,8 +88,10 @@ const MapModule = ({
   const [minimized, setMinimized] = useState(false); // Pathfinding Modal Minimized State
 
   const [targetLocation, setTargetLocation] = useState(); // Target Location for Pathfinding
+  const [locationID, setLocationID] = useState();
   const [travelMode, setTravelMode] = useState("walk"); // Travel Mode for Pathfinding
   const [pathGraph, setPathGraph] = useState();
+  const [nearestMode, setNearestMode] = useState(false);
 
   useEffect(() => {
     console.log("TargetLocation:", targetLocation);
@@ -179,7 +181,7 @@ const MapModule = ({
   function removeOverlays(target_loc = null) {
     Object.keys(overlays).map((type) => {
       overlays[type].map((overlay) => {
-        if (target_loc && overlay.scene === target_loc.scene) {
+        if (target_loc && overlay.scene === target_loc) {
         } else {
           viewer.removeOverlay(overlay.id);
           removeOverlaysName();
@@ -279,10 +281,10 @@ const MapModule = ({
     if (osdLoaded) {
       if (current_overlays.length === 0) {
         viewer.forceRedraw();
-        removeOverlays(targetLocation);
+        removeOverlays(locationID);
       } else if (current_overlays.length > 0) {
         viewer.forceRedraw();
-        removeOverlays(targetLocation);
+        removeOverlays(locationID);
 
         // console.log("Adding Overlay");
         current_overlays.map((type) => {
@@ -446,7 +448,15 @@ const MapModule = ({
 
   // Node Class
   class Node {
-    constructor(id, x, y, neighborsID = [], travelType = "both", weight = 0) {
+    constructor(
+      id,
+      x,
+      y,
+      neighborsID = [],
+      travelType = "both",
+      weight = 0,
+      type = null,
+    ) {
       // Should have the values of:
       this.id = id; // Name of Scene
       this.x = x; // X coordinate Img Pixel
@@ -455,6 +465,7 @@ const MapModule = ({
       this.neighbors = []; // Neighbor nodes
       this.travelType = travelType; // Type of path (walkable, vehicle, both)
       this.weight = weight;
+      this.type = type;
     }
 
     // Method to add a neighboring node to current node
@@ -552,6 +563,8 @@ const MapModule = ({
           building.coords.y,
           neighbors,
           building.travelType,
+          10,
+          building.coords.type,
         ),
       );
     });
@@ -581,7 +594,18 @@ const MapModule = ({
   }
 
   // /* Main Pathfinding Function */
-  function pathFinding(targetLocation, travelType = "both") {
+  function pathFinding(targetLocation, travelType = "both", near = false) {
+    if (near !== true) {
+      setNearestMode(false);
+    } else {
+      setNearestMode(true);
+    }
+
+    console.log("Pathfinding Function");
+    console.log(targetLocation, travelType);
+    console.log("Nearest Mode:", nearestMode);
+    console.log("Near:", near);
+
     setTravelMode(travelType);
     // Points Generated in A Star Algorithm
 
@@ -596,32 +620,43 @@ const MapModule = ({
       return current;
     };
 
-    const target_location = () => {
-      const target = graph.find((node) => {
-        // console.log("Node: ", node);
-        // console.log("Target: ", targetLocation);
+    let targetLoc;
 
-        return node.id === targetLocation.scene;
-      });
+    if (near !== true) {
+      console.log("Pathfinding");
+      const target_location = () => {
+        const target = graph.find((node) => {
+          return node.id === targetLocation.scene;
+        });
+        return target;
+      };
 
-      return target;
-    };
+      targetLoc = target_location();
+    } else {
+      console.log("Nearest");
+      targetLoc = targetLocation;
+    }
+
+    console.log(targetLoc);
 
     const generatedPath = pathFindingAlgorithm(
       graph,
       current_location(),
-      target_location(),
+      targetLoc,
       travelType,
+      near,
     );
 
     if (typeof generatedPath === "string") {
       if (Paper.project) {
         Paper.project.clear(); // Clear the written paths in PaperJS
         setTargetLocation(); // Clear the target location
-        alert("No existing paths"); // No path found
+        setLocationID();
+        alert("Slowdown and try again."); // No path found
       }
     } else {
       // Convert generatedPath to Pixel Coordinates
+      console.log("Converting to pixel coords");
       const pixelPaths = generatedPath.map((point) => {
         const pixelPoint = viewer.viewport.viewportToImageCoordinates(
           new OpenSeadragon.Point(point.x, point.y),
@@ -634,7 +669,8 @@ const MapModule = ({
   }
 
   // /* Function that creates a path using A* Algorithm */
-  function pathFindingAlgorithm(graph, start, end, travelType) {
+  function pathFindingAlgorithm(graph, start, end, travelType, near) {
+    console.log("Pathfinding Algorithm Function");
     // Heuristic Function for determining distance of two nodes
     function euclideanDistance(node1, node2) {
       const dx = node1.x - node2.x;
@@ -645,8 +681,9 @@ const MapModule = ({
 
     // Function to reconstruct the path from start to goal
     function reconstructPath(cameFrom, current) {
+      console.log("Reconstruct Path");
       // cameFrom = Map of Paths, current = Goal Class Node
-      const path = [current]; // path = [Goal Node,]
+      let path = [current]; // path = [Goal Node,]
 
       // Looping through the map of paths until it reached the start node
       while (cameFrom.has(current)) {
@@ -655,11 +692,103 @@ const MapModule = ({
 
         path.push(current); // push goal node to path
       }
-      setPathGraph(path); // Set the path to the state
+
+      console.log("Raw Path:", path.reverse());
+
+      setPathGraph(path.reverse()); // Set the path to the state
       return path.reverse();
     }
 
-    /* A* Algorithm */
+    function roadAccess(neighbor_travelType, travelType) {
+      if (
+        travelType === "walk" &&
+        (neighbor_travelType === "walk" || neighbor_travelType === "both")
+      ) {
+        return true;
+      } else if (
+        travelType === "vehicle" &&
+        (neighbor_travelType === "vehicle" || neighbor_travelType === "both")
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    /* A* Algorithm Finding Nearest Type */
+    function nearest(graph, start, targetType, travelType) {
+      setNearestMode(true);
+      console.log("Nearest Function");
+      // console.log("Start:", start);
+      // console.log("targetType:", targetType);
+      // console.log("TravelType:", travelType);
+      const queue = new Set(); // The set of nodes to be evaluated
+      const visited = new Map(); // The map of navigated nodes
+
+      const gScore = new Map(); // Cost from start along best known path
+
+      // Initialize gScore and fScore for all nodes
+      graph.forEach((node) => {
+        gScore.set(node, Infinity);
+      });
+
+      gScore.set(start, 0);
+
+      queue.add(start); // Add the start node to the open set
+
+      while (queue.size > 0) {
+        let current = null;
+        let minGScore = Infinity;
+
+        queue.forEach((node) => {
+          if (gScore.get(node) < minGScore) {
+            minGScore = gScore.get(node);
+            current = node;
+          }
+        });
+
+        if (current.type === targetType) {
+          setTargetLocation(targetType);
+          setLocationID(current.id);
+          return reconstructPath(visited, current);
+        }
+
+        queue.delete(current); // Delete Starting Node at start
+
+        current.neighbors.forEach((neighbor) => {
+          // console.log("Checking Neighbor:", neighbor);
+
+          if (roadAccess(neighbor.travelType, travelType)) {
+            // console.log("Neighbor Travel Type Matched");
+
+            const tentativeGScore =
+              gScore.get(current) +
+              euclideanDistance(current, neighbor) +
+              neighbor.weight;
+
+            if (tentativeGScore < gScore.get(neighbor)) {
+              // console.log("Tentative G Score:", tentativeGScore);
+
+              // console.log("Neighbor GScore:", gScore.get(neighbor));
+
+              visited.set(neighbor, current);
+
+              gScore.set(neighbor, tentativeGScore);
+
+              if (!queue.has(neighbor)) {
+                // console.log("Adding Neighbor to OpenSet");
+                queue.add(neighbor);
+              }
+            }
+          }
+        });
+      }
+      console.log("Can't find nearest item");
+
+      return "Can't find nearest item";
+    }
+
+    /* A* Algorithm Point A to B*/
     function astar(graph, start, goal) {
       const openSet = new Set(); // The set of nodes to be evaluated
       const cameFrom = new Map(); // The map of navigated nodes
@@ -675,6 +804,7 @@ const MapModule = ({
 
       gScore.set(start, 0); // The cost of going from start to start is zero
       // console.log("Goal: ", goal);
+
       fScore.set(start, euclideanDistance(start, goal)); // For the first node, it is set by distance to target
 
       openSet.add(start); // Add the start node to the open set
@@ -693,27 +823,12 @@ const MapModule = ({
         });
 
         if (current === goal) {
+          // console.log("Current: ", current);
+          // console.log("Goal: ", goal);
           return reconstructPath(cameFrom, current);
         }
 
         openSet.delete(current);
-
-        function roadAccess(neighbor_travelType, travelType) {
-          if (
-            travelType === "walk" &&
-            (neighbor_travelType === "walk" || neighbor_travelType === "both")
-          ) {
-            return true;
-          } else if (
-            travelType === "vehicle" &&
-            (neighbor_travelType === "vehicle" ||
-              neighbor_travelType === "both")
-          ) {
-            return true;
-          } else {
-            return false;
-          }
-        }
 
         current.neighbors.forEach((neighbor) => {
           if (roadAccess(neighbor.travelType, travelType)) {
@@ -736,21 +851,28 @@ const MapModule = ({
         });
       }
 
-      return "No existing paths"; // No path foundhim
+      return "Please slow down and try again."; // No path foundhim
     }
 
-    const generatedPath = astar(graph, start, end, travelType);
+    console.log("NearMode:", near);
+
+    const generatedPath = near
+      ? nearest(graph, start, end, travelType)
+      : astar(graph, start, end, travelType);
     // console.log("Generated Path: ", generatedPath);
+
+    console.log("Generated Path:", generatedPath);
 
     return generatedPath; // Set the generated path to the state
   }
 
   function displayPath(points, target_location, travelType) {
+    console.log("Displaying Path");
     // Remove the old canvas if it exists
     const oldCanvas = document.getElementById("myCanvas");
     if (oldCanvas) {
       viewer.removeOverlay("myCanvas");
-      removeOverlays(target_location);
+      removeOverlays(locationID);
 
       // removeOverlaysName();
 
@@ -819,7 +941,7 @@ const MapModule = ({
 
     Object.keys(overlays).forEach((key) => {
       overlays[key].map((overlay) => {
-        if (overlay.scene === target_location.scene) {
+        if (overlay.scene === locationID) {
           // console.log("Overlay Found");
           const div = document.getElementById(overlay.id);
           const name = document.getElementById(overlay.id + "name");
@@ -861,7 +983,7 @@ const MapModule = ({
 
   useEffect(() => {
     if (targetLocation) {
-      // console.log("Calculating new path");
+      console.log("Calculating new path");
 
       let continuePath;
 
@@ -869,25 +991,33 @@ const MapModule = ({
         targetLocation.x === currLoc.coords.x &&
         targetLocation.y === currLoc.coords.y
       ) {
+        console.log("Coords Matched");
         continuePath = false;
       } else if (
         pathGraph[pathGraph.length - 2].x === currLoc.coords.x &&
         pathGraph[pathGraph.length - 2].y === currLoc.coords.y
       ) {
+        console.log("Building is Visible");
+        console.log("PathGraph", pathGraph);
+        console.log("We're at:", pathGraph[pathGraph.length - 2]);
         continuePath = false;
       } else {
         continuePath = true;
       }
 
+      console.log("Should Continue?", continuePath);
+
       if (pathGraph) {
         // console.log("Path Graph:", pathGraph);
         // console.log("Coord Match:", continuePath);
         if (continuePath) {
-          pathFinding(targetLocation, travelMode);
+          console.log("NearestMode:", nearestMode);
+          pathFinding(targetLocation, travelMode, nearestMode);
         } else {
           removePath();
           setTargetLocation();
-          alert("You have reached your destination");
+          setLocationID();
+          alert("You are near your destination");
         }
       }
     }
@@ -898,7 +1028,7 @@ const MapModule = ({
       className={` ${mapState === "full" ? "absolute h-full w-screen bg-green-500" : mapState === "mini" ? "opacity-0.5 opacity-0.9 mb-2 flex h-20 w-36 overflow-hidden rounded-2xl border-black md:h-20 md:w-40 lg:h-40 lg:w-80" : "hidden"} `}
     >
       {mapState === "mini" && (
-        <div className="pointer-events-none absolute z-10 flex h-full w-full items-end justify-end pb-10">
+        <div className="pointer-events-none absolute z-10 flex h-full w-full justify-end pb-10">
           {/* Current Location Button */}
           <div className="group relative inline-block">
             <div className="absolute right-full top-1/2 mr-2 w-32 -translate-y-1/2 transform rounded-lg bg-black px-3 py-2 text-center text-xs text-white opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
@@ -1073,6 +1203,8 @@ const MapModule = ({
                   generatePOI={generatePOI}
                   removeOverlays={removeOverlays}
                   setTargetLocation={setTargetLocation}
+                  setNearestMode={setNearestMode}
+                  setLocationID={setLocationID}
                 />
               </div>
             )}
@@ -1108,12 +1240,12 @@ const MapModule = ({
                     </div>
                     <div className="m-2 flex flex-col items-center justify-center gap-2">
                       <div className="full h-auto w-auto rounded-3xl border-2 bg-white p-1 shadow-lg">
-                        <div className="px-2 text-center font-roboto text-base font-semibold text-green-500 sm:text-lg">
+                        <div className="font-roboto px-2 text-center text-base font-semibold text-green-500 sm:text-lg">
                           {selected_extra.location}
                         </div>
                       </div>
 
-                      <div className="px-2 text-center font-roboto text-xs text-black">
+                      <div className="font-roboto px-2 text-center text-xs text-black">
                         {selected_extra.desc
                           ? `(${selected_extra.desc})`
                           : null}
