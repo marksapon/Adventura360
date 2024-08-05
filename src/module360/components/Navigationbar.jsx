@@ -160,7 +160,7 @@ const Navigationbar = ({
             <div className="flex h-full w-auto items-center justify-between px-1 md:w-full lg:px-4">
               <button
                 onClick={() => navigate("/")}
-                className="flex h-14 w-14 items-center justify-center"
+                className="flex h-14 w-14 items-center justify-center  "
                 onMouseEnter={() => handleMouseEnter("button1")}
                 onMouseLeave={() => handleMouseLeave("button1")}
               >
@@ -197,7 +197,7 @@ const Navigationbar = ({
                       !Showmodal &&
                       !Bugmdl &&
                       !Sharemodal
-                        ? "h-14 w-14 rounded-lg ring-2 ring-gray-600"
+                        ? "h-14 w-14 rounded-xl ring-2 ring-gray-600"
                         : ""
                     }`}
                   />
@@ -219,7 +219,7 @@ const Navigationbar = ({
                   )}
                   <span className="sr-only">Map</span>
                   <GrMap
-                    className={`h-12 w-12 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${mapState === "full" && "h-14 w-14 rounded-lg ring-2 ring-gray-600"}`}
+                    className={`h-12 w-12 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${mapState === "full" && "h-14 w-14 rounded-xl ring-2 ring-gray-600"}`}
                   />
                 </button>
               </div>
@@ -259,7 +259,7 @@ const Navigationbar = ({
                   )}
                   <span className="sr-only">Help</span>
                   <IoIosHelpCircleOutline
-                    className={`h-12 w-12 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Showmodal ? "h-14 w-14 rounded-lg ring-2 ring-gray-600" : ""}`}
+                    className={`h-12 w-12 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Showmodal ? "h-14 w-14 rounded-xl ring-2 ring-gray-600" : ""}`}
                   />
                 </button>
               </div>
@@ -290,7 +290,7 @@ const Navigationbar = ({
                   )}
                   <span className="sr-only">Feedback</span>
                   <VscFeedback
-                    className={`h-11 w-11 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Bugmdl ? "h-14 w-14 rounded-lg ring-2 ring-gray-600" : ""}`}
+                    className={`h-11 w-11 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Bugmdl ? "h-14 w-14 rounded-xl ring-2 ring-gray-600" : ""}`}
                   />
                 </button>
               </div>
@@ -343,11 +343,11 @@ const Navigationbar = ({
                   <span className="sr-only">Share</span>
                   {access !== "private" ? (
                     <TbLink
-                      className={`h-10 w-10 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Sharemodal ? "h-14 w-14 rounded-lg ring-2 ring-gray-600" : ""}`}
+                      className={`h-10 w-10 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Sharemodal ? "h-14 w-14 rounded-xl ring-2 ring-gray-600" : ""}`}
                     />
                   ) : (
                     <TbLinkOff
-                      className={`h-10 w-10 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Sharemodal ? "h-14 w-14 rounded-lg ring-2 ring-gray-600" : ""}`}
+                      className={`h-10 w-10 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Sharemodal ? "h-14 w-14 rounded-xl ring-2 ring-gray-600" : ""}`}
                     />
                   )}
                 </button>
@@ -417,7 +417,7 @@ const Navigationbar = ({
                     !Showmodal &&
                     !Bugmdl &&
                     !Sharemodal &&
-                    "h-10 w-10 rounded-lg ring-2 ring-gray-600"
+                    "h-10 w-10 rounded-xl ring-2 ring-gray-600"
                   }`}
                 />
               </button>
@@ -431,7 +431,7 @@ const Navigationbar = ({
               >
                 <span className="sr-only">Map</span>
                 <GrMap
-                  className={`h-8 w-8 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${mapState === "full" && "h-14 w-14 rounded-lg ring-2 ring-gray-600"}`}
+                  className={`h-8 w-8 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${mapState === "full" && "h-14 w-14 rounded-xl ring-2 ring-gray-600"}`}
                 />
               </button>
             </div>
@@ -457,7 +457,7 @@ const Navigationbar = ({
               >
                 <span className="sr-only">Help</span>
                 <IoIosHelpCircleOutline
-                  className={`h-8 w-8 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Showmodal ? "h-14 w-14 rounded-lg ring-2 ring-gray-600" : ""}`}
+                  className={`h-8 w-8 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Showmodal ? "h-14 w-14 rounded-xl ring-2 ring-gray-600" : ""}`}
                 />
               </button>
             </div>
@@ -473,7 +473,7 @@ const Navigationbar = ({
               >
                 <span className="sr-only">Feedback</span>
                 <VscFeedback
-                  className={`h-8 w-8 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Bugmdl ? "h-14 w-14 rounded-lg ring-2 ring-gray-600" : ""}`}
+                  className={`h-8 w-8 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Bugmdl ? "h-14 w-14 rounded-xl ring-2 ring-gray-600" : ""}`}
                 />
               </button>
             </div>
@@ -512,11 +512,11 @@ const Navigationbar = ({
                 <span className="sr-only">Share</span>
                 {access !== "private" ? (
                   <TbLink
-                    className={`h-8 w-8 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Sharemodal ? "h-14 w-14 rounded-lg ring-2 ring-gray-600" : ""}`}
+                    className={`h-8 w-8 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Sharemodal ? "h-14 w-14 rounded-xl ring-2 ring-gray-600" : ""}`}
                   />
                 ) : (
                   <TbLinkOff
-                    className={`h-8 w-8 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Sharemodal ? "h-14 w-14 rounded-lg ring-2 ring-gray-600" : ""}`}
+                    className={`h-8 w-8 text-green-600 transition-all duration-200 hover:h-14 hover:w-14 ${Sharemodal ? "h-14 w-14 rounded-xl ring-2 ring-gray-600" : ""}`}
                   />
                 )}
               </button>
