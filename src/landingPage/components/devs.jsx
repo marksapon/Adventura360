@@ -72,8 +72,8 @@ const developers = [
 ];
 
 const Footer = () => (
-  <footer className="mt-8 py-4 text-center">
-    <p className="text-muted-foreground text-center font-bitter  text-sm text-gray-500">
+  <footer className="text-center">
+    <p className="font-bitter text-center text-xs text-muted-foreground md:text-sm">
       © {new Date().getFullYear()} Adventura 360° is a project by Sen'Py. All
       rights reserved.
     </p>
@@ -84,18 +84,18 @@ const Devs = () => {
   return (
     <>
       <div id="Developers" />
-      <div className="mx-auto mt-44 flex h-auto max-w-screen-xl items-center  justify-center px-4 lg:px-6">
-        <div className="mb-8 flex max-w-screen-sm flex-col items-center justify-center gap-10 text-center lg:mb-16">
+      <div className="mx-auto mt-44 flex h-auto items-center justify-center px-4 lg:px-6">
+        <div className="mb-4 flex flex-col items-center justify-center gap-10 text-center">
           <motion.div
             initial="hidden"
             animate="visible"
             variants={containerVariants}
           >
-            <h2 className="my-8 font-bitter text-5xl font-medium tracking-wide text-cvsu drop-shadow-[0_3px_1px_rgba(0,0,0,0.4)]">
+            <h2 className="font-bitter text-cvsu my-8 text-5xl font-medium tracking-wide drop-shadow-[0_3px_1px_rgba(0,0,0,0.4)]">
               THE TEAM BEHIND ADVENTURA
             </h2>
           </motion.div>
-          {/* lg:grid-cols-2 */}
+          {/* */}
           <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:flex">
             {developers.map((dev, index) => (
               <motion.div

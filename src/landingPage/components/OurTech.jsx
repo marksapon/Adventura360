@@ -30,9 +30,9 @@ const OurTech = () => {
         alt="bg"
         className="h-screen w-full object-cover md:h-full md:object-contain"
       />
-      <div className=" absolute inset-0 flex h-auto w-auto items-center justify-center p-4 md:items-start md:justify-start md:p-16">
-        <div className="flex h-auto w-auto flex-col items-center justify-center px-10  text-center md:items-start  md:text-left">
-          <h1 className="space-y-1 font-bebas tracking-normal text-white drop-shadow-[0_3px_3px_rgba(0,0,0,0.4)] md:mt-24 md:text-5xl lg:text-[4.7rem]">
+      <div className="absolute inset-0 flex h-auto w-auto items-center justify-center p-4 md:items-start md:justify-start md:p-16">
+        <div className="flex h-auto w-auto flex-col items-center justify-center px-10 text-center md:items-start  md:text-left">
+          <h1 className="space-y-1 font-bebas text-4xl tracking-normal text-white drop-shadow-[0_3px_3px_rgba(0,0,0,0.4)] md:mt-24 md:text-5xl lg:text-[4.7rem]">
             <span>Explore</span>
             <span className="block text-[#4FE137]">
               Cavite State University
@@ -50,12 +50,10 @@ const OurTech = () => {
           </h2>
           <button
             onClick={() => navigate("/login")}
-            className="mt-4 flex w-96 items-center justify-center gap-4 rounded-xl bg-[#FFB155] px-6 py-4 font-bebas text-xl tracking-wide text-white shadow-md hover:bg-orange-300 md:text-4xl"
+            className="mt-4 flex items-center justify-center gap-4 text-nowrap rounded-xl bg-[#FFB155] px-4 py-2 font-bebas text-xl tracking-wide text-white shadow-md hover:bg-orange-300 md:px-6 md:py-4 md:text-4xl"
           >
-            <span className="absolute">EXPLORE NOW</span>
-            <span className="flex w-full justify-end ">
-              <GrLinkNext />
-            </span>
+            EXPLORE NOW
+            <GrLinkNext />
           </button>
         </div>
       </div>
