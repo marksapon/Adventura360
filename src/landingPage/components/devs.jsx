@@ -39,7 +39,7 @@ const developers = [
   {
     name: "John Joshua Sagpao",
     role: "UI/UX Designer & Frontend Developer",
-    imgSrc: "../assets/Landing Page/developers/josh.webp",
+    imgSrc: "../assets/Landing Page/developers/josh.jpg",
     socialLinks: {
       facebook: "https://www.facebook.com/johnjoshua.solitesagpao",
       instagram: "https://www.instagram.com/joshuasagpao/",
@@ -50,7 +50,7 @@ const developers = [
   {
     name: "Kevin Roi Nuesca",
     role: "UI/UX Designer & Frontend Developer",
-    imgSrc: "../assets/Landing Page/developers/kevin.webp",
+    imgSrc: "../assets/Landing Page/developers/kevin.jpg",
     socialLinks: {
       facebook: "https://facebook.com/username",
       instagram: "https://instagram.com/username",
@@ -62,7 +62,7 @@ const developers = [
   {
     name: "Alex Kal-El Buenviaje",
     role: "Project Manager",
-    imgSrc: "../assets/Landing Page/developers/lex.webp",
+    imgSrc: "../assets/Landing Page/developers/lex.png",
     socialLinks: {
       facebook: "https://www.facebook.com/LexBuenviaje",
       instagram: "https://www.instagram.com/lxbnvj/",
@@ -114,31 +114,36 @@ const Devs = () => {
                 <h3 className="mb-1 text-nowrap text-xl font-bold lg:text-2xl">
                   <p>{dev.name}</p>
                 </h3>
-                <p className="text-gray-500">{dev.role}</p>
-                <div className="m-2 flex justify-center gap-4 ">
+                <p className="text-gray-500">
+                  Adventura 360°'s{" "}
+                  <span className="flex flex-col font-semibold">
+                    {dev.role}
+                  </span>{" "}
+                </p>
+                <div className="m-2 flex justify-center gap-4">
                   {dev.socialLinks.facebook && (
                     <a href={dev.socialLinks.facebook} target="_blank">
-                      <FaFacebook className="text-black hover:text-green-500" />
+                      <FaFacebook className="text-black transition-all duration-300 hover:text-green-500" />
                     </a>
                   )}
                   {dev.socialLinks.instagram && (
                     <a href={dev.socialLinks.instagram} target="_blank">
-                      <FaInstagram className="text-black hover:text-green-500" />
+                      <FaInstagram className="text-black transition-all duration-300 hover:text-green-500" />
                     </a>
                   )}
                   {dev.socialLinks.email && (
                     <a href={dev.socialLinks.email} target="_blank">
-                      <FaEnvelope className="text-black hover:text-green-500" />
+                      <FaEnvelope className="text-black transition-all duration-300 hover:text-green-500" />
                     </a>
                   )}
                   {dev.socialLinks.github && (
                     <a href={dev.socialLinks.github} target="_blank">
-                      <FaGithub className="text-black hover:text-green-500" />
+                      <FaGithub className="text-black transition-all duration-300 hover:text-green-500" />
                     </a>
                   )}
                   {dev.socialLinks.linkedin && (
                     <a href={dev.socialLinks.linkedin} target="_blank">
-                      <FaLinkedin className="text-black hover:text-green-500" />
+                      <FaLinkedin className="text-black transition-all duration-300 hover:text-green-500" />
                     </a>
                   )}
                 </div>
