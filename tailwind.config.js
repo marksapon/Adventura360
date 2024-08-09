@@ -18,6 +18,10 @@ module.exports = {
     },
     extend: {
       colors: {
+        card: "#FFF9F4",
+        customgreen: "#1A8000",
+        cvsu: "#5D8552",
+        gray_black: "#535353",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -70,6 +74,12 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      fontFamily: {
+        bebas: ['"Bebas Neue"', "sans-serif"],
+        bitter: ['"Bitter"', "serif"],
+        quicksand: ['"Quicksand"'],
+        montserrat: ['"Montserrat"'],
       },
     },
   },
