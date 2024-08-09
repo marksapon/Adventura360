@@ -11,7 +11,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { Button } from "@/components/ui/button";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,10 +37,10 @@ const NavBar = () => {
       <div className="hidden md:block">
         <Dock
           direction="middle"
-          className={`duration-250 py-2 transition-all ${
+          className={`duration-250 transition-all ${
             isScrolled
-              ? "font-quicksand text-gray_black mt-0 flex h-full w-full items-center justify-center gap-16 text-base font-semibold"
-              : "font-quicksand text-gray_black flex w-full items-center justify-center text-base font-semibold md:w-[600px] md:rounded-2xl"
+              ? "flex h-full w-full items-center justify-center font-quicksand text-base font-semibold text-gray_black"
+              : "flex w-full items-center justify-center font-quicksand text-base font-semibold text-gray_black md:w-[488px] md:rounded-2xl"
           }`}
         >
           <DockIcon>
@@ -104,6 +103,93 @@ const NavBar = () => {
             </ScrollLink>
           </DockIcon>
         </Dock>
+      </div>
+
+      <div className="z-10 flex w-full items-center justify-between border-b bg-background px-4 py-2 shadow-lg md:hidden">
+        <div className="flex items-center justify-center gap-2">
+          <a href="/" className="flex items-center gap-4">
+            <img
+              src="/assets/Navigation Bar/adventura 360 logo.webp"
+              alt="logo"
+              className="h-10 w-8"
+            />
+            <h1 className="text-lg font-semibold">Adventura 360°</h1>
+          </a>
+        </div>
+        <Sheet>
+          <SheetTrigger className="flex items-center">
+            <RxHamburgerMenu className="text-bold size-8 p-1" />
+          </SheetTrigger>
+
+          <SheetContent side="right" className="flex flex-col gap-2">
+            <SheetHeader>
+              <SheetTitle>
+                <SheetClose asChild>
+                  <ScrollLink
+                    to="OurTech"
+                    smooth={true}
+                    duration={500}
+                    className="flex items-center gap-4 px-6 pt-6"
+                  >
+                    <img
+                      src="/assets/Navigation Bar/adventura 360 logo.webp"
+                      alt="logo"
+                      className="h-10 w-8"
+                    />
+                    <h1 className="text-lg font-semibold">Adventura 360°</h1>
+                  </ScrollLink>
+                </SheetClose>
+              </SheetTitle>
+              <SheetDescription className="px-6 pb-2 text-muted-foreground">
+                Navigation links
+              </SheetDescription>
+            </SheetHeader>
+
+            <SheetClose asChild>
+              <ScrollLink
+                to="Showcase"
+                smooth={true}
+                duration={500}
+                className="px-8 py-2 font-semibold hover:bg-accent hover:text-accent-foreground"
+              >
+                About
+              </ScrollLink>
+            </SheetClose>
+
+            <SheetClose asChild>
+              <ScrollLink
+                to="Introduction"
+                smooth={true}
+                duration={500}
+                className="px-8 py-2 font-semibold hover:bg-accent hover:text-accent-foreground"
+              >
+                Features
+              </ScrollLink>
+            </SheetClose>
+
+            <SheetClose asChild>
+              <ScrollLink
+                to="Adventura"
+                smooth={true}
+                duration={500}
+                className="px-8 py-2 font-semibold hover:bg-accent hover:text-accent-foreground"
+              >
+                Adventura
+              </ScrollLink>
+            </SheetClose>
+
+            <SheetClose asChild>
+              <ScrollLink
+                to="Developers"
+                smooth={true}
+                duration={500}
+                className="px-8 py-2 font-semibold hover:bg-accent hover:text-accent-foreground"
+              >
+                Contact us
+              </ScrollLink>
+            </SheetClose>
+          </SheetContent>
+        </Sheet>
       </div>
     </div>
   );
