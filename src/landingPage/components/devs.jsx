@@ -26,7 +26,7 @@ const containerVariants = {
 const developers = [
   {
     name: "Mark Dharel Sapon",
-    role: "Fullstack Developer",
+    role: "Full-stack Developer",
     imgSrc: "../assets/Landing Page/developers/macky.png",
     socialLinks: {
       facebook: "https://www.facebook.com/mark.sapon.33",
