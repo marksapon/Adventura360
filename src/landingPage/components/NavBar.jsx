@@ -39,8 +39,8 @@ const NavBar = () => {
           direction="middle"
           className={`duration-250 transition-all ${
             isScrolled
-              ? "flex h-full w-full items-center justify-center font-quicksand text-base font-semibold text-gray_black"
-              : "flex w-full items-center justify-center font-quicksand text-base font-semibold text-gray_black md:w-[488px] md:rounded-2xl"
+              ? "flex h-full w-auto items-center justify-center gap-16 font-quicksand text-base font-semibold text-gray_black"
+              : "mt-8 flex w-auto items-center justify-between px-8 font-quicksand text-base font-semibold text-gray_black md:w-[600px] md:rounded-2xl"
           }`}
         >
           <DockIcon>
