@@ -165,7 +165,7 @@ function Module360({
   const [initialPitch, setPitch] = useState(getParams("pitch"));
 
   // Previous Scene State
-  const [previous_Scene, setPrevious_Scene] = useState(nodesDB[0]); // Remove the default previous scene
+  const [previous_Scene, setPrevious_Scene] = useState(); // Remove the default previous scene
 
   // Autoplay State
   const [autoplay, setAutoplay] = useState(false);
@@ -198,6 +198,13 @@ function Module360({
     console.log("Map State:", mapState);
   }, [mapState]);
 
+  function findDefaultNode() {
+    const default_node = nodesDB.find((node) => {
+      return node.scene === "node1";
+    });
+    return default_node;
+  }
+
   // Function to get the current scene based on the URL queries
   function getScene() {
     let curr_scene;
@@ -222,11 +229,11 @@ function Module360({
           }
         });
       } else {
-        curr_scene = nodesDB[0];
+        curr_scene = findDefaultNode();
       }
       return curr_scene;
     } else {
-      curr_scene = nodesDB[0];
+      curr_scene = findDefaultNode();
     }
     return curr_scene;
   }
