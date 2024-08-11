@@ -784,7 +784,7 @@ const BuildingModal = ({
                         >
                           <div
                             key={index}
-                            className="single-content-bullet font-roboto text-base font-medium"
+                            className="single-content-bullet font-roboto text-start text-base font-medium"
                           >
                             {key}
                           </div>
@@ -793,7 +793,7 @@ const BuildingModal = ({
                         </button>
                         {isOpen[key] && current_info.offices[key] && (
                           <div className="mb-2 flex w-full flex-auto rounded-md border-2 border-gray-500 border-opacity-60">
-                            <div className="p-2 text-sm ">
+                            <div className="p-2 text-start text-sm">
                               {purifyText(current_info.offices[key])}
                             </div>
                           </div>

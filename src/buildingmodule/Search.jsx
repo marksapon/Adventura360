@@ -303,7 +303,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                               setListDisplay(true);
                             }}
                           >
-                            <span className="flex items-center rounded-2xl bg-cyan-500 p-2 text-center text-white">
+                            <span className="flex items-center rounded-2xl bg-cyan-500 p-2 text-start text-white">
                               <FaHome />
                             </span>
                             Show all
@@ -317,7 +317,7 @@ const Search = ({ visible, onClose, infosDB, openBldgModal }) => {
                                 className={`
       flex items-center gap-2 rounded-xl p-1 text-center transition-all duration-300 ease-in-out sm:p-3
       ${selectedKey === key ? "border border-gray-200 bg-slate-50 text-lg font-semibold shadow-lg" : "border border-transparent hover:border"} 
-      font-montserrat text-sm font-medium hover:border-gray-200 hover:shadow-lg
+      text-start font-montserrat text-sm font-medium hover:border-gray-200 hover:shadow-lg
     `}
                                 onClick={() => {
                                   setSelectedKey(key);
