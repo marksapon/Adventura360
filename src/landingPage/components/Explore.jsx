@@ -22,7 +22,7 @@ const Explore = () => {
         <div className="mx-4 flex flex-col items-center justify-center gap-8 md:flex-row ">
           <div className="">
             <video controls className="h-64 w-auto rounded-2xl">
-              <source src="path/to/your/video.mp4" type="video/mp4" />
+              <source src="/assets/Landing Page/vid.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
