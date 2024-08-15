@@ -31,11 +31,11 @@ const Explore = () => {
               <p className="mb-5 px-4 text-justify font-quicksand text-sm font-normal italic text-white lg:text-base ">
                 <b className="font-bitter">Adventura 360°</b> is an interactive
                 map and tour made by student researchers of BS Computer Science.{" "}
-                Adventura360° is designed to guide and highlight the locations
+                Adventura 360° is designed to guide and highlight the locations
                 to entice the target audiences.
               </p>
               <h1 className="flex text-nowrap font-bitter text-xl font-bold italic text-white ">
-                Learn more about Adventura360°
+                Learn more about Adventura 360°
               </h1>
               <button>
                 <IoArrowForwardCircleOutline className="h-10 w-10 text-white" />
