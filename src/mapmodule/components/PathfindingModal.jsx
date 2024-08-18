@@ -158,7 +158,7 @@ const PathfindingModal = ({
                     {/* Current Location Text Bar */}
                     <div className="flex h-full w-full flex-grow items-end ">
                       <div className="flex h-10 w-full items-center justify-center ">
-                        <div className="font-quicksand flex h-full w-full items-center justify-center rounded-full border-2 bg-white py-2 text-center text-base drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)] hover:border-green-600 hover:bg-slate-50">
+                        <div className="flex h-full w-full items-center justify-center rounded-full border-2 bg-white py-2 text-center font-quicksand text-base drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)] hover:border-green-600 hover:bg-slate-50">
                           Current location
                         </div>
                       </div>
@@ -197,7 +197,7 @@ const PathfindingModal = ({
                       <div className="flex h-full w-full flex-grow items-center justify-center  ">
                         <div className="flex h-10 w-full items-center justify-center">
                           <input
-                            className="font-quicksand flex h-full w-full rounded-full border-2 bg-slate-50 px-1 text-center text-base drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)] hover:border-green-600"
+                            className="flex h-full w-full rounded-full border-2 bg-slate-50 px-1 text-center font-quicksand text-base drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)] hover:border-green-600"
                             placeholder="Destination"
                             type="text"
                             onChange={search}
@@ -226,7 +226,7 @@ const PathfindingModal = ({
                     {directionState && (
                       <div className="flex h-full w-full items-center justify-center p-1">
                         <button
-                          className="font-montserrat relative flex w-auto items-center justify-center gap-2 rounded-full bg-green-500 px-5 py-1 text-center text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)]"
+                          className="relative flex w-auto items-center justify-center gap-2 rounded-full bg-green-500 px-5 py-1 text-center font-montserrat text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)]"
                           onClick={() => {
                             console.log("Directions Button Clicked");
                             setNearestMode(false);
@@ -302,26 +302,28 @@ const PathfindingModal = ({
                     </div>
                   )
                 ) : (
-                  <div className="font-montserrat flex-grow pl-2 text-xl font-semibold">
-                    List of Buildings:
+                  <div className="flex-grow pl-2 font-montserrat text-xl font-semibold">
                     {buildingsListState && buildingsList.length > 0 && (
-                      <div
-                        className={`no-scrollbar flex h-screen flex-col gap-2 overflow-auto bg-slate-50 p-2 pb-72  shadow-lg `}
-                      >
-                        {buildingsList.map((building, index) => (
-                          <button
-                            className="font-quicksand flex justify-start rounded-xl border bg-white px-5 py-3 text-left text-sm font-medium drop-shadow-md hover:border-white hover:border-opacity-50 hover:bg-green-500 hover:font-bold hover:text-white"
-                            onClick={() => {
-                              setBuildingsListState(false);
-                              setDestination(building.name);
-                              checkDestination(building.name);
-                            }}
-                            key={index}
-                          >
-                            {building.name}
-                          </button>
-                        ))}
-                      </div>
+                      <>
+                        <span>List of Buildings:</span>
+                        <div
+                          className={`no-scrollbar flex h-screen flex-col gap-2 overflow-auto bg-slate-50 p-2 pb-72  shadow-lg `}
+                        >
+                          {buildingsList.map((building, index) => (
+                            <button
+                              className="flex justify-start rounded-xl border bg-white px-5 py-3 text-left font-quicksand text-sm font-medium drop-shadow-md hover:border-white hover:border-opacity-50 hover:bg-green-500 hover:font-bold hover:text-white"
+                              onClick={() => {
+                                setBuildingsListState(false);
+                                setDestination(building.name);
+                                checkDestination(building.name);
+                              }}
+                              key={index}
+                            >
+                              {building.name}
+                            </button>
+                          ))}
+                        </div>
+                      </>
                     )}
                   </div>
                 )}

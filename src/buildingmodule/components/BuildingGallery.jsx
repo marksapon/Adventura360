@@ -10,6 +10,9 @@ import {
 import "pure-react-carousel/dist/react-carousel.es.css";
 import { useMediaQuery } from "react-responsive";
 
+import { PhotoProvider, PhotoView } from "react-photo-view";
+import "react-photo-view/dist/react-photo-view.css";
+
 const BuildingGallery = ({ imageSet }) => {
   const images = checkImageSet();
 
@@ -35,37 +38,44 @@ const BuildingGallery = ({ imageSet }) => {
   }
 
   return (
-    <div className="relative mb-4 border-b-2 pb-2 pl-4">
-      <h1 className="p-4 pl-1 text-start font-montserrat text-2xl font-semibold">
-        Gallery
-      </h1>
-      <CarouselProvider
-        naturalSlideWidth={50}
-        naturalSlideHeight={50}
-        totalSlides={images.length}
-        visibleSlides={visibleSlides}
-      >
-        <Slider>
-          {images.map((image, index) => (
-            <Slide key={index} index={index}>
-              <img
-                src={image}
-                className="h-full w-full rounded-xl object-cover p-1"
-                alt={`Slide ${index + 1}`}
-              />
-            </Slide>
-          ))}
-        </Slider>
-        <div className="pointer-events-none absolute left-0 top-0 mt-6 flex h-full w-full items-center justify-between px-1">
-          <ButtonBack className="pl-2">
-            <GrNext className="pointer-events-auto size-10 rotate-180 transform items-center justify-center rounded-full bg-gray-200 p-1 pl-2 opacity-70 hover:opacity-90" />
-          </ButtonBack>
-          <ButtonNext className="pr-2">
-            <GrNext className="pointer-events-auto size-10 items-center justify-center rounded-full bg-gray-200 p-1 pl-2 opacity-70 hover:opacity-90" />
-          </ButtonNext>
-        </div>
-      </CarouselProvider>
-    </div>
+    <>
+      <div className="relative mb-4 border-b-2 pb-2 pl-4">
+        <h1 className="p-4 pl-1 text-start font-montserrat text-2xl font-semibold">
+          Gallery
+        </h1>
+        <PhotoProvider>
+          <CarouselProvider
+            naturalSlideWidth={50}
+            naturalSlideHeight={50}
+            totalSlides={images.length}
+            visibleSlides={visibleSlides}
+          >
+            <Slider>
+              {images.map((image, index) => (
+                <Slide key={index} index={index}>
+                  <PhotoView src={image}>
+                    <img
+                      src={image}
+                      className="h-full w-full rounded-xl object-cover p-1"
+                      alt={`Image ${index + 1}`}
+                    />
+                  </PhotoView>
+                </Slide>
+              ))}
+            </Slider>
+
+            <div className="pointer-events-none absolute left-0 top-0 mt-6 flex h-full w-full items-center justify-between px-1">
+              <ButtonBack className="pl-2">
+                <GrNext className="pointer-events-auto size-10 rotate-180 transform items-center justify-center rounded-full bg-gray-200 p-1 pl-2 opacity-70 hover:opacity-90" />
+              </ButtonBack>
+              <ButtonNext className="pr-2">
+                <GrNext className="pointer-events-auto size-10 items-center justify-center rounded-full bg-gray-200 p-1 pl-2 opacity-70 hover:opacity-90" />
+              </ButtonNext>
+            </div>
+          </CarouselProvider>
+        </PhotoProvider>
+      </div>
+    </>
   );
 };
 
