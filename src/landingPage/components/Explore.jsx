@@ -9,7 +9,7 @@ const Explore = () => {
         <div className="flex flex-col items-center">
           <div className="grid w-full grid-cols-4 justify-center text-center">
             <h1 className="col-span-3 font-quicksand text-xl font-medium text-black">
-              CREATED USING
+              WHAT IS
             </h1>
           </div>
           <img

@@ -89,8 +89,8 @@ function Adventura360({ BACKEND_URL, loginType }) {
             <div className="ripple mx-auto border-2 border-green-600"></div>
           </div>
           <div className="flex h-2/6 w-full flex-col items-center justify-end md:h-3/6">
-            <h1 className="loading-dots flex text-base font-bold text-black md:text-2xl">
-              Loading. Please wait
+            <h1 className="loading-dots flex font-bebas text-base font-bold tracking-wider text-green-700 text-opacity-70 drop-shadow-sm md:text-4xl">
+              Please wait
             </h1>
           </div>
         </div>

@@ -105,15 +105,14 @@ const NavBar = () => {
         </Dock>
       </div>
 
-      <div className="z-10 flex w-full items-center justify-between border-b bg-background px-4 py-2 shadow-lg md:hidden">
-        <div className="flex items-center justify-center gap-2">
-          <a href="/" className="flex items-center gap-4">
+      <div className="relative z-10 flex h-16 w-full items-center justify-between border-b bg-background px-3 py-2 shadow-lg md:hidden">
+        <div className="flex  items-center justify-center">
+          <a href="/" className="flex h-16 items-start gap-4 p-2">
             <img
-              src="/assets/Navigation Bar/adventura 360 logo.webp"
+              src="/assets/Landing Page/adventura mobile logo.png"
               alt="logo"
-              className="h-10 w-8"
+              className="h-full w-full"
             />
-            <h1 className="text-lg font-semibold">Adventura 360°</h1>
           </a>
         </div>
         <Sheet>
@@ -131,16 +130,19 @@ const NavBar = () => {
                     duration={500}
                     className="flex items-center gap-4 px-6 pt-6"
                   >
-                    <img
-                      src="/assets/Navigation Bar/adventura 360 logo.webp"
-                      alt="logo"
-                      className="h-10 w-8"
-                    />
-                    <h1 className="text-lg font-semibold">Adventura 360°</h1>
+                    <div className=" mb-5 flex h-full w-full items-center justify-center">
+                      <div className="flex h-16 ">
+                        <img
+                          src="/assets/Navigation Bar/adventura 360 logo.webp"
+                          alt="logo"
+                          className="h-auto w-full"
+                        />
+                      </div>
+                    </div>
                   </ScrollLink>
                 </SheetClose>
               </SheetTitle>
-              <SheetDescription className="px-6 pb-2 text-muted-foreground">
+              <SheetDescription className="px-6 pb-2 font-quicksand text-muted-foreground">
                 Navigation links
               </SheetDescription>
             </SheetHeader>
@@ -150,7 +152,7 @@ const NavBar = () => {
                 to="Showcase"
                 smooth={true}
                 duration={500}
-                className="px-8 py-2 font-semibold hover:bg-accent hover:text-accent-foreground"
+                className="font-montserrrat px-8 py-2 font-semibold hover:bg-accent hover:text-accent-foreground"
               >
                 About
               </ScrollLink>
@@ -161,7 +163,7 @@ const NavBar = () => {
                 to="Introduction"
                 smooth={true}
                 duration={500}
-                className="px-8 py-2 font-semibold hover:bg-accent hover:text-accent-foreground"
+                className="font-montserrrat px-8 py-2 font-semibold hover:bg-accent hover:text-accent-foreground"
               >
                 Features
               </ScrollLink>
@@ -172,7 +174,7 @@ const NavBar = () => {
                 to="Adventura"
                 smooth={true}
                 duration={500}
-                className="px-8 py-2 font-semibold hover:bg-accent hover:text-accent-foreground"
+                className="font-montserrrat px-8 py-2 font-semibold hover:bg-accent hover:text-accent-foreground"
               >
                 Adventura
               </ScrollLink>
@@ -183,7 +185,7 @@ const NavBar = () => {
                 to="Developers"
                 smooth={true}
                 duration={500}
-                className="px-8 py-2 font-semibold hover:bg-accent hover:text-accent-foreground"
+                className="font-montserrrat px-8 py-2 font-semibold hover:bg-accent hover:text-accent-foreground"
               >
                 Contact us
               </ScrollLink>
