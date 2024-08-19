@@ -300,7 +300,7 @@ const PathfindingModal = ({
                     className="text-grey-600 flex h-auto justify-center gap-1 rounded-xl bg-slate-50 px-3 py-3 text-center text-xs font-semibold drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)] hover:border-slate-50 hover:border-opacity-50 hover:bg-blue-500 hover:font-bold hover:text-white"
                     onClick={() => {
                       console.log("Near Parking Lot Clicked");
-                      pathfinding("parking", "walk", true);
+                      pathfinding("parking", "vehicle", true);
                       setMinimized(true);
                     }}
                   >
