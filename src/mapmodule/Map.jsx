@@ -111,8 +111,10 @@ const MapModule = ({
         x: building.coords.x,
         y: building.coords.y,
         type: building.coords.type,
+        container: building.container ? building.container : null,
       });
     });
+
     // Generate a proper layout for the POI in Buildings Extras
     extrasDB.map((building) => {
       temp.push({
@@ -122,6 +124,7 @@ const MapModule = ({
         y: building.coords.y,
         type: building.coords.type,
         state: false,
+        container: building.container ? building.container : null,
       });
     });
     return temp;

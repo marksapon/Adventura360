@@ -24,7 +24,31 @@ const PathfindingModal = ({
   setNearestMode,
   setLocationID,
 }) => {
-  const poi = generatePOI(); // Generate Points of Interest
+  const sortPOI = () => {
+    let temp = generatePOI();
+
+    temp = [...temp]
+      .filter((location) => {
+        return (
+          location.type !== "restroom" &&
+          location.type !== "washarea" &&
+          location.type !== "parking" &&
+          location.type !== "batibot"
+        );
+      })
+      .map((location) => {
+        if (location.container !== null) {
+          location.scene = location.container;
+        }
+        return location;
+      });
+
+    console.log(temp);
+
+    return [...temp].sort((a, b) => a.name.localeCompare(b.name));
+  };
+
+  const poi = sortPOI(); // Generate Points of Interest
 
   /* UI States  */
   const [travelType, setTravelType] = useState("walk"); // Travel Modes: Walk || Vehicle
@@ -37,11 +61,8 @@ const PathfindingModal = ({
 
   /* Buildings Search */
   // Buildings List
-  const sortPOI = (poi) => {
-    return [...poi].sort((a, b) => a.name.localeCompare(b.name));
-  };
 
-  const [buildingsList, setBuildingsList] = useState(sortPOI(poi));
+  const [buildingsList, setBuildingsList] = useState(poi);
 
   // /* Search Function Event that triggers everytime the search value changes */
   const search = (event) => {
@@ -264,6 +285,16 @@ const PathfindingModal = ({
                     }}
                   >
                     Wash area
+                  </button>
+                  <button
+                    className="text-grey-600 flex h-auto justify-center gap-1 rounded-xl bg-slate-50 px-3 py-3 text-center text-xs font-semibold drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)] hover:border-slate-50 hover:border-opacity-50 hover:bg-blue-500 hover:font-bold hover:text-white"
+                    onClick={() => {
+                      console.log("Near Batibot Clicked");
+                      pathfinding("batibot", "walk", true);
+                      setMinimized(true);
+                    }}
+                  >
+                    Batibot
                   </button>
                   <button
                     className="text-grey-600 flex h-auto justify-center gap-1 rounded-xl bg-slate-50 px-3 py-3 text-center text-xs font-semibold drop-shadow-[0_4px_4px_rgba(0,0,0,0.15)] hover:border-slate-50 hover:border-opacity-50 hover:bg-blue-500 hover:font-bold hover:text-white"
