@@ -105,16 +105,16 @@ const NavBar = () => {
         </Dock>
       </div>
 
-      <div className="relative z-10 flex h-16 w-full items-center justify-between border-b bg-background px-3 py-2 shadow-lg md:hidden">
-        <div className="flex  items-center justify-center">
+      <div className=" relative z-10 flex h-16 w-full items-center justify-between border-b bg-background px-3 py-2 shadow-lg md:hidden">
+        
           <a href="/" className="flex h-16 items-start gap-4 p-2">
             <img
               src="/assets/Landing Page/adventura mobile logo.png"
               alt="logo"
-              className="h-full w-full"
+              className="h-full w-fit object-contain"
             />
           </a>
-        </div>
+       
         <Sheet>
           <SheetTrigger className="flex items-center">
             <RxHamburgerMenu className="text-bold size-8 p-1" />
@@ -135,7 +135,7 @@ const NavBar = () => {
                         <img
                           src="/assets/Navigation Bar/adventura 360 logo.webp"
                           alt="logo"
-                          className="h-auto w-full"
+                          className="h-auto "
                         />
                       </div>
                     </div>
